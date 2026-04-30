@@ -13,6 +13,7 @@ from pdf_profile import profile_pdf
 from index_builder import build_index
 from content_extractor import extract_content
 from vehicle_info import extract_vehicle_info
+from type_detector import detect_manual_types
 
 
 def _common_title_prefix(titles: list[str]) -> str:
@@ -718,13 +719,17 @@ def _analyze_table(raw_rows: list, role: str | None = None, known_codes: set | N
     return result
 
 
-def _make_record_id(document_id: str, start_pdf_page: int) -> str:
+def _make_record_id(document_id: str, manual_type: str | None, start_pdf_page: int) -> str:
     """
     Generate a unique, deterministic ID for a DTC record.
-    SHA256 of (document_id + start_pdf_page) — same PDF + same page = same ID.
+    SHA256 of (document_id + manual_type_str + start_pdf_page).
+    manual_type_str is "" when manual_type is None — formula is identical to
+    the pre-#28 formula for PDFs with no TYPE boundaries, so existing IDs
+    are unchanged.
     Truncated to 16 hex chars for readability.
     """
-    raw = f"{document_id}{start_pdf_page}"
+    manual_type_str = manual_type if manual_type is not None else ""
+    raw = f"{document_id}{manual_type_str}{start_pdf_page}"
     return hashlib.sha256(raw.encode()).hexdigest()[:16]
 
 
@@ -752,6 +757,17 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
         print("No codes found.")
         return {}
 
+    # ── Detect manual-level TYPE boundaries (pre-pass) ────────────────────────
+    # Returns {pdf_page (1-based): "TYPE N" | None}.
+    # None on every page means no TYPE headings found — manual_type omitted.
+    print("\nStep 2 — scanning for manual TYPE boundaries...")
+    page_type_map = detect_manual_types(pdf_path)
+    type_values = set(page_type_map.values()) - {None}
+    if type_values:
+        print(f"  Found TYPE boundaries: {sorted(type_values)}")
+    else:
+        print("  No TYPE boundaries found — single-type document")
+
     # Flatten index into page_to_codes and code_titles
     page_to_codes: dict[int, list] = {}
     code_titles:   dict[str, str]  = {}
@@ -770,129 +786,148 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
     records     = []
     seen_xrefs  = set()
     seen_hashes = {}
+    record_num  = 0   # incremented per TYPE segment, not per index entry
 
-    for record_num, (page_num, codes) in enumerate(sorted(page_to_codes.items()), start=1):
+    for page_num, codes in sorted(page_to_codes.items()):
         print(f"  Page {page_num} -> {codes}")
 
-        page_ref_base = f"{pdf_path.stem}-{page_num}"
+        # ── TYPE-segment loop ─────────────────────────────────────────────────
+        # A DTC block may span a TYPE boundary.  When extract_content signals
+        # stopped_at_type_boundary, we create a record for the current segment
+        # and restart extraction from the boundary page as a new record under
+        # the new manual_type.  No pages are silently dropped.
+        seg_start = page_num
+        while seg_start is not None:
+            record_num  += 1
+            manual_type  = page_type_map.get(seg_start)
 
-        content = extract_content(
-            pdf_path, page_num, codes, output_dir,
-            page_ref_base, seen_xrefs, seen_hashes
-        )
-
-        # ── Cross-check: index ref vs footer ref ──────────────────────────────
-        index_ref  = page_to_ref.get(page_num)
-        footer_ref = content["start_page_ref_footer"]
-        warnings   = []
-        if index_ref and footer_ref and index_ref != footer_ref:
-            msg = f"page_ref mismatch on PDF page {page_num}: index={index_ref}, footer={footer_ref}"
-            print(f"  [WARN] {msg}")
-            warnings.append(msg)
-
-        # ── page_refs list ────────────────────────────────────────────────────
-        # Full ordered list of footer labels seen across all pages of this block.
-        page_refs    = content["page_refs"]
-        section_code = content.get("section_code")
-
-        # ── DTC title ─────────────────────────────────────────────────────────
-        dtc_title = _normalize_title(codes, code_titles)
-
-        # ── Sections — assign section_id to each ─────────────────────────────
-        sections = []
-        for s_idx, sec in enumerate(content["sections"]):
-            sections.append({
-                "section_id": f"r{record_num}_s{s_idx + 1}",
-                "heading":    sec["heading"],
-                "role":       sec["role"],
-                "text":       sec["text"],
-                "page_start": sec["page_start"],
-                "page_end":   sec["page_end"],
-            })
-
-        # ── Tables — flat list, each linked to its section via section_id ─────
-        notes   = []
-        tables  = []
-        t_count = 1
-        for s_idx, sec in enumerate(content["sections"]):
-            section_id = f"r{record_num}_s{s_idx + 1}"
-            for tbl in sec["tables"]:
-                tables.append({
-                    "table_id":       f"r{record_num}_t{t_count}",
-                    "section_id":     section_id,
-                    "heading_nearby": sec["heading"],
-                    "role":           sec["role"],
-                    "page":           tbl["page"],
-                    "page_ref":       tbl["page_ref"],
-                    "rows":           tbl["rows"],
-                })
-                t_count += 1
-
-        # Detect cross-page continuations → table_groups (raw tables unchanged)
-        table_groups, absorbed_ids = _merge_continued_tables(tables, notes, record_num)
-
-        # Finalize raw tables: rename location fields, pop rows → raw_rows.
-        # Semantic parse only for standalone tables not absorbed into a group.
-        for tbl in tables:
-            raw    = tbl.pop("rows")
-            page   = tbl.pop("page")
-            pr     = tbl.pop("page_ref")
-            tbl["start_pdf_page"] = page
-            tbl["end_pdf_page"]   = page
-            tbl["page_refs"]      = [pr] if pr else []
-            tbl["raw_rows"]       = raw
-            if tbl["table_id"] not in absorbed_ids:
-                tbl["semantic_parse"] = _analyze_table(
-                    raw, role=tbl.get("role"), known_codes=set(codes)
-                )
-
-        # Semantic parse on table_groups (complete merged rows)
-        for grp in table_groups:
-            grp["semantic_parse"] = _analyze_table(
-                grp["raw_rows"], role=grp.get("role"), known_codes=set(codes)
+            page_ref_base = f"{pdf_path.stem}-{seg_start}"
+            content = extract_content(
+                pdf_path, seg_start, codes, output_dir,
+                page_ref_base, seen_xrefs, seen_hashes,
+                page_type_map=page_type_map,
             )
 
-        # ── Images — enriched with metadata ──────────────────────────────────
-        images = []
-        for i_idx, img in enumerate(content["image_list"]):
-            images.append({
-                "image_id":   f"r{record_num}_i{i_idx + 1}",
-                "section_id": None,          # not yet assigned to a specific section
-                "pdf_page":   img["pdf_page"],
-                "page_ref":   img["page_ref"],
-                "image_path": f"images/{img['filename']}",
-                "caption":    None,
-                "role":       "unknown",
+            # ── Cross-check: index ref vs footer ref ──────────────────────────
+            # Only meaningful for the first segment (index only lists start page)
+            index_ref  = page_to_ref.get(seg_start)
+            footer_ref = content["start_page_ref_footer"]
+            warnings   = []
+            if index_ref and footer_ref and index_ref != footer_ref:
+                msg = f"page_ref mismatch on PDF page {seg_start}: index={index_ref}, footer={footer_ref}"
+                print(f"  [WARN] {msg}")
+                warnings.append(msg)
+
+            # ── page_refs list ────────────────────────────────────────────────
+            page_refs    = content["page_refs"]
+            section_code = content.get("section_code")
+
+            # ── DTC title ─────────────────────────────────────────────────────
+            dtc_title = _normalize_title(codes, code_titles)
+
+            # ── Sections — assign section_id to each ─────────────────────────
+            sections = []
+            for s_idx, sec in enumerate(content["sections"]):
+                sections.append({
+                    "section_id": f"r{record_num}_s{s_idx + 1}",
+                    "heading":    sec["heading"],
+                    "role":       sec["role"],
+                    "text":       sec["text"],
+                    "page_start": sec["page_start"],
+                    "page_end":   sec["page_end"],
+                })
+
+            # ── Tables — flat list, each linked to its section via section_id ─
+            notes   = []
+            tables  = []
+            t_count = 1
+            for s_idx, sec in enumerate(content["sections"]):
+                section_id = f"r{record_num}_s{s_idx + 1}"
+                for tbl in sec["tables"]:
+                    tables.append({
+                        "table_id":       f"r{record_num}_t{t_count}",
+                        "section_id":     section_id,
+                        "heading_nearby": sec["heading"],
+                        "role":           sec["role"],
+                        "page":           tbl["page"],
+                        "page_ref":       tbl["page_ref"],
+                        "rows":           tbl["rows"],
+                    })
+                    t_count += 1
+
+            # Detect cross-page continuations → table_groups (raw tables unchanged)
+            table_groups, absorbed_ids = _merge_continued_tables(tables, notes, record_num)
+
+            # Finalize raw tables: rename location fields, pop rows → raw_rows.
+            # Semantic parse only for standalone tables not absorbed into a group.
+            for tbl in tables:
+                raw    = tbl.pop("rows")
+                page   = tbl.pop("page")
+                pr     = tbl.pop("page_ref")
+                tbl["start_pdf_page"] = page
+                tbl["end_pdf_page"]   = page
+                tbl["page_refs"]      = [pr] if pr else []
+                tbl["raw_rows"]       = raw
+                if tbl["table_id"] not in absorbed_ids:
+                    tbl["semantic_parse"] = _analyze_table(
+                        raw, role=tbl.get("role"), known_codes=set(codes)
+                    )
+
+            # Semantic parse on table_groups (complete merged rows)
+            for grp in table_groups:
+                grp["semantic_parse"] = _analyze_table(
+                    grp["raw_rows"], role=grp.get("role"), known_codes=set(codes)
+                )
+
+            # ── Images — enriched with metadata ──────────────────────────────
+            images = []
+            for i_idx, img in enumerate(content["image_list"]):
+                images.append({
+                    "image_id":   f"r{record_num}_i{i_idx + 1}",
+                    "section_id": None,
+                    "pdf_page":   img["pdf_page"],
+                    "page_ref":   img["page_ref"],
+                    "image_path": f"images/{img['filename']}",
+                    "caption":    None,
+                    "role":       "unknown",
+                })
+
+            records.append({
+                "record_id":   _make_record_id(document_id, manual_type, seg_start),
+                "record_type": "dtc_block",
+
+                "codes": codes,
+                "title": dtc_title,
+
+                **({"manual_type": manual_type} if manual_type is not None else {}),
+
+                "location": {
+                    "start_pdf_page": seg_start,
+                    "end_pdf_page":   content["end_pdf_page"],
+                    "page_refs":      page_refs,
+                    **({"section_code": section_code} if section_code else {}),
+                },
+
+                "sections":     sections,
+                "tables":       tables,
+                "table_groups": table_groups,
+                "images":       images,
+                "notes":        notes,
+
+                "raw_text": content["raw_text"],
+
+                "extraction": {
+                    "status":   "success",
+                    "ocr_used": False,
+                    "warnings": warnings,
+                },
             })
 
-        records.append({
-            "record_id":   _make_record_id(document_id, page_num),
-            "record_type": "dtc_block",
-
-            "codes": codes,
-            "title": dtc_title,
-
-            "location": {
-                "start_pdf_page": page_num,
-                "end_pdf_page":   content["end_pdf_page"],
-                "page_refs":      page_refs,
-                **({"section_code": section_code} if section_code else {}),
-            },
-
-            "sections":     sections,
-            "tables":       tables,
-            "table_groups": table_groups,
-            "images":       images,
-            "notes":        notes,
-
-            "raw_text": content["raw_text"],
-
-            "extraction": {
-                "status":   "success",
-                "ocr_used": False,
-                "warnings": warnings,
-            },
-        })
+            # ── Advance to next TYPE segment if boundary was hit ──────────────
+            if content["stopped_at_type_boundary"]:
+                seg_start = content["end_pdf_page"] + 1
+            else:
+                seg_start = None
 
     return {
         "schema_version": 4,

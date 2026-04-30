@@ -353,6 +353,7 @@ def extract_content(
     page_ref_base: str,    # e.g. "EVB-167" — used as the image filename prefix
     seen_xrefs: set,       # shared across all sections — prevents saving same xref twice
     seen_hashes: dict,     # hash → filename — points duplicates to the already-saved file
+    page_type_map: dict | None = None,  # {pdf_page: "TYPE N" | None} from type_detector
 ) -> dict:
     """
     Extract content starting from start_page, continuing while
@@ -378,8 +379,10 @@ def extract_content(
         all_page_refs         = []   # ordered footer labels for every page in this block
         start_page_ref_footer = None
         end_page_ref          = None
-        last_processed        = start_page
-        start_section_code    = None  # e.g. "EVB" from "EVB-88"
+        last_processed           = start_page
+        start_section_code       = None   # e.g. "EVB" from "EVB-88"
+        start_manual_type        = page_type_map.get(start_page) if page_type_map else None
+        stopped_at_type_boundary = False  # set True when TYPE changes mid-block
 
         # ── Section tracking ──────────────────────────────────────────────────
         # active_section holds the section currently being built.
@@ -408,6 +411,18 @@ def extract_content(
                 if current_section != start_section_code:
                     print(f"  [WARN section-boundary] stopped at PDF page {page_num}: "
                           f"section changed {start_section_code!r} → {current_section!r}")
+                    break
+
+            # ── Manual TYPE boundary check ────────────────────────────────────
+            # Stop when the manual_type changes (e.g. TYPE 1 → TYPE 2).
+            # Acts as a split point — the caller restarts extraction from this
+            # page as a new record under the new manual_type (no pages dropped).
+            if page_type_map is not None and page_num != start_page:
+                page_manual_type = page_type_map.get(page_num)
+                if page_manual_type != start_manual_type:
+                    print(f"  [INFO type-boundary] split at PDF page {page_num}: "
+                          f"manual_type {start_manual_type!r} → {page_manual_type!r}")
+                    stopped_at_type_boundary = True
                     break
 
             last_processed = page_num
@@ -529,6 +544,7 @@ def extract_content(
         "page_refs":              all_page_refs,
         "start_page_ref_footer":  start_page_ref_footer,
         "end_page_ref":           end_page_ref,
-        "end_pdf_page":           last_processed,
-        "section_code":           start_section_code,
+        "end_pdf_page":             last_processed,
+        "section_code":             start_section_code,
+        "stopped_at_type_boundary": stopped_at_type_boundary,
     }
