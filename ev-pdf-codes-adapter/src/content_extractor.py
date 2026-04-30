@@ -379,6 +379,7 @@ def extract_content(
         start_page_ref_footer = None
         end_page_ref          = None
         last_processed        = start_page
+        start_section_code    = None  # e.g. "EVB" from "EVB-88"
 
         # ── Section tracking ──────────────────────────────────────────────────
         # active_section holds the section currently being built.
@@ -392,12 +393,24 @@ def extract_content(
             if page_num > start_page and not page_belongs_to_codes(page, codes):
                 break
 
-            last_processed = page_num
-
             # ── Footer page label ─────────────────────────────────────────────
             ref = read_page_ref(page)
+
+            # ── Section boundary check ────────────────────────────────────────
+            # Stop when the page-ref prefix changes (e.g. EVB → EVC).
+            # Protects against cross-section merging in merged PDFs.
             if page_num == start_page:
                 start_page_ref_footer = ref
+                if ref:
+                    start_section_code = ref.split('-')[0]
+            elif start_section_code and ref:
+                current_section = ref.split('-')[0]
+                if current_section != start_section_code:
+                    print(f"  [WARN section-boundary] stopped at PDF page {page_num}: "
+                          f"section changed {start_section_code!r} → {current_section!r}")
+                    break
+
+            last_processed = page_num
             end_page_ref = ref
             if ref and ref not in all_page_refs:
                 all_page_refs.append(ref)
@@ -517,4 +530,5 @@ def extract_content(
         "start_page_ref_footer":  start_page_ref_footer,
         "end_page_ref":           end_page_ref,
         "end_pdf_page":           last_processed,
+        "section_code":           start_section_code,
     }

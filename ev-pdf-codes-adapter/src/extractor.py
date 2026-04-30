@@ -792,7 +792,8 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
 
         # ── page_refs list ────────────────────────────────────────────────────
         # Full ordered list of footer labels seen across all pages of this block.
-        page_refs = content["page_refs"]
+        page_refs    = content["page_refs"]
+        section_code = content.get("section_code")
 
         # ── DTC title ─────────────────────────────────────────────────────────
         dtc_title = _normalize_title(codes, code_titles)
@@ -875,6 +876,7 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                 "start_pdf_page": page_num,
                 "end_pdf_page":   content["end_pdf_page"],
                 "page_refs":      page_refs,
+                **({"section_code": section_code} if section_code else {}),
             },
 
             "sections":     sections,
