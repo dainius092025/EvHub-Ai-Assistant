@@ -1,5 +1,5 @@
+# Core pipeline
+pymupdf>=1.24
 
-Python3
-fitz(pymupdf, anthropic(not implemented yet)
-pymongo(not there yet, but considering)
-psycopg2(or others if we decide to use postgresql)
+# Experiments only (not used in pipeline)
+# docling>=2.92
