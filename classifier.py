@@ -34,8 +34,8 @@ _SPEC_RE      = re.compile(r"\d+\s*(v|a|nm|rpm|°c|°f|kpa|psi|mm|in|kg|lb)\b", 
 _WARNING_KEYS = {"warning:", "caution:", "danger:"}
 _HEADER_KEYS  = {"note:", "important:", "precaution"}
 
-# Noise: single capital nav tabs on right margin
-_TAB_LETTERS  = set("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+# Noise: nav tabs and section codes on right margin (single letters AND multi-char e.g. "EVB")
+_MARGIN_LABEL_RE = re.compile(r"^[A-Z]{1,5}$")
 # Noise: inline wiring symbols
 _TINY_SYMBOLS = {"•", "·", "○", "●", "◆", "■", "□", "–", "—"}
 # Noise: INFOID reference codes e.g. INFOID:0000000010640902
@@ -44,6 +44,8 @@ _INFOID_RE    = re.compile(r"^INFOID:\d+$")
 _VARIANT_RE   = re.compile(r"^\[.{5,60}\]$")
 # Noise: breadcrumb tags e.g. < REMOVAL AND INSTALLATION >, < PRECAUTION >
 _BREADCRUMB_RE = re.compile(r"^<\s*.+\s*>$")
+# Noise: TOC dot-leader fragments e.g. "......5" or "...........19"
+_DOT_LEADER_RE = re.compile(r"^\.{3,}\s*\d*$")
 # CHANGE 1: image reference codes — matches refs anywhere in a cell,
 # with or without leading whitespace e.g. "AC359A" or "...too high. AC360A AC356A"
 _IMG_REF_INLINE = re.compile(r"\s*\b[A-Z]{2,5}\d{3,6}[A-Z]{0,3}\b")
@@ -51,12 +53,12 @@ _IMG_REF_INLINE = re.compile(r"\s*\b[A-Z]{2,5}\d{3,6}[A-Z]{0,3}\b")
 
 # ── Noise filters ─────────────────────────────────────────────────────────────
 
-def _is_tab_letter(el: dict) -> bool:
-    text = el["text"].strip()
-    if text not in _TAB_LETTERS:
-        return False
+def _is_margin_label(el: dict) -> bool:
+    """Nav tabs (single letter) and section codes (e.g. 'EVB') printed at the right margin."""
     bbox = el.get("bbox")
-    return bbox is not None and bbox[0] > 560
+    return (bbox is not None
+            and bbox[0] > 560
+            and bool(_MARGIN_LABEL_RE.match(el["text"].strip())))
 
 
 def _is_noise(el: dict) -> bool:
@@ -72,7 +74,9 @@ def _is_noise(el: dict) -> bool:
         return True
     if _BREADCRUMB_RE.match(text):
         return True
-    if _is_tab_letter(el):
+    if _DOT_LEADER_RE.match(text):
+        return True
+    if _is_margin_label(el):
         return True
     return False
 

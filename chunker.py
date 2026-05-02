@@ -24,10 +24,12 @@ from pathlib import Path
 logging.basicConfig(format="%(asctime)s %(levelname)s %(message)s", datefmt="%H:%M:%S", level=logging.INFO)
 log = logging.getLogger("chunker")
 
-_PREREQ_RE    = re.compile(r"\b(before|prior to|ensure|verify|confirm|check that|must be)\b", re.IGNORECASE)
-_SAFETY_ORDER = {"HIGH_VOLTAGE": 3, "WARNING": 2, "CAUTION": 1, "NONE": 0}
-_VARIANT_RE   = re.compile(r"\b(\d{4}\s+Leaf(?:\s+\w+)?)\b", re.IGNORECASE)
+_PREREQ_RE      = re.compile(r"\b(before|prior to|ensure|verify|confirm|check that|must be)\b", re.IGNORECASE)
+_SAFETY_ORDER   = {"HIGH_VOLTAGE": 3, "WARNING": 2, "CAUTION": 1, "NONE": 0}
+_VARIANT_RE     = re.compile(r"\b(\d{4}\s+Leaf(?:\s+\w+)?)\b", re.IGNORECASE)
 _IMG_REF_INLINE = re.compile(r"\s*\b[A-Z]{2,5}\d{3,6}[A-Z]{0,3}\b")
+_TOC_SUFFIX_RE  = re.compile(r"\s*\.{3,}[\d\s]*$")   # strips "......5" tails from TOC headings
+_MIN_IMG_DIM    = 20  # PDF points — bbox smaller than this in either axis is an icon/bullet
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -239,10 +241,11 @@ def _build_chunks(
     image_lookup: dict[int, list[dict]],
     variant:      str | None,
 ) -> list[dict]:
-    chunks:        list[dict] = []
-    idx:           int        = 0
-    current_els:   list[dict] = []
-    current_pages: set[int]   = set()
+    chunks:          list[dict] = []
+    idx:             int        = 0
+    current_els:     list[dict] = []
+    current_pages:   set[int]   = set()
+    last_hv_prereqs: list[str]  = []
 
     used_tables: set[tuple] = set()
     used_images: set[tuple] = set()
@@ -253,7 +256,7 @@ def _build_chunks(
     page_manual  = None
 
     def _flush():
-        nonlocal idx
+        nonlocal idx, last_hv_prereqs
         if not current_els and not current_pages:
             return
 
@@ -271,12 +274,26 @@ def _build_chunks(
         chunk_images = []
         for pg in sorted(current_pages):
             for img in image_lookup.get(pg, []):
+                bbox = img.get("bbox") or []
+                if len(bbox) == 4:
+                    if (abs(bbox[2] - bbox[0]) < _MIN_IMG_DIM
+                            or abs(bbox[3] - bbox[1]) < _MIN_IMG_DIM):
+                        continue
                 i_key = (img.get("page_pdf"), str(img.get("bbox")))
                 if i_key not in used_images:
                     used_images.add(i_key)
                     chunk_images.append(img)
 
         chunk_type = _detect_chunk_type(current_els)
+        safety     = _highest_safety(current_els)
+        prereqs    = _extract_prerequisites(current_els)
+
+        # Inherit HV prerequisites from the preceding safety section when a
+        # sub-procedure chunk doesn't repeat the warning locally.
+        if safety == "HIGH_VOLTAGE" and not prereqs and last_hv_prereqs:
+            prereqs = last_hv_prereqs[:]
+        if safety == "HIGH_VOLTAGE" and prereqs:
+            last_hv_prereqs = prereqs[:]
 
         chunks.append({
             "chunk_id":      _chunk_id(section_code, page_pdf, idx),
@@ -286,8 +303,8 @@ def _build_chunks(
             "section_code":  section_code,
             "vehicle":       variant,
             "heading":       heading,
-            "safety_level":  _highest_safety(current_els),
-            "prerequisites": _extract_prerequisites(current_els),
+            "safety_level":  safety,
+            "prerequisites": prereqs,
             "text_blocks":   current_els[:],
             "tables":        chunk_tables,
             "images":        chunk_images,
@@ -301,7 +318,7 @@ def _build_chunks(
         pg = el.get("page_pdf")
         if el.get("type") == "section_header":
             _flush()
-            heading      = el.get("text", "").strip()
+            heading      = _TOC_SUFFIX_RE.sub("", el.get("text", "").strip()).strip()
             section_code = el.get("section_code")
             page_pdf     = pg
             page_manual  = el.get("page_manual")

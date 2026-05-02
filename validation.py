@@ -50,6 +50,19 @@ def run(chunks_file: str | Path = "chunks.json") -> None:
                 "page_manual": chunk.get("page_manual"),
             })
 
+        # Stub chunk — only a section_header, nothing else
+        blocks = chunk.get("text_blocks", [])
+        if (len(blocks) <= 1
+                and not chunk.get("tables")
+                and not chunk.get("images")):
+            if not blocks or blocks[0].get("type") == "section_header":
+                issues.append({
+                    "chunk_id":    cid,
+                    "chunk_type":  chunk_type,
+                    "issue":       "Stub chunk — header only, no content",
+                    "page_manual": chunk.get("page_manual"),
+                })
+
     # ── Print summary ──────────────────────────────────────────────────────────
     total       = len(chunks)
     procedures  = sum(1 for c in chunks if c.get("chunk_type") == "procedure") 
