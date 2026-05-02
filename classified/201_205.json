@@ -1,0 +1,1629 @@
+{
+  "schema_version": "1.1",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-201\nIf the result deviates from the standard value, check the following and correct the malfunction location.\nStandard\n: Less than 0.1Ω\nRevision: October 2013\n2013 LEAF",
+    "page_start": 201,
+    "page_end": 205,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "201": [
+        "EVB-201",
+        "EVB",
+        "EVB-201\nIf the result deviates from the standard value, check the following and correct the malfunction location.\nStandard\n: Less than 0.1Ω\nRevision: October 2013\n2013 LEAF"
+      ],
+      "202": [
+        "EVB-202",
+        "EVB",
+        "EVB-202\nRevision: October 2013\n2013 LEAF"
+      ],
+      "203": [
+        "EVB-203",
+        "EVB",
+        "EVB-203\nJSCIA0565GB\nRevision: October 2013\n2013 LEAF"
+      ],
+      "204": [
+        "EVB-204",
+        "EVB",
+        "EVB-204\n• Depending on type of fire (vehicle or battery) use standard fire fighting equipment (water or extin-\nguisher).\nREMOVAL\nRevision: October 2013\n2013 LEAF"
+      ],
+      "205": [
+        "EVB-205",
+        "EVB",
+        "EVB-205\nJSCIA0572ZZ\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "LI-ION BATTERY",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        252.17998,
+        769.00991,
+        359.8315575999998,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Install the high-voltage harness connector and install the harness clamp .",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        734.87592,
+        369.57026439999953,
+        713.2118644640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "WARNING: To  prevent  electric  shock,  wear  insulated  protective",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        73.2606184,
+        707.9356043999999,
+        127.3105864,
+        698.6920168640884
+      ],
+      "type": "warning",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "gear.",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        73.2606184,
+        674.1560447999999,
+        97.69021840000003,
+        664.9124572640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Connect the high-voltage harness connector by the following procedure.",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        73.2606184,
+        588.4165007999999,
+        417.8915955999992,
+        579.1729132640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Install the Li-ion battery undercover.",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        456.5363327999999,
+        238.92452199999994,
+        447.2927452640883
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Install the service plug GI-33, \"How to Disconnect High Voltage\".",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        442.07591,
+        371.30231,
+        432.8323012640883
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Inspection",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        424.72991,
+        113.76658559999998,
+        412.83011914917125
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "ELECTRIC EQUIPOTENTIAL TEST",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        396.96827718,
+        236.6360531294001,
+        386.8215716630055
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "After installing the Li-ion battery, measure the resistance between the battery pack ground bolt and the body ground.",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        382.49592,
+        559.8677655999999,
+        361.7329408640884
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "WARNING: To prevent electric shock, wear insulated protective gear.",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001000000001,
+        147.2965008,
+        107.58932199999995,
+        138.05291326408837
+      ],
+      "type": "warning",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Standard",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        87.84,
+        65.39602000000002,
+        132.69232800000006,
+        56.152432464088406
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": ": Less than 0.1 Ω",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        153.43243200000006,
+        68.39229999999998,
+        234.157644,
+        55.61374000000001
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "If the result deviates from the standard value, check the following and correct the malfunction location.",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.461158400000016,
+        47.93588880000004,
+        525.1163463999997,
+        38.69230126408843
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "LI-ION BATTERY",
+      "page_pdf": 202,
+      "page_manual": "EVB-202",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        251.87999,
+        769.00991,
+        359.53156759999985,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Conditions of bonding plate connection",
+      "page_pdf": 202,
+      "page_manual": "EVB-202",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        735.83589,
+        240.92839920000014,
+        726.5923024640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Corrosion on bonding plate mounting surface",
+      "page_pdf": 202,
+      "page_manual": "EVB-202",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        724.3164984,
+        269.4802332000001,
+        715.0729108640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Presence of paint, oil, dirt, or other substance on the bonding plate mounting surface",
+      "page_pdf": 202,
+      "page_manual": "EVB-202",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        712.8565104,
+        451.9299864000009,
+        703.6129228640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "UNIT DISASSEMBLY AND ASSEMBLY",
+      "page_pdf": 203,
+      "page_manual": "EVB-203",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        736.25323718,
+        387.38939412300016,
+        719.4660233757127
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "LI-ION BATTERY BATTERY PACK UPPER CASE",
+      "page_pdf": 203,
+      "page_manual": "EVB-203",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.44,
+        713.06999,
+        250.63306199999985,
+        682.6196925524862
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "BATTERY PACK UPPER CASE : Exploded View",
+      "page_pdf": 203,
+      "page_manual": "EVB-203",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.44,
+        671.98989,
+        343.1060736000004,
+        660.0900991491712
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 203,
+      "page_manual": "EVB-203",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "LI-ION BATTERY",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        251.87999,
+        769.00991,
+        359.53156759999985,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "BATTERY PACK UPPER CASE : Removal and Installation",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.140086,
+        592.54943,
+        401.23078039999984,
+        580.6496391491713
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Service plug",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        83.16,
+        724.7543371800001,
+        129.76458768810005,
+        717.2638349779227
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Service plug retainer",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        244.69551554010008,
+        724.7543371800001,
+        322.2756684422998,
+        717.2638349779227
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Battery pack upper case",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        406.27679973429974,
+        724.7543371800001,
+        497.5707134465995,
+        717.2638349779227
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Seal",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        83.16,
+        708.2540182761,
+        100.11809004499999,
+        700.7635160740226
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Plug",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        244.69543094,
+        708.2540182761,
+        261.67044100500004,
+        700.7635160740226
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Plug washer",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        406.3070019700001,
+        708.2540182761,
+        452.9158196631002,
+        700.7635160740226
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Breather",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        83.16,
+        692.5336276941,
+        115.66699622430001,
+        685.0431254920226
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Battery pack case side",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        83.16,
+        676.7540170421,
+        168.24900397789992,
+        669.2635148400226
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": ": Always replace after every disas- sembly.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        83.16,
+        661.0336264601,
+        212.00933630400016,
+        643.0434058470225
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": ": N·m (kg-m, in-lb)",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        83.16,
+        633.9734384741,
+        150.95742033869993,
+        626.4829362720226
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": ": N·m (kg-m, ft-lb)",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        83.16,
+        614.3537446830001,
+        148.91060551930002,
+        606.8632424809226
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DANGER: Since hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        564.89594,
+        100.97268239999997,
+        555.6523524640885
+      ],
+      "type": "warning",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14010439999987,
+        493.6148564000001,
+        106.19007239999988,
+        484.3712688640885
+      ],
+      "type": "warning",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "Be sure to remove the service plug in order to shut off the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999987,
+        482.0954648000001,
+        558.5399255999995,
+        461.3313372640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Be sure to put the removed service plug in pocket and carry it or store it in a tool box or other container so that another person does not accidentally connect it while work is in progress.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999987,
+        459.1149368000001,
+        558.5218643999992,
+        438.3519576640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Be sure to put on insulating protective gear before beginning work on the high voltage system.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14114839999982,
+        436.07500520000013,
+        532.739136,
+        426.8314176640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Clearly identify the persons responsible for high voltage work and ensure that other persons do not touch the vehicle. When not working, cover high voltage components with an anti-static cover sheet or similar item to prevent contact with other persons.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409395999998,
+        424.6150172000001,
+        558.5414915999999,
+        392.3314980640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Refer to EVB-6, \"High Voltage Precautions\".",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409395999998,
+        390.11592,
+        278.30231,
+        380.8715100640885
+      ],
+      "type": "section_header",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "If the battery pack is to be disassembled, be sure to remove the Li-ion battery controller for preventing electric shock, fire, and damage to parts.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139545999999996,
+        378.5965284,
+        558.5744455999998,
+        357.8324008640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "CAUTION: There is the possibility of a malfunction occurring if the vehicle is changed to READY status while the service plug is removed. Therefore do not change the vehicle to READY status unless instructed to do so in the Service Manual.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.1393372,
+        355.6160004,
+        103.31621720000001,
+        346.3724128640884
+      ],
+      "type": "warning",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "ENVIRONMENT FOR LI-ION BATTERY DISASSEMBLY WORK",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        303.66837718,
+        378.60176327039966,
+        293.5216716630055
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Must be an indoor environment.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        287.09593,
+        219.19148400000023,
+        277.85234246408845
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "The environment must utilize a shutter or other means to shut out the outside environment and prevent rain, snow, dust, or other substances from entering.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        72.000012,
+        275.5765384,
+        558.5364804000011,
+        254.87296286408832
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "The environment must not cause the intrusion of sweat during work, or cause condensation to occur due to high temperature or humidity.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        71.99980320000006,
+        252.5971588,
+        558.4902312,
+        231.83417966408842
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Metal powder, grease, and other foreign substances must not enter.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1398956,
+        226.6173232,
+        384.716118,
+        217.37373566408837
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "The indoor environment must also prevent metal powder, grease, and other foreign substances from entering due to maintenance performed on other vehicles and other sources during disassembly work.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        71.9999076,
+        215.09793160000004,
+        558.5414915999999,
+        194.33495246408836
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "If there is a risk of the above substances entering, take appropriate countermeasures, such as use of a vinyl curtain or an equivalent to shut out the outside environment.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        71.99990759999997,
+        192.1185519999999,
+        558.5452500000008,
+        171.35557286408834
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "The floor must be dry.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13895599999999,
+        166.07931280000003,
+        172.99552800000006,
+        156.8357252640883
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "The floor must not be wet as a result of factors such as vehicle entry during rain or snow.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        71.99896799999999,
+        154.61932479999996,
+        490.53324360000033,
+        145.37573726408834
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Work space",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13895599999999,
+        140.0994771999999,
+        126.83715599999998,
+        130.8558896640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "The work space must be approximately the size of one entire vehicle.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        71.99896799999999,
+        128.58008559999996,
+        400.83109320000005,
+        119.33649806408835
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Take appropriate countermeasures so that persons other than the operator do not enter the work space, such as by placing signs indicating that disassembly work is in progress.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        71.99896799999999,
+        117.12009760000001,
+        558.5353319999997,
+        96.35711846408833
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Standard fire fighting equipment",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13895600000002,
+        91.0808583999999,
+        219.61044120000014,
+        81.8372708640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "Always place a standard fire fighting equipment in the disassembly work area.",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        71.99896800000002,
+        79.62087039999994,
+        440.33960279999934,
+        70.37728286408833
+      ],
+      "type": "procedure_step",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "Depending  on  type  of  fire  (vehicle  or  battery)  use  standard  fire  fighting  equipment  (water  or  extinguisher).",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        71.99896800000002,
+        68.10033039999996,
+        558.5447280000013,
+        47.3373512640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "LI-ION BATTERY",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        252.17998,
+        769.00991,
+        359.8315575999998,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Clean any dust or dirt adhered to the battery pack.",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        735.83589,
+        305.79689799999977,
+        726.5923024640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Remove the service plug retainer .",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        719.6955456,
+        242.42401000000012,
+        710.4519580640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "WARNING: To  prevent  electric  shock,  wear  insulated  protective gear and use insulated tools.",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        73.2606184,
+        705.1756979999999,
+        127.3105864,
+        695.9321104640884
+      ],
+      "type": "warning",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "Remove the battery pack upper case mounting bolts and ground bolts .",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        577.9758863999999,
+        424.3023820000001,
+        568.7322988640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "WARNING: To prevent electric shock, wear insulated protective gear and use insulated tools.",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        73.25946999999996,
+        354.29585879999996,
+        127.30943799999997,
+        345.05227126408835
+      ],
+      "type": "warning",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Cut the battery pack upper case adhesive according to the following procedure.",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.459070399999945,
+        274.37567519999993,
+        440.1316143999997,
+        265.1320876640883
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "WARNING: To prevent electric shock, wear insulated protective gear.",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        73.25967879999995,
+        259.9152311999999,
+        127.30964679999995,
+        250.67164366408838
+      ],
+      "type": "warning",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Prepare a windshield cutter.",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460427599999946,
+        187.9753836,
+        202.24608760000012,
+        178.73179606408826
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        73.26103599999995,
+        176.45599199999992,
+        105.84009999999996,
+        167.2124044640883
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Sharpen the blade of the windshield cutter .",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        73.26103599999995,
+        164.0355239999999,
+        293.01092559999984,
+        154.79193646408828
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Apply a tape for preventing damage to the battery pack.",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        73.26103599999995,
+        151.61505599999987,
+        352.18025199999954,
+        142.37146846408837
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": ": 38 mm (1.50 in)",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        150.90001,
+        125.89429717999997,
+        217.26768864870022,
+        118.40379497792264
+      ],
+      "type": "spec_value",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    }
+  ],
+  "tables": [],
+  "images": [
+    {
+      "file": "images/page_201_raster_1.png",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "bbox": [
+        270.2999572753906,
+        56.70004653930664,
+        280.199951171875,
+        66.60003662109375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_201_raster_2.png",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        56.70002746582031,
+        559.8599853515625,
+        187.08001708984375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_201_raster_3.png",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "bbox": [
+        129.11997985839844,
+        69.12002563476562,
+        139.07997131347656,
+        79.02001953125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_201_raster_4.jpeg",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "bbox": [
+        73.2599868774414,
+        96.06002807617188,
+        100.15990447998047,
+        114.84002685546875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_201_raster_5.png",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "bbox": [
+        73.2599868774414,
+        129.83993530273438,
+        105.17998504638672,
+        160.43994140625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_201_raster_6.png",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "bbox": [
+        105.17999267578125,
+        129.83993530273438,
+        137.0399932861328,
+        160.43994140625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_201_raster_7.png",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "bbox": [
+        88.5,
+        214.5599822998047,
+        524.760009765625,
+        331.91998291015625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_201_raster_8.png",
+      "page_pdf": 201,
+      "page_manual": "EVB-201",
+      "section_code": "EVB",
+      "bbox": [
+        88.5,
+        431.99993896484375,
+        524.760009765625,
+        641.159912109375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_203_raster_1.png",
+      "page_pdf": 203,
+      "page_manual": "EVB-203",
+      "section_code": "EVB",
+      "bbox": [
+        88.5,
+        155.63995361328125,
+        524.760009765625,
+        752.579833984375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_204_raster_1.png",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "bbox": [
+        227.75997924804688,
+        67.68002319335938,
+        237.719970703125,
+        77.6400146484375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_204_raster_2.png",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "bbox": [
+        66.17999267578125,
+        67.68002319335938,
+        76.13998413085938,
+        77.6400146484375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_204_raster_3.png",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "bbox": [
+        389.3399658203125,
+        67.68002319335938,
+        399.2999572753906,
+        77.6400146484375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_204_raster_4.png",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "bbox": [
+        66.17999267578125,
+        84.12002563476562,
+        76.13998413085938,
+        94.08001708984375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_204_raster_5.png",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "bbox": [
+        227.75997924804688,
+        84.12002563476562,
+        237.719970703125,
+        94.08001708984375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_204_raster_6.png",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "bbox": [
+        389.3399658203125,
+        84.12002563476562,
+        399.2999572753906,
+        94.08001708984375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_204_raster_7.png",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "bbox": [
+        66.17999267578125,
+        99.89999389648438,
+        76.13998413085938,
+        109.79998779296875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_204_raster_8.png",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "bbox": [
+        66.17999267578125,
+        115.62002563476562,
+        76.13998413085938,
+        125.58001708984375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_204_raster_9.png",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "bbox": [
+        66.17999267578125,
+        135.05995178222656,
+        77.69999694824219,
+        146.63995361328125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_204_raster_10.png",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "bbox": [
+        66.17999267578125,
+        155.33998107910156,
+        77.99998474121094,
+        167.15997314453125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_204_raster_11.png",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "bbox": [
+        66.17999267578125,
+        174.9599609375,
+        78.0,
+        186.77996826171875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_204_raster_12.jpeg",
+      "page_pdf": 204,
+      "page_manual": "EVB-204",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        239.10000610351562,
+        79.0399169921875,
+        257.8800048828125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_205_raster_1.png",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "bbox": [
+        229.61997985839844,
+        71.16000366210938,
+        239.57997131347656,
+        81.1199951171875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_205_raster_2.png",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        71.15998840332031,
+        559.8599853515625,
+        201.5999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_205_raster_3.jpeg",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "bbox": [
+        73.2599868774414,
+        98.82003784179688,
+        100.15990447998047,
+        117.60003662109375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_205_raster_4.png",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "bbox": [
+        73.2599868774414,
+        132.65994262695312,
+        105.17998504638672,
+        163.25994873046875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_205_raster_5.png",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "bbox": [
+        105.17999267578125,
+        132.65994262695312,
+        137.0399932861328,
+        163.25994873046875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_205_raster_6.png",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "bbox": [
+        137.03997802734375,
+        132.65994262695312,
+        168.95997619628906,
+        163.25994873046875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_205_raster_7.png",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "bbox": [
+        168.95997619628906,
+        132.65994262695312,
+        200.87997436523438,
+        163.25994873046875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_205_raster_8.png",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "bbox": [
+        200.8799591064453,
+        132.65994262695312,
+        232.73995971679688,
+        163.25994873046875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_205_raster_9.png",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "bbox": [
+        317.9399719238281,
+        213.60000610351562,
+        327.8399658203125,
+        223.55999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_205_raster_10.png",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "bbox": [
+        411.53997802734375,
+        213.60000610351562,
+        421.4399719238281,
+        223.55999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_205_raster_11.png",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "bbox": [
+        88.5,
+        224.99998474121094,
+        524.760009765625,
+        434.1600036621094
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_205_raster_12.png",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        627.5399169921875,
+        559.8599853515625,
+        757.919921875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_205_raster_13.png",
+      "page_pdf": 205,
+      "page_manual": "EVB-205",
+      "section_code": "EVB",
+      "bbox": [
+        133.91998291015625,
+        665.3999633789062,
+        143.87997436523438,
+        675.2999267578125
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

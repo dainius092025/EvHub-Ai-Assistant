@@ -1,0 +1,2016 @@
+{
+  "schema_version": "1.1",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-121\n1.CHECK SELF-DIAGNOSIS RESULTS\nWith CONSULT\nRevision: October 2013\n2013 LEAF",
+    "page_start": 121,
+    "page_end": 125,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "121": [
+        "EVB-121",
+        "EVB",
+        "EVB-121\n1.CHECK SELF-DIAGNOSIS RESULTS\nWith CONSULT\nRevision: October 2013\n2013 LEAF"
+      ],
+      "122": [
+        "EVB-122",
+        "EVB",
+        "EVB-122\nRevision: October 2013\n2013 LEAF"
+      ],
+      "123": [
+        "EVB-123",
+        "EVB",
+        "EVB-123\ng\np\ng\n,\np\np\nIs the inspection result normal?\nRevision: October 2013\n2013 LEAF"
+      ],
+      "124": [
+        "EVB-124",
+        "EVB",
+        "EVB-124\nRevision: October 2013\n2013 LEAF"
+      ],
+      "125": [
+        "EVB-125",
+        "EVB",
+        "EVB-125\n1.CHECK SELF-DIAGNOSIS RESULTS\nWith CONSULT\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "P3302-P330D CELL OVER VOLTAGE",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        188.94,
+        769.00991,
+        422.9770367999999,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "P3302-P330D CELL OVER VOLTAGE",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        736.10997,
+        307.84199999999976,
+        722.8289534254144
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        712.00991,
+        115.97786880000004,
+        700.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        684.24824718,
+        184.37932433020006,
+        674.1015416630055
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        453.4884544190999,
+        243.41189864199998,
+        443.34174890210545
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        440.364,
+        296.998896,
+        424.42678011049725
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        415.5562524,
+        138.10126079999998,
+        406.3126648640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        404.0368608,
+        308.8233444000003,
+        394.7932732640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        392.5768728,
+        276.0449807999998,
+        383.3332852640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        381.0563328,
+        130.29944880000005,
+        371.8127452640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Is any DTC detected?",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.460944399999995,
+        366.5364852,
+        154.7084820000001,
+        357.2928976640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> Refer to EVB-121, \"Diagnosis Procedure\".",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        352.07591,
+        305.48231,
+        342.8323224640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.100293600000015,
+        340.5565184,
+        199.08398959999994,
+        331.3129308640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        323.20992,
+        177.41721599999997,
+        311.31012914917125
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DANGER: Since hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        295.55601,
+        102.29269239999996,
+        286.3124224640884
+      ],
+      "type": "warning",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.460009999999954,
+        224.27722319999998,
+        107.5893219999999,
+        215.03363566408837
+      ],
+      "type": "warning",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "Be sure to remove the service plug in order to disconnect the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460009999999954,
+        212.75783159999992,
+        559.858474,
+        192.05425606408835
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "The removed service plug must always be carried in a pocket of the responsible worker or placed in the tool box during the procedure to prevent the plug from being connected by mistake.",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460949599999935,
+        189.77845200000002,
+        559.8771615999998,
+        169.01547286408834
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Be sure to wear insulating protective equipment consisting of glove, shoes, face shield and glasses before beginning work on the high voltage system.",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46084519999991,
+        166.7990723999999,
+        559.8288243999995,
+        146.03609326408832
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Never allow workers other than the responsible person to touch the vehicle containing high voltage parts. To keep others from touching the high voltage parts, these parts must be covered with an insulating sheet except when using them.",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460845199999824,
+        143.7602892,
+        559.8678699999996,
+        111.53732206408836
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Refer to EVB-6, \"High Voltage Precautions\".",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460845199999795,
+        109.26151799999991,
+        279.62232,
+        100.01232246408836
+      ],
+      "type": "section_header",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "CAUTION: Never  bring  the  vehicle  into  the  READY  status  with  the  service  plug  removed  unless  otherwise instructed in the Service Manual. A malfunction may occur if this is not observed.",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.45955600000002,
+        97.79592200000002,
+        104.63643600000003,
+        88.5523344640884
+      ],
+      "type": "warning",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "1.CHECK SELF-DIAGNOSIS RESULTS",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        63.683989999999994,
+        245.21232000000015,
+        47.74677011049721
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "P3302-P330D CELL OVER VOLTAGE",
+      "page_pdf": 122,
+      "page_manual": "EVB-122",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        188.64,
+        769.00991,
+        422.7544511999997,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Perform 'All DTC Reading' with CONSULT.",
+      "page_pdf": 122,
+      "page_manual": "EVB-122",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        735.83589,
+        272.38798199999997,
+        726.5923024640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check systems other than 'HV BAT' if any DTC is detected.",
+      "page_pdf": 122,
+      "page_manual": "EVB-122",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        724.3164984,
+        351.56431560000004,
+        715.0729108640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Is any DTC detected?",
+      "page_pdf": 122,
+      "page_manual": "EVB-122",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        709.8560544,
+        153.27645600000002,
+        700.6124668640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> After performing trouble diagnosis of detected DTC, GO TO 2.",
+      "page_pdf": 122,
+      "page_manual": "EVB-122",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        695.33589,
+        395.75669999999985,
+        686.0923024640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO >> GO TO 2.",
+      "page_pdf": 122,
+      "page_manual": "EVB-122",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        683.8164984,
+        154.05410039999992,
+        674.5729108640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "2.PRECONDITIONING",
+      "page_pdf": 122,
+      "page_manual": "EVB-122",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        672.74407,
+        165.98800799999998,
+        656.8068501104972
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "WARNING: Disconnect high voltage. Refer to GI-33, \"How to Disconnect High Voltage\".",
+      "page_pdf": 122,
+      "page_manual": "EVB-122",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        646.4956023999999,
+        106.18977600000001,
+        637.2520148640884
+      ],
+      "type": "warning",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Remove Li-ion battery. Refer to EVB-194, \"Removal and Installation\".",
+      "page_pdf": 122,
+      "page_manual": "EVB-122",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14037200000001,
+        623.515912,
+        392.06232,
+        614.2722924640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Remove battery pack upper case. Refer to EVB-204, \"BATTERY PACK UPPER CASE : Removal and Installation\".",
+      "page_pdf": 122,
+      "page_manual": "EVB-122",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.140096000000085,
+        611.9953399999999,
+        558.5183063999997,
+        591.2323124640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": ">> GO TO 3.",
+      "page_pdf": 122,
+      "page_manual": "EVB-122",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.7796556,
+        571.4956083999999,
+        154.05301200000002,
+        562.2520208640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "3.CHECK HARNESS BETWEEN MODULE AND LI-ION BATTERY CONTROLLER",
+      "page_pdf": 122,
+      "page_manual": "EVB-122",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        560.424,
+        443.0860704000004,
+        544.4867801104972
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Disconnect voltage detection terminal of bus bar and Li-ion battery controller harness connector.",
+      "page_pdf": 122,
+      "page_manual": "EVB-122",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13959919999999,
+        537.1759883999999,
+        516.3103512000009,
+        527.9324008640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Refer to below table and check the continuity between Li-ion battery controller and corresponding bus bar .",
+      "page_pdf": 122,
+      "page_manual": "EVB-122",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13959919999999,
+        524.6960124,
+        558.4628951999999,
+        503.0319568640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "P3302-P330D CELL OVER VOLTAGE",
+      "page_pdf": 123,
+      "page_manual": "EVB-123",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        188.94,
+        769.00991,
+        422.9770367999999,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 123,
+      "page_manual": "EVB-123",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        131.57592,
+        198.38673280000006,
+        122.33233246408838
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> GO TO 4.",
+      "page_pdf": 123,
+      "page_manual": "EVB-123",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        117.05601999999999,
+        155.30461,
+        107.81243246408837
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO >> Repair harness or connector.",
+      "page_pdf": 123,
+      "page_manual": "EVB-123",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        105.53662840000004,
+        244.3076979999998,
+        96.29304086408843
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "4.CHECK MODULE VOLTAGE",
+      "page_pdf": 123,
+      "page_manual": "EVB-123",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.44,
+        94.46401000000003,
+        202.51814879999998,
+        78.52679011049725
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check voltage of corresponding module. Refer to EVB-124, \"Component Inspection\". Is the inspection result normal?",
+      "page_pdf": 123,
+      "page_manual": "EVB-123",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.459796,
+        71.21599839999999,
+        446.48231,
+        47.51188846408843
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 123,
+      "page_manual": "EVB-123",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "P3302-P330D CELL OVER VOLTAGE",
+      "page_pdf": 124,
+      "page_manual": "EVB-124",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        188.64,
+        769.00991,
+        422.7544511999997,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> Replace Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 124,
+      "page_manual": "EVB-124",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        735.83589,
+        558.4801775999994,
+        715.0723424640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO >> Replace corresponding module. Refer to EVB-261, \"REAR MODULE STACK : Disassembly and Assembly\".",
+      "page_pdf": 124,
+      "page_manual": "EVB-124",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.839618,
+        712.855942,
+        558.5632112,
+        692.0923024640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Component Inspection",
+      "page_pdf": 124,
+      "page_manual": "EVB-124",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        683.98989,
+        186.7847424,
+        672.0900991491712
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "1.CHECK MODULE VOLTAGE",
+      "page_pdf": 124,
+      "page_manual": "EVB-124",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        662.60405,
+        202.2428916000001,
+        646.6668301104972
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": ": Positive terminal (Red)",
+      "page_pdf": 124,
+      "page_manual": "EVB-124",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        105.180252,
+        614.8153659999999,
+        225.01610519999994,
+        605.5717784640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": ": Negative terminal (Black)",
+      "page_pdf": 124,
+      "page_manual": "EVB-124",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        105.180252,
+        598.4350059999999,
+        236.60450519999995,
+        589.1914184640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "P330E-P3319 CELL OVER VOLTAGE",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        189.3,
+        769.00991,
+        422.6616767999996,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "P330E-P3319 CELL OVER VOLTAGE",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        736.10997,
+        307.0022999999999,
+        722.8289534254144
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        712.00991,
+        115.97786880000004,
+        700.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        684.24824718,
+        184.37932433020006,
+        674.1015416630055
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        453.4884544190999,
+        243.41189864199998,
+        443.34174890210545
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        440.364,
+        296.998896,
+        424.42678011049725
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        415.5562524,
+        138.10126079999998,
+        406.3126648640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        404.0368608,
+        308.8233444000003,
+        394.7932732640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        392.5768728,
+        276.0449807999998,
+        383.3332852640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        381.0563328,
+        130.29944880000005,
+        371.8127452640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Is any DTC detected?",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.460944399999995,
+        366.5364852,
+        154.7084820000001,
+        357.2928976640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> Refer to EVB-132, \"Diagnosis Procedure\".",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        352.07591,
+        305.48231,
+        342.8323224640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.100293600000015,
+        340.5565184,
+        199.08398959999994,
+        331.3129308640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        323.20992,
+        177.41721599999997,
+        311.31012914917125
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DANGER: Since hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        295.55601,
+        102.29269239999996,
+        286.3124224640884
+      ],
+      "type": "warning",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.460009999999954,
+        224.27722319999998,
+        107.5893219999999,
+        215.03363566408837
+      ],
+      "type": "warning",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "Be sure to remove the service plug in order to disconnect the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460009999999954,
+        212.75783159999992,
+        559.858474,
+        192.05425606408835
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "The removed service plug must always be carried in a pocket of the responsible worker or placed in the tool box during the procedure to prevent the plug from being connected by mistake.",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460949599999935,
+        189.77845200000002,
+        559.8771615999998,
+        169.01547286408834
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Be sure to wear insulating protective equipment consisting of glove, shoes, face shield and glasses before beginning work on the high voltage system.",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46084519999991,
+        166.7990723999999,
+        559.8288243999995,
+        146.03609326408832
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Never allow workers other than the responsible person to touch the vehicle containing high voltage parts. To keep others from touching the high voltage parts, these parts must be covered with an insulating sheet except when using them.",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460845199999824,
+        143.7602892,
+        559.8678699999996,
+        111.53732206408836
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Refer to EVB-6, \"High Voltage Precautions\".",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460845199999795,
+        109.26151799999991,
+        279.62232,
+        100.01232246408836
+      ],
+      "type": "section_header",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "CAUTION: Never  bring  the  vehicle  into  the  READY  status  with  the  service  plug  removed  unless  otherwise instructed in the Service Manual. A malfunction may occur if this is not observed.",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.45955600000002,
+        97.79592200000002,
+        104.63643600000003,
+        88.5523344640884
+      ],
+      "type": "warning",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "1.CHECK SELF-DIAGNOSIS RESULTS",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.44,
+        63.683989999999994,
+        245.21232000000015,
+        47.74677011049721
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "bbox": [
+        50.160118103027344,
+        661.2887725830078,
+        588.5911254882812,
+        457.8214111328125
+      ],
+      "num_rows": 13,
+      "num_cols": 5,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes",
+          ""
+        ],
+        [
+          "P3302",
+          "CELL OVER VOLTAGE MODULE1",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "EVB"
+        ],
+        [
+          "P3303",
+          "CELL OVER VOLTAGE MODULE2",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "EVB"
+        ],
+        [
+          "P3304",
+          "CELL OVER VOLTAGE MODULE3",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "D"
+        ],
+        [
+          "P3305",
+          "CELL OVER VOLTAGE MODULE4",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "D"
+        ],
+        [
+          "P3306",
+          "CELL OVER VOLTAGE MODULE5",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "D"
+        ],
+        [
+          "P3307",
+          "CELL OVER VOLTAGE MODULE6",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P3308",
+          "CELL OVER VOLTAGE MODULE7",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P3309",
+          "CELL OVER VOLTAGE MODULE8",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P330A",
+          "CELL OVER VOLTAGE MODULE9",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P330B",
+          "CELL OVER VOLTAGE MODULE10",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P330C",
+          "CELL OVER VOLTAGE MODULE11",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "G"
+        ],
+        [
+          "P330D",
+          "CELL OVER VOLTAGE MODULE12",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "G"
+        ]
+      ],
+      "markdown": "| DTC | Trouble diagnosis name | DTC detecting condition | Possible causes |  |\n| --- | --- | --- | --- | --- |\n| P3302 | CELL OVER VOLTAGE MODULE1 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | EVB |\n| P3303 | CELL OVER VOLTAGE MODULE2 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | EVB |\n| P3304 | CELL OVER VOLTAGE MODULE3 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | D |\n| P3305 | CELL OVER VOLTAGE MODULE4 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | D |\n| P3306 | CELL OVER VOLTAGE MODULE5 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | D |\n| P3307 | CELL OVER VOLTAGE MODULE6 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | E |\n| P3308 | CELL OVER VOLTAGE MODULE7 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | E |\n| P3309 | CELL OVER VOLTAGE MODULE8 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | E |\n| P330A | CELL OVER VOLTAGE MODULE9 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | E |\n| P330B | CELL OVER VOLTAGE MODULE10 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | E |\n| P330C | CELL OVER VOLTAGE MODULE11 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | G |\n| P330D | CELL OVER VOLTAGE MODULE12 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | G |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes",
+          ""
+        ],
+        [
+          "P3302",
+          "CELL OVER VOLTAGE MODULE1",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "EVB"
+        ],
+        [
+          "P3303",
+          "CELL OVER VOLTAGE MODULE2",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "EVB"
+        ],
+        [
+          "P3304",
+          "CELL OVER VOLTAGE MODULE3",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "D"
+        ],
+        [
+          "P3305",
+          "CELL OVER VOLTAGE MODULE4",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "D"
+        ],
+        [
+          "P3306",
+          "CELL OVER VOLTAGE MODULE5",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "D"
+        ],
+        [
+          "P3307",
+          "CELL OVER VOLTAGE MODULE6",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P3308",
+          "CELL OVER VOLTAGE MODULE7",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P3309",
+          "CELL OVER VOLTAGE MODULE8",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P330A",
+          "CELL OVER VOLTAGE MODULE9",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P330B",
+          "CELL OVER VOLTAGE MODULE10",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P330C",
+          "CELL OVER VOLTAGE MODULE11",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "G"
+        ],
+        [
+          "P330D",
+          "CELL OVER VOLTAGE MODULE12",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "G"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 123,
+      "page_manual": "EVB-123",
+      "section_code": "EVB",
+      "bbox": [
+        51.31293487548828,
+        725.4717254638672,
+        584.3318481445312,
+        132.25604248046875
+      ],
+      "num_rows": 30,
+      "num_cols": 6,
+      "data": [
+        [
+          "DTC",
+          "Module No.",
+          "Li-ion battery controller",
+          "Li-ion battery controller",
+          "Continuity",
+          "A"
+        ],
+        [
+          "DTC",
+          "Module No.",
+          "Connector Terminal",
+          "",
+          "Continuity",
+          "A"
+        ],
+        [
+          "",
+          "",
+          "",
+          "33",
+          "",
+          "B"
+        ],
+        [
+          "P3302",
+          "1",
+          "LB13",
+          "50",
+          "Existed",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "34",
+          "",
+          ""
+        ],
+        [
+          "P3303",
+          "",
+          "LB13",
+          "34 51",
+          "Existed",
+          ""
+        ],
+        [
+          "",
+          "2",
+          "",
+          "35",
+          "",
+          "D"
+        ],
+        [
+          "P3304",
+          "3",
+          "LB13",
+          "35 52",
+          "Existed",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "36",
+          "",
+          "E"
+        ],
+        [
+          "P3305",
+          "4",
+          "LB13",
+          "36 53",
+          "Existed",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "37",
+          "",
+          "F"
+        ],
+        [
+          "P3306",
+          "5",
+          "LB13",
+          "54",
+          "Existed",
+          "G"
+        ],
+        [
+          "",
+          "",
+          "",
+          "38",
+          "",
+          ""
+        ],
+        [
+          "P3307",
+          "6",
+          "LB13",
+          "55",
+          "Existed",
+          "H"
+        ],
+        [
+          "",
+          "",
+          "",
+          "39",
+          "",
+          ""
+        ],
+        [
+          "P3308",
+          "7",
+          "LB13",
+          "39 56",
+          "Existed",
+          "I"
+        ],
+        [
+          "",
+          "",
+          "",
+          "40",
+          "",
+          ""
+        ],
+        [
+          "P3309",
+          "",
+          "LB13",
+          "40",
+          "Existed",
+          "J"
+        ],
+        [
+          "",
+          "8",
+          "",
+          "57",
+          "",
+          ""
+        ],
+        [
+          "P330A",
+          "9",
+          "",
+          "42 58",
+          "",
+          "K"
+        ],
+        [
+          "",
+          "",
+          "",
+          "42",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "LB13",
+          "",
+          "Existed",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "43",
+          "",
+          "L"
+        ],
+        [
+          "P330B",
+          "10",
+          "LB13",
+          "59",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "43 44",
+          "Existed",
+          "M"
+        ],
+        [
+          "P330C",
+          "11",
+          "LB13",
+          "44",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "45",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "60",
+          "Existed",
+          "N"
+        ],
+        [
+          "P330D",
+          "12",
+          "LB13",
+          "45 61",
+          "Existed",
+          "O"
+        ],
+        [
+          "",
+          "",
+          "",
+          "46",
+          "",
+          ""
+        ]
+      ],
+      "markdown": "| DTC   | Module No.   | Li-ion battery controller   | Li-ion battery controller   | Continuity   | A   |\n|-------|--------------|-----------------------------|-----------------------------|--------------|-----|\n| DTC   | Module No.   | Connector Terminal          |                             | Continuity   | A   |\n|       |              |                             | 33                          |              | B   |\n| P3302 | 1            | LB13                        | 50                          | Existed      |     |\n|       |              |                             | 34                          |              |     |\n| P3303 |              | LB13                        | 34 51                       | Existed      |     |\n|       | 2            |                             | 35                          |              | D   |\n| P3304 | 3            | LB13                        | 35 52                       | Existed      |     |\n|       |              |                             | 36                          |              | E   |\n| P3305 | 4            | LB13                        | 36 53                       | Existed      |     |\n|       |              |                             | 37                          |              | F   |\n| P3306 | 5            | LB13                        | 54                          | Existed      | G   |\n|       |              |                             | 38                          |              |     |\n| P3307 | 6            | LB13                        | 55                          | Existed      | H   |\n|       |              |                             | 39                          |              |     |\n| P3308 | 7            | LB13                        | 39 56                       | Existed      | I   |\n|       |              |                             | 40                          |              |     |\n| P3309 |              | LB13                        | 40                          | Existed      | J   |\n|       | 8            |                             | 57                          |              |     |\n| P330A | 9            |                             | 42 58                       |              | K   |\n|       |              |                             | 42                          |              |     |\n|       |              | LB13                        |                             | Existed      |     |\n|       |              |                             | 43                          |              | L   |\n| P330B | 10           | LB13                        | 59                          |              |     |\n|       |              |                             | 43 44                       | Existed      | M   |\n| P330C | 11           | LB13                        | 44                          |              |     |\n|       |              |                             | 45                          |              |     |\n|       |              |                             | 60                          | Existed      | N   |\n| P330D | 12           | LB13                        | 45 61                       | Existed      | O   |\n|       |              |                             | 46                          |              |     |",
+      "tableformer": true,
+      "table_type": "toc"
+    },
+    {
+      "page_pdf": 124,
+      "page_manual": "EVB-124",
+      "section_code": "EVB",
+      "bbox": [
+        50.894859313964844,
+        569.0034790039062,
+        370.8330078125,
+        505.1121826171875
+      ],
+      "num_rows": 4,
+      "num_cols": 3,
+      "data": [
+        [
+          "Terminals",
+          "Terminals",
+          ""
+        ],
+        [
+          "(+)",
+          "(-)",
+          "Voltage (Approx.)"
+        ],
+        [
+          "Module",
+          "Module",
+          ""
+        ],
+        [
+          "Positive terminal (Red)",
+          "Negative terminal (Black)",
+          "5.0 - 8.5 V"
+        ]
+      ],
+      "markdown": "| Terminals | Terminals |  |\n| --- | --- | --- |\n| (+) | (-) | Voltage (Approx.) |\n| Module | Module |  |\n| Positive terminal (Red) | Negative terminal (Black) | 5.0 - 8.5 V |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "Terminals",
+          "Terminals",
+          ""
+        ],
+        [
+          "(+)",
+          "(-)",
+          "Voltage (Approx.)"
+        ],
+        [
+          "Module",
+          "Module",
+          ""
+        ],
+        [
+          "Positive terminal (Red)",
+          "Negative terminal (Black)",
+          "5.0 - 8.5 V"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "bbox": [
+        50.21759033203125,
+        661.2903442382812,
+        588.5196533203125,
+        457.767333984375
+      ],
+      "num_rows": 13,
+      "num_cols": 5,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes",
+          ""
+        ],
+        [
+          "P330E",
+          "CELL OVER VOLTAGE MODULE13",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "EVB"
+        ],
+        [
+          "P330F",
+          "CELL OVER VOLTAGE MODULE14",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "EVB"
+        ],
+        [
+          "P3310",
+          "CELL OVER VOLTAGE MODULE15",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "D"
+        ],
+        [
+          "P3311",
+          "CELL OVER VOLTAGE MODULE16",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "D"
+        ],
+        [
+          "P3312",
+          "CELL OVER VOLTAGE MODULE17",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "D"
+        ],
+        [
+          "P3313",
+          "CELL OVER VOLTAGE MODULE18",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P3314",
+          "CELL OVER VOLTAGE MODULE19",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P3315",
+          "CELL OVER VOLTAGE MODULE20",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P3316",
+          "CELL OVER VOLTAGE MODULE21",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P3317",
+          "CELL OVER VOLTAGE MODULE22",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P3318",
+          "CELL OVER VOLTAGE MODULE23",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "G"
+        ],
+        [
+          "P3319",
+          "CELL OVER VOLTAGE MODULE24",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "G"
+        ]
+      ],
+      "markdown": "| DTC | Trouble diagnosis name | DTC detecting condition | Possible causes |  |\n| --- | --- | --- | --- | --- |\n| P330E | CELL OVER VOLTAGE MODULE13 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | EVB |\n| P330F | CELL OVER VOLTAGE MODULE14 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | EVB |\n| P3310 | CELL OVER VOLTAGE MODULE15 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | D |\n| P3311 | CELL OVER VOLTAGE MODULE16 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | D |\n| P3312 | CELL OVER VOLTAGE MODULE17 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | D |\n| P3313 | CELL OVER VOLTAGE MODULE18 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | E |\n| P3314 | CELL OVER VOLTAGE MODULE19 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | E |\n| P3315 | CELL OVER VOLTAGE MODULE20 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | E |\n| P3316 | CELL OVER VOLTAGE MODULE21 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | E |\n| P3317 | CELL OVER VOLTAGE MODULE22 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | E |\n| P3318 | CELL OVER VOLTAGE MODULE23 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | G |\n| P3319 | CELL OVER VOLTAGE MODULE24 | When cell voltage exceeds the allowable working voltage range. | • Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector | G |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes",
+          ""
+        ],
+        [
+          "P330E",
+          "CELL OVER VOLTAGE MODULE13",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "EVB"
+        ],
+        [
+          "P330F",
+          "CELL OVER VOLTAGE MODULE14",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "EVB"
+        ],
+        [
+          "P3310",
+          "CELL OVER VOLTAGE MODULE15",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "D"
+        ],
+        [
+          "P3311",
+          "CELL OVER VOLTAGE MODULE16",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "D"
+        ],
+        [
+          "P3312",
+          "CELL OVER VOLTAGE MODULE17",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "D"
+        ],
+        [
+          "P3313",
+          "CELL OVER VOLTAGE MODULE18",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P3314",
+          "CELL OVER VOLTAGE MODULE19",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P3315",
+          "CELL OVER VOLTAGE MODULE20",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P3316",
+          "CELL OVER VOLTAGE MODULE21",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P3317",
+          "CELL OVER VOLTAGE MODULE22",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P3318",
+          "CELL OVER VOLTAGE MODULE23",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "G"
+        ],
+        [
+          "P3319",
+          "CELL OVER VOLTAGE MODULE24",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge causedbytraction motor inverter/VCM malfunc- tion • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "G"
+        ]
+      ]
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_121_raster_1.jpeg",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        508.4399719238281,
+        80.3462142944336,
+        527.219970703125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_121_raster_2.png",
+      "page_pdf": 121,
+      "page_manual": "EVB-121",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        375.3599548339844,
+        64.97999572753906,
+        386.93994140625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_122_raster_1.png",
+      "page_pdf": 122,
+      "page_manual": "EVB-122",
+      "section_code": "EVB",
+      "bbox": [
+        90.0,
+        279.29998779296875,
+        99.95999145507812,
+        289.1999816894531
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_122_raster_2.png",
+      "page_pdf": 122,
+      "page_manual": "EVB-122",
+      "section_code": "EVB",
+      "bbox": [
+        438.3599853515625,
+        266.8799743652344,
+        448.3199768066406,
+        276.77996826171875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_122_raster_3.png",
+      "page_pdf": 122,
+      "page_manual": "EVB-122",
+      "section_code": "EVB",
+      "bbox": [
+        87.239990234375,
+        290.70001220703125,
+        523.5,
+        586.6199951171875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_124_raster_1.png",
+      "page_pdf": 124,
+      "page_manual": "EVB-124",
+      "section_code": "EVB",
+      "bbox": [
+        86.51998901367188,
+        177.66000366210938,
+        96.47998046875,
+        187.6199951171875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_124_raster_2.png",
+      "page_pdf": 124,
+      "page_manual": "EVB-124",
+      "section_code": "EVB",
+      "bbox": [
+        374.3399658203125,
+        153.17999267578125,
+        558.5399780273438,
+        422.4599609375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_124_raster_3.png",
+      "page_pdf": 124,
+      "page_manual": "EVB-124",
+      "section_code": "EVB",
+      "bbox": [
+        86.51998901367188,
+        194.10000610351562,
+        96.47998046875,
+        204.0
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_125_raster_1.jpeg",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        508.4399719238281,
+        80.3462142944336,
+        527.219970703125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_125_raster_2.png",
+      "page_pdf": 125,
+      "page_manual": "EVB-125",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        375.3599548339844,
+        64.97999572753906,
+        386.93994140625
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

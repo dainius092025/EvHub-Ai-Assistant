@@ -1,0 +1,2077 @@
+{
+  "schema_version": "1.0",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-176\nJSCIA0739ZZ\nRevision: October 2013\n2013 LEAF",
+    "page_start": 176,
+    "page_end": 180,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "176": [
+        "EVB-176",
+        "EVB",
+        "EVB-176\nJSCIA0739ZZ\nRevision: October 2013\n2013 LEAF"
+      ],
+      "177": [
+        "EVB-177",
+        "EVB",
+        "EVB-177\n: Battery pack front\nJSCIA0739ZZ\nRevision: October 2013\n2013 LEAF"
+      ],
+      "178": [
+        "EVB-178",
+        "EVB",
+        "EVB-178\nModule body\nApprox. 0 V\nRevision: October 2013\n2013 LEAF"
+      ],
+      "179": [
+        "EVB-179",
+        "EVB",
+        "EVB-179\nIs the inspection result normal?\nYES\n>> GO TO 14.\nRevision: October 2013\n2013 LEAF"
+      ],
+      "180": [
+        "EVB-180",
+        "EVB",
+        "EVB-180\nYES\n>> GO TO 11.\nNO\n>> GO TO 12.\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "LI-ION BATTERY INSULATION RESISTANCE LOSS CHECK",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        117.66,
+        769.00991,
+        493.80474239999967,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "LI-ION BATTERY INSULATION RESISTANCE LOSS CHECK",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.10997,
+        461.1811499999997,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "Component Inspection",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        712.00991,
+        186.7847424,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DANGER:",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        684.35591,
+        100.97268239999997,
+        675.1123224640885
+      ]
+    },
+    {
+      "text": "Since hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14010439999987,
+        662.0363384,
+        558.5875319999999,
+        618.2928312640886
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14010439999987,
+        613.0759748,
+        106.19007239999988,
+        603.8323872640885
+      ]
+    },
+    {
+      "text": "Be sure to remove the service plug in order to disconnect the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999987,
+        601.5565832000001,
+        558.528024,
+        580.7924556640886
+      ]
+    },
+    {
+      "text": "The removed service plug must always be carried in a pocket of the responsible worker or placed in the tool box during the procedure to prevent the plug from being connected by mistake.",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        578.5760552000002,
+        558.6052799999992,
+        557.8130760640887
+      ]
+    },
+    {
+      "text": "Be sure to wear insulating protective equipment consisting of glove, shoes, face shield and glasses before beginning work on the high voltage system.",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        555.5361236000002,
+        558.5504699999996,
+        534.8325480640888
+      ]
+    },
+    {
+      "text": "Never allow workers other than the responsible person to touch the vehicle containing high voltage parts. To keep others from touching the high voltage parts, these parts must be covered with an insulating sheet except when using them.",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        532.5567440000003,
+        558.5803284000008,
+        500.33262846408877
+      ]
+    },
+    {
+      "text": "Refer to EVB-6, \"High Voltage Precautions\".",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        498.0568244000004,
+        278.30231,
+        488.8123324640884
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139545999999996,
+        486.5365284,
+        103.316426,
+        477.2929408640884
+      ]
+    },
+    {
+      "text": "Never  bring  the  vehicle  into  the  READY  status  with  the  service  plug  removed  unless  otherwise instructed in the Service Manual. A malfunction may occur if this is not observed.",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.13954599999997,
+        475.0765404,
+        558.5975179999997,
+        454.3135612640884
+      ]
+    },
+    {
+      "text": "The following diagnosis procedure must be performed when 'P0AA6 or P33E1' are detected and Li-ion battery is judged that its insulation resistance is dropping.",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139999999999986,
+        446.06363,
+        559.5187728000001,
+        423.3822318674033
+      ]
+    },
+    {
+      "text": "1.CHECK MAXIMUM CELL VOLTAGE",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        420.44399,
+        237.13869599999995,
+        404.50677011049726
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.660348,
+        395.6362424,
+        136.75914,
+        386.3926548640884
+      ]
+    },
+    {
+      "text": "Power switch ON.",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        384.1168508,
+        155.20202640000002,
+        374.8732632640884
+      ]
+    },
+    {
+      "text": "Select 'DATA MONITOR' of 'HV BAT'.",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        372.6568628,
+        251.01564839999983,
+        363.4132752640884
+      ]
+    },
+    {
+      "text": "Record 'MAXIMUM CELL VOLTAGE'.",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        361.1363228,
+        249.04885680000012,
+        351.8927352640884
+      ]
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        72.0009684,
+        349.6169312,
+        104.521986,
+        340.3733436640884
+      ]
+    },
+    {
+      "text": "It is used, when replace a malfunction module.",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        72.0009684,
+        338.1569432,
+        287.1818963999998,
+        328.9133556640884
+      ]
+    },
+    {
+      "text": ">> GO TO 2",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.7808964,
+        309.1170392,
+        151.14243239999996,
+        299.8734516640884
+      ]
+    },
+    {
+      "text": "2.CHECK INSULATION OF FRONT MODULE STACK LH-1",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        298.04409,
+        335.48725440000027,
+        282.10687011049725
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        274.79607839999994,
+        103.32472679999997,
+        265.55249086408844
+      ]
+    },
+    {
+      "text": "Check that high voltage harness and harness shield have no scratches and cracks. If any damage is found, replace damaged parts.",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        263.2766868,
+        558.4955724,
+        242.5731112640883
+      ]
+    },
+    {
+      "text": "Remove Li-ion battery. Refer to EVB-194, \"Removal and Installation\".",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808000000016,
+        240.29730719999998,
+        392.06232,
+        231.0523324640884
+      ]
+    },
+    {
+      "text": "Remove Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.140096000000085,
+        228.77652839999996,
+        558.4940856000001,
+        208.07243246408837
+      ]
+    },
+    {
+      "text": "Remove bus bar that connects front module stack LH and front module stack RH.",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13982,
+        205.79662840000003,
+        448.0653360000006,
+        196.55304086408842
+      ]
+    },
+    {
+      "text": "Measure voltages between positive terminal of front module stack LH and battery pack ground, and between positive terminal of front module stack LH and battery pack ground.",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13982,
+        193.3761604,
+        558.5267999999992,
+        171.65259686408842
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746045",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        706.86689,
+        559.5492259999992,
+        701.30921
+      ]
+    },
+    {
+      "text": "LI-ION BATTERY INSULATION RESISTANCE LOSS CHECK",
+      "page_pdf": 177,
+      "page_manual": "EVB-177",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        117.96001,
+        769.00991,
+        494.13539559999975,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 177,
+      "page_manual": "EVB-177",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "YES >> GO TO 8.",
+      "page_pdf": 177,
+      "page_manual": "EVB-177",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        609.65589,
+        155.30461,
+        600.4123024640885
+      ]
+    },
+    {
+      "text": "NO >> GO TO 3.",
+      "page_pdf": 177,
+      "page_manual": "EVB-177",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        598.195902,
+        155.29939000000002,
+        588.9523144640885
+      ]
+    },
+    {
+      "text": "LI-ION BATTERY INSULATION RESISTANCE LOSS CHECK",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        117.66,
+        769.00991,
+        493.80474239999967,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        655.6159799999999,
+        196.92755759999997,
+        646.3723924640884
+      ]
+    },
+    {
+      "text": "YES",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        641.15589,
+        78.77032080000001,
+        631.9123024640885
+      ]
+    },
+    {
+      "text": ">> GO TO 5.",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.8238612,
+        641.15589,
+        154.07320559999994,
+        631.9123024640885
+      ]
+    },
+    {
+      "text": "NO >> GO TO 6.",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        629.6364984,
+        154.05410039999992,
+        620.3929108640885
+      ]
+    },
+    {
+      "text": "5.CHECK SERVICE PLUG SWITCH INSULATION RESISTANCE",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        618.5640099999999,
+        361.9405440000002,
+        602.6267901104972
+      ]
+    },
+    {
+      "text": "Remove bus bar that connects service plug and front module stack LH from service plug switch bracket.",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        595.3159983999999,
+        552.2805360000006,
+        586.0724108640884
+      ]
+    },
+    {
+      "text": "Using insulation resistance  tester,  measure insulation resistance between service plug switch terminal and service plug switch bracket.",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808000000016,
+        583.7966068,
+        558.5372279999997,
+        563.0324792640885
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        71.99982000000001,
+        557.8156227999999,
+        126.04978800000002,
+        548.5720352640884
+      ]
+    },
+    {
+      "text": "Unlike the ordinary tester, the insulation resistance tester applies 500 V when measuring. If used incorrectly, there is the danger of electric shock. If used in the vehicle 12V system, there is the danger of damage to electronic devices. Read the insulation resistance tester instruction manual carefully and be sure to work safely.",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        71.99982,
+        546.2962312,
+        558.5991372,
+        502.5515756640885
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        71.99982000000003,
+        500.2746232000001,
+        123.135984,
+        491.0310356640885
+      ]
+    },
+    {
+      "text": "Be sure to set the insulation resistance tester to 500 V when performing this test. Using a setting higher than 500 V can result in damage to the component being inspected.",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        71.99982000000003,
+        488.8146352000001,
+        558.5309639999996,
+        468.0516560640885
+      ]
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        71.99982000000003,
+        465.7747036000001,
+        104.52083760000002,
+        456.5311160640885
+      ]
+    },
+    {
+      "text": "Check resistance without disassembling service plug switch and service plug switch bracket.",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        71.99982000000003,
+        454.3147156000001,
+        499.1921964000005,
+        445.0711280640885
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.13980800000003,
+        393.8346472000001,
+        196.9273656,
+        384.5910596640885
+      ]
+    },
+    {
+      "text": "YES >> Replace bus bar that connects service plug and front module stack LH and GO TO 8.",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        379.3159,
+        502.11419999999976,
+        370.0723124640884
+      ]
+    },
+    {
+      "text": "NO >> Replace  service  plug  switch  (Refer  to  EVB-217,  \"BATTERY  JUNCTION  BOX  AND  BATTERY HARNESS : Exploded View\".) and GO TO 8.",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        367.855912,
+        558.5361360000011,
+        347.0923324640884
+      ]
+    },
+    {
+      "text": "6.CHECK MODULE-1",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        345.26399999999995,
+        160.74420479999995,
+        329.3267801104972
+      ]
+    },
+    {
+      "text": "Remove front module stack LH. Refer to EVB-239, \"FRONT MODULE STACK : Removal and Installation\".",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        322.01598839999997,
+        558.5576904000012,
+        301.2523324640884
+      ]
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        71.999628,
+        298.9765284,
+        104.5206456,
+        289.7329408640884
+      ]
+    },
+    {
+      "text": "Do not disassemble module stack.",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        71.999628,
+        287.5165404,
+        231.20127600000015,
+        278.27295286408844
+      ]
+    },
+    {
+      "text": "Measure voltages between terminal / of all modules in front module stack LH and module body.",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139616000000004,
+        275.0365644,
+        368.2930919999995,
+        254.3329888640883
+      ]
+    },
+    {
+      "text": "LI-ION BATTERY INSULATION RESISTANCE LOSS CHECK",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        117.96001,
+        769.00991,
+        494.13539559999975,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        735.83589,
+        198.38673280000006,
+        726.5923024640884
+      ]
+    },
+    {
+      "text": "YES >> GO TO 7.",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        721.31593,
+        155.30461,
+        712.0723424640885
+      ]
+    },
+    {
+      "text": "NO >> Replace  malfunctioning  module  (Refer  to  EVB-246,  \"FRONT  MODULE  STACK  :  Disassembly and Assembly\".) and GO TO 8.",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        709.855942,
+        559.8005307999995,
+        689.0923024640884
+      ]
+    },
+    {
+      "text": "7.CHECK MODULE-2",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        687.26397,
+        160.98031199999997,
+        671.3267501104972
+      ]
+    },
+    {
+      "text": "Measure insulation resistance between terminal / of all modules in front module stack LH and module body.",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.459796,
+        663.056418,
+        369.62559119999963,
+        642.2922904640885
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459796,
+        637.075434,
+        107.58910799999994,
+        627.8318464640885
+      ]
+    },
+    {
+      "text": "Unlike  the  ordinary  tester,  the  insulation  resistance  tester applies 500 V when measuring. If used incorrectly, there is the danger  of  electric  shock.  If  used  in  the  vehicle  12V  system, there is the danger of damage to electronic devices. Read the insulation resistance tester instruction manual carefully and be sure to work safely.",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.45979599999998,
+        625.5560424,
+        369.6748680000003,
+        558.8331556640887
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.45979599999998,
+        556.5573516000003,
+        104.636676,
+        547.3137640640888
+      ]
+    },
+    {
+      "text": "Be sure to set the insulation resistance tester to 500 V when performing  this  test.  Using  a  setting  higher  than  500  V  can result in damage to the component being inspected.",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.45979599999998,
+        545.0379600000003,
+        369.6990888,
+        512.8149928640889
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459796,
+        410.6388288000005,
+        198.38651880000006,
+        401.3952412640889
+      ]
+    },
+    {
+      "text": "YES >> Check insulation resistance of front module stack RH, because front module stack LH is normal. GO TO 8.",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        396.11592,
+        559.6274355999992,
+        375.3529408640884
+      ]
+    },
+    {
+      "text": "NO >> Replace  malfunctioning  module  (Refer  to  EVB-246,  \"FRONT  MODULE  STACK  :  Disassembly and Assembly\".) and GO TO 8.",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        373.1365404,
+        559.8005307999995,
+        352.3723324640884
+      ]
+    },
+    {
+      "text": "8.CHECK INSULATION OF FRONT MODULE STACK RH-1",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        350.544,
+        337.3682879999998,
+        334.60678011049725
+      ]
+    },
+    {
+      "text": "Measure voltages between positive terminal of front module stack RH and battery pack ground, and between positive terminal of front module stack LH and battery pack ground.",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.459796,
+        326.33540400000004,
+        559.8886403999991,
+        304.67134846408845
+      ]
+    },
+    {
+      "text": ": Battery pack front",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        84.48,
+        160.45438718000003,
+        155.40847003970003,
+        152.9638849779226
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.45864759999999,
+        59.87528400000008,
+        198.38537040000006,
+        50.63169646408846
+      ]
+    },
+    {
+      "text": "YES >> GO TO 14.",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        45.41592000000003,
+        161.13524559999993,
+        36.17233246408841
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "LI-ION BATTERY INSULATION RESISTANCE LOSS CHECK",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        117.66,
+        769.00991,
+        493.80474239999967,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "NO >> GO TO 9.",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        735.83589,
+        154.05410039999992,
+        726.5923024640884
+      ]
+    },
+    {
+      "text": "9.CHECK INSULATION OF FRONT MODULE STACK RH-2",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        724.76397,
+        337.2190416000001,
+        708.8267501104972
+      ]
+    },
+    {
+      "text": "Disconnect vehicle communication harness connector of front module stack RH.",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        701.5159583999999,
+        442.40266799999915,
+        692.2723708640884
+      ]
+    },
+    {
+      "text": "Measure voltages between positive terminal of front module stack RH and battery pack ground, and between positive terminal of front module stack RH and battery pack ground.",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13980799999999,
+        689.0359824,
+        558.506012399999,
+        667.3719268640884
+      ]
+    },
+    {
+      "text": ": Battery pack front",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "caption",
+      "bbox": [
+        83.16,
+        523.15430718,
+        154.1375380976999,
+        515.6638049779226
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.13980799999999,
+        422.635266,
+        196.92736559999994,
+        413.3916784640884
+      ]
+    },
+    {
+      "text": "YES",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        408.11592,
+        78.76176000000001,
+        398.8723324640884
+      ]
+    },
+    {
+      "text": ">> Replace vehicle communication harness of front module stack RH and GO TO 14.",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.82146,
+        408.11592,
+        488.43059640000075,
+        398.8723324640884
+      ]
+    },
+    {
+      "text": "NO >> GO TO 10.",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        396.5965284,
+        159.88682400000005,
+        387.3529408640884
+      ]
+    },
+    {
+      "text": "10.CHECK INSULATION OF FRONT MODULE STACK RH-3",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        385.52401,
+        347.1655440000003,
+        369.58679011049725
+      ]
+    },
+    {
+      "text": "Remove bus bar that connects front module stack RH and battery junction box.",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139391599999996,
+        362.2759984,
+        437.05279560000065,
+        353.0324108640884
+      ]
+    },
+    {
+      "text": "Measure voltages between positive terminal of front module stack RH and battery pack ground, and between positive terminal of front module stack RH and battery pack ground.",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139391599999996,
+        349.85553039999996,
+        558.5525759999996,
+        328.1319668640883
+      ]
+    },
+    {
+      "text": ": Battery pack front",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "caption",
+      "bbox": [
+        83.16,
+        183.97438718,
+        154.1375380976999,
+        176.48388497792268
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.13939159999998,
+        83.39530599999989,
+        196.92694919999994,
+        74.15171846408839
+      ]
+    },
+    {
+      "text": "YES >> GO TO 11.",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        68.87591999999995,
+        159.11645640000003,
+        59.63233246408845
+      ]
+    },
+    {
+      "text": "NO >> GO TO 12.",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        57.3565284,
+        159.88682400000005,
+        48.11294086408839
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 177,
+      "page_manual": "EVB-177",
+      "section_code": "EVB",
+      "bbox": [
+        52.30205154418945,
+        693.787727355957,
+        408.7294616699219,
+        627.2099151611328
+      ],
+      "num_rows": 3,
+      "num_cols": 3,
+      "data": [
+        [
+          "+ Front module stack LH",
+          "-",
+          "Voltage"
+        ],
+        [
+          "Terminal",
+          "",
+          ""
+        ],
+        [
+          ",",
+          "Battery pack ground",
+          "Approx. 0 V"
+        ]
+      ],
+      "markdown": "| + Front module stack LH   | -                   | Voltage     |\n|---------------------------|---------------------|-------------|\n| Terminal                  |                     |             |\n| ,                         | Battery pack ground | Approx. 0 V |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 177,
+      "page_manual": "EVB-177",
+      "section_code": "EVB",
+      "bbox": [
+        52.19783401489258,
+        354.0003356933594,
+        408.807373046875,
+        287.9199523925781
+      ],
+      "num_rows": 2,
+      "num_cols": 3,
+      "data": [
+        [
+          "+ Front module stack LH Terminal",
+          "-",
+          "Voltage"
+        ],
+        [
+          ",",
+          "Battery pack ground",
+          "Approx. 0 V"
+        ]
+      ],
+      "markdown": "| + Front module stack LH Terminal   | -                   | Voltage     |\n|------------------------------------|---------------------|-------------|\n| ,                                  | Battery pack ground | Approx. 0 V |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "bbox": [
+        51.17894744873047,
+        725.0782318115234,
+        406.9365234375,
+        658.8942413330078
+      ],
+      "num_rows": 2,
+      "num_cols": 3,
+      "data": [
+        [
+          "+ Front module stack LH Terminal",
+          "-",
+          "Voltage"
+        ],
+        [
+          ",",
+          "Battery pack ground",
+          "Approx. 0 V"
+        ]
+      ],
+      "markdown": "| + Front module stack LH Terminal   | -                   | Voltage     |\n|------------------------------------|---------------------|-------------|\n| ,                                  | Battery pack ground | Approx. 0 V |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "bbox": [
+        51.09944534301758,
+        429.38897705078125,
+        466.72998046875,
+        396.66375732421875
+      ],
+      "num_rows": 2,
+      "num_cols": 3,
+      "data": [
+        [
+          "+",
+          "-",
+          "Resistance"
+        ],
+        [
+          "Service plug switch terminal",
+          "Service plug switch bracket",
+          "1000 M Ω or more"
+        ]
+      ],
+      "markdown": "| +                            | -                           | Resistance       |\n|------------------------------|-----------------------------|------------------|\n| Service plug switch terminal | Service plug switch bracket | 1000 M Ω or more |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "bbox": [
+        51.263397216796875,
+        117.43157958984375,
+        294.02972412109375,
+        33.8707275390625
+      ],
+      "num_rows": 4,
+      "num_cols": 3,
+      "data": [
+        [
+          "+ Module",
+          "-",
+          "Voltage"
+        ],
+        [
+          "Terminal",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Module body",
+          "Approx. 0 V"
+        ],
+        [
+          "",
+          "Module body",
+          "Approx. 0 V"
+        ]
+      ],
+      "markdown": "| + Module   | -           | Voltage     |\n|------------|-------------|-------------|\n| Terminal   |             |             |\n|            | Module body | Approx. 0 V |\n|            | Module body | Approx. 0 V |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "bbox": [
+        52.138824462890625,
+        497.47320556640625,
+        295.60400390625,
+        413.5782775878906
+      ],
+      "num_rows": 4,
+      "num_cols": 3,
+      "data": [
+        [
+          "+ Module",
+          "-",
+          "resistance"
+        ],
+        [
+          "Terminal",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Module body",
+          "100 M Ω or more"
+        ],
+        [
+          "",
+          "Module body",
+          "100 M Ω or more"
+        ]
+      ],
+      "markdown": "| + Module   | -           | resistance      |\n|------------|-------------|-----------------|\n| Terminal   |             |                 |\n|            | Module body | 100 M Ω or more |\n|            | Module body | 100 M Ω or more |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "bbox": [
+        52.15305709838867,
+        129.03997802734375,
+        408.681640625,
+        62.9580078125
+      ],
+      "num_rows": 2,
+      "num_cols": 3,
+      "data": [
+        [
+          "+ Front module stack RH Terminal",
+          "-",
+          "Voltage"
+        ],
+        [
+          ",",
+          "Battery pack ground",
+          "Approx. 0 V"
+        ]
+      ],
+      "markdown": "| + Front module stack RH Terminal   | -                   | Voltage     |\n|------------------------------------|---------------------|-------------|\n| ,                                  | Battery pack ground | Approx. 0 V |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "bbox": [
+        51.094940185546875,
+        491.9814147949219,
+        407.6869812011719,
+        425.4165954589844
+      ],
+      "num_rows": 2,
+      "num_cols": 3,
+      "data": [
+        [
+          "+ Front module stack RH Terminal",
+          "-",
+          "Voltage"
+        ],
+        [
+          ",",
+          "Battery pack ground",
+          "Approx. 0 V"
+        ]
+      ],
+      "markdown": "| + Front module stack RH Terminal   | -                   | Voltage     |\n|------------------------------------|---------------------|-------------|\n| ,                                  | Battery pack ground | Approx. 0 V |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "bbox": [
+        50.9737434387207,
+        152.7103271484375,
+        407.05206298828125,
+        86.48699951171875
+      ],
+      "num_rows": 2,
+      "num_cols": 3,
+      "data": [
+        [
+          "+ Front module stack RH Terminal",
+          "-",
+          "Voltage"
+        ],
+        [
+          ",",
+          "Battery pack ground",
+          "Approx. 0 V"
+        ]
+      ],
+      "markdown": "| + Front module stack RH Terminal   | -                   | Voltage     |\n|------------------------------------|---------------------|-------------|\n| ,                                  | Battery pack ground | Approx. 0 V |",
+      "tableformer": true
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_176_raster_1.png",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        395.27996826171875,
+        63.65999984741211,
+        406.8599548339844
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_176_raster_2.jpeg",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        119.63998413085938,
+        79.0399169921875,
+        138.41998291015625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_176_raster_3.png",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "bbox": [
+        283.4399719238281,
+        598.199951171875,
+        293.3399658203125,
+        608.159912109375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_176_raster_4.png",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "bbox": [
+        193.01995849609375,
+        610.6799926757812,
+        202.91995239257812,
+        620.5799560546875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_176_raster_5.png",
+      "page_pdf": 176,
+      "page_manual": "EVB-176",
+      "section_code": "EVB",
+      "bbox": [
+        87.239990234375,
+        633.5399780273438,
+        523.5,
+        750.8999633789062
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_177_raster_1.png",
+      "page_pdf": 177,
+      "page_manual": "EVB-177",
+      "section_code": "EVB",
+      "bbox": [
+        113.39998626708984,
+        150.60000610351562,
+        123.35997772216797,
+        160.5
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_177_raster_2.png",
+      "page_pdf": 177,
+      "page_manual": "EVB-177",
+      "section_code": "EVB",
+      "bbox": [
+        67.5,
+        67.68000793457031,
+        79.2599868774414,
+        76.32000732421875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_177_raster_3.png",
+      "page_pdf": 177,
+      "page_manual": "EVB-177",
+      "section_code": "EVB",
+      "bbox": [
+        128.03997802734375,
+        150.60000610351562,
+        137.99996948242188,
+        160.5
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_177_raster_4.png",
+      "page_pdf": 177,
+      "page_manual": "EVB-177",
+      "section_code": "EVB",
+      "bbox": [
+        88.5,
+        275.51995849609375,
+        524.760009765625,
+        392.87994384765625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_177_vector_1.png",
+      "page_pdf": 177,
+      "page_manual": "EVB-177",
+      "section_code": "EVB",
+      "bbox": [
+        88.5,
+        614.7599487304688,
+        524.760009765625,
+        732.1199340820312
+      ],
+      "caption": "",
+      "type": "vector"
+    },
+    {
+      "file": "images/page_178_raster_1.png",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "bbox": [
+        126.77998352050781,
+        119.10000610351562,
+        136.6799774169922,
+        129.05999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_178_raster_2.png",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "bbox": [
+        112.13999938964844,
+        119.10000610351562,
+        122.03999328613281,
+        129.05999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_178_raster_3.png",
+      "page_pdf": 178,
+      "page_manual": "EVB-178",
+      "section_code": "EVB",
+      "bbox": [
+        374.3399658203125,
+        516.5399169921875,
+        558.47998046875,
+        646.919921875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_179_raster_1.png",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "bbox": [
+        278.5799560546875,
+        128.51998901367188,
+        288.4799499511719,
+        138.47998046875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_179_raster_2.png",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        128.5199737548828,
+        559.7999877929688,
+        258.89996337890625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_179_raster_3.png",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "bbox": [
+        291.41998291015625,
+        128.51998901367188,
+        301.3199768066406,
+        138.47998046875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_179_raster_4.png",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "bbox": [
+        88.5,
+        500.5799560546875,
+        524.760009765625,
+        617.93994140625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_179_raster_5.png",
+      "page_pdf": 179,
+      "page_manual": "EVB-179",
+      "section_code": "EVB",
+      "bbox": [
+        67.5,
+        631.9799194335938,
+        79.2599868774414,
+        640.6199340820312
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_180_raster_1.png",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "bbox": [
+        193.01995849609375,
+        114.95999145507812,
+        202.91995239257812,
+        124.8599853515625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_180_raster_2.png",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "bbox": [
+        282.8399658203125,
+        102.54000854492188,
+        292.7399597167969,
+        112.44000244140625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_180_raster_3.png",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "bbox": [
+        87.239990234375,
+        137.8799285888672,
+        523.5,
+        255.23992919921875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_180_raster_4.png",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "bbox": [
+        66.17999267578125,
+        269.219970703125,
+        78.0,
+        277.8599853515625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_180_vector_1.png",
+      "page_pdf": 180,
+      "page_manual": "EVB-180",
+      "section_code": "EVB",
+      "bbox": [
+        87.239990234375,
+        477.05999755859375,
+        523.5,
+        594.4199829101562
+      ],
+      "caption": "",
+      "type": "vector"
+    }
+  ]
+}

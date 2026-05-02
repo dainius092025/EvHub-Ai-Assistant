@@ -1,0 +1,2969 @@
+{
+  "schema_version": "1.0",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-111\nRevision: October 2013\n2013 LEAF",
+    "page_start": 111,
+    "page_end": 115,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "111": [
+        "EVB-111",
+        "EVB",
+        "EVB-111\nRevision: October 2013\n2013 LEAF"
+      ],
+      "112": [
+        "EVB-112",
+        "EVB",
+        "EVB-112\nRevision: October 2013\n2013 LEAF"
+      ],
+      "113": [
+        "EVB-113",
+        "EVB",
+        "EVB-113\nRevision: October 2013\n2013 LEAF"
+      ],
+      "114": [
+        "EVB-114",
+        "EVB",
+        "EVB-114\nRevision: October 2013\n2013 LEAF"
+      ],
+      "115": [
+        "EVB-115",
+        "EVB",
+        "EVB-115\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "P30FC OVER CURRENT",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        736.10997,
+        223.28099999999995,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        712.00991,
+        115.97786880000004,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        684.24824718,
+        184.37932433020006,
+        674.1015416630055
+      ]
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        611.347685567,
+        243.41189864199998,
+        601.2009800500055
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        598.16399,
+        296.998896,
+        582.2267701104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        573.3562424,
+        138.10126079999998,
+        564.1126548640885
+      ]
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        561.8368508000001,
+        308.8233444000003,
+        552.5932632640886
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        550.3768628000001,
+        276.0449807999998,
+        541.1332752640886
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        538.8574712000002,
+        130.29944880000005,
+        529.6138836640887
+      ]
+    },
+    {
+      "text": "Is P30FC detected?",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.460944399999995,
+        524.3376236000001,
+        145.98126839999998,
+        515.0940360640886
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-111, \"Diagnosis Procedure\".",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        509.87586,
+        303.92231,
+        500.6322724640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10023840000002,
+        498.3564684,
+        199.08393439999995,
+        489.11288086408837
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        481.00991,
+        177.41721599999997,
+        469.1101191491712
+      ]
+    },
+    {
+      "text": "1.PERFORM THE SELF-DIAGNOSIS",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        459.62401,
+        234.37246800000003,
+        443.68679011049727
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        434.8162624,
+        138.10126079999998,
+        425.5726748640884
+      ]
+    },
+    {
+      "text": "1. Perform \"All DTC Reading\".",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "footnote",
+      "bbox": [
+        53.460944399999995,
+        423.29572240000005,
+        201.69015239999993,
+        414.05213486408843
+      ]
+    },
+    {
+      "text": "Check 'Self diagnostic result' of systems other than 'HV BAT' to see if any DTC is detected.",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        411.77518240000006,
+        502.43658960000033,
+        402.53159486408845
+      ]
+    },
+    {
+      "text": "Is any DTC detected?",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46094439999999,
+        397.31473840000007,
+        154.7084820000001,
+        388.07115086408845
+      ]
+    },
+    {
+      "text": "YES >> After performing trouble diagnosis of detected DTC, GO TO 2.",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        382.79594000000003,
+        400.0817896000005,
+        373.5523524640884
+      ]
+    },
+    {
+      "text": "NO >> GO TO 2.",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        371.2765484,
+        155.29939000000002,
+        362.0329608640884
+      ]
+    },
+    {
+      "text": "2.CHECK BATTERY TEMPERATURE SENSOR",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        360.20399999999995,
+        282.6438959999999,
+        344.2667801104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        335.3962524,
+        138.10126079999998,
+        326.15266486408836
+      ]
+    },
+    {
+      "text": "Using FFD, check the values of three temperature sensors when DTC is detected.",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.460944399999995,
+        323.8768608,
+        433.3766159999997,
+        314.63327326408836
+      ]
+    },
+    {
+      "text": "Is there temperature increase?",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "footnote",
+      "bbox": [
+        53.46094439999999,
+        232.43697240000006,
+        196.04002439999996,
+        223.19338486408833
+      ]
+    },
+    {
+      "text": "Temperature increase is seen>>Replace Li-ion battery. Refer to EVB-194, \"Removal and Installation\". Temperature increase is not seen>>Replace  battery  junction  box.  Refer  to  EVB-214,  \"LI-ION  BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        217.97600999999997,
+        559.8853231999998,
+        185.6923324640884
+      ]
+    },
+    {
+      "text": "P30FC OVER CURRENT",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        229.31998,
+        769.00991,
+        382.5785847999998,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745962",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        706.86689,
+        559.8580799999991,
+        701.30921
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745963",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        475.86688999999996,
+        559.8580799999991,
+        470.30921
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "P318D COMMUNICATION ERROR",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        198.42,
+        769.00991,
+        412.9863743999998,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "P318D COMMUNICATION ERROR",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.10997,
+        289.3650000000002,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        712.00991,
+        115.668192,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        684.24824718,
+        184.12012196580005,
+        674.1015416630055
+      ]
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        600.848024405,
+        243.16289568650018,
+        590.7013188880055
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        587.72399,
+        296.6362560000002,
+        571.7867701104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.660348,
+        562.8554816,
+        136.75914,
+        553.6118940640885
+      ]
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        551.3954936,
+        307.5054443999999,
+        542.1519060640885
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        539.8749536,
+        274.7656043999999,
+        530.6313660640885
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        528.3544136,
+        128.9680812,
+        519.1108260640885
+      ]
+    },
+    {
+      "text": "Is P318D detected?",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.1409564,
+        513.8939696000001,
+        143.9834112000001,
+        504.6503820640885
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-112, \"Diagnosis Procedure\".",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        499.37586,
+        303.4423,
+        490.1322724640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84025600000004,
+        487.8564684,
+        197.81142399999993,
+        478.61288086408837
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        470.50991,
+        177.000288,
+        458.6101191491712
+      ]
+    },
+    {
+      "text": "For the diagnosis procedure, refer to LAN-16, \"Trouble Diagnosis Flow Chart\".",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        445.9159,
+        413.48231,
+        436.6723124640884
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745968",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        706.86689,
+        559.5492259999992,
+        701.30921
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745969",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        465.36688999999996,
+        559.5492259999992,
+        459.80921
+      ]
+    },
+    {
+      "text": "P318E COMMUNICATION ERROR",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        199.08,
+        769.00991,
+        412.8805632,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "P318E COMMUNICATION ERROR",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        736.10997,
+        288.8400000000002,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        712.00991,
+        115.97786880000004,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        684.24824718,
+        184.37932433020006,
+        674.1015416630055
+      ]
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        670.67597,
+        86.03907400000001,
+        661.4323824640885
+      ]
+    },
+    {
+      "text": "When the 12 V battery is removed within 5 minutes after turning the power switch OFF, 'P318E', 'P3191', and 'P3196' may be simultaneously detected. This is not a malfunction.",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        659.215982,
+        559.8668259999995,
+        638.4518544640886
+      ]
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        568.3283271800001,
+        243.41189864199998,
+        558.1816216630056
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        555.20397,
+        296.998896,
+        539.2667501104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        530.3962224,
+        138.10126079999998,
+        521.1526348640886
+      ]
+    },
+    {
+      "text": "Power switch OFF.",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        518.8768308000001,
+        160.46092200000007,
+        509.6332432640885
+      ]
+    },
+    {
+      "text": "After turning the power switch OFF, get out of the vehicle and close all doors (including back door).",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        507.3574392000001,
+        529.2973523999998,
+        498.1138516640885
+      ]
+    },
+    {
+      "text": "After turning the power switch OFF, wait for 5 minutes or more to remove the 12 V battery negative terminal. Refer to EVB-6, \"Precaution for Removing 12V Battery\".",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46094439999999,
+        495.8974512000001,
+        560.0097443999996,
+        475.1322724640884
+      ]
+    },
+    {
+      "text": "Connect 12 V battery negative terminal.",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46033240000003,
+        472.8564684,
+        257.12750640000013,
+        463.61288086408837
+      ]
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46033240000003,
+        461.3964804,
+        308.7766919999999,
+        452.15289286408836
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46033240000003,
+        449.87708879999997,
+        276.0443687999998,
+        440.63350126408835
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46033240000003,
+        438.35769719999996,
+        130.29883680000006,
+        429.11410966408835
+      ]
+    },
+    {
+      "text": "Is P318E detected?",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46033240000003,
+        423.89725319999997,
+        144.86357640000008,
+        414.65366566408835
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-113, \"Diagnosis Procedure\".",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        409.37592,
+        304.70234,
+        400.1323324640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10029600000004,
+        397.85538,
+        199.08399199999997,
+        388.6117924640884
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        380.50991,
+        177.41721599999997,
+        368.6101191491712
+      ]
+    },
+    {
+      "text": "1.PERFORM THE SELF-DIAGNOSIS",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        359.12401,
+        234.37246800000003,
+        343.18679011049727
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        334.3162624,
+        138.10126079999998,
+        325.0726748640884
+      ]
+    },
+    {
+      "text": "Perform \"All DTC Reading\".",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        322.79572240000005,
+        201.69015239999993,
+        313.55213486408843
+      ]
+    },
+    {
+      "text": "Check 'Self diagnostic result' of systems other than 'HV BAT' to see if 'P318E' is detected.",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        311.33573440000004,
+        499.4936579999999,
+        302.0921468640884
+      ]
+    },
+    {
+      "text": "Is P318E detected?",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46094439999999,
+        296.81588680000004,
+        144.86418840000005,
+        287.57229926408843
+      ]
+    },
+    {
+      "text": "YES >> Replace VCM. Refer to EVC-426, \"Removal and Installation\".",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        282.29594000000003,
+        393.74231999999995,
+        273.0523524640885
+      ]
+    },
+    {
+      "text": "NO >> GO TO 2.",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.0997084,
+        270.7765484,
+        155.29908840000002,
+        261.5329608640884
+      ]
+    },
+    {
+      "text": "2.PREFORM THE SELF-DIAGNOSIS OF LI-ION BATTERY CONTROLLER",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        259.70408999999995,
+        410.2591152000005,
+        243.76687011049728
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        234.89634239999998,
+        138.10126079999998,
+        225.65275486408837
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        223.37695080000003,
+        276.0449807999998,
+        214.13336326408842
+      ]
+    },
+    {
+      "text": "Check to see if 'U1000' is detected simultaneously with 'P318E'.",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        211.91696279999996,
+        374.4818616000005,
+        202.67337526408835
+      ]
+    },
+    {
+      "text": "Is U1000 detected?",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46094439999999,
+        197.39711520000003,
+        144.23256840000005,
+        188.15352766408841
+      ]
+    },
+    {
+      "text": "YES >> Replace Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        182.87602000000004,
+        559.8307024,
+        162.11233246408847
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.099628000000024,
+        159.89593200000002,
+        199.08332399999995,
+        150.6523444640884
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745970",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        706.86689,
+        559.8580799999991,
+        701.30921
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745971",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        375.36688999999996,
+        559.8580799999991,
+        369.80921
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "P3191 COMMUNICATION ERROR",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        199.56,
+        769.00991,
+        411.9609216000003,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "P3191 COMMUNICATION ERROR",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.10997,
+        286.8300000000002,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        712.00991,
+        115.668192,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        684.24824718,
+        184.12012196580005,
+        674.1015416630055
+      ]
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        670.67597,
+        84.71906400000002,
+        661.4323824640885
+      ]
+    },
+    {
+      "text": "When the 12 V battery is removed within 5 minutes after turning the power switch OFF, 'P318E', 'P3191' and 'P3196' may be simultaneously detected. This is not a malfunction.",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139999999999986,
+        659.215982,
+        558.5635199999996,
+        638.4518544640886
+      ]
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        568.3283271800001,
+        243.16289568650018,
+        558.1816216630056
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        555.20397,
+        296.6362560000002,
+        539.2667501104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.660348,
+        530.3962224,
+        136.75914,
+        521.1526348640886
+      ]
+    },
+    {
+      "text": "Power switch OFF.",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        518.8768308000001,
+        159.23238839999996,
+        509.6332432640885
+      ]
+    },
+    {
+      "text": "After turning the power switch OFF, get out of the vehicle and close all doors (including back door).",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        507.3574392000001,
+        530.9673804000009,
+        498.1138516640885
+      ]
+    },
+    {
+      "text": "After turning the power switch OFF, wait for 5 minutes or more to remove the 12 V battery negative terminal. Refer to EVB-6, \"Precaution for Removing 12V Battery\".",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14095640000002,
+        495.8974512000001,
+        558.6573924,
+        475.1322724640884
+      ]
+    },
+    {
+      "text": "Connect 12 V battery negative terminal.",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13956159999998,
+        472.8564684,
+        255.8030815999998,
+        463.61288086408837
+      ]
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13956159999998,
+        461.3964804,
+        307.50404959999986,
+        452.15289286408836
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13956159999998,
+        449.87708879999997,
+        274.76420959999984,
+        440.63350126408835
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13956159999998,
+        438.35769719999996,
+        128.9666864,
+        429.11410966408835
+      ]
+    },
+    {
+      "text": "Is P3191 detected?",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.13956159999998,
+        423.89725319999997,
+        142.26286160000004,
+        414.65366566408835
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-114, \"Diagnosis Procedure\".",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        409.37592,
+        303.4423,
+        400.1323324640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84025600000004,
+        397.85538,
+        197.81142399999993,
+        388.6117924640884
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        380.50991,
+        177.000288,
+        368.6101191491712
+      ]
+    },
+    {
+      "text": "1.PERFORM THE SELF-DIAGNOSIS",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        359.12401,
+        234.0296640000001,
+        343.18679011049727
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.660348,
+        334.3162624,
+        136.75914,
+        325.0726748640884
+      ]
+    },
+    {
+      "text": "Perform \"All DTC Reading\".",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        322.79572240000005,
+        200.43489239999994,
+        313.55213486408843
+      ]
+    },
+    {
+      "text": "Check 'Self diagnostic result' of systems other than 'HV BAT' to see if 'P3191' is detected.",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        311.33573440000004,
+        497.1040919999997,
+        302.0921468640884
+      ]
+    },
+    {
+      "text": "Is P3191 detected?",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.140851999999995,
+        296.81588680000004,
+        142.2819000000001,
+        287.57229926408843
+      ]
+    },
+    {
+      "text": "YES >> Replace traction motor inverter. Refer to TMS-108, \"Removal and Installation\"",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        282.29594000000003,
+        468.05787599999974,
+        273.0523524640885
+      ]
+    },
+    {
+      "text": "NO >> GO TO 2.",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        270.77601000000004,
+        154.05410039999992,
+        261.5324224640883
+      ]
+    },
+    {
+      "text": "2.PREFORM THE SELF-DIAGNOSIS OF LI-ION BATTERY CONTROLLER",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        259.70408999999995,
+        409.98960000000034,
+        243.76687011049728
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.660348,
+        234.89634239999998,
+        136.75914,
+        225.65275486408837
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        223.37695080000003,
+        274.7656043999999,
+        214.13336326408842
+      ]
+    },
+    {
+      "text": "Check to see if 'U1000' is detected simultaneously with 'P3191'.",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        211.91696279999996,
+        372.0325787999995,
+        202.67337526408835
+      ]
+    },
+    {
+      "text": "Is U1000 detected?",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.1409564,
+        197.39711520000003,
+        142.8697764,
+        188.15352766408841
+      ]
+    },
+    {
+      "text": "YES >> Replace Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        182.87602000000004,
+        558.4801775999994,
+        162.11233246408847
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.839618,
+        159.89593200000002,
+        197.8107859999999,
+        150.6523444640884
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745972",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        706.86689,
+        559.5492259999992,
+        701.30921
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745973",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        375.36688999999996,
+        559.5492259999992,
+        369.80921
+      ]
+    },
+    {
+      "text": "P3196 COMMUNICATION ERROR",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        199.8,
+        769.00991,
+        412.2009215999999,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "P3196 COMMUNICATION ERROR",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        736.10997,
+        287.13000000000017,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        712.00991,
+        115.97786880000004,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        684.24824718,
+        184.37932433020006,
+        674.1015416630055
+      ]
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        670.67597,
+        86.03907400000001,
+        661.4323824640885
+      ]
+    },
+    {
+      "text": "When the 12 V battery is removed within 5 minutes after turning the power switch OFF, 'P318E', 'P3191' and 'P3196' may be simultaneously detected. This is not a malfunction.",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        659.215982,
+        559.8261099999995,
+        638.4518544640886
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        557.8882571800001,
+        243.41189864199998,
+        547.7415516630056
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        544.70397,
+        296.998896,
+        528.7667501104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        519.8962224,
+        138.10126079999998,
+        510.6526348640885
+      ]
+    },
+    {
+      "text": "Power switch OFF.",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        508.3768308000001,
+        160.46092200000007,
+        499.1332432640885
+      ]
+    },
+    {
+      "text": "After turning the power switch OFF, get out of the vehicle and close all doors (including back door).",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        496.9168428000001,
+        529.2973523999998,
+        487.6732552640885
+      ]
+    },
+    {
+      "text": "After turning the power switch OFF, wait for 5 minutes or more to remove the 12 V battery negative terminal. Refer to EVB-6, \"Precaution for Removing 12V Battery\".",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46094439999999,
+        485.3963028000001,
+        560.0097443999996,
+        464.6322724640884
+      ]
+    },
+    {
+      "text": "Connect 12 V battery negative terminal.",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46033240000003,
+        462.415872,
+        257.12750640000013,
+        453.17228446408836
+      ]
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46033240000003,
+        450.895332,
+        308.7766919999999,
+        441.6517444640884
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46033240000003,
+        439.374792,
+        276.0443687999998,
+        430.1312044640884
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46033240000003,
+        427.914804,
+        130.29883680000006,
+        418.6712164640884
+      ]
+    },
+    {
+      "text": "Is P3196 detected?",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46033240000003,
+        413.3949564,
+        143.7047364000001,
+        404.1513688640884
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-115, \"Diagnosis Procedure\".",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        398.87592,
+        304.70234,
+        389.6323324640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10029600000004,
+        387.415932,
+        199.08399199999997,
+        378.1723444640884
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        370.0699,
+        177.41721599999997,
+        358.17010914917125
+      ]
+    },
+    {
+      "text": "1.PERFORM THE SELF-DIAGNOSIS",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        348.68397999999996,
+        234.37246800000003,
+        332.74676011049723
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        323.8154716,
+        138.10126079999998,
+        314.5718840640884
+      ]
+    },
+    {
+      "text": "Perform \"All DTC Reading\".",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        312.3554836,
+        201.69015239999993,
+        303.1118960640884
+      ]
+    },
+    {
+      "text": "Check 'Self diagnostic result' of systems other than 'HV BAT' to see if 'P3196' is detected.",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        300.836092,
+        498.3761603999991,
+        291.5925044640884
+      ]
+    },
+    {
+      "text": "Is P3196 detected?",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46094439999999,
+        286.3162444,
+        143.70534840000005,
+        277.07265686408846
+      ]
+    },
+    {
+      "text": "YES >>  Replace PDM (Power Delivery Module). Refer to VC-119, \"Removal and Installation\"",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        271.79594,
+        503.49019840000074,
+        262.5523524640885
+      ]
+    },
+    {
+      "text": "NO >> GO TO 2.",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        260.33601,
+        155.29939000000002,
+        251.09242246408837
+      ]
+    },
+    {
+      "text": "2.PREFORM THE SELF-DIAGNOSIS OF LI-ION BATTERY CONTROLLER",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        249.26409,
+        410.2591152000005,
+        233.32687011049723
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        224.3955816,
+        138.10126079999998,
+        215.1519940640884
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        212.93559359999995,
+        276.0449807999998,
+        203.69200606408845
+      ]
+    },
+    {
+      "text": "Check to see if 'U1000' is detected simultaneously with 'P3196'.",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        201.416202,
+        373.3540283999996,
+        192.17261446408838
+      ]
+    },
+    {
+      "text": "Is U1000 detected?",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46094439999999,
+        186.89635440000006,
+        144.23256840000005,
+        177.65276686408833
+      ]
+    },
+    {
+      "text": "YES >> Replace Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        172.37602000000004,
+        559.8307024,
+        151.6723324640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.099628000000024,
+        149.39652839999997,
+        199.08332399999995,
+        140.15294086408835
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745974",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        706.86689,
+        559.8580799999991,
+        701.30921
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745975",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        364.92688,
+        559.8580799999991,
+        359.36920000000003
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "bbox": [
+        54.59369659423828,
+        661.0942230224609,
+        557.3453369140625,
+        618.7324371337891
+      ],
+      "num_rows": 2,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P30FC",
+          "OVER CURRENT",
+          "When the temperature of the entire battery pack estimat- ed from the current value is excessively high.",
+          "• Battery current sensor • Other systems malfunction"
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name   | DTC detecting condition                                                                                 | Possible causes                                      |\n|-------|--------------------------|---------------------------------------------------------------------------------------------------------|------------------------------------------------------|\n| P30FC | OVER CURRENT             | When the temperature of the entire battery pack estimat- ed from the current value is excessively high. | • Battery current sensor • Other systems malfunction |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "bbox": [
+        52.23194122314453,
+        299.3450012207031,
+        411.8570861816406,
+        235.6099853515625
+      ],
+      "num_rows": 3,
+      "num_cols": 3,
+      "data": [
+        [
+          "Monitor item",
+          "Condition",
+          "Limit"
+        ],
+        [
+          "Battery temperature sensor 1",
+          "Power switch ON",
+          "55 ° C (131 ° F) or less"
+        ],
+        [
+          "Battery temperature sensor 4",
+          "Power switch ON",
+          "55 ° C (131 ° F) or less"
+        ]
+      ],
+      "markdown": "| Monitor item                 | Condition       | Limit                    |\n|------------------------------|-----------------|--------------------------|\n| Battery temperature sensor 1 | Power switch ON | 55 ° C (131 ° F) or less |\n| Battery temperature sensor 4 | Power switch ON | 55 ° C (131 ° F) or less |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "bbox": [
+        55.647911071777344,
+        661.4582214355469,
+        554.042236328125,
+        608.3229675292969
+      ],
+      "num_rows": 2,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P318D",
+          "COMMUNICATION ER- ROR",
+          "When no CAN communication signal is received contin- uously.",
+          "• CAN communication line • Li-ion battery controller • VCM"
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name   | DTC detecting condition                                      | Possible causes                                            |\n|-------|--------------------------|--------------------------------------------------------------|------------------------------------------------------------|\n| P318D | COMMUNICATION ER- ROR    | When no CAN communication signal is received contin- uously. | • CAN communication line • Li-ion battery controller • VCM |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "bbox": [
+        49.87599182128906,
+        626.3427429199219,
+        566.2706909179688,
+        573.8992614746094
+      ],
+      "num_rows": 2,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P318E",
+          "COMMUNICATION ER- ROR",
+          "When no CAN communication signal is received from VCM continuously.",
+          "• VCM • Li-ion battery controller • CAN communication line"
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name   | DTC detecting condition                                             | Possible causes                                            |\n|-------|--------------------------|---------------------------------------------------------------------|------------------------------------------------------------|\n| P318E | COMMUNICATION ER- ROR    | When no CAN communication signal is received from VCM continuously. | • VCM • Li-ion battery controller • CAN communication line |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "bbox": [
+        50.489166259765625,
+        627.0446472167969,
+        561.4130249023438,
+        574.1548919677734
+      ],
+      "num_rows": 2,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P3191",
+          "COMMUNICATION ERROR",
+          "WhennoCANcommunicationsignal is received from traction motor inverter continuously.",
+          "• Traction motor inverter • Li-ion battery controller • CAN communication line"
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name   | DTC detecting condition                                                             | Possible causes                                                                |\n|-------|--------------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|\n| P3191 | COMMUNICATION ERROR      | WhennoCANcommunicationsignal is received from traction motor inverter continuously. | • Traction motor inverter • Li-ion battery controller • CAN communication line |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "bbox": [
+        50.469669342041016,
+        626.2615509033203,
+        577.0968017578125,
+        558.0093841552734
+      ],
+      "num_rows": 2,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P3196",
+          "COMMUNICATION ERROR",
+          "WhennoCANcommunicationsignal is received from on-board charger continuously.",
+          "• PDM (Power Delivery Module) • Li-ion battery controller • CAN communication line"
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name   | DTC detecting condition                                                      | Possible causes                                                                    |\n|-------|--------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------------|\n| P3196 | COMMUNICATION ERROR      | WhennoCANcommunicationsignal is received from on-board charger continuously. | • PDM (Power Delivery Module) • Li-ion battery controller • CAN communication line |",
+      "tableformer": true
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_111_raster_1.png",
+      "page_pdf": 111,
+      "page_manual": "EVB-111",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        217.5600128173828,
+        64.97999572753906,
+        229.1400146484375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_112_raster_1.png",
+      "page_pdf": 112,
+      "page_manual": "EVB-112",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        228.0600128173828,
+        63.65999984741211,
+        239.6400146484375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_113_raster_1.png",
+      "page_pdf": 113,
+      "page_manual": "EVB-113",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        260.51995849609375,
+        64.97999572753906,
+        272.15997314453125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_114_raster_1.png",
+      "page_pdf": 114,
+      "page_manual": "EVB-114",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        260.51995849609375,
+        63.65999984741211,
+        272.15997314453125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_115_raster_1.png",
+      "page_pdf": 115,
+      "page_manual": "EVB-115",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        271.0199890136719,
+        64.97999572753906,
+        282.5999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

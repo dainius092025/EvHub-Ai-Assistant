@@ -1,0 +1,700 @@
+{
+  "schema_version": "1.0",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-76\nRevision: October 2013\n2013 LEAF",
+    "page_start": 76,
+    "page_end": 80,
+    "ocr_used": true,
+    "tableformer_used": true,
+    "page_map": {
+      "76": [
+        "EVB-76",
+        "EVB",
+        "EVB-76\nRevision: October 2013\n2013 LEAF"
+      ],
+      "77": [
+        "EVB-77",
+        "EVB",
+        "EVB-77\nRevision: October 2013\n2013 LEAF"
+      ],
+      "78": [
+        "EVB-78",
+        "EVB",
+        "EVB-78\nRevision: October 2013\n2013 LEAF"
+      ],
+      "79": [
+        "EVB-79",
+        "EVB",
+        "EVB-79\nRevision: October 2013\n2013 LEAF"
+      ],
+      "80": [
+        "EVB-80",
+        "EVB",
+        "EVB-80\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "AACIA0134GB",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        481.73999,
+        142.71564,
+        514.88189,
+        138.10914000000002
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "AACIA0135GB",
+      "page_pdf": 78,
+      "page_manual": "EVB-78",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        481.44,
+        142.71564,
+        514.5819,
+        138.10914000000002
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 76,
+      "page_manual": "EVB-76",
+      "section_code": "EVB",
+      "bbox": [
+        91.46644592285156,
+        508.8328552246094,
+        515.5509643554688,
+        353.9582214355469
+      ],
+      "num_rows": 1,
+      "num_cols": 1,
+      "data": [
+        [
+          "Signal Name"
+        ]
+      ],
+      "markdown": "",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "bbox": [
+        103.79863739013672,
+        508.4018859863281,
+        458.1310119628906,
+        353.9855041503906
+      ],
+      "num_rows": 3,
+      "num_cols": 25,
+      "data": [
+        [
+          "Signal Name",
+          "REZ_S3",
+          "",
+          "",
+          "",
+          "",
+          "REZ_R2",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "IGN_SW",
+          "",
+          "TMGND",
+          "WL VB1",
+          "VBGND1 VB2",
+          "VBGND2",
+          ""
+        ],
+        [
+          "Colorof Wire",
+          "W",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "G B",
+          "G",
+          "B"
+        ],
+        [
+          "Terminal No.",
+          "2",
+          "2",
+          "2",
+          "忆",
+          "5 6",
+          "2",
+          "28",
+          "2",
+          "3",
+          "3",
+          "3",
+          "3",
+          "5",
+          "6 3",
+          "3",
+          "4",
+          "4",
+          "4",
+          "3",
+          "4",
+          "5",
+          "46 4",
+          "4",
+          ""
+        ]
+      ],
+      "markdown": "| Signal Name   | REZ_S3   |    |    |    |     |   REZ_R2 |    |    |    |    |    |    |    |     |    |    |    |   IGN_SW |    |   TMGND |   WL VB1 | VBGND1 VB2   | VBGND2   |    |\n|---------------|----------|----|----|----|-----|----------|----|----|----|----|----|----|----|-----|----|----|----|----------|----|---------|----------|--------------|----------|----|\n| Colorof Wire  | W        |    |    |    |     |          |    |    |    |    |    |    |    |     |    |    |    |          |    |         |          | G B          | G        | B  |\n| Terminal No.  | 2        |  2 |  2 | 忆  | 5 6 |        2 | 28 |  2 |  3 |  3 |  3 |  3 |  5 | 6 3 |  3 |  4 |  4 |        4 |  3 |       4 |        5 | 46 4         | 4        |    |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "bbox": [
+        268.295166015625,
+        311.4001159667969,
+        518.7410278320312,
+        156.0291748046875
+      ],
+      "num_rows": 3,
+      "num_cols": 19,
+      "data": [
+        [
+          "Signal Name",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "EV SYSTEM CAN- H",
+          "EVSYSTEMCAN-L",
+          "",
+          "REZ_S2",
+          "REZ_S4",
+          "REZ_R1",
+          "REZ_S1"
+        ],
+        [
+          "Color of Wire",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "G",
+          "",
+          "P",
+          "",
+          "",
+          "B"
+        ],
+        [
+          "Terminal No.",
+          "2",
+          "3",
+          "4",
+          "5",
+          "9",
+          "8",
+          "9",
+          "0",
+          "二",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "2"
+        ]
+      ],
+      "markdown": "| Signal Name   |    |    |    |    |    |    |    |    |    |    |    |   EV SYSTEM CAN- H | EVSYSTEMCAN-L   |    | REZ_S2   |   REZ_S4 |   REZ_R1 | REZ_S1   |\n|---------------|----|----|----|----|----|----|----|----|----|----|----|--------------------|-----------------|----|----------|----------|----------|----------|\n| Color of Wire |    |    |    |    |    |    |    |    |    |    |    |                    | G               |    | P        |          |          | B        |\n| Terminal No.  |  2 |  3 |  4 |  5 |  9 |  8 |  9 |  0 | 二  |  2 |  3 |                  4 | 5               |  6 | 7        |        8 |        9 | 2        |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 78,
+      "page_manual": "EVB-78",
+      "section_code": "EVB",
+      "bbox": [
+        103.23231506347656,
+        508.65301513671875,
+        307.8478088378906,
+        354.042236328125
+      ],
+      "num_rows": 3,
+      "num_cols": 16,
+      "data": [
+        [
+          "Signal Name",
+          "CHSSI2",
+          "CHSSI1",
+          "",
+          "",
+          "QCPTMP2",
+          "QCPTMP1",
+          "EV CAN-H",
+          "",
+          "CONDETI",
+          "CNTRL",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Color of Wire",
+          "G",
+          "",
+          "",
+          "",
+          "SB",
+          "",
+          "",
+          "",
+          "W",
+          "BR",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Terminal No.",
+          "",
+          "2",
+          "2",
+          "忆",
+          "25",
+          "26",
+          "2",
+          "8",
+          "8",
+          "30",
+          "3",
+          "3",
+          "3",
+          "5",
+          "6"
+        ]
+      ],
+      "markdown": "| Signal Name   | CHSSI2   |   CHSSI1 |    |    | QCPTMP2   |   QCPTMP1 |   EV CAN-H |    | CONDETI   | CNTRL   |    |    |    |    |    |\n|---------------|----------|----------|----|----|-----------|-----------|------------|----|-----------|---------|----|----|----|----|----|\n| Color of Wire | G        |          |    |    | SB        |           |            |    | W         | BR      |    |    |    |    |    |\n| Terminal No.  |          |        2 |  2 | 忆  | 25        |        26 |          2 |  8 | 8         | 30      |  3 |  3 |  3 |  5 |  6 |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 78,
+      "page_manual": "EVB-78",
+      "section_code": "EVB",
+      "bbox": [
+        267.074951171875,
+        310.927734375,
+        518.0399780273438,
+        155.564208984375
+      ],
+      "num_rows": 3,
+      "num_cols": 20,
+      "data": [
+        [
+          "Signal Name",
+          "",
+          "",
+          "",
+          "",
+          "Q-CAN-L",
+          "Q-CAN-H",
+          "",
+          "QCRLY",
+          "CSTATE",
+          "EV CAN-L",
+          "INTERLOCK_IN",
+          "",
+          "",
+          "INTERLOCKOUT",
+          "IGN",
+          "",
+          "BAT",
+          "CHOKO",
+          "CHILI"
+        ],
+        [
+          "Colorof Wire",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "M",
+          "",
+          "",
+          "",
+          "G",
+          "",
+          "",
+          "",
+          "P",
+          "",
+          "",
+          "R",
+          "R",
+          "BR"
+        ],
+        [
+          "Terminal No.",
+          "2",
+          "3",
+          "4",
+          "5",
+          "9",
+          "7",
+          "8",
+          "9",
+          "0",
+          "二",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "2"
+        ]
+      ],
+      "markdown": "| Signal Name   |    |    |    |    |   Q-CAN-L | Q-CAN-H   |    |   QCRLY |   CSTATE | EV CAN-L   |   INTERLOCK_IN |    |    | INTERLOCKOUT   |   IGN |    | BAT   | CHOKO   | CHILI   |\n|---------------|----|----|----|----|-----------|-----------|----|---------|----------|------------|----------------|----|----|----------------|-------|----|-------|---------|---------|\n| Colorof Wire  |    |    |    |    |           | M         |    |         |          | G          |                |    |    | P              |       |    | R     | R       | BR      |\n| Terminal No.  |  2 |  3 |  4 |  5 |         9 | 7         |  8 |       9 |        0 | 二          |              2 |  3 |  4 | 5              |     6 |  7 | 8     | 9       | 2       |",
+      "tableformer": true
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_76_raster_1.png",
+      "page_pdf": 76,
+      "page_manual": "EVB-76",
+      "section_code": "EVB",
+      "bbox": [
+        87.72000122070312,
+        58.67999267578125,
+        523.97998046875,
+        655.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_77_raster_1.png",
+      "page_pdf": 77,
+      "page_manual": "EVB-77",
+      "section_code": "EVB",
+      "bbox": [
+        88.01998901367188,
+        58.67999267578125,
+        524.2799072265625,
+        655.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_78_raster_1.png",
+      "page_pdf": 78,
+      "page_manual": "EVB-78",
+      "section_code": "EVB",
+      "bbox": [
+        87.72000122070312,
+        58.67999267578125,
+        523.97998046875,
+        655.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_79_raster_1.png",
+      "page_pdf": 79,
+      "page_manual": "EVB-79",
+      "section_code": "EVB",
+      "bbox": [
+        88.01998901367188,
+        58.67999267578125,
+        524.2799072265625,
+        655.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_80_raster_1.png",
+      "page_pdf": 80,
+      "page_manual": "EVB-80",
+      "section_code": "EVB",
+      "bbox": [
+        87.72000122070312,
+        58.67999267578125,
+        523.97998046875,
+        655.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

@@ -1,0 +1,2862 @@
+{
+  "schema_version": "1.0",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-101\ny\n1.PERFORM THE SELF-DIAGNOSIS OF LI-ION BATTERY CONTROLLER\nRevision: October 2013\n2013 LEAF",
+    "page_start": 101,
+    "page_end": 105,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "101": [
+        "EVB-101",
+        "EVB",
+        "EVB-101\ny\n1.PERFORM THE SELF-DIAGNOSIS OF LI-ION BATTERY CONTROLLER\nRevision: October 2013\n2013 LEAF"
+      ],
+      "102": [
+        "EVB-102",
+        "EVB",
+        "EVB-102\nJSCIA0813ZZ\nRevision: October 2013\n2013 LEAF"
+      ],
+      "103": [
+        "EVB-103",
+        "EVB",
+        "EVB-103\nRevision: October 2013\n2013 LEAF"
+      ],
+      "104": [
+        "EVB-104",
+        "EVB",
+        "EVB-104\ny\n1.PERFORM THE SELF-DIAGNOSIS OF LI-ION BATTERY CONTROLLER\nRevision: October 2013\n2013 LEAF"
+      ],
+      "105": [
+        "EVB-105",
+        "EVB",
+        "EVB-105\nP309B\n33\nLB8\n2\nLB15\n118\nExisted\n34\n6\n119\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "P308B-P3096 CELL CONTROLLER ASIC OPEN",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        156.78,
+        769.00991,
+        455.27971199999973,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "P308B-P3096 CELL CONTROLLER ASIC OPEN",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        736.10997,
+        380.0910000000003,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        712.00991,
+        115.97786880000004,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        684.24824718,
+        184.37932433020006,
+        674.1015416630055
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        451.5080500909999,
+        184.37932433020006,
+        441.36134457400544
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        438.38399,
+        296.998896,
+        422.44677011049725
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        413.5762424,
+        138.10126079999998,
+        404.3326548640884
+      ]
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        402.0568508,
+        308.8233444000003,
+        392.8132632640884
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        390.5374592,
+        276.0449807999998,
+        381.2938716640884
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        379.0774712,
+        130.29944880000005,
+        369.8338836640884
+      ]
+    },
+    {
+      "text": "Is P308B-P3096 detected?",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.460944399999995,
+        364.5576236,
+        178.52596799999998,
+        355.3123324640884
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-101, \"Diagnosis Procedure\".",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        350.0359,
+        305.48231,
+        340.7923124640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.100293600000015,
+        338.575912,
+        199.08398959999994,
+        329.3323244640884
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        321.22991,
+        177.41721599999997,
+        309.33011914917125
+      ]
+    },
+    {
+      "text": "DANGER:",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        293.57591,
+        102.29269239999996,
+        284.3323224640884
+      ]
+    },
+    {
+      "text": "Since hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.460009999999954,
+        271.2563384,
+        559.8981459999999,
+        227.5139796640883
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.460009999999954,
+        222.2971232,
+        107.5893219999999,
+        213.05353566408837
+      ]
+    },
+    {
+      "text": "Be sure to remove the service plug in order to disconnect the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460009999999954,
+        210.77773159999992,
+        559.858474,
+        190.01475246408836
+      ]
+    },
+    {
+      "text": "The removed service plug must always be carried in a pocket of the responsible worker or placed in the tool box during the procedure to prevent the plug from being connected by mistake.",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460949599999935,
+        187.79835200000002,
+        559.8771615999998,
+        167.03537286408834
+      ]
+    },
+    {
+      "text": "Be sure to wear insulating protective equipment consisting of glove, shoes, face shield and glasses before beginning work on the high voltage system.",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46084519999991,
+        164.7595687999999,
+        559.8288243999995,
+        144.05599326408833
+      ]
+    },
+    {
+      "text": "Never allow workers other than the responsible person to touch the vehicle containing high voltage parts. To keep others from touching the high voltage parts, these parts must be covered with an insulating sheet except when using them.",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460845199999824,
+        141.7801892,
+        559.8678699999996,
+        109.55607366408833
+      ]
+    },
+    {
+      "text": "Refer to EVB-6, \"High Voltage Precautions\".",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460845199999795,
+        107.28026959999988,
+        279.62232,
+        98.03244246408838
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.45955600000002,
+        95.75549000000001,
+        104.63643600000003,
+        86.5119024640884
+      ]
+    },
+    {
+      "text": "Never  bring  the  vehicle  into  the  READY  status  with  the  service  plug  removed  unless  otherwise instructed in the Service Manual. A malfunction may occur if this is not observed.",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.45955600000002,
+        84.29550199999994,
+        559.9300560000007,
+        63.53252286408838
+      ]
+    },
+    {
+      "text": "1.PERFORM THE SELF-DIAGNOSIS OF LI-ION BATTERY CONTROLLER",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        61.704110000000014,
+        410.1622319999997,
+        45.76689011049723
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745951",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        706.86689,
+        559.8580799999991,
+        701.30921
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745952",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        316.08689,
+        559.8580799999991,
+        310.52921000000003
+      ]
+    },
+    {
+      "text": "P308B-P3096 CELL CONTROLLER ASIC OPEN",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        156.53999,
+        769.00991,
+        454.8940124000002,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.66,
+        734.27589,
+        136.758792,
+        725.0323024640885
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1406084,
+        722.75535,
+        274.7652563999999,
+        713.5117624640885
+      ]
+    },
+    {
+      "text": "Check to see if 'P3049'-'P3060' (CELL CONT ASIC VOLT related codes) or 'P3375'-'P33A4' (CELL OVER DISCHARGE related codes) is detected simultaneously with 'P308B'-'P3096'.",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1406084,
+        711.23481,
+        558.4914659999994,
+        690.5312344640886
+      ]
+    },
+    {
+      "text": "Is P3049-P3060 or P3375-P33A4 detected?",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14039960000002,
+        685.2559299999999,
+        256.35751000000016,
+        676.0113868640885
+      ]
+    },
+    {
+      "text": "YES-1 >> 'P3049'-'P3060' are detected simultaneously.",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        670.7360299999999,
+        330.47120400000045,
+        661.4924424640884
+      ]
+    },
+    {
+      "text": "When  'P3049'-'P3054'  are  detected  simultaneously,  perform  the  diagnosis  procedure  of 'P3049'-'P3054'. Refer to EVB-94, \"Diagnosis Procedure\".",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        108.840444,
+        659.2154899999999,
+        558.5006399999995,
+        638.5119144640885
+      ]
+    },
+    {
+      "text": "When  'P3055'-'P3060'  are  detected  simultaneously,  perform  the  diagnosis  procedure  of 'P3055'-'P3060'. Refer to EVB-96, \"Diagnosis Procedure\".",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        108.84045600000007,
+        636.2353899999999,
+        558.5006519999996,
+        615.4723024640884
+      ]
+    },
+    {
+      "text": "YES-2 >> 'P3375'-'P33A4' are detected simultaneously.",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84001200000006,
+        613.255902,
+        331.7000039999997,
+        604.0123144640885
+      ]
+    },
+    {
+      "text": "When  'P3375'-'P3380'  are  detected  simultaneously,  perform  the  diagnosis  procedure  of 'P3375'-'P3380'. Refer to EVB-135, \"Diagnosis Procedure\".",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        108.84045600000006,
+        601.7365104,
+        558.5006519999996,
+        580.9723024640884
+      ]
+    },
+    {
+      "text": "When  'P3381'-'P338C'  are  detected  simultaneously,  perform  the  diagnosis  procedure  of 'P3381'-'P338C'. Refer to EVB-139, \"Diagnosis Procedure\".",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        108.84013600000003,
+        578.755902,
+        558.3527104000003,
+        557.9917744640885
+      ]
+    },
+    {
+      "text": "When  'P338D'-'P3398'  are  detected  simultaneously,  perform  the  diagnosis  procedure  of 'P338D'-'P3398'. Refer to EVB-143, \"Diagnosis Procedure\"",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        108.83980799999995,
+        555.7165184,
+        558.5038667999997,
+        535.0129428640886
+      ]
+    },
+    {
+      "text": "When  'P3399'-'P33A4'  are  detected  simultaneously,  perform  the  diagnosis  procedure  of 'P3399'-'P33A4'. Refer to EVB-146, \"Diagnosis Procedure\".",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        108.84,
+        532.7360299999999,
+        558.5099051999989,
+        511.9719024640884
+      ]
+    },
+    {
+      "text": "NO >> GO TO 2.",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.840146000000004,
+        509.755902,
+        154.05424639999993,
+        500.5123144640884
+      ]
+    },
+    {
+      "text": "2.PRECONDITIONING",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        498.62401,
+        165.98800799999998,
+        482.68679011049727
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        472.37554240000003,
+        106.18977600000001,
+        463.1319548640884
+      ]
+    },
+    {
+      "text": "Disconnect high voltage. Refer to GI-33, \"How to Disconnect High Voltage\".",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        460.9159,
+        425.96232,
+        451.6719668640884
+      ]
+    },
+    {
+      "text": "Remove Li-ion battery. Refer to EVB-194, \"Removal and Installation\".",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14037200000001,
+        449.39591,
+        392.06232,
+        440.1517724640884
+      ]
+    },
+    {
+      "text": "Remove battery pack upper case. Refer to EVB-204, \"BATTERY PACK UPPER CASE : Removal and Installation\".",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.140096000000085,
+        437.8765184,
+        558.5183063999997,
+        417.1723124640884
+      ]
+    },
+    {
+      "text": ">> GO TO 3.",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.7796556,
+        397.37599600000004,
+        154.05301200000002,
+        388.1324084640884
+      ]
+    },
+    {
+      "text": "3.CHECK CONNECTION STATUS",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        386.304,
+        219.66840000000008,
+        370.36678011049725
+      ]
+    },
+    {
+      "text": "Power switch OFF.",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        363.0559884,
+        159.23123999999996,
+        353.8124008640884
+      ]
+    },
+    {
+      "text": "Check connection status of Li-ion battery controller harness connector and module harness connector.",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        351.5365968,
+        544.8409920000001,
+        342.29300926408837
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808000000016,
+        337.0761528,
+        196.92736559999997,
+        327.8325652640884
+      ]
+    },
+    {
+      "text": "YES >> GO TO 4.",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        322.55592,
+        154.07320559999994,
+        313.3123324640884
+      ]
+    },
+    {
+      "text": "NO >> Recover the connection status.",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        311.0365284,
+        252.41059319999994,
+        301.7929408640884
+      ]
+    },
+    {
+      "text": "4.CHECK HARNESS BETWEEN LI-ION BATTERY CONTROLLER AND MODULE",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        299.96401,
+        442.9982699999996,
+        284.02679011049725
+      ]
+    },
+    {
+      "text": "Disconnect Li-ion battery controller harness connector and voltage detection terminal of bus bar.",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.140747600000026,
+        276.7159984,
+        516.249799199999,
+        267.4724108640884
+      ]
+    },
+    {
+      "text": "Refer to below table and continuity between Li-ion battery controller and voltage detection terminal of bus bar, according to detected DTC.",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1407476,
+        264.29553039999996,
+        548.1534995999996,
+        243.5325512640884
+      ]
+    },
+    {
+      "text": "P308B-P3096 CELL CONTROLLER ASIC OPEN",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        156.78,
+        769.00991,
+        455.27971199999973,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        309.35591,
+        198.38673280000006,
+        300.1123224640884
+      ]
+    },
+    {
+      "text": "YES >> Replace Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        294.83601,
+        559.8307024,
+        274.0724324640885
+      ]
+    },
+    {
+      "text": "NO >> Repair harness or connector.",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.099628000000024,
+        271.856032,
+        244.30731599999982,
+        262.6124444640884
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "P3097-P30A2 CELL CONTROLLER ASIC OPEN",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        156.53999,
+        769.00991,
+        454.8940124000002,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "P3097-P30A2 CELL CONTROLLER ASIC OPEN",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.10997,
+        379.7736000000001,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        712.00991,
+        115.668192,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        684.24824718,
+        184.12012196580005,
+        674.1015416630055
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        451.5080500909999,
+        184.12012196580005,
+        441.36134457400544
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        438.38399,
+        296.6362560000002,
+        422.44677011049725
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.660348,
+        413.5762424,
+        136.75914,
+        404.3326548640884
+      ]
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        402.0568508,
+        307.5054443999999,
+        392.8132632640884
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        390.5374592,
+        274.7656043999999,
+        381.2938716640884
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        379.0774712,
+        128.9680812,
+        369.8338836640884
+      ]
+    },
+    {
+      "text": "Is P308B-P30A2 detected?",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.1409564,
+        364.5576236,
+        178.4041768000002,
+        355.3123324640884
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-104, \"Diagnosis Procedure\".",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        350.0359,
+        304.16229999999996,
+        340.7923124640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.83989600000001,
+        338.575912,
+        197.8110639999999,
+        329.3323244640884
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        321.22991,
+        177.000288,
+        309.33011914917125
+      ]
+    },
+    {
+      "text": "DANGER:",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        293.57591,
+        100.97268239999997,
+        284.3323224640884
+      ]
+    },
+    {
+      "text": "Since hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14010439999987,
+        271.2563384,
+        558.5875319999999,
+        227.5139796640883
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14010439999987,
+        222.2971232,
+        106.19007239999988,
+        213.05353566408837
+      ]
+    },
+    {
+      "text": "Be sure to remove the service plug in order to disconnect the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999987,
+        210.77773159999992,
+        558.528024,
+        190.01475246408836
+      ]
+    },
+    {
+      "text": "The removed service plug must always be carried in a pocket of the responsible worker or placed in the tool box during the procedure to prevent the plug from being connected by mistake.",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        187.79835200000002,
+        558.6052799999992,
+        167.03537286408834
+      ]
+    },
+    {
+      "text": "Be sure to wear insulating protective equipment consisting of glove, shoes, face shield and glasses before beginning work on the high voltage system.",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        164.7595687999999,
+        558.5504699999996,
+        144.05599326408833
+      ]
+    },
+    {
+      "text": "Never allow workers other than the responsible person to touch the vehicle containing high voltage parts. To keep others from touching the high voltage parts, these parts must be covered with an insulating sheet except when using them.",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        141.7801892,
+        558.5803284000008,
+        109.55607366408833
+      ]
+    },
+    {
+      "text": "Refer to EVB-6, \"High Voltage Precautions\".",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        107.28026959999988,
+        278.30231,
+        98.03244246408838
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139545999999996,
+        95.75549000000001,
+        103.316426,
+        86.5119024640884
+      ]
+    },
+    {
+      "text": "Never  bring  the  vehicle  into  the  READY  status  with  the  service  plug  removed  unless  otherwise instructed in the Service Manual. A malfunction may occur if this is not observed.",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.13954599999997,
+        84.29550199999994,
+        558.5975179999997,
+        63.53252286408838
+      ]
+    },
+    {
+      "text": "1.PERFORM THE SELF-DIAGNOSIS OF LI-ION BATTERY CONTROLLER",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        61.704110000000014,
+        409.9277952000005,
+        45.76689011049723
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745953",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        706.86689,
+        559.5492259999992,
+        701.30921
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745954",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        316.08689,
+        559.5492259999992,
+        310.52921000000003
+      ]
+    },
+    {
+      "text": "P3097-P30A2 CELL CONTROLLER ASIC OPEN",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        156.78,
+        769.00991,
+        455.2724543999997,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.98,
+        734.27589,
+        138.10092479999997,
+        725.0323024640885
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' mode of 'HV BAT' using CONSULT.",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460608400000005,
+        722.75535,
+        384.0766163999997,
+        713.5117624640885
+      ]
+    },
+    {
+      "text": "Check to see if 'P3049'-'P3060' (CELL CONT ASIC VOLT related codes) or 'P3375'-'P33A4' (CELL OVER DISCHARGE related codes) is detected simultaneously with 'P3097'-'P30A2'.",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460608400000005,
+        711.23481,
+        559.8215928,
+        690.5312344640886
+      ]
+    },
+    {
+      "text": "Is P3049-P3060 or P3375-P33A4 detected?",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46081720000001,
+        685.2559299999999,
+        257.66416680000026,
+        676.0113868640885
+      ]
+    },
+    {
+      "text": "YES-1 >> 'P3049'-'P3060' are detected simultaneously.",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        670.7360299999999,
+        331.71753760000047,
+        661.4924424640884
+      ]
+    },
+    {
+      "text": "When  'P3049'-'P3054'  are  detected  simultaneously,  perform  the  diagnosis  procedure  of 'P3049'-'P3054'. Refer to EVB-94, \"Diagnosis Procedure\"",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        110.09930560000001,
+        659.2154899999999,
+        559.7281815999996,
+        638.5119144640885
+      ]
+    },
+    {
+      "text": "When  'P3055'-'P3060'  are  detected  simultaneously,  perform  the  diagnosis  procedure  of 'P3055'-'P3060'. Refer to EVB-96, \"Diagnosis Procedure\"",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        110.10001,
+        636.23591,
+        559.7288859999996,
+        615.4729308640885
+      ]
+    },
+    {
+      "text": "YES-2 >> 'P3375'-'P33A4' are detected simultaneously.",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        613.2559299999999,
+        332.9022687999997,
+        604.0123424640884
+      ]
+    },
+    {
+      "text": "When  'P3375'-'P3380'  are  detected  simultaneously,  perform  the  diagnosis  procedure  of 'P3375'-'P3380'. Refer to EVB-135, \"Diagnosis Procedure\".",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        110.100454,
+        601.7365384,
+        559.7293299999997,
+        580.9723024640884
+      ]
+    },
+    {
+      "text": "When  'P3381'-'P338C'  are  detected  simultaneously,  perform  the  diagnosis  procedure  of 'P3381'-'P338C'. Refer to EVB-139, \"Diagnosis Procedure\".",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        110.09969839999997,
+        578.755902,
+        559.8120944000003,
+        557.9917744640885
+      ]
+    },
+    {
+      "text": "When  'P338D'-'P3398'  are  detected  simultaneously,  perform  the  diagnosis  procedure  of 'P338D'-'P3398'. Refer to EVB-143, \"Diagnosis Procedure\".",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        110.10031000000004,
+        555.7165184,
+        559.8034144,
+        535.0123424640884
+      ]
+    },
+    {
+      "text": "When  'P3399'-'P33A4'  are  detected  simultaneously,  perform  the  diagnosis  procedure  of 'P3399'-'P33A4'. Refer to EVB-146, \"Diagnosis Procedure\"",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        110.10031000000004,
+        532.7365384,
+        559.7291859999995,
+        511.97241086408843
+      ]
+    },
+    {
+      "text": "NO >> GO TO 2.",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        509.7559,
+        155.29939000000002,
+        500.5123124640884
+      ]
+    },
+    {
+      "text": "2.PRECONDITIONING",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        498.62401,
+        166.27965600000005,
+        482.68679011049727
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459796,
+        472.37554240000003,
+        107.58910799999994,
+        463.1319548640884
+      ]
+    },
+    {
+      "text": "Disconnect high voltage. Refer to GI-33, \"How to Disconnect High Voltage\".",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459796,
+        460.9159,
+        427.28231999999997,
+        451.6719668640884
+      ]
+    },
+    {
+      "text": "Remove Li-ion battery. Refer to EVB-194, \"Removal and Installation\".",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46037200000001,
+        449.39591,
+        393.3823,
+        440.1517724640884
+      ]
+    },
+    {
+      "text": "Remove battery pack upper case. Refer to EVB-204, \"BATTERY PACK UPPER CASE : Removal and Installation\".",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46007600000007,
+        437.8765184,
+        559.857496,
+        417.1723124640884
+      ]
+    },
+    {
+      "text": ">> GO TO 3.",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.040262,
+        397.37599600000004,
+        155.30129919999996,
+        388.1324084640884
+      ]
+    },
+    {
+      "text": "3.CHECK CONNECTION STATUS",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        386.304,
+        219.9475199999999,
+        370.36678011049725
+      ]
+    },
+    {
+      "text": "Power switch OFF.",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.459796,
+        363.0559884,
+        160.45977360000006,
+        353.8124008640884
+      ]
+    },
+    {
+      "text": "Check connection status of Li-ion battery controller harness connector and module harness connector.",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.459796,
+        351.5365968,
+        546.1135823999992,
+        342.29300926408837
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.45979599999998,
+        337.0761528,
+        198.38651880000006,
+        327.8325652640884
+      ]
+    },
+    {
+      "text": "YES >> GO TO 4.",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        322.55592,
+        155.30461,
+        313.3123324640884
+      ]
+    },
+    {
+      "text": "NO >> Recover the connection status.",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        311.0365284,
+        253.67060319999996,
+        301.7929408640884
+      ]
+    },
+    {
+      "text": "4.CHECK HARNESS BETWEEN LI-ION BATTERY CONTROLLER AND MODULE",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        299.96401,
+        443.35151400000063,
+        284.02679011049725
+      ]
+    },
+    {
+      "text": "Disconnect Li-ion battery controller harness connector and Module harness connector.",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45990039999998,
+        276.7159984,
+        472.3690763999998,
+        267.4724108640884
+      ]
+    },
+    {
+      "text": "Refer to below table and continuity between Li-ion battery controller and Module, according to detected DTC.",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45990039999998,
+        265.1966067999999,
+        559.8083568000008,
+        244.49303126408836
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "bbox": [
+        55.519561767578125,
+        661.22021484375,
+        587.8521118164062,
+        457.7645568847656
+      ],
+      "num_rows": 14,
+      "num_cols": 5,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes",
+          ""
+        ],
+        [
+          "P308B",
+          "CELL CONT ASIC1 OPEN CELL CONT ASIC6 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector",
+          "EVB"
+        ],
+        [
+          "P308C",
+          "CELL CONT ASIC2 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector",
+          "EVB"
+        ],
+        [
+          "P308D",
+          "CELL CONT ASIC3 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector",
+          "D"
+        ],
+        [
+          "P308E",
+          "CELL CONT ASIC4 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector",
+          "D"
+        ],
+        [
+          "P308F",
+          "CELL CONT ASIC5 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector",
+          "D"
+        ],
+        [
+          "P3090",
+          "",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector",
+          "E"
+        ],
+        [
+          "P3091",
+          "CELL CONT ASIC7 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector",
+          "E"
+        ],
+        [
+          "P3092",
+          "CELL CONT ASIC8 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector",
+          "E"
+        ],
+        [
+          "P3093",
+          "CELL CONT ASIC9 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector",
+          "F"
+        ],
+        [
+          "P3094",
+          "CELL CONT ASIC10 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector",
+          "F"
+        ],
+        [
+          "P3095",
+          "CELL CONT ASIC11 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector",
+          "F"
+        ],
+        [
+          "",
+          "CELL CONT ASIC12 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector",
+          "G"
+        ],
+        [
+          "P3096",
+          "",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector",
+          "G"
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name                    | DTC detecting condition                                                                                           | Possible causes                                    |     |\n|-------|-------------------------------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|-----|\n| P308B | CELL CONT ASIC1 OPEN CELL CONT ASIC6 OPEN | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector | EVB |\n| P308C | CELL CONT ASIC2 OPEN                      | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector | EVB |\n| P308D | CELL CONT ASIC3 OPEN                      | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector | D   |\n| P308E | CELL CONT ASIC4 OPEN                      | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector | D   |\n| P308F | CELL CONT ASIC5 OPEN                      | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector | D   |\n| P3090 |                                           | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector | E   |\n| P3091 | CELL CONT ASIC7 OPEN                      | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector | E   |\n| P3092 | CELL CONT ASIC8 OPEN                      | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector | E   |\n| P3093 | CELL CONT ASIC9 OPEN                      | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector | F   |\n| P3094 | CELL CONT ASIC10 OPEN                     | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector | F   |\n| P3095 | CELL CONT ASIC11 OPEN                     | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector | F   |\n|       | CELL CONT ASIC12 OPEN                     | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector | G   |\n| P3096 |                                           | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector | G   |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 103,
+      "page_manual": "EVB-103",
+      "section_code": "EVB",
+      "bbox": [
+        51.85087585449219,
+        716.6912689208984,
+        476.27410888671875,
+        311.5999450683594
+      ],
+      "num_rows": 26,
+      "num_cols": 6,
+      "data": [
+        [
+          "DTC",
+          "Module",
+          "No.",
+          "Li-ion battery controller",
+          "Li-ion battery controller",
+          ""
+        ],
+        [
+          "DTC",
+          "Module",
+          "",
+          "Connector",
+          "Terminal",
+          ""
+        ],
+        [
+          "P308B",
+          "1",
+          "",
+          "LB13",
+          "50",
+          "Existed"
+        ],
+        [
+          "P308B",
+          "2",
+          "",
+          "LB13",
+          "51",
+          "Existed"
+        ],
+        [
+          "P308C",
+          "3",
+          "",
+          "LB13",
+          "52",
+          "Existed"
+        ],
+        [
+          "P308C",
+          "4",
+          "",
+          "LB13",
+          "53",
+          "Existed"
+        ],
+        [
+          "P308D",
+          "5",
+          "",
+          "LB13",
+          "54",
+          "Existed"
+        ],
+        [
+          "P308D",
+          "6",
+          "",
+          "LB13",
+          "55",
+          "Existed"
+        ],
+        [
+          "P308E",
+          "7",
+          "",
+          "LB13",
+          "56",
+          "Existed"
+        ],
+        [
+          "P308E",
+          "8",
+          "",
+          "LB13",
+          "57",
+          "Existed"
+        ],
+        [
+          "P308F",
+          "9",
+          "",
+          "LB13",
+          "58",
+          "Existed"
+        ],
+        [
+          "P308F",
+          "10",
+          "",
+          "LB13",
+          "59",
+          "Existed"
+        ],
+        [
+          "P3090",
+          "11",
+          "",
+          "LB13",
+          "60",
+          "Existed"
+        ],
+        [
+          "P3090",
+          "12",
+          "",
+          "LB13",
+          "61",
+          "Existed"
+        ],
+        [
+          "P3091",
+          "13",
+          "",
+          "LB13",
+          "62",
+          "Existed"
+        ],
+        [
+          "P3091",
+          "14",
+          "",
+          "LB13",
+          "63",
+          "Existed"
+        ],
+        [
+          "P3092",
+          "15",
+          "",
+          "LB14",
+          "77",
+          "Existed"
+        ],
+        [
+          "P3092",
+          "16",
+          "",
+          "LB14",
+          "78",
+          "Existed"
+        ],
+        [
+          "P3093",
+          "17",
+          "",
+          "LB14",
+          "80",
+          "Existed"
+        ],
+        [
+          "P3093",
+          "18",
+          "",
+          "LB14",
+          "81",
+          "Existed"
+        ],
+        [
+          "P3094",
+          "19",
+          "",
+          "LB14",
+          "82",
+          "Existed"
+        ],
+        [
+          "P3094",
+          "20",
+          "",
+          "LB14",
+          "83",
+          "Existed"
+        ],
+        [
+          "P3095",
+          "21",
+          "",
+          "LB14",
+          "84",
+          "Existed"
+        ],
+        [
+          "P3095",
+          "22",
+          "",
+          "LB14",
+          "85",
+          "Existed"
+        ],
+        [
+          "P3096",
+          "23",
+          "",
+          "LB14",
+          "86",
+          "Existed"
+        ],
+        [
+          "P3096",
+          "24",
+          "",
+          "LB14",
+          "87",
+          "Existed"
+        ]
+      ],
+      "markdown": "| DTC   | Module   | No.   | Li-ion battery controller   | Li-ion battery controller   |         |\n|-------|----------|-------|-----------------------------|-----------------------------|---------|\n| DTC   | Module   |       | Connector                   | Terminal                    |         |\n| P308B | 1        |       | LB13                        | 50                          | Existed |\n| P308B | 2        |       | LB13                        | 51                          | Existed |\n| P308C | 3        |       | LB13                        | 52                          | Existed |\n| P308C | 4        |       | LB13                        | 53                          | Existed |\n| P308D | 5        |       | LB13                        | 54                          | Existed |\n| P308D | 6        |       | LB13                        | 55                          | Existed |\n| P308E | 7        |       | LB13                        | 56                          | Existed |\n| P308E | 8        |       | LB13                        | 57                          | Existed |\n| P308F | 9        |       | LB13                        | 58                          | Existed |\n| P308F | 10       |       | LB13                        | 59                          | Existed |\n| P3090 | 11       |       | LB13                        | 60                          | Existed |\n| P3090 | 12       |       | LB13                        | 61                          | Existed |\n| P3091 | 13       |       | LB13                        | 62                          | Existed |\n| P3091 | 14       |       | LB13                        | 63                          | Existed |\n| P3092 | 15       |       | LB14                        | 77                          | Existed |\n| P3092 | 16       |       | LB14                        | 78                          | Existed |\n| P3093 | 17       |       | LB14                        | 80                          | Existed |\n| P3093 | 18       |       | LB14                        | 81                          | Existed |\n| P3094 | 19       |       | LB14                        | 82                          | Existed |\n| P3094 | 20       |       | LB14                        | 83                          | Existed |\n| P3095 | 21       |       | LB14                        | 84                          | Existed |\n| P3095 | 22       |       | LB14                        | 85                          | Existed |\n| P3096 | 23       |       | LB14                        | 86                          | Existed |\n| P3096 | 24       |       | LB14                        | 87                          | Existed |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "bbox": [
+        54.83021926879883,
+        661.5880889892578,
+        555.36767578125,
+        458.0606689453125
+      ],
+      "num_rows": 13,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P3097",
+          "CELL CONT ASIC13 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector"
+        ],
+        [
+          "P3098",
+          "CELL CONT ASIC14 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector"
+        ],
+        [
+          "P3099",
+          "CELL CONT ASIC15 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector"
+        ],
+        [
+          "P309A",
+          "CELL CONT ASIC16 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector"
+        ],
+        [
+          "P309B",
+          "CELL CONT ASIC17 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector"
+        ],
+        [
+          "P309C",
+          "CELL CONT ASIC18 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector"
+        ],
+        [
+          "P309D",
+          "CELL CONT ASIC19 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector"
+        ],
+        [
+          "P309E",
+          "CELL CONT ASIC20 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector"
+        ],
+        [
+          "P309F",
+          "CELL CONT ASIC21 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector"
+        ],
+        [
+          "P30A0",
+          "CELL CONT ASIC22 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector"
+        ],
+        [
+          "P30A1",
+          "CELL CONT ASIC23 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector"
+        ],
+        [
+          "P30A2",
+          "CELL CONT ASIC24 OPEN",
+          "Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line.",
+          "• Li-ion battery controller • Harness or connector"
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name   | DTC detecting condition                                                                                           | Possible causes                                    |\n|-------|--------------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|\n| P3097 | CELL CONT ASIC13 OPEN    | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector |\n| P3098 | CELL CONT ASIC14 OPEN    | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector |\n| P3099 | CELL CONT ASIC15 OPEN    | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector |\n| P309A | CELL CONT ASIC16 OPEN    | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector |\n| P309B | CELL CONT ASIC17 OPEN    | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector |\n| P309C | CELL CONT ASIC18 OPEN    | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector |\n| P309D | CELL CONT ASIC19 OPEN    | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector |\n| P309E | CELL CONT ASIC20 OPEN    | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector |\n| P309F | CELL CONT ASIC21 OPEN    | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector |\n| P30A0 | CELL CONT ASIC22 OPEN    | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector |\n| P30A1 | CELL CONT ASIC23 OPEN    | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector |\n| P30A2 | CELL CONT ASIC24 OPEN    | Self diagnosis program of Li-ion battery controller de- tects an open circuit in the cell voltage detection line. | • Li-ion battery controller • Harness or connector |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "bbox": [
+        52.19770812988281,
+        229.71929931640625,
+        475.7762756347656,
+        41.62005615234375
+      ],
+      "num_rows": 12,
+      "num_cols": 7,
+      "data": [
+        [
+          "DTC",
+          "Module No.",
+          "Module",
+          "Module",
+          "Li-ion battery controller",
+          "Li-ion battery controller",
+          "Continuity"
+        ],
+        [
+          "DTC",
+          "Module No.",
+          "Connector",
+          "Terminal",
+          "Connector",
+          "Terminal",
+          "Continuity"
+        ],
+        [
+          "P3097",
+          "25",
+          "LB8",
+          "10",
+          "LB15",
+          "110",
+          "Existed"
+        ],
+        [
+          "P3097",
+          "26",
+          "LB8",
+          "12",
+          "LB15",
+          "111",
+          "Existed"
+        ],
+        [
+          "P3098",
+          "27",
+          "LB8",
+          "28",
+          "LB15",
+          "112",
+          "Existed"
+        ],
+        [
+          "P3098",
+          "28",
+          "LB8",
+          "26",
+          "LB15",
+          "113",
+          "Existed"
+        ],
+        [
+          "P3099",
+          "29",
+          "LB8",
+          "23",
+          "LB15",
+          "114",
+          "Existed"
+        ],
+        [
+          "P3099",
+          "30",
+          "LB8",
+          "19",
+          "LB15",
+          "115",
+          "Existed"
+        ],
+        [
+          "P309A",
+          "31",
+          "LB8",
+          "3",
+          "LB15",
+          "116",
+          "Existed"
+        ],
+        [
+          "P309A",
+          "32",
+          "LB8",
+          "18",
+          "LB15",
+          "117",
+          "Existed"
+        ],
+        [
+          "P309B",
+          "33",
+          "LB8",
+          "2",
+          "LB15",
+          "118",
+          "Existed"
+        ],
+        [
+          "P309B",
+          "34",
+          "LB8",
+          "6",
+          "LB15",
+          "119",
+          "Existed"
+        ]
+      ],
+      "markdown": "| DTC   | Module No.   | Module    | Module   | Li-ion battery controller   | Li-ion battery controller   | Continuity   |\n|-------|--------------|-----------|----------|-----------------------------|-----------------------------|--------------|\n| DTC   | Module No.   | Connector | Terminal | Connector                   | Terminal                    | Continuity   |\n| P3097 | 25           | LB8       | 10       | LB15                        | 110                         | Existed      |\n| P3097 | 26           | LB8       | 12       | LB15                        | 111                         | Existed      |\n| P3098 | 27           | LB8       | 28       | LB15                        | 112                         | Existed      |\n| P3098 | 28           | LB8       | 26       | LB15                        | 113                         | Existed      |\n| P3099 | 29           | LB8       | 23       | LB15                        | 114                         | Existed      |\n| P3099 | 30           | LB8       | 19       | LB15                        | 115                         | Existed      |\n| P309A | 31           | LB8       | 3        | LB15                        | 116                         | Existed      |\n| P309A | 32           | LB8       | 18       | LB15                        | 117                         | Existed      |\n| P309B | 33           | LB8       | 2        | LB15                        | 118                         | Existed      |\n| P309B | 34           | LB8       | 6        | LB15                        | 119                         | Existed      |",
+      "tableformer": true
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_101_raster_1.jpeg",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        510.4199523925781,
+        80.3462142944336,
+        529.199951171875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_101_raster_2.png",
+      "page_pdf": 101,
+      "page_manual": "EVB-101",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        377.39996337890625,
+        64.97999572753906,
+        388.9799499511719
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_102_raster_1.png",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "bbox": [
+        391.3199768066406,
+        527.2799682617188,
+        401.27996826171875,
+        537.2399291992188
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_102_raster_2.png",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        56.70002746582031,
+        63.65999984741211,
+        68.280029296875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_102_raster_3.png",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "bbox": [
+        548.6399536132812,
+        527.2799682617188,
+        558.5399169921875,
+        537.2399291992188
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_102_raster_4.png",
+      "page_pdf": 102,
+      "page_manual": "EVB-102",
+      "section_code": "EVB",
+      "bbox": [
+        87.239990234375,
+        550.1998901367188,
+        523.5,
+        759.3599243164062
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_104_raster_1.jpeg",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        510.4199523925781,
+        79.0399169921875,
+        529.199951171875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_104_raster_2.png",
+      "page_pdf": 104,
+      "page_manual": "EVB-104",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        377.39996337890625,
+        63.65999984741211,
+        388.9799499511719
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_105_raster_1.png",
+      "page_pdf": 105,
+      "page_manual": "EVB-105",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        56.70002746582031,
+        64.97999572753906,
+        68.280029296875
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

@@ -1,0 +1,2653 @@
+{
+  "schema_version": "1.0",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-186\nRevision: October 2013\n2013 LEAF",
+    "page_start": 186,
+    "page_end": 190,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "186": [
+        "EVB-186",
+        "EVB",
+        "EVB-186\nRevision: October 2013\n2013 LEAF"
+      ],
+      "187": [
+        "EVB-187",
+        "EVB",
+        "EVB-187\nCAUTION:\nBe sure to set the insulation resistance tester to 500V when performing this test. Using a setting\nhigher than 500 V can result in damage to the component being inspected.\nRevision: October 2013\n2013 LEAF"
+      ],
+      "188": [
+        "EVB-188",
+        "EVB",
+        "EVB-188\nRevision: October 2013\n2013 LEAF"
+      ],
+      "189": [
+        "EVB-189",
+        "EVB",
+        "EVB-189\ng\ny\ng\nRevision: October 2013\n2013 LEAF"
+      ],
+      "190": [
+        "EVB-190",
+        "EVB",
+        "EVB-190\n7.CHECK POWER SWITCH ON POWER SUPPLY CIRCUIT-2\n1.\nCheck the continuity between Li-ion battery vehicle communication harness and fuse terminal.\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "LI-ION BATTERY HEATER SYSTEM INSULATION RESISTANCE CHECK",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        78.78,
+        769.00991,
+        532.6071359999997,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "LI-ION BATTERY HEATER SYSTEM INSULATION RESISTANCE CHECK",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.10997,
+        546.6690000000002,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        712.00991,
+        177.000288,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DANGER:",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        684.35591,
+        100.97268239999997,
+        675.1123224640885
+      ]
+    },
+    {
+      "text": "Since hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14010439999987,
+        662.0363384,
+        558.5875319999999,
+        618.2928312640886
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14010439999987,
+        613.0759748,
+        106.19007239999988,
+        603.8323872640885
+      ]
+    },
+    {
+      "text": "Be sure to remove the service plug in order to disconnect the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999987,
+        601.5565832000001,
+        558.528024,
+        580.7924556640886
+      ]
+    },
+    {
+      "text": "The removed service plug must always be carried in a pocket of the responsible worker or placed in the tool box during the procedure to prevent the plug from being connected by mistake.",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        578.5760552000002,
+        558.6052799999992,
+        557.8130760640887
+      ]
+    },
+    {
+      "text": "Be sure to wear insulating protective equipment consisting of glove, shoes, face shield and glasses before beginning work on the high voltage system.",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        555.5361236000002,
+        558.5504699999996,
+        534.8325480640888
+      ]
+    },
+    {
+      "text": "Never allow workers other than the responsible person to touch the vehicle containing high voltage parts. To keep others from touching the high voltage parts, these parts must be covered with an insulating sheet except when using them.",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        532.5567440000003,
+        558.5803284000008,
+        500.33262846408877
+      ]
+    },
+    {
+      "text": "Refer to EVB-6, \"High Voltage Precautions\".",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        498.0568244000004,
+        278.30231,
+        488.8123324640884
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139545999999996,
+        486.5365284,
+        103.316426,
+        477.2929408640884
+      ]
+    },
+    {
+      "text": "Never  bring  the  vehicle  into  the  READY  status  with  the  service  plug  removed  unless  otherwise instructed in the Service Manual. A malfunction may occur if this is not observed.",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.13954599999997,
+        475.0765404,
+        558.5975179999997,
+        454.3135612640884
+      ]
+    },
+    {
+      "text": "1.PRECONDITIONING",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        452.484,
+        165.98800799999998,
+        436.54678011049725
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        426.2355324,
+        106.18977600000001,
+        416.9919448640884
+      ]
+    },
+    {
+      "text": "Disconnect the high voltage. Refer to GI-33, \"How to Disconnect High Voltage\".",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        414.7161408,
+        444.62232,
+        405.4723324640884
+      ]
+    },
+    {
+      "text": "Remove Li-ion battery. Refer to EVB-194, \"Removal and Installation\".",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139916000000085,
+        403.19652840000003,
+        392.06232,
+        393.9523424640884
+      ]
+    },
+    {
+      "text": "Remove battery pack upper case. Refer to EVB-204, \"BATTERY PACK UPPER CASE : Removal and Installation\".",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.140096000000085,
+        391.735942,
+        558.5183063999997,
+        370.9723324640884
+      ]
+    },
+    {
+      "text": ">> GO TO 2.",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.7796556,
+        351.23562840000005,
+        154.05301200000002,
+        341.99204086408844
+      ]
+    },
+    {
+      "text": "2.CHECK HIGH VOLTAGE HARNESS",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        340.10398999999995,
+        237.1823352000002,
+        324.1667701104972
+      ]
+    },
+    {
+      "text": "Check the harness shield between the heater relay unit and the Li-ion battery heater for scratches and cracks.",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        316.85597839999997,
+        558.5705316,
+        307.61239086408835
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808000000016,
+        302.3955344,
+        196.92736559999997,
+        293.15194686408836
+      ]
+    },
+    {
+      "text": "YES",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        287.87602000000004,
+        78.77032080000001,
+        278.6324324640884
+      ]
+    },
+    {
+      "text": ">> GO TO 3.",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.8238612,
+        287.87602000000004,
+        154.07320559999994,
+        278.6324324640884
+      ]
+    },
+    {
+      "text": "NO >> Repair or replace error-detected parts and Li-ion battery controller.",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        276.3566284000001,
+        415.514086799999,
+        267.11304086408836
+      ]
+    },
+    {
+      "text": "3.CHECK HEATER RELAY UNIT INSULATION RESISTANCE",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        265.284,
+        346.12811999999997,
+        249.34678011049732
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        239.03553239999997,
+        106.18977600000001,
+        229.79194486408846
+      ]
+    },
+    {
+      "text": "Unlike  the  ordinary  tester,  the  insulation  resistance  tester  applies  500  V  when  measuring.  If  used incorrectly, there is the danger of electric shock. If used in the vehicle 12 V system, there is the danger of  damage to electronic devices. Read the insulation resistance tester instruction manual carefully and be sure to work safely.",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        227.51614080000002,
+        558.6136487999996,
+        183.77378206408844
+      ]
+    },
+    {
+      "text": "Disconnect high voltage harness connector from heater relay unit.",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808000000016,
+        181.55738159999999,
+        376.63672320000046,
+        172.31379406408837
+      ]
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        71.99982000000001,
+        170.03799000000004,
+        104.52083760000001,
+        160.7944024640883
+      ]
+    },
+    {
+      "text": "Check the heater relay with it installed on the battery pack.",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        71.99982000000001,
+        158.51859839999997,
+        342.68396399999995,
+        149.27501086408836
+      ]
+    },
+    {
+      "text": "Use 500 V range of insulation resistance tester to measure insulation resistance. Wait for 30 seconds until the value becomes stable.",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808000000016,
+        147.0586103999999,
+        558.5691744000001,
+        126.29448286408831
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        71.99982000000001,
+        124.01753039999994,
+        123.13598399999998,
+        114.77394286408833
+      ]
+    },
+    {
+      "text": "Be sure to set the insulation resistance tester to 500 V when performing this test. Using a setting higher than 500 V can result in damage to the component being inspected.",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        71.99982000000001,
+        112.55754239999999,
+        558.5309639999996,
+        91.79341486408839
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746046",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        706.86689,
+        559.5492259999992,
+        701.30921
+      ]
+    },
+    {
+      "text": "LI-ION BATTERY HEATER SYSTEM INSULATION RESISTANCE CHECK",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        79.08,
+        769.00991,
+        532.9918079999998,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        657.89594,
+        198.38673280000006,
+        648.6523524640885
+      ]
+    },
+    {
+      "text": "YES >> GO TO 4.",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        643.43592,
+        155.30461,
+        634.1923324640885
+      ]
+    },
+    {
+      "text": "NO",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        631.9165284000001,
+        74.77566999999999,
+        622.6729408640886
+      ]
+    },
+    {
+      "text": ">> Replace heater relay unit and Li-ion battery controller.",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.03448999999999,
+        631.9165284000001,
+        358.5776740000004,
+        622.6729408640886
+      ]
+    },
+    {
+      "text": "4.CHECK LI-ION BATTERY HEATER",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "checkbox_selected",
+      "bbox": [
+        52.44,
+        620.84398,
+        232.5583091999999,
+        604.9067601104972
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459796,
+        594.5955124,
+        107.58910799999994,
+        585.3519248640885
+      ]
+    },
+    {
+      "text": "Unlike  the  ordinary  tester,  the  insulation  resistance  tester  applies  500  V  when  measuring.  If  used incorrectly, there is the danger of electric shock. If used in the vehicle 12 V system, there is the danger of  damage to electronic devices. Read the insulation resistance tester instruction manual carefully and be sure to work safely.",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.45969160000004,
+        583.0761208,
+        559.9693416000001,
+        539.3326136640886
+      ]
+    },
+    {
+      "text": "1.",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45969160000004,
+        537.0556612000001,
+        62.18022360000005,
+        527.8120736640886
+      ]
+    },
+    {
+      "text": "Disconnect high voltage harness connector from Li-ion battery heater. NOTE:",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        73.26019560000005,
+        537.0556612000001,
+        395.32375560000054,
+        516.3520856640887
+      ]
+    },
+    {
+      "text": "Check the heater relay with it installed on the battery pack.",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        73.26030000000004,
+        514.0762816000002,
+        344.08434000000045,
+        504.8326940640886
+      ]
+    },
+    {
+      "text": "Use 500 V range of insulation resistance tester to measure insulation resistance. Wait for 30 seconds until",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45969160000004,
+        502.55574160000026,
+        559.8001092000001,
+        493.31215406408865
+      ]
+    },
+    {
+      "text": "the value becomes stable.",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        73.26019560000006,
+        491.03635000000025,
+        194.72646360000022,
+        481.79276246408864
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        73.26019560000006,
+        479.57636200000024,
+        124.43707560000007,
+        470.33277446408863
+      ]
+    },
+    {
+      "text": "Be sure to set the insulation resistance tester to 500 V when performing this test. Using a setting higher than 500 V can result in damage to the component being inspected.",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        73.26019560000003,
+        468.05697040000024,
+        559.8957395999997,
+        447.2939912640886
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.45969160000004,
+        210.35705440000027,
+        198.38641440000012,
+        201.11346686408865
+      ]
+    },
+    {
+      "text": "YES",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        195.83601,
+        80.04682600000001,
+        186.59242246408837
+      ]
+    },
+    {
+      "text": ">> GO TO 5.",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.045974,
+        195.83601,
+        155.30461,
+        186.59242246408837
+      ]
+    },
+    {
+      "text": "NO >> Replace corresponding Li-ion battery heater and Li-ion battery controller.",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        184.31661840000004,
+        445.83936999999924,
+        175.07303086408842
+      ]
+    },
+    {
+      "text": "5.CHECK HIGH VOLTAGE HARNESS INSULATION RESISTANCE",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "checkbox_selected",
+      "bbox": [
+        52.44,
+        173.2441,
+        371.4421512000001,
+        157.30688011049722
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459796,
+        146.99563239999998,
+        107.58910799999994,
+        137.75204486408836
+      ]
+    },
+    {
+      "text": "Unlike  the  ordinary  tester,  the  insulation  resistance  tester  applies  500  V  when  measuring.  If  used incorrectly, there is the danger of electric shock. If used in the vehicle 12 V system, there is the danger of  damage to electronic devices. Read the insulation resistance tester instruction manual carefully and be sure to work safely.",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.45969160000004,
+        135.4750924,
+        559.9693416000001,
+        91.73158526408838
+      ]
+    },
+    {
+      "text": "Use 500 V range of insulation resistance tester to measure insulation resistance. Wait for 30 seconds until the value becomes stable.",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45969160000004,
+        89.51518480000004,
+        559.8001092000001,
+        68.75105726408844
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        73.26019560000006,
+        66.47410479999996,
+        124.43707560000007,
+        57.23051726408835
+      ]
+    },
+    {
+      "text": "Be sure to set the insulation resistance tester to 500V when performing this test. Using a setting higher than 500 V can result in damage to the component being inspected.",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        73.25894280000006,
+        55.01411680000001,
+        559.8543972,
+        34.24998926408841
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "LI-ION BATTERY HEATER SYSTEM INSULATION RESISTANCE CHECK",
+      "page_pdf": 188,
+      "page_manual": "EVB-188",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        78.78,
+        769.00991,
+        532.6071359999997,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 188,
+      "page_manual": "EVB-188",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 188,
+      "page_manual": "EVB-188",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        673.37592,
+        196.92755759999997,
+        664.1323324640884
+      ]
+    },
+    {
+      "text": "YES >> INSPECTION END.",
+      "page_pdf": 188,
+      "page_manual": "EVB-188",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        658.9159,
+        200.71557600000003,
+        649.6723124640885
+      ]
+    },
+    {
+      "text": "NO >> Replace high voltage harness.",
+      "page_pdf": 188,
+      "page_manual": "EVB-188",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        647.39536,
+        249.46202399999981,
+        638.1517724640885
+      ]
+    },
+    {
+      "text": "POWER SUPPLY AND GROUND CIRCUIT",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        174.42,
+        769.00991,
+        437.53353599999974,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "POWER SUPPLY AND GROUND CIRCUIT",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        736.10997,
+        342.9590999999999,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.44,
+        712.00991,
+        177.393024,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DANGER:",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        684.35591,
+        102.29269239999996,
+        675.1123224640885
+      ]
+    },
+    {
+      "text": "Since hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.460009999999954,
+        662.0363384,
+        559.8981459999999,
+        618.2928312640886
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.460009999999954,
+        613.0759748,
+        107.5893219999999,
+        603.8323872640885
+      ]
+    },
+    {
+      "text": "Be sure to remove the service plug in order to disconnect the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460009999999954,
+        601.5565832000001,
+        559.858474,
+        580.7924556640886
+      ]
+    },
+    {
+      "text": "The removed service plug must always be carried in a pocket of the responsible worker or placed in the tool box during the procedure to prevent the plug from being connected by mistake.",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460949599999935,
+        578.5760552000002,
+        559.8771615999998,
+        557.8130760640887
+      ]
+    },
+    {
+      "text": "Be sure to wear insulating protective equipment consisting of glove, shoes, face shield and glasses before beginning work on the high voltage system.",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46084519999991,
+        555.5361236000002,
+        559.8288243999995,
+        534.8325480640888
+      ]
+    },
+    {
+      "text": "Never allow workers other than the responsible person to touch the vehicle containing high voltage parts. To keep others from touching the high voltage parts, these parts must be covered with an insulating sheet except when using them.",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460845199999824,
+        532.5567440000003,
+        559.8678699999996,
+        500.33262846408877
+      ]
+    },
+    {
+      "text": "Refer to EVB-6, \"High Voltage Precautions\".",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460845199999795,
+        498.0568244000004,
+        279.62232,
+        488.8123324640884
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.45955600000002,
+        486.5365284,
+        104.63643600000003,
+        477.2929408640884
+      ]
+    },
+    {
+      "text": "Never  bring  the  vehicle  into  the  READY  status  with  the  service  plug  removed  unless  otherwise instructed in the Service Manual. A malfunction may occur if this is not observed.",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.45955600000002,
+        475.0765404,
+        559.9300560000007,
+        454.3135612640884
+      ]
+    },
+    {
+      "text": "1.CHECK FUSE",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        452.484,
+        134.83030439999996,
+        436.54678011049725
+      ]
+    },
+    {
+      "text": "Check that the following fuse is not fusing.",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.459796,
+        429.2359884,
+        249.0009959999999,
+        419.9924008640884
+      ]
+    },
+    {
+      "text": "Power supply",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        100.25999,
+        399.61426718,
+        151.12063951889996,
+        392.1237649779227
+      ]
+    },
+    {
+      "text": "Battery",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.100349348,
+        384.134140882,
+        85.96088109800002,
+        376.6436386799227
+      ]
+    },
+    {
+      "text": "Power switch ON",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.100349348,
+        360.9138668349,
+        124.02585009199997,
+        353.42336463282265
+      ]
+    },
+    {
+      "text": "Is the fuse fusing?",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459796,
+        337.7961,
+        138.492552,
+        328.5525124640884
+      ]
+    },
+    {
+      "text": "YES >> Replace the fuse after repairing the applicable circuit.",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        323.27592,
+        356.38182879999994,
+        314.03233246408837
+      ]
+    },
+    {
+      "text": "NO >> GO TO 2.",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        311.815932,
+        155.29939000000002,
+        302.57234446408836
+      ]
+    },
+    {
+      "text": "2.CHECK LI-ION BATTERY CONTROLLER GROUND CIRCUIT",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        300.6841,
+        357.21264,
+        284.7468801104973
+      ]
+    },
+    {
+      "text": "Turn power switch OFF.",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.459796,
+        277.4360884,
+        183.45241199999995,
+        268.1925008640884
+      ]
+    },
+    {
+      "text": "Disconnect Li-ion battery vehicle communication harness connector.",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.459796,
+        265.97610039999995,
+        388.59528000000057,
+        256.73251286408845
+      ]
+    },
+    {
+      "text": "Check the continuity between Li-ion battery vehicle communication harness connector and ground.",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.459796,
+        254.4567088,
+        529.8714480000007,
+        245.2131212640884
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459796,
+        132.0570004,
+        198.41564640000018,
+        122.81341286408838
+      ]
+    },
+    {
+      "text": "YES >> GO TO 3.",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        117.59592999999995,
+        155.30461,
+        108.35234246408845
+      ]
+    },
+    {
+      "text": "NO >> Repair or replace error-detected parts.",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        106.0765384,
+        287.7468676,
+        96.83295086408839
+      ]
+    },
+    {
+      "text": "3.CHECK BATTERY POWER SUPPLY",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        95.00400000000002,
+        240.13639200000011,
+        79.06678011049723
+      ]
+    },
+    {
+      "text": "Check the voltage between Li-ion battery vehicle communication harness connector and ground.",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.459796,
+        71.75598839999998,
+        499.4858280000009,
+        62.51240086408836
+      ]
+    },
+    {
+      "text": "Fuse No.",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        250.20766064289995,
+        399.61426718,
+        284.54083462579996,
+        392.1237649779227
+      ]
+    },
+    {
+      "text": "79",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        262.694720003,
+        384.134140882,
+        272.140321168,
+        376.6436386799227
+      ]
+    },
+    {
+      "text": "57",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        262.680337986,
+        368.65392998389996,
+        272.122555147,
+        361.16342778182263
+      ]
+    },
+    {
+      "text": "74",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        262.680337986,
+        353.17380368589994,
+        272.122555147,
+        345.6833014838226
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746047",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        706.86689,
+        559.8580799999991,
+        701.30921
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "POWER SUPPLY AND GROUND CIRCUIT",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        174.12,
+        769.00991,
+        437.3208960000003,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        647.45588,
+        196.92755759999997,
+        638.2122924640885
+      ]
+    },
+    {
+      "text": "YES",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        632.93592,
+        78.77032080000001,
+        623.6923324640885
+      ]
+    },
+    {
+      "text": ">> GO TO 5.",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.8238612,
+        632.93592,
+        154.07320559999994,
+        623.6923324640885
+      ]
+    },
+    {
+      "text": "NO",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        621.4165284000001,
+        73.5270396,
+        612.1729408640886
+      ]
+    },
+    {
+      "text": ">> GO TO 4.",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.78679919999999,
+        621.4165284000001,
+        154.05410039999992,
+        612.1729408640886
+      ]
+    },
+    {
+      "text": "4.CHECK BATTERY POWER SUPPLY CIRCUIT",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        610.34398,
+        285.3036359999998,
+        594.4067601104972
+      ]
+    },
+    {
+      "text": "Check the continuity between Li-ion battery vehicle communication harness connector and fuse terminal.",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        587.0959684,
+        556.0170120000004,
+        577.8523808640884
+      ]
+    },
+    {
+      "text": "Also check harness for short to ground.",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13980799999999,
+        485.1556324,
+        254.11768560000036,
+        475.9120448640884
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.13980799999999,
+        470.6951884,
+        196.92736559999994,
+        461.4516008640884
+      ]
+    },
+    {
+      "text": "YES >> Check power supply circuit for battery power supply.",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        456.17591,
+        350.0719908000004,
+        446.9323224640884
+      ]
+    },
+    {
+      "text": "NO",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        444.6565184,
+        73.51566,
+        435.41293086408837
+      ]
+    },
+    {
+      "text": ">> Repair or replace error-detected parts.",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.77448,
+        444.6565184,
+        286.36157760000003,
+        435.41293086408837
+      ]
+    },
+    {
+      "text": "5.CHECK POWER SWITCH ON POWER SUPPLY",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        433.584,
+        294.95458080000014,
+        417.6467801104973
+      ]
+    },
+    {
+      "text": "Turn power switch ON.",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        410.3359884,
+        178.01175600000008,
+        401.0924008640884
+      ]
+    },
+    {
+      "text": "Check the voltage between Li-ion battery vehicle communication harness and ground.",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        398.8760004,
+        469.14786000000055,
+        389.6324128640884
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.13980799999999,
+        291.9558888,
+        196.92736559999994,
+        282.7123012640884
+      ]
+    },
+    {
+      "text": "YES",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        277.43601,
+        78.77032080000001,
+        268.1924224640884
+      ]
+    },
+    {
+      "text": ">> GO TO 8.",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.8238612,
+        277.43601,
+        154.07320559999994,
+        268.1924224640884
+      ]
+    },
+    {
+      "text": "NO",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        265.91661840000006,
+        73.5270396,
+        256.67303086408833
+      ]
+    },
+    {
+      "text": ">> GO TO 6.",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.78679919999999,
+        265.91661840000006,
+        154.05410039999992,
+        256.67303086408833
+      ]
+    },
+    {
+      "text": "6.CHECK POWER SWITCH ON POWER SUPPLY CIRCUIT-1",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        254.84409000000005,
+        348.98868000000016,
+        238.90687011049727
+      ]
+    },
+    {
+      "text": "Turn power switch OFF.",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        231.5960784,
+        182.08648799999995,
+        222.3524908640884
+      ]
+    },
+    {
+      "text": "Disconnect IPDM E/R harness connector.",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        220.07668680000006,
+        264.57449400000024,
+        210.83309926408833
+      ]
+    },
+    {
+      "text": "Check the continuity between Li-ion battery vehicle communication harness and IPDM E/R harness connector.",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        208.6166988,
+        558.5164523999999,
+        187.85371966408843
+      ]
+    },
+    {
+      "text": "Also check harness for short to ground.",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1400168,
+        121.13701559999993,
+        254.08031040000014,
+        111.89342806408831
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.1400168,
+        106.67657159999999,
+        196.92757439999997,
+        97.43298406408837
+      ]
+    },
+    {
+      "text": "YES",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        92.15592000000004,
+        78.77032080000001,
+        82.91233246408842
+      ]
+    },
+    {
+      "text": ">> GO TO 7.",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.8238612,
+        92.15592000000004,
+        154.07320559999994,
+        82.91233246408842
+      ]
+    },
+    {
+      "text": "NO",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        80.63652839999997,
+        73.51566,
+        71.39294086408836
+      ]
+    },
+    {
+      "text": ">> Repair or replace error-detected parts.",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.77448,
+        80.63652839999997,
+        286.36157760000003,
+        71.39294086408836
+      ]
+    },
+    {
+      "text": "7.CHECK POWER SWITCH ON POWER SUPPLY CIRCUIT-2",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        69.56399999999996,
+        348.98868000000016,
+        53.62678011049729
+      ]
+    },
+    {
+      "text": "Check the continuity between Li-ion battery vehicle communication harness and fuse terminal.",
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        46.31598840000004,
+        507.16605959999964,
+        37.07240086408842
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "bbox": [
+        52.36381149291992,
+        724.1079788208008,
+        371.9096984863281,
+        661.2541961669922
+      ],
+      "num_rows": 3,
+      "num_cols": 3,
+      "data": [
+        [
+          "Heater relay unit Terminal",
+          "Ground",
+          "Resistance"
+        ],
+        [
+          "10",
+          "Battery pack lower case",
+          "1000 M Ω or more"
+        ],
+        [
+          "11",
+          "Battery pack lower case",
+          "1000 M Ω or more"
+        ]
+      ],
+      "markdown": "|   Heater relay unit Terminal | Ground                  | Resistance       |\n|------------------------------|-------------------------|------------------|\n|                           10 | Battery pack lower case | 1000 M Ω or more |\n|                           11 | Battery pack lower case | 1000 M Ω or more |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 187,
+      "page_manual": "EVB-187",
+      "section_code": "EVB",
+      "bbox": [
+        52.355220794677734,
+        432.58575439453125,
+        423.2911376953125,
+        213.766845703125
+      ],
+      "num_rows": 14,
+      "num_cols": 5,
+      "data": [
+        [
+          "Li-ion battery heater",
+          "Li-ion battery heater",
+          "Li-ion battery heater",
+          "Ground",
+          "Resistance"
+        ],
+        [
+          "Item",
+          "Connector",
+          "Terminal",
+          "Ground",
+          "Resistance"
+        ],
+        [
+          "LH1",
+          "LB19",
+          "1",
+          "Battery pack lower case",
+          "1000 M Ω or more"
+        ],
+        [
+          "LH1",
+          "LB19",
+          "2",
+          "Battery pack lower case",
+          "1000 M Ω or more"
+        ],
+        [
+          "LH2",
+          "LB20",
+          "1",
+          "Battery pack lower case",
+          "1000 M Ω or more"
+        ],
+        [
+          "LH2",
+          "LB20",
+          "2",
+          "Battery pack lower case",
+          "1000 M Ω or more"
+        ],
+        [
+          "RH1",
+          "LB23",
+          "1",
+          "Battery pack lower case",
+          "1000 M Ω or more"
+        ],
+        [
+          "RH1",
+          "LB23",
+          "2",
+          "Battery pack lower case",
+          "1000 M Ω or more"
+        ],
+        [
+          "RH2",
+          "LB24",
+          "1",
+          "Battery pack lower case",
+          "1000 M Ω or more"
+        ],
+        [
+          "RH2",
+          "LB24",
+          "2",
+          "Battery pack lower case",
+          "1000 M Ω or more"
+        ],
+        [
+          "RR1",
+          "LB21",
+          "1",
+          "Battery pack lower case",
+          "1000 M Ω or more"
+        ],
+        [
+          "RR1",
+          "LB21",
+          "2",
+          "Battery pack lower case",
+          "1000 M Ω or more"
+        ],
+        [
+          "RR2",
+          "LB22",
+          "1",
+          "Battery pack lower case",
+          "1000 M Ω or more"
+        ],
+        [
+          "RR2",
+          "LB22",
+          "2",
+          "Battery pack lower case",
+          "1000 M Ω or more"
+        ]
+      ],
+      "markdown": "| Li-ion battery heater   | Li-ion battery heater   | Li-ion battery heater   | Ground                  | Resistance       |\n|-------------------------|-------------------------|-------------------------|-------------------------|------------------|\n| Item                    | Connector               | Terminal                | Ground                  | Resistance       |\n| LH1                     | LB19                    | 1                       | Battery pack lower case | 1000 M Ω or more |\n| LH1                     | LB19                    | 2                       | Battery pack lower case | 1000 M Ω or more |\n| LH2                     | LB20                    | 1                       | Battery pack lower case | 1000 M Ω or more |\n| LH2                     | LB20                    | 2                       | Battery pack lower case | 1000 M Ω or more |\n| RH1                     | LB23                    | 1                       | Battery pack lower case | 1000 M Ω or more |\n| RH1                     | LB23                    | 2                       | Battery pack lower case | 1000 M Ω or more |\n| RH2                     | LB24                    | 1                       | Battery pack lower case | 1000 M Ω or more |\n| RH2                     | LB24                    | 2                       | Battery pack lower case | 1000 M Ω or more |\n| RR1                     | LB21                    | 1                       | Battery pack lower case | 1000 M Ω or more |\n| RR1                     | LB21                    | 2                       | Battery pack lower case | 1000 M Ω or more |\n| RR2                     | LB22                    | 1                       | Battery pack lower case | 1000 M Ω or more |\n| RR2                     | LB22                    | 2                       | Battery pack lower case | 1000 M Ω or more |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 188,
+      "page_manual": "EVB-188",
+      "section_code": "EVB",
+      "bbox": [
+        51.255916595458984,
+        724.6281890869141,
+        476.5170593261719,
+        675.9337844848633
+      ],
+      "num_rows": 3,
+      "num_cols": 4,
+      "data": [
+        [
+          "High voltage harness",
+          "High voltage harness",
+          "Ground",
+          "Resistance"
+        ],
+        [
+          "Connector",
+          "Terminal",
+          "Ground",
+          "Resistance"
+        ],
+        [
+          "LB18",
+          "11",
+          "Battery pack lower case",
+          "1000 M Ω or more"
+        ]
+      ],
+      "markdown": "| High voltage harness   | High voltage harness   | Ground                  | Resistance       |\n|------------------------|------------------------|-------------------------|------------------|\n| Connector              | Terminal               | Ground                  | Resistance       |\n| LB18                   | 11                     | Battery pack lower case | 1000 M Ω or more |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "bbox": [
+        52.318603515625,
+        229.188720703125,
+        338.2192687988281,
+        134.845703125
+      ],
+      "num_rows": 6,
+      "num_cols": 4,
+      "data": [
+        [
+          "+",
+          "+",
+          "",
+          "Continuity"
+        ],
+        [
+          "Li-ion battery",
+          "Li-ion battery",
+          "",
+          "Continuity"
+        ],
+        [
+          "Connector",
+          "Terminal",
+          "",
+          "Continuity"
+        ],
+        [
+          "B24",
+          "6",
+          "Ground",
+          "Existed"
+        ],
+        [
+          "B24",
+          "7",
+          "Ground",
+          "Existed"
+        ],
+        [
+          "B24",
+          "8",
+          "Ground",
+          "Existed"
+        ]
+      ],
+      "markdown": "| +              | +              |        | Continuity   |\n|----------------|----------------|--------|--------------|\n| Li-ion battery | Li-ion battery |        | Continuity   |\n| Connector      | Terminal       |        | Continuity   |\n| B24            | 6              | Ground | Existed      |\n| B24            | 7              | Ground | Existed      |\n| B24            | 8              | Ground | Existed      |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "bbox": [
+        51.296817779541016,
+        724.6870498657227,
+        336.4967346191406,
+        650.2435302734375
+      ],
+      "num_rows": 3,
+      "num_cols": 4,
+      "data": [
+        [
+          "+",
+          "+",
+          "-",
+          "Voltage"
+        ],
+        [
+          "Connector",
+          "Terminal",
+          "",
+          ""
+        ],
+        [
+          "B24",
+          "5",
+          "Ground",
+          "12V battery power supply"
+        ]
+      ],
+      "markdown": "| +         | +        | -      | Voltage                  |\n|-----------|----------|--------|--------------------------|\n| Connector | Terminal |        |                          |\n| B24       | 5        | Ground | 12V battery power supply |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "bbox": [
+        51.14171600341797,
+        562.7242584228516,
+        336.5915832519531,
+        488.96453857421875
+      ],
+      "num_rows": 3,
+      "num_cols": 4,
+      "data": [
+        [
+          "+ Li-ion",
+          "battery",
+          "-",
+          "Continuity"
+        ],
+        [
+          "Connector",
+          "Terminal",
+          "",
+          ""
+        ],
+        [
+          "B24",
+          "5",
+          "No.79 fuse ter- minal",
+          "Existed"
+        ]
+      ],
+      "markdown": "| + Li-ion   | battery   | -                     | Continuity   |\n|------------|-----------|-----------------------|--------------|\n| Connector  | Terminal  |                       |              |\n| B24        | 5         | No.79 fuse ter- minal | Existed      |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "bbox": [
+        51.074520111083984,
+        373.9226989746094,
+        336.71697998046875,
+        295.21685791015625
+      ],
+      "num_rows": 4,
+      "num_cols": 4,
+      "data": [
+        [
+          "+ Li-ion battery",
+          "+ Li-ion battery",
+          "-",
+          "Voltage (Approx.)"
+        ],
+        [
+          "Connector",
+          "Terminal",
+          "-",
+          "Voltage (Approx.)"
+        ],
+        [
+          "B24",
+          "4",
+          "Ground",
+          "11 - 14 V"
+        ],
+        [
+          "B24",
+          "31",
+          "Ground",
+          "11 - 14 V"
+        ]
+      ],
+      "markdown": "| + Li-ion battery   | + Li-ion battery   | -      | Voltage (Approx.)   |\n|--------------------|--------------------|--------|---------------------|\n| Connector          | Terminal           | -      | Voltage (Approx.)   |\n| B24                | 4                  | Ground | 11 - 14 V           |\n| B24                | 31                 | Ground | 11 - 14 V           |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 190,
+      "page_manual": "EVB-190",
+      "section_code": "EVB",
+      "bbox": [
+        51.15291213989258,
+        172.5421142578125,
+        336.4732971191406,
+        124.10308837890625
+      ],
+      "num_rows": 3,
+      "num_cols": 5,
+      "data": [
+        [
+          "Li-ion battery",
+          "Li-ion battery",
+          "IPDM E/R",
+          "IPDM E/R",
+          "Continuity"
+        ],
+        [
+          "Connector",
+          "Terminal",
+          "Connector",
+          "Terminal",
+          "Continuity"
+        ],
+        [
+          "B24",
+          "4",
+          "E15",
+          "59",
+          "Existed"
+        ]
+      ],
+      "markdown": "| Li-ion battery   | Li-ion battery   | IPDM E/R   | IPDM E/R   | Continuity   |\n|------------------|------------------|------------|------------|--------------|\n| Connector        | Terminal         | Connector  | Terminal   | Continuity   |\n| B24              | 4                | E15        | 59         | Existed      |",
+      "tableformer": true
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_186_raster_1.jpeg",
+      "page_pdf": 186,
+      "page_manual": "EVB-186",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        119.63998413085938,
+        79.0399169921875,
+        138.41998291015625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_189_raster_1.jpeg",
+      "page_pdf": 189,
+      "page_manual": "EVB-189",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        119.63992309570312,
+        80.3462142944336,
+        138.419921875
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

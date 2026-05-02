@@ -1,0 +1,276 @@
+{
+  "schema_version": "1.1",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-26\nRevision: October 2013\n2013 LEAF",
+    "page_start": 26,
+    "page_end": 30,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "26": [
+        "EVB-26",
+        "EVB",
+        "EVB-26\nRevision: October 2013\n2013 LEAF"
+      ],
+      "27": [
+        "EVB-27",
+        "EVB",
+        "EVB-27\nRevision: October 2013\n2013 LEAF"
+      ],
+      "28": [
+        "EVB-28",
+        "EVB",
+        "EVB-28\nRevision: October 2013\n2013 LEAF"
+      ],
+      "29": [
+        "EVB-29",
+        "EVB",
+        "EVB-29\nRevision: October 2013\n2013 LEAF"
+      ],
+      "30": [
+        "EVB-30",
+        "EVB",
+        "EVB-30\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "When the temperature in Li-ion battery pack is low with no necessity of Li-ion battery heater operation, LBC estimates the time that Li-ion battery may freeze and transmits a next start time signal to VCM via EV system CAN communication to prepare for starting the Li-ion battery heater next time.",
+      "page_pdf": 26,
+      "page_manual": "EVB-26",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        735.83589,
+        558.5478599999999,
+        703.6129228640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "When receiving a next start time signal via EV system CAN communication, VCM transmits a start request signal (CHG-IGN) to LBC after a lapse of the set time. When receiving a start request signal (CHG-IGN), LBC activates the Li-ion battery heater.",
+      "page_pdf": 26,
+      "page_manual": "EVB-26",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13885160000001,
+        701.3371188000001,
+        558.5687400000011,
+        669.1130032640887
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "When EVSE is connected (normal charge)",
+      "page_pdf": 26,
+      "page_manual": "EVB-26",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        660.79129718,
+        239.85023286390012,
+        651.972693320464
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "When the temperature in the battery pack is low outside the timer charge set time, VCM transmits a keep SOC request signal to LBC via EV system CAN communication. In this case Li-ion battery is not charged, and only Li-ion battery heater is activated.",
+      "page_pdf": 26,
+      "page_manual": "EVB-26",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        466.13587,
+        558.5072483999994,
+        433.9129028640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "When timer charge starts at the set time, Li-ion batter is charged, and the Li-ion battery heater is activated.",
+      "page_pdf": 26,
+      "page_manual": "EVB-26",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139999999999986,
+        431.6359504,
+        553.1576879999999,
+        422.3923628640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "When EVSE is not connected (normal charge)",
+      "page_pdf": 26,
+      "page_manual": "EVB-26",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        414.07126718,
+        256.55326923400014,
+        405.2526633204641
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "When the charge level of the Li-ion battery is low during the Li-ion battery heater operation, LBC stops the Li-ion battery heater operation even if the temperature in the battery pack is insufficient.",
+      "page_pdf": 26,
+      "page_manual": "EVB-26",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        219.41592000000003,
+        558.5158091999998,
+        198.65294086408835
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "HARNESS LAYOUT",
+      "page_pdf": 29,
+      "page_manual": "EVB-29",
+      "section_code": "EVB",
+      "label": "caption",
+      "bbox": [
+        52.44,
+        314.58827718,
+        156.1321186816999,
+        304.4415716630055
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": ": Vehicle front",
+      "page_pdf": 30,
+      "page_manual": "EVB-30",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        85.20001,
+        114.25438717999998,
+        136.51690785820003,
+        106.76388497792266
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    }
+  ],
+  "tables": [],
+  "images": [
+    {
+      "file": "images/page_26_raster_1.png",
+      "page_pdf": 26,
+      "page_manual": "EVB-26",
+      "section_code": "EVB",
+      "bbox": [
+        87.72000122070312,
+        388.3800048828125,
+        523.97998046875,
+        572.0399780273438
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_26_raster_2.png",
+      "page_pdf": 26,
+      "page_manual": "EVB-26",
+      "section_code": "EVB",
+      "bbox": [
+        87.72000122070312,
+        141.65997314453125,
+        523.97998046875,
+        325.3799743652344
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_27_raster_1.png",
+      "page_pdf": 27,
+      "page_manual": "EVB-27",
+      "section_code": "EVB",
+      "bbox": [
+        88.01998901367188,
+        70.1400146484375,
+        524.2799072265625,
+        667.139892578125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_28_raster_1.png",
+      "page_pdf": 28,
+      "page_manual": "EVB-28",
+      "section_code": "EVB",
+      "bbox": [
+        87.72000122070312,
+        58.67999267578125,
+        523.97998046875,
+        471.9599609375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_29_raster_1.png",
+      "page_pdf": 29,
+      "page_manual": "EVB-29",
+      "section_code": "EVB",
+      "bbox": [
+        88.01998901367188,
+        58.67999267578125,
+        524.2799072265625,
+        471.9599609375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_30_raster_1.png",
+      "page_pdf": 30,
+      "page_manual": "EVB-30",
+      "section_code": "EVB",
+      "bbox": [
+        66.17999267578125,
+        678.179931640625,
+        78.0,
+        686.8199462890625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_30_raster_2.png",
+      "page_pdf": 30,
+      "page_manual": "EVB-30",
+      "section_code": "EVB",
+      "bbox": [
+        87.239990234375,
+        67.1400146484375,
+        523.4999389648438,
+        664.139892578125
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

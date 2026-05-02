@@ -1,0 +1,1948 @@
+{
+  "schema_version": "1.0",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-16\n• Possible input value\n• Temperature\n2.\nOptimization of Li-ion battery voltage\nRevision: October 2013\n2013 LEAF",
+    "page_start": 16,
+    "page_end": 20,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "16": [
+        "EVB-16",
+        "EVB",
+        "EVB-16\n• Possible input value\n• Temperature\n2.\nOptimization of Li-ion battery voltage\nRevision: October 2013\n2013 LEAF"
+      ],
+      "17": [
+        "EVB-17",
+        "EVB",
+        "EVB-17\nRevision: October 2013\n2013 LEAF"
+      ],
+      "18": [
+        "EVB-18",
+        "EVB",
+        "EVB-18\nRevision: October 2013\n2013 LEAF"
+      ],
+      "19": [
+        "EVB-19",
+        "EVB",
+        "EVB-19\nRevision: October 2013\n2013 LEAF"
+      ],
+      "20": [
+        "EVB-20",
+        "EVB",
+        "EVB-20\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "< SYSTEM DESCRIPTION >",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        194.40028379999995,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Li-ion Battery",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139942400000024,
+        658.729334,
+        131.41457279999997,
+        646.8295431491713
+      ]
+    },
+    {
+      "text": "A Li-ion battery with flat construction is placed under floor.",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        634.1359299999999,
+        331.1766660000003,
+        624.8923424640884
+      ]
+    },
+    {
+      "text": "The battery pack is equipped with necessary devices, such as Liion battery controller, battery junction box, and service plug in addition to a battery storing electricity.",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139999999999986,
+        622.6153899999999,
+        368.2851239999994,
+        590.3924228640885
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745907",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        653.58686,
+        559.5492259999992,
+        648.02918
+      ]
+    },
+    {
+      "text": "Four cells are integrated into a single module. The Li-ion battery consists of 48 modules placed in series.",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139999999999986,
+        486.7159264000001,
+        547.4668439999999,
+        477.4723388640885
+      ]
+    },
+    {
+      "text": "Li-ion Battery Controller",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        341.98992,
+        193.50675839999997,
+        330.0901291491712
+      ]
+    },
+    {
+      "text": "Li-ion battery controller (LBC) is included in the battery pack and installed on the left surface of the rear module stack.",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        317.33592,
+        368.27656319999954,
+        296.63234446408836
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745908",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        336.84689999999995,
+        559.5492259999992,
+        331.28922
+      ]
+    },
+    {
+      "text": "The LBC is the core of battery control. Li-ion battery controller detects the voltage and current of the assembled battery, the temperature of each module, and the voltage of each cell to judge state of charge. LBC also calculates possible input/output values, meter indication values, and chargeable values, and send this data to VCM (Vehicle control module). VCM controls the vehicle, according to the battery state.",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        169.91591640000001,
+        558.549948,
+        126.1724092640884
+      ]
+    },
+    {
+      "text": "Main Role of Li-ion Battery Controller",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        118.02828718,
+        240.23715513350015,
+        107.88158166300548
+      ]
+    },
+    {
+      "text": "Li-ion battery state check",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        101.45601999999997,
+        188.150232,
+        92.21243246408835
+      ]
+    },
+    {
+      "text": "State of charge",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        72.000012,
+        89.93547999999998,
+        150.894048,
+        80.69189246408837
+      ]
+    },
+    {
+      "text": "Possible output value",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        72.000012,
+        78.47549200000003,
+        179.9986800000001,
+        69.23190446408842
+      ]
+    },
+    {
+      "text": "Possible input value",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        72.000012,
+        66.95610039999997,
+        173.5352760000001,
+        57.71251286408835
+      ]
+    },
+    {
+      "text": "Temperature",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        72.000012,
+        55.43670880000002,
+        139.247184,
+        46.193121264088404
+      ]
+    },
+    {
+      "text": "Optimization of Li-ion battery voltage",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        40.97626479999997,
+        241.77946800000026,
+        31.732677264088352
+      ]
+    },
+    {
+      "text": "COMPONENT PARTS",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        237.3,
+        769.00991,
+        374.1230976000002,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "COMPONENT PARTS",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        237.60001,
+        769.00991,
+        374.4231076000002,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< SYSTEM DESCRIPTION >",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        194.70028379999997,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Prevention of overvoltage and overcurrent",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        735.83589,
+        268.0456492,
+        726.5923024640884
+      ]
+    },
+    {
+      "text": "Prevention of overheat",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        721.3160423999999,
+        178.59071799999998,
+        712.0724548640884
+      ]
+    },
+    {
+      "text": "Detection of decrease in insulation resistance of high-voltage circuit",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        706.8555983999998,
+        385.47602200000046,
+        697.6120108640883
+      ]
+    },
+    {
+      "text": "Detection of a fit of high voltage harness connector and service plug",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        692.3357507999998,
+        387.7759540000005,
+        683.0921632640883
+      ]
+    },
+    {
+      "text": "Module",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        674.98989,
+        96.56284800000002,
+        663.0900991491712
+      ]
+    },
+    {
+      "text": "Four laminated cells are integrated into one module.",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        650.33589,
+        303.3050787999999,
+        641.0923024640884
+      ]
+    },
+    {
+      "text": "The Li-ion battery is equipped with 48 modules.",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        638.875902,
+        281.18532880000004,
+        629.6323144640885
+      ]
+    },
+    {
+      "text": "There are two kinds of modules, according to the location of positive and negative terminals.",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        627.3565104,
+        369.5559615999997,
+        606.5935312640886
+      ]
+    },
+    {
+      "text": "Positive terminal",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        87.84,
+        591.2543971800001,
+        149.95584682289987,
+        583.7638949779226
+      ]
+    },
+    {
+      "text": ": Red",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        173.22002832189986,
+        591.2543971800001,
+        193.44359762679986,
+        583.7638949779226
+      ]
+    },
+    {
+      "text": "Negative terminal",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        87.84,
+        577.8139792930001,
+        153.69745544559984,
+        570.3234770909227
+      ]
+    },
+    {
+      "text": ": Black",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        173.23424113869984,
+        577.8139792930001,
+        198.5927827132998,
+        570.3234770909227
+      ]
+    },
+    {
+      "text": "MODULE INTERNAL CIRCUIT",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        512.04826718,
+        211.16572250399997,
+        501.9015616630055
+      ]
+    },
+    {
+      "text": "A module consists of two parallel-connected cells placed in series. The Li-ion battery has 48 modules placed in series in total. Ninety-six parallel-connected cell pairs are connected in series.",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        498.4759,
+        369.6103539999997,
+        466.2529328640884
+      ]
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        463.9771288,
+        86.03907400000001,
+        454.7335412640884
+      ]
+    },
+    {
+      "text": "Cell voltage displayed on the data monitor of CONSULT means the potential  difference  between  the  upstream  and  the  downstream of the parallel circuit.",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        452.4577372,
+        369.6331132000001,
+        420.23477006408837
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745909",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        669.84687,
+        559.8580799999991,
+        664.28919
+      ]
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        139.37590999999998,
+        86.03907400000001,
+        130.13232246408836
+      ]
+    },
+    {
+      "text": "The highest potential is module (MD) 1 and the lowest is module (MD) 48.",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        127.91592200000002,
+        394.9375851999994,
+        118.67233446408841
+      ]
+    },
+    {
+      "text": "CELL",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        100.44828717999997,
+        81.15649305800001,
+        90.30158166300555
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "< SYSTEM DESCRIPTION >",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        194.40028379999995,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "These are thin laminated cells with excellent cooling performance.",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        735.83589,
+        357.6311040000003,
+        726.5923024640884
+      ]
+    },
+    {
+      "text": "The Features of Laminated Cell",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        598.3912771800001,
+        192.03531245700003,
+        589.5726733204641
+      ]
+    },
+    {
+      "text": "Large surface area with excellent cooling performance reduces heat load to the battery and improves battery life.",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        586.43592,
+        558.5165399999995,
+        565.6729408640886
+      ]
+    },
+    {
+      "text": "Light and thin structure increases flexibility in layout.",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139999999999986,
+        563.3959884000001,
+        304.93416000000036,
+        554.1524008640886
+      ]
+    },
+    {
+      "text": "Heater Relay Unit",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        536.08998,
+        158.35900800000002,
+        524.1901891491713
+      ]
+    },
+    {
+      "text": "The heater relay unit is installed in the battery pack (under the service plug).",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        511.43592,
+        368.3759519999997,
+        490.6729408640884
+      ]
+    },
+    {
+      "text": "When receiving a relay control signal from LBC (Li-ion battery controller),  the  heater  relay  unit  turns  ON  the  built-in  relay  and  supplies high-voltage power to each Li-ion battery heater.",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        488.4565404,
+        368.29013519999944,
+        456.17416966408837
+      ]
+    },
+    {
+      "text": "Li-ion Battery Heater",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        374.20992,
+        175.54876800000002,
+        362.31012914917125
+      ]
+    },
+    {
+      "text": "Li-ion battery heater is installed in the battery pack.",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        349.55592,
+        296.54071319999986,
+        340.3123324640884
+      ]
+    },
+    {
+      "text": "High voltage power is supplied from the heater relay unit.",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        338.0365284,
+        324.4431791999999,
+        328.7929408640884
+      ]
+    },
+    {
+      "text": "Each Li-ion battery heater is connected in parallel.",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        326.5765404,
+        292.5671447999998,
+        317.3329528640884
+      ]
+    },
+    {
+      "text": "FRONT LI-ION BATTERY HEATER",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        309.12827718,
+        232.5476030236002,
+        298.9815716630055
+      ]
+    },
+    {
+      "text": "Two front Li-ion battery heaters are installed to each front module stack.",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        295.55601,
+        368.3435879999995,
+        274.85243446408845
+      ]
+    },
+    {
+      "text": "REAR LI-ION BATTERY HEATER",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        159.24838718,
+        225.05229808320007,
+        149.1016816630056
+      ]
+    },
+    {
+      "text": "COMPONENT PARTS",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        237.3,
+        769.00991,
+        374.1230976000002,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745910",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        530.94696,
+        559.5492259999992,
+        525.38928
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745911",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "label": "caption",
+      "bbox": [
+        497.28,
+        369.0669,
+        559.6186439999992,
+        363.50922
+      ]
+    },
+    {
+      "text": "< SYSTEM DESCRIPTION >",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        194.70028379999997,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Two  rear  Li-ion  battery  heaters  are  installed  to  the  rear  module stack.",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        735.83589,
+        369.58738599999975,
+        715.0729108640885
+      ]
+    },
+    {
+      "text": "Battery Current Sensor",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        598.54994,
+        190.0373760000001,
+        586.6501491491713
+      ]
+    },
+    {
+      "text": "The battery current sensor is installed to bus bar between battery junction box and rear module stack.",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        573.95588,
+        369.60262839999956,
+        553.1917524640885
+      ]
+    },
+    {
+      "text": "This sensor measures charge/discharge current sent to Li-ion battery  and  transmits  a  current  signal  to  Li-ion  battery  controller (LBC).",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        550.9159484,
+        369.5844627999993,
+        518.6929812640886
+      ]
+    },
+    {
+      "text": "Li-ion  Battery  controller  (LBC)  measures  remaining  battery  level according to charge/discharge current and sends the data to VCM.",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46000999999998,
+        516.4171772000002,
+        369.53623000000033,
+        495.71360166408857
+      ]
+    },
+    {
+      "text": "Battery Temperature Sensor",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        437.6899,
+        220.738368,
+        425.79010914917126
+      ]
+    },
+    {
+      "text": "  Three battery temperature sensors mounted in the battery pack measure the temperature.",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        413.09593,
+        369.6208983999996,
+        392.3318024640884
+      ]
+    },
+    {
+      "text": "The installation position of the sensors are;",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        390.0559984,
+        263.68298200000027,
+        380.8124108640884
+      ]
+    },
+    {
+      "text": "-Front module stack RH: Two for front and rear",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        378.5960104,
+        274.72015000000033,
+        369.3524228640884
+      ]
+    },
+    {
+      "text": "Rear module stack: One",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        367.07547040000003,
+        174.66005800000002,
+        357.8318828640884
+      ]
+    },
+    {
+      "text": "The sensor uses a thermistor with a resistance value that varies according to changes in temperature. The electrical resistance of the thermistor decreases as the temperature increases.",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        265.6759264,
+        369.6082660000004,
+        233.39355566408835
+      ]
+    },
+    {
+      "text": "INFOID:0000000009346493",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "caption",
+      "bbox": [
+        497.15988,
+        593.40692,
+        559.8580799999991,
+        587.84924
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745912",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "caption",
+      "bbox": [
+        497.15988,
+        432.54688,
+        559.8580799999991,
+        426.98920000000004
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "< SYSTEM DESCRIPTION >",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        194.40028379999995,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Battery Junction Box",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139942400000024,
+        736.009334,
+        175.59037440000006,
+        724.1095431491713
+      ]
+    },
+    {
+      "text": "The battery junction box is installed to the front side in the battery pack.",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        711.35591,
+        368.27364000000046,
+        690.5929308640885
+      ]
+    },
+    {
+      "text": "The battery junction box includes:",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        688.3765304000001,
+        219.50364000000025,
+        679.1329428640886
+      ]
+    },
+    {
+      "text": "-System main relay to provide/interrupt DC current sent from Li-ion battery.",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        676.8559904000001,
+        368.2976519999995,
+        656.0930112640887
+      ]
+    },
+    {
+      "text": "-Pre-charge relay to protect the high voltage circuit from a high current immediately after power switch ON.",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        653.8766108000002,
+        368.30704800000035,
+        633.1136316640888
+      ]
+    },
+    {
+      "text": "Installed to both positive side and negative side, the system main relay provides DC current to each high voltage part. In addition, the system main relay provides DC current to the Li-ion battery during motor regeneration or charge.",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        630.8366792000003,
+        368.3289719999997,
+        587.0920236640889
+      ]
+    },
+    {
+      "text": "When  an  error  occurs  in  the  system,  the  system  main  relay  is turned OFF and the Li-ion battery is interrupted for ensuring safety, based on a command from VCM (Vehicle control module). JSCIA0276ZZ",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.140000000000015,
+        586.83565,
+        558.5340791999998,
+        552.593252464089
+      ]
+    },
+    {
+      "text": "Service Plug",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        534.52992,
+        127.67293439999996,
+        522.6301291491712
+      ]
+    },
+    {
+      "text": "The service plug is included in the Li-ion battery to securely disconnect the high voltage during high voltage part inspection and maintenance.",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        509.87586,
+        368.29566839999967,
+        477.65289286408836
+      ]
+    },
+    {
+      "text": "The service plug is installed on the upper surface of the battery pack. The plug can be removed when the leg-room mounted service plug cover is removed.",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        475.37708879999997,
+        368.33001599999955,
+        443.15412166408834
+      ]
+    },
+    {
+      "text": "Always  use  insulating  protective  equipment  when  removing  and installing service plug.",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        440.87831759999995,
+        368.30287200000043,
+        420.1153384640883
+      ]
+    },
+    {
+      "text": "High Voltage Warning Label",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        373.66991,
+        218.22345600000003,
+        361.77011914917125
+      ]
+    },
+    {
+      "text": "High voltage warning label is affixed to each of the following component parts.",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        349.01591,
+        412.1550479999997,
+        339.7723224640884
+      ]
+    },
+    {
+      "text": "After replacing a part, check that the part is affixed with a label. If the label is not affixed, be sure to affix the label in the original position.",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139999999999986,
+        337.4965184,
+        558.5437883999992,
+        316.7929428640884
+      ]
+    },
+    {
+      "text": "Li-ion Battery",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        308.58827718,
+        119.71154236289996,
+        298.4415716630055
+      ]
+    },
+    {
+      "text": "The label is affixed to the rear end of Li-ion battery.",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        295.016,
+        295.8670200000001,
+        285.7724124640884
+      ]
+    },
+    {
+      "text": ": Vehicle front",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        83.16,
+        141.55428717999996,
+        134.48400426660007,
+        134.06378497792264
+      ]
+    },
+    {
+      "text": ": Direction of the label INFOID:0000000008745913",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        244.75253600750005,
+        141.55428717999996,
+        326.65279301620023,
+        134.06378497792264
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745914",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        529.3869,
+        559.5492259999992,
+        523.82922
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745915",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        368.52689,
+        559.5492259999992,
+        362.96921000000003
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "bbox": [
+        54.182987213134766,
+        739.2530746459961,
+        557.7390747070312,
+        665.8039169311523
+      ],
+      "num_rows": 4,
+      "num_cols": 3,
+      "data": [
+        [
+          "No.",
+          "Component",
+          "Function"
+        ],
+        [
+          "",
+          "Li-ion battery heater LH 2",
+          "EVB-18, \"Li-ion Battery Heater\""
+        ],
+        [
+          "",
+          "Heater relay unit",
+          "EVB-18, \"Heater Relay Unit\""
+        ],
+        [
+          "",
+          "Li-ion battery heater RR 1",
+          "EVB-18, \"Li-ion Battery Heater\""
+        ]
+      ],
+      "markdown": "| No.   | Component                  | Function                        |\n|-------|----------------------------|---------------------------------|\n|       | Li-ion battery heater LH 2 | EVB-18, \"Li-ion Battery Heater\" |\n|       | Heater relay unit          | EVB-18, \"Heater Relay Unit\"     |\n|       | Li-ion battery heater RR 1 | EVB-18, \"Li-ion Battery Heater\" |",
+      "tableformer": true
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_16_raster_1.png",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "bbox": [
+        66.77999877929688,
+        93.89999389648438,
+        76.67999267578125,
+        103.8599853515625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_16_raster_2.png",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "bbox": [
+        66.77999877929688,
+        76.14004516601562,
+        76.67999267578125,
+        86.10003662109375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_16_raster_3.png",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "bbox": [
+        66.77999877929688,
+        111.66000366210938,
+        76.67999267578125,
+        121.55999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_16_raster_4.png",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "bbox": [
+        374.3399658203125,
+        158.3999481201172,
+        558.5399780273438,
+        288.7799377441406
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_16_raster_5.png",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "bbox": [
+        87.239990234375,
+        316.3199462890625,
+        523.5,
+        433.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_16_raster_6.png",
+      "page_pdf": 16,
+      "page_manual": "EVB-16",
+      "section_code": "EVB",
+      "bbox": [
+        374.3399658203125,
+        475.13995361328125,
+        558.47998046875,
+        605.5199584960938
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_17_raster_1.png",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        293.99993896484375,
+        559.7999877929688,
+        424.43994140625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_17_raster_2.png",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        142.1399688720703,
+        559.7999877929688,
+        272.51995849609375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_17_raster_3.png",
+      "page_pdf": 17,
+      "page_manual": "EVB-17",
+      "section_code": "EVB",
+      "bbox": [
+        88.01998901367188,
+        442.91998291015625,
+        524.280029296875,
+        652.0800170898438
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_18_raster_1.png",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "bbox": [
+        374.3399658203125,
+        281.03997802734375,
+        558.5399780273438,
+        411.47998046875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_18_raster_2.png",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "bbox": [
+        374.3399658203125,
+        56.70002746582031,
+        558.5399780273438,
+        187.08001708984375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_18_raster_3.png",
+      "page_pdf": 18,
+      "page_manual": "EVB-18",
+      "section_code": "EVB",
+      "bbox": [
+        374.3399658203125,
+        496.919921875,
+        558.47998046875,
+        627.3599243164062
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_19_raster_1.png",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        218.57997131347656,
+        559.8599853515625,
+        348.9599609375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_19_raster_2.png",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        56.70002746582031,
+        559.7999877929688,
+        187.08001708984375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_19_raster_3.png",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        379.43994140625,
+        559.7999877929688,
+        509.8199462890625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_19_raster_4.png",
+      "page_pdf": 19,
+      "page_manual": "EVB-19",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        526.8599243164062,
+        559.7999877929688,
+        657.2399291992188
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_20_raster_1.png",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "bbox": [
+        374.3399658203125,
+        282.5999755859375,
+        558.5399780273438,
+        413.03997802734375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_20_raster_2.png",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "bbox": [
+        374.3399658203125,
+        81.11994934082031,
+        558.5399780273438,
+        211.5599365234375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_20_raster_3.png",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "bbox": [
+        87.239990234375,
+        519.47998046875,
+        523.5,
+        636.8399658203125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_20_raster_4.png",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "bbox": [
+        66.17999267578125,
+        650.8199462890625,
+        78.0,
+        659.4599609375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_20_raster_5.png",
+      "page_pdf": 20,
+      "page_manual": "EVB-20",
+      "section_code": "EVB",
+      "bbox": [
+        227.75997924804688,
+        650.8199462890625,
+        239.57998657226562,
+        659.4599609375
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

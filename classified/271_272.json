@@ -1,0 +1,604 @@
+{
+  "schema_version": "1.1",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-271\nRevision: October 2013\n2013 LEAF",
+    "page_start": 271,
+    "page_end": 272,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "271": [
+        "EVB-271",
+        "EVB",
+        "EVB-271\nRevision: October 2013\n2013 LEAF"
+      ],
+      "272": [
+        "EVB-272",
+        "EVB",
+        "EVB-272\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "LI-ION BATTERY",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        252.17998,
+        769.00991,
+        359.8315575999998,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Close the cock and wait for 1 minute.",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        735.83589,
+        244.87636600000027,
+        726.5923024640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check that the air leak tester reading remains at or above the limit value.",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        721.3160423999999,
+        409.5558820000005,
+        712.0724548640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Repair limit : 1.4 kPa (0.014 bar, 0.0142 kg/cm 2 , 0.203 psi)",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        87.84101800000002,
+        693.8356871999999,
+        399.6194464000002,
+        681.7722556640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "If the pressure is below the limit value, check for the locations of air leakage.",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46000999999998,
+        673.5560699999999,
+        426.2932899999997,
+        664.3124824640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        73.2606184,
+        662.0366783999999,
+        105.83968240000002,
+        652.7930908640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check for air leakage from the sound of air escaping when pressure is applied.",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        73.2606184,
+        650.5766904,
+        437.3618823999997,
+        641.3331028640885
+      ],
+      "type": "general_text",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "ELECTRIC EQUIPOTENTIAL TEST",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        633.1283071800001,
+        236.6360531294001,
+        622.9816016630056
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "After assembling the Li-ion battery pack, remove the battery pack upper case ground bolt , then measure the resistance between the high-voltage harness connector flange ground bolts and the ground bolt seat (location of coating peeling) .",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46000999999998,
+        618.65589,
+        559.9425159999996,
+        584.5118584640885
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "WARNING: To prevent electric shock, wear insulated protective gear.",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46000999999998,
+        370.07541840000005,
+        107.58932199999992,
+        360.83183086408843
+      ],
+      "type": "warning",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Standard : Less than 0.1 Ω",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        87.84012160000003,
+        291.172232,
+        236.79804160000003,
+        278.3936719999999
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "If the result deviates from the standard value, check the following and correct the malfunction location.",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46115839999999,
+        270.71480640000004,
+        525.1163463999997,
+        261.4712188640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Ground bolt connection condition",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.461158400000016,
+        259.1954148,
+        214.95647440000002,
+        249.95182726408848
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Corrosion on ground bolt mounting surface",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.461158400000016,
+        247.73542680000003,
+        260.3067904000003,
+        238.4918392640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Presence of paint, oil, dirt, or other substance on ground bolt mounting surface",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.461158400000016,
+        236.21603520000008,
+        425.2524220000003,
+        226.97244766408835
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "SERVICE DATA AND SPECIFICATIONS (SDS)",
+      "page_pdf": 272,
+      "page_manual": "EVB-272",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        160.62,
+        769.00991,
+        450.8455103999997,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "< SERVICE DATA AND SPECIFICATIONS (SDS)",
+      "page_pdf": 272,
+      "page_manual": "EVB-272",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        751.4636,
+        296.48562599999974,
+        741.7418958674033
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "SERVICE DATA AND SPECIFICATIONS (SDS)",
+      "page_pdf": 272,
+      "page_manual": "EVB-272",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.25323718,
+        452.9197249816001,
+        719.4660233757127
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "SERVICE DATA AND SPECIFICATIONS (SDS)",
+      "page_pdf": 272,
+      "page_manual": "EVB-272",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        713.06999,
+        368.58360000000005,
+        699.7889734254144
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Li-ion Battery",
+      "page_pdf": 272,
+      "page_manual": "EVB-272",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        688.96993,
+        131.41463039999996,
+        677.0701391491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 272,
+      "page_manual": "EVB-272",
+      "section_code": "EVB",
+      "bbox": [
+        55.90763473510742,
+        655.2592163085938,
+        555.2697143554688,
+        560.7857666015625
+      ],
+      "num_rows": 6,
+      "num_cols": 3,
+      "data": [
+        [
+          "Items",
+          "Items",
+          "Specification"
+        ],
+        [
+          "Type",
+          "Type",
+          "Li-ion battery"
+        ],
+        [
+          "Structure",
+          "Structure",
+          "48 modules (192 cells)"
+        ],
+        [
+          "Rated voltage",
+          "(V)",
+          "Approx. 360"
+        ],
+        [
+          "Battery capacity",
+          "(kWh)",
+          "Approx. 24"
+        ],
+        [
+          "Weight",
+          "[kg (lb)]",
+          "Approx. 275 (606)"
+        ]
+      ],
+      "markdown": "| Items | Items | Specification |\n| --- | --- | --- |\n| Type | Type | Li-ion battery |\n| Structure | Structure | 48 modules (192 cells) |\n| Rated voltage | (V) | Approx. 360 |\n| Battery capacity | (kWh) | Approx. 24 |\n| Weight | [kg (lb)] | Approx. 275 (606) |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "Items",
+          "Items",
+          "Specification"
+        ],
+        [
+          "Type",
+          "Type",
+          "Li-ion battery"
+        ],
+        [
+          "Structure",
+          "Structure",
+          "48 modules (192 cells)"
+        ],
+        [
+          "Rated voltage",
+          "(V)",
+          "Approx. 360"
+        ],
+        [
+          "Battery capacity",
+          "(kWh)",
+          "Approx. 24"
+        ],
+        [
+          "Weight",
+          "[kg (lb)]",
+          "Approx. 275 (606)"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 272,
+      "page_manual": "EVB-272",
+      "section_code": "EVB",
+      "bbox": [
+        56.58018112182617,
+        250.07696533203125,
+        555.0047607421875,
+        187.05474853515625
+      ],
+      "num_rows": 4,
+      "num_cols": 4,
+      "data": [
+        [
+          "External dimension",
+          "'a'",
+          "[mm (in)]",
+          "1188 (46.77)"
+        ],
+        [
+          "",
+          "'b'",
+          "[mm (in)]",
+          "1007 (39.65)"
+        ],
+        [
+          "",
+          "'c'",
+          "[mm (in)]",
+          "264 (10.39)"
+        ],
+        [
+          "",
+          "'d'",
+          "[mm (in)]",
+          "1547 (60.90)"
+        ]
+      ],
+      "markdown": "| External dimension | 'a' | [mm (in)] | 1188 (46.77) |\n| --- | --- | --- | --- |\n|  | 'b' | [mm (in)] | 1007 (39.65) |\n|  | 'c' | [mm (in)] | 264 (10.39) |\n|  | 'd' | [mm (in)] | 1547 (60.90) |",
+      "tableformer": true,
+      "table_type": "spec_table",
+      "data_raw": [
+        [
+          "External dimension",
+          "'a'",
+          "[mm (in)]",
+          "1188 (46.77)"
+        ],
+        [
+          "",
+          "'b'",
+          "[mm (in)]",
+          "1007 (39.65)"
+        ],
+        [
+          "",
+          "'c'",
+          "[mm (in)]",
+          "264 (10.39)"
+        ],
+        [
+          "",
+          "'d'",
+          "[mm (in)]",
+          "1547 (60.90)"
+        ]
+      ]
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_271_raster_1.png",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "bbox": [
+        430.0199890136719,
+        185.39999389648438,
+        439.97998046875,
+        195.29998779296875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_271_raster_2.png",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "bbox": [
+        478.5599670410156,
+        172.92001342773438,
+        488.51995849609375,
+        182.8800048828125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_271_raster_3.png",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "bbox": [
+        184.31997680664062,
+        197.82003784179688,
+        194.27996826171875,
+        207.72003173828125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_271_raster_4.png",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "bbox": [
+        88.5,
+        209.21995544433594,
+        524.760009765625,
+        418.3799743652344
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_271_raster_5.jpeg",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        433.91998291015625,
+        80.3462142944336,
+        452.6999816894531
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_271_raster_6.png",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        456.1799621582031,
+        85.31999206542969,
+        486.77996826171875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_271_raster_7.png",
+      "page_pdf": 271,
+      "page_manual": "EVB-271",
+      "section_code": "EVB",
+      "bbox": [
+        85.31999206542969,
+        456.1799621582031,
+        117.239990234375,
+        486.77996826171875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_272_raster_1.png",
+      "page_pdf": 272,
+      "page_manual": "EVB-272",
+      "section_code": "EVB",
+      "bbox": [
+        87.239990234375,
+        243.53997802734375,
+        523.5,
+        539.4599609375
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

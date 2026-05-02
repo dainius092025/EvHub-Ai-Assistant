@@ -1,0 +1,1814 @@
+{
+  "schema_version": "1.1",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-31\nRevision: October 2013\n2013 LEAF",
+    "page_start": 31,
+    "page_end": 35,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "31": [
+        "EVB-31",
+        "EVB",
+        "EVB-31\nRevision: October 2013\n2013 LEAF"
+      ],
+      "32": [
+        "EVB-32",
+        "EVB",
+        "EVB-32\nRevision: October 2013\n2013 LEAF"
+      ],
+      "33": [
+        "EVB-33",
+        "EVB",
+        "EVB-33\nDATA MONITOR\nNOTE:\nRevision: October 2013\n2013 LEAF"
+      ],
+      "34": [
+        "EVB-34",
+        "EVB",
+        "EVB-34\nRevision: October 2013\n2013 LEAF"
+      ],
+      "35": [
+        "EVB-35",
+        "EVB",
+        "EVB-35\nCELL VOLTAGE 15\nREADY\nTotal battery voltage 317 V\nApprox. 3,200 - 3,400 mV\nTotal battery voltage 393 V\nApprox. 4,000 - 4,200 mV\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": ": Vehicle front",
+      "page_pdf": 31,
+      "page_manual": "EVB-31",
+      "section_code": "EVB",
+      "label": "caption",
+      "bbox": [
+        86.46001,
+        114.25438717999998,
+        137.74120661600003,
+        106.76388497792266
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 31,
+      "page_manual": "EVB-31",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "HANDLING PRECAUTION",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        223.86,
+        769.00991,
+        387.55395839999983,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "HANDLING PRECAUTION",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.10997,
+        232.1560500000001,
+        722.8289534254144
+      ],
+      "type": "section_header",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "EV Battery System",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        712.00991,
+        165.10051200000004,
+        700.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "To improve the Li-ion battery life, never perform quick charge heavily.",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        687.35591,
+        379.67725200000064,
+        678.1123224640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Use the method of nighttime normal charge or timer-controlled charge.",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        675.8365184,
+        386.4811044000005,
+        666.5929308640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Never perform rapid acceleration/deceleration.",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        664.3765304000001,
+        275.9234880000003,
+        655.1329428640886
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Never place EV battery in an area exposed to direct sunlight or under high temperature conditions.",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        652.8571388000001,
+        516.2526012000002,
+        643.6135512640886
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "PRECAUTIONS FOR STORAGE OF THE LI-ION BATTERY",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        635.4083371800001,
+        358.8121596019999,
+        625.2616316630056
+      ],
+      "type": "section_header",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "Apply insulating tape to the service plug and high voltage harness connector, and protect the terminals so that nothing contacts them.",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        621.89594,
+        558.470186399999,
+        601.1318124640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Store in a well-ventilated location that is not exposed to direct sunlight.",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        60.661232399999996,
+        598.85486,
+        385.7548979999994,
+        589.6112724640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "(Storing outdoors or unprotected is prohibited.)",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        598.85486,
+        276.3543468,
+        578.1512844640886
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Never set directly on the floor.",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        575.8743320000001,
+        199.11118799999994,
+        566.6307444640886
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Lay an anti-static rubber sheet underneath the battery.",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        564.3537920000001,
+        311.68048799999985,
+        555.1102044640886
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Never invert the battery.",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139999999999986,
+        552.8938040000002,
+        171.59030399999992,
+        543.6502164640887
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Never stack batteries.",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139999999999986,
+        541.3732640000002,
+        161.73494400000004,
+        532.1296764640887
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Cover with an anti-static cover sheet.",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139999999999986,
+        529.8527240000002,
+        232.0523112000001,
+        520.6091364640887
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Put a caution display stating \"CAUTION! HIGH VOLTAGE\" on the insulated cover sheet.",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139999999999986,
+        518.3927360000002,
+        467.8463928000009,
+        509.1491484640886
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Put identification display showing the name of person in charge on the insulated cover sheet.",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139999999999986,
+        506.87334440000024,
+        489.92991600000045,
+        497.6297568640886
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Never allow water to contact the battery.",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139999999999986,
+        495.35395280000023,
+        246.56725200000028,
+        486.1103652640886
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Prevent other objects from falling onto the battery.",
+      "page_pdf": 32,
+      "page_manual": "EVB-32",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139999999999986,
+        483.8939648000002,
+        291.2139120000003,
+        474.6503772640886
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DIAGNOSIS SYSTEM (LBC)",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        218.51999,
+        769.00991,
+        393.51577879999974,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DIAGNOSIS SYSTEM (LBC)",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        736.10997,
+        244.98599999999993,
+        722.8289534254144
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "CONSULT Function",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        712.00991,
+        171.1037760000001,
+        700.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "APPLICATION ITEM",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        684.24824718,
+        158.024510133,
+        674.1015416630055
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "CONSULT performs the following functions via CAN communication with Li-ion battery controller (LBC).",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        670.67597,
+        531.4736799999989,
+        661.4323824640885
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "*: The following diagnosis information is cleared when the VCM memory is erased.",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "footnote",
+      "bbox": [
+        53.46001,
+        500.29428718,
+        362.20807495,
+        492.8037849779227
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Diagnostic trouble codes",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        487.33431326090005,
+        154.64342160200007,
+        479.8438110588227
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Freeze frame data",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        474.31435787090004,
+        130.97738962800003,
+        466.8238556688227
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "ECU IDENTIFICATION",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        457.44828718,
+        170.1309792971,
+        447.30158166300555
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Part number of LBC can be checked.",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        443.93592,
+        225.21471399999996,
+        434.6923324640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "SELF-DIAGNOSTIC RESULTS",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        426.48826718,
+        211.58962827389993,
+        416.3415616630055
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Self Diagnostic Item",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        406.93128717999997,
+        141.28328919999993,
+        398.11268332046404
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Regarding items of DTC, refer to EVB-45, \"DTC Index\".",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        394.9159,
+        309.86231,
+        385.6723124640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "How to Erase DTC",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.44,
+        377.41126718,
+        135.74771484220003,
+        368.59266332046406
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Select 'HV BAT'with CONSULT.",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        365.45591,
+        221.78538279999992,
+        356.2123224640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "'SELF-DIAGNOSTIC RESULTS'.",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        353.9365184,
+        228.3989139999999,
+        344.6929308640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Touch 'ERASE'. (DTC in LBC will be erased.)",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        342.4171268,
+        284.958658,
+        333.1735392640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "FREEZE FRAME DATA (FFD)",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        324.91126718,
+        186.4620937601999,
+        316.09266332046406
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "The following vehicle status is recorded when DTC is detected and is displayed on CONSULT.",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        312.95591,
+        488.2202380000008,
+        303.7123224640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DATA MONITOR NOTE:",
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.44,
+        60.78838717999997,
+        138.4681176681,
+        38.03233246408843
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "The following table includes information (items) inapplicable to this vehicle. For information (items) applicable to this vehicle, refer to CONSULT display items.",
+      "page_pdf": 34,
+      "page_manual": "EVB-34",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        735.83589,
+        558.4559880000003,
+        715.0729108640885
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "ACTIVE TEST",
+      "page_pdf": 34,
+      "page_manual": "EVB-34",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        458.70826718,
+        126.12124055600002,
+        448.56156166300553
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "WORK SUPPORT",
+      "page_pdf": 34,
+      "page_manual": "EVB-34",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        351.368083515,
+        146.25888472809996,
+        341.22137799800555
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EV BATTERY SYSTEM",
+      "page_pdf": 35,
+      "page_manual": "EVB-35",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        233.81998,
+        769.00991,
+        378.19004080000013,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "ECU DIAGNOSIS INFORMATION",
+      "page_pdf": 35,
+      "page_manual": "EVB-35",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        736.25323718,
+        341.2733410002001,
+        719.4660233757127
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EV BATTERY SYSTEM",
+      "page_pdf": 35,
+      "page_manual": "EVB-35",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        713.06999,
+        210.32999999999996,
+        699.7889734254144
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Reference Value",
+      "page_pdf": 35,
+      "page_manual": "EVB-35",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        688.96993,
+        151.66335360000008,
+        677.0701391491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "VALUE ON THE DIAGNOSIS TOOL",
+      "page_pdf": 35,
+      "page_manual": "EVB-35",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        661.2682671800001,
+        236.9140729719999,
+        651.1215616630055
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 35,
+      "page_manual": "EVB-35",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        647.69593,
+        86.03907400000001,
+        638.4523424640885
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Specification data are reference values.",
+      "page_pdf": 35,
+      "page_manual": "EVB-35",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        636.1765384,
+        245.1033315999998,
+        626.9329508640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 35,
+      "page_manual": "EVB-35",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "The following table includes information (items) inapplicable to this vehicle. For information (items) applicable to this vehicle, refer to CONSULT display items.",
+      "page_pdf": 35,
+      "page_manual": "EVB-35",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        624.7165504000001,
+        559.7927020000003,
+        603.9524228640886
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "bbox": [
+        52.03080368041992,
+        650.1950378417969,
+        587.92236328125,
+        505.1856994628906
+      ],
+      "num_rows": 8,
+      "num_cols": 3,
+      "data": [
+        [
+          "Item",
+          "Function",
+          "EVB"
+        ],
+        [
+          "ECU Identification",
+          "LBC parts number can be read.",
+          ""
+        ],
+        [
+          "Self-diagnostic results",
+          "Self-diagnostic results and freeze frame data can be read and erased quickly.*",
+          ""
+        ],
+        [
+          "Data Monitor",
+          "Input/Output data in LBC can be read.",
+          "D"
+        ],
+        [
+          "Active Test",
+          "Activates the actuator via LBC.",
+          ""
+        ],
+        [
+          "Work Support",
+          "This mode enables a technician to adjust some devices faster and more accurately by following the in- dications on the CONSULT.",
+          "E"
+        ],
+        [
+          "CAN Diagnosis",
+          "Displays the CAN diagnosis results.",
+          ""
+        ],
+        [
+          "CANDiagnosis Support Mon- itor",
+          "Displays the CAN communication status.",
+          "F"
+        ]
+      ],
+      "markdown": "| Item | Function | EVB |\n| --- | --- | --- |\n| ECU Identification | LBC parts number can be read. |  |\n| Self-diagnostic results | Self-diagnostic results and freeze frame data can be read and erased quickly.* |  |\n| Data Monitor | Input/Output data in LBC can be read. | D |\n| Active Test | Activates the actuator via LBC. |  |\n| Work Support | This mode enables a technician to adjust some devices faster and more accurately by following the in- dications on the CONSULT. | E |\n| CAN Diagnosis | Displays the CAN diagnosis results. |  |\n| CANDiagnosis Support Mon- itor | Displays the CAN communication status. | F |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "Item",
+          "Function",
+          "EVB"
+        ],
+        [
+          "ECU Identification",
+          "LBC parts number can be read.",
+          ""
+        ],
+        [
+          "Self-diagnostic results",
+          "Self-diagnostic results and freeze frame data can be read and erased quickly.*",
+          ""
+        ],
+        [
+          "Data Monitor",
+          "Input/Output data in LBC can be read.",
+          "D"
+        ],
+        [
+          "Active Test",
+          "Activates the actuator via LBC.",
+          ""
+        ],
+        [
+          "Work Support",
+          "This mode enables a technician to adjust some devices faster and more accurately by following the in- dications on the CONSULT.",
+          "E"
+        ],
+        [
+          "CAN Diagnosis",
+          "Displays the CAN diagnosis results.",
+          ""
+        ],
+        [
+          "CANDiagnosis Support Mon- itor",
+          "Displays the CAN communication status.",
+          "F"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 33,
+      "page_manual": "EVB-33",
+      "section_code": "EVB",
+      "bbox": [
+        51.65046310424805,
+        291.3523254394531,
+        571.6521606445312,
+        67.7625732421875
+      ],
+      "num_rows": 11,
+      "num_cols": 3,
+      "data": [
+        [
+          "Monitored item (Unit)",
+          "Monitored item (Unit)",
+          "Remarks"
+        ],
+        [
+          "DTC",
+          "DTC",
+          "Displays the DTC which caused FFD memory"
+        ],
+        [
+          "BATT ELECTRIC CURRENT",
+          "A",
+          "Displays the Li-ion battery current value"
+        ],
+        [
+          "12V BATTERY VOLTAGE",
+          "mV",
+          "Displays 12V battery power supply voltage"
+        ],
+        [
+          "IR SEN SHORT PULSE",
+          "mV",
+          "Displays the maximum to minimum difference of voltage magnitude of the on- board isolation resistance monitoring system"
+        ],
+        [
+          "SERVICE PLUG INTERLOCK",
+          "OPEN / CLOSE",
+          "Displays the OPEN/CLOSE state of the service plug"
+        ],
+        [
+          "CELL VOLTAGE 01 - 96",
+          "mV",
+          "Displays each cell voltage"
+        ],
+        [
+          "TOTAL BATTERY VOLTAGE",
+          "V",
+          "Displays the total voltage of the Li-ion battery"
+        ],
+        [
+          "BATTERY TEMPERATURE 1",
+          "° C",
+          "Displays the temperature calculated with a signal voltage from battery temper- ature 1"
+        ],
+        [
+          "BATTERY TEMPERATURE 2",
+          "° C",
+          "Displays the temperature calculated with a signal voltage from battery temper- ature 2"
+        ],
+        [
+          "BATTERY TEMPERATURE 4",
+          "° C",
+          "Displays the temperature calculated with a signal voltage from battery temper- ature 4"
+        ]
+      ],
+      "markdown": "| Monitored item (Unit) | Monitored item (Unit) | Remarks |\n| --- | --- | --- |\n| DTC | DTC | Displays the DTC which caused FFD memory |\n| BATT ELECTRIC CURRENT | A | Displays the Li-ion battery current value |\n| 12V BATTERY VOLTAGE | mV | Displays 12V battery power supply voltage |\n| IR SEN SHORT PULSE | mV | Displays the maximum to minimum difference of voltage magnitude of the on- board isolation resistance monitoring system |\n| SERVICE PLUG INTERLOCK | OPEN / CLOSE | Displays the OPEN/CLOSE state of the service plug |\n| CELL VOLTAGE 01 - 96 | mV | Displays each cell voltage |\n| TOTAL BATTERY VOLTAGE | V | Displays the total voltage of the Li-ion battery |\n| BATTERY TEMPERATURE 1 | ° C | Displays the temperature calculated with a signal voltage from battery temper- ature 1 |\n| BATTERY TEMPERATURE 2 | ° C | Displays the temperature calculated with a signal voltage from battery temper- ature 2 |\n| BATTERY TEMPERATURE 4 | ° C | Displays the temperature calculated with a signal voltage from battery temper- ature 4 |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "Monitored item (Unit)",
+          "Monitored item (Unit)",
+          "Remarks"
+        ],
+        [
+          "DTC",
+          "DTC",
+          "Displays the DTC which caused FFD memory"
+        ],
+        [
+          "BATT ELECTRIC CURRENT",
+          "A",
+          "Displays the Li-ion battery current value"
+        ],
+        [
+          "12V BATTERY VOLTAGE",
+          "mV",
+          "Displays 12V battery power supply voltage"
+        ],
+        [
+          "IR SEN SHORT PULSE",
+          "mV",
+          "Displays the maximum to minimum difference of voltage magnitude of the on- board isolation resistance monitoring system"
+        ],
+        [
+          "SERVICE PLUG INTERLOCK",
+          "OPEN / CLOSE",
+          "Displays the OPEN/CLOSE state of the service plug"
+        ],
+        [
+          "CELL VOLTAGE 01 - 96",
+          "mV",
+          "Displays each cell voltage"
+        ],
+        [
+          "TOTAL BATTERY VOLTAGE",
+          "V",
+          "Displays the total voltage of the Li-ion battery"
+        ],
+        [
+          "BATTERY TEMPERATURE 1",
+          "° C",
+          "Displays the temperature calculated with a signal voltage from battery temper- ature 1"
+        ],
+        [
+          "BATTERY TEMPERATURE 2",
+          "° C",
+          "Displays the temperature calculated with a signal voltage from battery temper- ature 2"
+        ],
+        [
+          "BATTERY TEMPERATURE 4",
+          "° C",
+          "Displays the temperature calculated with a signal voltage from battery temper- ature 4"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 34,
+      "page_manual": "EVB-34",
+      "section_code": "EVB",
+      "bbox": [
+        50.810394287109375,
+        702.780158996582,
+        559.997802734375,
+        463.66754150390625
+      ],
+      "num_rows": 12,
+      "num_cols": 3,
+      "data": [
+        [
+          "Monitored item",
+          "Unit",
+          "Remark"
+        ],
+        [
+          "BATT ELECTRIC CURRENT",
+          "A",
+          "Displays the Li-ion battery current value"
+        ],
+        [
+          "12V BATTERY VOLTAGE",
+          "mV",
+          "Displays 12V battery power supply voltage"
+        ],
+        [
+          "IR SEN SHORT PULSE",
+          "mV",
+          "Displays the maximum to minimum difference of voltage magnitude of the on- board isolation resistance monitoring system"
+        ],
+        [
+          "SERVICE PLUG INTERLOCK",
+          "OPEN / CLOSE",
+          "Displays the OPEN/CLOSE state of the service plug"
+        ],
+        [
+          "CELL VOLTAGE 01 - 96",
+          "mV",
+          "Displays each cell voltage"
+        ],
+        [
+          "TOTAL BATTERY VOLTAGE",
+          "V",
+          "Displays the total voltage of the Li-ion battery"
+        ],
+        [
+          "MAXIMUM CELL VOLTAGE",
+          "mV",
+          "Displays the maximum cell voltage value"
+        ],
+        [
+          "MINIMUM CELL VOLTAGE",
+          "mV",
+          "Displays the minimum cell voltage value"
+        ],
+        [
+          "BATTERY TEMPERATURE 1",
+          "° C",
+          "Displays the temperature calculated with a signal voltage from battery temper- ature 1"
+        ],
+        [
+          "BATTERY TEMPERATURE 2",
+          "° C",
+          "Displays the temperature calculated with a signal voltage from battery temper- ature 2"
+        ],
+        [
+          "BATTERY TEMPERATURE 4",
+          "° C",
+          "Displays the temperature calculated with a signal voltage from battery temper- ature 4"
+        ]
+      ],
+      "markdown": "| Monitored item | Unit | Remark |\n| --- | --- | --- |\n| BATT ELECTRIC CURRENT | A | Displays the Li-ion battery current value |\n| 12V BATTERY VOLTAGE | mV | Displays 12V battery power supply voltage |\n| IR SEN SHORT PULSE | mV | Displays the maximum to minimum difference of voltage magnitude of the on- board isolation resistance monitoring system |\n| SERVICE PLUG INTERLOCK | OPEN / CLOSE | Displays the OPEN/CLOSE state of the service plug |\n| CELL VOLTAGE 01 - 96 | mV | Displays each cell voltage |\n| TOTAL BATTERY VOLTAGE | V | Displays the total voltage of the Li-ion battery |\n| MAXIMUM CELL VOLTAGE | mV | Displays the maximum cell voltage value |\n| MINIMUM CELL VOLTAGE | mV | Displays the minimum cell voltage value |\n| BATTERY TEMPERATURE 1 | ° C | Displays the temperature calculated with a signal voltage from battery temper- ature 1 |\n| BATTERY TEMPERATURE 2 | ° C | Displays the temperature calculated with a signal voltage from battery temper- ature 2 |\n| BATTERY TEMPERATURE 4 | ° C | Displays the temperature calculated with a signal voltage from battery temper- ature 4 |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "Monitored item",
+          "Unit",
+          "Remark"
+        ],
+        [
+          "BATT ELECTRIC CURRENT",
+          "A",
+          "Displays the Li-ion battery current value"
+        ],
+        [
+          "12V BATTERY VOLTAGE",
+          "mV",
+          "Displays 12V battery power supply voltage"
+        ],
+        [
+          "IR SEN SHORT PULSE",
+          "mV",
+          "Displays the maximum to minimum difference of voltage magnitude of the on- board isolation resistance monitoring system"
+        ],
+        [
+          "SERVICE PLUG INTERLOCK",
+          "OPEN / CLOSE",
+          "Displays the OPEN/CLOSE state of the service plug"
+        ],
+        [
+          "CELL VOLTAGE 01 - 96",
+          "mV",
+          "Displays each cell voltage"
+        ],
+        [
+          "TOTAL BATTERY VOLTAGE",
+          "V",
+          "Displays the total voltage of the Li-ion battery"
+        ],
+        [
+          "MAXIMUM CELL VOLTAGE",
+          "mV",
+          "Displays the maximum cell voltage value"
+        ],
+        [
+          "MINIMUM CELL VOLTAGE",
+          "mV",
+          "Displays the minimum cell voltage value"
+        ],
+        [
+          "BATTERY TEMPERATURE 1",
+          "° C",
+          "Displays the temperature calculated with a signal voltage from battery temper- ature 1"
+        ],
+        [
+          "BATTERY TEMPERATURE 2",
+          "° C",
+          "Displays the temperature calculated with a signal voltage from battery temper- ature 2"
+        ],
+        [
+          "BATTERY TEMPERATURE 4",
+          "° C",
+          "Displays the temperature calculated with a signal voltage from battery temper- ature 4"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 34,
+      "page_manual": "EVB-34",
+      "section_code": "EVB",
+      "bbox": [
+        50.45947265625,
+        435.8996276855469,
+        561.1716918945312,
+        356.8200988769531
+      ],
+      "num_rows": 3,
+      "num_cols": 3,
+      "data": [
+        [
+          "Test item",
+          "Operation item",
+          "Operation status"
+        ],
+        [
+          "HEATER RELAY UNIT",
+          "On",
+          "Turns ONthe relay built into the heater relay unit to supply high voltage power to the Li-ion battery heater."
+        ],
+        [
+          "HEATER RELAY UNIT",
+          "Off",
+          "Turns OFF the relay built into the heater relay unit to stop high voltage power supply to the Li-ion battery heater."
+        ]
+      ],
+      "markdown": "| Test item | Operation item | Operation status |\n| --- | --- | --- |\n| HEATER RELAY UNIT | On | Turns ONthe relay built into the heater relay unit to supply high voltage power to the Li-ion battery heater. |\n| HEATER RELAY UNIT | Off | Turns OFF the relay built into the heater relay unit to stop high voltage power supply to the Li-ion battery heater. |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "Test item",
+          "Operation item",
+          "Operation status"
+        ],
+        [
+          "HEATER RELAY UNIT",
+          "On",
+          "Turns ONthe relay built into the heater relay unit to supply high voltage power to the Li-ion battery heater."
+        ],
+        [
+          "HEATER RELAY UNIT",
+          "Off",
+          "Turns OFF the relay built into the heater relay unit to stop high voltage power supply to the Li-ion battery heater."
+        ]
+      ]
+    },
+    {
+      "page_pdf": 34,
+      "page_manual": "EVB-34",
+      "section_code": "EVB",
+      "bbox": [
+        55.559852600097656,
+        328.2806091308594,
+        555.8153686523438,
+        222.82940673828125
+      ],
+      "num_rows": 4,
+      "num_cols": 3,
+      "data": [
+        [
+          "Work item",
+          "Description",
+          "Usage"
+        ],
+        [
+          "SAVE BATTERY INFORMATION DATA",
+          "Data saved in LBC is stored in CONSULT.",
+          "When Li-ion battery and LBC are replaced."
+        ],
+        [
+          "WRITE BATTERY INFORMA- TION DATA",
+          "The CONSULT-stored data can be written in LBC.",
+          "When Li-ion battery and LBC are replaced."
+        ],
+        [
+          "CELL VOLTAGE LOSS INSPEC- TION",
+          "This inspection identifies a cell of which cell voltage is on the decrease. If identified, this type of cell maybejudged as an abnormal cell, unless it is replaced.",
+          "When checking voltage of all cells."
+        ]
+      ],
+      "markdown": "| Work item | Description | Usage |\n| --- | --- | --- |\n| SAVE BATTERY INFORMATION DATA | Data saved in LBC is stored in CONSULT. | When Li-ion battery and LBC are replaced. |\n| WRITE BATTERY INFORMA- TION DATA | The CONSULT-stored data can be written in LBC. | When Li-ion battery and LBC are replaced. |\n| CELL VOLTAGE LOSS INSPEC- TION | This inspection identifies a cell of which cell voltage is on the decrease. If identified, this type of cell maybejudged as an abnormal cell, unless it is replaced. | When checking voltage of all cells. |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "Work item",
+          "Description",
+          "Usage"
+        ],
+        [
+          "SAVE BATTERY INFORMATION DATA",
+          "Data saved in LBC is stored in CONSULT.",
+          "When Li-ion battery and LBC are replaced."
+        ],
+        [
+          "WRITE BATTERY INFORMA- TION DATA",
+          "The CONSULT-stored data can be written in LBC.",
+          "When Li-ion battery and LBC are replaced."
+        ],
+        [
+          "CELL VOLTAGE LOSS INSPEC- TION",
+          "This inspection identifies a cell of which cell voltage is on the decrease. If identified, this type of cell maybejudged as an abnormal cell, unless it is replaced.",
+          "When checking voltage of all cells."
+        ]
+      ]
+    },
+    {
+      "page_pdf": 35,
+      "page_manual": "EVB-35",
+      "section_code": "EVB",
+      "bbox": [
+        50.92106628417969,
+        593.1570281982422,
+        571.0335083007812,
+        33.186279296875
+      ],
+      "num_rows": 36,
+      "num_cols": 4,
+      "data": [
+        [
+          "Monitor item",
+          "",
+          "Condition",
+          "Values / Status"
+        ],
+        [
+          "BATT ELECTRIC CURRENT",
+          "READY",
+          "Stop the vehicle",
+          "Approx. ( - 10) - (+20) A"
+        ],
+        [
+          "12V BATTERY VOLTAGE",
+          "READY",
+          "READY",
+          "Approx. 1,100 - 1,400 mV"
+        ],
+        [
+          "IR SEN SHORT PULSE",
+          "READY",
+          "READY",
+          "Approx. 4,100 - 4,300 mV"
+        ],
+        [
+          "SERVICE PLUG INTER- LOCK",
+          "READY",
+          "Connect service plug",
+          "REQ"
+        ],
+        [
+          "SERVICE PLUG INTER- LOCK",
+          "READY",
+          "Disconnect service plug",
+          "NOT REQ"
+        ],
+        [
+          "CELL VOLTAGE 01",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 01",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 02",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 02",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 03",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 03",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 04",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 04",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 05",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 05",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 06",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 06",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 07",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 07",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 08",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 08",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 09",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 09",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 10",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 10",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 11",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 11",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 12",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 12",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 13",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 13",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 14",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 14",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 15",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 15",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ]
+      ],
+      "markdown": "| Monitor item |  | Condition | Values / Status |\n| --- | --- | --- | --- |\n| BATT ELECTRIC CURRENT | READY | Stop the vehicle | Approx. ( - 10) - (+20) A |\n| 12V BATTERY VOLTAGE | READY | READY | Approx. 1,100 - 1,400 mV |\n| IR SEN SHORT PULSE | READY | READY | Approx. 4,100 - 4,300 mV |\n| SERVICE PLUG INTER- LOCK | READY | Connect service plug | REQ |\n| SERVICE PLUG INTER- LOCK | READY | Disconnect service plug | NOT REQ |\n| CELL VOLTAGE 01 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 01 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 02 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 02 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 03 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 03 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 04 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 04 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 05 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 05 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 06 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 06 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 07 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 07 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 08 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 08 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 09 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 09 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 10 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 10 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 11 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 11 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 12 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 12 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 13 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 13 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 14 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 14 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 15 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 15 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "Monitor item",
+          "",
+          "Condition",
+          "Values / Status"
+        ],
+        [
+          "BATT ELECTRIC CURRENT",
+          "READY",
+          "Stop the vehicle",
+          "Approx. ( - 10) - (+20) A"
+        ],
+        [
+          "12V BATTERY VOLTAGE",
+          "READY",
+          "READY",
+          "Approx. 1,100 - 1,400 mV"
+        ],
+        [
+          "IR SEN SHORT PULSE",
+          "READY",
+          "READY",
+          "Approx. 4,100 - 4,300 mV"
+        ],
+        [
+          "SERVICE PLUG INTER- LOCK",
+          "READY",
+          "Connect service plug",
+          "REQ"
+        ],
+        [
+          "SERVICE PLUG INTER- LOCK",
+          "READY",
+          "Disconnect service plug",
+          "NOT REQ"
+        ],
+        [
+          "CELL VOLTAGE 01",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 01",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 02",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 02",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 03",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 03",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 04",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 04",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 05",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 05",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 06",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 06",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 07",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 07",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 08",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 08",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 09",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 09",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 10",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 10",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 11",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 11",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 12",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 12",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 13",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 13",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 14",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 14",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 15",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 15",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ]
+      ]
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_31_raster_1.png",
+      "page_pdf": 31,
+      "page_manual": "EVB-31",
+      "section_code": "EVB",
+      "bbox": [
+        67.5,
+        678.179931640625,
+        79.2599868774414,
+        686.8199462890625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_31_raster_2.png",
+      "page_pdf": 31,
+      "page_manual": "EVB-31",
+      "section_code": "EVB",
+      "bbox": [
+        88.5,
+        67.1400146484375,
+        524.7599487304688,
+        664.139892578125
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

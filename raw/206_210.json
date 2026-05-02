@@ -1,0 +1,1934 @@
+{
+  "schema_version": "1.0",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-206\nRevision: October 2013\n2013 LEAF",
+    "page_start": 206,
+    "page_end": 210,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "206": [
+        "EVB-206",
+        "EVB",
+        "EVB-206\nRevision: October 2013\n2013 LEAF"
+      ],
+      "207": [
+        "EVB-207",
+        "EVB",
+        "EVB-207\nbattery pack.\nRevision: October 2013\n2013 LEAF"
+      ],
+      "208": [
+        "EVB-208",
+        "EVB",
+        "EVB-208\nRevision: October 2013\n2013 LEAF"
+      ],
+      "209": [
+        "EVB-209",
+        "EVB",
+        "EVB-209\nRevision: October 2013\n2013 LEAF"
+      ],
+      "210": [
+        "EVB-210",
+        "EVB",
+        "EVB-210\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "LI-ION BATTERY",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        251.87999,
+        769.00991,
+        359.53156759999985,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< UNIT DISASSEMBLY AND ASSEMBLY >",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        265.84890060000004,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Use the windshield cutter and cut the adhesive in the order from 1 to 4 as shown in the figure.",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        732.83589,
+        504.9259320000005,
+        723.5923024640884
+      ]
+    },
+    {
+      "text": "Battery pack upper case",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        83.16,
+        370.21426718,
+        174.28132950830008,
+        362.72376497792266
+      ]
+    },
+    {
+      "text": "Paint sealant",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        83.16,
+        353.7139482761,
+        132.11875467080003,
+        346.22344607402266
+      ]
+    },
+    {
+      "text": ": Paint sealant mark",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        83.16,
+        337.9935576941,
+        158.01103827629993,
+        330.50305549202267
+      ]
+    },
+    {
+      "text": ": Battery front",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        83.16,
+        321.6734370032,
+        134.06066536619997,
+        314.18293480112266
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        72.000012,
+        301.316238,
+        123.13617599999996,
+        292.0726504640884
+      ]
+    },
+    {
+      "text": "When cutting the adhesive, be careful to avoid scratching the battery pack coating to the maximum extent possible.",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        72.000012,
+        289.795698,
+        558.5305295999997,
+        269.03271886408834
+      ]
+    },
+    {
+      "text": "The paint sealant is set between the paint sealant marks stamped on the battery pack upper case (between to ). Therefore be careful not to damage the paint sealant when cutting the adhesive.",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        71.99990759999997,
+        266.8163184,
+        558.5154959999998,
+        233.03361526408844
+      ]
+    },
+    {
+      "text": "Because the paint sealant functions to release pressure from inside the battery pack, if the paint sealant is damaged beyond the limit, the battery pack lower case must be replaced. If the paint sealant  damage  is  less  than  the  limit,  repair  by  applying  primer  (adhesive  primer:  999MP43533PP).",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        71.99980319999997,
+        230.7578112,
+        558.6917232000008,
+        187.0154524640884
+      ]
+    },
+    {
+      "text": "Paint sealant damage limit:",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        86.52,
+        171.77592000000004,
+        221.45804400000011,
+        162.53233246408843
+      ]
+    },
+    {
+      "text": "Continuous length of undamaged section: : 210 mm (8.27 in) or more",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        98.580288,
+        156.29548799999998,
+        444.4725215999992,
+        147.05190046408836
+      ]
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        71.99980319999997,
+        138.83903999999995,
+        104.52082079999997,
+        129.59545246408834
+      ]
+    },
+    {
+      "text": "Because there is no clearance at the embossed part, cut the adhesive there last.",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        71.99980319999997,
+        127.31849999999997,
+        453.2874996000004,
+        118.07491246408836
+      ]
+    },
+    {
+      "text": "Battery pack lower case",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        244.63984867430008,
+        370.21426718,
+        334.43295661260004,
+        362.72376497792266
+      ]
+    },
+    {
+      "text": "Adhesive",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        244.72478717470003,
+        353.7139482761,
+        279.55236414200016,
+        346.22344607402266
+      ]
+    },
+    {
+      "text": "LI-ION BATTERY",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        252.17998,
+        769.00991,
+        359.8315575999998,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< UNIT DISASSEMBLY AND ASSEMBLY >",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        266.2087416,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Set the windshield cutter (A) at an angle of 90 ° to the surface of the battery case.",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        73.26001,
+        738.83217,
+        456.0187024000002,
+        726.05361
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "Hold the windshield cutter facing toward the grip, and cut the adhesive while holding the blade level.",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        73.2598012,
+        593.995962,
+        543.7467532000004,
+        584.7523744640885
+      ]
+    },
+    {
+      "text": "Use piano wire (A) to cut the adhesive at the battery pack corners.",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.4591928,
+        571.495674,
+        369.5197528000005,
+        550.7326948640886
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        73.2598012,
+        548.4568908000001,
+        124.43668120000001,
+        539.2133032640886
+      ]
+    },
+    {
+      "text": "When cutting the adhesive, be careful to avoid scratching the battery pack coating and paint sealant to the maximum extent possible. NOTE:",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        73.2598012,
+        536.9969028000002,
+        369.5685076000001,
+        493.25339566408866
+      ]
+    },
+    {
+      "text": "Press the piano wire against the adhesive at the battery pack corner, and pull it in alternate directions for cutting of adhesive.",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        73.2598012,
+        490.97759160000027,
+        369.5887612000002,
+        470.21461246408865
+      ]
+    },
+    {
+      "text": "Use the windshield cutter (A) for cutting adhesive at the embossed locations.",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.4591928,
+        429.05795160000025,
+        428.17052440000066,
+        419.81436406408864
+      ]
+    },
+    {
+      "text": "Insert a plastic remover tool (B) into the embossed locations to open a clearance. CAUTION:",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.4591928,
+        297.1777836000003,
+        449.00364880000075,
+        276.47420806408866
+      ]
+    },
+    {
+      "text": "Do not press the remover tool farther in than necessary. Doing so may deform the battery pack upper case.",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        73.25980119999997,
+        274.1984040000002,
+        559.7907363999997,
+        253.4342764640886
+      ]
+    },
+    {
+      "text": "Tilt the windshield cutter blade at an angle and cut the adhesive at the embossed locations. CAUTION:",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45919279999997,
+        248.2174200000003,
+        495.44076880000046,
+        227.4544408640886
+      ]
+    },
+    {
+      "text": "When cutting the adhesive, be careful to avoid scratching the battery pack coating to the maximum extent possible.",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        73.25980119999991,
+        225.17863680000028,
+        559.8614151999999,
+        204.4750612640886
+      ]
+    },
+    {
+      "text": "Remove the battery pack upper case.",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45919279999991,
+        199.19880120000028,
+        246.97043920000002,
+        189.95521366408866
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        73.25980119999991,
+        184.67895360000023,
+        127.30976919999992,
+        175.4353660640886
+      ]
+    },
+    {
+      "text": "To prevent electric shock, wear insulated protective gear.",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        100.13977359999991,
+        162.41878560000032,
+        384.4659700000001,
+        153.1751980640886
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        73.26000999999988,
+        115.7989656000002,
+        124.43688999999989,
+        106.5553780640887
+      ]
+    },
+    {
+      "text": "Check that the adhesive is fully cut before removing. Use of excessive force during removal may deform the battery pack upper case.",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        73.26000999999988,
+        104.27957400000025,
+        559.8663219999994,
+        83.51544646408865
+      ]
+    },
+    {
+      "text": "When removing the battery pack upper case, be careful that cutting particles do not enter the battery pack.",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        73.26000999999988,
+        81.29904600000032,
+        559.8809379999999,
+        60.53606686408864
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "< UNIT DISASSEMBLY AND ASSEMBLY >",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        265.84890060000004,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "If  adhesive cutting particles enter the battery pack, clean (use of air blow is prohibited) when assembling so that no particles remain on the battery module, bus bar, and high-voltage harness.",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        72.0,
+        735.83589,
+        558.5999435999998,
+        703.6129228640885
+      ]
+    },
+    {
+      "text": "Operation must be performed by 2 persons. Be careful that the battery pack upper case does not contact the battery module.",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        71.99979120000003,
+        701.3371188000001,
+        558.5267591999999,
+        680.5729912640886
+      ]
+    },
+    {
+      "text": "INSTALLATION",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        672.36829718,
+        132.09992777300008,
+        662.2215916630055
+      ]
+    },
+    {
+      "text": "To remove remaining adhesive on the battery pack upper case and battery pack lower case ,  use a scraper (B), and cut so that the surface is smooth, leaving approximately 1 - 2 mm (0.04 - 0.08 in) of adhesive behind.",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        654.89594,
+        558.5272932000005,
+        621.7113444640885
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        72.000012,
+        502.13472800000005,
+        123.13617599999996,
+        492.89114046408844
+      ]
+    },
+    {
+      "text": "Because airtightness leakage is likely to occur, cut the seal in such a way that burrs are not produced.",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        72.000012,
+        490.61533640000005,
+        558.4356300000001,
+        469.8523572640884
+      ]
+    },
+    {
+      "text": "Be careful not to damage the paint sealant.",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        72.00011639999997,
+        467.63595680000003,
+        293.6429867999998,
+        458.3923692640884
+      ]
+    },
+    {
+      "text": "-If the paint sealant on a straight section is damaged in excess of the limit, the battery pack lower case must be replaced. If  the  paint  sealant  damage  is  less  than  the  limit,  repair  by  applying primer (adhesive primer: 999MP-43533PP).",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        72.00011639999997,
+        456.11541680000005,
+        558.6026699999994,
+        423.8924496640884
+      ]
+    },
+    {
+      "text": "Paint sealant damage limit:",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        86.51996400000002,
+        408.5983832,
+        221.45800800000015,
+        399.3547956640884
+      ]
+    },
+    {
+      "text": "Continuous length of undamaged section: : 210 mm (8.27 in) or more",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        98.58025200000002,
+        393.1179512,
+        459.40836719999993,
+        383.8743636640884
+      ]
+    },
+    {
+      "text": "-If the paint sealant damage on a corner is damaged, repair by applying primer (adhesive primer: 999MP-43533PP).",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        72.00011639999997,
+        375.6564248,
+        558.5296943999999,
+        354.8922972640884
+      ]
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        72.00011640000002,
+        352.67589680000003,
+        104.52113400000002,
+        343.4323092640884
+      ]
+    },
+    {
+      "text": "Leave 1 - 2 mm (0.04 - 0.08 in) of adhesive so that the battery pack coating surface and paint sealant are not damaged.",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        72.00011640000002,
+        341.1565052,
+        558.5311559999996,
+        320.39237766408843
+      ]
+    },
+    {
+      "text": "Sharpen the blade of the scraper.",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        72.00011640000002,
+        318.17597720000003,
+        235.31512440000026,
+        308.9323896640884
+      ]
+    },
+    {
+      "text": "Repair scratches to the battery pack upper case by the following procedure.",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010440000003,
+        303.65612960000004,
+        422.0219964000006,
+        294.4125420640884
+      ]
+    },
+    {
+      "text": "Protect the seal with masking tape . NOTE:",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010440000003,
+        288.23614520000007,
+        246.9567684000002,
+        267.47316606408845
+      ]
+    },
+    {
+      "text": "If  primer surfacer (anti-corrosion primer) contacts the seal, the adhesive strength is reduced.",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        72.00011640000002,
+        265.1973620000001,
+        368.19794999999976,
+        244.49378646408843
+      ]
+    },
+    {
+      "text": "Spray primer surfacer (anti-corrosion primer) (B) into the cracks in the battery pack upper case.",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010440000003,
+        239.2175264,
+        368.18249879999985,
+        218.45454726408843
+      ]
+    },
+    {
+      "text": "LI-ION BATTERY",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        252.17998,
+        769.00991,
+        359.8315575999998,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< UNIT DISASSEMBLY AND ASSEMBLY >",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        266.2087416,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Install a carabiner (A) onto the bracket of the battery pack upper case.",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        735.83589,
+        369.6145300000002,
+        715.0729108640885
+      ]
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        73.25946999999996,
+        712.8565104,
+        105.83853399999998,
+        703.6129228640885
+      ]
+    },
+    {
+      "text": "This is to provide a handle for use after the adhesive is applied and prevent adhesive from adhering to the operator's hands.",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        73.25946999999996,
+        701.3371188000001,
+        369.5579452000005,
+        680.5741396640886
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "Apply dam rubber (KA390-0059U) on the inside of the old adhesive on the battery pack lower case.",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45886159999996,
+        592.4980308000002,
+        557.9207056,
+        583.2544432640886
+      ]
+    },
+    {
+      "text": "C : 10 mm (0.39 in)",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "caption",
+      "bbox": [
+        87.84,
+        450.55426718,
+        169.0743696216002,
+        443.0637649779227
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        73.25832159999999,
+        435.1180584000002,
+        127.3082896,
+        425.8744708640886
+      ]
+    },
+    {
+      "text": "To prevent electric shock, wear insulated protective gear.",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        100.13829399999999,
+        412.8578904000002,
+        384.46449040000016,
+        403.6143028640886
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        73.25853039999996,
+        366.2380704000002,
+        124.43541039999997,
+        356.9944828640886
+      ]
+    },
+    {
+      "text": "If dam rubber is already applied there, replace it with new dam rubber. NOTE:",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        73.25853039999996,
+        354.7186788000002,
+        421.1736183999994,
+        333.95569966408857
+      ]
+    },
+    {
+      "text": "Apply the dam rubber so that adhesive does not enter the inner side. If the adhesive enters the inner side, then the next time the battery pack is disassembled, the windshield cutter may not be able to reach the adhesive and removing the battery pack upper case may be difficult.",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        73.25853039999996,
+        331.7392992000002,
+        559.7989659999998,
+        299.45692846408855
+      ]
+    },
+    {
+      "text": "Apply adhesive (999MP-57302NP) to the battery pack lower case as shown in the figure.",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.457921999999954,
+        286.20022800000015,
+        483.8583015999998,
+        276.95664046408854
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        73.25832159999993,
+        271.7397840000001,
+        127.30828959999994,
+        262.4961964640886
+      ]
+    },
+    {
+      "text": "To prevent electric shock, wear insulated protective gear.",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        100.13829399999993,
+        249.4202124000002,
+        384.4644904000001,
+        240.17662486408858
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 210,
+      "page_manual": "EVB-210",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        66.18001,
+        244.39438717999997,
+        71.82283667,
+        236.90388497792264
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 210,
+      "page_manual": "EVB-210",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        66.18001,
+        214.45441179,
+        71.82283667,
+        206.96390958792267
+      ]
+    },
+    {
+      "text": ": 5 mm (0.20 in)",
+      "page_pdf": 210,
+      "page_manual": "EVB-210",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        83.160942072,
+        244.39438717999997,
+        142.51975623599998,
+        236.90388497792264
+      ]
+    },
+    {
+      "text": ": Old adhesive",
+      "page_pdf": 210,
+      "page_manual": "EVB-210",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        83.160096071,
+        230.89474922299996,
+        137.31448128320002,
+        223.40424702092264
+      ]
+    },
+    {
+      "text": ": 50 mm (1.97 in) or more",
+      "page_pdf": 210,
+      "page_manual": "EVB-210",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        83.15925007,
+        214.45441179,
+        178.64518333740006,
+        206.96390958792267
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 210,
+      "page_manual": "EVB-210",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        72.0,
+        197.03602,
+        123.13616399999997,
+        187.7924324640884
+      ]
+    },
+    {
+      "text": "Because there is a risk of airtightness leakage, apply the adhesive so that there are no seams or overlaps.",
+      "page_pdf": 210,
+      "page_manual": "EVB-210",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        72.0,
+        185.51662839999995,
+        558.6478631999998,
+        164.81305286408838
+      ]
+    },
+    {
+      "text": "Complete installation of the battery pack upper case before the adhesive surface hardens. The adhesive begins to harden in as little as 12 minutes. [Humidity: 80%, Temperature: 35 ° C (95 ° F)]",
+      "page_pdf": 210,
+      "page_manual": "EVB-210",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        72.0,
+        162.53724880000004,
+        558.5705028000001,
+        141.23557719999997
+      ]
+    },
+    {
+      "text": "Before installing the battery pack upper case, check that there are no locations of insufficient adhesive. If there is insufficient adhesive, correct the location. (If the adhesive height is lower than the height of the dam rubber, then the amount of adhesive is insufficient.)",
+      "page_pdf": 210,
+      "page_manual": "EVB-210",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        72.0,
+        139.5578691999999,
+        558.5834483999997,
+        107.27549846408829
+      ]
+    },
+    {
+      "text": "Do not apply too much adhesive as doing so may make work difficult the next time the battery pack upper case is removed.",
+      "page_pdf": 210,
+      "page_manual": "EVB-210",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        72.00083519999998,
+        105.05909799999995,
+        558.5339628000004,
+        84.29611886408838
+      ]
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 210,
+      "page_manual": "EVB-210",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        72.00073079999999,
+        82.02031479999994,
+        104.52174839999998,
+        72.77672726408832
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 210,
+      "page_manual": "EVB-210",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        227.78142901799998,
+        244.39438717999997,
+        233.424255688,
+        236.90388497792264
+      ]
+    },
+    {
+      "text": ": 10 mm (0.39 in)",
+      "page_pdf": 210,
+      "page_manual": "EVB-210",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        244.76236109,
+        244.39438717999997,
+        308.7927927759999,
+        236.90388497792264
+      ]
+    },
+    {
+      "text": ": Dam rubber",
+      "page_pdf": 210,
+      "page_manual": "EVB-210",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        244.75322427920003,
+        230.89474922299996,
+        294.1344718494002,
+        223.40424702092264
+      ]
+    }
+  ],
+  "tables": [],
+  "images": [
+    {
+      "file": "images/page_206_raster_1.png",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "bbox": [
+        87.239990234375,
+        290.8199462890625,
+        523.5,
+        408.179931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_206_raster_2.png",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "bbox": [
+        87.239990234375,
+        70.14002990722656,
+        523.5,
+        279.300048828125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_206_raster_3.png",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "bbox": [
+        66.17999267578125,
+        422.219970703125,
+        76.13998413085938,
+        432.1199645996094
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_206_raster_4.png",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "bbox": [
+        227.75997924804688,
+        422.219970703125,
+        237.719970703125,
+        432.1199645996094
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_206_raster_5.png",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "bbox": [
+        66.17999267578125,
+        438.65997314453125,
+        76.13998413085938,
+        448.6199645996094
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_206_raster_6.png",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "bbox": [
+        227.75997924804688,
+        438.65997314453125,
+        237.719970703125,
+        448.6199645996094
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_206_raster_7.png",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "bbox": [
+        66.17999267578125,
+        454.43994140625,
+        74.69999694824219,
+        462.89996337890625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_206_raster_8.png",
+      "page_pdf": 206,
+      "page_manual": "EVB-206",
+      "section_code": "EVB",
+      "bbox": [
+        66.17999267578125,
+        470.7599792480469,
+        78.0,
+        479.3999938964844
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_207_raster_1.png",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        221.0399627685547,
+        559.8599853515625,
+        351.4199523925781
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_207_raster_2.png",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "bbox": [
+        88.5,
+        67.13993835449219,
+        524.760009765625,
+        184.49993896484375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_207_raster_3.png",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "bbox": [
+        88.5,
+        373.91998291015625,
+        524.760009765625,
+        491.27996826171875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_207_raster_4.jpeg",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "bbox": [
+        73.2599868774414,
+        619.3199462890625,
+        100.15990447998047,
+        638.0999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_207_raster_5.png",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "bbox": [
+        73.2599868774414,
+        641.5798950195312,
+        105.17998504638672,
+        672.179931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_207_raster_6.png",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "bbox": [
+        105.17999267578125,
+        641.5798950195312,
+        137.0399932861328,
+        672.179931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_207_raster_7.png",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "bbox": [
+        137.03997802734375,
+        641.5798950195312,
+        168.95997619628906,
+        672.179931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_207_raster_8.png",
+      "page_pdf": 207,
+      "page_manual": "EVB-207",
+      "section_code": "EVB",
+      "bbox": [
+        168.95997619628906,
+        641.5798950195312,
+        200.87997436523438,
+        672.179931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_208_raster_1.png",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "bbox": [
+        536.699951171875,
+        149.10000610351562,
+        546.5999145507812,
+        159.05999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_208_raster_2.png",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "bbox": [
+        514.8599243164062,
+        136.67996215820312,
+        524.7598876953125,
+        146.5799560546875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_208_raster_3.png",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "bbox": [
+        87.239990234375,
+        172.0199432373047,
+        523.5,
+        289.37994384765625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_208_raster_4.png",
+      "page_pdf": 208,
+      "page_manual": "EVB-208",
+      "section_code": "EVB",
+      "bbox": [
+        374.3399658203125,
+        503.33990478515625,
+        558.5399780273438,
+        633.7799072265625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_209_raster_1.png",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "bbox": [
+        234.4199676513672,
+        199.07998657226562,
+        244.3799591064453,
+        209.03997802734375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_209_raster_2.png",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        56.70002746582031,
+        559.8599853515625,
+        187.08001708984375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_209_raster_3.png",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "bbox": [
+        400.3199768066406,
+        199.07998657226562,
+        410.27996826171875,
+        209.03997802734375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_209_raster_4.png",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "bbox": [
+        88.5,
+        210.47996520996094,
+        524.760009765625,
+        327.89996337890625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_209_raster_5.jpeg",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "bbox": [
+        73.2599868774414,
+        368.8799743652344,
+        100.15990447998047,
+        387.65997314453125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_209_raster_6.png",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "bbox": [
+        73.2599868774414,
+        391.1999816894531,
+        105.17998504638672,
+        421.79998779296875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_209_raster_7.png",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "bbox": [
+        105.17999267578125,
+        391.1999816894531,
+        137.0399932861328,
+        421.79998779296875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_209_raster_8.png",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "bbox": [
+        137.03997802734375,
+        391.1999816894531,
+        168.95997619628906,
+        421.79998779296875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_209_raster_9.png",
+      "page_pdf": 209,
+      "page_manual": "EVB-209",
+      "section_code": "EVB",
+      "bbox": [
+        168.95997619628906,
+        391.1999816894531,
+        200.87997436523438,
+        421.79998779296875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_210_raster_1.png",
+      "page_pdf": 210,
+      "page_manual": "EVB-210",
+      "section_code": "EVB",
+      "bbox": [
+        66.17999267578125,
+        561.5399780273438,
+        76.13998413085938,
+        571.43994140625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_210_raster_2.png",
+      "page_pdf": 210,
+      "page_manual": "EVB-210",
+      "section_code": "EVB",
+      "bbox": [
+        87.239990234375,
+        67.13998413085938,
+        523.5,
+        534.0
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_210_raster_3.png",
+      "page_pdf": 210,
+      "page_manual": "EVB-210",
+      "section_code": "EVB",
+      "bbox": [
+        227.75997924804688,
+        561.5399780273438,
+        237.719970703125,
+        571.43994140625
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

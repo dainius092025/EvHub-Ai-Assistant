@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.1",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-66\nRevision: October 2013\n2013 LEAF",
+    "page_start": 66,
+    "page_end": 70,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "66": [
+        "EVB-66",
+        "EVB",
+        "EVB-66\nRevision: October 2013\n2013 LEAF"
+      ],
+      "67": [
+        "EVB-67",
+        "EVB",
+        "EVB-67\nRevision: October 2013\n2013 LEAF"
+      ],
+      "68": [
+        "EVB-68",
+        "EVB",
+        "EVB-68\nRevision: October 2013\n2013 LEAF"
+      ],
+      "69": [
+        "EVB-69",
+        "EVB",
+        "EVB-69\nRevision: October 2013\n2013 LEAF"
+      ],
+      "70": [
+        "EVB-70",
+        "EVB",
+        "EVB-70\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "AACIA0096GB",
+      "page_pdf": 66,
+      "page_manual": "EVB-66",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        481.44,
+        142.71564,
+        514.5819,
+        138.10914000000002
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "AACIA0126GB",
+      "page_pdf": 69,
+      "page_manual": "EVB-69",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        481.73999,
+        142.71564,
+        514.88189,
+        138.10914000000002
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 69,
+      "page_manual": "EVB-69",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "AACIA0127GB",
+      "page_pdf": 70,
+      "page_manual": "EVB-70",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        481.44,
+        142.71564,
+        514.5819,
+        138.10914000000002
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 66,
+      "page_manual": "EVB-66",
+      "section_code": "EVB",
+      "bbox": [
+        105.14781188964844,
+        734.6753196716309,
+        517.6779174804688,
+        135.6514892578125
+      ],
+      "num_rows": 1,
+      "num_cols": 1,
+      "data": [
+        [
+          ""
+        ]
+      ],
+      "markdown": "|  |\n| --- |",
+      "tableformer": true,
+      "table_type": "index_table",
+      "data_raw": [
+        [
+          ""
+        ]
+      ]
+    },
+    {
+      "page_pdf": 67,
+      "page_manual": "EVB-67",
+      "section_code": "EVB",
+      "bbox": [
+        104.51374816894531,
+        725.4992218017578,
+        588.4965209960938,
+        130.30731201171875
+      ],
+      "num_rows": 11,
+      "num_cols": 2,
+      "data": [
+        [
+          "",
+          "A"
+        ],
+        [
+          "",
+          "B"
+        ],
+        [
+          "",
+          "E"
+        ],
+        [
+          "",
+          "G"
+        ],
+        [
+          "",
+          "I"
+        ],
+        [
+          "",
+          "J"
+        ],
+        [
+          "",
+          "K"
+        ],
+        [
+          "",
+          "L"
+        ],
+        [
+          "",
+          "N"
+        ],
+        [
+          "",
+          "O"
+        ],
+        [
+          "",
+          ""
+        ]
+      ],
+      "markdown": "|  | A |\n| --- | --- |\n|  | B |\n|  | E |\n|  | G |\n|  | I |\n|  | J |\n|  | K |\n|  | L |\n|  | N |\n|  | O |\n|  |  |",
+      "tableformer": true,
+      "table_type": "index_table",
+      "data_raw": [
+        [
+          "",
+          "A"
+        ],
+        [
+          "",
+          "B"
+        ],
+        [
+          "",
+          "E"
+        ],
+        [
+          "",
+          "G"
+        ],
+        [
+          "",
+          "I"
+        ],
+        [
+          "",
+          "J"
+        ],
+        [
+          "",
+          "K"
+        ],
+        [
+          "",
+          "L"
+        ],
+        [
+          "",
+          "N"
+        ],
+        [
+          "",
+          "O"
+        ],
+        [
+          "AACIA0124GB",
+          ""
+        ]
+      ]
+    },
+    {
+      "page_pdf": 70,
+      "page_manual": "EVB-70",
+      "section_code": "EVB",
+      "bbox": [
+        104.10273742675781,
+        714.1164855957031,
+        516.1139526367188,
+        154.0517578125
+      ],
+      "num_rows": 0,
+      "num_cols": 0,
+      "data": [],
+      "markdown": "",
+      "tableformer": false,
+      "table_type": "empty"
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_66_raster_1.png",
+      "page_pdf": 66,
+      "page_manual": "EVB-66",
+      "section_code": "EVB",
+      "bbox": [
+        87.72000122070312,
+        58.67999267578125,
+        523.97998046875,
+        655.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_67_raster_1.png",
+      "page_pdf": 67,
+      "page_manual": "EVB-67",
+      "section_code": "EVB",
+      "bbox": [
+        88.01998901367188,
+        58.67999267578125,
+        524.2799072265625,
+        655.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_68_raster_1.png",
+      "page_pdf": 68,
+      "page_manual": "EVB-68",
+      "section_code": "EVB",
+      "bbox": [
+        87.72000122070312,
+        58.67999267578125,
+        523.97998046875,
+        655.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_69_raster_1.png",
+      "page_pdf": 69,
+      "page_manual": "EVB-69",
+      "section_code": "EVB",
+      "bbox": [
+        88.01998901367188,
+        58.67999267578125,
+        524.2799072265625,
+        655.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_70_raster_1.png",
+      "page_pdf": 70,
+      "page_manual": "EVB-70",
+      "section_code": "EVB",
+      "bbox": [
+        87.72000122070312,
+        58.67999267578125,
+        523.97998046875,
+        655.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

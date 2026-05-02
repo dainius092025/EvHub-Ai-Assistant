@@ -1,0 +1,3103 @@
+{
+  "schema_version": "1.0",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-151\nRevision: October 2013\n2013 LEAF",
+    "page_start": 151,
+    "page_end": 155,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "151": [
+        "EVB-151",
+        "EVB",
+        "EVB-151\nRevision: October 2013\n2013 LEAF"
+      ],
+      "152": [
+        "EVB-152",
+        "EVB",
+        "EVB-152\nRevision: October 2013\n2013 LEAF"
+      ],
+      "153": [
+        "EVB-153",
+        "EVB",
+        "EVB-153\nRevision: October 2013\n2013 LEAF"
+      ],
+      "154": [
+        "EVB-154",
+        "EVB",
+        "EVB-154\nGO TO 2.\n2.CHECK HARNESS\nRevision: October 2013\n2013 LEAF"
+      ],
+      "155": [
+        "EVB-155",
+        "EVB",
+        "EVB-155\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Remove battery pack upper case. Refer to EVB-204, \"BATTERY PACK UPPER CASE : Removal and Installation\".",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        735.83589,
+        559.8574299999999,
+        715.0723424640885
+      ]
+    },
+    {
+      "text": ">> GO TO 3.",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.040262,
+        695.3356384,
+        155.30129919999996,
+        686.0920508640885
+      ]
+    },
+    {
+      "text": "3.CHECK CONNECTION STATUS",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        684.26397,
+        219.9475199999999,
+        668.3267501104972
+      ]
+    },
+    {
+      "text": "Check connection status of Li-ion battery controller harness connector and current sensor harness connector. Is the inspection result normal?",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.459796,
+        661.0159583999999,
+        558.8883839999991,
+        637.2525232640884
+      ]
+    },
+    {
+      "text": "YES >> GO TO 4.",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        631.9758999999999,
+        155.30461,
+        622.7323124640884
+      ]
+    },
+    {
+      "text": "NO",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        620.515912,
+        74.77566999999999,
+        611.2723244640885
+      ]
+    },
+    {
+      "text": ">> Recover the connection status.",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.03448999999999,
+        620.515912,
+        253.67060319999996,
+        611.2723244640885
+      ]
+    },
+    {
+      "text": "4.CHECK HARNESS BETWEEN CURRENT SENSOR AND LI-ION BATTERY CONTROLLER",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        609.38396,
+        496.8465960000004,
+        593.4467401104972
+      ]
+    },
+    {
+      "text": "Check continuity between current sensor harness connector and Li-ion battery controller harness connector.",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.45979599999998,
+        586.1359484,
+        552.6017291999996,
+        576.8923608640885
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.45864759999995,
+        479.2762844,
+        198.38537040000003,
+        470.0326968640884
+      ]
+    },
+    {
+      "text": "YES >> GO TO 5.",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        464.7559,
+        155.30461,
+        455.5123124640884
+      ]
+    },
+    {
+      "text": "NO",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        453.23536,
+        74.774626,
+        443.9917724640884
+      ]
+    },
+    {
+      "text": ">> Repair Harness or connector.",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.032402,
+        453.23536,
+        246.04073799999978,
+        443.9917724640884
+      ]
+    },
+    {
+      "text": "5.CHECK CURRENT SENSOR",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        442.16398999999996,
+        205.18118399999992,
+        426.2267701104972
+      ]
+    },
+    {
+      "text": "Check resistance of current sensor.",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.459796,
+        418.9159784,
+        217.43252399999992,
+        409.67239086408836
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459796,
+        327.47609,
+        198.38651880000006,
+        318.2325024640884
+      ]
+    },
+    {
+      "text": "YES >> GO TO 6.",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        313.01591,
+        155.30461,
+        303.7723224640884
+      ]
+    },
+    {
+      "text": "NO",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        301.4965184,
+        74.774626,
+        292.2529308640884
+      ]
+    },
+    {
+      "text": ">> Replace current sensor.",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.032402,
+        301.4965184,
+        220.59845799999985,
+        292.2529308640884
+      ]
+    },
+    {
+      "text": "6.CHECK LI-ION BATTERY CONTROLLER",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        290.42409,
+        262.44876000000016,
+        274.4868701104972
+      ]
+    },
+    {
+      "text": "Check resistance of Li-ion battery controller.",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.459796,
+        267.17607840000005,
+        256.89363599999984,
+        257.9324908640883
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459796,
+        191.21578679999993,
+        198.38651880000006,
+        181.97219926408843
+      ]
+    },
+    {
+      "text": "YES >> Replace current sensor. Refer to EVB-219, \"BATTERY JUNCTION BOX AND BATTERY HARNESS : Disassembly and Assembly\".",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        176.69592,
+        559.8667204000001,
+        155.99243246408844
+      ]
+    },
+    {
+      "text": "NO >> Replace Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.09964000000002,
+        153.7166284,
+        559.8303324,
+        132.95233246408839
+      ]
+    },
+    {
+      "text": "P33D5 CURRENT SENSOR",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        220.37999,
+        769.00991,
+        391.60303639999984,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "P33D6 CURRENT SENSOR",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        220.08,
+        769.00991,
+        391.2439103999999,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "P33D6 CURRENT SENSOR",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.10997,
+        243.0346500000001,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        712.00991,
+        115.668192,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        684.24824718,
+        184.12012196580005,
+        674.1015416630055
+      ]
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        611.347685567,
+        243.16289568650018,
+        601.2009800500055
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        598.16399,
+        296.6362560000002,
+        582.2267701104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.660348,
+        573.3562424,
+        136.75914,
+        564.1126548640885
+      ]
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        561.8368508000001,
+        307.5054443999999,
+        552.5932632640886
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        550.3768628000001,
+        274.7656043999999,
+        541.1332752640886
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        538.8574712000002,
+        128.9680812,
+        529.6138836640887
+      ]
+    },
+    {
+      "text": "Is P33D6 detected?",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.1409564,
+        524.3376236000001,
+        143.99729640000004,
+        515.0940360640886
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-152, \"Diagnosis Procedure\".",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        509.87586,
+        304.16229999999996,
+        500.6322724640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.83989600000001,
+        498.3564684,
+        197.8110639999999,
+        489.11288086408837
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        481.00991,
+        177.000288,
+        469.1101191491712
+      ]
+    },
+    {
+      "text": "DANGER:",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        453.35591,
+        100.97268239999997,
+        444.1123224640884
+      ]
+    },
+    {
+      "text": "Since hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14010439999987,
+        431.095742,
+        558.5875319999999,
+        387.35223486408836
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14010439999987,
+        382.0759748,
+        106.19007239999988,
+        372.83238726408837
+      ]
+    },
+    {
+      "text": "Be sure to remove the service plug in order to disconnect the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999987,
+        370.5565832,
+        558.528024,
+        349.85300766408835
+      ]
+    },
+    {
+      "text": "The removed service plug must always be carried in a pocket of the responsible worker or placed in the tool box during the procedure to prevent the plug from being connected by mistake.",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        347.5760552,
+        558.6052799999992,
+        326.81307606408836
+      ]
+    },
+    {
+      "text": "Be sure to wear insulating protective equipment consisting of glove, shoes, face shield and glasses before beginning work on the high voltage system.",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        324.59667559999997,
+        558.5504699999996,
+        303.83254806408837
+      ]
+    },
+    {
+      "text": "Never allow workers other than the responsible person to touch the vehicle containing high voltage parts. To keep others from touching the high voltage parts, these parts must be covered with an insulating sheet except when using them.",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        301.556744,
+        558.5803284000008,
+        269.33377686408835
+      ]
+    },
+    {
+      "text": "Refer to EVB-6, \"High Voltage Precautions\".",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        267.0579728,
+        278.30231,
+        257.8124224640884
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139545999999996,
+        255.59602199999995,
+        103.316426,
+        246.35243446408845
+      ]
+    },
+    {
+      "text": "Never  bring  the  vehicle  into  the  READY  status  with  the  service  plug  removed  unless  otherwise instructed in the Service Manual. A malfunction may occur if this is not observed.",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.13954599999997,
+        244.0766304,
+        558.5975179999997,
+        223.31365126408832
+      ]
+    },
+    {
+      "text": "1.PRECONDITIONING",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        221.48409000000004,
+        165.98800799999998,
+        205.54687011049725
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        195.2356224,
+        106.18977600000001,
+        185.9920348640884
+      ]
+    },
+    {
+      "text": "Disconnect high voltage. Refer to GI-33, \"How to Disconnect High Voltage\".",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        183.71623079999995,
+        425.96232,
+        174.47233246408837
+      ]
+    },
+    {
+      "text": "Remove Li-ion battery. Refer to EVB-194, \"Removal and Installation\".",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14037200000001,
+        172.25602000000003,
+        392.06232,
+        163.01234446408841
+      ]
+    },
+    {
+      "text": "Remove battery pack upper case. Refer to EVB-204, \"BATTERY PACK UPPER CASE : Removal and Installation\".",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.140096000000085,
+        160.73662839999997,
+        558.5183063999997,
+        139.97233246408837
+      ]
+    },
+    {
+      "text": ">> GO TO 2.",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.7796556,
+        120.2356284,
+        154.05301200000002,
+        110.99204086408838
+      ]
+    },
+    {
+      "text": "2.CHECK CURRENT SENSOR",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        109.16409999999996,
+        204.9020639999999,
+        93.22688011049718
+      ]
+    },
+    {
+      "text": "Disconnect Li-ion battery controller harness connector.",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        85.91608840000004,
+        324.4525920000003,
+        76.67250086408842
+      ]
+    },
+    {
+      "text": "Check the resistance of current sensor from Li-ion battery controller side.",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        74.39669679999997,
+        409.3130880000002,
+        65.15310926408836
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746016",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        706.86689,
+        559.5492259999992,
+        701.30921
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746017",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        475.86688999999996,
+        559.5492259999992,
+        470.30921
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Li-ion battery controller Resistance value",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        128.34,
+        719.71423718,
+        214.43379936560007,
+        712.2237349779226
+      ]
+    },
+    {
+      "text": "Terminal",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        194.21801326990004,
+        704.2341108820001,
+        226.20844128360008,
+        696.7436086799227
+      ]
+    },
+    {
+      "text": "10",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        166.68084992010003,
+        688.7538999839,
+        176.06291641,
+        681.2633977818226
+      ]
+    },
+    {
+      "text": "9",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        169.02088868609994,
+        673.2737736859001,
+        173.72465424609993,
+        665.7832714838227
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        657.89594,
+        198.38673280000006,
+        648.6523524640885
+      ]
+    },
+    {
+      "text": "YES >> Replace Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        643.43592,
+        559.8307024,
+        622.6723124640885
+      ]
+    },
+    {
+      "text": "NO >> GO TO 3.",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.099628000000024,
+        620.39536,
+        155.29900800000004,
+        611.1517724640885
+      ]
+    },
+    {
+      "text": "3.CHECK HARNESS BETWEEN LI-ION BATTERY CONTROLLER AND BATTERY JUNCTION BOX (CURRENT SENSOR)",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        609.32402,
+        559.8413472000003,
+        579.6523524640885
+      ]
+    },
+    {
+      "text": "Disconnect current sensor harness connector.",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.459987999999996,
+        573.59612,
+        286.1221739999999,
+        564.3525324640885
+      ]
+    },
+    {
+      "text": "Check continuity between Li-ion battery controller and current sensor.",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.459987999999996,
+        562.0755800000001,
+        394.25196839999944,
+        552.8319924640886
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459987999999996,
+        455.15546840000013,
+        198.38671080000006,
+        445.9118808640885
+      ]
+    },
+    {
+      "text": "YES >> Replace current sensor. Refer to EVB-219, \"BATTERY JUNCTION BOX AND BATTERY HARNESS : Disassembly and Assembly\".",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        440.69593000000003,
+        559.8667204000001,
+        419.9323224640884
+      ]
+    },
+    {
+      "text": "NO >> Repair harness or connector.",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.09964000000002,
+        417.6565184,
+        244.3073279999998,
+        408.41293086408837
+      ]
+    },
+    {
+      "text": "Connector",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        74.16040395800002,
+        704.2341108820001,
+        113.21417892080004,
+        696.7436086799227
+      ]
+    },
+    {
+      "text": "LB11",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        84.12045833110002,
+        681.0138368349001,
+        103.28212718080002,
+        673.5233346328226
+      ]
+    },
+    {
+      "text": "P33D6 CURRENT SENSOR",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        220.37999,
+        769.00991,
+        391.60303639999984,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "9",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        246.7208353299,
+        688.7538999839,
+        251.4246008899,
+        681.2633977818226
+      ]
+    },
+    {
+      "text": "15",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        244.3801197630999,
+        673.2737736859001,
+        253.7597328500999,
+        665.7832714838227
+      ]
+    },
+    {
+      "text": "1 k",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        302.820938242,
+        681.0138368349001,
+        314.1312102111,
+        673.5233346328226
+      ]
+    },
+    {
+      "text": "-10 M",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        320.641103306,
+        681.0138368349001,
+        344.1862417371,
+        673.5233346328226
+      ]
+    },
+    {
+      "text": "Ω",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        314.1606510459,
+        683.4418597049,
+        320.6579387259,
+        673.0868074649001
+      ]
+    },
+    {
+      "text": "Ω",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        344.16086170709997,
+        683.4418597049,
+        350.65814938709997,
+        673.0868074649001
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "P33D7, P33D9, P33DD TEMPERATURE SENSOR",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        152.03999,
+        769.00991,
+        459.41467160000036,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "P33D7, P33D9, P33DD TEMPERATURE SENSOR",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.10997,
+        392.67900000000026,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        712.00991,
+        115.668192,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        684.24824718,
+        184.12012196580005,
+        674.1015416630055
+      ]
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        561.427882007,
+        243.16289568650018,
+        551.2811764900055
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        548.24407,
+        296.6362560000002,
+        532.3068501104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.660348,
+        523.4363224,
+        136.75914,
+        514.1927348640885
+      ]
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        511.91578240000007,
+        307.5054443999999,
+        502.67219486408845
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        500.45579440000006,
+        274.7656043999999,
+        491.21220686408844
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        488.93640280000005,
+        128.9680812,
+        479.69281526408844
+      ]
+    },
+    {
+      "text": "Is any DTC detected?",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.1409564,
+        474.41655520000006,
+        153.27741240000003,
+        465.17296766408845
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-154, \"Diagnosis Procedure\".",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        459.95591,
+        304.16229999999996,
+        450.7123224640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.83989600000001,
+        448.4365184,
+        197.8110639999999,
+        439.1929308640884
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        431.08992,
+        177.000288,
+        419.19012914917124
+      ]
+    },
+    {
+      "text": "DANGER:",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        403.43592,
+        100.97268239999997,
+        394.1923324640884
+      ]
+    },
+    {
+      "text": "Since hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14010439999987,
+        381.175752,
+        558.5875319999999,
+        337.43339326408835
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14010439999987,
+        332.1571332,
+        106.19007239999988,
+        322.91354566408836
+      ]
+    },
+    {
+      "text": "Be sure to remove the service plug in order to disconnect the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999987,
+        320.63774159999997,
+        558.528024,
+        299.93416606408834
+      ]
+    },
+    {
+      "text": "The removed service plug must always be carried in a pocket of the responsible worker or placed in the tool box during the procedure to prevent the plug from being connected by mistake.",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        297.65836199999995,
+        558.6052799999992,
+        276.8942344640884
+      ]
+    },
+    {
+      "text": "Be sure to wear insulating protective equipment consisting of glove, shoes, face shield and glasses before beginning work on the high voltage system.",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        274.67783399999996,
+        558.5504699999996,
+        253.91485486408828
+      ]
+    },
+    {
+      "text": "Never allow workers other than the responsible person to touch the vehicle containing high voltage parts. To keep others from touching the high voltage parts, these parts must be covered with an insulating sheet except when using them.",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        251.63905079999995,
+        558.5803284000008,
+        219.41608366408832
+      ]
+    },
+    {
+      "text": "Refer to EVB-6, \"High Voltage Precautions\".",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        217.14027959999999,
+        278.30231,
+        207.89233246408844
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139545999999996,
+        205.675932,
+        103.316426,
+        196.43234446408837
+      ]
+    },
+    {
+      "text": "Never  bring  the  vehicle  into  the  READY  status  with  the  service  plug  removed  unless  otherwise instructed in the Service Manual. A malfunction may occur if this is not observed.",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.13954599999997,
+        194.15654040000004,
+        558.5975179999997,
+        173.39356126408836
+      ]
+    },
+    {
+      "text": "1.PRECONDITIONING",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        171.56399999999996,
+        165.98800799999998,
+        155.6267801104973
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        145.31553239999994,
+        106.18977600000001,
+        136.07194486408844
+      ]
+    },
+    {
+      "text": "Disconnect high voltage. Refer to GI-33, \"How to Disconnect High Voltage\".",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        133.7961408,
+        425.96232,
+        124.55233246408841
+      ]
+    },
+    {
+      "text": "Remove Li-ion battery. Refer to EVB-194, \"Removal and Installation\".",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14037200000001,
+        122.33601999999996,
+        392.06232,
+        113.09234446408846
+      ]
+    },
+    {
+      "text": "Remove battery pack upper case. Refer to EVB-204, \"BATTERY PACK UPPER CASE : Removal and Installation\".",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.140096000000085,
+        110.81662840000001,
+        558.5183063999997,
+        90.05233246408841
+      ]
+    },
+    {
+      "text": ">> GO TO 2.",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.7796556,
+        70.31562840000004,
+        154.05301200000002,
+        61.07204086408842
+      ]
+    },
+    {
+      "text": "2.CHECK HARNESS",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        59.24401,
+        157.20076439999997,
+        43.30679011049722
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746018",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        706.86689,
+        559.5492259999992,
+        701.30921
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746019",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        425.94689999999997,
+        559.5492259999992,
+        420.38922
+      ]
+    },
+    {
+      "text": "P33D7, P33D9, P33DD TEMPERATURE SENSOR",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        152.28,
+        769.00991,
+        459.70817280000034,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Power switch OFF.",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        735.83589,
+        160.45998760000006,
+        726.5923024640884
+      ]
+    },
+    {
+      "text": "Check a connection state of harness connector of Li-ion battery controller.",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        724.3164984,
+        414.69893919999896,
+        715.0729108640885
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001000000001,
+        709.8560544,
+        198.3867328000001,
+        700.6124668640884
+      ]
+    },
+    {
+      "text": "YES >> GO TO 3.",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        695.33589,
+        155.30461,
+        686.0923024640884
+      ]
+    },
+    {
+      "text": "NO >> Recover the connection status.",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        683.8164984,
+        253.67060319999996,
+        674.5729108640885
+      ]
+    },
+    {
+      "text": "3.CHECK BATTERY TEMPERATURE SENSOR",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        672.74407,
+        282.6438959999999,
+        656.8068501104972
+      ]
+    },
+    {
+      "text": "Refer to EVB-155, \"Component Inspection\".",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.459796,
+        649.4960583999999,
+        256.34231,
+        640.2523924640884
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.45970199999999,
+        634.9761323999999,
+        198.38642480000007,
+        625.7325448640884
+      ]
+    },
+    {
+      "text": "YES >> GO TO 4.",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        620.5158799999999,
+        155.30461,
+        611.2722924640884
+      ]
+    },
+    {
+      "text": "NO >> Replace battery temperature sensor.",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        608.9953399999999,
+        279.46491999999995,
+        599.7517524640884
+      ]
+    },
+    {
+      "text": "4.CHECK HARNESS BETWEEN BATTERY TEMPERATURE SENSOR AND GROUND",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        597.924,
+        465.1303980000005,
+        581.9867801104972
+      ]
+    },
+    {
+      "text": "Disconnect Li-ion battery controller harness connector.",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45958719999996,
+        574.6759883999999,
+        325.68363119999987,
+        565.4324008640884
+      ]
+    },
+    {
+      "text": "Check continuity between battery temperature sensor harness connector and ground.",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45958719999996,
+        563.1554484,
+        468.87856679999896,
+        553.9118608640885
+      ]
+    },
+    {
+      "text": "Battery tem-",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.86,
+        533.5342471800001,
+        107.93905186690007,
+        526.0437449779226
+      ]
+    },
+    {
+      "text": "perature sen-",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.7002440471,
+        523.0946794401001,
+        110.09584681630007,
+        515.6041772380227
+      ]
+    },
+    {
+      "text": "sor",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        79.0204534842,
+        512.5949610291001,
+        90.771238174,
+        505.1044588270227
+      ]
+    },
+    {
+      "text": "1",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        82.5600370681,
+        497.11475013100005,
+        87.2638026281,
+        489.6242479289227
+      ]
+    },
+    {
+      "text": "2",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        82.5600370681,
+        481.63462383300003,
+        87.2638026281,
+        474.1441216309227
+      ]
+    },
+    {
+      "text": "4",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        82.5600370681,
+        466.154497535,
+        87.2638026281,
+        458.6639953329227
+      ]
+    },
+    {
+      "text": "Connector",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        124.0801587462,
+        523.0946794401001,
+        163.12818090220006,
+        515.6041772380227
+      ]
+    },
+    {
+      "text": "LB9",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        136.0789063291,
+        497.11475013100005,
+        151.16479616109999,
+        489.6242479289227
+      ]
+    },
+    {
+      "text": "LB10",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        133.7388675631,
+        481.63462383300003,
+        153.4887609081,
+        474.1441216309227
+      ]
+    },
+    {
+      "text": "LB10",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        133.7388675631,
+        466.154497535,
+        153.4887609081,
+        458.6639953329227
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.45958719999996,
+        450.7751124,
+        198.38631000000004,
+        441.5315248640884
+      ]
+    },
+    {
+      "text": "YES >> Replace Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        436.2559,
+        559.8307024,
+        415.5523524640884
+      ]
+    },
+    {
+      "text": "NO >> Repair harness or connector.",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.099628000000024,
+        413.2765484,
+        244.30731599999982,
+        404.0329608640884
+      ]
+    },
+    {
+      "text": "Component Inspection",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        395.92992,
+        187.04979840000016,
+        384.0301291491712
+      ]
+    },
+    {
+      "text": "1.CHECK BATTERY TEMPERATURE SENSOR",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        374.544,
+        282.6438959999999,
+        358.60678011049725
+      ]
+    },
+    {
+      "text": "Remove battery  temperature  sensor.  Refer  to  EVB-203,  \"BATTERY  PACK  UPPER  CASE  :  Exploded View\".",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.459796,
+        351.2959884,
+        559.7925923999995,
+        330.53233246408837
+      ]
+    },
+    {
+      "text": "Check resistance between battery temperature sensor terminals.",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460480000000004,
+        328.25538,
+        372.65283119999935,
+        319.0117924640884
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46047999999999,
+        236.87510399999996,
+        198.38720280000007,
+        227.63151646408846
+      ]
+    },
+    {
+      "text": "YES >> INSPECTION END",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        222.35591999999997,
+        199.11502599999997,
+        213.11233246408847
+      ]
+    },
+    {
+      "text": "NO >> Replace battery temperature sensor.",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        210.83652840000002,
+        279.46491999999995,
+        201.5929408640884
+      ]
+    },
+    {
+      "text": "Terminal",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        184.91439865420006,
+        523.0946794401001,
+        216.89662045820012,
+        515.6041772380227
+      ]
+    },
+    {
+      "text": "1",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        198.60091823209999,
+        497.11475013100005,
+        203.30468379209998,
+        489.6242479289227
+      ]
+    },
+    {
+      "text": "4",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        198.5848442131,
+        481.63462383300003,
+        203.2886097731,
+        474.1441216309227
+      ]
+    },
+    {
+      "text": "2",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        198.5848442131,
+        466.154497535,
+        203.2886097731,
+        458.6639953329227
+      ]
+    },
+    {
+      "text": "-",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        254.02083634020013,
+        523.0946794401001,
+        262.4808463402001,
+        515.6041772380227
+      ]
+    },
+    {
+      "text": "Ground Continuity No existed INFOID:0000000008746020",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        244.1403060611,
+        481.63462383300003,
+        272.37135943110013,
+        474.1441216309227
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "bbox": [
+        52.181236267089844,
+        560.9346923828125,
+        342.5158996582031,
+        482.1826171875
+      ],
+      "num_rows": 5,
+      "num_cols": 5,
+      "data": [
+        [
+          "Current sensor",
+          "Current sensor",
+          "Li-ion battery controller",
+          "Li-ion battery controller",
+          "Continuity"
+        ],
+        [
+          "Connector",
+          "Terminal",
+          "Connector",
+          "Terminal",
+          "Continuity"
+        ],
+        [
+          "LB5",
+          "S",
+          "LB11",
+          "10",
+          "Exited"
+        ],
+        [
+          "LB5",
+          "V",
+          "LB11",
+          "9",
+          "Exited"
+        ],
+        [
+          "LB5",
+          "G",
+          "LB11",
+          "15",
+          "Exited"
+        ]
+      ],
+      "markdown": "| Current sensor   | Current sensor   | Li-ion battery controller   | Li-ion battery controller   | Continuity   |\n|------------------|------------------|-----------------------------|-----------------------------|--------------|\n| Connector        | Terminal         | Connector                   | Terminal                    | Continuity   |\n| LB5              | S                | LB11                        | 10                          | Exited       |\n| LB5              | V                | LB11                        | 9                           | Exited       |\n| LB5              | G                | LB11                        | 15                          | Exited       |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "bbox": [
+        52.275325775146484,
+        393.657958984375,
+        337.6297607421875,
+        330.63037109375
+      ],
+      "num_rows": 4,
+      "num_cols": 4,
+      "data": [
+        [
+          "Current sensor",
+          "Current sensor",
+          "Current sensor",
+          "Resistance val- ue"
+        ],
+        [
+          "Connector",
+          "Terminal",
+          "Terminal",
+          ""
+        ],
+        [
+          "LB5",
+          "S",
+          "G",
+          "1 k Ω -10 M Ω"
+        ],
+        [
+          "LB5",
+          "V",
+          "G",
+          "1 k Ω -10 M Ω"
+        ]
+      ],
+      "markdown": "| Current sensor   | Current sensor   | Current sensor   | Resistance val- ue   |\n|------------------|------------------|------------------|----------------------|\n| Connector        | Terminal         | Terminal         |                      |\n| LB5              | S                | G                | 1 k Ω -10 M Ω        |\n| LB5              | V                | G                | 1 k Ω -10 M Ω        |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 151,
+      "page_manual": "EVB-151",
+      "section_code": "EVB",
+      "bbox": [
+        52.2958869934082,
+        242.1307373046875,
+        337.8782958984375,
+        194.10772705078125
+      ],
+      "num_rows": 3,
+      "num_cols": 4,
+      "data": [
+        [
+          "Li-ion battery controller",
+          "Li-ion battery controller",
+          "Li-ion battery controller",
+          "Resistance val-"
+        ],
+        [
+          "Connector",
+          "Terminal",
+          "Terminal",
+          "ue"
+        ],
+        [
+          "LB11",
+          "10",
+          "15",
+          "Approx. 4.7 k Ω"
+        ]
+      ],
+      "markdown": "| Li-ion battery controller   | Li-ion battery controller   | Li-ion battery controller   | Resistance val-   |\n|-----------------------------|-----------------------------|-----------------------------|-------------------|\n| Connector                   | Terminal                    | Terminal                    | ue                |\n| LB11                        | 10                          | 15                          | Approx. 4.7 k Ω   |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "bbox": [
+        54.63504409790039,
+        661.4153747558594,
+        555.1468505859375,
+        618.6873474121094
+      ],
+      "num_rows": 2,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P33D6",
+          "CURRENT SENSOR",
+          "Deviation from the specified voltage characteristics of battery current sensor.",
+          "Li-ion battery controller"
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name   | DTC detecting condition                                                         | Possible causes           |\n|-------|--------------------------|---------------------------------------------------------------------------------|---------------------------|\n| P33D6 | CURRENT SENSOR           | Deviation from the specified voltage characteristics of battery current sensor. | Li-ion battery controller |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 153,
+      "page_manual": "EVB-153",
+      "section_code": "EVB",
+      "bbox": [
+        52.250675201416016,
+        536.8598937988281,
+        365.7040100097656,
+        457.6615295410156
+      ],
+      "num_rows": 5,
+      "num_cols": 5,
+      "data": [
+        [
+          "Li-ion battery controller",
+          "Li-ion battery controller",
+          "Current sensor",
+          "Current sensor",
+          "Continuity"
+        ],
+        [
+          "Connector",
+          "Terminal",
+          "Connector",
+          "Terminal",
+          "Continuity"
+        ],
+        [
+          "LB11",
+          "10",
+          "LB5",
+          "S",
+          "Existed"
+        ],
+        [
+          "LB11",
+          "9",
+          "LB5",
+          "V",
+          "Existed"
+        ],
+        [
+          "LB11",
+          "15",
+          "LB5",
+          "G",
+          "Existed"
+        ]
+      ],
+      "markdown": "| Li-ion battery controller   | Li-ion battery controller   | Current sensor   | Current sensor   | Continuity   |\n|-----------------------------|-----------------------------|------------------|------------------|--------------|\n| Connector                   | Terminal                    | Connector        | Terminal         | Continuity   |\n| LB11                        | 10                          | LB5              | S                | Existed      |\n| LB11                        | 9                           | LB5              | V                | Existed      |\n| LB11                        | 15                          | LB5              | G                | Existed      |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "bbox": [
+        50.44455337524414,
+        661.5019683837891,
+        560.2175903320312,
+        566.3396911621094
+      ],
+      "num_rows": 4,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P33D7",
+          "TEMPERATURE SENSOR",
+          "Battery temperature sensor 1 center signal voltage is too high or too low.",
+          "• Battery temperature sensor • Li-ion battery controller • Harness or connector"
+        ],
+        [
+          "P33D9",
+          "TEMPERATURE SENSOR",
+          "Battery temperature sensor 2 signal voltage is too high or too low.",
+          "• Battery temperature sensor • Li-ion battery controller • Harness or connector"
+        ],
+        [
+          "P33DD",
+          "TEMPERATURE SENSOR",
+          "Battery temperature sensor 4 signal voltage is too high or too low.",
+          "• Battery temperature sensor • Li-ion battery controller • Harness or connector"
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name   | DTC detecting condition                                                    | Possible causes                                                                 |\n|-------|--------------------------|----------------------------------------------------------------------------|---------------------------------------------------------------------------------|\n| P33D7 | TEMPERATURE SENSOR       | Battery temperature sensor 1 center signal voltage is too high or too low. | • Battery temperature sensor • Li-ion battery controller • Harness or connector |\n| P33D9 | TEMPERATURE SENSOR       | Battery temperature sensor 2 signal voltage is too high or too low.        | • Battery temperature sensor • Li-ion battery controller • Harness or connector |\n| P33DD | TEMPERATURE SENSOR       | Battery temperature sensor 4 signal voltage is too high or too low.        | • Battery temperature sensor • Li-ion battery controller • Harness or connector |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 155,
+      "page_manual": "EVB-155",
+      "section_code": "EVB",
+      "bbox": [
+        52.155357360839844,
+        303.31964111328125,
+        481.0088195800781,
+        239.710693359375
+      ],
+      "num_rows": 4,
+      "num_cols": 6,
+      "data": [
+        [
+          "Battery temperature sensor",
+          "Terminals",
+          "Terminals",
+          "Condition",
+          "Condition",
+          "Resistance (k Ω )"
+        ],
+        [
+          "1",
+          "1",
+          "5",
+          "Temperature ° C ( ° F)",
+          "10 (50)",
+          "Approx. 7.4"
+        ],
+        [
+          "2",
+          "4",
+          "3",
+          "Temperature ° C ( ° F)",
+          "25 (77)",
+          "Approx. 4.0"
+        ],
+        [
+          "4",
+          "2",
+          "1",
+          "Temperature ° C ( ° F)",
+          "40 (104)",
+          "Approx. 2.3"
+        ]
+      ],
+      "markdown": "|   Battery temperature sensor |   Terminals |   Terminals | Condition              | Condition   | Resistance (k Ω )   |\n|------------------------------|-------------|-------------|------------------------|-------------|---------------------|\n|                            1 |           1 |           5 | Temperature ° C ( ° F) | 10 (50)     | Approx. 7.4         |\n|                            2 |           4 |           3 | Temperature ° C ( ° F) | 25 (77)     | Approx. 4.0         |\n|                            4 |           2 |           1 | Temperature ° C ( ° F) | 40 (104)    | Approx. 2.3         |",
+      "tableformer": true
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_152_raster_1.jpeg",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        350.6399841308594,
+        79.0399169921875,
+        369.41998291015625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_152_raster_2.png",
+      "page_pdf": 152,
+      "page_manual": "EVB-152",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        217.5600128173828,
+        63.65999984741211,
+        229.1400146484375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_154_raster_1.jpeg",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        400.5599670410156,
+        79.0399169921875,
+        419.3399658203125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_154_raster_2.png",
+      "page_pdf": 154,
+      "page_manual": "EVB-154",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        267.4800109863281,
+        63.65999984741211,
+        279.05999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

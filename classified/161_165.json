@@ -1,0 +1,2073 @@
+{
+  "schema_version": "1.1",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-161\n7\nApprox. 110 minute\n6\nApprox. 90 minute\nRevision: October 2013\n2013 LEAF",
+    "page_start": 161,
+    "page_end": 165,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "161": [
+        "EVB-161",
+        "EVB",
+        "EVB-161\n7\nApprox. 110 minute\n6\nApprox. 90 minute\nRevision: October 2013\n2013 LEAF"
+      ],
+      "162": [
+        "EVB-162",
+        "EVB",
+        "EVB-162\nand Installation .\n10.CHECK HARNESS BETWEEN LI-ION BATTERY CONTROLLER AND MODULE HARNESS CONNEC-\nRevision: October 2013\n2013 LEAF"
+      ],
+      "163": [
+        "EVB-163",
+        "EVB",
+        "EVB-163\nRevision: October 2013\n2013 LEAF"
+      ],
+      "164": [
+        "EVB-164",
+        "EVB",
+        "EVB-164\nRevision: October 2013\n2013 LEAF"
+      ],
+      "165": [
+        "EVB-165",
+        "EVB",
+        "EVB-165\ninstructed in the Service Manual. A malfunction may occur if this is not observed.\n1.PRECONDITIONING\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "Calculate the average value of cell voltage by dividing 'TOTAL BATTERY VOLTAGE' by 96 (the number of cells).",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        735.83589,
+        559.7979219999996,
+        715.0729108640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Average cell voltage = 'TOTAL BETTER VOLTAGE' ÷ 96 (the number of cells)",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        87.84,
+        702.83217,
+        470.56204800000046,
+        690.05361
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Identify the minimum cell voltage and the maximum cell voltage from 96 cells.",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        682.3769304,
+        431.2892476,
+        673.1333428640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Calculate voltage according to the following expressions to compare voltage between A and B.",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        670.8575388,
+        510.3457299999995,
+        661.6139512640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "A = Maximum cell voltage -Average cell voltage",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        87.84000000000003,
+        649.372062,
+        327.3368364000001,
+        636.5935020000001
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "B = Average cell voltage -Minimum cell voltage",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        87.8401044,
+        633.8322264000001,
+        324.91465199999993,
+        621.0536664000001
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Which voltage is larger, A or B?",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        613.3779264000001,
+        199.33865200000005,
+        604.1343388640886
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "A >> Replace module including a cell of the maximum cell voltage. Refer to EVB-235, \"FRONT MODULE  STACK  :  Exploded  View\"  (Front  module  stack)  or  EVB-251,  \"REAR  MODULE  STACK  : Exploded View\" (Rear module stack). After replacing module, GO TO 3.",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        598.85591,
+        559.8588904000001,
+        566.6323324640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "B >> Replace module including a cell of the minimum cell voltage. Refer to EVB-235, \"FRONT MODULE  STACK  :  Exploded  View\"  (Front  module  stack)  or  EVB-251,  \"REAR  MODULE  STACK  : Exploded View\" (Rear module stack). After replacing module, GO TO 3.",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.100322399999996,
+        564.35538,
+        559.9196504,
+        532.1323324640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "3.PERFORM CELL VOLTAGE LOSS INSPECTION",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        530.304,
+        297.32149200000003,
+        514.3667801104972
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        505.43549160000003,
+        138.10126079999998,
+        496.1919040640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Select 'WORK SUPPORT' of 'HV BAT.'",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        493.9755036,
+        258.5025444000002,
+        484.7319160640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Select 'CELL VOLTAGE LOSS INSPECTION.' Touch 'START.'",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        482.45496360000004,
+        365.72030039999976,
+        473.2113760640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check 'MINIMUM CELL VOLTAGE.'",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46094439999999,
+        470.93557200000004,
+        242.7381444000001,
+        461.6919844640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Is 'MINIMUM CELL VOLTAGE' 3,712 mV or less?",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46094439999999,
+        456.4759,
+        285.66203879999995,
+        447.2315404640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> GO TO 5.",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        441.95591,
+        155.30461,
+        432.7123224640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO >> GO TO 4.",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        430.4365184,
+        155.29939000000002,
+        421.1929308640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "4.DISCHARGE OF LI-ION BATTERY",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        419.364,
+        231.03166799999994,
+        403.42678011049725
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        394.5562524,
+        138.10126079999998,
+        385.3126648640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Set the vehicle to READY.",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        383.0368608,
+        194.0397204,
+        373.7932732640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Set the vehicle, according to the following conditions.",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        371.5174692,
+        318.7193159999998,
+        362.2738816640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check  'DATA  MONITOR'  and  let  the  Li-ion  battery  discharge  until  the  'MINIMUM  CELL  VOLTAGE' reaches 3,712 mV or less.",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        262.67744160000007,
+        559.8932340000001,
+        241.9144624640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        73.26040440000003,
+        239.63865839999994,
+        105.83946840000004,
+        230.39507086408844
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "The guide line is to discharge until the Li-ion battery available charge gauge indicates 2 segments or less. For discharge time, refer to the following table.",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        73.26040440000003,
+        228.1786704,
+        559.8089832000001,
+        207.4156912640883
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Guideline for discharge time",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        72.3,
+        199.04973999999993,
+        171.756336,
+        191.98423918232038
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "P33E6 CELL CONTROLLER",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        217.73999,
+        769.00991,
+        394.24482200000017,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "P33E6 CELL CONTROLLER",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        217.5,
+        769.00991,
+        394.0048320000002,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": ">> GO TO 5.",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.78,
+        623.93592,
+        154.0533564,
+        614.6923324640885
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "5.CHECK CELL OF VOLTAGE LOSS",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        612.864,
+        231.9489720000001,
+        596.9267801104972
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.660348,
+        588.0562524000001,
+        136.75914,
+        578.8126648640886
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check that 'MINIMUM CELL VOLTAGE' is 3,712 mV or less. Touch 'START.'",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        576.5357124000001,
+        429.4529964,
+        567.2921248640886
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check to see if  a  cell  of  which  voltage  is  less  than  or  equal  to  'CELL  VOLTAGE  LOSS  JUDGMENT VALUE' is displayed.",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14095639999999,
+        565.0163208000001,
+        558.5482943999995,
+        544.3127452640887
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Is a cell displayed?",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14095639999998,
+        539.0364852000001,
+        140.54050800000005,
+        529.7928976640886
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> Record applicable cell No. and then GO TO 6.",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        524.5158799999999,
+        322.0772351999998,
+        515.2722924640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO >> Check the minimum cell voltage on the data monitor and replace a module which includes the minimum cell  voltage.  Refer  to  EVB-235,  \"FRONT  MODULE  STACK  :  Exploded  View\"  (Front module stack) or EVB-251, \"REAR MODULE STACK : Exploded View\" (Rear module stack).",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        512.9953399999999,
+        558.5579204000003,
+        480.77177246408843
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "6.PRECONDITIONING",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        478.94399,
+        165.98800799999998,
+        463.00677011049726
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "WARNING: Disconnect high voltage circuit. Refer to GI-33, \"How to Disconnect High Voltage\".",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        452.6955224,
+        106.18977600000001,
+        443.4519348640884
+      ],
+      "type": "warning",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Remove Li-ion battery. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14030360000004,
+        429.715922,
+        556.3422,
+        420.4723324640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Remove battery pack upper case. Refer to EVB-203, \"BATTERY PACK UPPER CASE : Exploded View\".",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.140311999999994,
+        418.19652840000003,
+        555.5622900000001,
+        408.9523424640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": ">> GO TO 7.",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.78010560000013,
+        389.15602600000005,
+        154.05346200000014,
+        379.91243846408844
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "7.CHECK CONDENSATION",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        378.084,
+        190.20212639999994,
+        362.1467801104973
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check condensation in battery pack.",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        354.8359884,
+        220.65184799999992,
+        345.5924008640884
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        340.3755444,
+        196.92736559999997,
+        331.1319568640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> GO TO 8.",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        325.85591,
+        154.07320559999994,
+        316.6123224640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO >> Replace Li-ion battery. Refer to EVB-194, \"Removal and Installation\".",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        314.3365184,
+        428.36231,
+        305.0923324640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "8.CHECK CONNECTORS AND FIXING BOLTS",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        303.26408999999995,
+        280.16277119999984,
+        287.3268701104972
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check connection state, damage and dust of following;",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        280.01607839999997,
+        305.65954800000026,
+        270.77249086408835
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Li-ion battery controller (LBC) harness connector",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        268.4966867999999,
+        286.37582399999985,
+        259.2530992640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Module harness connector",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        257.03669879999995,
+        183.93228,
+        247.79311126408834
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Module terminal fixing bolt",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        245.5173072,
+        182.20028399999995,
+        236.27371966408828
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        230.99745959999996,
+        196.92736559999997,
+        221.75387206408834
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> GO TO 9",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        216.53602,
+        151.1693196,
+        207.2924324640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        205.01662839999995,
+        73.51566,
+        195.77304086408844
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": ">> Repair or replace error-detected parts.",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.77448,
+        205.01662839999995,
+        286.36157760000003,
+        195.77304086408844
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "9.CHECK MODULE VOLTAGE",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        193.94410000000005,
+        202.2428916000001,
+        178.00688011049726
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check module voltage within determined cell at step 3 and check the divergence of the voltage and cell voltage with 'DATA MONITOR'.",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        170.6960884,
+        558.5157215999994,
+        149.93310926408844
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DANGER: When check module voltage, be careful not to short.",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808000000016,
+        144.6568492,
+        100.97249039999998,
+        135.4132616640884
+      ],
+      "type": "warning",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "Is Divergence within 40mV?",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808000000016,
+        118.67701360000001,
+        181.77537599999997,
+        109.4334260640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES-1 >> When the determined cell at step 3 is in front module stack.: GO TO 10.",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        104.15592000000004,
+        440.15488799999946,
+        94.91233246408842
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES-2 >> When the determined cell at step 3 is in rear module stack.: GO TO 12.",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        92.69593199999997,
+        437.7933599999994,
+        83.45234446408836
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO >> Replace Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        81.17654040000002,
+        558.4853975999993,
+        60.41233246408842
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "10.CHECK HARNESS BETWEEN LI-ION BATTERY CONTROLLER AND MODULE HARNESS CONNEC-",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        58.583999999999946,
+        559.5526236000009,
+        42.646780110497275
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 163,
+      "page_manual": "EVB-163",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check the resistance Li-ion battery controller harness connector and bus bar of the determined cell at step 5.",
+      "page_pdf": 164,
+      "page_manual": "EVB-164",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        734.87592,
+        558.6072635999996,
+        714.1723444640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check the divergence of the resistance and the resistance of other cell harness.",
+      "page_pdf": 164,
+      "page_manual": "EVB-164",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139895599999946,
+        346.0161960000001,
+        441.0934751999991,
+        336.7726084640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 164,
+      "page_manual": "EVB-164",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139895599999946,
+        331.5557520000001,
+        196.92745319999992,
+        322.3121644640885
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> Replace module within the determined cell at step 5.",
+      "page_pdf": 164,
+      "page_manual": "EVB-164",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        317.0359,
+        351.4357679999996,
+        307.7923124640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO >> Repair or replace harness or connectors.",
+      "page_pdf": 164,
+      "page_manual": "EVB-164",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        305.5165084,
+        298.3485768000002,
+        296.2729208640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "P33EA BATTERY HEATER RELAY",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        196.8,
+        769.00991,
+        415.1657279999997,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "P33EA BATTERY HEATER RELAY",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        736.10997,
+        287.2187999999999,
+        722.8289534254144
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.44,
+        712.00991,
+        115.97786880000004,
+        700.1101191491713
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        684.24824718,
+        184.37932433020006,
+        674.1015416630055
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        594.2959099999999,
+        86.03907400000001,
+        585.0523224640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "The Li-ion battery controller transmits a relay control signal to the heater relay unit and turns ON/OFF the relay built-in the heater relay unit.",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        582.77537,
+        559.9075419999991,
+        562.0717944640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "The heater relay unit turns ON/OFF the built-in relay, according to a relay control signal transmitted from the Li-ion battery controller, and transmits a relay status signal (the ON/OFF status of the built-in relay) to the Liion battery controller.",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        559.7959904,
+        559.8655732,
+        527.5718748640886
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        519.36823718,
+        243.41189864199998,
+        509.2215316630055
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE-1",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        506.24397999999997,
+        306.2808912000002,
+        490.30676011049724
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        481.3754716,
+        138.10126079999998,
+        472.1318840640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Select 'ACTIVE TEST' of 'HV BAT.'",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        469.9154836,
+        240.00296879999988,
+        460.6718960640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Select 'HEATER RELAY UNIT.' Touch 'START.'",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        458.39494360000003,
+        295.20332040000034,
+        449.1513560640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": ">> GO TO 2.",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.04137639999999,
+        429.41465200000005,
+        155.30241359999994,
+        420.17106446408843
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "2.PERFORM DTC CONFIRMATION PROCEDURE-2",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        418.28398999999996,
+        306.2808912000002,
+        402.34677011049723
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        393.4762424,
+        138.10126079999998,
+        384.2326548640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        381.9557024,
+        276.0449807999998,
+        372.7121148640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        370.4957144,
+        130.29944880000005,
+        361.2521268640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Is P33EE detected?",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.460944399999995,
+        355.9758668,
+        146.07000840000012,
+        346.7322792640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> Refer to EVB-165, \"Diagnosis Procedure\".",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        341.45591,
+        305.48231,
+        332.2123224640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.100293600000015,
+        329.995922,
+        74.77490960000002,
+        320.7523344640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": ">> INSPECTION END",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.03268560000002,
+        329.995922,
+        199.08398959999994,
+        320.7523344640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        312.64992,
+        177.41721599999997,
+        300.75012914917124
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DANGER: Since hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        284.99601,
+        102.29269239999996,
+        275.75242246408834
+      ],
+      "type": "warning",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.460009999999954,
+        213.71722320000003,
+        107.5893219999999,
+        204.47363566408842
+      ],
+      "type": "warning",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "Be sure to remove the service plug in order to disconnect the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460009999999954,
+        202.19783159999997,
+        559.858474,
+        181.4348524640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "The removed service plug must always be carried in a pocket of the responsible worker or placed in the tool box during the procedure to prevent the plug from being connected by mistake.",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460949599999935,
+        179.21845199999996,
+        559.8771615999998,
+        158.4554728640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Be sure to wear insulating protective equipment consisting of glove, shoes, face shield and glasses before beginning work on the high voltage system.",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46084519999991,
+        156.17966879999994,
+        559.8288243999995,
+        135.47609326408838
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Never allow workers other than the responsible person to touch the vehicle containing high voltage parts. To keep others from touching the high voltage parts, these parts must be covered with an insulating sheet except when using them.",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460845199999824,
+        133.1991407999999,
+        559.8678699999996,
+        100.97617366408838
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Refer to EVB-6, \"High Voltage Precautions\".",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460845199999795,
+        98.70036959999993,
+        279.62232,
+        89.45234246408836
+      ],
+      "type": "section_header",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "CAUTION: Never  bring  the  vehicle  into  the  READY  status  with  the  service  plug  removed  unless  otherwise instructed in the Service Manual. A malfunction may occur if this is not observed.",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.45955600000002,
+        87.17653840000003,
+        104.63643600000003,
+        77.93295086408841
+      ],
+      "type": "warning",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "1.PRECONDITIONING",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        53.124000000000024,
+        166.27965600000005,
+        37.18678011049724
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "bbox": [
+        51.720848083496094,
+        346.638916015625,
+        378.20843505859375,
+        267.27264404296875
+      ],
+      "num_rows": 5,
+      "num_cols": 2,
+      "data": [
+        [
+          "A/C set temperature",
+          ": Full hot"
+        ],
+        [
+          "A/C fan speed",
+          ": Maximum speed"
+        ],
+        [
+          "A/C air outlet",
+          ": Defroster"
+        ],
+        [
+          "Headlamp",
+          ": High beam ON"
+        ],
+        [
+          "Door glass",
+          ": Full open"
+        ]
+      ],
+      "markdown": "| A/C set temperature | : Full hot |\n| --- | --- |\n| A/C fan speed | : Maximum speed |\n| A/C air outlet | : Defroster |\n| Headlamp | : High beam ON |\n| Door glass | : Full open |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "A/C set temperature",
+          ": Full hot"
+        ],
+        [
+          "A/C fan speed",
+          ": Maximum speed"
+        ],
+        [
+          "A/C air outlet",
+          ": Defroster"
+        ],
+        [
+          "Headlamp",
+          ": High beam ON"
+        ],
+        [
+          "Door glass",
+          ": Full open"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "bbox": [
+        51.5539436340332,
+        189.11126708984375,
+        232.9756622314453,
+        31.494873046875
+      ],
+      "num_rows": 8,
+      "num_cols": 2,
+      "data": [
+        [
+          "The number of light- ing segments of Li- ion battery available charge gauge",
+          "Time to 2 segments"
+        ],
+        [
+          "12",
+          "Approx. 230 minute"
+        ],
+        [
+          "11",
+          "Approx. 200 minute"
+        ],
+        [
+          "10",
+          "Approx. 180 minute"
+        ],
+        [
+          "9",
+          "Approx. 160 minute"
+        ],
+        [
+          "8",
+          "Approx. 130 minute"
+        ],
+        [
+          "7",
+          "Approx. 110 minute"
+        ],
+        [
+          "6",
+          "Approx. 90 minute"
+        ]
+      ],
+      "markdown": "| The number of light- ing segments of Li- ion battery available charge gauge | Time to 2 segments |\n| --- | --- |\n| 12 | Approx. 230 minute |\n| 11 | Approx. 200 minute |\n| 10 | Approx. 180 minute |\n| 9 | Approx. 160 minute |\n| 8 | Approx. 130 minute |\n| 7 | Approx. 110 minute |\n| 6 | Approx. 90 minute |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "The number of light- ing segments of Li- ion battery available charge gauge",
+          "Time to 2 segments"
+        ],
+        [
+          "12",
+          "Approx. 230 minute"
+        ],
+        [
+          "11",
+          "Approx. 200 minute"
+        ],
+        [
+          "10",
+          "Approx. 180 minute"
+        ],
+        [
+          "9",
+          "Approx. 160 minute"
+        ],
+        [
+          "8",
+          "Approx. 130 minute"
+        ],
+        [
+          "7",
+          "Approx. 110 minute"
+        ],
+        [
+          "6",
+          "Approx. 90 minute"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "bbox": [
+        50.714691162109375,
+        736.1206817626953,
+        232.4032440185547,
+        641.3008270263672
+      ],
+      "num_rows": 4,
+      "num_cols": 2,
+      "data": [
+        [
+          "The number of light- ing segments of Li- ion battery available charge gauge",
+          "Time to 2 segments"
+        ],
+        [
+          "5",
+          "Approx. 70 minute"
+        ],
+        [
+          "4",
+          "Approx. 40 minute"
+        ],
+        [
+          "3",
+          "Approx. 20 minute"
+        ]
+      ],
+      "markdown": "| The number of light- ing segments of Li- ion battery available charge gauge | Time to 2 segments |\n| --- | --- |\n| 5 | Approx. 70 minute |\n| 4 | Approx. 40 minute |\n| 3 | Approx. 20 minute |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "The number of light- ing segments of Li- ion battery available charge gauge",
+          "Time to 2 segments"
+        ],
+        [
+          "5",
+          "Approx. 70 minute"
+        ],
+        [
+          "4",
+          "Approx. 40 minute"
+        ],
+        [
+          "3",
+          "Approx. 20 minute"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 163,
+      "page_manual": "EVB-163",
+      "section_code": "EVB",
+      "bbox": [
+        52.28502655029297,
+        672.8578872680664,
+        302.8673095703125,
+        619.0367889404297
+      ],
+      "num_rows": 2,
+      "num_cols": 3,
+      "data": [
+        [
+          "Terminal",
+          "Terminal",
+          "Resistance val- ue"
+        ],
+        [
+          "Li-ion battery control- ler harness connector",
+          "Module harness connector",
+          "Approx. 0 Ω"
+        ]
+      ],
+      "markdown": "| Terminal | Terminal | Resistance val- ue |\n| --- | --- | --- |\n| Li-ion battery control- ler harness connector | Module harness connector | Approx. 0 Ω |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "Terminal",
+          "Terminal",
+          "Resistance val- ue"
+        ],
+        [
+          "Li-ion battery control- ler harness connector",
+          "Module harness connector",
+          "Approx. 0 Ω"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 163,
+      "page_manual": "EVB-163",
+      "section_code": "EVB",
+      "bbox": [
+        52.235233306884766,
+        219.63238525390625,
+        302.83135986328125,
+        167.84747314453125
+      ],
+      "num_rows": 2,
+      "num_cols": 3,
+      "data": [
+        [
+          "Terminal",
+          "Terminal",
+          "Resistance val- ue"
+        ],
+        [
+          "Module harness con- nector",
+          "Bus bar",
+          "Approx. 0 Ω"
+        ]
+      ],
+      "markdown": "| Terminal | Terminal | Resistance val- ue |\n| --- | --- | --- |\n| Module harness con- nector | Bus bar | Approx. 0 Ω |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "Terminal",
+          "Terminal",
+          "Resistance val- ue"
+        ],
+        [
+          "Module harness con- nector",
+          "Bus bar",
+          "Approx. 0 Ω"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 164,
+      "page_manual": "EVB-164",
+      "section_code": "EVB",
+      "bbox": [
+        51.221900939941406,
+        402.0086364746094,
+        301.6563720703125,
+        350.06842041015625
+      ],
+      "num_rows": 2,
+      "num_cols": 3,
+      "data": [
+        [
+          "Terminal",
+          "Terminal",
+          "Resistance val- ue"
+        ],
+        [
+          "Li-ion battery control- ler harness connector",
+          "Bus bar",
+          "Approx. 0 Ω"
+        ]
+      ],
+      "markdown": "| Terminal | Terminal | Resistance val- ue |\n| --- | --- | --- |\n| Li-ion battery control- ler harness connector | Bus bar | Approx. 0 Ω |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "Terminal",
+          "Terminal",
+          "Resistance val- ue"
+        ],
+        [
+          "Li-ion battery control- ler harness connector",
+          "Bus bar",
+          "Approx. 0 Ω"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "bbox": [
+        51.104515075683594,
+        661.0648803710938,
+        561.8670043945312,
+        597.3118438720703
+      ],
+      "num_rows": 2,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P33EA",
+          "BATTERY HEATER RELAY",
+          "Li-ion battery controller judges that the status of a relay control signal transmitted from Li-ion battery controller and that of a relay status signal transmitted from heater relay unit do not match.",
+          "• Li-ion battery controller • Heater relay unit • Harness or connector"
+        ]
+      ],
+      "markdown": "| DTC | Trouble diagnosis name | DTC detecting condition | Possible causes |\n| --- | --- | --- | --- |\n| P33EA | BATTERY HEATER RELAY | Li-ion battery controller judges that the status of a relay control signal transmitted from Li-ion battery controller and that of a relay status signal transmitted from heater relay unit do not match. | • Li-ion battery controller • Heater relay unit • Harness or connector |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P33EA",
+          "BATTERY HEATER RELAY",
+          "Li-ion battery controller judges that the status of a relay control signal transmitted from Li-ion battery controller and that of a relay status signal transmitted from heater relay unit do not match.",
+          "• Li-ion battery controller • Heater relay unit • Harness or connector"
+        ]
+      ]
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_161_raster_1.png",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "bbox": [
+        176.27996826171875,
+        481.43994140625,
+        192.17996215820312,
+        490.0799560546875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_161_raster_2.png",
+      "page_pdf": 161,
+      "page_manual": "EVB-161",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        285.4800109863281,
+        64.97999572753906,
+        297.05999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_162_raster_1.png",
+      "page_pdf": 162,
+      "page_manual": "EVB-162",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        202.9199981689453,
+        63.65999984741211,
+        214.5
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_163_raster_1.png",
+      "page_pdf": 163,
+      "page_manual": "EVB-163",
+      "section_code": "EVB",
+      "bbox": [
+        371.03997802734375,
+        251.27999877929688,
+        380.9999694824219,
+        261.17999267578125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_163_raster_2.png",
+      "page_pdf": 163,
+      "page_manual": "EVB-163",
+      "section_code": "EVB",
+      "bbox": [
+        300.0599670410156,
+        251.27999877929688,
+        309.9599609375,
+        261.17999267578125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_163_raster_3.png",
+      "page_pdf": 163,
+      "page_manual": "EVB-163",
+      "section_code": "EVB",
+      "bbox": [
+        88.5,
+        262.67999267578125,
+        524.760009765625,
+        558.5999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_164_raster_1.png",
+      "page_pdf": 164,
+      "page_manual": "EVB-164",
+      "section_code": "EVB",
+      "bbox": [
+        444.719970703125,
+        56.70004653930664,
+        454.6799621582031,
+        66.60003662109375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_164_raster_2.png",
+      "page_pdf": 164,
+      "page_manual": "EVB-164",
+      "section_code": "EVB",
+      "bbox": [
+        372.719970703125,
+        56.70004653930664,
+        382.6799621582031,
+        66.60003662109375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_164_raster_3.png",
+      "page_pdf": 164,
+      "page_manual": "EVB-164",
+      "section_code": "EVB",
+      "bbox": [
+        87.239990234375,
+        79.6199951171875,
+        523.5,
+        375.53997802734375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_165_raster_1.jpeg",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        518.9999389648438,
+        80.3462142944336,
+        537.7799682617188
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_165_raster_2.png",
+      "page_pdf": 165,
+      "page_manual": "EVB-165",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        309.53997802734375,
+        64.97999572753906,
+        321.1199645996094
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

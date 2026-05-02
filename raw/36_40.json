@@ -1,0 +1,1808 @@
+{
+  "schema_version": "1.0",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-36\nCELL VOLTAGE 37\nREADY\nTotal battery voltage 317 V\nApprox. 3,200 - 3,400 mV\nTotal battery voltage 393 V\nApprox. 4,000 - 4,200 mV\nRevision: October 2013\n2013 LEAF",
+    "page_start": 36,
+    "page_end": 40,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "36": [
+        "EVB-36",
+        "EVB",
+        "EVB-36\nCELL VOLTAGE 37\nREADY\nTotal battery voltage 317 V\nApprox. 3,200 - 3,400 mV\nTotal battery voltage 393 V\nApprox. 4,000 - 4,200 mV\nRevision: October 2013\n2013 LEAF"
+      ],
+      "37": [
+        "EVB-37",
+        "EVB",
+        "EVB-37\nCELL VOLTAGE 59\nREADY\nTotal battery voltage 317 V\nApprox. 3,200 - 3,400 mV\nTotal battery voltage 393 V\nApprox. 4,000 - 4,200 mV\nRevision: October 2013\n2013 LEAF"
+      ],
+      "38": [
+        "EVB-38",
+        "EVB",
+        "EVB-38\nCELL VOLTAGE 81\nREADY\nTotal battery voltage 317 V\nApprox. 3,200 - 3,400 mV\nTotal battery voltage 393 V\nApprox. 4,000 - 4,200 mV\nRevision: October 2013\n2013 LEAF"
+      ],
+      "39": [
+        "EVB-39",
+        "EVB",
+        "EVB-39\n)\n(\nside)]\nRevision: October 2013\n2013 LEAF"
+      ],
+      "40": [
+        "EVB-40",
+        "EVB",
+        "EVB-40\nP304D\nCELL CONT ASIC5 VOLT\n×\nP304E\nCELL CONT ASIC6 VOLT\n×\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "EV BATTERY SYSTEM",
+      "page_pdf": 36,
+      "page_manual": "EVB-36",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        233.51999,
+        769.00991,
+        377.92714519999987,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< ECU DIAGNOSIS INFORMATION >",
+      "page_pdf": 36,
+      "page_manual": "EVB-36",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        238.43326800000003,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "EV BATTERY SYSTEM",
+      "page_pdf": 37,
+      "page_manual": "EVB-37",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        233.81998,
+        769.00991,
+        378.19004080000013,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< ECU DIAGNOSIS INFORMATION >",
+      "page_pdf": 37,
+      "page_manual": "EVB-37",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        238.58394,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 37,
+      "page_manual": "EVB-37",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "EV BATTERY SYSTEM",
+      "page_pdf": 38,
+      "page_manual": "EVB-38",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        233.51999,
+        769.00991,
+        377.92714519999987,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< ECU DIAGNOSIS INFORMATION >",
+      "page_pdf": 38,
+      "page_manual": "EVB-38",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        238.43326800000003,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "EV BATTERY SYSTEM",
+      "page_pdf": 39,
+      "page_manual": "EVB-39",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        233.81998,
+        769.00991,
+        378.19004080000013,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< ECU DIAGNOSIS INFORMATION >",
+      "page_pdf": 39,
+      "page_manual": "EVB-39",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        238.58394,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 39,
+      "page_manual": "EVB-39",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "< ECU DIAGNOSIS INFORMATION >",
+      "page_pdf": 40,
+      "page_manual": "EVB-40",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        238.43326800000003,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Fail-safe",
+      "page_pdf": 40,
+      "page_manual": "EVB-40",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14047000000002,
+        736.009334,
+        103.71243800000002,
+        724.1095431491713
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745922",
+      "page_pdf": 40,
+      "page_manual": "EVB-40",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        730.86689,
+        559.5492259999992,
+        725.30921
+      ]
+    },
+    {
+      "text": "When Li-ion Battery Controller (LBC) detects a malfunction of the Li-ion battery, it enters the control mode that protects the battery by stopping or restricting the output/charging from/to the battery.",
+      "page_pdf": 40,
+      "page_manual": "EVB-40",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.13999999999993,
+        711.35591,
+        558.5284415999998,
+        690.5929308640885
+      ]
+    },
+    {
+      "text": "The fail-safe mode differs depending on the contents of the detected malfunction.",
+      "page_pdf": 40,
+      "page_manual": "EVB-40",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.13999999999993,
+        688.3765304000001,
+        427.7116919999996,
+        679.1329428640886
+      ]
+    },
+    {
+      "text": "FAIL-SAFE PATTERN",
+      "page_pdf": 40,
+      "page_manual": "EVB-40",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        670.92835718,
+        164.5860765203999,
+        660.7816516630055
+      ]
+    },
+    {
+      "text": "Pattern A: No driving, Charge stop, and EV system warning lamp illuminate",
+      "page_pdf": 40,
+      "page_manual": "EVB-40",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        657.35591,
+        408.5597207999994,
+        648.1123224640885
+      ]
+    },
+    {
+      "text": "Pattern B: Driving output power limit, Charge stop, and EV system warning lamp illuminate",
+      "page_pdf": 40,
+      "page_manual": "EVB-40",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        645.895922,
+        478.99808759999894,
+        636.6523344640885
+      ]
+    },
+    {
+      "text": "Pattern C: Driving output power limit, Charge limit, and EV system warning lamp illuminate",
+      "page_pdf": 40,
+      "page_manual": "EVB-40",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.140000000000015,
+        634.3753820000001,
+        478.2467207999995,
+        625.1317944640886
+      ]
+    },
+    {
+      "text": "Pattern D: EV system warning lamp illuminate",
+      "page_pdf": 40,
+      "page_manual": "EVB-40",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139999999999986,
+        622.8548420000001,
+        273.07754400000016,
+        613.6112544640886
+      ]
+    },
+    {
+      "text": "FAIL-SAFE LIST",
+      "page_pdf": 40,
+      "page_manual": "EVB-40",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        605.4682771800001,
+        137.02429407000005,
+        595.3215716630056
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 36,
+      "page_manual": "EVB-36",
+      "section_code": "EVB",
+      "bbox": [
+        51.077484130859375,
+        740.5852890014648,
+        561.0936279296875,
+        37.39453125
+      ],
+      "num_rows": 44,
+      "num_cols": 4,
+      "data": [
+        [
+          "Monitor item",
+          "",
+          "Condition",
+          "Values / Status"
+        ],
+        [
+          "CELL VOLTAGE 16",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 16",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 17",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 17",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 18",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 18",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 19",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 19",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 20",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 20",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 21",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 21",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 22",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 22",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 23",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 23",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 24",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 24",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 25",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 25",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 26",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 26",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 27",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 27",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 28",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 28",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 29",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 29",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 30",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 30",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 31",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 31",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 32",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 32",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 33",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 33",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 34",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 34",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 35",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 35",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 36",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 37",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 37",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ]
+      ],
+      "markdown": "| Monitor item    |       | Condition                   | Values / Status          |\n|-----------------|-------|-----------------------------|--------------------------|\n| CELL VOLTAGE 16 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 16 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 17 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 17 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 18 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 18 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 19 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 19 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 20 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 20 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 21 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 21 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 22 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 22 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 23 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 23 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 24 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 24 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 25 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 25 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 26 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 26 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 27 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 27 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 28 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 28 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 29 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 29 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 30 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 30 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 31 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 31 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 32 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 32 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 33 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 33 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 34 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 34 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 35 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 35 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 36 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 37 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 37 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 37,
+      "page_manual": "EVB-37",
+      "section_code": "EVB",
+      "bbox": [
+        50.84409713745117,
+        740.5627250671387,
+        582.271240234375,
+        37.61737060546875
+      ],
+      "num_rows": 45,
+      "num_cols": 5,
+      "data": [
+        [
+          "Monitor item",
+          "",
+          "Condition",
+          "Values / Status",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 38",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400",
+          "A mV"
+        ],
+        [
+          "CELL VOLTAGE 38",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200",
+          "mV"
+        ],
+        [
+          "CELL VOLTAGE 39",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          "B"
+        ],
+        [
+          "CELL VOLTAGE 39",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 40",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 40",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 41",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 41",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          "D"
+        ],
+        [
+          "CELL VOLTAGE 42",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 42",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 43",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          "E"
+        ],
+        [
+          "CELL VOLTAGE 43",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 44",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          "F"
+        ],
+        [
+          "CELL VOLTAGE 44",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 45",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 45",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          "G"
+        ],
+        [
+          "CELL VOLTAGE 46",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 46",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          "H"
+        ],
+        [
+          "CELL VOLTAGE 47",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 47",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200",
+          "mV"
+        ],
+        [
+          "CELL VOLTAGE 48",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          "I"
+        ],
+        [
+          "CELL VOLTAGE 48",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200",
+          "mV"
+        ],
+        [
+          "CELL VOLTAGE 49",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 49",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          "J"
+        ],
+        [
+          "CELL VOLTAGE 50",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 50",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200",
+          "K mV"
+        ],
+        [
+          "CELL VOLTAGE 51",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 51",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200",
+          "mV"
+        ],
+        [
+          "CELL VOLTAGE 52",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          "L"
+        ],
+        [
+          "CELL VOLTAGE 52",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200",
+          "mV"
+        ],
+        [
+          "CELL VOLTAGE 53",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          "M"
+        ],
+        [
+          "CELL VOLTAGE 53",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200",
+          "mV"
+        ],
+        [
+          "CELL VOLTAGE 54",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 54",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200",
+          "N mV"
+        ],
+        [
+          "CELL VOLTAGE 55",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 55",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200",
+          "mV"
+        ],
+        [
+          "CELL VOLTAGE 56",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          "O"
+        ],
+        [
+          "CELL VOLTAGE 56",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 57",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          "P"
+        ],
+        [
+          "CELL VOLTAGE 57",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200",
+          "mV"
+        ],
+        [
+          "CELL VOLTAGE 58",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400",
+          "mV"
+        ],
+        [
+          "CELL VOLTAGE 58",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200",
+          "mV"
+        ],
+        [
+          "CELL VOLTAGE 59",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400",
+          "mV"
+        ],
+        [
+          "CELL VOLTAGE 59",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200",
+          "mV"
+        ]
+      ],
+      "markdown": "| Monitor item    |       | Condition                   | Values / Status          |      |\n|-----------------|-------|-----------------------------|--------------------------|------|\n| CELL VOLTAGE 38 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400    | A mV |\n| CELL VOLTAGE 38 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200    | mV   |\n| CELL VOLTAGE 39 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV | B    |\n| CELL VOLTAGE 39 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |      |\n| CELL VOLTAGE 40 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |      |\n| CELL VOLTAGE 40 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |      |\n| CELL VOLTAGE 41 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |      |\n| CELL VOLTAGE 41 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV | D    |\n| CELL VOLTAGE 42 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |      |\n| CELL VOLTAGE 42 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |      |\n| CELL VOLTAGE 43 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV | E    |\n| CELL VOLTAGE 43 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |      |\n| CELL VOLTAGE 44 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV | F    |\n| CELL VOLTAGE 44 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |      |\n| CELL VOLTAGE 45 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |      |\n| CELL VOLTAGE 45 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV | G    |\n| CELL VOLTAGE 46 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |      |\n| CELL VOLTAGE 46 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV | H    |\n| CELL VOLTAGE 47 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |      |\n| CELL VOLTAGE 47 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200    | mV   |\n| CELL VOLTAGE 48 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV | I    |\n| CELL VOLTAGE 48 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200    | mV   |\n| CELL VOLTAGE 49 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |      |\n| CELL VOLTAGE 49 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV | J    |\n| CELL VOLTAGE 50 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |      |\n| CELL VOLTAGE 50 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200    | K mV |\n| CELL VOLTAGE 51 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |      |\n| CELL VOLTAGE 51 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200    | mV   |\n| CELL VOLTAGE 52 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV | L    |\n| CELL VOLTAGE 52 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200    | mV   |\n| CELL VOLTAGE 53 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV | M    |\n| CELL VOLTAGE 53 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200    | mV   |\n| CELL VOLTAGE 54 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |      |\n| CELL VOLTAGE 54 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200    | N mV |\n| CELL VOLTAGE 55 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |      |\n| CELL VOLTAGE 55 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200    | mV   |\n| CELL VOLTAGE 56 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV | O    |\n| CELL VOLTAGE 56 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |      |\n| CELL VOLTAGE 57 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV | P    |\n| CELL VOLTAGE 57 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200    | mV   |\n| CELL VOLTAGE 58 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400    | mV   |\n| CELL VOLTAGE 58 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200    | mV   |\n| CELL VOLTAGE 59 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400    | mV   |\n| CELL VOLTAGE 59 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200    | mV   |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 38,
+      "page_manual": "EVB-38",
+      "section_code": "EVB",
+      "bbox": [
+        51.08970642089844,
+        740.4020309448242,
+        561.1467895507812,
+        37.57183837890625
+      ],
+      "num_rows": 47,
+      "num_cols": 4,
+      "data": [
+        [
+          "Monitor item",
+          "",
+          "Condition",
+          "Values / Status"
+        ],
+        [
+          "CELL VOLTAGE 60",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 60",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 61",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 61",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 62",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 62",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 63",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 63",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 64",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 64",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 65",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 65",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 66",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 66",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 67",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 67",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 68",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 68",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 69",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 69",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 70",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 70",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 71",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 71",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 72",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 72",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 73",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 73",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 74",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 74",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 75",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 75",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 76",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 76",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 77",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 77",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 78",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 78",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 79",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 79",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 80",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "CELL VOLTAGE 80",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "",
+          "",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV"
+        ],
+        [
+          "",
+          "",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV"
+        ],
+        [
+          "CELL VOLTAGE 81",
+          "READY",
+          "",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 81",
+          "READY",
+          "",
+          ""
+        ]
+      ],
+      "markdown": "| Monitor item    |       | Condition                   | Values / Status          |\n|-----------------|-------|-----------------------------|--------------------------|\n| CELL VOLTAGE 60 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 60 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 61 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 61 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 62 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 62 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 63 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 63 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 64 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 64 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 65 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 65 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 66 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 66 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 67 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 67 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 68 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 68 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 69 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 69 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 70 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 70 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 71 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 71 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 72 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 72 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 73 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 73 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 74 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 74 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 75 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 75 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 76 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 76 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 77 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 77 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 78 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 78 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 79 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 79 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 80 | READY | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n| CELL VOLTAGE 80 | READY | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n|                 |       | Total battery voltage 317 V | Approx. 3,200 - 3,400 mV |\n|                 |       | Total battery voltage 393 V | Approx. 4,000 - 4,200 mV |\n| CELL VOLTAGE 81 | READY |                             |                          |\n| CELL VOLTAGE 81 | READY |                             |                          |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 39,
+      "page_manual": "EVB-39",
+      "section_code": "EVB",
+      "bbox": [
+        50.680477142333984,
+        741.3356895446777,
+        581.9393920898438,
+        46.44146728515625
+      ],
+      "num_rows": 38,
+      "num_cols": 5,
+      "data": [
+        [
+          "Monitor item",
+          "",
+          "Condition",
+          "Values / Status",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 82",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          "A"
+        ],
+        [
+          "CELL VOLTAGE 82",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          "A"
+        ],
+        [
+          "CELL VOLTAGE 83",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          "B"
+        ],
+        [
+          "CELL VOLTAGE 83",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          "B"
+        ],
+        [
+          "CELL VOLTAGE 84",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 84",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 85",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 85",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          "D"
+        ],
+        [
+          "CELL VOLTAGE 86",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 86",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 87",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          "E"
+        ],
+        [
+          "CELL VOLTAGE 87",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          "E"
+        ],
+        [
+          "CELL VOLTAGE 88",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          "F"
+        ],
+        [
+          "CELL VOLTAGE 88",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          "F"
+        ],
+        [
+          "CELL VOLTAGE 89",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          "G"
+        ],
+        [
+          "CELL VOLTAGE 89",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          "G"
+        ],
+        [
+          "CELL VOLTAGE 90",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 90",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          "H"
+        ],
+        [
+          "CELL VOLTAGE 91",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 91",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 92",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          "I"
+        ],
+        [
+          "CELL VOLTAGE 92",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          "I"
+        ],
+        [
+          "CELL VOLTAGE 93",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          "J"
+        ],
+        [
+          "CELL VOLTAGE 93",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          "J"
+        ],
+        [
+          "CELL VOLTAGE 94",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 94",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          "K"
+        ],
+        [
+          "CELL VOLTAGE 95",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 95",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          ""
+        ],
+        [
+          "CELL VOLTAGE 96",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,200 - 3,400 mV",
+          "L"
+        ],
+        [
+          "CELL VOLTAGE 96",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          "L"
+        ],
+        [
+          "MAXIMUM CELL VOLTAGE",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,300 - 3,500 mV",
+          "M"
+        ],
+        [
+          "MAXIMUM CELL VOLTAGE",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          "M"
+        ],
+        [
+          "MINIMUM CELL VOLTAGE",
+          "READY",
+          "Total battery voltage 317 V",
+          "Approx. 3,300 - 3,500 mV",
+          "N"
+        ],
+        [
+          "MINIMUM CELL VOLTAGE",
+          "READY",
+          "Total battery voltage 393 V",
+          "Approx. 4,000 - 4,200 mV",
+          "N"
+        ],
+        [
+          "BATTERY TEMPERATURE 1",
+          "READY (Stop cle)",
+          "Ambient temperature: 25 ° C (77 ° F)",
+          "20 ° C - 30 ° C (68 ° F - 86 ° F) [Equivalent to air temperature around rear module stack]",
+          "O"
+        ],
+        [
+          "BATTERY TEMPERATURE 1",
+          "the vehi-",
+          "",
+          "20 ° C - 30 ° C (68 ° F - 86 ° F) [Equivalent to air temperature around front RH module stack",
+          "P"
+        ],
+        [
+          "BATTERY TEMPERATURE 2",
+          "READY (Stop the vehi- cle)",
+          "Ambient temperature: 25 ° C (77 ° F)",
+          "(front side)] 20 ° C - 30 ° C (68 ° F - 86 ° F)",
+          ""
+        ]
+      ],
+      "markdown": "| Monitor item          |                            | Condition                            | Values / Status                                                                               |    |\n|-----------------------|----------------------------|--------------------------------------|-----------------------------------------------------------------------------------------------|----|\n| CELL VOLTAGE 82       | READY                      | Total battery voltage 317 V          | Approx. 3,200 - 3,400 mV                                                                      | A  |\n| CELL VOLTAGE 82       | READY                      | Total battery voltage 393 V          | Approx. 4,000 - 4,200 mV                                                                      | A  |\n| CELL VOLTAGE 83       | READY                      | Total battery voltage 317 V          | Approx. 3,200 - 3,400 mV                                                                      | B  |\n| CELL VOLTAGE 83       | READY                      | Total battery voltage 393 V          | Approx. 4,000 - 4,200 mV                                                                      | B  |\n| CELL VOLTAGE 84       | READY                      | Total battery voltage 317 V          | Approx. 3,200 - 3,400 mV                                                                      |    |\n| CELL VOLTAGE 84       | READY                      | Total battery voltage 393 V          | Approx. 4,000 - 4,200 mV                                                                      |    |\n| CELL VOLTAGE 85       | READY                      | Total battery voltage 317 V          | Approx. 3,200 - 3,400 mV                                                                      |    |\n| CELL VOLTAGE 85       | READY                      | Total battery voltage 393 V          | Approx. 4,000 - 4,200 mV                                                                      | D  |\n| CELL VOLTAGE 86       | READY                      | Total battery voltage 317 V          | Approx. 3,200 - 3,400 mV                                                                      |    |\n| CELL VOLTAGE 86       | READY                      | Total battery voltage 393 V          | Approx. 4,000 - 4,200 mV                                                                      |    |\n| CELL VOLTAGE 87       | READY                      | Total battery voltage 317 V          | Approx. 3,200 - 3,400 mV                                                                      | E  |\n| CELL VOLTAGE 87       | READY                      | Total battery voltage 393 V          | Approx. 4,000 - 4,200 mV                                                                      | E  |\n| CELL VOLTAGE 88       | READY                      | Total battery voltage 317 V          | Approx. 3,200 - 3,400 mV                                                                      | F  |\n| CELL VOLTAGE 88       | READY                      | Total battery voltage 393 V          | Approx. 4,000 - 4,200 mV                                                                      | F  |\n| CELL VOLTAGE 89       | READY                      | Total battery voltage 317 V          | Approx. 3,200 - 3,400 mV                                                                      | G  |\n| CELL VOLTAGE 89       | READY                      | Total battery voltage 393 V          | Approx. 4,000 - 4,200 mV                                                                      | G  |\n| CELL VOLTAGE 90       | READY                      | Total battery voltage 317 V          | Approx. 3,200 - 3,400 mV                                                                      |    |\n| CELL VOLTAGE 90       | READY                      | Total battery voltage 393 V          | Approx. 4,000 - 4,200 mV                                                                      | H  |\n| CELL VOLTAGE 91       | READY                      | Total battery voltage 317 V          | Approx. 3,200 - 3,400 mV                                                                      |    |\n| CELL VOLTAGE 91       | READY                      | Total battery voltage 393 V          | Approx. 4,000 - 4,200 mV                                                                      |    |\n| CELL VOLTAGE 92       | READY                      | Total battery voltage 317 V          | Approx. 3,200 - 3,400 mV                                                                      | I  |\n| CELL VOLTAGE 92       | READY                      | Total battery voltage 393 V          | Approx. 4,000 - 4,200 mV                                                                      | I  |\n| CELL VOLTAGE 93       | READY                      | Total battery voltage 317 V          | Approx. 3,200 - 3,400 mV                                                                      | J  |\n| CELL VOLTAGE 93       | READY                      | Total battery voltage 393 V          | Approx. 4,000 - 4,200 mV                                                                      | J  |\n| CELL VOLTAGE 94       | READY                      | Total battery voltage 317 V          | Approx. 3,200 - 3,400 mV                                                                      |    |\n| CELL VOLTAGE 94       | READY                      | Total battery voltage 393 V          | Approx. 4,000 - 4,200 mV                                                                      | K  |\n| CELL VOLTAGE 95       | READY                      | Total battery voltage 317 V          | Approx. 3,200 - 3,400 mV                                                                      |    |\n| CELL VOLTAGE 95       | READY                      | Total battery voltage 393 V          | Approx. 4,000 - 4,200 mV                                                                      |    |\n| CELL VOLTAGE 96       | READY                      | Total battery voltage 317 V          | Approx. 3,200 - 3,400 mV                                                                      | L  |\n| CELL VOLTAGE 96       | READY                      | Total battery voltage 393 V          | Approx. 4,000 - 4,200 mV                                                                      | L  |\n| MAXIMUM CELL VOLTAGE  | READY                      | Total battery voltage 317 V          | Approx. 3,300 - 3,500 mV                                                                      | M  |\n| MAXIMUM CELL VOLTAGE  | READY                      | Total battery voltage 393 V          | Approx. 4,000 - 4,200 mV                                                                      | M  |\n| MINIMUM CELL VOLTAGE  | READY                      | Total battery voltage 317 V          | Approx. 3,300 - 3,500 mV                                                                      | N  |\n| MINIMUM CELL VOLTAGE  | READY                      | Total battery voltage 393 V          | Approx. 4,000 - 4,200 mV                                                                      | N  |\n| BATTERY TEMPERATURE 1 | READY (Stop cle)           | Ambient temperature: 25 ° C (77 ° F) | 20 ° C - 30 ° C (68 ° F - 86 ° F) [Equivalent to air temperature around rear module stack]    | O  |\n| BATTERY TEMPERATURE 1 | the vehi-                  |                                      | 20 ° C - 30 ° C (68 ° F - 86 ° F) [Equivalent to air temperature around front RH module stack | P  |\n| BATTERY TEMPERATURE 2 | READY (Stop the vehi- cle) | Ambient temperature: 25 ° C (77 ° F) | (front side)] 20 ° C - 30 ° C (68 ° F - 86 ° F)                                               |    |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 40,
+      "page_manual": "EVB-40",
+      "section_code": "EVB",
+      "bbox": [
+        50.86837387084961,
+        583.3993225097656,
+        560.9281616210938,
+        37.75689697265625
+      ],
+      "num_rows": 35,
+      "num_cols": 6,
+      "data": [
+        [
+          "DTC",
+          "CONSULT screen items",
+          "Pattern",
+          "Pattern",
+          "Pattern",
+          "Pattern"
+        ],
+        [
+          "DTC",
+          "CONSULT screen items",
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        [
+          "P0A0D",
+          "HV SYSTEM INTERLOCK ERROR",
+          "",
+          "",
+          "",
+          "×"
+        ],
+        [
+          "P0A1F",
+          "BATTERY ENERGY CONTROL MODULE",
+          "×",
+          "×",
+          "",
+          "×"
+        ],
+        [
+          "P3030",
+          "CELL CONT LIN",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3031",
+          "CELL CONT ASIC1",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3032",
+          "CELL CONT ASIC2",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3033",
+          "CELL CONT ASIC3",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3034",
+          "CELL CONT ASIC4",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3035",
+          "CELL CONT ASIC5",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3036",
+          "CELL CONT ASIC6",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3037",
+          "CELL CONT ASIC7",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3038",
+          "CELL CONT ASIC8",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3039",
+          "CELL CONT ASIC9",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P303A",
+          "CELL CONT ASIC10",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P303B",
+          "CELL CONT ASIC11",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P303C",
+          "CELL CONT ASIC12",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P303D",
+          "CELL CONT ASIC13",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P303E",
+          "CELL CONT ASIC14",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P303F",
+          "CELL CONT ASIC15",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3040",
+          "CELL CONT ASIC16",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3041",
+          "CELL CONT ASIC17",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3042",
+          "CELL CONT ASIC18",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3043",
+          "CELL CONT ASIC19",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3044",
+          "CELL CONT ASIC20",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3045",
+          "CELL CONT ASIC21",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3046",
+          "CELL CONT ASIC22",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3047",
+          "CELL CONT ASIC23",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3048",
+          "CELL CONT ASIC24",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3049",
+          "CELL CONT ASIC1 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P304A",
+          "CELL CONT ASIC2 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P304B",
+          "CELL CONT ASIC3 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P304C",
+          "CELL CONT ASIC4 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P304D",
+          "CELL CONT ASIC5 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P304E",
+          "CELL CONT ASIC6 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ]
+      ],
+      "markdown": "| DTC   | CONSULT screen items          | Pattern   | Pattern   | Pattern   | Pattern   |\n|-------|-------------------------------|-----------|-----------|-----------|-----------|\n| DTC   | CONSULT screen items          | A         | B         | C         | D         |\n| P0A0D | HV SYSTEM INTERLOCK ERROR     |           |           |           | ×         |\n| P0A1F | BATTERY ENERGY CONTROL MODULE | ×         | ×         |           | ×         |\n| P3030 | CELL CONT LIN                 |           | ×         |           |           |\n| P3031 | CELL CONT ASIC1               |           | ×         |           |           |\n| P3032 | CELL CONT ASIC2               |           | ×         |           |           |\n| P3033 | CELL CONT ASIC3               |           | ×         |           |           |\n| P3034 | CELL CONT ASIC4               |           | ×         |           |           |\n| P3035 | CELL CONT ASIC5               |           | ×         |           |           |\n| P3036 | CELL CONT ASIC6               |           | ×         |           |           |\n| P3037 | CELL CONT ASIC7               |           | ×         |           |           |\n| P3038 | CELL CONT ASIC8               |           | ×         |           |           |\n| P3039 | CELL CONT ASIC9               |           | ×         |           |           |\n| P303A | CELL CONT ASIC10              |           | ×         |           |           |\n| P303B | CELL CONT ASIC11              |           | ×         |           |           |\n| P303C | CELL CONT ASIC12              |           | ×         |           |           |\n| P303D | CELL CONT ASIC13              |           | ×         |           |           |\n| P303E | CELL CONT ASIC14              |           | ×         |           |           |\n| P303F | CELL CONT ASIC15              |           | ×         |           |           |\n| P3040 | CELL CONT ASIC16              |           | ×         |           |           |\n| P3041 | CELL CONT ASIC17              |           | ×         |           |           |\n| P3042 | CELL CONT ASIC18              |           | ×         |           |           |\n| P3043 | CELL CONT ASIC19              |           | ×         |           |           |\n| P3044 | CELL CONT ASIC20              |           | ×         |           |           |\n| P3045 | CELL CONT ASIC21              |           | ×         |           |           |\n| P3046 | CELL CONT ASIC22              |           | ×         |           |           |\n| P3047 | CELL CONT ASIC23              |           | ×         |           |           |\n| P3048 | CELL CONT ASIC24              |           | ×         |           |           |\n| P3049 | CELL CONT ASIC1 VOLT          |           | ×         |           |           |\n| P304A | CELL CONT ASIC2 VOLT          |           | ×         |           |           |\n| P304B | CELL CONT ASIC3 VOLT          |           | ×         |           |           |\n| P304C | CELL CONT ASIC4 VOLT          |           | ×         |           |           |\n| P304D | CELL CONT ASIC5 VOLT          |           | ×         |           |           |\n| P304E | CELL CONT ASIC6 VOLT          |           | ×         |           |           |",
+      "tableformer": true
+    }
+  ],
+  "images": []
+}

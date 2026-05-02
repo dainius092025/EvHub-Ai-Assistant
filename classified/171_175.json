@@ -1,0 +1,2249 @@
+{
+  "schema_version": "1.1",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-171\nNO\nRestore the connection status of the Li ion battery heater connector.\n4.CHECK RESISTANCE OF LI-ION BATTERY HEATER\nRevision: October 2013\n2013 LEAF",
+    "page_start": 171,
+    "page_end": 175,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "171": [
+        "EVB-171",
+        "EVB",
+        "EVB-171\nNO\nRestore the connection status of the Li ion battery heater connector.\n4.CHECK RESISTANCE OF LI-ION BATTERY HEATER\nRevision: October 2013\n2013 LEAF"
+      ],
+      "172": [
+        "EVB-172",
+        "EVB",
+        "EVB-172\nRevision: October 2013\n2013 LEAF"
+      ],
+      "173": [
+        "EVB-173",
+        "EVB",
+        "EVB-173\nRevision: October 2013\n2013 LEAF"
+      ],
+      "174": [
+        "EVB-174",
+        "EVB",
+        "EVB-174\nfound, replace damaged parts.\n1.\nRemove high voltage harness from battery junction box.\n2.\nDisconnect Li-ion battery controller harness connector.\nRevision: October 2013\n2013 LEAF"
+      ],
+      "175": [
+        "EVB-175",
+        "EVB",
+        "EVB-175\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "P33EE BATTERY HEATER CONTROL SYSTEM",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        157.2,
+        769.00991,
+        454.73552639999957,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "P33EE BATTERY HEATER CONTROL SYSTEM",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        736.10997,
+        378.3675,
+        722.8289534254144
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.44,
+        712.00991,
+        115.97786880000004,
+        700.1101191491713
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        684.24824718,
+        184.37932433020006,
+        674.1015416630055
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.44,
+        592.42989,
+        177.393024,
+        580.5300991491713
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DANGER: Since hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        564.83589,
+        102.29269239999996,
+        555.5923024640884
+      ],
+      "type": "warning",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.460009999999954,
+        493.55595480000005,
+        107.5893219999999,
+        484.31236726408844
+      ],
+      "type": "warning",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "Be sure to remove the service plug in order to disconnect the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460009999999954,
+        482.03656320000005,
+        559.858474,
+        461.27243566408845
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "The removed service plug must always be carried in a pocket of the responsible worker or placed in the tool box during the procedure to prevent the plug from being connected by mistake.",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460949599999935,
+        458.99663160000006,
+        559.8771615999998,
+        438.29305606408843
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Be sure to wear insulating protective equipment consisting of glove, shoes, face shield and glasses before beginning work on the high voltage system.",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46084519999991,
+        436.01610360000006,
+        559.8288243999995,
+        415.25312446408844
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Never allow workers other than the responsible person to touch the vehicle containing high voltage parts. To keep others from touching the high voltage parts, these parts must be covered with an insulating sheet except when using them.",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460845199999824,
+        413.03672400000005,
+        559.8678699999996,
+        380.75320486408845
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Refer to EVB-6, \"High Voltage Precautions\".",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460845199999795,
+        378.53680440000005,
+        279.62232,
+        369.2923124640884
+      ],
+      "type": "section_header",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "CAUTION: Never  bring  the  vehicle  into  the  READY  status  with  the  service  plug  removed  unless  otherwise instructed in the Service Manual. A malfunction may occur if this is not observed.",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.45955600000002,
+        367.01536000000004,
+        104.63643600000003,
+        357.77177246408843
+      ],
+      "type": "warning",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "1.PRECONDITIONING",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        332.96398,
+        166.27965600000005,
+        317.02676011049726
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "WARNING: Disconnect the high voltage. Refer to GI-33, \"How to Disconnect High Voltage\".",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459796,
+        306.65590000000003,
+        107.58910799999994,
+        297.4123124640884
+      ],
+      "type": "warning",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Remove Li-ion battery. Refer to EVB-194, \"Removal and Installation\".",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46044800000004,
+        283.676,
+        393.3823,
+        274.4318924640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Remove battery pack upper case. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46007600000007,
+        272.1566084,
+        559.7761684,
+        251.4524224640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": ">> GO TO 2.",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.040262,
+        231.65610600000002,
+        155.30129919999996,
+        222.4125184640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "2.CHECK INSTALLATION CONDITION OF LI-ION BATTERY HEATER",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        220.58398999999997,
+        387.61600800000025,
+        204.6467701104973
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check the main body of Li-ion battery heater for installation condition.",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.459796,
+        197.33597840000004,
+        374.45221199999946,
+        188.09239086408843
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459796,
+        182.8161308,
+        198.38651880000006,
+        173.57254326408838
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> GO TO 3.",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        168.35591999999997,
+        155.30461,
+        159.11233246408847
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO >> Tighten the mounting nut of the Li-ion battery heater to the specified torque. Refer to EVB-227, \"LI-ION BATTERY HEATER : Exploded view\".",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        156.83652840000002,
+        559.8181743999996,
+        136.07232246408842
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "3.CHECK CONNECTION STATUS OF LI-ION BATTERY HEATER CONNECTOR",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        134.24401,
+        436.2152520000001,
+        118.30679011049722
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check the connection status of the Li-ion battery heater connector.",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.45990040000001,
+        110.99599839999996,
+        361.01133839999943,
+        101.75241086408835
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.45990040000001,
+        96.53555440000002,
+        198.3866232000001,
+        87.29196686408841
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> GO TO 4.",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        82.01602000000003,
+        155.30461,
+        72.77243246408841
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO >> Restore the connection status of the Li-ion battery heater connector.",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        70.49548000000004,
+        424.6495107999991,
+        61.25189246408843
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "4.CHECK RESISTANCE OF LI-ION BATTERY HEATER",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        59.42399999999998,
+        318.9829260000002,
+        43.48678011049719
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "P33EE BATTERY HEATER CONTROL SYSTEM",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        156.90001,
+        769.00991,
+        454.54009959999985,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check resistance of Li-ion battery heater.",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        735.83589,
+        242.14852199999996,
+        726.5923024640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        582.475422,
+        196.92755759999997,
+        573.2318344640885
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> GO TO 5.",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        567.95588,
+        154.07320559999994,
+        558.7122924640885
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO >> Replace applicable Li-ion battery heater. Refer to EVB-228, \"LI-ION BATTERY HEATER : Disassembly and Assembly\".",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        556.495892,
+        558.6050400000003,
+        535.7323124640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "5.CHECK CONTINUITY OF LI-ION BATTERY HEATER AND BATTERY JUNCTION BOX",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        533.9039799999999,
+        472.8017555999996,
+        517.9667601104971
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Disconnect Li-ion battery heater and battery junction box harness connector.",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13959920000002,
+        510.65596839999995,
+        425.1879431999997,
+        501.41238086408833
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check continuity Li-ion battery heater and battery junction box harness connector.",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13959920000002,
+        499.13542839999997,
+        450.16240679999976,
+        489.89184086408835
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.13959920000002,
+        345.7749604,
+        196.92715679999998,
+        336.5313728640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> GO TO 6",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        331.31593000000004,
+        151.1693196,
+        322.0723424640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        319.79653840000003,
+        73.514616,
+        310.5529508640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": ">> Repair harness or connector.",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.77239200000001,
+        319.79653840000003,
+        243.10406399999982,
+        310.5529508640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "6.CHECK CONTINUITY OF LI-ION BATTERY HEATER AND HEATER RELAY UNIT",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        308.72402,
+        450.02334600000046,
+        292.78680011049727
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Disconnect Li-ion battery heater and heater relay unit harness connector harness connector.",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13991240000004,
+        285.4760084,
+        498.3941627999991,
+        276.23242086408845
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check continuity Li-ion battery heater and heater relay unit harness connector harness connector.",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13991240000004,
+        273.9566168,
+        523.4996484000001,
+        264.7130292640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.13991240000007,
+        120.59614880000004,
+        196.92747000000003,
+        111.35256126408842
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> Replace heater relay unit. Refer to EVB-234, \"LI-ION BATTERY HEATER RELAY UNIT : Disassembly and Assembly\".",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        106.13591999999994,
+        558.5544060000004,
+        85.37243246408843
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO >> Repair harness or connector.",
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.83960240000002,
+        83.09547999999995,
+        243.10366639999984,
+        73.85189246408845
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "U1000 CAN COMM CIRCUIT",
+      "page_pdf": 173,
+      "page_manual": "EVB-173",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        217.37999,
+        769.00991,
+        394.6053403999998,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "U1000 CAN COMM CIRCUIT",
+      "page_pdf": 173,
+      "page_manual": "EVB-173",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        736.10997,
+        249.102,
+        722.8289534254144
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Description",
+      "page_pdf": 173,
+      "page_manual": "EVB-173",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        712.00991,
+        119.72064000000003,
+        700.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "CAN (Controller Area Network) is a serial communication line for real time applications. It is an on-vehicle multiplexcommunication line with high data communication speed and excellent error detection ability. Modern vehicle is equipped with many electronic control units, and each control unit shares information and links with other control units during operation (not independent). In CAN communication, control units are connected with 2 communication lines (CAN-H, CAN-L) allowing a high rate of information transmission with less wiring. Each control unit transmits/receives data but selectively reads the required data only.",
+      "page_pdf": 173,
+      "page_manual": "EVB-173",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46000999999998,
+        687.35591,
+        559.9241416,
+        620.6330232640887
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "CAN communication signal chart. Refer to LAN-36, \"CAN COMMUNICATION SYSTEM : CAN Communication Signal Chart\".",
+      "page_pdf": 173,
+      "page_manual": "EVB-173",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        618.3560708000002,
+        559.8161919999999,
+        597.5923024640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 173,
+      "page_manual": "EVB-173",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        589.48989,
+        115.97786880000004,
+        577.5900991491712
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 173,
+      "page_manual": "EVB-173",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        561.7883471800001,
+        184.37932433020006,
+        551.6416416630055
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 173,
+      "page_manual": "EVB-173",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        488.39,
+        177.393024,
+        476.4902091491712
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "For the diagnosis procedure, refer to LAN-16, \"Trouble Diagnosis Flow Chart\".",
+      "page_pdf": 173,
+      "page_manual": "EVB-173",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        463.79594000000003,
+        414.74231999999995,
+        454.5523524640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 173,
+      "page_manual": "EVB-173",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "HIGH VOLTAGE CIRCUIT",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        225.36,
+        769.00991,
+        386.18465280000026,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "HIGH VOLTAGE CIRCUIT",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.10997,
+        227.4946500000001,
+        722.8289534254144
+      ],
+      "type": "section_header",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        712.00991,
+        177.000288,
+        700.1101191491713
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "DANGER: Since hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        684.35591,
+        100.97268239999997,
+        675.1123224640885
+      ],
+      "type": "warning",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14010439999987,
+        613.0759748,
+        106.19007239999988,
+        603.8323872640885
+      ],
+      "type": "warning",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "Be sure to remove the service plug in order to disconnect the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999987,
+        601.5565832000001,
+        558.528024,
+        580.7924556640886
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "The removed service plug must always be carried in a pocket of the responsible worker or placed in the tool box during the procedure to prevent the plug from being connected by mistake.",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        578.5760552000002,
+        558.6052799999992,
+        557.8130760640887
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Be sure to wear insulating protective equipment consisting of glove, shoes, face shield and glasses before beginning work on the high voltage system.",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        555.5361236000002,
+        558.5504699999996,
+        534.8325480640888
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Never allow workers other than the responsible person to touch the vehicle containing high voltage parts. To keep others from touching the high voltage parts, these parts must be covered with an insulating sheet except when using them.",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        532.5567440000003,
+        558.5803284000008,
+        500.33262846408877
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Refer to EVB-6, \"High Voltage Precautions\".",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        498.0568244000004,
+        278.30231,
+        488.8123324640884
+      ],
+      "type": "section_header",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "CAUTION: Never  bring  the  vehicle  into  the  READY  status  with  the  service  plug  removed  unless  otherwise instructed in the Service Manual. A malfunction may occur if this is not observed.",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139545999999996,
+        486.5365284,
+        103.316426,
+        477.2929408640884
+      ],
+      "type": "warning",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "1.CHECK HIGH VOLTAGE FUSE",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        452.484,
+        214.50592440000017,
+        436.54678011049725
+      ],
+      "type": "section_header",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Check the continuity between and .",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        428.27540400000004,
+        237.79077840000025,
+        419.0318164640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        413.75555640000005,
+        196.92736559999997,
+        404.51196886408843
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> GO TO 2",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        399.29594000000003,
+        151.1693196,
+        390.0523524640884
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO >> Replace the service plug (with high voltage fuse) after repairing the applicable circuit. Refer to EVB-219, \"BATTERY  JUNCTION  BOX  AND  BATTERY  HARNESS  : Disassembly and Assembly\".",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        387.7765484,
+        368.3781912000004,
+        344.03233246408837
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "2.PRECONDITIONING",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        298.22402,
+        165.98800799999998,
+        282.28680011049727
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "WARNING: Disconnect the high voltage. Refer to GI-33, \"How to Disconnect High Voltage\".",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        271.97555239999997,
+        106.18977600000001,
+        262.73196486408847
+      ],
+      "type": "warning",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Remove Li-ion battery. Refer to EVB-194, \"Removal and Installation\".",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139916000000085,
+        248.93662840000002,
+        392.06232,
+        239.69232246408842
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Remove battery pack upper case. Refer to EVB-204, \"BATTERY PACK UPPER CASE : Removal and Installation\".",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.140096000000085,
+        237.47592199999997,
+        558.5183063999997,
+        216.71243246408835
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": ">> GO TO 3.",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.7796556,
+        196.97572839999998,
+        154.05301200000002,
+        187.73214086408848
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "3.CHECK CONNECTION STATUS",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        185.90409999999997,
+        219.66840000000008,
+        169.9668801104972
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check connection status of each bus bar in high voltage circuit",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        162.59647599999994,
+        341.62639200000035,
+        153.35288846408844
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        148.136032,
+        196.92736559999997,
+        138.89244446408838
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES >> GO TO 4",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        133.61601999999993,
+        151.1693196,
+        124.37243246408843
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO >> Recover the connection status.",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        122.09547999999995,
+        252.41059319999994,
+        112.85189246408845
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "4.CHECK HIGH VOLTAGE HARNESS",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        111.02400999999998,
+        237.1823352000002,
+        95.08679011049719
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "CAUTION: Check that high voltage harness and harness shield have no scratches and cracks. If any damage is found, replace damaged parts.",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        87.77599839999993,
+        103.31668800000001,
+        78.53241086408843
+      ],
+      "type": "warning",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Remove high voltage harness from battery junction box.",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808000000016,
+        53.27722719999997,
+        330.7353839999999,
+        44.033639664088355
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Disconnect Li-ion battery controller harness connector.",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808000000016,
+        41.75783560000002,
+        324.4525920000003,
+        32.514248064088406
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Check the continuity between battery junction box and rear module stack.",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        735.83589,
+        412.8695379999996,
+        726.5923024640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "High voltage harness between battery junction box and rear module stack",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        72.3,
+        718.22964,
+        332.46212459999924,
+        711.1641391823205
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "High voltage harness between front module stack RH and battery junction box",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        72.29999999999998,
+        669.269946,
+        347.98266599999994,
+        662.2044451823205
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        622.37592,
+        198.38673280000006,
+        613.1323324640884
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "YES",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        607.85591,
+        80.03638600000002,
+        598.6123224640885
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": ">> INSPECTION END",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.03031400000003,
+        607.85591,
+        199.11502599999997,
+        598.6123224640885
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "NO >> Replace high voltage harness connector.",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        596.395922,
+        299.0487940000004,
+        587.1523344640885
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "High voltage harness",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        92.10001,
+        702.2543371800001,
+        171.52444508219986,
+        694.7638349779227
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "-",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        283.45714539019986,
+        702.2543371800001,
+        291.91715539019987,
+        694.7638349779227
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Continuity",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        382.21761012819985,
+        702.2543371800001,
+        419.8155865701998,
+        694.7638349779227
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Terminal",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        115.7999666141,
+        686.7742108820001,
+        147.78447262080005,
+        679.2837086799227
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Battery pack ground",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        249.82750583890004,
+        686.7742108820001,
+        325.49874208470015,
+        679.2837086799227
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Existed",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        387.15368756280014,
+        686.7742108820001,
+        414.90979597140023,
+        679.2837086799227
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "High voltage harness",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        92.10001,
+        653.2945673080002,
+        171.52444508219986,
+        645.8040651059227
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "-",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        283.45714539019986,
+        653.2945673080002,
+        291.91715539019987,
+        645.8040651059227
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Continuity",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        382.21761012819985,
+        653.2945673080002,
+        419.8155865701998,
+        645.8040651059227
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Terminal",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        115.7999666141,
+        637.8144410100002,
+        147.78447262080005,
+        630.3239388079228
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Battery pack ground",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        249.82750583890004,
+        637.8144410100002,
+        325.49874208470015,
+        630.3239388079228
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Existed",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        387.15368756280014,
+        637.8144410100002,
+        414.90979597140023,
+        630.3239388079228
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "HIGH VOLTAGE CIRCUIT",
+      "page_pdf": 175,
+      "page_manual": "EVB-175",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        225.60001,
+        769.00991,
+        386.3906596000001,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "HIGH_VOLTAGE"
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "bbox": [
+        50.18109130859375,
+        661.0517578125,
+        561.9874267578125,
+        597.5109100341797
+      ],
+      "num_rows": 2,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P33EE",
+          "BATTERY HEATER CON- TROL SYSTEM",
+          "Under extremely low temperatures that Li-ion battery heater activates, Li-ion battery controller judges that the temperature of Li-ion battery is still low after a lapse of specified time.",
+          "• Li-ion battery controller • Heater relay unit • Li-ion battery heater • Harness or connector"
+        ]
+      ],
+      "markdown": "| DTC | Trouble diagnosis name | DTC detecting condition | Possible causes |\n| --- | --- | --- | --- |\n| P33EE | BATTERY HEATER CON- TROL SYSTEM | Under extremely low temperatures that Li-ion battery heater activates, Li-ion battery controller judges that the temperature of Li-ion battery is still low after a lapse of specified time. | • Li-ion battery controller • Heater relay unit • Li-ion battery heater • Harness or connector |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P33EE",
+          "BATTERY HEATER CON- TROL SYSTEM",
+          "Under extremely low temperatures that Li-ion battery heater activates, Li-ion battery controller judges that the temperature of Li-ion battery is still low after a lapse of specified time.",
+          "• Li-ion battery controller • Heater relay unit • Li-ion battery heater • Harness or connector"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "bbox": [
+        51.14429473876953,
+        710.8478546142578,
+        371.0589294433594,
+        585.1984405517578
+      ],
+      "num_rows": 8,
+      "num_cols": 4,
+      "data": [
+        [
+          "Li-ion battery heater",
+          "Li-ion battery heater",
+          "Li-ion battery heater",
+          "Resistance"
+        ],
+        [
+          "Item",
+          "Terminal",
+          "Terminal",
+          "Resistance"
+        ],
+        [
+          "LH 1",
+          "2 Less",
+          "",
+          "than 5,269 Ω"
+        ],
+        [
+          "LH 2",
+          "2 Less",
+          "",
+          "than 5,269 Ω"
+        ],
+        [
+          "RH 1",
+          "2 Less",
+          "",
+          "than 5,269 Ω"
+        ],
+        [
+          "RH 2",
+          "2 Less",
+          "",
+          "than 5,269 Ω"
+        ],
+        [
+          "RR 1",
+          "1",
+          "2",
+          "Less than 1,265 Ω"
+        ],
+        [
+          "RR 2",
+          "1",
+          "2",
+          "Less than 1,265 Ω"
+        ]
+      ],
+      "markdown": "| Li-ion battery heater | Li-ion battery heater | Li-ion battery heater | Resistance |\n| --- | --- | --- | --- |\n| Item | Terminal | Terminal | Resistance |\n| LH 1 | 2 Less |  | than 5,269 Ω |\n| LH 2 | 2 Less |  | than 5,269 Ω |\n| RH 1 | 2 Less |  | than 5,269 Ω |\n| RH 2 | 2 Less |  | than 5,269 Ω |\n| RR 1 | 1 | 2 | Less than 1,265 Ω |\n| RR 2 | 1 | 2 | Less than 1,265 Ω |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "Li-ion battery heater",
+          "Li-ion battery heater",
+          "Li-ion battery heater",
+          "Resistance"
+        ],
+        [
+          "Item",
+          "Terminal",
+          "Terminal",
+          "Resistance"
+        ],
+        [
+          "LH 1",
+          "2 Less",
+          "",
+          "than 5,269 Ω"
+        ],
+        [
+          "LH 2",
+          "2 Less",
+          "",
+          "than 5,269 Ω"
+        ],
+        [
+          "RH 1",
+          "2 Less",
+          "",
+          "than 5,269 Ω"
+        ],
+        [
+          "RH 2",
+          "2 Less",
+          "",
+          "than 5,269 Ω"
+        ],
+        [
+          "RR 1",
+          "1",
+          "2",
+          "Less than 1,265 Ω"
+        ],
+        [
+          "RR 2",
+          "1",
+          "2",
+          "Less than 1,265 Ω"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "bbox": [
+        51.04598617553711,
+        474.2947082519531,
+        433.2894592285156,
+        348.9900817871094
+      ],
+      "num_rows": 8,
+      "num_cols": 6,
+      "data": [
+        [
+          "Li-ion battery heater",
+          "Li-ion battery heater",
+          "Li-ion battery heater",
+          "Battery junction box",
+          "Battery junction box",
+          "Continuity"
+        ],
+        [
+          "Item",
+          "Connector",
+          "Terminal",
+          "Connector",
+          "Terminal",
+          "Continuity"
+        ],
+        [
+          "LH 1",
+          "LB19",
+          "2",
+          "LB25",
+          "15",
+          "Existed"
+        ],
+        [
+          "LH 2",
+          "LB20",
+          "2",
+          "LB25",
+          "15",
+          "Existed"
+        ],
+        [
+          "RH 1",
+          "LB23",
+          "2",
+          "LB25",
+          "15",
+          "Existed"
+        ],
+        [
+          "RH 2",
+          "LB24",
+          "2",
+          "LB25",
+          "15",
+          "Existed"
+        ],
+        [
+          "RR 1",
+          "LB21",
+          "2",
+          "LB25",
+          "15",
+          "Existed"
+        ],
+        [
+          "RR 2",
+          "LB22",
+          "2",
+          "LB25",
+          "15",
+          "Existed"
+        ]
+      ],
+      "markdown": "| Li-ion battery heater | Li-ion battery heater | Li-ion battery heater | Battery junction box | Battery junction box | Continuity |\n| --- | --- | --- | --- | --- | --- |\n| Item | Connector | Terminal | Connector | Terminal | Continuity |\n| LH 1 | LB19 | 2 | LB25 | 15 | Existed |\n| LH 2 | LB20 | 2 | LB25 | 15 | Existed |\n| RH 1 | LB23 | 2 | LB25 | 15 | Existed |\n| RH 2 | LB24 | 2 | LB25 | 15 | Existed |\n| RR 1 | LB21 | 2 | LB25 | 15 | Existed |\n| RR 2 | LB22 | 2 | LB25 | 15 | Existed |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "Li-ion battery heater",
+          "Li-ion battery heater",
+          "Li-ion battery heater",
+          "Battery junction box",
+          "Battery junction box",
+          "Continuity"
+        ],
+        [
+          "Item",
+          "Connector",
+          "Terminal",
+          "Connector",
+          "Terminal",
+          "Continuity"
+        ],
+        [
+          "LH 1",
+          "LB19",
+          "2",
+          "LB25",
+          "15",
+          "Existed"
+        ],
+        [
+          "LH 2",
+          "LB20",
+          "2",
+          "LB25",
+          "15",
+          "Existed"
+        ],
+        [
+          "RH 1",
+          "LB23",
+          "2",
+          "LB25",
+          "15",
+          "Existed"
+        ],
+        [
+          "RH 2",
+          "LB24",
+          "2",
+          "LB25",
+          "15",
+          "Existed"
+        ],
+        [
+          "RR 1",
+          "LB21",
+          "2",
+          "LB25",
+          "15",
+          "Existed"
+        ],
+        [
+          "RR 2",
+          "LB22",
+          "2",
+          "LB25",
+          "15",
+          "Existed"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 172,
+      "page_manual": "EVB-172",
+      "section_code": "EVB",
+      "bbox": [
+        51.1243782043457,
+        248.69818115234375,
+        433.43475341796875,
+        123.2650146484375
+      ],
+      "num_rows": 8,
+      "num_cols": 6,
+      "data": [
+        [
+          "Li-ion battery heater",
+          "Li-ion battery heater",
+          "Li-ion battery heater",
+          "Heater relay unit",
+          "Heater relay unit",
+          "Continuity"
+        ],
+        [
+          "Item",
+          "Connector",
+          "Terminal",
+          "Connector",
+          "Terminal",
+          "Continuity"
+        ],
+        [
+          "LH 1",
+          "LB19",
+          "1",
+          "LB18",
+          "11",
+          "Existed"
+        ],
+        [
+          "LH 2",
+          "LB20",
+          "1",
+          "LB18",
+          "11",
+          "Existed"
+        ],
+        [
+          "RH 1",
+          "LB23",
+          "1",
+          "LB18",
+          "11",
+          "Existed"
+        ],
+        [
+          "RH 2",
+          "LB24",
+          "1",
+          "LB18",
+          "11",
+          "Existed"
+        ],
+        [
+          "RR 1",
+          "LB21",
+          "1",
+          "LB18",
+          "11",
+          "Existed"
+        ],
+        [
+          "RR 2",
+          "LB22",
+          "1",
+          "LB18",
+          "11",
+          "Existed"
+        ]
+      ],
+      "markdown": "| Li-ion battery heater | Li-ion battery heater | Li-ion battery heater | Heater relay unit | Heater relay unit | Continuity |\n| --- | --- | --- | --- | --- | --- |\n| Item | Connector | Terminal | Connector | Terminal | Continuity |\n| LH 1 | LB19 | 1 | LB18 | 11 | Existed |\n| LH 2 | LB20 | 1 | LB18 | 11 | Existed |\n| RH 1 | LB23 | 1 | LB18 | 11 | Existed |\n| RH 2 | LB24 | 1 | LB18 | 11 | Existed |\n| RR 1 | LB21 | 1 | LB18 | 11 | Existed |\n| RR 2 | LB22 | 1 | LB18 | 11 | Existed |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "Li-ion battery heater",
+          "Li-ion battery heater",
+          "Li-ion battery heater",
+          "Heater relay unit",
+          "Heater relay unit",
+          "Continuity"
+        ],
+        [
+          "Item",
+          "Connector",
+          "Terminal",
+          "Connector",
+          "Terminal",
+          "Continuity"
+        ],
+        [
+          "LH 1",
+          "LB19",
+          "1",
+          "LB18",
+          "11",
+          "Existed"
+        ],
+        [
+          "LH 2",
+          "LB20",
+          "1",
+          "LB18",
+          "11",
+          "Existed"
+        ],
+        [
+          "RH 1",
+          "LB23",
+          "1",
+          "LB18",
+          "11",
+          "Existed"
+        ],
+        [
+          "RH 2",
+          "LB24",
+          "1",
+          "LB18",
+          "11",
+          "Existed"
+        ],
+        [
+          "RR 1",
+          "LB21",
+          "1",
+          "LB18",
+          "11",
+          "Existed"
+        ],
+        [
+          "RR 2",
+          "LB22",
+          "1",
+          "LB18",
+          "11",
+          "Existed"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 173,
+      "page_manual": "EVB-173",
+      "section_code": "EVB",
+      "bbox": [
+        56.76720428466797,
+        539.8537139892578,
+        555.4134521484375,
+        495.95361328125
+      ],
+      "num_rows": 2,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "U1000",
+          "CAN COMM CIRCUIT",
+          "When no CAN communication signal is received continu- ously for 2 seconds or more.",
+          "CAN communication system"
+        ]
+      ],
+      "markdown": "| DTC | Trouble diagnosis name | DTC detecting condition | Possible causes |\n| --- | --- | --- | --- |\n| U1000 | CAN COMM CIRCUIT | When no CAN communication signal is received continu- ously for 2 seconds or more. | CAN communication system |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "U1000",
+          "CAN COMM CIRCUIT",
+          "When no CAN communication signal is received continu- ously for 2 seconds or more.",
+          "CAN communication system"
+        ]
+      ]
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_171_raster_1.jpeg",
+      "page_pdf": 171,
+      "page_manual": "EVB-171",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        239.16000366210938,
+        80.3462142944336,
+        258.0
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_174_raster_1.png",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "bbox": [
+        374.3399658203125,
+        363.2999267578125,
+        558.5399780273438,
+        493.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_174_raster_2.jpeg",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        119.63998413085938,
+        79.0399169921875,
+        138.41998291015625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_174_raster_3.png",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "bbox": [
+        191.75997924804688,
+        363.2999572753906,
+        201.719970703125,
+        373.199951171875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_174_raster_4.png",
+      "page_pdf": 174,
+      "page_manual": "EVB-174",
+      "section_code": "EVB",
+      "bbox": [
+        224.99996948242188,
+        363.2999572753906,
+        234.9599609375,
+        373.199951171875
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

@@ -1,0 +1,1335 @@
+{
+  "schema_version": "1.1",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-11\nJPCIA0068ZZ\nRevision: October 2013\n2013 LEAF",
+    "page_start": 11,
+    "page_end": 15,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "11": [
+        "EVB-11",
+        "EVB",
+        "EVB-11\nJPCIA0068ZZ\nRevision: October 2013\n2013 LEAF"
+      ],
+      "12": [
+        null,
+        null,
+        null
+      ],
+      "13": [
+        "EVB-13",
+        "EVB",
+        "EVB-13\nRevision: October 2013\n2013 LEAF"
+      ],
+      "14": [
+        "EVB-14",
+        "EVB",
+        "EVB-14\nJSCIA0505ZZ\nRevision: October 2013\n2013 LEAF"
+      ],
+      "15": [
+        "EVB-15",
+        "EVB",
+        "EVB-15\nLi-ion battery heater RR 2\nEVB-18, \"Li-ion Battery Heater\"\nLi-ion battery heater LH 1\nEVB-18, \"Li-ion Battery Heater\"\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "PREPARATION",
+      "page_pdf": 11,
+      "page_manual": "EVB-11",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        257.04001,
+        769.00991,
+        354.9369699999999,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "PREPARATION",
+      "page_pdf": 12,
+      "page_manual": null,
+      "section_code": null,
+      "label": "section_header",
+      "bbox": [
+        256.73999,
+        769.00991,
+        354.7041500000002,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "E",
+      "page_pdf": 12,
+      "page_manual": null,
+      "section_code": null,
+      "label": "text",
+      "bbox": [
+        282.17999,
+        15.575640000000021,
+        285.50165,
+        10.969140000000039
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "V",
+      "page_pdf": 12,
+      "page_manual": null,
+      "section_code": null,
+      "label": "text",
+      "bbox": [
+        291.12008599999996,
+        15.575640000000021,
+        294.44174599999997,
+        10.969140000000039
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "B",
+      "page_pdf": 12,
+      "page_manual": null,
+      "section_code": null,
+      "label": "text",
+      "bbox": [
+        300.1199419999999,
+        15.575640000000021,
+        303.44160199999993,
+        10.969140000000039
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "-",
+      "page_pdf": 12,
+      "page_manual": null,
+      "section_code": null,
+      "label": "text",
+      "bbox": [
+        309.8418979999999,
+        15.575640000000021,
+        311.5002379999999,
+        10.969140000000039
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "1",
+      "page_pdf": 12,
+      "page_manual": null,
+      "section_code": null,
+      "label": "text",
+      "bbox": [
+        314.2800739999999,
+        15.575640000000021,
+        317.0489539999999,
+        10.969140000000039
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "2",
+      "page_pdf": 12,
+      "page_manual": null,
+      "section_code": null,
+      "label": "text",
+      "bbox": [
+        321.7809499999999,
+        15.575640000000021,
+        324.54982999999993,
+        10.969140000000039
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "PREPARATION",
+      "page_pdf": 13,
+      "page_manual": "EVB-13",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        257.04001,
+        769.00991,
+        354.9369699999999,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "SYSTEM DESCRIPTION",
+      "page_pdf": 14,
+      "page_manual": "EVB-14",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.25323718,
+        265.0231818800999,
+        719.4660233757127
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "COMPONENT PARTS",
+      "page_pdf": 14,
+      "page_manual": "EVB-14",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        713.06999,
+        202.44975000000005,
+        699.7889734254144
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Component Parts Location INFOID:0000000008745906",
+      "page_pdf": 14,
+      "page_manual": "EVB-14",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        688.96993,
+        211.2843840000001,
+        677.0701391491713
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Front of battery pack",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        84.48,
+        724.7543371800001,
+        162.015145649,
+        717.2638349779227
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": ": Vehicle front",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        84.48,
+        708.9738805270001,
+        135.74596859799996,
+        701.4833783249227
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": ": Vehicle front",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "label": "caption",
+      "bbox": [
+        84.48,
+        145.39427718000002,
+        135.75781261199992,
+        137.9037749779227
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "COMPONENT PARTS",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        237.60001,
+        769.00991,
+        374.4231076000002,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Back of battery pack",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        246.0476635781,
+        724.7543371800001,
+        322.6529695279999,
+        717.2638349779227
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 11,
+      "page_manual": "EVB-11",
+      "section_code": "EVB",
+      "bbox": [
+        50.14687728881836,
+        746.7095565795898,
+        585.3744506835938,
+        54.8927001953125
+      ],
+      "num_rows": 8,
+      "num_cols": 4,
+      "data": [
+        [
+          "",
+          "Tool name",
+          "Description",
+          ""
+        ],
+        [
+          "Insulated rubber sheet",
+          "",
+          "Removing and installing high voltage components",
+          "B EVB"
+        ],
+        [
+          "Insulated cover sheet",
+          "",
+          "Removing and installing high voltage components",
+          "D E"
+        ],
+        [
+          "Battery lift table",
+          "",
+          "Removing and installing Li-ion battery",
+          "F G"
+        ],
+        [
+          "Stacker",
+          "",
+          "Removing and installing Li-ion battery",
+          "I J"
+        ],
+        [
+          "Insulation resistance tester (Multi tester)",
+          "",
+          "Measuring insulation resistance, voltage, and re- sistance",
+          "L M"
+        ],
+        [
+          "Insulated hand tools",
+          "",
+          "Removing and installing high voltage components",
+          "N O"
+        ],
+        [
+          "Insulated torque wrench",
+          "",
+          "Removing and installing high voltage components",
+          "P"
+        ]
+      ],
+      "markdown": "|  | Tool name | Description |  |\n| --- | --- | --- | --- |\n| Insulated rubber sheet |  | Removing and installing high voltage components | B EVB |\n| Insulated cover sheet |  | Removing and installing high voltage components | D E |\n| Battery lift table |  | Removing and installing Li-ion battery | F G |\n| Stacker |  | Removing and installing Li-ion battery | I J |\n| Insulation resistance tester (Multi tester) |  | Measuring insulation resistance, voltage, and re- sistance | L M |\n| Insulated hand tools |  | Removing and installing high voltage components | N O |\n| Insulated torque wrench |  | Removing and installing high voltage components | P |",
+      "tableformer": true,
+      "table_type": "spec_table",
+      "data_raw": [
+        [
+          "",
+          "Tool name",
+          "Description",
+          ""
+        ],
+        [
+          "Insulated rubber sheet",
+          "JPCIA0019ZZ",
+          "Removing and installing high voltage components",
+          "B EVB"
+        ],
+        [
+          "Insulated cover sheet",
+          "",
+          "Removing and installing high voltage components",
+          "D E"
+        ],
+        [
+          "Battery lift table",
+          "JPCIA0024ZZ",
+          "Removing and installing Li-ion battery",
+          "F G"
+        ],
+        [
+          "Stacker",
+          "",
+          "Removing and installing Li-ion battery",
+          "I J"
+        ],
+        [
+          "Insulation resistance tester (Multi tester)",
+          "",
+          "Measuring insulation resistance, voltage, and re- sistance",
+          "L M"
+        ],
+        [
+          "Insulated hand tools",
+          "",
+          "Removing and installing high voltage components",
+          "N O"
+        ],
+        [
+          "Insulated torque wrench",
+          "JPCIA0068ZZ",
+          "Removing and installing high voltage components",
+          "P"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 12,
+      "page_manual": null,
+      "section_code": null,
+      "bbox": [
+        50.04679870605469,
+        741.3326683044434,
+        562.4693603515625,
+        54.51031494140625
+      ],
+      "num_rows": 8,
+      "num_cols": 2,
+      "data": [
+        [
+          "Tool name",
+          "Description"
+        ],
+        [
+          "Carabineer [small]",
+          "• Removing and installing battery module stack • Installing battery pack upper case NOTE: • D: 8.0mm (0.31 in) • L: 74.0mm (2.91 in) • S: 10.0 mm(0.39 in) • W: 22.5 mm (0.89 in)"
+        ],
+        [
+          "Carabineer [large]",
+          "Removing and installing battery module stack NOTE: • D: 14.0 mm (0.55 in) • L: 204.0 mm (8.03 in) • S: 47.0 mm(1.85 in) • W: 105.0 mm(4.13 in)"
+        ],
+        [
+          "Belt slinger",
+          "Removing and installing battery module stack NOTE: Length: 2.0m (6.562 ft)"
+        ],
+        [
+          "Mobile floor crane",
+          "Removing and installing battery module stack"
+        ],
+        [
+          "Lashing belt",
+          "Removing and installing battery rear module stack"
+        ],
+        [
+          "Windshield cutter [Gasket cutter]",
+          "Removing battery pack upper case (Cut the adhesive)"
+        ],
+        [
+          "Piano wire with handles",
+          "Installing battery pack upper case (Cut the adhesive) NOTE: Wire size: φ 0.5 mm (0.02 in)"
+        ]
+      ],
+      "markdown": "| Tool name | Description |\n| --- | --- |\n| Carabineer [small] | • Removing and installing battery module stack • Installing battery pack upper case NOTE: • D: 8.0mm (0.31 in) • L: 74.0mm (2.91 in) • S: 10.0 mm(0.39 in) • W: 22.5 mm (0.89 in) |\n| Carabineer [large] | Removing and installing battery module stack NOTE: • D: 14.0 mm (0.55 in) • L: 204.0 mm (8.03 in) • S: 47.0 mm(1.85 in) • W: 105.0 mm(4.13 in) |\n| Belt slinger | Removing and installing battery module stack NOTE: Length: 2.0m (6.562 ft) |\n| Mobile floor crane | Removing and installing battery module stack |\n| Lashing belt | Removing and installing battery rear module stack |\n| Windshield cutter [Gasket cutter] | Removing battery pack upper case (Cut the adhesive) |\n| Piano wire with handles | Installing battery pack upper case (Cut the adhesive) NOTE: Wire size: φ 0.5 mm (0.02 in) |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "Tool name",
+          "Description"
+        ],
+        [
+          "Carabineer [small]",
+          "• Removing and installing battery module stack • Installing battery pack upper case NOTE: • D: 8.0mm (0.31 in) • L: 74.0mm (2.91 in) • S: 10.0 mm(0.39 in) • W: 22.5 mm (0.89 in)"
+        ],
+        [
+          "Carabineer [large]",
+          "Removing and installing battery module stack NOTE: • D: 14.0 mm (0.55 in) • L: 204.0 mm (8.03 in) • S: 47.0 mm(1.85 in) • W: 105.0 mm(4.13 in)"
+        ],
+        [
+          "Belt slinger",
+          "Removing and installing battery module stack NOTE: Length: 2.0m (6.562 ft)"
+        ],
+        [
+          "Mobile floor crane",
+          "Removing and installing battery module stack"
+        ],
+        [
+          "Lashing belt",
+          "Removing and installing battery rear module stack"
+        ],
+        [
+          "Windshield cutter [Gasket cutter]",
+          "Removing battery pack upper case (Cut the adhesive)"
+        ],
+        [
+          "Piano wire with handles",
+          "Installing battery pack upper case (Cut the adhesive) NOTE: Wire size: φ 0.5 mm (0.02 in)"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 13,
+      "page_manual": "EVB-13",
+      "section_code": "EVB",
+      "bbox": [
+        49.828678131103516,
+        741.7983627319336,
+        586.9843139648438,
+        264.36669921875
+      ],
+      "num_rows": 12,
+      "num_cols": 3,
+      "data": [
+        [
+          "Tool name",
+          "Description",
+          "A"
+        ],
+        [
+          "Scraper",
+          "Installing battery pack upper case (Smooth the adhesive)",
+          "B"
+        ],
+        [
+          "Scraper",
+          "Installing battery pack upper case (Smooth the adhesive)",
+          "EVB"
+        ],
+        [
+          "Tube presser [Gasket material ap- plicator]",
+          "Installing battery pack upper case (Apply the adhesive)",
+          "D"
+        ],
+        [
+          "Tube presser [Gasket material ap- plicator]",
+          "Installing battery pack upper case (Apply the adhesive)",
+          "E"
+        ],
+        [
+          "Metal bar",
+          "Assembling battery module stack NOTE: • D: φ 7 mm(0.28 in) • L: 1 m (3.28 ft)",
+          "F"
+        ],
+        [
+          "Metal bar",
+          "Assembling battery module stack NOTE: • D: φ 7 mm(0.28 in) • L: 1 m (3.28 ft)",
+          "G"
+        ],
+        [
+          "Sealant or/and Lubricant",
+          "INFOID:0000000009298743",
+          ""
+        ],
+        [
+          "Tool name Tool number Adhesive",
+          "Description Installing battery pack upper case",
+          "J"
+        ],
+        [
+          "Dam rubber-0059U",
+          "Description Installing battery pack upper case",
+          "K"
+        ],
+        [
+          "Primer (Adhesive primer) 999MP-43533PP",
+          "Description Installing battery pack upper case",
+          ""
+        ],
+        [
+          "Primer sufacer (anti-corrosion praimer) -",
+          "Description Installing battery pack upper case",
+          "L"
+        ]
+      ],
+      "markdown": "| Tool name | Description | A |\n| --- | --- | --- |\n| Scraper | Installing battery pack upper case (Smooth the adhesive) | B |\n| Scraper | Installing battery pack upper case (Smooth the adhesive) | EVB |\n| Tube presser [Gasket material ap- plicator] | Installing battery pack upper case (Apply the adhesive) | D |\n| Tube presser [Gasket material ap- plicator] | Installing battery pack upper case (Apply the adhesive) | E |\n| Metal bar | Assembling battery module stack NOTE: • D: φ 7 mm(0.28 in) • L: 1 m (3.28 ft) | F |\n| Metal bar | Assembling battery module stack NOTE: • D: φ 7 mm(0.28 in) • L: 1 m (3.28 ft) | G |\n| Sealant or/and Lubricant | INFOID:0000000009298743 |  |\n| Tool name Tool number Adhesive | Description Installing battery pack upper case | J |\n| Dam rubber-0059U | Description Installing battery pack upper case | K |\n| Primer (Adhesive primer) 999MP-43533PP | Description Installing battery pack upper case |  |\n| Primer sufacer (anti-corrosion praimer) - | Description Installing battery pack upper case | L |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "Tool name",
+          "Description",
+          "A"
+        ],
+        [
+          "Scraper",
+          "Installing battery pack upper case (Smooth the adhesive)",
+          "B"
+        ],
+        [
+          "Scraper",
+          "Installing battery pack upper case (Smooth the adhesive)",
+          "EVB"
+        ],
+        [
+          "Tube presser [Gasket material ap- plicator]",
+          "Installing battery pack upper case (Apply the adhesive)",
+          "D"
+        ],
+        [
+          "Tube presser [Gasket material ap- plicator]",
+          "Installing battery pack upper case (Apply the adhesive)",
+          "E"
+        ],
+        [
+          "Metal bar",
+          "Assembling battery module stack NOTE: • D: φ 7 mm(0.28 in) • L: 1 m (3.28 ft)",
+          "F"
+        ],
+        [
+          "Metal bar",
+          "Assembling battery module stack NOTE: • D: φ 7 mm(0.28 in) • L: 1 m (3.28 ft)",
+          "G"
+        ],
+        [
+          "Sealant or/and Lubricant",
+          "INFOID:0000000009298743",
+          ""
+        ],
+        [
+          "Tool name Tool number Adhesive",
+          "Description Installing battery pack upper case",
+          "J"
+        ],
+        [
+          "Dam rubber KA390-0059U",
+          "Description Installing battery pack upper case",
+          "K"
+        ],
+        [
+          "Primer (Adhesive primer) 999MP-43533PP",
+          "Description Installing battery pack upper case",
+          ""
+        ],
+        [
+          "Primer sufacer (anti-corrosion praimer) -",
+          "Description Installing battery pack upper case",
+          "L"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "bbox": [
+        56.1502685546875,
+        683.1381301879883,
+        581.8193359375,
+        469.3841552734375
+      ],
+      "num_rows": 12,
+      "num_cols": 4,
+      "data": [
+        [
+          "No.",
+          "Component",
+          "Function",
+          "B"
+        ],
+        [
+          "",
+          "Li-ion battery",
+          "EVB-16, \"Li-ion Battery\"",
+          ""
+        ],
+        [
+          "",
+          "Service plug",
+          "EVB-20, \"Service Plug\"",
+          ""
+        ],
+        [
+          "",
+          "Front module stack RH",
+          "EVB-17, \"Module\"",
+          ""
+        ],
+        [
+          "",
+          "Battery junction box",
+          "EVB-20, \"Battery Junction Box\"",
+          "D"
+        ],
+        [
+          "",
+          "Battery current sensor",
+          "EVB-19, \"Battery Current Sensor\"",
+          ""
+        ],
+        [
+          "",
+          "Front module stack LH",
+          "EVB-17, \"Module\"",
+          "E"
+        ],
+        [
+          "",
+          "Li-ion battery controller",
+          "EVB-16, \"Li-ion Battery Controller\"",
+          ""
+        ],
+        [
+          "",
+          "Rear module stack",
+          "EVB-17, \"Module\"",
+          ""
+        ],
+        [
+          "",
+          "Battery temperature sensor 1",
+          "EVB-19, \"Battery Temperature Sensor\"",
+          "F"
+        ],
+        [
+          "",
+          "Battery temperature sensor 4",
+          "EVB-19, \"Battery Temperature Sensor\"",
+          ""
+        ],
+        [
+          "",
+          "Battery temperature sensor 2",
+          "EVB-19, \"Battery Temperature Sensor\"",
+          "G"
+        ]
+      ],
+      "markdown": "| No. | Component | Function | B |\n| --- | --- | --- | --- |\n|  | Li-ion battery | EVB-16, \"Li-ion Battery\" |  |\n|  | Service plug | EVB-20, \"Service Plug\" |  |\n|  | Front module stack RH | EVB-17, \"Module\" |  |\n|  | Battery junction box | EVB-20, \"Battery Junction Box\" | D |\n|  | Battery current sensor | EVB-19, \"Battery Current Sensor\" |  |\n|  | Front module stack LH | EVB-17, \"Module\" | E |\n|  | Li-ion battery controller | EVB-16, \"Li-ion Battery Controller\" |  |\n|  | Rear module stack | EVB-17, \"Module\" |  |\n|  | Battery temperature sensor 1 | EVB-19, \"Battery Temperature Sensor\" | F |\n|  | Battery temperature sensor 4 | EVB-19, \"Battery Temperature Sensor\" |  |\n|  | Battery temperature sensor 2 | EVB-19, \"Battery Temperature Sensor\" | G |",
+      "tableformer": true,
+      "table_type": "index_table",
+      "data_raw": [
+        [
+          "No.",
+          "Component",
+          "Function",
+          "B"
+        ],
+        [
+          "",
+          "Li-ion battery",
+          "EVB-16, \"Li-ion Battery\"",
+          ""
+        ],
+        [
+          "",
+          "Service plug",
+          "EVB-20, \"Service Plug\"",
+          ""
+        ],
+        [
+          "",
+          "Front module stack RH",
+          "EVB-17, \"Module\"",
+          ""
+        ],
+        [
+          "",
+          "Battery junction box",
+          "EVB-20, \"Battery Junction Box\"",
+          "D"
+        ],
+        [
+          "",
+          "Battery current sensor",
+          "EVB-19, \"Battery Current Sensor\"",
+          ""
+        ],
+        [
+          "",
+          "Front module stack LH",
+          "EVB-17, \"Module\"",
+          "E"
+        ],
+        [
+          "",
+          "Li-ion battery controller",
+          "EVB-16, \"Li-ion Battery Controller\"",
+          ""
+        ],
+        [
+          "",
+          "Rear module stack",
+          "EVB-17, \"Module\"",
+          ""
+        ],
+        [
+          "",
+          "Battery temperature sensor 1",
+          "EVB-19, \"Battery Temperature Sensor\"",
+          "F"
+        ],
+        [
+          "",
+          "Battery temperature sensor 4",
+          "EVB-19, \"Battery Temperature Sensor\"",
+          ""
+        ],
+        [
+          "",
+          "Battery temperature sensor 2",
+          "EVB-19, \"Battery Temperature Sensor\"",
+          "G"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "bbox": [
+        56.150997161865234,
+        118.83349609375,
+        556.791259765625,
+        30.0045166015625
+      ],
+      "num_rows": 5,
+      "num_cols": 3,
+      "data": [
+        [
+          "No.",
+          "Component",
+          "Function"
+        ],
+        [
+          "",
+          "Li-ion battery heater RH 1",
+          "EVB-18, \"Li-ion Battery Heater\""
+        ],
+        [
+          "",
+          "Li-ion battery heater RH 2",
+          "EVB-18, \"Li-ion Battery Heater\""
+        ],
+        [
+          "",
+          "Li-ion battery heater RR 2",
+          "EVB-18, \"Li-ion Battery Heater\""
+        ],
+        [
+          "",
+          "Li-ion battery heater LH 1",
+          "EVB-18, \"Li-ion Battery Heater\""
+        ]
+      ],
+      "markdown": "| No. | Component | Function |\n| --- | --- | --- |\n|  | Li-ion battery heater RH 1 | EVB-18, \"Li-ion Battery Heater\" |\n|  | Li-ion battery heater RH 2 | EVB-18, \"Li-ion Battery Heater\" |\n|  | Li-ion battery heater RR 2 | EVB-18, \"Li-ion Battery Heater\" |\n|  | Li-ion battery heater LH 1 | EVB-18, \"Li-ion Battery Heater\" |",
+      "tableformer": true,
+      "table_type": "index_table",
+      "data_raw": [
+        [
+          "No.",
+          "Component",
+          "Function"
+        ],
+        [
+          "",
+          "Li-ion battery heater RH 1",
+          "EVB-18, \"Li-ion Battery Heater\""
+        ],
+        [
+          "",
+          "Li-ion battery heater RH 2",
+          "EVB-18, \"Li-ion Battery Heater\""
+        ],
+        [
+          "",
+          "Li-ion battery heater RR 2",
+          "EVB-18, \"Li-ion Battery Heater\""
+        ],
+        [
+          "",
+          "Li-ion battery heater LH 1",
+          "EVB-18, \"Li-ion Battery Heater\""
+        ]
+      ]
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_11_raster_1.png",
+      "page_pdf": 11,
+      "page_manual": "EVB-11",
+      "section_code": "EVB",
+      "bbox": [
+        213.53997802734375,
+        179.45997619628906,
+        341.0999755859375,
+        258.8399658203125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_11_raster_2.png",
+      "page_pdf": 11,
+      "page_manual": "EVB-11",
+      "section_code": "EVB",
+      "bbox": [
+        213.53997802734375,
+        84.65998840332031,
+        341.0999755859375,
+        163.97998046875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_11_raster_3.png",
+      "page_pdf": 11,
+      "page_manual": "EVB-11",
+      "section_code": "EVB",
+      "bbox": [
+        213.53997802734375,
+        274.3199462890625,
+        341.0999755859375,
+        353.63995361328125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_11_raster_4.png",
+      "page_pdf": 11,
+      "page_manual": "EVB-11",
+      "section_code": "EVB",
+      "bbox": [
+        213.53997802734375,
+        369.11993408203125,
+        341.0999755859375,
+        448.43994140625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_11_raster_5.png",
+      "page_pdf": 11,
+      "page_manual": "EVB-11",
+      "section_code": "EVB",
+      "bbox": [
+        213.53997802734375,
+        463.91998291015625,
+        341.0999755859375,
+        543.2999877929688
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_11_raster_6.png",
+      "page_pdf": 11,
+      "page_manual": "EVB-11",
+      "section_code": "EVB",
+      "bbox": [
+        213.53997802734375,
+        558.7799682617188,
+        341.0999755859375,
+        638.0999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_11_raster_7.png",
+      "page_pdf": 11,
+      "page_manual": "EVB-11",
+      "section_code": "EVB",
+      "bbox": [
+        213.53997802734375,
+        653.5799560546875,
+        341.0999755859375,
+        732.9599609375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_12_raster_1.png",
+      "page_pdf": 12,
+      "page_manual": null,
+      "section_code": null,
+      "bbox": [
+        213.23995971679688,
+        179.45997619628906,
+        340.7999572753906,
+        258.8399658203125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_12_raster_2.png",
+      "page_pdf": 12,
+      "page_manual": null,
+      "section_code": null,
+      "bbox": [
+        213.23995971679688,
+        84.65998840332031,
+        340.7999572753906,
+        163.97998046875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_12_raster_3.png",
+      "page_pdf": 12,
+      "page_manual": null,
+      "section_code": null,
+      "bbox": [
+        213.23995971679688,
+        274.3199462890625,
+        340.7999572753906,
+        353.63995361328125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_12_raster_4.png",
+      "page_pdf": 12,
+      "page_manual": null,
+      "section_code": null,
+      "bbox": [
+        213.23995971679688,
+        369.11993408203125,
+        340.7999572753906,
+        448.43994140625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_12_raster_5.png",
+      "page_pdf": 12,
+      "page_manual": null,
+      "section_code": null,
+      "bbox": [
+        213.23995971679688,
+        463.91998291015625,
+        340.7999572753906,
+        543.2999877929688
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_12_raster_6.png",
+      "page_pdf": 12,
+      "page_manual": null,
+      "section_code": null,
+      "bbox": [
+        213.23995971679688,
+        558.7799682617188,
+        340.7999572753906,
+        638.0999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_12_raster_7.png",
+      "page_pdf": 12,
+      "page_manual": null,
+      "section_code": null,
+      "bbox": [
+        213.23995971679688,
+        653.5799560546875,
+        340.7999572753906,
+        732.9599609375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_13_raster_1.png",
+      "page_pdf": 13,
+      "page_manual": "EVB-13",
+      "section_code": "EVB",
+      "bbox": [
+        213.53997802734375,
+        179.45997619628906,
+        341.0999755859375,
+        258.8399658203125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_13_raster_2.png",
+      "page_pdf": 13,
+      "page_manual": "EVB-13",
+      "section_code": "EVB",
+      "bbox": [
+        213.53997802734375,
+        84.65998840332031,
+        341.0999755859375,
+        163.97998046875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_13_raster_3.png",
+      "page_pdf": 13,
+      "page_manual": "EVB-13",
+      "section_code": "EVB",
+      "bbox": [
+        213.53997802734375,
+        274.3199462890625,
+        341.0999755859375,
+        353.63995361328125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_14_raster_1.png",
+      "page_pdf": 14,
+      "page_manual": "EVB-14",
+      "section_code": "EVB",
+      "bbox": [
+        87.72000122070312,
+        137.0999755859375,
+        524.0660400390625,
+        734.0399169921875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_15_raster_1.png",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "bbox": [
+        229.49996948242188,
+        67.68000793457031,
+        239.39996337890625,
+        77.6400146484375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_15_raster_2.png",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "bbox": [
+        67.91999816894531,
+        67.68000793457031,
+        77.81999206542969,
+        77.6400146484375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_15_raster_3.png",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "bbox": [
+        67.5,
+        83.39997863769531,
+        79.2599868774414,
+        92.03997802734375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_15_raster_4.png",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "bbox": [
+        68.03999328613281,
+        131.39999389648438,
+        77.99998474121094,
+        141.29998779296875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_15_raster_5.png",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "bbox": [
+        68.03999328613281,
+        149.10000610351562,
+        77.99998474121094,
+        159.05999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_15_raster_6.png",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "bbox": [
+        68.03999328613281,
+        166.86001586914062,
+        77.99998474121094,
+        176.82000732421875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_15_raster_7.png",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "bbox": [
+        68.03999328613281,
+        184.62002563476562,
+        77.99998474121094,
+        194.52001953125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_15_raster_8.png",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "bbox": [
+        68.03999328613281,
+        202.38003540039062,
+        77.99998474121094,
+        212.280029296875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_15_raster_9.png",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "bbox": [
+        68.03999328613281,
+        220.07998657226562,
+        77.99998474121094,
+        230.03997802734375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_15_raster_10.png",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "bbox": [
+        68.03999328613281,
+        237.83999633789062,
+        77.99998474121094,
+        247.79998779296875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_15_raster_11.png",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "bbox": [
+        68.03999328613281,
+        255.60000610351562,
+        77.99998474121094,
+        265.55999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_15_raster_12.png",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "bbox": [
+        68.03999328613281,
+        273.3599853515625,
+        77.99998474121094,
+        283.2599792480469
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_15_raster_13.png",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "bbox": [
+        68.03999328613281,
+        291.1199645996094,
+        77.99998474121094,
+        301.01995849609375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_15_raster_14.png",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "bbox": [
+        68.03999328613281,
+        308.8199768066406,
+        77.99998474121094,
+        318.77996826171875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_15_raster_15.png",
+      "page_pdf": 15,
+      "page_manual": "EVB-15",
+      "section_code": "EVB",
+      "bbox": [
+        88.5,
+        337.0799560546875,
+        524.760009765625,
+        632.9999389648438
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

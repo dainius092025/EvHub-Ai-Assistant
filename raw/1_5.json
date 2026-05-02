@@ -1,0 +1,2008 @@
+{
+  "schema_version": "1.0",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-1\nLI-ION BATTERY HEATER CONTROL SYSTEM ....24\nDiagnosis Procedure ..............................................88\nComponent Inspection ............................................89\nRevision: October 2013\n2013 LEAF",
+    "page_start": 1,
+    "page_end": 5,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "1": [
+        "EVB-1",
+        "EVB",
+        "EVB-1\nLI-ION BATTERY HEATER CONTROL SYSTEM ....24\nDiagnosis Procedure ..............................................88\nComponent Inspection ............................................89\nRevision: October 2013\n2013 LEAF"
+      ],
+      "2": [
+        "EVB-2",
+        "EVB",
+        "EVB-2\nDiagnosis Procedure ............................................109\nP3326-P3331 CELL OVER VOLTAGE ...........132\nDTC Logic ............................................................ 132\nRevision: October 2013\n2013 LEAF"
+      ],
+      "3": [
+        "EVB-3",
+        "EVB",
+        "EVB-3\nDTC Logic ............................................................ 160\nDiagnosis Procedure ............................................ 160\nBATTERY PACK UPPER CASE : Exploded View ..203\nRevision: October 2013\n2013 LEAF"
+      ],
+      "4": [
+        "EVB-4",
+        "EVB",
+        "EVB-4\nRevision: October 2013\n2013 LEAF"
+      ],
+      "5": [
+        "EVB-5",
+        "EVB",
+        "EVB-5\nThe Supplemental Restraint System such as “AIR BAG” and “SEAT BELT PRE-TENSIONER”, used along\nwith a front seat belt, helps to reduce the risk or severity of injury to the driver and front passenger for certain\ntypes of collision. This system includes seat belt switch inputs and dual stage front air bag modules. The SRS\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "CONTENTS",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        257.94,
+        561.20397,
+        356.87699999999984,
+        545.2667501104972
+      ]
+    },
+    {
+      "text": "PRECAUTION .............................................. 5",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        523.35611,
+        297.20401000000004,
+        512.7312967403315
+      ]
+    },
+    {
+      "text": "PRECAUTIONS .................................................. 5",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        501.26358,
+        297.20401000000004,
+        491.5418758674033
+      ]
+    },
+    {
+      "text": "Precaution for Technicians Using Medical Electric",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        488.17127718,
+        281.20456016499986,
+        479.3526733204641
+      ]
+    },
+    {
+      "text": "......5",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        275.040309976,
+        488.17127718,
+        297.20401000000004,
+        479.3526733204641
+      ]
+    },
+    {
+      "text": "Point to Be Checked Before Starting Maintenance",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        476.17127718,
+        281.2643202249998,
+        467.3526733204641
+      ]
+    },
+    {
+      "text": "Work .........................................................................5",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.91999999999999,
+        464.171457132,
+        297.20401000000004,
+        455.3528532724641
+      ]
+    },
+    {
+      "text": "Precaution for Supplemental Restraint System",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        452.17127718,
+        269.71768063199994,
+        443.3526733204641
+      ]
+    },
+    {
+      "text": "(SRS) \"AIR BAG\" and \"SEAT BELT PRE-TEN-",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        440.171457132,
+        269.17107528319985,
+        431.3528532724641
+      ]
+    },
+    {
+      "text": "SIONER\" ..................................................................5",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        428.171637084,
+        297.20401000000004,
+        419.35303322446407
+      ]
+    },
+    {
+      "text": "Precaution for Procedure without Cowl Top Cover",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        416.17127718,
+        281.11721087730047,
+        407.3526733204641
+      ]
+    },
+    {
+      "text": "......6",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        275.040309976,
+        416.17127718,
+        297.20401000000004,
+        407.3526733204641
+      ]
+    },
+    {
+      "text": "Precaution for Removing 12V Battery ......................6",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        404.17127718,
+        297.20401000000004,
+        395.3526733204641
+      ]
+    },
+    {
+      "text": "High Voltage Precautions .........................................6",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        392.17127718,
+        297.20401000000004,
+        383.3526733204641
+      ]
+    },
+    {
+      "text": "PREPARATION  ........................................... 9",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        372.336,
+        297.20401000000004,
+        361.7111867403315
+      ]
+    },
+    {
+      "text": "PREPARATION .................................................. 9",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        350.24363,
+        297.20401000000004,
+        340.5219258674033
+      ]
+    },
+    {
+      "text": "Special Service Tools ...............................................9",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        337.21128718,
+        297.20401000000004,
+        328.3926833204641
+      ]
+    },
+    {
+      "text": "Commercial Service Tools  .....................................10",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        325.21128718,
+        297.2027100000001,
+        316.3926833204641
+      ]
+    },
+    {
+      "text": "Sealant or/and Lubricant ........................................13",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        313.21128718,
+        297.2027100000001,
+        304.3926833204641
+      ]
+    },
+    {
+      "text": "SYSTEM DESCRIPTION ............................14",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        293.3161,
+        297.2027100000001,
+        282.6912867403315
+      ]
+    },
+    {
+      "text": "COMPONENT PARTS  ......................................14",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        271.28373,
+        297.2027100000001,
+        261.56202586740324
+      ]
+    },
+    {
+      "text": "Component Parts Location .....................................14",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        258.19138718,
+        297.2027100000001,
+        249.37278332046412
+      ]
+    },
+    {
+      "text": "Li-ion Battery  .......................................................... 16",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        246.19138718,
+        297.2027100000001,
+        237.37278332046412
+      ]
+    },
+    {
+      "text": "Li-ion Battery Controller  .........................................16",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        234.19138718,
+        297.2027100000001,
+        225.37278332046412
+      ]
+    },
+    {
+      "text": "Module  ................................................................... 17",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        222.19138718,
+        297.2027100000001,
+        213.37278332046412
+      ]
+    },
+    {
+      "text": "Heater Relay Unit ................................................... 18",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        210.19138718,
+        297.2027100000001,
+        201.37278332046412
+      ]
+    },
+    {
+      "text": "Li-ion Battery Heater  .............................................. 18",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        198.19138718,
+        297.2027100000001,
+        189.37278332046412
+      ]
+    },
+    {
+      "text": "Battery Current Sensor  ..........................................19",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        186.19138718,
+        297.2027100000001,
+        177.37278332046412
+      ]
+    },
+    {
+      "text": "Battery Temperature Sensor ..................................19",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        174.19138718,
+        297.2027100000001,
+        165.37278332046412
+      ]
+    },
+    {
+      "text": "Battery Junction Box  ..............................................20",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        162.19138718,
+        297.2027100000001,
+        153.37278332046412
+      ]
+    },
+    {
+      "text": "Service Plug ........................................................... 20",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        150.19138718,
+        297.2027100000001,
+        141.37278332046412
+      ]
+    },
+    {
+      "text": "High Voltage Warning Label  ..................................20",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        138.19127718000004,
+        297.2027100000001,
+        129.37267332046406
+      ]
+    },
+    {
+      "text": "SYSTEM ............................................................22",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        118.22374000000002,
+        297.2027100000001,
+        108.50203586740327
+      ]
+    },
+    {
+      "text": "LI-ION BATTERY CONTROL SYSTEM ...................22",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        97.21138717999997,
+        297.2027100000001,
+        88.3927833204641
+      ]
+    },
+    {
+      "text": "LI-ION BATTERY CONTROL SYSTEM : System",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        85.21138717999997,
+        280.2646340212999,
+        76.3927833204641
+      ]
+    },
+    {
+      "text": "Description  ............................................................. 22",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.92,
+        73.21156713200003,
+        297.2027100000001,
+        64.39296327246404
+      ]
+    },
+    {
+      "text": "LI-ION BATTERY HEATER CONTROL SYSTEM ....24",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        53.17138718000001,
+        297.2027100000001,
+        44.35278332046414
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.25989,
+        722.95127718,
+        580.90321667,
+        714.132673320464
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.25989,
+        683.291513361,
+        580.90321667,
+        674.4729095014641
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 3,
+      "page_manual": "EVB-3",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "PRECAUTION",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        736.25323718,
+        178.06898772199995,
+        719.4660233757127
+      ]
+    },
+    {
+      "text": "PRECAUTIONS",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        713.06999,
+        160.78499999999997,
+        699.7889734254144
+      ]
+    },
+    {
+      "text": "Precaution for Technicians Using Medical Electric",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.44,
+        688.96993,
+        346.39699199999984,
+        677.0701391491713
+      ]
+    },
+    {
+      "text": "OPERATION PROHIBITION",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        661.2682671800001,
+        196.9839601290001,
+        651.1215616630055
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        644.69593,
+        107.58932199999994,
+        635.4523424640885
+      ]
+    },
+    {
+      "text": "Parts with strong magnet is used in this vehicle.",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        633.1765384,
+        304.33508919999986,
+        623.9329508640885
+      ]
+    },
+    {
+      "text": "Technicians using a medical electric device such as pacemaker must never perform operation on the vehicle, as magnetic field can affect the device function by approaching to such parts.",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        621.7165504000001,
+        559.8720460000001,
+        600.9524228640886
+      ]
+    },
+    {
+      "text": "NORMAL CHARGE PRECAUTION",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        592.74824718,
+        232.15679362079987,
+        582.6015416630055
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        576.23591,
+        107.58932199999994,
+        566.9923224640885
+      ]
+    },
+    {
+      "text": "If  a  technician  uses  a  medical  electric  device  such  as  an  implantable  cardiac  pacemaker  or  an implantable cardioverter defibrillator, the possible effects on the devices must be checked with the device manufacturer before starting the charge operation.",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        564.7165184,
+        559.8528364,
+        532.4935512640886
+      ]
+    },
+    {
+      "text": "As  radiated  electromagnetic  wave  generated  by  PDM  (Power  Delivery  Module)  at  normal  charge operation may affect medical electric devices, a technician using a medical electric device such as implantable cardiac pacemaker or an implantable cardioverter defibrillator must not approach motor room [PDM (Power Delivery Module)] at the hood-opened condition during normal charge operation.",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.461053999999905,
+        530.2165988000002,
+        559.9043056000007,
+        486.4730916640886
+      ]
+    },
+    {
+      "text": "PRECAUTION AT TELEMATICS SYSTEM OPERATION",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        478.26826718,
+        339.3023863159999,
+        468.12156166300554
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        461.7559,
+        107.58932199999994,
+        452.5123124640884
+      ]
+    },
+    {
+      "text": "If  a  technician uses implantable cardiac pacemaker or implantable cardioverter defibrillator (ICD), avoid the device implanted part from approaching within approximately 220 mm (8.66 in) from interior/exterior antenna.",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        450.23536,
+        559.9244547999999,
+        418.0123928640884
+      ]
+    },
+    {
+      "text": "The electromagnetic wave of TCU might affect the function of the implantable cardiac pacemaker or the implantable cardioverter defibrillator (ICD), when using the service, etc.",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460009999999954,
+        415.7354404,
+        559.8514791999999,
+        394.9724612640884
+      ]
+    },
+    {
+      "text": "If a technician uses other medical electric devices than implantable cardiac pacemaker or implantable cardioverter defibrillator (ICD), the electromagnetic wave of TCU might affect the function of the device. The possible effects on the devices must be checked with the device manufacturer before TCU use.",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460114399999924,
+        392.7560608,
+        559.8703755999996,
+        349.0125536640884
+      ]
+    },
+    {
+      "text": "PRECAUTION AT INTELLIGENT KEY SYSTEM OPERATION",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        340.80827718,
+        368.2899086105005,
+        330.66157166300553
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        324.23591,
+        107.58932199999994,
+        314.9923224640884
+      ]
+    },
+    {
+      "text": "If  a  technician uses implantable cardiac pacemaker or implantable cardioverter defibrillator (ICD), avoid the device implanted part from approaching within approximately 220 mm (8.66 in) from interior/exterior antenna.",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        312.775922,
+        559.9244547999999,
+        280.4924028640884
+      ]
+    },
+    {
+      "text": "The  electromagnetic  wave  of  Intelligent  Key  might  affect  the  function  of  the  implantable  cardiac pacemaker  or  the  implantable  cardioverter  defibrillator  (ICD),  at  door  operation,  at  each  request switch operation, or at engine starting.",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460009999999954,
+        278.21659879999993,
+        559.8511659999996,
+        245.99248326408838
+      ]
+    },
+    {
+      "text": "If a technician uses other medical electric devices than implantable cardiac pacemaker or implantable  cardioverter  defibrillator  (ICD),  the  electromagnetic  wave  of  Intelligent  Key  might  affect  the function of the device. The possible effects on the devices must be checked with the device manufacturer before Intelligent Key use.",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46094959999991,
+        243.71667919999993,
+        559.8867663999999,
+        199.97432046408835
+      ]
+    },
+    {
+      "text": "Point to Be Checked Before Starting Maintenance Work",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        191.92992000000004,
+        383.44166400000046,
+        180.03012914917122
+      ]
+    },
+    {
+      "text": "INFOID:0000000009347449",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        186.78690000000006,
+        559.8580799999991,
+        181.22921999999994
+      ]
+    },
+    {
+      "text": "O The high voltage system may starts automatically. It is required to check that the timer air conditioner and timer charge (during EVSE connection) are not set before starting maintenance work. NOTE:",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        167.27592000000004,
+        581.3487094209,
+        135.0529528640884
+      ]
+    },
+    {
+      "text": "If  the  timer air  conditioner or timer charge (during EVSE connection) is set, the high voltage system starts automatically even when the power switch is in OFF state.",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.45980120000007,
+        132.77714879999996,
+        559.9293616000002,
+        112.01302126408837
+      ]
+    },
+    {
+      "text": "INFOID:0000000009347450",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        82.80690000000004,
+        559.8580799999991,
+        77.24922000000004
+      ]
+    },
+    {
+      "text": "Precaution for Supplemental Restraint System (SRS) \"AIR BAG\" and \"SEAT BELT PRE-TENSIONER\"",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        103.90990999999997,
+        545.571072,
+        76.05011914917122
+      ]
+    },
+    {
+      "text": "The Supplemental Restraint System such as 'AIR BAG' and 'SEAT BELT PRE-TENSIONER', used along with a front seat belt, helps to reduce the risk or severity of injury to the driver and front passenger for certain types of collision. This system includes seat belt switch inputs and dual stage front air bag modules. The SRS",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        63.295920000000024,
+        559.946170000001,
+        31.072952864088393
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "PRECAUTIONS",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        257.04001,
+        769.00991,
+        354.97728999999987,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "INFOID:0000000009347448",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        683.82691,
+        559.8580799999991,
+        678.26923
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 5,
+      "page_manual": "EVB-5",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 1,
+      "page_manual": "EVB-1",
+      "section_code": "EVB",
+      "bbox": [
+        311.348388671875,
+        525.3250732421875,
+        580.687255859375,
+        41.2567138671875
+      ],
+      "num_rows": 29,
+      "num_cols": 3,
+      "data": [
+        [
+          "LI-ION BATTERY HEATER CONTROL SYSTEM",
+          "",
+          "F"
+        ],
+        [
+          ": System Description ...............................................25",
+          "",
+          ""
+        ],
+        [
+          "Circuit Diagram",
+          ".......................................................27",
+          ""
+        ],
+        [
+          "HANDLING PRECAUTION",
+          "...............................32",
+          "G"
+        ],
+        [
+          "EV Battery System",
+          ".................................................32",
+          ""
+        ],
+        [
+          "DIAGNOSIS SYSTEM (LBC)",
+          "............................33",
+          "H"
+        ],
+        [
+          "CONSULT Function ................................................33",
+          "",
+          ""
+        ],
+        [
+          "ECU DIAGNOSIS INFORMATION",
+          "............. 35",
+          "I"
+        ],
+        [
+          "EV BATTERY SYSTEM",
+          "....................................35",
+          ""
+        ],
+        [
+          "Reference Value",
+          ".....................................................35",
+          ""
+        ],
+        [
+          "Fail-safe",
+          "..................................................................40",
+          "J"
+        ],
+        [
+          "DTC Index",
+          "..............................................................45",
+          ""
+        ],
+        [
+          "WIRING DIAGRAM",
+          "..................................... 50",
+          "K"
+        ],
+        [
+          "VCM",
+          "...................................................................50",
+          ""
+        ],
+        [
+          "Wiring Diagram",
+          ".......................................................50",
+          ""
+        ],
+        [
+          "BASIC INSPECTION",
+          ".................................. 82",
+          "L"
+        ],
+        [
+          "DIAGNOSIS AND REPAIR WORK FLOW",
+          ".......82",
+          ""
+        ],
+        [
+          "Work Flow ...............................................................82",
+          "",
+          "M"
+        ],
+        [
+          "Diagnostic Work Sheet",
+          "...........................................83",
+          ""
+        ],
+        [
+          "ADDITIONAL SERVICE WHEN REPLACING",
+          "",
+          "N"
+        ],
+        [
+          "LI-ION BATTERY CONTROLLER ....................85 Description ..............................................................85",
+          "",
+          ""
+        ],
+        [
+          "Work Procedure",
+          "",
+          ""
+        ],
+        [
+          "......................................................85",
+          "",
+          "O"
+        ],
+        [
+          "MODULE CHARGE BALANCE",
+          "........................86",
+          ""
+        ],
+        [
+          "Work Procedure",
+          "......................................................86",
+          "P"
+        ],
+        [
+          "DTC/CIRCUIT DIAGNOSIS",
+          "........................ 88",
+          ""
+        ],
+        [
+          "P0A0D HV SYSTEM INTERLOCK ERROR",
+          ".....88",
+          ""
+        ],
+        [
+          "DTC Logic Diagnosis Procedure ..............................................88 ............................................89",
+          "...............................................................88",
+          ""
+        ],
+        [
+          "Component Inspection",
+          "",
+          ""
+        ]
+      ],
+      "markdown": "| LI-ION BATTERY HEATER CONTROL SYSTEM                                                                                          |                                                                       | F   |\n|-------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|-----|\n| : System Description ...............................................25                                                        |                                                                       |     |\n| Circuit Diagram                                                                                                               | .......................................................27             |     |\n| HANDLING PRECAUTION                                                                                                           | ...............................32                                     | G   |\n| EV Battery System                                                                                                             | .................................................32                   |     |\n| DIAGNOSIS SYSTEM (LBC)                                                                                                        | ............................33                                        | H   |\n| CONSULT Function ................................................33                                                           |                                                                       |     |\n| ECU DIAGNOSIS INFORMATION                                                                                                     | ............. 35                                                      | I   |\n| EV BATTERY SYSTEM                                                                                                             | ....................................35                                |     |\n| Reference Value                                                                                                               | .....................................................35               |     |\n| Fail-safe                                                                                                                     | ..................................................................40  | J   |\n| DTC Index                                                                                                                     | ..............................................................45      |     |\n| WIRING DIAGRAM                                                                                                                | ..................................... 50                              | K   |\n| VCM                                                                                                                           | ...................................................................50 |     |\n| Wiring Diagram                                                                                                                | .......................................................50             |     |\n| BASIC INSPECTION                                                                                                              | .................................. 82                                 | L   |\n| DIAGNOSIS AND REPAIR WORK FLOW                                                                                                | .......82                                                             |     |\n| Work Flow ...............................................................82                                                   |                                                                       | M   |\n| Diagnostic Work Sheet                                                                                                         | ...........................................83                         |     |\n| ADDITIONAL SERVICE WHEN REPLACING                                                                                             |                                                                       | N   |\n| LI-ION BATTERY CONTROLLER ....................85 Description ..............................................................85 |                                                                       |     |\n| Work Procedure                                                                                                                |                                                                       |     |\n| ......................................................85                                                                      |                                                                       | O   |\n| MODULE CHARGE BALANCE                                                                                                         | ........................86                                            |     |\n| Work Procedure                                                                                                                | ......................................................86              | P   |\n| DTC/CIRCUIT DIAGNOSIS                                                                                                         | ........................ 88                                           |     |\n| P0A0D HV SYSTEM INTERLOCK ERROR                                                                                               | .....88                                                               |     |\n| DTC Logic Diagnosis Procedure ..............................................88 ............................................89 | ...............................................................88     |     |\n| Component Inspection                                                                                                          |                                                                       |     |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 2,
+      "page_manual": "EVB-2",
+      "section_code": "EVB",
+      "bbox": [
+        49.42306137084961,
+        742.1277732849121,
+        557.3775024414062,
+        36.681884765625
+      ],
+      "num_rows": 53,
+      "num_cols": 3,
+      "data": [
+        [
+          "P0A1F BATTERY ENERGY CONTROL MOD-",
+          "P30E4 DLC DIAGNOSIS PDM(POWER DE-",
+          ""
+        ],
+        [
+          "ULE ...................................................................",
+          "90 LIVERY MODULE)",
+          "..........................................110"
+        ],
+        [
+          "DTC Logic .............................................................. 90",
+          "DTC Logic ............................................................",
+          "110"
+        ],
+        [
+          "Diagnosis Procedure ............................................. 90",
+          "Diagnosis Procedure ............................................",
+          "110"
+        ],
+        [
+          "P3030 CELL CONTROLLER LIN ..................... 91",
+          "P30FC OVER CURRENT ................................111",
+          ""
+        ],
+        [
+          "DTC Logic .............................................................. 91",
+          "DTC Logic ............................................................",
+          "111"
+        ],
+        [
+          "Diagnosis Procedure ............................................. 91",
+          "",
+          ""
+        ],
+        [
+          "",
+          "Diagnosis Procedure ............................................",
+          "111"
+        ],
+        [
+          "P3031-P303C CELL CONTROLLER ASIC ...... 92",
+          "P318D COMMUNICATION ERROR ................112",
+          ""
+        ],
+        [
+          "DTC Logic .............................................................. 92",
+          "DTC Logic ............................................................",
+          "112"
+        ],
+        [
+          "Diagnosis Procedure ............................................. 92",
+          "Diagnosis Procedure",
+          "............................................ 112"
+        ],
+        [
+          "P303D-P3048 CELL CONTROLLER ASIC ...... 93",
+          "P318E COMMUNICATION ERROR",
+          "................113"
+        ],
+        [
+          "DTC Logic .............................................................. 93",
+          "",
+          ""
+        ],
+        [
+          "",
+          "DTC Logic ............................................................",
+          "113"
+        ],
+        [
+          "Diagnosis Procedure ............................................. 93",
+          "Diagnosis Procedure ............................................",
+          "113"
+        ],
+        [
+          "",
+          "",
+          "................114"
+        ],
+        [
+          "P3049-P3054 CELL CONTROLLER ASIC",
+          "P3191 COMMUNICATION ERROR",
+          ""
+        ],
+        [
+          "VOLTAGE ......................................................... 94",
+          "DTC Logic ............................................................",
+          "114"
+        ],
+        [
+          "DTC Logic .............................................................. 94",
+          "Diagnosis Procedure ............................................",
+          "114"
+        ],
+        [
+          "Diagnosis Procedure ............................................. 94",
+          "P3196 COMMUNICATION ERROR",
+          "................115"
+        ],
+        [
+          "P3055-P3060 CELL CONTROLLER ASIC",
+          "DTC Logic ............................................................",
+          "115"
+        ],
+        [
+          "VOLTAGE ......................................................... 96",
+          "Diagnosis Procedure ............................................",
+          "115"
+        ],
+        [
+          "DTC Logic .............................................................. 96",
+          "",
+          ""
+        ],
+        [
+          "Diagnosis Procedure ............................................. 96",
+          "P3198 COMMUNICATION ERROR",
+          "................116"
+        ],
+        [
+          "",
+          "DTC Logic ............................................................",
+          "116"
+        ],
+        [
+          "P3061 CELL BATTERY VOLTAGE ................. 98",
+          "Diagnosis Procedure ............................................",
+          "116"
+        ],
+        [
+          "DTC Logic .............................................................. 98",
+          "P3199 COMMUNICATION ERROR",
+          "................117"
+        ],
+        [
+          "Diagnosis Procedure ............................................. 98",
+          "DTC Logic ............................................................",
+          "117"
+        ],
+        [
+          "P3062 BYPASS SWITCH ................................. 99",
+          "Diagnosis Procedure ............................................",
+          "117"
+        ],
+        [
+          "DTC Logic .............................................................. 99",
+          "P319C COMMUNICATION ERROR",
+          "................118"
+        ],
+        [
+          "Diagnosis Procedure ............................................. 99",
+          "DTC Logic ............................................................",
+          "118"
+        ],
+        [
+          "P3064 CELL CONT ASIC ............................... 100",
+          "Diagnosis Procedure ............................................",
+          "118"
+        ],
+        [
+          "DTC Logic .............................................................100",
+          "P31A4 CAN ERROR VCM ..............................119",
+          ""
+        ],
+        [
+          "Diagnosis Procedure ............................................100",
+          "DTC Logic ............................................................",
+          "119"
+        ],
+        [
+          "P308B-P3096 CELL CONTROLLER ASIC",
+          "Diagnosis Procedure ............................................",
+          "119"
+        ],
+        [
+          "OPEN ..............................................................",
+          "",
+          ""
+        ],
+        [
+          "101",
+          "P31A7 CAN ERROR INV/MC ..........................120",
+          ""
+        ],
+        [
+          "DTC Logic .............................................................101",
+          "DTC Logic ............................................................",
+          "120"
+        ],
+        [
+          "Diagnosis Procedure ............................................101",
+          "Diagnosis Procedure ............................................",
+          "120"
+        ],
+        [
+          "P3097-P30A2 CELL CONTROLLER ASIC",
+          "P3302-P330D CELL OVER VOLTAGE",
+          "...........121"
+        ],
+        [
+          "OPEN .............................................................. 104",
+          "",
+          ""
+        ],
+        [
+          "DTC Logic .............................................................104",
+          "DTC Logic ............................................................",
+          "121"
+        ],
+        [
+          "Diagnosis Procedure ............................................104",
+          "Diagnosis Procedure ............................................ Component Inspection",
+          "121 ......................................... 124"
+        ],
+        [
+          "P30E0 DLC DIAGNOSIS VCM .......................",
+          "",
+          ""
+        ],
+        [
+          "107",
+          "P330E-P3319 CELL OVER VOLTAGE",
+          "...........125"
+        ],
+        [
+          "DTC Logic .............................................................107",
+          "DTC Logic ............................................................",
+          "125"
+        ],
+        [
+          "Diagnosis Procedure ............................................107",
+          "Diagnosis Procedure ............................................",
+          "125"
+        ],
+        [
+          "P30E2 DLC DIAGNOSIS HVAC ..................... 108",
+          "Component Inspection .........................................",
+          "128"
+        ],
+        [
+          "DTC Logic .............................................................108",
+          "P331A-P3325 CELL OVER VOLTAGE",
+          "...........129"
+        ],
+        [
+          "Procedure ............................................108",
+          "DTC Logic ............................................................",
+          "129"
+        ],
+        [
+          "Diagnosis",
+          "",
+          ""
+        ],
+        [
+          "P30E3 DLC DIAGNOSIS MC ......................... 109 DTC Logic .............................................................109",
+          "Component Inspection .........................................",
+          "131"
+        ],
+        [
+          "Diagnosis Procedure ............................................109",
+          "P3326-P3331 CELL OVER VOLTAGE",
+          "...........132"
+        ]
+      ],
+      "markdown": "| P0A1F BATTERY ENERGY CONTROL MOD-                                                                                               | P30E4 DLC DIAGNOSIS PDM(POWER DE-                                                     |                                                   |\n|---------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|---------------------------------------------------|\n| ULE ...................................................................                                                         | 90 LIVERY MODULE)                                                                     | ..........................................110     |\n| DTC Logic .............................................................. 90                                                     | DTC Logic ............................................................                | 110                                               |\n| Diagnosis Procedure ............................................. 90                                                            | Diagnosis Procedure ............................................                      | 110                                               |\n| P3030 CELL CONTROLLER LIN ..................... 91                                                                              | P30FC OVER CURRENT ................................111                                |                                                   |\n| DTC Logic .............................................................. 91                                                     | DTC Logic ............................................................                | 111                                               |\n| Diagnosis Procedure ............................................. 91                                                            |                                                                                       |                                                   |\n|                                                                                                                                 | Diagnosis Procedure ............................................                      | 111                                               |\n| P3031-P303C CELL CONTROLLER ASIC ...... 92                                                                                      | P318D COMMUNICATION ERROR ................112                                         |                                                   |\n| DTC Logic .............................................................. 92                                                     | DTC Logic ............................................................                | 112                                               |\n| Diagnosis Procedure ............................................. 92                                                            | Diagnosis Procedure                                                                   | ............................................ 112  |\n| P303D-P3048 CELL CONTROLLER ASIC ...... 93                                                                                      | P318E COMMUNICATION ERROR                                                             | ................113                               |\n| DTC Logic .............................................................. 93                                                     |                                                                                       |                                                   |\n|                                                                                                                                 | DTC Logic ............................................................                | 113                                               |\n| Diagnosis Procedure ............................................. 93                                                            | Diagnosis Procedure ............................................                      | 113                                               |\n|                                                                                                                                 |                                                                                       | ................114                               |\n| P3049-P3054 CELL CONTROLLER ASIC                                                                                                | P3191 COMMUNICATION ERROR                                                             |                                                   |\n| VOLTAGE ......................................................... 94                                                            | DTC Logic ............................................................                | 114                                               |\n| DTC Logic .............................................................. 94                                                     | Diagnosis Procedure ............................................                      | 114                                               |\n| Diagnosis Procedure ............................................. 94                                                            | P3196 COMMUNICATION ERROR                                                             | ................115                               |\n| P3055-P3060 CELL CONTROLLER ASIC                                                                                                | DTC Logic ............................................................                | 115                                               |\n| VOLTAGE ......................................................... 96                                                            | Diagnosis Procedure ............................................                      | 115                                               |\n| DTC Logic .............................................................. 96                                                     |                                                                                       |                                                   |\n| Diagnosis Procedure ............................................. 96                                                            | P3198 COMMUNICATION ERROR                                                             | ................116                               |\n|                                                                                                                                 | DTC Logic ............................................................                | 116                                               |\n| P3061 CELL BATTERY VOLTAGE ................. 98                                                                                 | Diagnosis Procedure ............................................                      | 116                                               |\n| DTC Logic .............................................................. 98                                                     | P3199 COMMUNICATION ERROR                                                             | ................117                               |\n| Diagnosis Procedure ............................................. 98                                                            | DTC Logic ............................................................                | 117                                               |\n| P3062 BYPASS SWITCH ................................. 99                                                                        | Diagnosis Procedure ............................................                      | 117                                               |\n| DTC Logic .............................................................. 99                                                     | P319C COMMUNICATION ERROR                                                             | ................118                               |\n| Diagnosis Procedure ............................................. 99                                                            | DTC Logic ............................................................                | 118                                               |\n| P3064 CELL CONT ASIC ............................... 100                                                                        | Diagnosis Procedure ............................................                      | 118                                               |\n| DTC Logic .............................................................100                                                      | P31A4 CAN ERROR VCM ..............................119                                 |                                                   |\n| Diagnosis Procedure ............................................100                                                             | DTC Logic ............................................................                | 119                                               |\n| P308B-P3096 CELL CONTROLLER ASIC                                                                                                | Diagnosis Procedure ............................................                      | 119                                               |\n| OPEN ..............................................................                                                             |                                                                                       |                                                   |\n| 101                                                                                                                             | P31A7 CAN ERROR INV/MC ..........................120                                  |                                                   |\n| DTC Logic .............................................................101                                                      | DTC Logic ............................................................                | 120                                               |\n| Diagnosis Procedure ............................................101                                                             | Diagnosis Procedure ............................................                      | 120                                               |\n| P3097-P30A2 CELL CONTROLLER ASIC                                                                                                | P3302-P330D CELL OVER VOLTAGE                                                         | ...........121                                    |\n| OPEN .............................................................. 104                                                         |                                                                                       |                                                   |\n| DTC Logic .............................................................104                                                      | DTC Logic ............................................................                | 121                                               |\n| Diagnosis Procedure ............................................104                                                             | Diagnosis Procedure ............................................ Component Inspection | 121 ......................................... 124 |\n| P30E0 DLC DIAGNOSIS VCM .......................                                                                                 |                                                                                       |                                                   |\n| 107                                                                                                                             | P330E-P3319 CELL OVER VOLTAGE                                                         | ...........125                                    |\n| DTC Logic .............................................................107                                                      | DTC Logic ............................................................                | 125                                               |\n| Diagnosis Procedure ............................................107                                                             | Diagnosis Procedure ............................................                      | 125                                               |\n| P30E2 DLC DIAGNOSIS HVAC ..................... 108                                                                              | Component Inspection .........................................                        | 128                                               |\n| DTC Logic .............................................................108                                                      | P331A-P3325 CELL OVER VOLTAGE                                                         | ...........129                                    |\n| Procedure ............................................108                                                                       | DTC Logic ............................................................                | 129                                               |\n| Diagnosis                                                                                                                       |                                                                                       |                                                   |\n| P30E3 DLC DIAGNOSIS MC ......................... 109 DTC Logic .............................................................109 | Component Inspection .........................................                        | 131                                               |\n| Diagnosis Procedure ............................................109                                                             | P3326-P3331 CELL OVER VOLTAGE                                                         | ...........132                                    |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 3,
+      "page_manual": "EVB-3",
+      "section_code": "EVB",
+      "bbox": [
+        52.09185028076172,
+        740.1995620727539,
+        581.6441650390625,
+        42.88525390625
+      ],
+      "num_rows": 35,
+      "num_cols": 4,
+      "data": [
+        [
+          "Diagnosis Procedure ............................................ 132",
+          "",
+          "P33EA BATTERY HEATER RELAY .............. 165",
+          ""
+        ],
+        [
+          "Component Inspection ......................................... 134",
+          "DTC Logic .............................................................165",
+          "",
+          "A"
+        ],
+        [
+          "P3375-P3380 CELL OVER DISCHARGE ....... 135",
+          "",
+          "Diagnosis Procedure ............................................165",
+          ""
+        ],
+        [
+          "DTC Logic ............................................................ 135",
+          "",
+          "P33EB TEMPERATURE SENSOR ................. 167",
+          "B"
+        ],
+        [
+          "Diagnosis Procedure ............................................ 135",
+          "",
+          "DTC Logic .............................................................167",
+          ""
+        ],
+        [
+          "Component Inspection ......................................... 138",
+          "",
+          "Diagnosis Procedure ............................................167",
+          ""
+        ],
+        [
+          "P3381-P338C CELL OVER DISCHARGE ...... 139",
+          "",
+          "Component Inspection ..........................................168",
+          ""
+        ],
+        [
+          "DTC Logic ............................................................ 139",
+          "",
+          "P33ED BATTERY PARALLEL DIAGNOSIS .. 169",
+          ""
+        ],
+        [
+          "Diagnosis Procedure ............................................",
+          "139",
+          "DTC Logic .............................................................169",
+          ""
+        ],
+        [
+          "Component Inspection ......................................... 142",
+          "",
+          "Diagnosis Procedure ............................................169",
+          "D"
+        ],
+        [
+          "P338D-P3398 CELL OVER DISCHARGE ...... 143",
+          "",
+          "P33EE BATTERY HEATER CONTROL SYS-",
+          ""
+        ],
+        [
+          "DTC Logic ............................................................ 143",
+          "",
+          "TEM .................................................................",
+          ""
+        ],
+        [
+          "Diagnosis Procedure ............................................",
+          "143",
+          "171 DTC Logic .............................................................171",
+          "E"
+        ],
+        [
+          "Component Inspection ......................................... 145",
+          "",
+          "Diagnosis Procedure ............................................171",
+          ""
+        ],
+        [
+          "P3399-P33A4 CELL OVER DISCHARGE ...... 146",
+          "",
+          "U1000 CAN COMM CIRCUIT ......................... 173",
+          "F"
+        ],
+        [
+          "DTC Logic ............................................................ 146",
+          "",
+          "Description ............................................................173",
+          ""
+        ],
+        [
+          "Diagnosis Procedure ............................................ 146",
+          "",
+          "DTC Logic .............................................................173",
+          ""
+        ],
+        [
+          "Component Inspection ......................................... 148",
+          "",
+          "Diagnosis Procedure ............................................173",
+          ""
+        ],
+        [
+          "P33D4 BATTERY DETERIORATION DIAG-",
+          "",
+          "",
+          "G"
+        ],
+        [
+          "NOSIS .............................................................. DTC Logic ............................................................ 149",
+          "149",
+          "HIGH VOLTAGE CIRCUIT .............................. 174 Diagnosis Procedure ............................................174",
+          ""
+        ],
+        [
+          "Diagnosis Procedure ............................................ 149 P33D5 CURRENT SENSOR ...........................",
+          "150 Component Inspection",
+          "LI-ION BATTERY INSULATION RESIS- TANCE LOSS CHECK .................................... 176 ..........................................176",
+          "H"
+        ],
+        [
+          "DTC Logic ............................................................ 150 Diagnosis Procedure ............................................ 150",
+          "",
+          "LI-ION BATTERY HEATER SYSTEM INSU-",
+          "I"
+        ],
+        [
+          "P33D6 CURRENT SENSOR ........................... 152",
+          "",
+          "LATION RESISTANCE CHECK ..................... 186 Diagnosis Procedure ............................................186",
+          "J"
+        ],
+        [
+          "DTC Logic ............................................................ 152 Diagnosis Procedure ............................................ 152",
+          "",
+          "POWER SUPPLY AND GROUND CIRCUIT .. 189",
+          "K"
+        ],
+        [
+          "P33D7, P33D9, P33DD TEMPERATURE SENSOR .......................................................... 154 DTC Logic ............................................................ 154 Diagnosis Procedure ............................................ 154",
+          "SYMPTOM DIAGNOSIS",
+          "Diagnosis Procedure ............................................189 ........................... 192",
+          ""
+        ],
+        [
+          "Component Inspection ......................................... 155 P33DF BAT VOLTAGE ISOLATION SEN ...... 156 DTC Logic ............................................................ 156",
+          "",
+          "REDUCTION IN THE DRIVING RANGE ......... 192 Description ............................................................192 Diagnosis Procedure ............................................192",
+          "L"
+        ],
+        [
+          "Diagnosis Procedure ............................................ 156",
+          "",
+          "PERIODIC MAINTENANCE ..................... 193",
+          "M"
+        ],
+        [
+          "P33E0 BAT VOLTAGE ISOLATION SEN ...... 157",
+          "",
+          "EV BATTERY USAGE REPORT .................... 193 Inspection .............................................................193",
+          "N N"
+        ],
+        [
+          "DTC Logic ............................................................ 157 Diagnosis Procedure ............................................ 157",
+          "158 LI-ION BATTERY",
+          "UNIT REMOVAL AND INSTALLATION ... 194 ............................................ 194",
+          "O"
+        ],
+        [
+          "P33E1 BAT VOLTAGE ISOLATION SEN ...... DTC Logic ............................................................ 158",
+          "",
+          "Exploded View ......................................................194 Removal and Installation ......................................194",
+          ""
+        ],
+        [
+          "Diagnosis Procedure ............................................ 158",
+          "",
+          "Inspection .............................................................201",
+          ""
+        ],
+        [
+          "P33E2 BATT PACK OVER TEMP .................. 159",
+          "",
+          "UNIT DISASSEMBLY AND ASSEMBLY .",
+          "P"
+        ],
+        [
+          "159 Diagnosis Procedure ............................................ 159",
+          "",
+          "203",
+          ""
+        ],
+        [
+          "DTC Logic ............................................................",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P33E6 CELL CONTROLLER .......................... DTC Logic ............................................................ 160",
+          "160 BATTERY PACK UPPER BATTERY PACK UPPER",
+          "LI-ION BATTERY ............................................ 203 CASE ............................203 CASE : Exploded View ..203",
+          ""
+        ]
+      ],
+      "markdown": "| Diagnosis Procedure ............................................ 132                                                                                                                                                                                  |                                                                            | P33EA BATTERY HEATER RELAY .............. 165                                                                                                                                                |     |\n|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----|\n| Component Inspection ......................................... 134                                                                                                                                                                                    | DTC Logic .............................................................165 |                                                                                                                                                                                              | A   |\n| P3375-P3380 CELL OVER DISCHARGE ....... 135                                                                                                                                                                                                           |                                                                            | Diagnosis Procedure ............................................165                                                                                                                          |     |\n| DTC Logic ............................................................ 135                                                                                                                                                                            |                                                                            | P33EB TEMPERATURE SENSOR ................. 167                                                                                                                                               | B   |\n| Diagnosis Procedure ............................................ 135                                                                                                                                                                                  |                                                                            | DTC Logic .............................................................167                                                                                                                   |     |\n| Component Inspection ......................................... 138                                                                                                                                                                                    |                                                                            | Diagnosis Procedure ............................................167                                                                                                                          |     |\n| P3381-P338C CELL OVER DISCHARGE ...... 139                                                                                                                                                                                                            |                                                                            | Component Inspection ..........................................168                                                                                                                           |     |\n| DTC Logic ............................................................ 139                                                                                                                                                                            |                                                                            | P33ED BATTERY PARALLEL DIAGNOSIS .. 169                                                                                                                                                      |     |\n| Diagnosis Procedure ............................................                                                                                                                                                                                      | 139                                                                        | DTC Logic .............................................................169                                                                                                                   |     |\n| Component Inspection ......................................... 142                                                                                                                                                                                    |                                                                            | Diagnosis Procedure ............................................169                                                                                                                          | D   |\n| P338D-P3398 CELL OVER DISCHARGE ...... 143                                                                                                                                                                                                            |                                                                            | P33EE BATTERY HEATER CONTROL SYS-                                                                                                                                                            |     |\n| DTC Logic ............................................................ 143                                                                                                                                                                            |                                                                            | TEM .................................................................                                                                                                                        |     |\n| Diagnosis Procedure ............................................                                                                                                                                                                                      | 143                                                                        | 171 DTC Logic .............................................................171                                                                                                               | E   |\n| Component Inspection ......................................... 145                                                                                                                                                                                    |                                                                            | Diagnosis Procedure ............................................171                                                                                                                          |     |\n| P3399-P33A4 CELL OVER DISCHARGE ...... 146                                                                                                                                                                                                            |                                                                            | U1000 CAN COMM CIRCUIT ......................... 173                                                                                                                                         | F   |\n| DTC Logic ............................................................ 146                                                                                                                                                                            |                                                                            | Description ............................................................173                                                                                                                  |     |\n| Diagnosis Procedure ............................................ 146                                                                                                                                                                                  |                                                                            | DTC Logic .............................................................173                                                                                                                   |     |\n| Component Inspection ......................................... 148                                                                                                                                                                                    |                                                                            | Diagnosis Procedure ............................................173                                                                                                                          |     |\n| P33D4 BATTERY DETERIORATION DIAG-                                                                                                                                                                                                                     |                                                                            |                                                                                                                                                                                              | G   |\n| NOSIS .............................................................. DTC Logic ............................................................ 149                                                                                                       | 149                                                                        | HIGH VOLTAGE CIRCUIT .............................. 174 Diagnosis Procedure ............................................174                                                                  |     |\n| Diagnosis Procedure ............................................ 149 P33D5 CURRENT SENSOR ...........................                                                                                                                                 | 150 Component Inspection                                                   | LI-ION BATTERY INSULATION RESIS- TANCE LOSS CHECK .................................... 176 ..........................................176                                                     | H   |\n| DTC Logic ............................................................ 150 Diagnosis Procedure ............................................ 150                                                                                                       |                                                                            | LI-ION BATTERY HEATER SYSTEM INSU-                                                                                                                                                           | I   |\n| P33D6 CURRENT SENSOR ........................... 152                                                                                                                                                                                                  |                                                                            | LATION RESISTANCE CHECK ..................... 186 Diagnosis Procedure ............................................186                                                                        | J   |\n| DTC Logic ............................................................ 152 Diagnosis Procedure ............................................ 152                                                                                                       |                                                                            | POWER SUPPLY AND GROUND CIRCUIT .. 189                                                                                                                                                       | K   |\n| P33D7, P33D9, P33DD TEMPERATURE SENSOR .......................................................... 154 DTC Logic ............................................................ 154 Diagnosis Procedure ............................................ 154 | SYMPTOM DIAGNOSIS                                                          | Diagnosis Procedure ............................................189 ........................... 192                                                                                          |     |\n| Component Inspection ......................................... 155 P33DF BAT VOLTAGE ISOLATION SEN ...... 156 DTC Logic ............................................................ 156                                                              |                                                                            | REDUCTION IN THE DRIVING RANGE ......... 192 Description ............................................................192 Diagnosis Procedure ............................................192 | L   |\n| Diagnosis Procedure ............................................ 156                                                                                                                                                                                  |                                                                            | PERIODIC MAINTENANCE ..................... 193                                                                                                                                               | M   |\n| P33E0 BAT VOLTAGE ISOLATION SEN ...... 157                                                                                                                                                                                                            |                                                                            | EV BATTERY USAGE REPORT .................... 193 Inspection .............................................................193                                                                 | N N |\n| DTC Logic ............................................................ 157 Diagnosis Procedure ............................................ 157                                                                                                       | 158 LI-ION BATTERY                                                         | UNIT REMOVAL AND INSTALLATION ... 194 ............................................ 194                                                                                                       | O   |\n| P33E1 BAT VOLTAGE ISOLATION SEN ...... DTC Logic ............................................................ 158                                                                                                                                     |                                                                            | Exploded View ......................................................194 Removal and Installation ......................................194                                                   |     |\n| Diagnosis Procedure ............................................ 158                                                                                                                                                                                  |                                                                            | Inspection .............................................................201                                                                                                                  |     |\n| P33E2 BATT PACK OVER TEMP .................. 159                                                                                                                                                                                                      |                                                                            | UNIT DISASSEMBLY AND ASSEMBLY .                                                                                                                                                              | P   |\n| 159 Diagnosis Procedure ............................................ 159                                                                                                                                                                              |                                                                            | 203                                                                                                                                                                                          |     |\n| DTC Logic ............................................................                                                                                                                                                                                |                                                                            |                                                                                                                                                                                              |     |\n| P33E6 CELL CONTROLLER .......................... DTC Logic ............................................................ 160                                                                                                                           | 160 BATTERY PACK UPPER BATTERY PACK UPPER                                  | LI-ION BATTERY ............................................ 203 CASE ............................203 CASE : Exploded View ..203                                                              |     |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 4,
+      "page_manual": "EVB-4",
+      "section_code": "EVB",
+      "bbox": [
+        50.969573974609375,
+        739.150390625,
+        296.703857421875,
+        466.3917236328125
+      ],
+      "num_rows": 12,
+      "num_cols": 2,
+      "data": [
+        [
+          "BATTERY PACK UPPER CASE : Removal and Installation ............................................................204",
+          ""
+        ],
+        [
+          "LI-ION BATTERY CONTROLLER",
+          "..........................213"
+        ],
+        [
+          "LI-ION BATTERY CONTROLLER : Exploded View ......................................................................214",
+          ""
+        ],
+        [
+          "LI-ION BATTERY CONTROLLER : Removal and Installation ............................................................214",
+          ""
+        ],
+        [
+          "BATTERY JUNCTION BOX AND BATTERY HAR- NESS",
+          ".......................................................................216"
+        ],
+        [
+          "BATTERY JUNCTION BOX AND BATTERY HARNESS : Exploded View .................................217",
+          ""
+        ],
+        [
+          "BATTERY JUNCTION BOX AND BATTERY HARNESS : Disassembly and Assembly",
+          ".............219"
+        ],
+        [
+          "LI-ION BATTERY HEATER",
+          "....................................226"
+        ],
+        [
+          "LI-ION BATTERY HEATER : Exploded view",
+          "........227"
+        ],
+        [
+          "LI-ION BATTERY HEATER : Disassembly and Assembly ..............................................................228",
+          ""
+        ],
+        [
+          "LI-ION BATTERY HEATER RELAY UNIT",
+          "..............232"
+        ],
+        [
+          "LI-ION BATTERY HEATER RELAY UNIT : Ex- ploded view ...........................................................233",
+          ""
+        ]
+      ],
+      "markdown": "| BATTERY PACK UPPER CASE : Removal and Installation ............................................................204   |                                                                            |\n|----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|\n| LI-ION BATTERY CONTROLLER                                                                                            | ..........................213                                              |\n| LI-ION BATTERY CONTROLLER : Exploded View ......................................................................214  |                                                                            |\n| LI-ION BATTERY CONTROLLER : Removal and Installation ............................................................214 |                                                                            |\n| BATTERY JUNCTION BOX AND BATTERY HAR- NESS                                                                           | .......................................................................216 |\n| BATTERY JUNCTION BOX AND BATTERY HARNESS : Exploded View .................................217                        |                                                                            |\n| BATTERY JUNCTION BOX AND BATTERY HARNESS : Disassembly and Assembly                                                  | .............219                                                           |\n| LI-ION BATTERY HEATER                                                                                                | ....................................226                                    |\n| LI-ION BATTERY HEATER : Exploded view                                                                                | ........227                                                                |\n| LI-ION BATTERY HEATER : Disassembly and Assembly ..............................................................228   |                                                                            |\n| LI-ION BATTERY HEATER RELAY UNIT                                                                                     | ..............232                                                          |\n| LI-ION BATTERY HEATER RELAY UNIT : Ex- ploded view ...........................................................233    |                                                                            |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 4,
+      "page_manual": "EVB-4",
+      "section_code": "EVB",
+      "bbox": [
+        311.1557922363281,
+        738.2757987976074,
+        557.06787109375,
+        460.98602294921875
+      ],
+      "num_rows": 17,
+      "num_cols": 2,
+      "data": [
+        [
+          "LI-ION BATTERY HEATER RELAY UNIT : Disas-",
+          "LI-ION BATTERY HEATER RELAY UNIT : Disas-"
+        ],
+        [
+          "sembly and Assembly",
+          ".......................................... 234"
+        ],
+        [
+          "FRONT MODULE STACK ...................................... 235",
+          "FRONT MODULE STACK ...................................... 235"
+        ],
+        [
+          "FRONT MODULE STACK : Exploded View",
+          "235"
+        ],
+        [
+          "........ FRONT MODULE STACK : Removal and Installa-",
+          "........ FRONT MODULE STACK : Removal and Installa-"
+        ],
+        [
+          "tion",
+          "....................................................................... 239"
+        ],
+        [
+          "FRONT MODULE STACK : Disassembly and As-",
+          "FRONT MODULE STACK : Disassembly and As-"
+        ],
+        [
+          "sembly",
+          ".................................................................. 246"
+        ],
+        [
+          "REAR MODULE STACK : Exploded View ...........",
+          "251"
+        ],
+        [
+          "REAR MODULE STACK : Removal and Installa-",
+          "REAR MODULE STACK : Removal and Installa-"
+        ],
+        [
+          "tion",
+          "....................................................................... 254"
+        ],
+        [
+          "REAR MODULE STACK : Disassembly and As- sembly ..................................................................",
+          "REAR MODULE STACK : Disassembly and As- sembly .................................................................."
+        ],
+        [
+          "",
+          "261"
+        ],
+        [
+          "Inspection .............................................................",
+          "269"
+        ],
+        [
+          "SERVICE DATA AND SPECIFICATIONS",
+          "SERVICE DATA AND SPECIFICATIONS"
+        ],
+        [
+          "(SDS) ......................................................... SERVICE DATA AND (SDS)",
+          "272 SPECIFICATIONS ...............................................................272"
+        ],
+        [
+          "Li-ion Battery",
+          "........................................................ 272"
+        ]
+      ],
+      "markdown": "| LI-ION BATTERY HEATER RELAY UNIT : Disas-                                                                         | LI-ION BATTERY HEATER RELAY UNIT : Disas-                                                                         |\n|-------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|\n| sembly and Assembly                                                                                               | .......................................... 234                                                                    |\n| FRONT MODULE STACK ...................................... 235                                                     | FRONT MODULE STACK ...................................... 235                                                     |\n| FRONT MODULE STACK : Exploded View                                                                                | 235                                                                                                               |\n| ........ FRONT MODULE STACK : Removal and Installa-                                                               | ........ FRONT MODULE STACK : Removal and Installa-                                                               |\n| tion                                                                                                              | ....................................................................... 239                                       |\n| FRONT MODULE STACK : Disassembly and As-                                                                          | FRONT MODULE STACK : Disassembly and As-                                                                          |\n| sembly                                                                                                            | .................................................................. 246                                            |\n| REAR MODULE STACK : Exploded View ...........                                                                     | 251                                                                                                               |\n| REAR MODULE STACK : Removal and Installa-                                                                         | REAR MODULE STACK : Removal and Installa-                                                                         |\n| tion                                                                                                              | ....................................................................... 254                                       |\n| REAR MODULE STACK : Disassembly and As- sembly .................................................................. | REAR MODULE STACK : Disassembly and As- sembly .................................................................. |\n|                                                                                                                   | 261                                                                                                               |\n| Inspection .............................................................                                          | 269                                                                                                               |\n| SERVICE DATA AND SPECIFICATIONS                                                                                   | SERVICE DATA AND SPECIFICATIONS                                                                                   |\n| (SDS) ......................................................... SERVICE DATA AND (SDS)                            | 272 SPECIFICATIONS ...............................................................272                             |\n| Li-ion Battery                                                                                                    | ........................................................ 272                                                      |",
+      "tableformer": true
+    }
+  ],
+  "images": []
+}

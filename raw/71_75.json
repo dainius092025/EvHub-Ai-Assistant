@@ -1,0 +1,676 @@
+{
+  "schema_version": "1.0",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-71\nRevision: October 2013\n2013 LEAF",
+    "page_start": 71,
+    "page_end": 75,
+    "ocr_used": true,
+    "tableformer_used": true,
+    "page_map": {
+      "71": [
+        "EVB-71",
+        "EVB",
+        "EVB-71\nRevision: October 2013\n2013 LEAF"
+      ],
+      "72": [
+        "EVB-72",
+        "EVB",
+        "EVB-72\nRevision: October 2013\n2013 LEAF"
+      ],
+      "73": [
+        "EVB-73",
+        "EVB",
+        "EVB-73\nRevision: October 2013\n2013 LEAF"
+      ],
+      "74": [
+        "EVB-74",
+        "EVB",
+        "EVB-74\nRevision: October 2013\n2013 LEAF"
+      ],
+      "75": [
+        "EVB-75",
+        "EVB",
+        "EVB-75\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "AACIA0128GB",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        481.73999,
+        142.71564,
+        514.88189,
+        138.10914000000002
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "AACIA0129GB",
+      "page_pdf": 72,
+      "page_manual": "EVB-72",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        481.44,
+        142.71564,
+        514.5819,
+        138.10914000000002
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 73,
+      "page_manual": "EVB-73",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "bbox": [
+        90.56047821044922,
+        714.343620300293,
+        511.1061706542969,
+        560.2229766845703
+      ],
+      "num_rows": 3,
+      "num_cols": 20,
+      "data": [
+        [
+          "Signal Name",
+          "REFRIGERANT PRESSURE SENSOR",
+          "COOLANT TEMPERATURE SENSOR",
+          "ASCDSTEERING  SWITCH",
+          "P POSITION SW NO.2",
+          "BRAKE PEDAL POSITION SWITCH",
+          "CHARGING STATUS INDICATOR 1",
+          "A/C RELAY",
+          "CHARGECONNECTOR LOCK ACTUATOR (+)",
+          "VCM GROUND",
+          "SENSORGROUND (BATTERYCURRENT SENSOR)",
+          "SENSOR GROUND (COOLANT TEMPERATURE",
+          "SENSOR) SENSORGROUND ACCELERATORPEDAL POSITIONSENSOR2)",
+          "SENSORGROUND (REFRIGERANT PRESSURESENSOR)",
+          "ELECTRIC SHIFT SENSOR GND 2",
+          "ASCDSTEERING SWITCH GROUND",
+          "VCMGROUND",
+          "COOLING FAN CONTROL SIGNAL",
+          "IMMEDIATE CHARGING SWITCH",
+          "CHARGECONNECTOR LOCK ACTUATOR (-)"
+        ],
+        [
+          "Color of Wire",
+          "B",
+          ">",
+          "SB",
+          "B",
+          "",
+          "",
+          "SB",
+          "5",
+          "B",
+          "",
+          "W",
+          "B",
+          "BR",
+          "W/L",
+          "",
+          "B/R",
+          ">",
+          "Y",
+          "W"
+        ],
+        [
+          "Terminal No.",
+          "60",
+          "110",
+          "111",
+          "112",
+          "113",
+          "115",
+          "116",
+          "117",
+          "118",
+          "120",
+          "121",
+          "122",
+          "123",
+          "124",
+          "125",
+          "126",
+          "128",
+          "129",
+          "130"
+        ]
+      ],
+      "markdown": "| Signal Name   | REFRIGERANT PRESSURE SENSOR   | COOLANT TEMPERATURE SENSOR   | ASCDSTEERING  SWITCH   | P POSITION SW NO.2   |   BRAKE PEDAL POSITION SWITCH |   CHARGING STATUS INDICATOR 1 | A/C RELAY   |   CHARGECONNECTOR LOCK ACTUATOR (+) | VCM GROUND   |   SENSORGROUND (BATTERYCURRENT SENSOR) | SENSOR GROUND (COOLANT TEMPERATURE   | SENSOR) SENSORGROUND ACCELERATORPEDAL POSITIONSENSOR2)   | SENSORGROUND (REFRIGERANT PRESSURESENSOR)   | ELECTRIC SHIFT SENSOR GND 2   |   ASCDSTEERING SWITCH GROUND | VCMGROUND   | COOLING FAN CONTROL SIGNAL   | IMMEDIATE CHARGING SWITCH   | CHARGECONNECTOR LOCK ACTUATOR (-)   |\n|---------------|-------------------------------|------------------------------|------------------------|----------------------|-------------------------------|-------------------------------|-------------|-------------------------------------|--------------|----------------------------------------|--------------------------------------|----------------------------------------------------------|---------------------------------------------|-------------------------------|------------------------------|-------------|------------------------------|-----------------------------|-------------------------------------|\n| Color of Wire | B                             | >                            | SB                     | B                    |                               |                               | SB          |                                   5 | B            |                                        | W                                    | B                                                        | BR                                          | W/L                           |                              | B/R         | >                            | Y                           | W                                   |\n| Terminal No.  | 60                            | 110                          | 111                    | 112                  |                           113 |                           115 | 116         |                                 117 | 118          |                                    120 | 121                                  | 122                                                      | 123                                         | 124                           |                          125 | 126         | 128                          | 129                         | 130                                 |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "bbox": [
+        90.6400375366211,
+        511.3648681640625,
+        519.1250610351562,
+        356.97845458984375
+      ],
+      "num_rows": 3,
+      "num_cols": 19,
+      "data": [
+        [
+          "Signal Name",
+          "ELECTRIC SHIFT",
+          "SENSOR NO.6 CHARGECONNECTOR LOCK SWITCH INDICATOR (LOCK)",
+          "M/C RELAY",
+          "CHARGING STATUS INDICATOR2",
+          "CHARGING STATUS INDICATOR3",
+          "CHARGECONNECTOR LOCK SWITCH INDICATOR(AUTO)",
+          "CHARGE PORT LID OPENER SWITCH",
+          "CHARGECONNECTOR LOCK SWITCH (LOCK)",
+          "BATTERYCURRENT SENSOR",
+          "SENSORPOWER SUPPLY(BATTERY CURRENT SENSOR)",
+          "SENSORPOWER SUPPLY (ACCELERATORPEDAL POSITION SENSOR 2)",
+          "SENSORPOWER SUPPLY (REFRIGERANT PRESSURE SENSOR)",
+          "P POSITION SW NO.1",
+          "STOPLAMP SWITCH",
+          "PLUG IN INDICATOR LAMP",
+          "CHARGECONNECTOR LOCK RELAY POWERSUPPLY",
+          "BATTERY TEMPERATURE",
+          "SENSOR ACCELERATOR PEDALPOSITION SENSOR2"
+        ],
+        [
+          "Colorof Wire",
+          "G",
+          ">",
+          "SB",
+          "BR",
+          "G",
+          "",
+          "BR",
+          "",
+          "",
+          "R",
+          "W",
+          "",
+          "R",
+          "P",
+          "L",
+          "R",
+          "",
+          "R"
+        ],
+        [
+          "Terminal No.",
+          "8",
+          "",
+          "8",
+          "8",
+          "",
+          "6",
+          "8",
+          "6",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "101",
+          "103",
+          "104",
+          "107",
+          "108"
+        ]
+      ],
+      "markdown": "| Signal Name   | ELECTRIC SHIFT   | SENSOR NO.6 CHARGECONNECTOR LOCK SWITCH INDICATOR (LOCK)   | M/C RELAY   | CHARGING STATUS INDICATOR2   | CHARGING STATUS INDICATOR3   |   CHARGECONNECTOR LOCK SWITCH INDICATOR(AUTO) | CHARGE PORT LID OPENER SWITCH   |   CHARGECONNECTOR LOCK SWITCH (LOCK) |   BATTERYCURRENT SENSOR | SENSORPOWER SUPPLY(BATTERY CURRENT SENSOR)   | SENSORPOWER SUPPLY (ACCELERATORPEDAL POSITION SENSOR 2)   |   SENSORPOWER SUPPLY (REFRIGERANT PRESSURE SENSOR) | P POSITION SW NO.1   | STOPLAMP SWITCH   | PLUG IN INDICATOR LAMP   | CHARGECONNECTOR LOCK RELAY POWERSUPPLY   |   BATTERY TEMPERATURE | SENSOR ACCELERATOR PEDALPOSITION SENSOR2   |\n|---------------|------------------|------------------------------------------------------------|-------------|------------------------------|------------------------------|-----------------------------------------------|---------------------------------|--------------------------------------|-------------------------|----------------------------------------------|-----------------------------------------------------------|----------------------------------------------------|----------------------|-------------------|--------------------------|------------------------------------------|-----------------------|--------------------------------------------|\n| Colorof Wire  | G                | >                                                          | SB          | BR                           | G                            |                                               | BR                              |                                      |                         | R                                            | W                                                         |                                                    | R                    | P                 | L                        | R                                        |                       | R                                          |\n| Terminal No.  | 8                |                                                            | 8           | 8                            |                              |                                             6 | 8                               |                                    6 |                       5 | 6                                            | 7                                                         |                                                  8 | 9                    | 101               | 103                      | 104                                      |                   107 | 108                                        |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 74,
+      "page_manual": "EVB-74",
+      "section_code": "EVB",
+      "bbox": [
+        92.38642120361328,
+        715.8620910644531,
+        520.19580078125,
+        562.4886932373047
+      ],
+      "num_rows": 3,
+      "num_cols": 24,
+      "data": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "O",
+          "",
+          ""
+        ],
+        [
+          "",
+          "GR",
+          "W SB",
+          "SHIELD",
+          "W",
+          "G >",
+          "R",
+          "B BR",
+          "G",
+          "B",
+          "P",
+          "",
+          "L",
+          "BR B",
+          "",
+          "SHIELD",
+          "BR",
+          "R",
+          "> P",
+          "G",
+          "W",
+          "",
+          "",
+          "SB"
+        ],
+        [
+          "8",
+          "6",
+          "2 8",
+          "",
+          "5",
+          "6",
+          "9 8",
+          "",
+          "",
+          "",
+          "8",
+          "8",
+          "8 8",
+          "6",
+          "8 8",
+          "90",
+          "",
+          "6",
+          "5 6",
+          "7",
+          "",
+          "9",
+          "00",
+          ""
+        ]
+      ],
+      "markdown": "|    |    |      |        |    |     |     |      |    |    |    |    |     |      |     |        |    |    |     |    |    |   O |    |    |\n|----|----|------|--------|----|-----|-----|------|----|----|----|----|-----|------|-----|--------|----|----|-----|----|----|-----|----|----|\n|    | GR | W SB | SHIELD | W  | G > | R   | B BR | G  | B  | P  |    | L   | BR B |     | SHIELD | BR | R  | > P | G  | W  |     |    | SB |\n|  8 | 6  | 2 8  |        | 5  | 6   | 9 8 |      |    |    | 8  |  8 | 8 8 | 6    | 8 8 | 90     |    | 6  | 5 6 | 7  |    |   9 | 00 |    |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 74,
+      "page_manual": "EVB-74",
+      "section_code": "EVB",
+      "bbox": [
+        92.61196899414062,
+        542.6743927001953,
+        519.8845825195312,
+        388.9798278808594
+      ],
+      "num_rows": 2,
+      "num_cols": 18,
+      "data": [
+        [
+          "R B",
+          "G",
+          "B W W",
+          "B",
+          "W RWG",
+          "R",
+          "V",
+          "",
+          "B S P",
+          "M G",
+          "P",
+          "G",
+          "R B",
+          "",
+          "B",
+          "",
+          "",
+          ""
+        ],
+        [
+          "2 2",
+          "23",
+          "忆 5 2",
+          "2 28",
+          "3 3 3",
+          "4 5",
+          "",
+          "6 3",
+          "3 3",
+          "",
+          "",
+          "",
+          "",
+          "5 5",
+          "",
+          "5",
+          "65",
+          "65"
+        ]
+      ],
+      "markdown": "| R B   |   G | B W W   | B    | W RWG   | R   | V   |     | B S P   | M G   | P   | G   | R B   |     | B   |    |    |    |\n|-------|-----|---------|------|---------|-----|-----|-----|---------|-------|-----|-----|-------|-----|-----|----|----|----|\n| 2 2   |  23 | 忆 5 2   | 2 28 | 3 3 3   | 4 5 |     | 6 3 | 3 3     |       |     |     |       | 5 5 |     |  5 | 65 | 65 |",
+      "tableformer": true
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_71_raster_1.png",
+      "page_pdf": 71,
+      "page_manual": "EVB-71",
+      "section_code": "EVB",
+      "bbox": [
+        88.01998901367188,
+        58.67999267578125,
+        524.2799072265625,
+        655.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_72_raster_1.png",
+      "page_pdf": 72,
+      "page_manual": "EVB-72",
+      "section_code": "EVB",
+      "bbox": [
+        87.72000122070312,
+        58.67999267578125,
+        523.97998046875,
+        655.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_73_raster_1.png",
+      "page_pdf": 73,
+      "page_manual": "EVB-73",
+      "section_code": "EVB",
+      "bbox": [
+        88.01998901367188,
+        58.67999267578125,
+        524.2799072265625,
+        655.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_74_raster_1.png",
+      "page_pdf": 74,
+      "page_manual": "EVB-74",
+      "section_code": "EVB",
+      "bbox": [
+        87.72000122070312,
+        58.67999267578125,
+        523.97998046875,
+        655.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_75_raster_1.png",
+      "page_pdf": 75,
+      "page_manual": "EVB-75",
+      "section_code": "EVB",
+      "bbox": [
+        88.01998901367188,
+        58.67999267578125,
+        524.2799072265625,
+        655.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

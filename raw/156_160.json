@@ -1,0 +1,2312 @@
+{
+  "schema_version": "1.0",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-156\nRevision: October 2013\n2013 LEAF",
+    "page_start": 156,
+    "page_end": 160,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "156": [
+        "EVB-156",
+        "EVB",
+        "EVB-156\nRevision: October 2013\n2013 LEAF"
+      ],
+      "157": [
+        "EVB-157",
+        "EVB",
+        "EVB-157\nRevision: October 2013\n2013 LEAF"
+      ],
+      "158": [
+        "EVB-158",
+        "EVB",
+        "EVB-158\nRevision: October 2013\n2013 LEAF"
+      ],
+      "159": [
+        "EVB-159",
+        "EVB",
+        "EVB-159\nRevision: October 2013\n2013 LEAF"
+      ],
+      "160": [
+        "EVB-160",
+        "EVB",
+        "EVB-160\n2.CHECK FREEZE FRAME DATA (FFD)\nWith CONSULT\n1.\nCheck “FFD” when DTC is detected.\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "P33DF BAT VOLTAGE ISOLATION SEN",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        180.48,
+        769.00991,
+        430.95590400000015,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "P33DF BAT VOLTAGE ISOLATION SEN",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.10997,
+        321.9890999999998,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        712.00991,
+        115.668192,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        684.24824718,
+        184.12012196580005,
+        674.1015416630055
+      ]
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        611.347685567,
+        243.16289568650018,
+        601.2009800500055
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        598.16399,
+        296.6362560000002,
+        582.2267701104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.660348,
+        573.3562424,
+        136.75914,
+        564.1126548640885
+      ]
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        561.8368508000001,
+        307.5054443999999,
+        552.5932632640886
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        550.3768628000001,
+        274.7656043999999,
+        541.1332752640886
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        538.8574712000002,
+        128.9680812,
+        529.6138836640887
+      ]
+    },
+    {
+      "text": "Is P33DF detected?",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.1409564,
+        524.3376236000001,
+        144.58872240000002,
+        515.0940360640886
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-156, \"Diagnosis Procedure\".",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        509.87586,
+        304.16229999999996,
+        500.6322724640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.83989600000001,
+        498.3564684,
+        197.8110639999999,
+        489.11288086408837
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        481.00991,
+        177.000288,
+        469.1101191491712
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746022",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        475.86688999999996,
+        559.5492259999992,
+        470.30921
+      ]
+    },
+    {
+      "text": "When this DTC is detected, replace Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        456.4159,
+        558.5231171999999,
+        435.6523224640884
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746021",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        706.86689,
+        559.5492259999992,
+        701.30921
+      ]
+    },
+    {
+      "text": "P33E0 BAT VOLTAGE ISOLATION SEN",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        181.5,
+        769.00991,
+        430.5141695999998,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "P33E0 BAT VOLTAGE ISOLATION SEN",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        736.10997,
+        320.6999999999996,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        712.00991,
+        115.97786880000004,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        684.24824718,
+        184.37932433020006,
+        674.1015416630055
+      ]
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        611.347685567,
+        243.41189864199998,
+        601.2009800500055
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.44,
+        598.16399,
+        296.998896,
+        582.2267701104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        573.3562424,
+        138.10126079999998,
+        564.1126548640885
+      ]
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        561.8368508000001,
+        308.8233444000003,
+        552.5932632640886
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        550.3768628000001,
+        276.0449807999998,
+        541.1332752640886
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        538.8574712000002,
+        130.29944880000005,
+        529.6138836640887
+      ]
+    },
+    {
+      "text": "Is P33E0 detected?",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.460944399999995,
+        524.3376236000001,
+        144.85009440000007,
+        515.0940360640886
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-157, \"Diagnosis Procedure\".",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        509.87586,
+        305.48231,
+        500.6322724640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.100293600000015,
+        498.3564684,
+        199.08398959999994,
+        489.11288086408837
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        481.00991,
+        177.41721599999997,
+        469.1101191491712
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746024",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        475.86688999999996,
+        559.8580799999991,
+        470.30921
+      ]
+    },
+    {
+      "text": "When this DTC is detected, replace Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        456.4159,
+        559.9705995999997,
+        435.6523224640884
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746023",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        706.86689,
+        559.8580799999991,
+        701.30921
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "P33E1 BAT VOLTAGE ISOLATION SEN",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        181.2,
+        769.00991,
+        430.23379199999965,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "P33E1 BAT VOLTAGE ISOLATION SEN",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.10997,
+        320.2619999999999,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        712.00991,
+        115.668192,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        684.24824718,
+        184.12012196580005,
+        674.1015416630055
+      ]
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        611.347685567,
+        243.16289568650018,
+        601.2009800500055
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        598.16399,
+        296.6362560000002,
+        582.2267701104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.660348,
+        573.3562424,
+        136.75914,
+        564.1126548640885
+      ]
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        561.8368508000001,
+        307.5054443999999,
+        552.5932632640886
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        550.3768628000001,
+        274.7656043999999,
+        541.1332752640886
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        538.8574712000002,
+        128.9680812,
+        529.6138836640887
+      ]
+    },
+    {
+      "text": "Is P33E1 detected?",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.1409564,
+        524.3376236000001,
+        143.4718512000001,
+        515.0940360640886
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-158, \"Diagnosis Procedure\".",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        509.87586,
+        304.16229999999996,
+        500.6322724640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.83989600000001,
+        498.3564684,
+        197.8110639999999,
+        489.11288086408837
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        481.00991,
+        177.000288,
+        469.1101191491712
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746026",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        475.86688999999996,
+        559.5492259999992,
+        470.30921
+      ]
+    },
+    {
+      "text": "When this DTC is detected, perform Li-ion battery insulation resistance loss check. Refer to EVB-176, \"Component Inspection\".",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        456.4159,
+        558.5353320000003,
+        435.6523224640884
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746025",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        706.86689,
+        559.5492259999992,
+        701.30921
+      ]
+    },
+    {
+      "text": "P33E2 BATT PACK OVER TEMP",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        203.51999,
+        769.00991,
+        408.4160156000001,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "P33E2 BATT PACK OVER TEMP",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        736.10997,
+        275.3783999999998,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        712.00991,
+        115.97786880000004,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        684.24824718,
+        184.37932433020006,
+        674.1015416630055
+      ]
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        613.3278606949,
+        243.41189864199998,
+        603.1811551779055
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        600.20397,
+        296.998896,
+        584.2667501104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        575.3354616,
+        138.10126079999998,
+        566.0918740640885
+      ]
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        563.8754736000001,
+        308.8233444000003,
+        554.6318860640886
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        552.3560820000001,
+        276.0449807999998,
+        543.1124944640886
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        540.8366904000002,
+        130.29944880000005,
+        531.5931028640887
+      ]
+    },
+    {
+      "text": "Is P33E2 detected?",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.460944399999995,
+        526.3762464000001,
+        144.85009440000007,
+        517.1326588640886
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-159, \"Diagnosis Procedure\".",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        511.85591,
+        305.48231,
+        502.6123224640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.100293600000015,
+        500.33537,
+        199.08398959999994,
+        491.0917824640884
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        482.98992,
+        177.41721599999997,
+        471.0901291491712
+      ]
+    },
+    {
+      "text": "1.PERFORM THE SELF-DIAGNOSIS OF LI-ION BATTERY CONTROLLER",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        461.60398999999995,
+        410.1622319999997,
+        445.6667701104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        436.7962424,
+        138.10126079999998,
+        427.55265486408837
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        425.2768508,
+        276.0449807999998,
+        416.03326326408836
+      ]
+    },
+    {
+      "text": "Check to see if 'P33EB' is detected simultaneously with 'P33E2'.",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        413.81686279999997,
+        376.1744987999994,
+        404.57327526408835
+      ]
+    },
+    {
+      "text": "Is P33EB detected?",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46094439999999,
+        399.2970152,
+        146.07000840000012,
+        390.05342766408836
+      ]
+    },
+    {
+      "text": "YES >> Perform diagnosis on the detected 'P33EB'. Refer to EVB-167, \"Diagnosis Procedure\".",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        384.77592,
+        513.20222,
+        375.53233246408837
+      ]
+    },
+    {
+      "text": "NO >> GO TO 2.",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.09980399999995,
+        373.315932,
+        155.29918399999997,
+        364.07234446408836
+      ]
+    },
+    {
+      "text": "2.CHECK BATTERY TEMPERATURE SENSOR",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        362.18397999999996,
+        282.6438959999999,
+        346.24676011049723
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        337.3762324,
+        138.10126079999998,
+        328.1326448640884
+      ]
+    },
+    {
+      "text": "Using FREEZE FRAME DATA (FFD), check the values of three temperature sensors when DTC is detected.",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.460944399999995,
+        325.8568408,
+        553.3810752000011,
+        316.61325326408837
+      ]
+    },
+    {
+      "text": "Is there temperature increase?",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46094440000002,
+        234.4765648,
+        196.0400244,
+        225.2329772640884
+      ]
+    },
+    {
+      "text": "Temperature increase is seen>>Replace  Li-ion  battery.  Refer  to  EVB-214,  \"LI-ION  BATTERY  CONTROLLER : Removal and Installation\".",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        219.95602000000008,
+        559.9684059999996,
+        199.1923324640884
+      ]
+    },
+    {
+      "text": "Temperature increase is not seen>>Replace  battery  temperature  sensors.  Refer  to  EVB-203,  \"BATTERY PACK UPPER CASE : Exploded View\".",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.09960240000001,
+        196.97593200000006,
+        559.7962603999998,
+        176.21243246408835
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746027",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        706.86689,
+        559.8580799999991,
+        701.30921
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746028",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        477.84689999999995,
+        559.8580799999991,
+        472.28922
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "P33E6 CELL CONTROLLER",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        217.5,
+        769.00991,
+        394.0048320000002,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "P33E6 CELL CONTROLLER",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.10997,
+        245.51129999999986,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        712.00991,
+        115.668192,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        684.24824718,
+        184.12012196580005,
+        674.1015416630055
+      ]
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        600.848024405,
+        243.16289568650018,
+        590.7013188880055
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        587.72399,
+        296.6362560000002,
+        571.7867701104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.660348,
+        562.8554816,
+        136.75914,
+        553.6118940640885
+      ]
+    },
+    {
+      "text": "Turn power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        551.3954936,
+        330.4216619999998,
+        542.1519060640885
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        539.8749536,
+        274.7656043999999,
+        530.6313660640885
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        528.3544136,
+        128.9680812,
+        519.1108260640885
+      ]
+    },
+    {
+      "text": "Is P33E6 detected?",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.1409564,
+        513.8939696000001,
+        143.4718512000001,
+        504.6503820640885
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-160, \"Diagnosis Procedure\".",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        499.37586,
+        304.16229999999996,
+        490.1322724640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.83989600000001,
+        487.8564684,
+        197.8110639999999,
+        478.61288086408837
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        470.50991,
+        177.000288,
+        458.6101191491712
+      ]
+    },
+    {
+      "text": "DANGER:",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        442.9159,
+        100.97268239999997,
+        433.6723124640884
+      ]
+    },
+    {
+      "text": "Since hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14010439999987,
+        420.5963284,
+        558.5875319999999,
+        376.85396966408837
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14010439999987,
+        371.5777096,
+        106.19007239999988,
+        362.3341220640884
+      ]
+    },
+    {
+      "text": "Be sure to remove the service plug in order to disconnect the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999987,
+        360.1177216,
+        558.528024,
+        339.35474246408836
+      ]
+    },
+    {
+      "text": "The removed service plug must always be carried in a pocket of the responsible worker or placed in the tool box during the procedure to prevent the plug from being connected by mistake.",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        337.07779,
+        558.6052799999992,
+        316.37421446408837
+      ]
+    },
+    {
+      "text": "Be sure to wear insulating protective equipment consisting of glove, shoes, face shield and glasses before beginning work on the high voltage system.",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        314.0984104,
+        558.5504699999996,
+        293.33543126408836
+      ]
+    },
+    {
+      "text": "Never allow workers other than the responsible person to touch the vehicle containing high voltage parts. To keep others from touching the high voltage parts, these parts must be covered with an insulating sheet except when using them.",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        291.11903079999996,
+        558.5803284000008,
+        258.83551166408836
+      ]
+    },
+    {
+      "text": "Refer to EVB-6, \"High Voltage Precautions\".",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        256.6191111999999,
+        278.30231,
+        247.37242246408846
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139545999999996,
+        245.0966184,
+        103.316426,
+        235.8530308640884
+      ]
+    },
+    {
+      "text": "Never  bring  the  vehicle  into  the  READY  status  with  the  service  plug  removed  unless  otherwise instructed in the Service Manual. A malfunction may occur if this is not observed.",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.13954599999997,
+        233.57722680000006,
+        558.5975179999997,
+        212.87365126408838
+      ]
+    },
+    {
+      "text": "1.CHECK SELF-DIAGNOSIS RESULTS OF LI-ION BATTERY CONTROLLER",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        210.98400000000004,
+        420.81901199999976,
+        195.04678011049725
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.65919960000002,
+        184.67592000000002,
+        136.75799160000003,
+        175.4323324640884
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13980800000002,
+        173.15652840000007,
+        274.76445599999994,
+        163.91294086408834
+      ]
+    },
+    {
+      "text": "Check to see if 'P0A1F', 'P3062' or 'P33ED' is detected simultaneously with 'P33E6'.",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13980800000002,
+        161.6965404,
+        472.7016360000004,
+        152.4529528640884
+      ]
+    },
+    {
+      "text": "Is P0A1F, P3062 or P33ED detected?",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808000000016,
+        147.17669279999996,
+        227.17580400000023,
+        137.93310526408845
+      ]
+    },
+    {
+      "text": "YES-1 >>  When 'P0A1F' or 'P3062' are detected simultaneously, Replace Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        132.65592000000004,
+        558.4229663999996,
+        111.95234246408836
+      ]
+    },
+    {
+      "text": "YES-2 >> When 'P33ED' is detected simultaneously, perform the diagnosis procedure of 'P33ED'. Refer to EVB-169, \"Diagnosis Procedure\".",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.83956159999997,
+        109.67653840000003,
+        558.5336096000001,
+        88.91233246408842
+      ]
+    },
+    {
+      "text": "NO >> GO TO 2.",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.83962800000003,
+        86.69593199999997,
+        154.05372839999995,
+        77.45234446408836
+      ]
+    },
+    {
+      "text": "2.CHECK FREEZE FRAME DATA (FFD)",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        75.56399999999996,
+        246.96064799999982,
+        59.62678011049729
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.660348,
+        49.25592000000006,
+        136.75914,
+        40.012332464088445
+      ]
+    },
+    {
+      "text": "1. Check 'FFD' when DTC is detected.",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "footnote",
+      "bbox": [
+        52.1409564,
+        37.7365284,
+        240.68422440000023,
+        28.492940864088382
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746032",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        706.86689,
+        559.5492259999992,
+        701.30921
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746033",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        465.36688999999996,
+        559.5492259999992,
+        459.80921
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "bbox": [
+        54.91876983642578,
+        661.4278564453125,
+        555.3179931640625,
+        618.5639953613281
+      ],
+      "num_rows": 2,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P33DF",
+          "BAT VOLTAGE ISOLA- TION SEN",
+          "Signal voltage of the on-board isolation resistance moni- toring system is too high.",
+          "Li-ion battery controller"
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name      | DTC detecting condition                                                              | Possible causes           |\n|-------|-----------------------------|--------------------------------------------------------------------------------------|---------------------------|\n| P33DF | BAT VOLTAGE ISOLA- TION SEN | Signal voltage of the on-board isolation resistance moni- toring system is too high. | Li-ion battery controller |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "bbox": [
+        54.57682418823242,
+        661.3766784667969,
+        556.999267578125,
+        618.7146606445312
+      ],
+      "num_rows": 2,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P33E0",
+          "BATTERY VOLTAGE ISO- LATION SENSOR",
+          "Signal Voltage of the on-board isolation resistance mon- itoring system is too low.",
+          "Li-ion battery controller"
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name             | DTC detecting condition                                                             | Possible causes           |\n|-------|------------------------------------|-------------------------------------------------------------------------------------|---------------------------|\n| P33E0 | BATTERY VOLTAGE ISO- LATION SENSOR | Signal Voltage of the on-board isolation resistance mon- itoring system is too low. | Li-ion battery controller |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "bbox": [
+        54.44794845581055,
+        661.4048614501953,
+        556.06787109375,
+        618.5945281982422
+      ],
+      "num_rows": 2,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P33E1",
+          "BATTERY VOLTAGE ISO- LATION SENSOR",
+          "Signal voltage of the on-board isolation resistance moni- toring system exhibits no amplitude variation.",
+          "Li-ion battery controller"
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name             | DTC detecting condition                                                                                  | Possible causes           |\n|-------|------------------------------------|----------------------------------------------------------------------------------------------------------|---------------------------|\n| P33E1 | BATTERY VOLTAGE ISO- LATION SENSOR | Signal voltage of the on-board isolation resistance moni- toring system exhibits no amplitude variation. | Li-ion battery controller |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "bbox": [
+        51.101287841796875,
+        661.0632781982422,
+        561.6309204101562,
+        618.4697875976562
+      ],
+      "num_rows": 2,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P33E2",
+          "BATTERY PACK OVER TEMPERATURE",
+          "When the battery (battery pack) temperature is excessively high.",
+          "Overcharge caused by traction motor inverter/VCM malfunction"
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name        | DTC detecting condition                                          | Possible causes                                              |\n|-------|-------------------------------|------------------------------------------------------------------|--------------------------------------------------------------|\n| P33E2 | BATTERY PACK OVER TEMPERATURE | When the battery (battery pack) temperature is excessively high. | Overcharge caused by traction motor inverter/VCM malfunction |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "bbox": [
+        52.19938659667969,
+        301.15179443359375,
+        412.0035400390625,
+        237.58209228515625
+      ],
+      "num_rows": 4,
+      "num_cols": 3,
+      "data": [
+        [
+          "Monitor item",
+          "Condition",
+          "Limit"
+        ],
+        [
+          "Battery temperature sensor 1",
+          "Power switch ON",
+          "55 ° C (131 ° F) or less"
+        ],
+        [
+          "Battery temperature sensor 2",
+          "Power switch ON",
+          "55 ° C (131 ° F) or less"
+        ],
+        [
+          "Battery temperature sensor 4",
+          "Power switch ON",
+          "55 ° C (131 ° F) or less"
+        ]
+      ],
+      "markdown": "| Monitor item                 | Condition       | Limit                    |\n|------------------------------|-----------------|--------------------------|\n| Battery temperature sensor 1 | Power switch ON | 55 ° C (131 ° F) or less |\n| Battery temperature sensor 2 | Power switch ON | 55 ° C (131 ° F) or less |\n| Battery temperature sensor 4 | Power switch ON | 55 ° C (131 ° F) or less |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "bbox": [
+        54.5096321105957,
+        661.4511871337891,
+        555.3558959960938,
+        608.3170318603516
+      ],
+      "num_rows": 2,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P33E6",
+          "CELL CONTROLLER",
+          "With the power switch ON and no load condition, the dif- ference between the maximum voltage and minimum volt- age exceeds the allowable range.",
+          "• Li-ion battery controller • Module"
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name   | DTC detecting condition                                                                                                                         | Possible causes                      |\n|-------|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|\n| P33E6 | CELL CONTROLLER          | With the power switch ON and no load condition, the dif- ference between the maximum voltage and minimum volt- age exceeds the allowable range. | • Li-ion battery controller • Module |",
+      "tableformer": true
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_156_raster_1.png",
+      "page_pdf": 156,
+      "page_manual": "EVB-156",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        217.5600128173828,
+        63.65999984741211,
+        229.1400146484375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_157_raster_1.png",
+      "page_pdf": 157,
+      "page_manual": "EVB-157",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        217.5600128173828,
+        64.97999572753906,
+        229.1400146484375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_158_raster_1.png",
+      "page_pdf": 158,
+      "page_manual": "EVB-158",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        217.5600128173828,
+        63.65999984741211,
+        229.1400146484375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_159_raster_1.png",
+      "page_pdf": 159,
+      "page_manual": "EVB-159",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        215.57997131347656,
+        64.97999572753906,
+        227.15997314453125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_160_raster_1.jpeg",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        361.0799560546875,
+        79.0399169921875,
+        379.9199523925781
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_160_raster_2.png",
+      "page_pdf": 160,
+      "page_manual": "EVB-160",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        228.0600128173828,
+        63.65999984741211,
+        239.6400146484375
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

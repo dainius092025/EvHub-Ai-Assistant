@@ -1,0 +1,2988 @@
+{
+  "schema_version": "1.0",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-131\nJSCIA0338ZZ\nRevision: October 2013\n2013 LEAF",
+    "page_start": 131,
+    "page_end": 135,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "131": [
+        "EVB-131",
+        "EVB",
+        "EVB-131\nJSCIA0338ZZ\nRevision: October 2013\n2013 LEAF"
+      ],
+      "132": [
+        "EVB-132",
+        "EVB",
+        "EVB-132\n1.CHECK SELF-DIAGNOSIS RESULTS\nWith CONSULT\nRevision: October 2013\n2013 LEAF"
+      ],
+      "133": [
+        "EVB-133",
+        "EVB",
+        "EVB-133\nRevision: October 2013\n2013 LEAF"
+      ],
+      "134": [
+        "EVB-134",
+        "EVB",
+        "EVB-134\nJSCIA0338ZZ\nRevision: October 2013\n2013 LEAF"
+      ],
+      "135": [
+        "EVB-135",
+        "EVB",
+        "EVB-135\n1.CHECK SELF-DIAGNOSIS RESULTS\nWith CONSULT\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "P331A-P3325 CELL OVER VOLTAGE",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        188.94,
+        769.00991,
+        422.9770367999999,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        515.09593,
+        198.38673280000006,
+        505.8523424640884
+      ]
+    },
+    {
+      "text": "YES >> GO TO 4.",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        500.57591,
+        155.30461,
+        491.3323224640884
+      ]
+    },
+    {
+      "text": "NO >> Repair harness or connector.",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        489.115922,
+        244.3076979999998,
+        479.8723344640884
+      ]
+    },
+    {
+      "text": "4.CHECK MODULE VOLTAGE",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        478.044,
+        202.51814879999998,
+        462.10678011049725
+      ]
+    },
+    {
+      "text": "Check voltage of corresponding module. Refer to EVB-131, \"Component Inspection\".",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.459796,
+        454.736376,
+        446.48231,
+        445.4923224640884
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46015799999998,
+        440.275466,
+        198.38688080000006,
+        431.0318784640884
+      ]
+    },
+    {
+      "text": "YES >> Replace Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        425.7559,
+        559.8307024,
+        404.9923224640884
+      ]
+    },
+    {
+      "text": "NO >> Replace corresponding module. Refer to EVB-246, \"FRONT MODULE STACK : Disassembly and Assembly\".",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.099628000000024,
+        402.775922,
+        559.7984784,
+        382.0123124640884
+      ]
+    },
+    {
+      "text": "Component Inspection",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        373.9099,
+        187.04979840000016,
+        362.0101091491712
+      ]
+    },
+    {
+      "text": "1.CHECK MODULE VOLTAGE",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        352.52401,
+        202.51814879999998,
+        336.58679011049725
+      ]
+    },
+    {
+      "text": "Check voltage of module.",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.459796,
+        329.2759984,
+        171.41196,
+        320.0324108640884
+      ]
+    },
+    {
+      "text": ": Positive terminal (Red)",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        106.44,
+        304.79594000000003,
+        226.27877640000003,
+        295.5523524640884
+      ]
+    },
+    {
+      "text": ": Negative terminal (Black)",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        106.44,
+        288.35596760000004,
+        237.8646708000001,
+        279.1123800640885
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459796,
+        192.05566599999997,
+        198.38651880000006,
+        182.81207846408836
+      ]
+    },
+    {
+      "text": "YES >> INSPECTION END",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        177.53602,
+        199.11502599999997,
+        168.2924324640884
+      ]
+    },
+    {
+      "text": "NO >> Replace module. Refer to EVB-246, \"FRONT MODULE STACK : Disassembly and Assembly\".",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        166.01662839999995,
+        369.60763840000044,
+        145.3123324640884
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745994",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        368.76687999999996,
+        559.8580799999991,
+        363.2092
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "P3326-P3331 CELL OVER VOLTAGE",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        189.78,
+        769.00991,
+        421.65319680000033,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "P3326-P3331 CELL OVER VOLTAGE",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.10997,
+        304.97400000000005,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        712.00991,
+        115.668192,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        684.24824718,
+        184.12012196580005,
+        674.1015416630055
+      ]
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        453.4884544190999,
+        243.16289568650018,
+        443.34174890210545
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        440.364,
+        296.6362560000002,
+        424.42678011049725
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.660348,
+        415.5562524,
+        136.75914,
+        406.3126648640884
+      ]
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        404.0368608,
+        307.5054443999999,
+        394.7932732640884
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        392.5768728,
+        274.7656043999999,
+        383.3332852640884
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        381.0563328,
+        128.9680812,
+        371.8127452640884
+      ]
+    },
+    {
+      "text": "Is any DTC detected?",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.1409564,
+        366.5364852,
+        153.27741240000003,
+        357.2928976640884
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-132, \"Diagnosis Procedure\".",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        352.07591,
+        304.16229999999996,
+        342.8323224640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.83989600000001,
+        340.5565184,
+        197.8110639999999,
+        331.3129308640884
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        323.20992,
+        177.000288,
+        311.31012914917125
+      ]
+    },
+    {
+      "text": "DANGER:",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        295.55601,
+        100.97268239999997,
+        286.3124224640884
+      ]
+    },
+    {
+      "text": "Since hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14010439999987,
+        273.295842,
+        558.5875319999999,
+        229.5534832640883
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14010439999987,
+        224.27722319999998,
+        106.19007239999988,
+        215.03363566408837
+      ]
+    },
+    {
+      "text": "Be sure to remove the service plug in order to disconnect the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999987,
+        212.75783159999992,
+        558.528024,
+        192.05425606408835
+      ]
+    },
+    {
+      "text": "The removed service plug must always be carried in a pocket of the responsible worker or placed in the tool box during the procedure to prevent the plug from being connected by mistake.",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        189.77845200000002,
+        558.6052799999992,
+        169.01547286408834
+      ]
+    },
+    {
+      "text": "Be sure to wear insulating protective equipment consisting of glove, shoes, face shield and glasses before beginning work on the high voltage system.",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        166.7990723999999,
+        558.5504699999996,
+        146.03609326408832
+      ]
+    },
+    {
+      "text": "Never allow workers other than the responsible person to touch the vehicle containing high voltage parts. To keep others from touching the high voltage parts, these parts must be covered with an insulating sheet except when using them.",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        143.7602892,
+        558.5803284000008,
+        111.53732206408836
+      ]
+    },
+    {
+      "text": "Refer to EVB-6, \"High Voltage Precautions\".",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        109.26151799999991,
+        278.30231,
+        100.01232246408836
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139545999999996,
+        97.79592200000002,
+        103.316426,
+        88.5523344640884
+      ]
+    },
+    {
+      "text": "Never  bring  the  vehicle  into  the  READY  status  with  the  service  plug  removed  unless  otherwise instructed in the Service Manual. A malfunction may occur if this is not observed.",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.13954599999997,
+        86.27653039999996,
+        558.5975179999997,
+        65.51240286408836
+      ]
+    },
+    {
+      "text": "1.CHECK SELF-DIAGNOSIS RESULTS",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        63.683989999999994,
+        244.91232000000014,
+        47.74677011049721
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745995",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        706.86689,
+        559.5492259999992,
+        701.30921
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745996",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        318.0669,
+        559.5492259999992,
+        312.50922
+      ]
+    },
+    {
+      "text": "P3326-P3331 CELL OVER VOLTAGE",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        190.08,
+        769.00991,
+        422.06380800000034,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Perform 'All DTC Reading' with CONSULT.",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        735.83589,
+        273.7956879999999,
+        726.5923024640884
+      ]
+    },
+    {
+      "text": "Check 'Self Diagnostic Result' of systems other than 'HV BAT' if any DTC is detected.",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        724.3164984,
+        476.786767599999,
+        715.0729108640885
+      ]
+    },
+    {
+      "text": "Is any DTC detected?",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001000000001,
+        709.8560544,
+        154.7075476000001,
+        700.6124668640884
+      ]
+    },
+    {
+      "text": "YES >> After performing trouble diagnosis of detected DTC, GO TO 2.",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        695.33589,
+        397.1158899999996,
+        686.0923024640884
+      ]
+    },
+    {
+      "text": "NO >> GO TO 2.",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        683.8164984,
+        155.29939000000002,
+        674.5729108640885
+      ]
+    },
+    {
+      "text": "2.PRECONDITIONING",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        672.74407,
+        166.27965600000005,
+        656.8068501104972
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459796,
+        646.4956023999999,
+        107.58910799999994,
+        637.2520148640884
+      ]
+    },
+    {
+      "text": "Disconnect high voltage. Refer to GI-33, \"How to Disconnect High Voltage\".",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459796,
+        634.9762108,
+        427.28231999999997,
+        625.7323124640884
+      ]
+    },
+    {
+      "text": "Remove Li-ion battery. Refer to EVB-194, \"Removal and Installation\".",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46037200000001,
+        623.515912,
+        393.3823,
+        614.2722924640884
+      ]
+    },
+    {
+      "text": "Remove battery pack upper case. Refer to EVB-204, \"BATTERY PACK UPPER CASE : Removal and Installation\".",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46007600000007,
+        611.9953399999999,
+        559.857496,
+        591.2323124640884
+      ]
+    },
+    {
+      "text": ">> GO TO 3.",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.040262,
+        571.4956083999999,
+        155.30129919999996,
+        562.2520208640884
+      ]
+    },
+    {
+      "text": "3.CHECK HARNESS BETWEEN MODULE AND LI-ION BATTERY CONTROLLER",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        560.424,
+        443.31236400000074,
+        544.4867801104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.97929199999999,
+        535.5554916,
+        138.10021679999997,
+        526.3119040640885
+      ]
+    },
+    {
+      "text": "Power switch OFF.",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45990039999999,
+        524.0955036,
+        160.45987800000006,
+        514.8519160640885
+      ]
+    },
+    {
+      "text": "Identify the malfunctioning module based on detected DTC.",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45990039999999,
+        512.5749636,
+        348.47540400000025,
+        503.3313760640885
+      ]
+    },
+    {
+      "text": "Disconnect module harness connector and Li-ion battery controller harness connector.",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45990039999999,
+        501.0544236000001,
+        472.283363999999,
+        491.8108360640885
+      ]
+    },
+    {
+      "text": "Refer to below table and check the continuity between corresponding module and Li-ion battery controller.",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45990040000001,
+        489.5944356000001,
+        559.7616899999991,
+        480.3508480640885
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "P3326-P3331 CELL OVER VOLTAGE",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        189.78,
+        769.00991,
+        421.65319680000033,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        515.09593,
+        196.92755759999997,
+        505.8523424640884
+      ]
+    },
+    {
+      "text": "YES >> GO TO 4.",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        500.57591,
+        154.07320559999994,
+        491.3323224640884
+      ]
+    },
+    {
+      "text": "NO >> Repair harness or connector.",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        489.115922,
+        243.10406399999982,
+        479.8723344640884
+      ]
+    },
+    {
+      "text": "4.CHECK MODULE VOLTAGE",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        478.044,
+        202.2428916000001,
+        462.10678011049725
+      ]
+    },
+    {
+      "text": "Check voltage of corresponding module. Refer to EVB-134, \"Component Inspection\".",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        454.736376,
+        445.16229999999996,
+        445.4923224640884
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.140147999999954,
+        440.275466,
+        196.9277055999999,
+        431.0318784640884
+      ]
+    },
+    {
+      "text": "YES >> Replace Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        425.7559,
+        558.4801775999994,
+        404.9923224640884
+      ]
+    },
+    {
+      "text": "NO >> Replace corresponding module. Refer to EVB-246, \"FRONT MODULE STACK : Disassembly and Assembly\".",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.839618,
+        402.775922,
+        558.5112199999998,
+        382.0123124640884
+      ]
+    },
+    {
+      "text": "Component Inspection",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        373.9099,
+        186.7847424,
+        362.0101091491712
+      ]
+    },
+    {
+      "text": "1.CHECK MODULE VOLTAGE",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        352.52401,
+        202.2428916000001,
+        336.58679011049725
+      ]
+    },
+    {
+      "text": "Check voltage of module.",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        329.2759984,
+        170.16818400000014,
+        320.0324108640884
+      ]
+    },
+    {
+      "text": ": Positive terminal (Red)",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        105.18001,
+        304.79594000000003,
+        225.01586319999993,
+        295.5523524640884
+      ]
+    },
+    {
+      "text": ": Negative terminal (Black)",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        105.18001,
+        288.35596760000004,
+        236.60426319999996,
+        279.1123800640885
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        192.05566599999997,
+        196.95972960000017,
+        182.81207846408836
+      ]
+    },
+    {
+      "text": "YES >> INSPECTION END",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        177.53602,
+        197.83236120000007,
+        168.2924324640884
+      ]
+    },
+    {
+      "text": "NO >> Replace module. Refer to EVB-246, \"FRONT MODULE STACK : Disassembly and Assembly\".",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        166.01662839999995,
+        368.3098356000002,
+        145.3123324640884
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745997",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        368.76687999999996,
+        559.5492259999992,
+        363.2092
+      ]
+    },
+    {
+      "text": "P3375-P3380 CELL OVER DISCHARGE",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        182.22,
+        769.00991,
+        429.72122879999995,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "P3375-P3380 CELL OVER DISCHARGE",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        736.10997,
+        325.83045000000016,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        712.00991,
+        115.97786880000004,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        684.24824718,
+        184.37932433020006,
+        674.1015416630055
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        453.4884544190999,
+        243.41189864199998,
+        443.34174890210545
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        440.364,
+        296.998896,
+        424.42678011049725
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        415.5562524,
+        138.10126079999998,
+        406.3126648640884
+      ]
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        404.0368608,
+        308.8233444000003,
+        394.7932732640884
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        392.5768728,
+        276.0449807999998,
+        383.3332852640884
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        381.0563328,
+        130.29944880000005,
+        371.8127452640884
+      ]
+    },
+    {
+      "text": "Is any DTC detected?",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.460944399999995,
+        366.5364852,
+        154.7084820000001,
+        357.2928976640884
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-135, \"Diagnosis Procedure\".",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        352.07591,
+        305.48231,
+        342.8323224640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.100293600000015,
+        340.5565184,
+        199.08398959999994,
+        331.3129308640884
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        323.20992,
+        177.41721599999997,
+        311.31012914917125
+      ]
+    },
+    {
+      "text": "DANGER:",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        295.55601,
+        102.29269239999996,
+        286.3124224640884
+      ]
+    },
+    {
+      "text": "Since hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.460009999999954,
+        273.295842,
+        559.8981459999999,
+        229.5534832640883
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.460009999999954,
+        224.27722319999998,
+        107.5893219999999,
+        215.03363566408837
+      ]
+    },
+    {
+      "text": "Be sure to remove the service plug in order to disconnect the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460009999999954,
+        212.75783159999992,
+        559.858474,
+        192.05425606408835
+      ]
+    },
+    {
+      "text": "The removed service plug must always be carried in a pocket of the responsible worker or placed in the tool box during the procedure to prevent the plug from being connected by mistake.",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460949599999935,
+        189.77845200000002,
+        559.8771615999998,
+        169.01547286408834
+      ]
+    },
+    {
+      "text": "Be sure to wear insulating protective equipment consisting of glove, shoes, face shield and glasses before beginning work on the high voltage system.",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46084519999991,
+        166.7990723999999,
+        559.8288243999995,
+        146.03609326408832
+      ]
+    },
+    {
+      "text": "Never allow workers other than the responsible person to touch the vehicle containing high voltage parts. To keep others from touching the high voltage parts, these parts must be covered with an insulating sheet except when using them.",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460845199999824,
+        143.7602892,
+        559.8678699999996,
+        111.53732206408836
+      ]
+    },
+    {
+      "text": "Refer to EVB-6, \"High Voltage Precautions\".",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460845199999795,
+        109.26151799999991,
+        279.62232,
+        100.01232246408836
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.45955600000002,
+        97.79592200000002,
+        104.63643600000003,
+        88.5523344640884
+      ]
+    },
+    {
+      "text": "Never  bring  the  vehicle  into  the  READY  status  with  the  service  plug  removed  unless  otherwise instructed in the Service Manual. A malfunction may occur if this is not observed.",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.45955600000002,
+        86.27653039999996,
+        559.9300560000007,
+        65.51240286408836
+      ]
+    },
+    {
+      "text": "1.CHECK SELF-DIAGNOSIS RESULTS",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.44,
+        63.683989999999994,
+        245.21232000000015,
+        47.74677011049721
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746000",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        706.86689,
+        559.8580799999991,
+        701.30921
+      ]
+    },
+    {
+      "text": "INFOID:0000000008746001",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        318.0669,
+        559.8580799999991,
+        312.50922
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "bbox": [
+        51.83259963989258,
+        736.8585891723633,
+        586.0164794921875,
+        516.9989013671875
+      ],
+      "num_rows": 13,
+      "num_cols": 8,
+      "data": [
+        [
+          "DTC",
+          "Module No.",
+          "Module",
+          "Module",
+          "Li-ion battery controller",
+          "Li-ion battery controller",
+          "Continuity",
+          ""
+        ],
+        [
+          "DTC",
+          "Module No.",
+          "Connector",
+          "Terminal",
+          "Connector",
+          "Terminal",
+          "Continuity",
+          ""
+        ],
+        [
+          "P3322",
+          "33",
+          "LB8",
+          "1",
+          "LB15",
+          "97",
+          "Existed",
+          "B"
+        ],
+        [
+          "P3322",
+          "33",
+          "LB8",
+          "2",
+          "LB15",
+          "118",
+          "Existed",
+          "B"
+        ],
+        [
+          "P3323",
+          "34",
+          "LB8",
+          "20",
+          "LB15",
+          "99",
+          "Existed",
+          "EVB"
+        ],
+        [
+          "P3323",
+          "34",
+          "LB8",
+          "6",
+          "LB15",
+          "119",
+          "Existed",
+          "EVB"
+        ],
+        [
+          "P3323",
+          "34",
+          "LB8",
+          "8",
+          "LB15",
+          "100",
+          "Existed",
+          "EVB"
+        ],
+        [
+          "P3324",
+          "35",
+          "LB8",
+          "8",
+          "LB15",
+          "100",
+          "Existed",
+          "D"
+        ],
+        [
+          "P3324",
+          "35",
+          "LB8",
+          "22",
+          "LB15",
+          "120",
+          "Existed",
+          "D"
+        ],
+        [
+          "P3324",
+          "35",
+          "LB8",
+          "5",
+          "LB15",
+          "101",
+          "Existed",
+          "D"
+        ],
+        [
+          "P3325",
+          "36",
+          "LB8",
+          "5",
+          "LB15",
+          "101",
+          "Existed",
+          "E"
+        ],
+        [
+          "P3325",
+          "36",
+          "LB8",
+          "7",
+          "LB15",
+          "121",
+          "Existed",
+          "E"
+        ],
+        [
+          "P3325",
+          "36",
+          "LB8",
+          "24",
+          "LB15",
+          "102",
+          "Existed",
+          "E"
+        ]
+      ],
+      "markdown": "| DTC   | Module No.   | Module    | Module   | Li-ion battery controller   | Li-ion battery controller   | Continuity   |     |\n|-------|--------------|-----------|----------|-----------------------------|-----------------------------|--------------|-----|\n| DTC   | Module No.   | Connector | Terminal | Connector                   | Terminal                    | Continuity   |     |\n| P3322 | 33           | LB8       | 1        | LB15                        | 97                          | Existed      | B   |\n| P3322 | 33           | LB8       | 2        | LB15                        | 118                         | Existed      | B   |\n| P3323 | 34           | LB8       | 20       | LB15                        | 99                          | Existed      | EVB |\n| P3323 | 34           | LB8       | 6        | LB15                        | 119                         | Existed      | EVB |\n| P3323 | 34           | LB8       | 8        | LB15                        | 100                         | Existed      | EVB |\n| P3324 | 35           | LB8       | 8        | LB15                        | 100                         | Existed      | D   |\n| P3324 | 35           | LB8       | 22       | LB15                        | 120                         | Existed      | D   |\n| P3324 | 35           | LB8       | 5        | LB15                        | 101                         | Existed      | D   |\n| P3325 | 36           | LB8       | 5        | LB15                        | 101                         | Existed      | E   |\n| P3325 | 36           | LB8       | 7        | LB15                        | 121                         | Existed      | E   |\n| P3325 | 36           | LB8       | 24       | LB15                        | 102                         | Existed      | E   |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "bbox": [
+        52.376487731933594,
+        258.77972412109375,
+        373.0127868652344,
+        195.37554931640625
+      ],
+      "num_rows": 4,
+      "num_cols": 3,
+      "data": [
+        [
+          "Terminals",
+          "Terminals",
+          "Voltage"
+        ],
+        [
+          "(+)",
+          "(-)",
+          "(Approx.)"
+        ],
+        [
+          "Module",
+          "Module",
+          ""
+        ],
+        [
+          "Positive terminal (Red)",
+          "Negative terminal (Black)",
+          "5.0 - 8.5 V"
+        ]
+      ],
+      "markdown": "| Terminals               | Terminals                 | Voltage     |\n|-------------------------|---------------------------|-------------|\n| (+)                     | (-)                       | (Approx.)   |\n| Module                  | Module                    |             |\n| Positive terminal (Red) | Negative terminal (Black) | 5.0 - 8.5 V |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "bbox": [
+        50.33140182495117,
+        661.5634460449219,
+        561.0870971679688,
+        458.2789611816406
+      ],
+      "num_rows": 13,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P3326",
+          "CELL OVER VOLTAGE MODULE37",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector"
+        ],
+        [
+          "P3327",
+          "CELL OVER VOLTAGE MODULE38",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector"
+        ],
+        [
+          "P3328",
+          "CELL OVER VOLTAGE MODULE39",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector"
+        ],
+        [
+          "P3329",
+          "CELL OVER VOLTAGE MODULE40",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector"
+        ],
+        [
+          "P332A",
+          "CELL OVER VOLTAGE MODULE41",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector"
+        ],
+        [
+          "P332B",
+          "CELL OVER VOLTAGE MODULE42",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector"
+        ],
+        [
+          "P332C",
+          "CELL OVER VOLTAGE MODULE43",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector"
+        ],
+        [
+          "P332D",
+          "CELL OVER VOLTAGE MODULE44",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector"
+        ],
+        [
+          "P332E",
+          "CELL OVER VOLTAGE MODULE45",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector"
+        ],
+        [
+          "P332F",
+          "CELL OVER VOLTAGE MODULE46",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector"
+        ],
+        [
+          "P3330",
+          "CELL OVER VOLTAGE MODULE47",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector"
+        ],
+        [
+          "P3331",
+          "CELL OVER VOLTAGE MODULE48",
+          "When cell voltage exceeds the allowable working voltage range.",
+          "• Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector"
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name     | DTC detecting condition                                        | Possible causes                                                                                                                      |\n|-------|----------------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|\n| P3326 | CELL OVER VOLTAGE MODULE37 | When cell voltage exceeds the allowable working voltage range. | • Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |\n| P3327 | CELL OVER VOLTAGE MODULE38 | When cell voltage exceeds the allowable working voltage range. | • Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |\n| P3328 | CELL OVER VOLTAGE MODULE39 | When cell voltage exceeds the allowable working voltage range. | • Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |\n| P3329 | CELL OVER VOLTAGE MODULE40 | When cell voltage exceeds the allowable working voltage range. | • Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |\n| P332A | CELL OVER VOLTAGE MODULE41 | When cell voltage exceeds the allowable working voltage range. | • Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |\n| P332B | CELL OVER VOLTAGE MODULE42 | When cell voltage exceeds the allowable working voltage range. | • Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |\n| P332C | CELL OVER VOLTAGE MODULE43 | When cell voltage exceeds the allowable working voltage range. | • Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |\n| P332D | CELL OVER VOLTAGE MODULE44 | When cell voltage exceeds the allowable working voltage range. | • Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |\n| P332E | CELL OVER VOLTAGE MODULE45 | When cell voltage exceeds the allowable working voltage range. | • Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |\n| P332F | CELL OVER VOLTAGE MODULE46 | When cell voltage exceeds the allowable working voltage range. | • Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |\n| P3330 | CELL OVER VOLTAGE MODULE47 | When cell voltage exceeds the allowable working voltage range. | • Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |\n| P3331 | CELL OVER VOLTAGE MODULE48 | When cell voltage exceeds the allowable working voltage range. | • Overcharge caused by traction motor inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "bbox": [
+        47.71165466308594,
+        463.9023132324219,
+        528.8749389648438,
+        61.1002197265625
+      ],
+      "num_rows": 27,
+      "num_cols": 7,
+      "data": [
+        [
+          "DTC",
+          "Module No.",
+          "Module",
+          "Module",
+          "Li-ion battery controller",
+          "Li-ion battery controller",
+          "Continuity"
+        ],
+        [
+          "DTC",
+          "Module No.",
+          "Connector",
+          "Terminal",
+          "Connector",
+          "Terminal",
+          "Continuity"
+        ],
+        [
+          "",
+          "",
+          "LB8",
+          "24",
+          "LB15",
+          "102",
+          ""
+        ],
+        [
+          "P3326",
+          "37",
+          "LB7",
+          "38",
+          "",
+          "122",
+          "Existed"
+        ],
+        [
+          "",
+          "",
+          "",
+          "40",
+          "",
+          "103",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "40",
+          "",
+          "103",
+          ""
+        ],
+        [
+          "P3327",
+          "38",
+          "LB7",
+          "51",
+          "LB15",
+          "123",
+          "Existed"
+        ],
+        [
+          "",
+          "",
+          "",
+          "37",
+          "",
+          "104",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "37",
+          "",
+          "104",
+          ""
+        ],
+        [
+          "P3328",
+          "39",
+          "LB7",
+          "",
+          "LB15",
+          "124",
+          "Existed"
+        ],
+        [
+          "",
+          "",
+          "",
+          "39 53",
+          "",
+          "105",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "53",
+          "",
+          "105",
+          ""
+        ],
+        [
+          "P3329",
+          "40",
+          "LB7",
+          "43",
+          "LB15",
+          "125",
+          "Existed"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "106",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "44",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P332A",
+          "41",
+          "LB7",
+          "44",
+          "",
+          "106",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "55",
+          "LB15",
+          "127",
+          "Existed"
+        ],
+        [
+          "",
+          "",
+          "",
+          "41",
+          "",
+          "107",
+          ""
+        ],
+        [
+          "P332B",
+          "42",
+          "LB7",
+          "42",
+          "LB15",
+          "128",
+          "Existed"
+        ],
+        [
+          "",
+          "",
+          "",
+          "56",
+          "",
+          "108",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "56",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P332C",
+          "43",
+          "LB7",
+          "54",
+          "LB15",
+          "108 137",
+          "Existed"
+        ],
+        [
+          "",
+          "",
+          "",
+          "52",
+          "LB16",
+          "130",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "52",
+          "",
+          "130",
+          ""
+        ],
+        [
+          "P332D",
+          "44",
+          "LB7",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "50",
+          "LB16",
+          "138",
+          "Existed"
+        ],
+        [
+          "",
+          "",
+          "",
+          "36",
+          "",
+          "131",
+          ""
+        ]
+      ],
+      "markdown": "| DTC   | Module No.   | Module    | Module   | Li-ion battery controller   | Li-ion battery controller   | Continuity   |\n|-------|--------------|-----------|----------|-----------------------------|-----------------------------|--------------|\n| DTC   | Module No.   | Connector | Terminal | Connector                   | Terminal                    | Continuity   |\n|       |              | LB8       | 24       | LB15                        | 102                         |              |\n| P3326 | 37           | LB7       | 38       |                             | 122                         | Existed      |\n|       |              |           | 40       |                             | 103                         |              |\n|       |              |           | 40       |                             | 103                         |              |\n| P3327 | 38           | LB7       | 51       | LB15                        | 123                         | Existed      |\n|       |              |           | 37       |                             | 104                         |              |\n|       |              |           | 37       |                             | 104                         |              |\n| P3328 | 39           | LB7       |          | LB15                        | 124                         | Existed      |\n|       |              |           | 39 53    |                             | 105                         |              |\n|       |              |           | 53       |                             | 105                         |              |\n| P3329 | 40           | LB7       | 43       | LB15                        | 125                         | Existed      |\n|       |              |           |          |                             | 106                         |              |\n|       |              |           | 44       |                             |                             |              |\n| P332A | 41           | LB7       | 44       |                             | 106                         |              |\n|       |              |           | 55       | LB15                        | 127                         | Existed      |\n|       |              |           | 41       |                             | 107                         |              |\n| P332B | 42           | LB7       | 42       | LB15                        | 128                         | Existed      |\n|       |              |           | 56       |                             | 108                         |              |\n|       |              |           | 56       |                             |                             |              |\n| P332C | 43           | LB7       | 54       | LB15                        | 108 137                     | Existed      |\n|       |              |           | 52       | LB16                        | 130                         |              |\n|       |              |           | 52       |                             | 130                         |              |\n| P332D | 44           | LB7       |          |                             |                             |              |\n|       |              |           | 50       | LB16                        | 138                         | Existed      |\n|       |              |           | 36       |                             | 131                         |              |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "bbox": [
+        50.840415954589844,
+        737.4836921691895,
+        474.0876770019531,
+        518.2584838867188
+      ],
+      "num_rows": 14,
+      "num_cols": 7,
+      "data": [
+        [
+          "DTC",
+          "Module No.",
+          "Module",
+          "Module",
+          "Li-ion battery controller",
+          "Li-ion battery controller",
+          "Continuity"
+        ],
+        [
+          "DTC",
+          "Module No.",
+          "Connector",
+          "Terminal",
+          "Connector",
+          "Terminal",
+          "Continuity"
+        ],
+        [
+          "P332E",
+          "45",
+          "LB7",
+          "36",
+          "LB16",
+          "131",
+          "Existed"
+        ],
+        [
+          "P332E",
+          "45",
+          "LB7",
+          "35",
+          "LB16",
+          "140",
+          "Existed"
+        ],
+        [
+          "P332E",
+          "45",
+          "LB7",
+          "47",
+          "LB16",
+          "132",
+          "Existed"
+        ],
+        [
+          "P332F",
+          "46",
+          "LB7",
+          "47",
+          "LB16",
+          "132",
+          "Existed"
+        ],
+        [
+          "P332F",
+          "46",
+          "LB7",
+          "33",
+          "LB16",
+          "141",
+          "Existed"
+        ],
+        [
+          "P332F",
+          "46",
+          "LB7",
+          "45",
+          "LB16",
+          "133",
+          "Existed"
+        ],
+        [
+          "P3330",
+          "47",
+          "LB7",
+          "45",
+          "LB16",
+          "133",
+          "Existed"
+        ],
+        [
+          "P3330",
+          "47",
+          "LB7",
+          "46",
+          "LB16",
+          "142",
+          "Existed"
+        ],
+        [
+          "P3330",
+          "47",
+          "LB7",
+          "34",
+          "LB16",
+          "134",
+          "Existed"
+        ],
+        [
+          "P3331",
+          "48",
+          "LB7",
+          "34",
+          "LB16",
+          "134",
+          "Existed"
+        ],
+        [
+          "P3331",
+          "48",
+          "LB7",
+          "48",
+          "LB16",
+          "143",
+          "Existed"
+        ],
+        [
+          "P3331",
+          "48",
+          "LB7",
+          "49",
+          "LB16",
+          "135",
+          "Existed"
+        ]
+      ],
+      "markdown": "| DTC   | Module No.   | Module    | Module   | Li-ion battery controller   | Li-ion battery controller   | Continuity   |\n|-------|--------------|-----------|----------|-----------------------------|-----------------------------|--------------|\n| DTC   | Module No.   | Connector | Terminal | Connector                   | Terminal                    | Continuity   |\n| P332E | 45           | LB7       | 36       | LB16                        | 131                         | Existed      |\n| P332E | 45           | LB7       | 35       | LB16                        | 140                         | Existed      |\n| P332E | 45           | LB7       | 47       | LB16                        | 132                         | Existed      |\n| P332F | 46           | LB7       | 47       | LB16                        | 132                         | Existed      |\n| P332F | 46           | LB7       | 33       | LB16                        | 141                         | Existed      |\n| P332F | 46           | LB7       | 45       | LB16                        | 133                         | Existed      |\n| P3330 | 47           | LB7       | 45       | LB16                        | 133                         | Existed      |\n| P3330 | 47           | LB7       | 46       | LB16                        | 142                         | Existed      |\n| P3330 | 47           | LB7       | 34       | LB16                        | 134                         | Existed      |\n| P3331 | 48           | LB7       | 34       | LB16                        | 134                         | Existed      |\n| P3331 | 48           | LB7       | 48       | LB16                        | 143                         | Existed      |\n| P3331 | 48           | LB7       | 49       | LB16                        | 135                         | Existed      |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "bbox": [
+        50.92631912231445,
+        258.70196533203125,
+        371.1170959472656,
+        195.6240234375
+      ],
+      "num_rows": 4,
+      "num_cols": 3,
+      "data": [
+        [
+          "Terminals",
+          "Terminals",
+          "Voltage"
+        ],
+        [
+          "(+)",
+          "(-)",
+          "(Approx.)"
+        ],
+        [
+          "Module",
+          "Module",
+          ""
+        ],
+        [
+          "Positive terminal (Red)",
+          "Negative terminal (Black)",
+          "5.0 - 8.5 V"
+        ]
+      ],
+      "markdown": "| Terminals               | Terminals                 | Voltage     |\n|-------------------------|---------------------------|-------------|\n| (+)                     | (-)                       | (Approx.)   |\n| Module                  | Module                    |             |\n| Positive terminal (Red) | Negative terminal (Black) | 5.0 - 8.5 V |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "bbox": [
+        50.09897994995117,
+        661.3531341552734,
+        588.805419921875,
+        457.5682067871094
+      ],
+      "num_rows": 13,
+      "num_cols": 5,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes",
+          ""
+        ],
+        [
+          "P3375",
+          "CELL OVER DISCHARGE MODULE1",
+          "When cell voltage lowers below the allowable working voltage range.",
+          "inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "EVB"
+        ],
+        [
+          "P3376",
+          "CELL OVER DISCHARGE MODULE2",
+          "When cell voltage lowers below the allowable working voltage range.",
+          "inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          ""
+        ],
+        [
+          "P3377",
+          "CELL OVER DISCHARGE MODULE3",
+          "When cell voltage lowers below the allowable working voltage range.",
+          "inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "D"
+        ],
+        [
+          "P3378",
+          "CELL OVER DISCHARGE MODULE4",
+          "When cell voltage lowers below the allowable working voltage range.",
+          "inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          ""
+        ],
+        [
+          "P3379",
+          "CELL OVER DISCHARGE MODULE5",
+          "When cell voltage lowers below the allowable working voltage range.",
+          "inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          ""
+        ],
+        [
+          "P337A",
+          "CELL OVER DISCHARGE MODULE6",
+          "When cell voltage lowers below the allowable working voltage range.",
+          "inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "E"
+        ],
+        [
+          "P337B",
+          "CELL OVER DISCHARGE MODULE7",
+          "When cell voltage lowers below the allowable working voltage range.",
+          "inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          ""
+        ],
+        [
+          "P337C",
+          "CELL OVER DISCHARGE MODULE8",
+          "When cell voltage lowers below the allowable working voltage range.",
+          "inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          ""
+        ],
+        [
+          "P337D",
+          "CELL OVER DISCHARGE MODULE9",
+          "When cell voltage lowers below the allowable working voltage range.",
+          "inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "F"
+        ],
+        [
+          "P337E",
+          "CELL OVER DISCHARGE MODULE10",
+          "When cell voltage lowers below the allowable working voltage range.",
+          "inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          ""
+        ],
+        [
+          "P337F",
+          "CELL OVER DISCHARGE MODULE11",
+          "When cell voltage lowers below the allowable working voltage range.",
+          "inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          "G"
+        ],
+        [
+          "P3380",
+          "CELL OVER DISCHARGE MODULE12",
+          "When cell voltage lowers below the allowable working voltage range.",
+          "inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector",
+          ""
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name       | DTC detecting condition                                             | Possible causes                                                                                |     |\n|-------|------------------------------|---------------------------------------------------------------------|------------------------------------------------------------------------------------------------|-----|\n| P3375 | CELL OVER DISCHARGE MODULE1  | When cell voltage lowers below the allowable working voltage range. | inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector | EVB |\n| P3376 | CELL OVER DISCHARGE MODULE2  | When cell voltage lowers below the allowable working voltage range. | inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |     |\n| P3377 | CELL OVER DISCHARGE MODULE3  | When cell voltage lowers below the allowable working voltage range. | inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector | D   |\n| P3378 | CELL OVER DISCHARGE MODULE4  | When cell voltage lowers below the allowable working voltage range. | inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |     |\n| P3379 | CELL OVER DISCHARGE MODULE5  | When cell voltage lowers below the allowable working voltage range. | inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |     |\n| P337A | CELL OVER DISCHARGE MODULE6  | When cell voltage lowers below the allowable working voltage range. | inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector | E   |\n| P337B | CELL OVER DISCHARGE MODULE7  | When cell voltage lowers below the allowable working voltage range. | inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |     |\n| P337C | CELL OVER DISCHARGE MODULE8  | When cell voltage lowers below the allowable working voltage range. | inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |     |\n| P337D | CELL OVER DISCHARGE MODULE9  | When cell voltage lowers below the allowable working voltage range. | inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector | F   |\n| P337E | CELL OVER DISCHARGE MODULE10 | When cell voltage lowers below the allowable working voltage range. | inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |     |\n| P337F | CELL OVER DISCHARGE MODULE11 | When cell voltage lowers below the allowable working voltage range. | inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector | G   |\n| P3380 | CELL OVER DISCHARGE MODULE12 | When cell voltage lowers below the allowable working voltage range. | inverter/VCM malfunction • Module • Li-ion battery controller • Bus bar • Harness or connector |     |",
+      "tableformer": true
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_131_raster_1.png",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "bbox": [
+        87.83999633789062,
+        487.7399597167969,
+        97.739990234375,
+        497.63995361328125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_131_raster_2.png",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        463.25994873046875,
+        559.8599853515625,
+        732.5399169921875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_131_raster_3.png",
+      "page_pdf": 131,
+      "page_manual": "EVB-131",
+      "section_code": "EVB",
+      "bbox": [
+        87.83999633789062,
+        504.1199645996094,
+        97.739990234375,
+        514.0799560546875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_132_raster_1.jpeg",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        508.4399719238281,
+        79.0399169921875,
+        527.219970703125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_132_raster_2.png",
+      "page_pdf": 132,
+      "page_manual": "EVB-132",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        375.3599548339844,
+        63.65999984741211,
+        386.93994140625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_133_raster_1.png",
+      "page_pdf": 133,
+      "page_manual": "EVB-133",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        255.36000061035156,
+        64.97999572753906,
+        266.94000244140625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_134_raster_1.png",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "bbox": [
+        86.51998901367188,
+        487.7399597167969,
+        96.47998046875,
+        497.63995361328125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_134_raster_2.png",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "bbox": [
+        374.3399658203125,
+        463.25994873046875,
+        558.5399780273438,
+        732.5399169921875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_134_raster_3.png",
+      "page_pdf": 134,
+      "page_manual": "EVB-134",
+      "section_code": "EVB",
+      "bbox": [
+        86.51998901367188,
+        504.1199645996094,
+        96.47998046875,
+        514.0799560546875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_135_raster_1.jpeg",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        508.4399719238281,
+        80.3462142944336,
+        527.219970703125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_135_raster_2.png",
+      "page_pdf": 135,
+      "page_manual": "EVB-135",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        375.3599548339844,
+        64.97999572753906,
+        386.93994140625
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

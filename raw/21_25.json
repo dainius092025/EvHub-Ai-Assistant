@@ -1,0 +1,1620 @@
+{
+  "schema_version": "1.0",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-21\nRevision: October 2013\n2013 LEAF",
+    "page_start": 21,
+    "page_end": 25,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "21": [
+        "EVB-21",
+        "EVB",
+        "EVB-21\nRevision: October 2013\n2013 LEAF"
+      ],
+      "22": [
+        "EVB-22",
+        "EVB",
+        "EVB-22\nRevision: October 2013\n2013 LEAF"
+      ],
+      "23": [
+        "EVB-23",
+        "EVB",
+        "EVB-23\nSystem main relay cut\ny\np\np\nj\ng\nexcessive temperature rise and maintains the temperature for \nmore than the specified time.\nRevision: October 2013\n2013 LEAF"
+      ],
+      "24": [
+        "EVB-24",
+        "EVB",
+        "EVB-24\nRevision: October 2013\n2013 LEAF"
+      ],
+      "25": [
+        "EVB-25",
+        "EVB",
+        "EVB-25\np\n,\np\ny\np\ny\ng\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "< SYSTEM DESCRIPTION >",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        194.70028379999997,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "The label is affixed to the body panel near the high voltage harness connector.",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        735.83589,
+        369.5923971999995,
+        715.0729108640885
+      ]
+    },
+    {
+      "text": ": Vehicle front",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        116.16,
+        699.37427718,
+        167.46370024260003,
+        691.8837749779226
+      ]
+    },
+    {
+      "text": "Li-ion Battery Controller",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        599.52827718,
+        172.87507869159992,
+        589.3815716630055
+      ]
+    },
+    {
+      "text": "The label is affixed to the main body of controller.",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        585.95588,
+        280.7325460000003,
+        576.7122924640885
+      ]
+    },
+    {
+      "text": "Service Plug",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        449.64826718,
+        116.798270159,
+        439.50156166300553
+      ]
+    },
+    {
+      "text": "The label is affixed to the inspection hole cover .",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        435.11592,
+        286.56850599999984,
+        425.8723324640884
+      ]
+    },
+    {
+      "text": ": Direction of the label",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        116.16,
+        409.03427718,
+        198.07658482800014,
+        401.5437749779227
+      ]
+    },
+    {
+      "text": "COMPONENT PARTS",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        237.60001,
+        769.00991,
+        374.4231076000002,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "< SYSTEM DESCRIPTION >",
+      "page_pdf": 22,
+      "page_manual": "EVB-22",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        194.40028379999995,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "SYSTEM",
+      "page_pdf": 22,
+      "page_manual": "EVB-22",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.10997,
+        113.83500000000001,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "LI-ION BATTERY CONTROL SYSTEM",
+      "page_pdf": 22,
+      "page_manual": "EVB-22",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        718.03764,
+        294.16595399999994,
+        705.6597325524862
+      ]
+    },
+    {
+      "text": "LI-ION BATTERY CONTROL SYSTEM : System Description",
+      "page_pdf": 22,
+      "page_manual": "EVB-22",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        694.96993,
+        412.0853759999997,
+        683.0701391491713
+      ]
+    },
+    {
+      "text": "SYSTEM DIAGRAM",
+      "page_pdf": 22,
+      "page_manual": "EVB-22",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        667.2682671800001,
+        156.05811007890006,
+        657.1215616630055
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745916",
+      "page_pdf": 22,
+      "page_manual": "EVB-22",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        689.82691,
+        559.5492259999992,
+        684.26923
+      ]
+    },
+    {
+      "text": "INPUT/OUTPUT SIGNAL ITEM",
+      "page_pdf": 22,
+      "page_manual": "EVB-22",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        308.408368039,
+        212.8532320383001,
+        298.2616625220055
+      ]
+    },
+    {
+      "text": "Input Signal Item",
+      "page_pdf": 22,
+      "page_manual": "EVB-22",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        288.85129718,
+        127.10879606980006,
+        280.0326933204641
+      ]
+    },
+    {
+      "text": "Output Signal Item",
+      "page_pdf": 22,
+      "page_manual": "EVB-22",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        223.87129553909995,
+        134.87571146789986,
+        215.05269167956408
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "DESCRIPTION",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        514.62824718,
+        130.62018822000002,
+        504.48154166300554
+      ]
+    },
+    {
+      "text": "The Li-ion battery controller (LBC) monitors the status of the inside of the Li-ion battery at all times and sends information, such as the charging status of Li-ion battery and possible power, to VCM (vehicle control module) via EV system CAN communication.",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46000999999998,
+        501.11592,
+        559.944186400001,
+        468.8324008640884
+      ]
+    },
+    {
+      "text": "The Li-ion battery controller performs control as per the following.",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001000000001,
+        466.6160004,
+        355.3806340000004,
+        457.3724128640884
+      ]
+    },
+    {
+      "text": "Monitors the battery state and transfers chargeable/dischargeable power to VCM to prevent an error, such as overvoltage, over discharge or excessive temperature rise in the battery.",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001000000001,
+        455.0966088,
+        559.7782948,
+        434.3324812640884
+      ]
+    },
+    {
+      "text": "Detects an error (overvoltage, over discharge, overcurrent, or excessive temperature rise) immediately at the time of error occurrence and requests VCM to disconnect the system main relay to interrupt the discharge/charge line.",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001000000004,
+        432.1160808,
+        559.9325980000004,
+        399.8325616640884
+      ]
+    },
+    {
+      "text": "Maintains the optimum battery state constantly with a cell capacity adjustment function to prevent a reduction in charging/discharging capacity caused by cell capacity variations.",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001000000004,
+        397.6161612,
+        559.8520011999997,
+        376.8531820640884
+      ]
+    },
+    {
+      "text": "Detects the connector fit state with the function to detect the fit of the high voltage harness connector and transfers the detected state to VCM so that the vehicle does not start with an unsteady state.",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46084520000002,
+        374.57622960000003,
+        559.8718371999997,
+        353.8726540640884
+      ]
+    },
+    {
+      "text": "Detects the insulation resistance state with the function to detect the insulation resistance between high and low voltage and transfers the detected state to VCM so that the vehicle does not start with an unusual state.",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46105399999999,
+        351.59570160000004,
+        559.868913999999,
+        330.8327224640884
+      ]
+    },
+    {
+      "text": "Estimates a battery charge state and low battery state, based on the data obtained with the battery state detection function, and reflects on the battery capacity meter.",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.461262799999986,
+        328.616322,
+        559.8230823999995,
+        307.8533428640884
+      ]
+    },
+    {
+      "text": "BATTERY PROTECTION",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        299.64826718,
+        182.68221144929996,
+        289.50156166300553
+      ]
+    },
+    {
+      "text": "The Li-ion  battery  has  a  voltage  range  capable  of  charge/discharge.  If  charged/discharged  exceeding  the range, excessive low capacity or malfunction may be caused. To prevent this, the Li-ion battery controller detects voltage of each cell and requests the control of charging/discharging energy to VCM so that the cell voltage stays within the voltage range.",
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        286.1359,
+        559.9251856,
+        242.3935412640883
+      ]
+    },
+    {
+      "text": "< SYSTEM DESCRIPTION >",
+      "page_pdf": 24,
+      "page_manual": "EVB-24",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        194.40028379999995,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "HOW TO ADJUST CELL CAPACITY",
+      "page_pdf": 24,
+      "page_manual": "EVB-24",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        735.9083371800001,
+        238.46371858600017,
+        725.7616316630056
+      ]
+    },
+    {
+      "text": "During cell capacity adjustment, the capacity of each cell is estimated based on the no-load voltage when the system starts, and the capacities are adjusted so that they are all at the target level. The voltage of each cell is detected inside the Li-ion battery controller. The bypass switches are then turned ON to discharge the cells that have excess capacity. In this way, capacity adjustment by the Li-ion battery controller allows the capacity of all cells to be fully utilized.",
+      "page_pdf": 24,
+      "page_manual": "EVB-24",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139999999999986,
+        722.33589,
+        558.596928,
+        667.1323948640886
+      ]
+    },
+    {
+      "text": "INSULATION RESISTANCE LOSS DETECTION FUNCTION",
+      "page_pdf": 24,
+      "page_manual": "EVB-24",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        474.24827718,
+        361.5125963583999,
+        464.10157166300553
+      ]
+    },
+    {
+      "text": "The insulation resistance detection circuit mounted inside the Li-ion battery controller measures the insulation resistance of each high voltage part and sends the measurement results to VCM via EV system CAN communication.",
+      "page_pdf": 24,
+      "page_manual": "EVB-24",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139999999999986,
+        460.73591,
+        558.5353319999998,
+        428.4523908640884
+      ]
+    },
+    {
+      "text": "VCM judges abnormal insulation resistance in each high voltage part, based on the received insulation resistance value.",
+      "page_pdf": 24,
+      "page_manual": "EVB-24",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139999999999986,
+        426.1754384,
+        558.5217600000012,
+        405.4718628640884
+      ]
+    },
+    {
+      "text": "LI-ION BATTERY HEATER CONTROL SYSTEM",
+      "page_pdf": 24,
+      "page_manual": "EVB-24",
+      "section_code": "EVB",
+      "label": "caption",
+      "bbox": [
+        52.14,
+        217.75764000000004,
+        353.8130219999997,
+        205.3797325524862
+      ]
+    },
+    {
+      "text": "< SYSTEM DESCRIPTION >",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        194.70028379999997,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "LI-ION BATTERY HEATER CONTROL SYSTEM : System Description",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        736.00991,
+        469.5950208000005,
+        724.1101191491713
+      ]
+    },
+    {
+      "text": "SYSTEM DIAGRAM",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        708.24824718,
+        156.34756686969996,
+        698.1015416630055
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745917",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        730.86689,
+        559.8580799999991,
+        725.30921
+      ]
+    },
+    {
+      "text": "INPUT/OUTPUT SIGNAL ITEM",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        349.38834803899994,
+        213.04058014,
+        339.24164252200546
+      ]
+    },
+    {
+      "text": "Input Signal Item",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        329.83127718,
+        127.36676482759995,
+        321.01267332046405
+      ]
+    },
+    {
+      "text": "DESCRIPTION",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        199.98838718000002,
+        130.62018822000002,
+        189.8416816630055
+      ]
+    },
+    {
+      "text": "When the temperature decreases [approximately -20 ° C ( -4 ° F)] extremely in the battery pack, the Li-ion battery heater control system automatically activates the Li-ion battery heater to warm the inside of the battery pack for protecting Li-ion battery from freezing and preventing the decline in battery output. In addition, when the temperature in the battery pack is restored [approximately -10 ° C (14 ° F)], the Li-ion battery heater stops.",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        189.47230000000002,
+        559.884365200001,
+        142.19496879999997
+      ]
+    },
+    {
+      "text": "The Li-ion battery controller (LBC) detects a temperature in the battery pack, according to a signal transmitted from the battery temperature sensor installed to the battery pack and judges the activation of the Li-ion battery heater.",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45792200000005,
+        140.45785720000003,
+        559.8415612,
+        108.2348900640884
+      ]
+    },
+    {
+      "text": "When the relay built in the heater relay unit turns ON, high voltage power is supplied to each Li-ion battery heater.",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45771320000006,
+        105.95908599999996,
+        559.8259012000013,
+        85.19610686408839
+      ]
+    },
+    {
+      "text": "LBC detects the ON/OFF status of the relay built in to heater relay unit.",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45771320000006,
+        82.97970639999994,
+        389.71748079999924,
+        73.73611886408833
+      ]
+    },
+    {
+      "text": "Even when the power switch is OFF, VCM periodically activates LBC to protect Li-ion battery from freezing.",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45771320000006,
+        71.46031479999999,
+        556.4147355999992,
+        62.21672726408838
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 22,
+      "page_manual": "EVB-22",
+      "section_code": "EVB",
+      "bbox": [
+        51.25321960449219,
+        264.47491455078125,
+        457.74700927734375,
+        230.7489013671875
+      ],
+      "num_rows": 2,
+      "num_cols": 2,
+      "data": [
+        [
+          "Transmit unit",
+          "Signal name"
+        ],
+        [
+          "VCM",
+          "EV system CAN Target Li-ion battery remained energy"
+        ]
+      ],
+      "markdown": "| Transmit unit   | Signal name                                         |\n|-----------------|-----------------------------------------------------|\n| VCM             | EV system CAN Target Li-ion battery remained energy |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "bbox": [
+        51.53457260131836,
+        724.4968872070312,
+        575.6902465820312,
+        521.4920349121094
+      ],
+      "num_rows": 13,
+      "num_cols": 2,
+      "data": [
+        [
+          "Received unit",
+          "Signal name"
+        ],
+        [
+          "VCM",
+          "CAN Li-ion battery dischargeable power signal"
+        ],
+        [
+          "VCM",
+          "Li-ion battery main relay cut request signal"
+        ],
+        [
+          "VCM",
+          "Li-ion battery connector interlock signal"
+        ],
+        [
+          "VCM",
+          "Li-ion battery voltage signal"
+        ],
+        [
+          "VCM",
+          "Li-ion battery current signal"
+        ],
+        [
+          "VCM",
+          "Li-ion battery chargeable power signal"
+        ],
+        [
+          "VCM",
+          "Li-ion battery chargeable completion signal"
+        ],
+        [
+          "VCM",
+          "Li-ion battery available charge signal"
+        ],
+        [
+          "VCM",
+          "Li-ion battery capacity signal"
+        ],
+        [
+          "VCM",
+          "Li-ion battery gradual capacity loss signal"
+        ],
+        [
+          "VCM",
+          "Insulation resistance signal"
+        ],
+        [
+          "VCM",
+          ""
+        ]
+      ],
+      "markdown": "| Received unit   | Signal name                                   |\n|-----------------|-----------------------------------------------|\n| VCM             | CAN Li-ion battery dischargeable power signal |\n| VCM             | Li-ion battery main relay cut request signal  |\n| VCM             | Li-ion battery connector interlock signal     |\n| VCM             | Li-ion battery voltage signal                 |\n| VCM             | Li-ion battery current signal                 |\n| VCM             | Li-ion battery chargeable power signal        |\n| VCM             | Li-ion battery chargeable completion signal   |\n| VCM             | Li-ion battery available charge signal        |\n| VCM             | Li-ion battery capacity signal                |\n| VCM             | Li-ion battery gradual capacity loss signal   |\n| VCM             | Insulation resistance signal                  |\n| VCM             |                                               |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 23,
+      "page_manual": "EVB-23",
+      "section_code": "EVB",
+      "bbox": [
+        55.632591247558594,
+        230.89910888671875,
+        556.750732421875,
+        37.01824951171875
+      ],
+      "num_rows": 7,
+      "num_cols": 3,
+      "data": [
+        [
+          "Control item",
+          "Control",
+          "Operating condition"
+        ],
+        [
+          "Overvoltage/overcurrent protec- tion",
+          "Charging energy control",
+          "Gradual control of charging energy as the cell voltage ap- proaches the upper limit of the voltage capable of charging."
+        ],
+        [
+          "Overvoltage/overcurrent protec- tion",
+          "System main relay cut",
+          "Cell voltage exceeds the voltage judged as overvoltage and maintains the voltage for more than the specified time."
+        ],
+        [
+          "Over discharge protection",
+          "Discharging energy control",
+          "Gradual control of discharging energy as the cell voltage ap- proaches the lower limit of the voltage capable of discharging."
+        ],
+        [
+          "Over discharge protection",
+          "System main relay cut",
+          "Cell voltage exceeds the voltage judged as over discharge and maintains the voltage for more than the specified time."
+        ],
+        [
+          "Excessive temperature rise pro- tection",
+          "Charging/discharging energy control",
+          "Gradual control of charging/discharging energy as Li-ion bat- tery temperature approaches the upper limit of the temperature capable of use."
+        ],
+        [
+          "Excessive temperature rise pro- tection",
+          "System main relay cut",
+          "Li-ion battery temperature exceeds the temperature judged as excessive temperature rise and maintains the temperature for more than the specified time."
+        ]
+      ],
+      "markdown": "| Control item                            | Control                             | Operating condition                                                                                                                                     |\n|-----------------------------------------|-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|\n| Overvoltage/overcurrent protec- tion    | Charging energy control             | Gradual control of charging energy as the cell voltage ap- proaches the upper limit of the voltage capable of charging.                                 |\n| Overvoltage/overcurrent protec- tion    | System main relay cut               | Cell voltage exceeds the voltage judged as overvoltage and maintains the voltage for more than the specified time.                                      |\n| Over discharge protection               | Discharging energy control          | Gradual control of discharging energy as the cell voltage ap- proaches the lower limit of the voltage capable of discharging.                           |\n| Over discharge protection               | System main relay cut               | Cell voltage exceeds the voltage judged as over discharge and maintains the voltage for more than the specified time.                                   |\n| Excessive temperature rise pro- tection | Charging/discharging energy control | Gradual control of charging/discharging energy as Li-ion bat- tery temperature approaches the upper limit of the temperature capable of use.            |\n| Excessive temperature rise pro- tection | System main relay cut               | Li-ion battery temperature exceeds the temperature judged as excessive temperature rise and maintains the temperature for more than the specified time. |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "bbox": [
+        52.17047882080078,
+        305.07586669921875,
+        413.5645446777344,
+        206.8529052734375
+      ],
+      "num_rows": 5,
+      "num_cols": 3,
+      "data": [
+        [
+          "Transmit unit",
+          "Signal name",
+          "Signal name"
+        ],
+        [
+          "VCM",
+          "EV system CAN communication",
+          "Keep SOC request signal"
+        ],
+        [
+          "Output Signal Item",
+          "Output Signal Item",
+          "Output Signal Item"
+        ],
+        [
+          "Receive unit",
+          "Signal name",
+          "Signal name"
+        ],
+        [
+          "VCM",
+          "EV system CAN communication",
+          "Next start time signal"
+        ]
+      ],
+      "markdown": "| Transmit unit      | Signal name                 | Signal name             |\n|--------------------|-----------------------------|-------------------------|\n| VCM                | EV system CAN communication | Keep SOC request signal |\n| Output Signal Item | Output Signal Item          | Output Signal Item      |\n| Receive unit       | Signal name                 | Signal name             |\n| VCM                | EV system CAN communication | Next start time signal  |",
+      "tableformer": true
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_21_raster_1.png",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "bbox": [
+        87.83999633789062,
+        92.70002746582031,
+        99.59998321533203,
+        101.34002685546875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_21_raster_2.png",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        56.70002746582031,
+        559.7999877929688,
+        187.08001708984375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_21_raster_3.png",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        206.57994079589844,
+        559.97998046875,
+        336.9599304199219
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_21_raster_4.png",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        356.4599609375,
+        559.7999877929688,
+        486.8399658203125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_21_raster_5.png",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "bbox": [
+        273.77996826171875,
+        356.4599609375,
+        283.6799621582031,
+        366.3599548339844
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_21_raster_6.png",
+      "page_pdf": 21,
+      "page_manual": "EVB-21",
+      "section_code": "EVB",
+      "bbox": [
+        87.83999633789062,
+        381.8399353027344,
+        99.59998321533203,
+        390.4799499511719
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_22_raster_1.png",
+      "page_pdf": 22,
+      "page_manual": "EVB-22",
+      "section_code": "EVB",
+      "bbox": [
+        87.72000122070312,
+        136.79998779296875,
+        523.97998046875,
+        476.15997314453125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_24_raster_1.png",
+      "page_pdf": 24,
+      "page_manual": "EVB-24",
+      "section_code": "EVB",
+      "bbox": [
+        87.239990234375,
+        388.2599792480469,
+        523.5,
+        571.97998046875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_24_raster_2.png",
+      "page_pdf": 24,
+      "page_manual": "EVB-24",
+      "section_code": "EVB",
+      "bbox": [
+        87.239990234375,
+        126.66001892089844,
+        523.5,
+        310.32000732421875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_25_raster_1.png",
+      "page_pdf": 25,
+      "page_manual": "EVB-25",
+      "section_code": "EVB",
+      "bbox": [
+        88.01998901367188,
+        95.82000732421875,
+        524.2799072265625,
+        435.17999267578125
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

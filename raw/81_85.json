@@ -1,0 +1,3410 @@
+{
+  "schema_version": "1.0",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-81\nRevision: October 2013\n2013 LEAF",
+    "page_start": 81,
+    "page_end": 85,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "81": [
+        "EVB-81",
+        "EVB",
+        "EVB-81\nRevision: October 2013\n2013 LEAF"
+      ],
+      "82": [
+        "EVB-82",
+        "EVB",
+        "EVB-82\nNOTE:\n• Freeze frame data is useful if the DTC is not detected.\nRevision: October 2013\n2013 LEAF"
+      ],
+      "83": [
+        "EVB-83",
+        "EVB",
+        "EVB-83\nRevision: October 2013\n2013 LEAF"
+      ],
+      "84": [
+        "EVB-84",
+        "EVB",
+        "EVB-84\nRevision: October 2013\n2013 LEAF"
+      ],
+      "85": [
+        "EVB-85",
+        "EVB",
+        "EVB-85\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "DIAGNOSIS AND REPAIR WORK FLOW",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        179.34,
+        769.00991,
+        432.09075840000025,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< BASIC INSPECTION >",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        751.4636,
+        174.18204119999996,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "BASIC INSPECTION",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.25323718,
+        230.5262020855,
+        719.4660233757127
+      ]
+    },
+    {
+      "text": "DIAGNOSIS AND REPAIR WORK FLOW",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        713.06999,
+        328.54574999999994,
+        699.7889734254144
+      ]
+    },
+    {
+      "text": "Work Flow",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        688.96993,
+        115.41968640000005,
+        677.0701391491713
+      ]
+    },
+    {
+      "text": "DETAILED FLOW",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        661.2682671800001,
+        143.71224130589997,
+        651.1215616630055
+      ]
+    },
+    {
+      "text": "1.GET INFORMATION FOR SYMPTOM",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        648.14397,
+        244.5318864000001,
+        632.2067501104972
+      ]
+    },
+    {
+      "text": "Get the detailed information from the customer about the symptom (the condition and the environment when the incident/malfunction occurred) using the 'Question sheet'. (Refer to EVB-83, \"Diagnostic Work Sheet\".)",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        624.8363459999999,
+        558.4824180000003,
+        604.1323324640884
+      ]
+    },
+    {
+      "text": ">> GO TO 2.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.78021600000005,
+        584.336016,
+        154.05357240000006,
+        575.0924284640885
+      ]
+    },
+    {
+      "text": "2.CHECK DTC IN VCM",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        573.26397,
+        167.66676000000004,
+        557.3267501104972
+      ]
+    },
+    {
+      "text": "Check DTC in VCM.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        550.0159583999999,
+        166.25683800000004,
+        540.7723708640884
+      ]
+    },
+    {
+      "text": "Check related service bulletins for information.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        538.5559704,
+        286.5933935999999,
+        529.3123828640885
+      ]
+    },
+    {
+      "text": "Are any DTCs detected?",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        524.0361227999999,
+        166.710456,
+        514.7925352640884
+      ]
+    },
+    {
+      "text": "YES >> Check the DTC. Refer to EVC-102, \"DTC Index\".",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        509.51591,
+        337.34232,
+        500.2723224640884
+      ]
+    },
+    {
+      "text": "NO >> GO TO 3.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.83961240000002,
+        497.9965184,
+        154.05371279999994,
+        488.7529308640884
+      ]
+    },
+    {
+      "text": "3.CHECK DTC",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        486.924,
+        128.15522279999996,
+        470.98678011049725
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        463.6759884,
+        128.9669328,
+        454.4324008640884
+      ]
+    },
+    {
+      "text": "Perform the following procedure if DTC is displayed.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        452.2160004,
+        313.40289599999994,
+        442.97241286408837
+      ]
+    },
+    {
+      "text": "-Record DTC and freeze frame data. (Print them out with CONSULT.)",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        440.6966088,
+        388.6805159999995,
+        431.45302126408836
+      ]
+    },
+    {
+      "text": "-Erase DTC.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808000000016,
+        429.1760688,
+        126.64904399999998,
+        419.9324812640884
+      ]
+    },
+    {
+      "text": "-Study the relationship between the cause detected by DTC and the symptom described by the customer. (Symptom Matrix Chart is useful. Refer to EVC-412, \"Symptom Index\".)",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808000000016,
+        417.7160808,
+        558.6562440000002,
+        396.9523424640884
+      ]
+    },
+    {
+      "text": "Check related service bulletins for information.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14016799999996,
+        394.67539000000005,
+        286.59375359999984,
+        385.43180246408843
+      ]
+    },
+    {
+      "text": "Are any symptoms described and any DTCs detected?",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14016799999996,
+        380.15554240000006,
+        305.7621156000002,
+        370.91195486408844
+      ]
+    },
+    {
+      "text": "Symptom is described, DTC is detected>>GO TO 4.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        365.69593000000003,
+        299.05097999999987,
+        356.4523424640884
+      ]
+    },
+    {
+      "text": "Symptom is described, DTC is not detected>>GO TO 5.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        354.1765384,
+        316.4930879999999,
+        344.9329508640884
+      ]
+    },
+    {
+      "text": "Symptom is not described, DTC is detected>>GO TO 6.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        57.84,
+        342.6571468,
+        316.4930879999999,
+        333.4135592640884
+      ]
+    },
+    {
+      "text": "4.CONFIRM THE SYMPTOM",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        331.584,
+        195.30561599999996,
+        315.6467801104973
+      ]
+    },
+    {
+      "text": "Try to confirm the symptom described by the customer.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        308.3359884,
+        306.4694832000002,
+        299.0924008640884
+      ]
+    },
+    {
+      "text": "Also study the normal operation and fail-safe related to the symptom. Refer to EVC-412, \"Symptom Index\" and EVB-40, \"Fail-safe\".",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        296.8760004,
+        558.5277276000004,
+        276.1123224640884
+      ]
+    },
+    {
+      "text": "Diagnosis Work Sheet is useful to verify the incident.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.1399844,
+        273.83651839999993,
+        295.6937003999999,
+        264.59293086408843
+      ]
+    },
+    {
+      "text": "Verify relation between the symptom and the condition when the symptom is detected.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.1399844,
+        262.3171268,
+        450.68823720000086,
+        253.07353926408837
+      ]
+    },
+    {
+      "text": ">> GO TO 6.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.77982,
+        233.3368352,
+        154.0531764,
+        224.09324766408838
+      ]
+    },
+    {
+      "text": "5.CONFIRM THE SYMPTOM",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        222.26409,
+        195.30561599999996,
+        206.32687011049723
+      ]
+    },
+    {
+      "text": "Try to confirm the symptom described by the customer.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        199.01607839999997,
+        306.4694832000002,
+        189.77249086408847
+      ]
+    },
+    {
+      "text": "Also study the normal operation and fail-safe related to the symptom. Refer to EVC-412, \"Symptom Index\" and EVB-40, \"Fail-safe\".",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        187.49668680000002,
+        558.5277276000004,
+        166.7924324640884
+      ]
+    },
+    {
+      "text": "Diagnosis Work Sheet is useful to verify the incident.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.1399844,
+        164.51662839999995,
+        295.6937003999999,
+        155.27304086408844
+      ]
+    },
+    {
+      "text": "Verify relation between the symptom and the condition when the symptom is detected.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.1399844,
+        152.9972368,
+        450.68823720000086,
+        143.75364926408838
+      ]
+    },
+    {
+      "text": ">> GO TO 7.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.77982,
+        124.01694520000001,
+        154.0531764,
+        114.7733576640884
+      ]
+    },
+    {
+      "text": "6.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        112.94409999999993,
+        296.6362560000002,
+        97.00688011049726
+      ]
+    },
+    {
+      "text": "Perform DTC CONFIRMATION PROCEDURE for the displayed DTC, and then check that DTC is detected again.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        89.69608840000001,
+        558.4862807999999,
+        68.93310926408844
+      ]
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808000000016,
+        66.6573052,
+        84.71887200000003,
+        57.41371766408838
+      ]
+    },
+    {
+      "text": "Freeze frame data is useful if the DTC is not detected.",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808000000016,
+        55.19731720000004,
+        311.25329999999974,
+        45.95372966408843
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745925",
+      "page_pdf": 82,
+      "page_manual": "EVB-82",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        683.82691,
+        559.5492259999992,
+        678.26923
+      ]
+    },
+    {
+      "text": "DIAGNOSIS AND REPAIR WORK FLOW",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        179.64,
+        769.00991,
+        432.3246335999999,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< BASIC INSPECTION >",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        174.53211000000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "Perform  Component  Function  Check  if  DTC  CONFIRMATION  PROCEDURE is not included  on  Service Manual. This simplified check procedure is an effective alternative though DTC cannot be detected during this check.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        735.83589,
+        559.8198460000001,
+        703.6129228640885
+      ]
+    },
+    {
+      "text": "If the result of Component Function Check is NG, it is the same as the detection of DTC by DTC CONFIR- MATION PROCEDURE.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        61.91964640000003,
+        701.3371188000001,
+        559.8490780000011,
+        680.5729912640886
+      ]
+    },
+    {
+      "text": "Is DTC detected?",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46011440000004,
+        675.3561348000001,
+        134.96310640000007,
+        666.1125472640886
+      ]
+    },
+    {
+      "text": "YES >> GO TO 8.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        660.83589,
+        155.30461,
+        651.5923024640884
+      ]
+    },
+    {
+      "text": "NO >> Check according to GI-53, \"Intermittent Incident\".",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        649.3164984,
+        336.92231,
+        640.0724024640884
+      ]
+    },
+    {
+      "text": "7.DETECT MALFUNCTIONING SYSTEM BY SYMPTOM TABLE",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        638.24401,
+        359.9980319999998,
+        622.3067901104972
+      ]
+    },
+    {
+      "text": "Detect malfunctioning system according to EVC-412, \"Symptom Index\" based on the confirmed symptom in step 4, and determine the trouble diagnosis order based on possible causes and symptoms.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.45979600000001,
+        614.9959984,
+        559.8012651999995,
+        594.2329408640885
+      ]
+    },
+    {
+      "text": "Is the symptom described?",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.45990800000001,
+        589.0160844,
+        178.59176440000007,
+        579.7724968640885
+      ]
+    },
+    {
+      "text": "YES >> GO TO 8.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        574.49592,
+        155.30461,
+        565.2523324640885
+      ]
+    },
+    {
+      "text": "NO >> Monitor input data from related sensors using CONSULT.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        562.9765284,
+        373.82592040000003,
+        553.7329408640885
+      ]
+    },
+    {
+      "text": "8.DETECT MALFUNCTIONING PART BY DIAGNOSIS PROCEDURE",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        551.9039799999999,
+        384.0015756000003,
+        535.9667601104971
+      ]
+    },
+    {
+      "text": "Inspect according to Diagnosis Procedure of the system.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.459691599999985,
+        528.6559683999999,
+        315.3021996000004,
+        519.4123808640884
+      ]
+    },
+    {
+      "text": "Is a malfunctioning part detected?",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459691599999985,
+        514.1361208,
+        210.39794760000018,
+        504.89253326408834
+      ]
+    },
+    {
+      "text": "YES >> GO TO 9.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        499.67591,
+        155.30461,
+        490.4323224640884
+      ]
+    },
+    {
+      "text": "NO",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        488.1565184,
+        74.774626,
+        478.91293086408837
+      ]
+    },
+    {
+      "text": ">> Monitor input data from related sensors using CONSULT.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        95.032402,
+        488.1565184,
+        373.82592040000003,
+        478.91293086408837
+      ]
+    },
+    {
+      "text": "9.REPAIR OR REPLACE THE MALFUNCTIONING PART",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        477.084,
+        326.8844399999999,
+        461.1467801104973
+      ]
+    },
+    {
+      "text": "Repair or replace the malfunctioning part.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.459796,
+        453.8359884,
+        264.89297280000034,
+        444.5924008640884
+      ]
+    },
+    {
+      "text": "Reconnect parts or connectors disconnected during Diagnosis Procedure again after repair and replace- ment.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.459796,
+        442.3165968,
+        559.8352919999998,
+        421.5524692640884
+      ]
+    },
+    {
+      "text": "Check DTC. If DTC is displayed, erase it.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.459796,
+        419.3360688,
+        264.11654999999985,
+        410.0924812640884
+      ]
+    },
+    {
+      "text": ">> GO TO 10.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.040228,
+        390.29616480000004,
+        161.12542800000006,
+        381.0525772640884
+      ]
+    },
+    {
+      "text": "10.FINAL CHECK",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        379.22402,
+        146.63346639999995,
+        363.28680011049727
+      ]
+    },
+    {
+      "text": "When DTC was detected in step 3, perform DTC CONFIRMATION PROCEDURE or Component Function Check again, and then check that the malfunction have been completely repaired.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.45949399999998,
+        355.9760084,
+        559.9648636,
+        335.2118808640884
+      ]
+    },
+    {
+      "text": "When symptom was described from the customer, refer to confirmed symptom in step 4 or 5, and check that the symptom is not detected.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.45949399999998,
+        332.9954804,
+        559.8787335999997,
+        312.2325012640884
+      ]
+    },
+    {
+      "text": "Is DTC detected and does symptom remain?",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.45949400000006,
+        306.9562412,
+        261.2228020000003,
+        297.7126536640884
+      ]
+    },
+    {
+      "text": "YES-1 >> DTC is detected: GO TO 8.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        292.49601,
+        236.1686740000001,
+        283.2524224640884
+      ]
+    },
+    {
+      "text": "YES-2 >> Symptom remains: GO TO 5.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        280.97547000000003,
+        245.5187380000001,
+        271.73188246408836
+      ]
+    },
+    {
+      "text": "NO >> Before returning the vehicle to the customer, always erase DTC.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        269.4549300000001,
+        406.7937699999997,
+        260.2113424640884
+      ]
+    },
+    {
+      "text": "Diagnostic Work Sheet",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        252.11002000000008,
+        189.04147200000003,
+        240.21022914917125
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745926",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        246.96699999999998,
+        559.8580799999991,
+        241.40931999999998
+      ]
+    },
+    {
+      "text": "DESCRIPTION",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        224.40838717999998,
+        130.62018822000002,
+        214.26168166300556
+      ]
+    },
+    {
+      "text": "There are many operating conditions that lead to the malfunction of 'EV battery system' components. A good grasp of such conditions can make troubleshooting faster and more accurate.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46000999999998,
+        210.83601,
+        369.6199588000002,
+        178.61304286408836
+      ]
+    },
+    {
+      "text": "In  general,  each  customer  feels  differently  about  symptoms.  It  is important to fully understand the symptoms or conditions for a cus- tomer complaint.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46000999999998,
+        176.33723880000002,
+        369.6124420000003,
+        144.1142716640884
+      ]
+    },
+    {
+      "text": "Utilize the diagnostic worksheet in order to organize all the informa- tion for troubleshooting.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46000999999998,
+        141.83846759999994,
+        369.6312339999996,
+        121.07548846408838
+      ]
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46000999999998,
+        118.85908799999993,
+        86.039074,
+        109.61550046408831
+      ]
+    },
+    {
+      "text": "Some conditions may cause a DTC to be detected.",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46000999999998,
+        107.33969639999998,
+        289.69424200000026,
+        98.09610886408836
+      ]
+    },
+    {
+      "text": "JSCIA0412GB",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        517.31989,
+        86.37563999999998,
+        549.734212,
+        81.76914
+      ]
+    },
+    {
+      "text": "WORKSHEET SAMPLE",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.44,
+        73.50839717999997,
+        176.11757392100014,
+        63.36169166300556
+      ]
+    },
+    {
+      "text": "< BASIC INSPECTION >",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        174.18204119999996,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Question Sheet",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        277.56,
+        723.7342571800001,
+        335.96037963110035,
+        716.2437549779227
+      ]
+    },
+    {
+      "text": "Customer name MR/MS",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.840004284,
+        697.9946767550001,
+        118.01952401810004,
+        680.0636762119227
+      ]
+    },
+    {
+      "text": "Incident Date",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        153.540483405,
+        708.2540462819002,
+        203.42324036799988,
+        700.7635440798227
+      ]
+    },
+    {
+      "text": "VIN",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        363.6008397029999,
+        708.2540462819002,
+        377.7459764229998,
+        700.7635440798227
+      ]
+    },
+    {
+      "text": "Model & Year",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        153.540483405,
+        692.7739199839002,
+        204.06264792380014,
+        685.2834177818228
+      ]
+    },
+    {
+      "text": "In Service Date",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        363.6074385108002,
+        692.7739199839002,
+        421.4991177406,
+        685.2834177818228
+      ]
+    },
+    {
+      "text": "Trans.",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        153.540483405,
+        677.2937936859003,
+        177.18198134999992,
+        669.8032914838228
+      ]
+    },
+    {
+      "text": "Mileage",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        363.5906876909999,
+        677.2937936859003,
+        393.248098747,
+        669.8032914838228
+      ]
+    },
+    {
+      "text": "km/mile",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        526.544862308,
+        677.2937936859003,
+        555.677752744,
+        669.8032914838228
+      ]
+    },
+    {
+      "text": "Symptoms",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.840004284,
+        661.8136673879003,
+        97.85644378470003,
+        654.3231651858229
+      ]
+    },
+    {
+      "text": " Does not to READY",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.540483405,
+        658.1166430179002,
+        238.3381246385002,
+        648.7429519379002
+      ]
+    },
+    {
+      "text": " EV system warning lamp is on",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        293.7601577491,
+        658.1166430179002,
+        417.1054115470998,
+        648.7429519379002
+      ]
+    },
+    {
+      "text": " Power limitation indicator lamp is on",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        439.740083702,
+        663.3364691879002,
+        546.0028853080003,
+        643.8234467748229
+      ]
+    },
+    {
+      "text": " Water leak*",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53963740399996,
+        637.3566244789002,
+        206.86570303709988,
+        627.9829333989003
+      ]
+    },
+    {
+      "text": " Noise*",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        223.19944434409996,
+        637.3566244789002,
+        258.01103189249994,
+        627.9829333989003
+      ]
+    },
+    {
+      "text": " Vibration*",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        293.759227148,
+        637.3566244789002,
+        340.25205810400024,
+        627.9829333989003
+      ]
+    },
+    {
+      "text": " Shock*",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        363.59906310089997,
+        637.3566244789002,
+        400.3358951249998,
+        627.9829333989003
+      ]
+    },
+    {
+      "text": " Gear noise*",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        439.73915310089996,
+        637.3566244789002,
+        494.32838282710014,
+        627.9829333989003
+      ]
+    },
+    {
+      "text": " Non driving*",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53870680289992,
+        621.8764981809003,
+        209.48636033479994,
+        612.5028071009003
+      ]
+    },
+    {
+      "text": " Poor acceleration*",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        223.19851374299992,
+        621.8764981809003,
+        302.30113004480035,
+        612.5028071009003
+      ]
+    },
+    {
+      "text": " Poor torque*",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        363.5983016999999,
+        621.8764981809003,
+        421.0698568332001,
+        612.5028071009003
+      ]
+    },
+    {
+      "text": " Radio noise*",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        439.7383916999999,
+        621.8764981809003,
+        497.6065521019998,
+        612.5028071009003
+      ]
+    },
+    {
+      "text": " Does not charge",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53794540199988,
+        606.3963718829003,
+        225.5591949333997,
+        597.0226808029004
+      ]
+    },
+    {
+      "text": " Other*",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        293.75761974609986,
+        606.3963718829003,
+        328.11710436009975,
+        597.0226808029004
+      ]
+    },
+    {
+      "text": "*: If applied, enter in detail",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        457.90380977209975,
+        604.8735700829004,
+        555.7505934300993,
+        597.383067880823
+      ]
+    },
+    {
+      "text": "Detailed symptom",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        153.53726860119986,
+        589.3934437849005,
+        221.15550592809984,
+        581.902941582823
+      ]
+    },
+    {
+      "text": "Onomatopoeia",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        153.53726860119986,
+        558.4331065888005,
+        209.04170220919977,
+        550.942604386723
+      ]
+    },
+    {
+      "text": "Frequency",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.836789480199855,
+        527.4727693927005,
+        97.8052607241999,
+        519.982267190623
+      ]
+    },
+    {
+      "text": " All the time",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53726860119986,
+        528.9955711927004,
+        205.2804663633,
+        519.6218801127004
+      ]
+    },
+    {
+      "text": " Once",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        223.19707554129985,
+        528.9955711927004,
+        253.31860274589988,
+        519.6218801127004
+      ]
+    },
+    {
+      "text": " Sometimes (",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        293.7568583451999,
+        528.9955711927004,
+        351.17646901699993,
+        519.6218801127004
+      ]
+    },
+    {
+      "text": "times a day)",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        368.15570908699993,
+        527.4727693927005,
+        414.2169103328001,
+        519.982267190623
+      ]
+    },
+    {
+      "text": " Other",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        439.7367842980999,
+        528.9955711927004,
+        470.8052404219998,
+        519.6218801127004
+      ]
+    },
+    {
+      "text": "Charging condition",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.83577427899985,
+        511.9926430947004,
+        128.38777387369984,
+        504.50214089262306
+      ]
+    },
+    {
+      "text": " Full",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53625339999985,
+        513.5154448947004,
+        177.07546982409988,
+        504.1417538147004
+      ]
+    },
+    {
+      "text": " Medium",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        223.19606034009985,
+        513.5154448947004,
+        263.2406716740998,
+        504.1417538147004
+      ]
+    },
+    {
+      "text": " Low",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        293.75584314399987,
+        513.5154448947004,
+        319.18333380009983,
+        504.1417538147004
+      ]
+    },
+    {
+      "text": "Weather conditions",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.835689678899854,
+        496.51251679670037,
+        95.95404133599978,
+        478.58244685472306
+      ]
+    },
+    {
+      "text": " Not affected",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53616879989985,
+        492.8155770268004,
+        208.92546167180004,
+        483.44188594680037
+      ]
+    },
+    {
+      "text": "Weather",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        110.45619047799985,
+        470.59290735890033,
+        142.31828013999984,
+        463.102405156823
+      ]
+    },
+    {
+      "text": " Fine",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53616879989985,
+        472.11570915890036,
+        179.92547799289986,
+        462.74201807890034
+      ]
+    },
+    {
+      "text": " Clouding",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        223.19597573999985,
+        472.11570915890036,
+        266.53829897199995,
+        462.74201807890034
+      ]
+    },
+    {
+      "text": " Raining",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        293.75575854389984,
+        472.11570915890036,
+        332.35988397519986,
+        462.74201807890034
+      ]
+    },
+    {
+      "text": " Snowing",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        363.59559449679983,
+        472.11570915890036,
+        405.9667931809001,
+        462.74201807890034
+      ]
+    },
+    {
+      "text": " Other (",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        439.7356844967998,
+        472.11570915890036,
+        475.9679615244996,
+        462.74201807890034
+      ]
+    },
+    {
+      "text": ")",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        526.7881721955996,
+        470.59290735890033,
+        529.6053555255996,
+        463.102405156823
+      ]
+    },
+    {
+      "text": "Temp.",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        110.45517527679976,
+        449.83288881990035,
+        133.4985505147998,
+        442.342386617823
+      ]
+    },
+    {
+      "text": " Hot",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53515359869976,
+        451.3556906199004,
+        176.62429749079976,
+        441.98199953990036
+      ]
+    },
+    {
+      "text": " Warm",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        223.19496053879976,
+        451.3556906199004,
+        255.38030718289977,
+        441.98199953990036
+      ]
+    },
+    {
+      "text": " Cool",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        293.7547433426998,
+        451.3556906199004,
+        321.0400521947998,
+        441.98199953990036
+      ]
+    },
+    {
+      "text": " Cold",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        363.5945792955998,
+        451.3556906199004,
+        390.8870791561999,
+        441.98199953990036
+      ]
+    },
+    {
+      "text": " Temp. [Approx.",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        439.73466929559976,
+        456.6355828609004,
+        506.58549911539995,
+        447.2618917809004
+      ]
+    },
+    {
+      "text": "° C",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        523.4946903025998,
+        457.5408039309004,
+        535.3853189576998,
+        447.18575169090036
+      ]
+    },
+    {
+      "text": "( ° F)]",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        439.7345846954998,
+        447.0410855199004,
+        473.22759508529975,
+        436.68603327990036
+      ]
+    },
+    {
+      "text": "Humidity",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        110.45399087539977,
+        429.13293635190036,
+        143.34845555769974,
+        421.64243414982303
+      ]
+    },
+    {
+      "text": " High",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53396919729977,
+        430.6557381519004,
+        180.82435405539977,
+        421.28204707190037
+      ]
+    },
+    {
+      "text": " Middle",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        223.19377613739977,
+        430.6557381519004,
+        258.0185613013998,
+        421.28204707190037
+      ]
+    },
+    {
+      "text": " Low",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        293.7535589412998,
+        430.6557381519004,
+        319.1810495973998,
+        421.28204707190037
+      ]
+    },
+    {
+      "text": " Humidity (Approx.",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        363.5933948941998,
+        430.6557381519004,
+        440.8139973714001,
+        421.28204707190037
+      ]
+    },
+    {
+      "text": "%)",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        466.1813373564001,
+        429.13293635190036,
+        476.5575396214001,
+        421.64243414982303
+      ]
+    },
+    {
+      "text": "Road conditions",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.83247487509976,
+        413.65281005390034,
+        118.48364016669971,
+        406.162307851823
+      ]
+    },
+    {
+      "text": " Not affected",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53295399609976,
+        409.9557856839004,
+        208.92224686799995,
+        400.5820946039004
+      ]
+    },
+    {
+      "text": " In town",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        223.19276093619976,
+        409.9557856839004,
+        260.4017461183998,
+        400.5820946039004
+      ]
+    },
+    {
+      "text": " Freeway",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        293.7525437400998,
+        409.9557856839004,
+        336.14226984609974,
+        400.5820946039004
+      ]
+    },
+    {
+      "text": " Off road (Up / Down)",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        363.59237969299977,
+        409.9557856839004,
+        451.47468193450004,
+        400.5820946039004
+      ]
+    },
+    {
+      "text": " Deplorable",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        492.060310908,
+        415.17690515,
+        545.3025378420001,
+        405.80321406999997
+      ]
+    },
+    {
+      "text": "road",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        492.060310908,
+        403.15438493899995,
+        508.97863890600007,
+        395.66388273692263
+      ]
+    },
+    {
+      "text": " Flat road",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53969416590002,
+        389.19706044099996,
+        196.79674049709996,
+        379.82336936099995
+      ]
+    },
+    {
+      "text": " While turning (Right / Left)",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        223.199501106,
+        389.19706044099996,
+        331.3674969640003,
+        379.82336936099995
+      ]
+    },
+    {
+      "text": " Bump",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        363.599289063,
+        389.19706044099996,
+        395.66771836889995,
+        379.82336936099995
+      ]
+    },
+    {
+      "text": " Other",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.538932765,
+        373.71693414299995,
+        184.61897910259995,
+        364.34324306299993
+      ]
+    },
+    {
+      "text": "Shift position",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.83862284419999,
+        356.7140060449999,
+        106.16642996920001,
+        349.2235038429226
+      ]
+    },
+    {
+      "text": " Not affected",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.5391019652,
+        358.23680784499993,
+        208.92839483710017,
+        348.8631167649999
+      ]
+    },
+    {
+      "text": " P position",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.5391019652,
+        342.7566815469999,
+        200.60983620430008,
+        333.3829904669999
+      ]
+    },
+    {
+      "text": " R position",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        223.1989089053,
+        342.7566815469999,
+        270.71117106630004,
+        333.3829904669999
+      ]
+    },
+    {
+      "text": " N position",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        293.7586917092,
+        342.7566815469999,
+        341.2709538701999,
+        333.3829904669999
+      ]
+    },
+    {
+      "text": " D position",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        363.59852766209997,
+        342.7566815469999,
+        411.15055187009995,
+        333.3829904669999
+      ]
+    },
+    {
+      "text": " ECO mode",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        439.73861766209995,
+        342.7566815469999,
+        491.4675180073,
+        333.3829904669999
+      ]
+    },
+    {
+      "text": "Driving conditions",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.8376076429999,
+        325.7537534489999,
+        124.61441237529993,
+        318.26325124692255
+      ]
+    },
+    {
+      "text": " Not affected",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.5380867639999,
+        327.2765552489999,
+        208.92737963590008,
+        317.9028641689999
+      ]
+    },
+    {
+      "text": " Power switch ON → OFF",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.5380867639999,
+        312.70165002099986,
+        258.3612484682999,
+        302.34659778099984
+      ]
+    },
+    {
+      "text": " Power switch OFF → ON",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        293.7576765079999,
+        312.70165002099986,
+        398.6184852567999,
+        302.34659778099984
+      ]
+    },
+    {
+      "text": " READY (stop the vehicle)",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        439.73760246089995,
+        311.7964289509999,
+        545.5960155889001,
+        302.42273787099987
+      ]
+    },
+    {
+      "text": " While cruis-",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53715616289992,
+        296.31630265299987,
+        207.658462736,
+        286.94261157299985
+      ]
+    },
+    {
+      "text": "ing",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        153.53715616289992,
+        284.29378244199984,
+        164.7771254488999,
+        276.8032802399225
+      ]
+    },
+    {
+      "text": " While decel- erating",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        223.19679390279993,
+        296.31630265299987,
+        279.69426348460007,
+        276.8032802399225
+      ]
+    },
+    {
+      "text": " Just before stopping",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        293.7565767066999,
+        296.31630265299987,
+        347.9182375274997,
+        276.8032802399225
+      ]
+    },
+    {
+      "text": "",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        363.5964126595999,
+        296.31630265299987,
+        371.13428156959986,
+        286.94261157299985
+      ]
+    },
+    {
+      "text": "Just after stop-",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        371.1562775955999,
+        294.79350085299984,
+        429.39414043459954,
+        287.3029986509225
+      ]
+    },
+    {
+      "text": "ping",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        363.5964126595999,
+        284.29378244199984,
+        379.6391296225999,
+        276.8032802399225
+      ]
+    },
+    {
+      "text": " D position (stop the vehicle)",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        439.73650265959986,
+        291.0964764829999,
+        554.0710844066998,
+        281.7227854029999
+      ]
+    },
+    {
+      "text": " While recharging",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53605636159983,
+        270.3364579439999,
+        226.9360337226998,
+        260.96276686399983
+      ]
+    },
+    {
+      "text": " Other",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        293.7557307056999,
+        270.3364579439999,
+        324.8275708335998,
+        260.96276686399983
+      ]
+    },
+    {
+      "text": " Vehicle speed [",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53537956079987,
+        254.85633164599983,
+        220.89617878339988,
+        245.48264056599987
+      ]
+    },
+    {
+      "text": "km/h (",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        246.26851017429988,
+        253.33352984599992,
+        269.7979129867999,
+        245.84302764392248
+      ]
+    },
+    {
+      "text": "MPH)]",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        295.2379244576999,
+        253.33352984599992,
+        319.19125837129985,
+        245.84302764392248
+      ]
+    },
+    {
+      "text": " Accelerator pedal (",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        363.5958204588999,
+        254.85633164599983,
+        444.55803155880005,
+        245.48264056599987
+      ]
+    },
+    {
+      "text": "/ 8)",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        461.4806741619001,
+        253.33352984599992,
+        473.74286645620003,
+        245.84302764392248
+      ]
+    },
+    {
+      "text": " Battery level (Low / Middle / High)",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53546416089986,
+        239.37620534799987,
+        290.01962108950005,
+        230.0025142679999
+      ]
+    },
+    {
+      "text": "Moments when mal- function disappears",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.835154240099854,
+        222.37327724999977,
+        133.89402814409988,
+        204.44320730802247
+      ]
+    },
+    {
+      "text": " Disappears while driving",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53563336109985,
+        218.67633748009985,
+        255.14043806119946,
+        209.3026464000999
+      ]
+    },
+    {
+      "text": " Disappears when stopped",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        293.75530770519987,
+        218.67633748009985,
+        401.5846493629002,
+        209.3026464000999
+      ]
+    },
+    {
+      "text": " Disappears with select oper- ation",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        439.7352336580999,
+        223.89616365009988,
+        555.6536138772994,
+        204.44329190812255
+      ]
+    },
+    {
+      "text": " Disappears when power switch is pushed OFF",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53478736009987,
+        197.97646961219982,
+        282.4858129843,
+        178.46344719912247
+      ]
+    },
+    {
+      "text": " Disappears when battery charge is stopped",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        293.75530770519987,
+        197.97646961219982,
+        432.03958556160035,
+        178.46344719912247
+      ]
+    },
+    {
+      "text": " Does not disappear",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        439.7352336580999,
+        192.69657737119985,
+        523.0327459184002,
+        183.3228862911999
+      ]
+    },
+    {
+      "text": " Other",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "checkbox_unselected",
+      "bbox": [
+        153.53478736009987,
+        171.99670950329983,
+        184.61483369769982,
+        162.62301842329987
+      ]
+    },
+    {
+      "text": "Other",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.83447743929986,
+        154.99378140529984,
+        79.00480646329983,
+        147.50327920322252
+      ]
+    },
+    {
+      "text": "DIAGNOSIS AND REPAIR WORK FLOW",
+      "page_pdf": 84,
+      "page_manual": "EVB-84",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        179.34,
+        769.00991,
+        432.09075840000025,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "ADDITIONAL SERVICE WHEN REPLACING LI-ION BATTERY CONTROLLER",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.86,
+        769.00991,
+        547.1104511999998,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< BASIC INSPECTION >",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.44,
+        751.4636,
+        174.53211000000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "ADDITIONAL SERVICE WHEN REPLACING LI-ION BATTERY CONTROLLER",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.43999999999997,
+        736.10997,
+        559.8660000000002,
+        704.8289534254144
+      ]
+    },
+    {
+      "text": "Description",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        694.00991,
+        119.72064000000003,
+        682.1101191491713
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745927",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        688.86689,
+        559.8580799999991,
+        683.30921
+      ]
+    },
+    {
+      "text": "When a Li-ion Battery Controller (LBC) or Li-ion battery (battery pack) is replaced, it is necessary to save the battery information stored in LBC to the new LBC.",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        669.35591,
+        559.8897939999999,
+        648.5917824640885
+      ]
+    },
+    {
+      "text": "Whenever any of the following work is performed, make sure to perform the above operation.",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        636.28201,
+        422.54424999999986,
+        628.3134000552486
+      ]
+    },
+    {
+      "text": "Replace LBC",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        627.35591,
+        123.57296199999998,
+        618.1123224640885
+      ]
+    },
+    {
+      "text": "Replace Li-ion battery (Battery pack: Module, LBC, Battery junction box)",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46001,
+        615.83537,
+        395.6466699999997,
+        606.5917824640885
+      ]
+    },
+    {
+      "text": "Work Procedure",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        598.48989,
+        149.31000960000006,
+        586.5900991491712
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745928",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        593.34687,
+        559.8580799999991,
+        587.78919
+      ]
+    },
+    {
+      "text": "1.SAVE THE LI-ION BATTERY CONTROLLER (LBC) INTERNAL INFORMATION",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        577.10411,
+        437.1597587999994,
+        561.1668901104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.97929199999999,
+        552.2963624,
+        138.10021679999997,
+        543.0527748640885
+      ]
+    },
+    {
+      "text": "Select 'SAVE BATTERY INFORMATION DATA' in 'WORK SUPPOTRT' mode.",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45990039999999,
+        540.7769708000001,
+        439.5770364000006,
+        531.5333832640886
+      ]
+    },
+    {
+      "text": "Save the LBC internal information.",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.45990039999999,
+        529.3169828000001,
+        232.63222439999993,
+        520.0733952640886
+      ]
+    },
+    {
+      "text": ">> GO TO 2.",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.04033239999998,
+        500.2770788000002,
+        155.30136959999993,
+        491.0334912640886
+      ]
+    },
+    {
+      "text": "2.REPLACE LI-ION BATTERY OR LBC",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        489.20399999999995,
+        242.0677919999999,
+        473.2667801104972
+      ]
+    },
+    {
+      "text": "Replace Li-ion battery or LBC. Refer to EVB-194, \"Removal and Installation\" (Li-ion battery) or EVB-214, \"LI- ION BATTERY CONTROLLER : Removal and Installation\" (LBC).",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.459796,
+        465.95598839999997,
+        559.8494632000003,
+        445.1923324640884
+      ]
+    },
+    {
+      "text": ">> GO TO 3.",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.03937160000001,
+        425.4556284,
+        155.30040879999996,
+        416.2120408640884
+      ]
+    },
+    {
+      "text": "3.WRITE THE LBC INTERNAL INFORMATION",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        414.38399,
+        278.33426400000013,
+        398.44677011049725
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        389.51548160000004,
+        138.10126079999998,
+        380.27189406408843
+      ]
+    },
+    {
+      "text": "Select 'WRITE BATTERY INFORMATION DATA' in 'WORK SUPPOTRT' mode.",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        378.05549360000003,
+        446.08783800000083,
+        368.8119060640884
+      ]
+    },
+    {
+      "text": "Write the information that has been read out before LBC replacement.",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.46094439999999,
+        366.536102,
+        396.5025359999994,
+        357.2925144640884
+      ]
+    },
+    {
+      "text": ">> GO TO 4.",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.04137639999999,
+        337.55581040000004,
+        155.30241359999994,
+        328.3122228640884
+      ]
+    },
+    {
+      "text": "4.WRITE THE LBC INTERNAL INFORMATION TO VCM",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        326.424,
+        321.80224800000013,
+        310.48678011049725
+      ]
+    },
+    {
+      "text": "Refer to 'Li-ion Battery Registration Operation Manual.",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.459796,
+        303.1759884,
+        306.40637999999984,
+        293.9324008640884
+      ]
+    },
+    {
+      "text": ">> END",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.040228,
+        274.19569679999995,
+        132.20704560000001,
+        264.95210926408845
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 81,
+      "page_manual": "EVB-81",
+      "section_code": "EVB",
+      "bbox": [
+        262.77972412109375,
+        708.1668472290039,
+        513.4528198242188,
+        553.1448059082031
+      ],
+      "num_rows": 0,
+      "num_cols": 0,
+      "data": [],
+      "markdown": "",
+      "tableformer": false
+    },
+    {
+      "page_pdf": 81,
+      "page_manual": "EVB-81",
+      "section_code": "EVB",
+      "bbox": [
+        107.37189483642578,
+        508.7666015625,
+        312.2121276855469,
+        354.0992736816406
+      ],
+      "num_rows": 0,
+      "num_cols": 0,
+      "data": [],
+      "markdown": "",
+      "tableformer": false
+    },
+    {
+      "page_pdf": 81,
+      "page_manual": "EVB-81",
+      "section_code": "EVB",
+      "bbox": [
+        262.53668212890625,
+        310.84954833984375,
+        513.5079956054688,
+        155.353759765625
+      ],
+      "num_rows": 0,
+      "num_cols": 0,
+      "data": [],
+      "markdown": "",
+      "tableformer": false
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_81_raster_1.png",
+      "page_pdf": 81,
+      "page_manual": "EVB-81",
+      "section_code": "EVB",
+      "bbox": [
+        88.01998901367188,
+        58.67999267578125,
+        524.2799072265625,
+        655.679931640625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_83_raster_1.png",
+      "page_pdf": 83,
+      "page_manual": "EVB-83",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        581.6399536132812,
+        559.8599853515625,
+        712.0799560546875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_85_raster_1.png",
+      "page_pdf": 85,
+      "page_manual": "EVB-85",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        238.62001037597656,
+        64.97999572753906,
+        250.20001220703125
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

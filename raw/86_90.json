@@ -1,0 +1,2440 @@
+{
+  "schema_version": "1.0",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-86\n1.\nRemove the module from the module charge balancer.\n2.\nUsing a circuit tester, check that the module voltage is within the specified range.\nRevision: October 2013\n2013 LEAF",
+    "page_start": 86,
+    "page_end": 90,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "86": [
+        "EVB-86",
+        "EVB",
+        "EVB-86\n1.\nRemove the module from the module charge balancer.\n2.\nUsing a circuit tester, check that the module voltage is within the specified range.\nRevision: October 2013\n2013 LEAF"
+      ],
+      "87": [
+        "EVB-87",
+        "EVB",
+        "EVB-87\nRevision: October 2013\n2013 LEAF"
+      ],
+      "88": [
+        "EVB-88",
+        "EVB",
+        "EVB-88\n1.\nDisconnect Li-ion battery controller (LBC) harness connector.\n2.\nDisconnect interlock detecting switch (high voltage harness connector) harness connector.\n3.\nCheck the continuity between Li-ion battery controller harness connector and ground.\nRevision: October 2013\n2013 LEAF"
+      ],
+      "89": [
+        "EVB-89",
+        "EVB",
+        "EVB-89\nRevision: October 2013\n2013 LEAF"
+      ],
+      "90": [
+        "EVB-90",
+        "EVB",
+        "EVB-90\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "MODULE CHARGE BALANCE",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        210.78,
+        769.00991,
+        400.6845120000002,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "MODULE CHARGE BALANCE",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.10997,
+        258.7320000000002,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "Description",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        712.00991,
+        119.43408000000005,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745929",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        706.86689,
+        559.5492259999992,
+        701.30921
+      ]
+    },
+    {
+      "text": "If a malfunction (e.g. abnormal voltage) occurs in a Li-ion battery cell, the module which includes the malfunctioning cell must be replaced. When replacing a module with a new one, its voltage is required to be adjusted to the adjusting voltage calculated from the maximum cell voltage of normal cells.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139999999999986,
+        687.35591,
+        558.5707235999998,
+        655.1329428640886
+      ]
+    },
+    {
+      "text": "Work Procedure",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        647.02992,
+        149.15529600000005,
+        635.1301291491712
+      ]
+    },
+    {
+      "text": "NOTE:",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        622.37592,
+        84.71906400000002,
+        613.1323324640884
+      ]
+    },
+    {
+      "text": "Voltage adjustment under low temperature conditions may require a long time. To prevent this from occurring, it is advisable to adjust voltage under room temperature conditions [20 ° C ± 10 ° C (68 ° F ± 18 ° F)].",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139999999999986,
+        610.85538,
+        558.5486951999995,
+        589.6131120000001
+      ]
+    },
+    {
+      "text": "1.CHECK ADJUSTMENT VOLTAGE VALUE",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        588.32402,
+        264.2749703999999,
+        572.3868001104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.660348,
+        563.4555116,
+        136.75914,
+        554.2119240640885
+      ]
+    },
+    {
+      "text": "Power switch ON.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        551.9955236000001,
+        155.20202640000002,
+        542.7519360640886
+      ]
+    },
+    {
+      "text": "Select 'DATA MONITOR'of 'HV BAT'.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        540.4761320000001,
+        247.99535639999982,
+        531.2325444640886
+      ]
+    },
+    {
+      "text": "Check 'MAXIMUM CELL VOLTAGE'.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        528.9567404000002,
+        244.9176443999999,
+        519.7131528640887
+      ]
+    },
+    {
+      "text": "Double the 'MAXIMUM CELL VOLTAGE' and use that value as the module adjustment value.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        517.4373488000002,
+        505.0605203999996,
+        508.1937612640886
+      ]
+    },
+    {
+      "text": "Adjustment voltage value",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        86.5198764,
+        492.9556128,
+        212.50144440000008,
+        483.71202526408837
+      ]
+    },
+    {
+      "text": ": MAXIMUM CELL VOLTAGE × 2",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        222.8955084000001,
+        495.9518928,
+        377.14650839999996,
+        483.17333279999997
+      ]
+    },
+    {
+      "text": "Example: 3.925 V (MAXIMUM CELL VOLTAGE) × 2 = 7.850 V (Adjustment voltage value)",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        72.0009684,
+        478.4940608000002,
+        487.03586040000016,
+        465.7155008000002
+      ]
+    },
+    {
+      "text": ">> GO TO 2.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.78204480000002,
+        446.45787680000024,
+        154.05540120000003,
+        437.2142892640886
+      ]
+    },
+    {
+      "text": "2.CHECK MODULE VOLTAGE",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        435.38399,
+        202.2428916000001,
+        419.44677011049725
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        412.1359784,
+        103.32472679999997,
+        402.8923908640884
+      ]
+    },
+    {
+      "text": "For details on the module charge balancer operation, refer to the adjuster operation manual.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        400.6165868,
+        510.2096327999995,
+        391.3729992640884
+      ]
+    },
+    {
+      "text": "Set the new module to the module charge balancer.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13991240000007,
+        389.1565988,
+        311.0540004000003,
+        379.91301126408837
+      ]
+    },
+    {
+      "text": "Measure module voltage and compare it with 'adjustment voltage value' confirmed in Step1.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13991240000007,
+        377.6360588,
+        498.00078359999884,
+        368.3924712640884
+      ]
+    },
+    {
+      "text": "Module voltage is lower than adjustment voltage value>>GO TO 4.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84025680000007,
+        348.6557672,
+        366.0637175999996,
+        339.4121796640884
+      ]
+    },
+    {
+      "text": "Module voltage is higher than adjustment voltage value>>GO TO 3.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84025680000007,
+        337.1363756,
+        370.15838999999966,
+        327.8927880640884
+      ]
+    },
+    {
+      "text": "3.DISCAHRGE OF MODULE VOLTAGE",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        326.06397999999996,
+        245.33931599999994,
+        310.12676011049723
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        302.8159684,
+        103.31668800000001,
+        293.57238086408836
+      ]
+    },
+    {
+      "text": "For details on the module charge balancer operation, refer to the adjuster operation manual. Discharge the module to 5.0 V using module charge balancer.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        291.2954284,
+        510.2096327999995,
+        270.5918528640884
+      ]
+    },
+    {
+      "text": "Discharge voltage",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        86.52,
+        255.29592000000002,
+        176.30347800000007,
+        246.0523324640884
+      ]
+    },
+    {
+      "text": ": 5.0 V",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        224.31923040000007,
+        255.29592000000002,
+        255.1949040000001,
+        246.0523324640884
+      ]
+    },
+    {
+      "text": ">> GO TO 4.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.77974800000007,
+        223.3153684,
+        154.05310440000008,
+        214.0717808640884
+      ]
+    },
+    {
+      "text": "4.ADJUST VOLTAGE WITH A MODULE CHARGE BALANCER",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        212.2441,
+        352.91516400000046,
+        196.30688011049722
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        188.99608839999996,
+        103.31668800000001,
+        179.75250086408846
+      ]
+    },
+    {
+      "text": "For details on the module charge balancer operation, refer to the adjuster operation manual.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139808,
+        177.4766968,
+        510.2096327999995,
+        168.2331092640884
+      ]
+    },
+    {
+      "text": "Enter 'adjustment voltage value' into module charge balancer.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13991240000007,
+        166.01670880000006,
+        359.6793443999999,
+        156.77312126408833
+      ]
+    },
+    {
+      "text": "Start the voltage adjustment.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.13991240000007,
+        124.01669319999996,
+        204.44312160000007,
+        114.77310566408835
+      ]
+    },
+    {
+      "text": "Adjustment voltage value",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        86.52,
+        141.475908,
+        213.04862400000007,
+        132.2323204640884
+      ]
+    },
+    {
+      "text": ": MAXIMUM CELL VOLTAGE × 2",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        224.40316800000008,
+        144.47218799999996,
+        378.64581599999997,
+        131.693628
+      ]
+    },
+    {
+      "text": ">> After module voltage adjustment, GO TO 5.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.77974800000007,
+        94.97678919999998,
+        309.6852120000003,
+        85.73320166408837
+      ]
+    },
+    {
+      "text": "5.CHECK MODULE VOLTAGE",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        83.904,
+        202.2428916000001,
+        67.96678011049721
+      ]
+    },
+    {
+      "text": "Remove the module from the module charge balancer.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        60.655988399999956,
+        324.51732000000044,
+        51.41240086408834
+      ]
+    },
+    {
+      "text": "Using a circuit tester, check that the module voltage is within the specified range.",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808,
+        49.1960004,
+        445.29141599999963,
+        39.95241286408839
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745930",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        641.8869,
+        559.5492259999992,
+        636.32922
+      ]
+    },
+    {
+      "text": "< BASIC INSPECTION >",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        174.53211000000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": ">> GO TO 6.",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        95.04001,
+        692.87592,
+        155.30104719999994,
+        683.6323324640884
+      ]
+    },
+    {
+      "text": "6.CHECK CELL VOLTAGE",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        681.74407,
+        183.91907999999998,
+        665.8068501104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        64.980336,
+        656.9363224,
+        138.10126079999998,
+        647.6927348640885
+      ]
+    },
+    {
+      "text": "After adjusting the voltage, install the module to the vehicle.",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        645.4157824,
+        348.5266644000003,
+        636.1721948640885
+      ]
+    },
+    {
+      "text": "Select 'DATA MONITOR' of 'HV BAT'.",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        633.9557944000001,
+        252.28030439999986,
+        624.7122068640886
+      ]
+    },
+    {
+      "text": "Check 'CELL VOLTAGE' of install module.",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        622.4352544000001,
+        271.03054440000017,
+        613.1916668640886
+      ]
+    },
+    {
+      "text": "Check that the difference from the 'MAXIMUM CELL VOLTAGE' confirmed in Step1 is within the specified range.",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.460944399999995,
+        610.9147144000001,
+        559.8336216000008,
+        590.2111388640886
+      ]
+    },
+    {
+      "text": ">> WORK END",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        95.0414808,
+        542.9346544000001,
+        167.69761679999996,
+        533.6910668640886
+      ]
+    },
+    {
+      "text": "Standard : Adjustment voltage value ± 10 mV",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        87.8410128,
+        727.8509620000002,
+        327.4923612,
+        715.0724020000002
+      ]
+    },
+    {
+      "text": "Standard",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        87.84101279999999,
+        574.9142536000002,
+        132.64844879999995,
+        565.6706660640887
+      ]
+    },
+    {
+      "text": ": MAXIMUM CELL VOLTAGE ± 33 mV",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        152.12635679999994,
+        577.9105336000002,
+        334.3326492,
+        565.1319736000003
+      ]
+    },
+    {
+      "text": "MODULE CHARGE BALANCE",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        211.01999,
+        769.00991,
+        400.90864279999994,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "P0A0D HV SYSTEM INTERLOCK ERROR",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        175.98,
+        769.00991,
+        435.4827455999999,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "DTC/CIRCUIT DIAGNOSIS",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.25323718,
+        284.3356584659999,
+        719.4660233757127
+      ]
+    },
+    {
+      "text": "P0A0D HV SYSTEM INTERLOCK ERROR",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        713.06999,
+        338.83409999999986,
+        699.7889734254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        688.96993,
+        115.668192,
+        677.0701391491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        661.2682671800001,
+        184.12012196580005,
+        651.1215616630055
+      ]
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        588.3081135150001,
+        243.16289568650018,
+        578.1614079980055
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        575.18401,
+        296.6362560000002,
+        559.2467901104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.660348,
+        550.3762624,
+        136.75914,
+        541.1326748640885
+      ]
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        538.8568708,
+        307.5054443999999,
+        529.6132832640885
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        527.3374792000001,
+        274.7656043999999,
+        518.0938916640886
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        515.8774912000001,
+        128.9680812,
+        506.6339036640885
+      ]
+    },
+    {
+      "text": "Is P0A1F detected?",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.1409564,
+        501.35764360000013,
+        144.02882520000003,
+        492.1140560640885
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-88, \"Diagnosis Procedure\".",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        486.83592,
+        298.34232,
+        477.5923324640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.8401116,
+        475.375932,
+        197.8112795999999,
+        466.13234446408836
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        458.02992,
+        177.000288,
+        446.13012914917124
+      ]
+    },
+    {
+      "text": "DANGER:",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        430.37592,
+        100.97268239999997,
+        421.1323324640884
+      ]
+    },
+    {
+      "text": "Since hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14010439999987,
+        408.115752,
+        558.5875319999999,
+        364.3128412640884
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14010439999987,
+        359.0959848,
+        106.19007239999988,
+        349.8523972640884
+      ]
+    },
+    {
+      "text": "Be sure to remove the service plug in order to disconnect the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999987,
+        347.5754448,
+        558.528024,
+        326.8124656640884
+      ]
+    },
+    {
+      "text": "The removed service plug must always be carried in a pocket of the responsible worker or placed in the tool box during the procedure to prevent the plug from being connected by mistake.",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        324.5960652,
+        558.6052799999992,
+        303.8319376640884
+      ]
+    },
+    {
+      "text": "Be sure to wear insulating protective equipment consisting of glove, shoes, face shield and glasses before beginning work on the high voltage system.",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1401043999999,
+        301.5561336,
+        558.5504699999996,
+        280.8525580640884
+      ]
+    },
+    {
+      "text": "Never allow workers other than the responsible person to touch the vehicle containing high voltage parts. To keep others from touching the high voltage parts, these parts must be covered with an insulating sheet except when using them.",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        278.57675399999994,
+        558.5803284000008,
+        246.3537868640883
+      ]
+    },
+    {
+      "text": "Refer to EVB-6, \"High Voltage Precautions\".",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14010439999993,
+        244.07798279999997,
+        278.30231,
+        234.83233246408838
+      ]
+    },
+    {
+      "text": "CAUTION:",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139545999999996,
+        232.55652840000005,
+        103.316426,
+        223.31294086408843
+      ]
+    },
+    {
+      "text": "Never  bring  the  vehicle  into  the  READY  status  with  the  service  plug  removed  unless  otherwise instructed in the Service Manual. A malfunction may occur if this is not observed.",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.13954599999997,
+        221.09654039999998,
+        558.5975179999997,
+        200.33356126408842
+      ]
+    },
+    {
+      "text": "1.PRECONDITIONING",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        198.50400000000002,
+        165.98800799999998,
+        182.56678011049723
+      ]
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        172.2555324,
+        106.18977600000001,
+        163.01194486408838
+      ]
+    },
+    {
+      "text": "Disconnect the high voltage. Refer to GI-33, \"How to Disconnect High Voltage\".",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139808,
+        160.73614080000004,
+        444.62232,
+        151.49243246408844
+      ]
+    },
+    {
+      "text": "Remove Li-ion battery. Refer to EVB-194, \"Removal and Installation\".",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139916000000085,
+        149.2166284,
+        392.06232,
+        139.97233246408837
+      ]
+    },
+    {
+      "text": "Remove battery pack upper case. Refer to EVB-204, \"BATTERY PACK UPPER CASE : Removal and Installation\".",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.140096000000085,
+        137.75593200000003,
+        558.5183063999997,
+        116.99243246408844
+      ]
+    },
+    {
+      "text": ">> GO TO 2.",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        93.7796556,
+        97.25572839999995,
+        154.05301200000002,
+        88.01214086408845
+      ]
+    },
+    {
+      "text": "2.CHECK LI-ION BATTERY INTERLOCK DETECTIONG CIRCUIT FOR SHORT-1",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        86.12401,
+        440.64039600000024,
+        70.18679011049721
+      ]
+    },
+    {
+      "text": "Disconnect Li-ion battery controller (LBC) harness connector.",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808000000016,
+        62.87599839999996,
+        354.70812960000023,
+        53.63241086408834
+      ]
+    },
+    {
+      "text": "Disconnect interlock detecting switch (high voltage harness connector) harness connector.",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808000000016,
+        51.416010400000005,
+        489.5705880000009,
+        42.17242286408839
+      ]
+    },
+    {
+      "text": "Check the continuity between Li-ion battery controller harness connector and ground.",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139808000000016,
+        39.896618800000056,
+        465.8759639999997,
+        30.65303126408844
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745933",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        683.82691,
+        559.5492259999992,
+        678.26923
+      ]
+    },
+    {
+      "text": "INFOID:0000000009346499",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        452.88689999999997,
+        559.5492259999992,
+        447.32922
+      ]
+    },
+    {
+      "text": "P0A0D HV SYSTEM INTERLOCK ERROR",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        176.28,
+        769.00991,
+        435.7827455999999,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        205.69554599999992,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        673.37592,
+        198.38673280000006,
+        664.1323324640884
+      ]
+    },
+    {
+      "text": "YES >> GO TO 3.",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        658.9159,
+        155.30461,
+        649.6723124640885
+      ]
+    },
+    {
+      "text": "NO >> Replace Li-ion battery vehicle communication harness.",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        647.39536,
+        363.72146200000054,
+        638.1517724640885
+      ]
+    },
+    {
+      "text": "3.CHECK LI-ION BATTERY INTERLOCK DETECTIONG CIRCUIT FOR SHORT-2",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        636.32402,
+        440.7869280000008,
+        620.3868001104972
+      ]
+    },
+    {
+      "text": "Disconnect interlock detecting switch (service plug) harness connector.",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.459795999999955,
+        613.0760084,
+        401.22767999999985,
+        603.8324208640885
+      ]
+    },
+    {
+      "text": "Check the continuity between Li-ion battery controller harness connector and ground.",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        53.459795999999955,
+        601.5566168,
+        467.1261083999997,
+        592.3130292640885
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459795999999955,
+        525.5963252,
+        198.38651880000003,
+        516.3527376640885
+      ]
+    },
+    {
+      "text": "YES >> GO TO 4.",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        511.13587,
+        155.30461,
+        501.8922824640884
+      ]
+    },
+    {
+      "text": "NO >> Replace Li-ion battery vehicle communication harness.",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        499.6164784,
+        363.72146200000054,
+        490.3728908640884
+      ]
+    },
+    {
+      "text": "4.CHECK INTERLOCK DETECTIONG SWITCH (SERVICE PLUG)",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        488.544,
+        369.6396852000005,
+        472.60678011049725
+      ]
+    },
+    {
+      "text": "Refer to EVB-89, \"Component Inspection\".",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.45979600000001,
+        465.2959884,
+        250.52232,
+        456.0523524640884
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.460012000000006,
+        450.77609240000004,
+        198.38673480000008,
+        441.5325048640884
+      ]
+    },
+    {
+      "text": "YES >> Replace Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.10001,
+        436.2559,
+        559.8307024,
+        415.5523524640884
+      ]
+    },
+    {
+      "text": "NO >> Replace service plug.",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        59.099628000000024,
+        413.2765484,
+        210.19983600000018,
+        404.0329608640884
+      ]
+    },
+    {
+      "text": "Component Inspection",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        395.92992,
+        187.04979840000016,
+        384.0301291491712
+      ]
+    },
+    {
+      "text": "1.CHECK INTERLOCK DETECTIONG SWITCH (SERVICE PLUG)",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.44,
+        374.544,
+        369.6396852000005,
+        358.60678011049725
+      ]
+    },
+    {
+      "text": "Check the continuity between terminals in the figure.",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.45979600000001,
+        351.2959884,
+        296.0675436000001,
+        342.0524008640884
+      ]
+    },
+    {
+      "text": "Value: Approx. 0 Ω",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        87.84,
+        329.75218,
+        192.6982116,
+        316.97362
+      ]
+    },
+    {
+      "text": "Is the inspection result normal?",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.459796000000026,
+        309.2959728,
+        198.3865188000001,
+        300.0523852640884
+      ]
+    },
+    {
+      "text": "YES >> INSPECTION END",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        294.77601,
+        199.11502599999997,
+        285.53242246408837
+      ]
+    },
+    {
+      "text": "NO >> Replace service plug.",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        59.10001,
+        283.316022,
+        210.20021800000015,
+        274.07243446408836
+      ]
+    },
+    {
+      "text": "INFOID:0000000009346500",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        390.78689999999995,
+        559.8580799999991,
+        385.22922
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    },
+    {
+      "text": "B",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        683.2923369400002,
+        580.9032233108999,
+        674.4737330804642
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "D",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        603.8512971800001,
+        581.21108722,
+        595.0326933204641
+      ]
+    },
+    {
+      "text": "E",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966409,
+        564.4913296620001,
+        580.9032233109,
+        555.6727258024641
+      ]
+    },
+    {
+      "text": "F",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.4998332818001,
+        523.9311809390001,
+        580.5853993918,
+        515.1125770794641
+      ]
+    },
+    {
+      "text": "G",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.7200640989,
+        484.33107757990007,
+        581.4689518789,
+        475.51247372036414
+      ]
+    },
+    {
+      "text": "H",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.01996,
+        445.45128214400006,
+        581.21108722,
+        436.63267828446413
+      ]
+    },
+    {
+      "text": "I",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        576.1195301079999,
+        405.13116966200005,
+        578.888412888,
+        396.3125658024641
+      ]
+    },
+    {
+      "text": "J",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        575.0398650239999,
+        365.95147832500004,
+        580.0198700239999,
+        357.1328744654641
+      ]
+    },
+    {
+      "text": "K",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2600958410999,
+        325.93116214400004,
+        580.9034225110998,
+        317.1125582844641
+      ]
+    },
+    {
+      "text": "L",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.7999283830999,
+        286.811230867,
+        580.3376939430999,
+        277.9926270074641
+      ]
+    },
+    {
+      "text": "M",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.4801274579999,
+        246.67129496589996,
+        581.7768157879999,
+        237.8526911063641
+      ]
+    },
+    {
+      "text": "N",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.899717542,
+        206.77042890489997,
+        581.090844762,
+        197.9518250453641
+      ]
+    },
+    {
+      "text": "O",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        573.5998216409,
+        166.8706288449,
+        581.3487094209,
+        158.05202498536403
+      ]
+    },
+    {
+      "text": "P",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.1396541829,
+        126.97082878489994,
+        580.7829808529,
+        118.15222492536407
+      ]
+    },
+    {
+      "text": "P0A1F BATTERY ENERGY CONTROL MODULE",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        154.67999,
+        769.00991,
+        456.73673239999965,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< DTC/CIRCUIT DIAGNOSIS >",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        205.37698980000002,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "P0A1F BATTERY ENERGY CONTROL MODULE",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        736.10997,
+        383.3726999999999,
+        722.8289534254144
+      ]
+    },
+    {
+      "text": "DTC Logic",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        712.00991,
+        115.668192,
+        700.1101191491713
+      ]
+    },
+    {
+      "text": "DTC DETECTION LOGIC",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        684.24824718,
+        184.12012196580005,
+        674.1015416630055
+      ]
+    },
+    {
+      "text": "DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        611.347685567,
+        243.16289568650018,
+        601.2009800500055
+      ]
+    },
+    {
+      "text": "1.PERFORM DTC CONFIRMATION PROCEDURE",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        598.16399,
+        296.6362560000002,
+        582.2267701104972
+      ]
+    },
+    {
+      "text": "With CONSULT",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        63.660348,
+        573.3562424,
+        136.75914,
+        564.1126548640885
+      ]
+    },
+    {
+      "text": "Power switch ON and wait for 10 seconds or more.",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        561.8368508000001,
+        307.5054443999999,
+        552.5932632640886
+      ]
+    },
+    {
+      "text": "Select 'Self Diagnostic Result' of 'HV BAT'.",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        550.3768628000001,
+        274.7656043999999,
+        541.1332752640886
+      ]
+    },
+    {
+      "text": "Check DTC.",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.1409564,
+        538.8574712000002,
+        128.9680812,
+        529.6138836640887
+      ]
+    },
+    {
+      "text": "Is P0A1F detected?",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.1409564,
+        524.3376236000001,
+        144.02882520000003,
+        515.0940360640886
+      ]
+    },
+    {
+      "text": "YES >> Refer to EVB-90, \"Diagnosis Procedure\".",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.84,
+        509.87586,
+        298.34232,
+        500.6322724640884
+      ]
+    },
+    {
+      "text": "NO >> INSPECTION END",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        57.8401116,
+        498.3564684,
+        197.8112795999999,
+        489.11288086408837
+      ]
+    },
+    {
+      "text": "Diagnosis Procedure",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        481.00991,
+        177.000288,
+        469.1101191491712
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745936",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        475.86688999999996,
+        559.5492259999992,
+        470.30921
+      ]
+    },
+    {
+      "text": "When this DTC is detected, replace Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        456.4159,
+        558.5231171999999,
+        435.6523224640884
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745935",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        496.85999,
+        706.86689,
+        559.5492259999992,
+        701.30921
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "bbox": [
+        54.979122161865234,
+        638.5473785400391,
+        555.9796752929688,
+        596.0536346435547
+      ],
+      "num_rows": 2,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P0A0D",
+          "HV SYSTEM INTERLOCK ERROR",
+          "Self diagnosis program of Li-ion battery controller de- tects a malfunction in the CPU.",
+          "Li-ion battery controller"
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name    | DTC detecting condition                                                                 | Possible causes           |\n|-------|---------------------------|-----------------------------------------------------------------------------------------|---------------------------|\n| P0A0D | HV SYSTEM INTERLOCK ERROR | Self diagnosis program of Li-ion battery controller de- tects a malfunction in the CPU. | Li-ion battery controller |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "bbox": [
+        51.99188995361328,
+        724.5143508911133,
+        337.9161071777344,
+        675.7583923339844
+      ],
+      "num_rows": 3,
+      "num_cols": 4,
+      "data": [
+        [
+          "LBC",
+          "LBC",
+          "-",
+          "Continuity"
+        ],
+        [
+          "Connector",
+          "Terminal",
+          "",
+          ""
+        ],
+        [
+          "LB11",
+          "8",
+          "Ground",
+          "Not existed"
+        ]
+      ],
+      "markdown": "| LBC       | LBC      | -      | Continuity   |\n|-----------|----------|--------|--------------|\n| Connector | Terminal |        |              |\n| LB11      | 8        | Ground | Not existed  |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "bbox": [
+        51.932796478271484,
+        576.7144622802734,
+        337.8503723144531,
+        528.7627258300781
+      ],
+      "num_rows": 3,
+      "num_cols": 4,
+      "data": [
+        [
+          "LBC",
+          "LBC",
+          "-",
+          "Continuity"
+        ],
+        [
+          "Connector",
+          "Terminal",
+          "-",
+          "Continuity"
+        ],
+        [
+          "LB11",
+          "6",
+          "Ground",
+          "Not existed"
+        ]
+      ],
+      "markdown": "| LBC       | LBC      | -      | Continuity   |\n|-----------|----------|--------|--------------|\n| Connector | Terminal | -      | Continuity   |\n| LB11      | 6        | Ground | Not existed  |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "bbox": [
+        54.48197937011719,
+        661.3134460449219,
+        556.0828247070312,
+        618.5823211669922
+      ],
+      "num_rows": 2,
+      "num_cols": 4,
+      "data": [
+        [
+          "DTC",
+          "Trouble diagnosis name",
+          "DTC detecting condition",
+          "Possible causes"
+        ],
+        [
+          "P0A1F",
+          "BATTERY ENERGY CON- TROL MODULE",
+          "Self diagnosis program of Li-ion battery controller de- tects a malfunction in the CPU.",
+          "Li-ion battery controller"
+        ]
+      ],
+      "markdown": "| DTC   | Trouble diagnosis name          | DTC detecting condition                                                                 | Possible causes           |\n|-------|---------------------------------|-----------------------------------------------------------------------------------------|---------------------------|\n| P0A1F | BATTERY ENERGY CON- TROL MODULE | Self diagnosis program of Li-ion battery controller de- tects a malfunction in the CPU. | Li-ion battery controller |",
+      "tableformer": true
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_86_raster_1.png",
+      "page_pdf": 86,
+      "page_manual": "EVB-86",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        227.45997619628906,
+        63.65999984741211,
+        239.03997802734375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_87_raster_1.png",
+      "page_pdf": 87,
+      "page_manual": "EVB-87",
+      "section_code": "EVB",
+      "bbox": [
+        53.459991455078125,
+        133.97999572753906,
+        64.97999572753906,
+        145.55999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_88_raster_1.jpeg",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        373.6199645996094,
+        79.0399169921875,
+        392.39996337890625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_88_raster_2.png",
+      "page_pdf": 88,
+      "page_manual": "EVB-88",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        240.5399932861328,
+        63.65999984741211,
+        252.17999267578125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_89_raster_1.png",
+      "page_pdf": 89,
+      "page_manual": "EVB-89",
+      "section_code": "EVB",
+      "bbox": [
+        375.5999755859375,
+        441.23992919921875,
+        559.8599853515625,
+        571.6199340820312
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_90_raster_1.png",
+      "page_pdf": 90,
+      "page_manual": "EVB-90",
+      "section_code": "EVB",
+      "bbox": [
+        52.13999938964844,
+        217.5600128173828,
+        63.65999984741211,
+        229.1400146484375
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

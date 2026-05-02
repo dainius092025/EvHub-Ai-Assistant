@@ -1,0 +1,2075 @@
+{
+  "schema_version": "1.0",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-41\nP309F\nCELL CONT ASIC21 OPEN\n×\nP30A0\nCELL CONT ASIC22 OPEN\n×\nRevision: October 2013\n2013 LEAF",
+    "page_start": 41,
+    "page_end": 45,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "41": [
+        "EVB-41",
+        "EVB",
+        "EVB-41\nP309F\nCELL CONT ASIC21 OPEN\n×\nP30A0\nCELL CONT ASIC22 OPEN\n×\nRevision: October 2013\n2013 LEAF"
+      ],
+      "42": [
+        "EVB-42",
+        "EVB",
+        "EVB-42\nP331B\nCELL OVER VOLTAGE MODULE26\n×\nP331C\nCELL OVER VOLTAGE MODULE27\n×\nRevision: October 2013\n2013 LEAF"
+      ],
+      "43": [
+        "EVB-43",
+        "EVB",
+        "EVB-43\nP3389\nCELL OVER DISCHARGE MODULE21\n×\nP338A\nCELL OVER DISCHARGE MODULE22\n×\nRevision: October 2013\n2013 LEAF"
+      ],
+      "44": [
+        "EVB-44",
+        "EVB",
+        "EVB-44\nU1000\nCAN COMM CIRCUIT\n×\n×\nRevision: October 2013\n2013 LEAF"
+      ],
+      "45": [
+        "EVB-45",
+        "EVB",
+        "EVB-45\nP3054\nCELL CONT ASIC12 VOLT\n×\n1\nEVB 94\nP3055\nCELL CONT ASIC13 VOLT\n×\n1\nEVB-96\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "EV BATTERY SYSTEM",
+      "page_pdf": 41,
+      "page_manual": "EVB-41",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        233.81998,
+        769.00991,
+        378.19004080000013,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< ECU DIAGNOSIS INFORMATION >",
+      "page_pdf": 41,
+      "page_manual": "EVB-41",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        238.58394,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 41,
+      "page_manual": "EVB-41",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "EV BATTERY SYSTEM",
+      "page_pdf": 42,
+      "page_manual": "EVB-42",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        233.51999,
+        769.00991,
+        377.92714519999987,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< ECU DIAGNOSIS INFORMATION >",
+      "page_pdf": 42,
+      "page_manual": "EVB-42",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        238.43326800000003,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "EV BATTERY SYSTEM",
+      "page_pdf": 43,
+      "page_manual": "EVB-43",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        233.81998,
+        769.00991,
+        378.19004080000013,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< ECU DIAGNOSIS INFORMATION >",
+      "page_pdf": 43,
+      "page_manual": "EVB-43",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        238.58394,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 43,
+      "page_manual": "EVB-43",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ]
+    },
+    {
+      "text": "EV BATTERY SYSTEM",
+      "page_pdf": 44,
+      "page_manual": "EVB-44",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        233.51999,
+        769.00991,
+        377.92714519999987,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< ECU DIAGNOSIS INFORMATION >",
+      "page_pdf": 44,
+      "page_manual": "EVB-44",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        751.4636,
+        238.43326800000003,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "EV BATTERY SYSTEM",
+      "page_pdf": 45,
+      "page_manual": "EVB-45",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        233.81998,
+        769.00991,
+        378.19004080000013,
+        757.1101191491713
+      ]
+    },
+    {
+      "text": "< ECU DIAGNOSIS INFORMATION >",
+      "page_pdf": 45,
+      "page_manual": "EVB-45",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        751.4636,
+        238.58394,
+        741.7418958674033
+      ]
+    },
+    {
+      "text": "DTC Index",
+      "page_pdf": 45,
+      "page_manual": "EVB-45",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        736.00991,
+        116.77029120000003,
+        724.1101191491713
+      ]
+    },
+    {
+      "text": "INFOID:0000000008745923",
+      "page_pdf": 45,
+      "page_manual": "EVB-45",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        497.15988,
+        730.86689,
+        559.8580799999991,
+        725.30921
+      ]
+    },
+    {
+      "text": "A",
+      "page_pdf": 45,
+      "page_manual": "EVB-45",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        574.2598966408999,
+        722.9521007590001,
+        580.9032233108999,
+        714.1334968994641
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 41,
+      "page_manual": "EVB-41",
+      "section_code": "EVB",
+      "bbox": [
+        50.503997802734375,
+        741.2780990600586,
+        582.9359130859375,
+        37.03662109375
+      ],
+      "num_rows": 45,
+      "num_cols": 6,
+      "data": [
+        [
+          "DTC",
+          "CONSULT",
+          "Pattern",
+          "Pattern",
+          "Pattern",
+          "Pattern"
+        ],
+        [
+          "DTC",
+          "CONSULT",
+          "A",
+          "B",
+          "C",
+          "A"
+        ],
+        [
+          "P304F",
+          "CELL CONT ASIC7 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3050",
+          "CELL CONT ASIC8 VOLT",
+          "",
+          "×",
+          "",
+          "B"
+        ],
+        [
+          "P3051",
+          "CELL CONT ASIC9 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3052",
+          "CELL CONT ASIC10 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3053",
+          "CELL CONT ASIC11 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3054",
+          "CELL CONT ASIC12 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3055",
+          "CELL CONT ASIC13 VOLT",
+          "",
+          "×",
+          "",
+          "D"
+        ],
+        [
+          "P3056",
+          "CELL CONT ASIC14 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3057",
+          "CELL CONT ASIC15 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3058",
+          "CELL CONT ASIC16 VOLT",
+          "",
+          "×",
+          "",
+          "E"
+        ],
+        [
+          "P3059",
+          "CELL CONT ASIC17 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P305A",
+          "CELL CONT ASIC18 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P305B",
+          "CELL CONT ASIC19 VOLT",
+          "",
+          "×",
+          "",
+          "F"
+        ],
+        [
+          "P305C",
+          "CELL CONT ASIC20 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P305D",
+          "CELL CONT ASIC21 VOLT",
+          "",
+          "×",
+          "",
+          "G"
+        ],
+        [
+          "P305E",
+          "CELL CONT ASIC22 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P305F",
+          "CELL CONT ASIC23 VOLT",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3060",
+          "CELL CONT ASIC24 VOLT",
+          "",
+          "×",
+          "",
+          "H"
+        ],
+        [
+          "P3061",
+          "CELL BATTERY VOLT",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3062",
+          "BYPASS SW",
+          "",
+          "",
+          "",
+          "I"
+        ],
+        [
+          "P3064",
+          "CELL CONT ASIC",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P308B",
+          "CELL CONT ASIC1 OPEN",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P308C",
+          "CELL CONT ASIC2 OPEN",
+          "",
+          "×",
+          "",
+          "J"
+        ],
+        [
+          "P308D",
+          "CELL CONT ASIC3 OPEN",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P308E",
+          "CELL CONT ASIC4 OPEN",
+          "",
+          "×",
+          "",
+          "K"
+        ],
+        [
+          "P308F",
+          "CELL CONT ASIC5 OPEN",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3090",
+          "CELL CONT ASIC6 OPEN",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3091",
+          "CELL CONT ASIC7 OPEN",
+          "",
+          "×",
+          "",
+          "L"
+        ],
+        [
+          "P3092",
+          "CELL CONT ASIC8 OPEN",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3093",
+          "CELL CONT ASIC9 OPEN",
+          "",
+          "×",
+          "",
+          "M"
+        ],
+        [
+          "P3094",
+          "CELL CONT ASIC10 OPEN",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3095",
+          "CELL CONT ASIC11 OPEN",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3096",
+          "CELL CONT ASIC12 OPEN",
+          "",
+          "×",
+          "",
+          "N"
+        ],
+        [
+          "P3097",
+          "CELL CONT ASIC13 OPEN",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P3098",
+          "CELL CONT ASIC14 OPEN",
+          "",
+          "×",
+          "",
+          "O"
+        ],
+        [
+          "P3099",
+          "CELL CONT ASIC15 OPEN",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P309A",
+          "CELL CONT ASIC16 OPEN",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P309B",
+          "CELL CONT ASIC17 OPEN",
+          "",
+          "×",
+          "",
+          "P"
+        ],
+        [
+          "P309C",
+          "CELL CONT ASIC18 OPEN",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P309D",
+          "CELL CONT ASIC19 OPEN",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P309E",
+          "CELL CONT ASIC20 OPEN",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P309F",
+          "CELL CONT ASIC21 OPEN",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P30A0",
+          "CELL CONT ASIC22 OPEN",
+          "",
+          "×",
+          "",
+          ""
+        ]
+      ],
+      "markdown": "| DTC   | CONSULT               | Pattern   | Pattern   | Pattern   | Pattern   |\n|-------|-----------------------|-----------|-----------|-----------|-----------|\n| DTC   | CONSULT               | A         | B         | C         | A         |\n| P304F | CELL CONT ASIC7 VOLT  |           | ×         |           |           |\n| P3050 | CELL CONT ASIC8 VOLT  |           | ×         |           | B         |\n| P3051 | CELL CONT ASIC9 VOLT  |           | ×         |           |           |\n| P3052 | CELL CONT ASIC10 VOLT |           | ×         |           |           |\n| P3053 | CELL CONT ASIC11 VOLT |           | ×         |           |           |\n| P3054 | CELL CONT ASIC12 VOLT |           | ×         |           |           |\n| P3055 | CELL CONT ASIC13 VOLT |           | ×         |           | D         |\n| P3056 | CELL CONT ASIC14 VOLT |           | ×         |           |           |\n| P3057 | CELL CONT ASIC15 VOLT |           | ×         |           |           |\n| P3058 | CELL CONT ASIC16 VOLT |           | ×         |           | E         |\n| P3059 | CELL CONT ASIC17 VOLT |           | ×         |           |           |\n| P305A | CELL CONT ASIC18 VOLT |           | ×         |           |           |\n| P305B | CELL CONT ASIC19 VOLT |           | ×         |           | F         |\n| P305C | CELL CONT ASIC20 VOLT |           | ×         |           |           |\n| P305D | CELL CONT ASIC21 VOLT |           | ×         |           | G         |\n| P305E | CELL CONT ASIC22 VOLT |           | ×         |           |           |\n| P305F | CELL CONT ASIC23 VOLT |           | ×         |           |           |\n| P3060 | CELL CONT ASIC24 VOLT |           | ×         |           | H         |\n| P3061 | CELL BATTERY VOLT     |           |           |           |           |\n| P3062 | BYPASS SW             |           |           |           | I         |\n| P3064 | CELL CONT ASIC        |           |           |           |           |\n| P308B | CELL CONT ASIC1 OPEN  |           | ×         |           |           |\n| P308C | CELL CONT ASIC2 OPEN  |           | ×         |           | J         |\n| P308D | CELL CONT ASIC3 OPEN  |           | ×         |           |           |\n| P308E | CELL CONT ASIC4 OPEN  |           | ×         |           | K         |\n| P308F | CELL CONT ASIC5 OPEN  |           | ×         |           |           |\n| P3090 | CELL CONT ASIC6 OPEN  |           | ×         |           |           |\n| P3091 | CELL CONT ASIC7 OPEN  |           | ×         |           | L         |\n| P3092 | CELL CONT ASIC8 OPEN  |           | ×         |           |           |\n| P3093 | CELL CONT ASIC9 OPEN  |           | ×         |           | M         |\n| P3094 | CELL CONT ASIC10 OPEN |           | ×         |           |           |\n| P3095 | CELL CONT ASIC11 OPEN |           | ×         |           |           |\n| P3096 | CELL CONT ASIC12 OPEN |           | ×         |           | N         |\n| P3097 | CELL CONT ASIC13 OPEN |           | ×         |           |           |\n| P3098 | CELL CONT ASIC14 OPEN |           | ×         |           | O         |\n| P3099 | CELL CONT ASIC15 OPEN |           | ×         |           |           |\n| P309A | CELL CONT ASIC16 OPEN |           | ×         |           |           |\n| P309B | CELL CONT ASIC17 OPEN |           | ×         |           | P         |\n| P309C | CELL CONT ASIC18 OPEN |           | ×         |           |           |\n| P309D | CELL CONT ASIC19 OPEN |           | ×         |           |           |\n| P309E | CELL CONT ASIC20 OPEN |           | ×         |           |           |\n| P309F | CELL CONT ASIC21 OPEN |           | ×         |           |           |\n| P30A0 | CELL CONT ASIC22 OPEN |           | ×         |           |           |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 42,
+      "page_manual": "EVB-42",
+      "section_code": "EVB",
+      "bbox": [
+        50.53852081298828,
+        742.0681762695312,
+        561.6729125976562,
+        37.09979248046875
+      ],
+      "num_rows": 44,
+      "num_cols": 6,
+      "data": [
+        [
+          "DTC",
+          "",
+          "Pattern",
+          "Pattern",
+          "Pattern",
+          "Pattern"
+        ],
+        [
+          "",
+          "CONSULT screen items",
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        [
+          "P30A1",
+          "CELL CONT ASIC23 OPEN",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P30A2",
+          "CELL CONT ASIC24 OPEN",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P30E0",
+          "DLC DIAGNOSIS VCM",
+          "",
+          "",
+          "",
+          "×"
+        ],
+        [
+          "P30E2",
+          "DLC DIAGNOSIS HVAC",
+          "",
+          "No fail-safe",
+          "",
+          ""
+        ],
+        [
+          "P30E3",
+          "DLC DIAGNOSIS MC",
+          "",
+          "No fail-safe",
+          "",
+          ""
+        ],
+        [
+          "P30E4",
+          "DLC DIAGNOSIS PDM (POWER DELIVERY MODULE)",
+          "",
+          "No fail-safe",
+          "",
+          ""
+        ],
+        [
+          "P30FC",
+          "OVER CURRENT",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P318D",
+          "COMMUNICATION ERROR",
+          "",
+          "",
+          "",
+          "×"
+        ],
+        [
+          "P318E",
+          "COMMUNICATION ERROR",
+          "",
+          "",
+          "",
+          "×"
+        ],
+        [
+          "P3191",
+          "COMMUNICATION ERROR",
+          "",
+          "No fail-safe",
+          "",
+          ""
+        ],
+        [
+          "P3196",
+          "COMMUNICATION ERROR",
+          "",
+          "No fail-safe",
+          "",
+          ""
+        ],
+        [
+          "P3198",
+          "COMMUNICATION ERROR",
+          "",
+          "No fail-safe",
+          "",
+          ""
+        ],
+        [
+          "P3199",
+          "COMMUNICATION ERROR",
+          "",
+          "",
+          "",
+          "×"
+        ],
+        [
+          "P319C",
+          "COMMUNICATION ERROR",
+          "",
+          "No fail-safe",
+          "",
+          ""
+        ],
+        [
+          "P31A4",
+          "CAN ERROR VCM",
+          "",
+          "",
+          "",
+          "×"
+        ],
+        [
+          "P31A7",
+          "CAN ERROR INV/MC",
+          "",
+          "No fail-safe",
+          "",
+          ""
+        ],
+        [
+          "P3302",
+          "CELL OVER VOLTAGE MODULE1",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3303",
+          "CELL OVER VOLTAGE MODULE2",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3304",
+          "CELL OVER VOLTAGE MODULE3",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3306",
+          "CELL OVER VOLTAGE MODULE5",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3307",
+          "CELL OVER VOLTAGE MODULE6",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3308",
+          "CELL OVER VOLTAGE MODULE7",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "CELL OVER VOLTAGE MODULE8",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3309",
+          "",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P330A P330B",
+          "CELL OVER VOLTAGE MODULE9 CELL OVER VOLTAGE MODULE10",
+          "× ×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P330C",
+          "CELL OVER VOLTAGE MODULE11",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P330D",
+          "CELL OVER VOLTAGE MODULE12",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P330E",
+          "CELL OVER VOLTAGE MODULE13",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P330F",
+          "CELL OVER VOLTAGE MODULE14",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3310",
+          "CELL OVER VOLTAGE MODULE15",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3311",
+          "CELL OVER VOLTAGE MODULE16",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3312",
+          "CELL OVER VOLTAGE MODULE17",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3313",
+          "CELL OVER VOLTAGE MODULE18",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3314",
+          "CELL OVER VOLTAGE MODULE19",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3315",
+          "CELL OVER VOLTAGE MODULE20",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3316",
+          "CELL OVER VOLTAGE MODULE21",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3317",
+          "CELL OVER VOLTAGE MODULE22",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3318",
+          "CELL OVER VOLTAGE MODULE23",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3319",
+          "CELL OVER VOLTAGE MODULE24",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P331A",
+          "CELL OVER VOLTAGE MODULE25",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P331B",
+          "CELL OVER VOLTAGE MODULE26",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P331C",
+          "CELL OVER VOLTAGE MODULE27",
+          "×",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "markdown": "| DTC         |                                                      | Pattern   | Pattern      | Pattern   | Pattern   |\n|-------------|------------------------------------------------------|-----------|--------------|-----------|-----------|\n|             | CONSULT screen items                                 | A         | B            | C         | D         |\n| P30A1       | CELL CONT ASIC23 OPEN                                |           | ×            |           |           |\n| P30A2       | CELL CONT ASIC24 OPEN                                |           | ×            |           |           |\n| P30E0       | DLC DIAGNOSIS VCM                                    |           |              |           | ×         |\n| P30E2       | DLC DIAGNOSIS HVAC                                   |           | No fail-safe |           |           |\n| P30E3       | DLC DIAGNOSIS MC                                     |           | No fail-safe |           |           |\n| P30E4       | DLC DIAGNOSIS PDM (POWER DELIVERY MODULE)            |           | No fail-safe |           |           |\n| P30FC       | OVER CURRENT                                         | ×         |              |           |           |\n| P318D       | COMMUNICATION ERROR                                  |           |              |           | ×         |\n| P318E       | COMMUNICATION ERROR                                  |           |              |           | ×         |\n| P3191       | COMMUNICATION ERROR                                  |           | No fail-safe |           |           |\n| P3196       | COMMUNICATION ERROR                                  |           | No fail-safe |           |           |\n| P3198       | COMMUNICATION ERROR                                  |           | No fail-safe |           |           |\n| P3199       | COMMUNICATION ERROR                                  |           |              |           | ×         |\n| P319C       | COMMUNICATION ERROR                                  |           | No fail-safe |           |           |\n| P31A4       | CAN ERROR VCM                                        |           |              |           | ×         |\n| P31A7       | CAN ERROR INV/MC                                     |           | No fail-safe |           |           |\n| P3302       | CELL OVER VOLTAGE MODULE1                            | ×         |              |           |           |\n| P3303       | CELL OVER VOLTAGE MODULE2                            | ×         |              |           |           |\n| P3304       | CELL OVER VOLTAGE MODULE3                            | ×         |              |           |           |\n| P3306       | CELL OVER VOLTAGE MODULE5                            | ×         |              |           |           |\n| P3307       | CELL OVER VOLTAGE MODULE6                            | ×         |              |           |           |\n| P3308       | CELL OVER VOLTAGE MODULE7                            | ×         |              |           |           |\n|             | CELL OVER VOLTAGE MODULE8                            |           |              |           |           |\n| P3309       |                                                      | ×         |              |           |           |\n| P330A P330B | CELL OVER VOLTAGE MODULE9 CELL OVER VOLTAGE MODULE10 | × ×       |              |           |           |\n| P330C       | CELL OVER VOLTAGE MODULE11                           | ×         |              |           |           |\n| P330D       | CELL OVER VOLTAGE MODULE12                           | ×         |              |           |           |\n| P330E       | CELL OVER VOLTAGE MODULE13                           | ×         |              |           |           |\n| P330F       | CELL OVER VOLTAGE MODULE14                           | ×         |              |           |           |\n| P3310       | CELL OVER VOLTAGE MODULE15                           | ×         |              |           |           |\n| P3311       | CELL OVER VOLTAGE MODULE16                           | ×         |              |           |           |\n| P3312       | CELL OVER VOLTAGE MODULE17                           | ×         |              |           |           |\n| P3313       | CELL OVER VOLTAGE MODULE18                           | ×         |              |           |           |\n| P3314       | CELL OVER VOLTAGE MODULE19                           | ×         |              |           |           |\n| P3315       | CELL OVER VOLTAGE MODULE20                           | ×         |              |           |           |\n| P3316       | CELL OVER VOLTAGE MODULE21                           | ×         |              |           |           |\n| P3317       | CELL OVER VOLTAGE MODULE22                           | ×         |              |           |           |\n| P3318       | CELL OVER VOLTAGE MODULE23                           | ×         |              |           |           |\n| P3319       | CELL OVER VOLTAGE MODULE24                           | ×         |              |           |           |\n| P331A       | CELL OVER VOLTAGE MODULE25                           | ×         |              |           |           |\n| P331B       | CELL OVER VOLTAGE MODULE26                           | ×         |              |           |           |\n| P331C       | CELL OVER VOLTAGE MODULE27                           | ×         |              |           |           |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 43,
+      "page_manual": "EVB-43",
+      "section_code": "EVB",
+      "bbox": [
+        50.495296478271484,
+        741.5880355834961,
+        582.5184936523438,
+        37.04541015625
+      ],
+      "num_rows": 45,
+      "num_cols": 6,
+      "data": [
+        [
+          "DTC",
+          "CONSULT screen items",
+          "Pattern",
+          "Pattern",
+          "Pattern",
+          "Pattern"
+        ],
+        [
+          "DTC",
+          "CONSULT screen items",
+          "A",
+          "B",
+          "C",
+          "A"
+        ],
+        [
+          "P331D",
+          "CELL OVER VOLTAGE MODULE28",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P331E",
+          "CELL OVER VOLTAGE MODULE29",
+          "×",
+          "",
+          "",
+          "B"
+        ],
+        [
+          "P331F",
+          "CELL OVER VOLTAGE MODULE30",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3320",
+          "CELL OVER VOLTAGE MODULE31",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3321",
+          "CELL OVER VOLTAGE MODULE32",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3322",
+          "CELL OVER VOLTAGE MODULE33",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3323",
+          "CELL OVER VOLTAGE MODULE34",
+          "×",
+          "",
+          "",
+          "D"
+        ],
+        [
+          "P3324",
+          "CELL OVER VOLTAGE MODULE35",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3325",
+          "CELL OVER VOLTAGE MODULE36",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3326",
+          "CELL OVER VOLTAGE MODULE37",
+          "×",
+          "",
+          "",
+          "E"
+        ],
+        [
+          "P3327",
+          "CELL OVER VOLTAGE MODULE38",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3328",
+          "CELL OVER VOLTAGE MODULE39",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3329",
+          "CELL OVER VOLTAGE MODULE40",
+          "×",
+          "",
+          "",
+          "F"
+        ],
+        [
+          "P332A",
+          "CELL OVER VOLTAGE MODULE41",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P332B",
+          "CELL OVER VOLTAGE MODULE42",
+          "×",
+          "",
+          "",
+          "G"
+        ],
+        [
+          "P332C",
+          "CELL OVER VOLTAGE MODULE43",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P332D",
+          "CELL OVER VOLTAGE MODULE44",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P332E",
+          "CELL OVER VOLTAGE MODULE45",
+          "×",
+          "",
+          "",
+          "H"
+        ],
+        [
+          "P332F",
+          "CELL OVER VOLTAGE MODULE46",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3330",
+          "CELL OVER VOLTAGE MODULE47",
+          "×",
+          "",
+          "",
+          "I"
+        ],
+        [
+          "P3331",
+          "CELL OVER VOLTAGE MODULE48",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3375",
+          "CELL OVER DISCHARGE MODULE1",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3376",
+          "CELL OVER DISCHARGE MODULE2",
+          "×",
+          "",
+          "",
+          "J"
+        ],
+        [
+          "P3377",
+          "CELL OVER DISCHARGE MODULE3",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3378",
+          "CELL OVER DISCHARGE MODULE4",
+          "×",
+          "",
+          "",
+          "K"
+        ],
+        [
+          "P3379",
+          "CELL OVER DISCHARGE MODULE5",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P337A",
+          "CELL OVER DISCHARGE MODULE6",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P337B",
+          "CELL OVER DISCHARGE MODULE7",
+          "×",
+          "",
+          "",
+          "L"
+        ],
+        [
+          "P337C",
+          "CELL OVER DISCHARGE MODULE8",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P337D",
+          "CELL OVER DISCHARGE MODULE9",
+          "×",
+          "",
+          "",
+          "M"
+        ],
+        [
+          "P337E",
+          "CELL OVER DISCHARGE MODULE10",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P337F",
+          "CELL OVER DISCHARGE MODULE11",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3380",
+          "CELL OVER DISCHARGE MODULE12",
+          "×",
+          "",
+          "",
+          "N"
+        ],
+        [
+          "P3381",
+          "CELL OVER DISCHARGE MODULE13",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3382",
+          "CELL OVER DISCHARGE MODULE14",
+          "×",
+          "",
+          "",
+          "O"
+        ],
+        [
+          "P3383",
+          "CELL OVER DISCHARGE MODULE15",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3384",
+          "CELL OVER DISCHARGE MODULE16",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3385",
+          "CELL OVER DISCHARGE MODULE17",
+          "×",
+          "",
+          "",
+          "P"
+        ],
+        [
+          "P3386",
+          "CELL OVER DISCHARGE MODULE18",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3387",
+          "CELL OVER DISCHARGE MODULE19",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3388",
+          "CELL OVER DISCHARGE MODULE20",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3389",
+          "CELL OVER DISCHARGE MODULE21",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P338A",
+          "CELL OVER DISCHARGE MODULE22",
+          "×",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "markdown": "| DTC   | CONSULT screen items         | Pattern   | Pattern   | Pattern   | Pattern   |\n|-------|------------------------------|-----------|-----------|-----------|-----------|\n| DTC   | CONSULT screen items         | A         | B         | C         | A         |\n| P331D | CELL OVER VOLTAGE MODULE28   | ×         |           |           |           |\n| P331E | CELL OVER VOLTAGE MODULE29   | ×         |           |           | B         |\n| P331F | CELL OVER VOLTAGE MODULE30   | ×         |           |           |           |\n| P3320 | CELL OVER VOLTAGE MODULE31   | ×         |           |           |           |\n| P3321 | CELL OVER VOLTAGE MODULE32   | ×         |           |           |           |\n| P3322 | CELL OVER VOLTAGE MODULE33   | ×         |           |           |           |\n| P3323 | CELL OVER VOLTAGE MODULE34   | ×         |           |           | D         |\n| P3324 | CELL OVER VOLTAGE MODULE35   | ×         |           |           |           |\n| P3325 | CELL OVER VOLTAGE MODULE36   | ×         |           |           |           |\n| P3326 | CELL OVER VOLTAGE MODULE37   | ×         |           |           | E         |\n| P3327 | CELL OVER VOLTAGE MODULE38   | ×         |           |           |           |\n| P3328 | CELL OVER VOLTAGE MODULE39   | ×         |           |           |           |\n| P3329 | CELL OVER VOLTAGE MODULE40   | ×         |           |           | F         |\n| P332A | CELL OVER VOLTAGE MODULE41   | ×         |           |           |           |\n| P332B | CELL OVER VOLTAGE MODULE42   | ×         |           |           | G         |\n| P332C | CELL OVER VOLTAGE MODULE43   | ×         |           |           |           |\n| P332D | CELL OVER VOLTAGE MODULE44   | ×         |           |           |           |\n| P332E | CELL OVER VOLTAGE MODULE45   | ×         |           |           | H         |\n| P332F | CELL OVER VOLTAGE MODULE46   | ×         |           |           |           |\n| P3330 | CELL OVER VOLTAGE MODULE47   | ×         |           |           | I         |\n| P3331 | CELL OVER VOLTAGE MODULE48   | ×         |           |           |           |\n| P3375 | CELL OVER DISCHARGE MODULE1  | ×         |           |           |           |\n| P3376 | CELL OVER DISCHARGE MODULE2  | ×         |           |           | J         |\n| P3377 | CELL OVER DISCHARGE MODULE3  | ×         |           |           |           |\n| P3378 | CELL OVER DISCHARGE MODULE4  | ×         |           |           | K         |\n| P3379 | CELL OVER DISCHARGE MODULE5  | ×         |           |           |           |\n| P337A | CELL OVER DISCHARGE MODULE6  | ×         |           |           |           |\n| P337B | CELL OVER DISCHARGE MODULE7  | ×         |           |           | L         |\n| P337C | CELL OVER DISCHARGE MODULE8  | ×         |           |           |           |\n| P337D | CELL OVER DISCHARGE MODULE9  | ×         |           |           | M         |\n| P337E | CELL OVER DISCHARGE MODULE10 | ×         |           |           |           |\n| P337F | CELL OVER DISCHARGE MODULE11 | ×         |           |           |           |\n| P3380 | CELL OVER DISCHARGE MODULE12 | ×         |           |           | N         |\n| P3381 | CELL OVER DISCHARGE MODULE13 | ×         |           |           |           |\n| P3382 | CELL OVER DISCHARGE MODULE14 | ×         |           |           | O         |\n| P3383 | CELL OVER DISCHARGE MODULE15 | ×         |           |           |           |\n| P3384 | CELL OVER DISCHARGE MODULE16 | ×         |           |           |           |\n| P3385 | CELL OVER DISCHARGE MODULE17 | ×         |           |           | P         |\n| P3386 | CELL OVER DISCHARGE MODULE18 | ×         |           |           |           |\n| P3387 | CELL OVER DISCHARGE MODULE19 | ×         |           |           |           |\n| P3388 | CELL OVER DISCHARGE MODULE20 | ×         |           |           |           |\n| P3389 | CELL OVER DISCHARGE MODULE21 | ×         |           |           |           |\n| P338A | CELL OVER DISCHARGE MODULE22 | ×         |           |           |           |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 44,
+      "page_manual": "EVB-44",
+      "section_code": "EVB",
+      "bbox": [
+        50.6713752746582,
+        741.54248046875,
+        561.7529296875,
+        51.83685302734375
+      ],
+      "num_rows": 44,
+      "num_cols": 6,
+      "data": [
+        [
+          "DTC",
+          "CONSULT screen items",
+          "Pattern",
+          "Pattern",
+          "Pattern",
+          "Pattern"
+        ],
+        [
+          "DTC",
+          "CONSULT screen items",
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        [
+          "P338B",
+          "CELL OVER DISCHARGE MODULE23",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P338C",
+          "CELL OVER DISCHARGE MODULE24",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P338D",
+          "CELL OVER DISCHARGE MODULE25",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P338E",
+          "CELL OVER DISCHARGE MODULE26",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P338F",
+          "CELL OVER DISCHARGE MODULE27",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3390",
+          "CELL OVER DISCHARGE MODULE28",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3391",
+          "CELL OVER DISCHARGE MODULE29",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3392",
+          "CELL OVER DISCHARGE MODULE30",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3393",
+          "CELL OVER DISCHARGE MODULE31",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3394",
+          "CELL OVER DISCHARGE MODULE32",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3395",
+          "CELL OVER DISCHARGE MODULE33",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3396",
+          "CELL OVER DISCHARGE MODULE34",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3397",
+          "CELL OVER DISCHARGE MODULE35",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3398",
+          "CELL OVER DISCHARGE MODULE36",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P3399",
+          "CELL OVER DISCHARGE MODULE37",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P339A",
+          "CELL OVER DISCHARGE MODULE38",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P339B",
+          "CELL OVER DISCHARGE MODULE39",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P339C",
+          "CELL OVER DISCHARGE MODULE40",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P339D",
+          "CELL OVER DISCHARGE MODULE41",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P339E",
+          "CELL OVER DISCHARGE MODULE42",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P339F",
+          "CELL OVER DISCHARGE MODULE43",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P33A0",
+          "CELL OVER DISCHARGE MODULE44",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P33A1",
+          "CELL OVER DISCHARGE MODULE45",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P33A2",
+          "CELL OVER DISCHARGE MODULE46",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P33A3",
+          "CELL OVER DISCHARGE MODULE47",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P33A4",
+          "CELL OVER DISCHARGE MODULE48",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P33D4",
+          "BATT GRADUAL CAPA LOSS DIAG",
+          "",
+          "",
+          "",
+          "×"
+        ],
+        [
+          "P33D5",
+          "CURRENT SENSOR",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P33D6",
+          "CURRENT SENSOR",
+          "",
+          "×",
+          "",
+          ""
+        ],
+        [
+          "P33D7",
+          "TEMPERATURE SENSOR",
+          "",
+          "No",
+          "fail-safe",
+          ""
+        ],
+        [
+          "P33D9",
+          "TEMPERATURE SENSOR",
+          "",
+          "No",
+          "fail-safe",
+          ""
+        ],
+        [
+          "P33DD",
+          "TEMPERATURE SENSOR",
+          "",
+          "No",
+          "fail-safe",
+          ""
+        ],
+        [
+          "P33DF",
+          "BATT VOLTAGE ISOLATION SEN",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P33E0",
+          "BATT VOLTAGE ISOLATION SEN",
+          "",
+          "",
+          "",
+          "×"
+        ],
+        [
+          "P33E1",
+          "BATT VOLTAGE ISOLATION SEN",
+          "",
+          "",
+          "",
+          "×"
+        ],
+        [
+          "P33E2",
+          "BATT PACK OVER TEMP",
+          "×",
+          "",
+          "",
+          ""
+        ],
+        [
+          "P33E6",
+          "CELL VOLTAGE DEVIATION DIAG",
+          "",
+          "",
+          "×",
+          ""
+        ],
+        [
+          "P33EA",
+          "BATTERY HEATER RELAY",
+          "",
+          "",
+          "",
+          "×"
+        ],
+        [
+          "P33EB",
+          "TEMPERATURE SENSOR",
+          "",
+          "No fail-safe",
+          "No fail-safe",
+          ""
+        ],
+        [
+          "P33ED",
+          "BATTERY PARALLEL DIAGNOSIS",
+          "",
+          "",
+          "×",
+          ""
+        ],
+        [
+          "P33EE",
+          "BATTERY HEATER CONTROL SYSTEM",
+          "",
+          "",
+          "",
+          "×"
+        ],
+        [
+          "U1000",
+          "CAN COMM CIRCUIT",
+          "",
+          "×",
+          "",
+          "×"
+        ]
+      ],
+      "markdown": "| DTC   | CONSULT screen items          | Pattern   | Pattern      | Pattern      | Pattern   |\n|-------|-------------------------------|-----------|--------------|--------------|-----------|\n| DTC   | CONSULT screen items          | A         | B            | C            | D         |\n| P338B | CELL OVER DISCHARGE MODULE23  | ×         |              |              |           |\n| P338C | CELL OVER DISCHARGE MODULE24  | ×         |              |              |           |\n| P338D | CELL OVER DISCHARGE MODULE25  | ×         |              |              |           |\n| P338E | CELL OVER DISCHARGE MODULE26  | ×         |              |              |           |\n| P338F | CELL OVER DISCHARGE MODULE27  | ×         |              |              |           |\n| P3390 | CELL OVER DISCHARGE MODULE28  | ×         |              |              |           |\n| P3391 | CELL OVER DISCHARGE MODULE29  | ×         |              |              |           |\n| P3392 | CELL OVER DISCHARGE MODULE30  | ×         |              |              |           |\n| P3393 | CELL OVER DISCHARGE MODULE31  | ×         |              |              |           |\n| P3394 | CELL OVER DISCHARGE MODULE32  | ×         |              |              |           |\n| P3395 | CELL OVER DISCHARGE MODULE33  | ×         |              |              |           |\n| P3396 | CELL OVER DISCHARGE MODULE34  | ×         |              |              |           |\n| P3397 | CELL OVER DISCHARGE MODULE35  | ×         |              |              |           |\n| P3398 | CELL OVER DISCHARGE MODULE36  | ×         |              |              |           |\n| P3399 | CELL OVER DISCHARGE MODULE37  | ×         |              |              |           |\n| P339A | CELL OVER DISCHARGE MODULE38  | ×         |              |              |           |\n| P339B | CELL OVER DISCHARGE MODULE39  | ×         |              |              |           |\n| P339C | CELL OVER DISCHARGE MODULE40  | ×         |              |              |           |\n| P339D | CELL OVER DISCHARGE MODULE41  | ×         |              |              |           |\n| P339E | CELL OVER DISCHARGE MODULE42  | ×         |              |              |           |\n| P339F | CELL OVER DISCHARGE MODULE43  | ×         |              |              |           |\n| P33A0 | CELL OVER DISCHARGE MODULE44  | ×         |              |              |           |\n| P33A1 | CELL OVER DISCHARGE MODULE45  | ×         |              |              |           |\n| P33A2 | CELL OVER DISCHARGE MODULE46  | ×         |              |              |           |\n| P33A3 | CELL OVER DISCHARGE MODULE47  | ×         |              |              |           |\n| P33A4 | CELL OVER DISCHARGE MODULE48  | ×         |              |              |           |\n| P33D4 | BATT GRADUAL CAPA LOSS DIAG   |           |              |              | ×         |\n| P33D5 | CURRENT SENSOR                |           | ×            |              |           |\n| P33D6 | CURRENT SENSOR                |           | ×            |              |           |\n| P33D7 | TEMPERATURE SENSOR            |           | No           | fail-safe    |           |\n| P33D9 | TEMPERATURE SENSOR            |           | No           | fail-safe    |           |\n| P33DD | TEMPERATURE SENSOR            |           | No           | fail-safe    |           |\n| P33DF | BATT VOLTAGE ISOLATION SEN    |           |              |              |           |\n| P33E0 | BATT VOLTAGE ISOLATION SEN    |           |              |              | ×         |\n| P33E1 | BATT VOLTAGE ISOLATION SEN    |           |              |              | ×         |\n| P33E2 | BATT PACK OVER TEMP           | ×         |              |              |           |\n| P33E6 | CELL VOLTAGE DEVIATION DIAG   |           |              | ×            |           |\n| P33EA | BATTERY HEATER RELAY          |           |              |              | ×         |\n| P33EB | TEMPERATURE SENSOR            |           | No fail-safe | No fail-safe |           |\n| P33ED | BATTERY PARALLEL DIAGNOSIS    |           |              | ×            |           |\n| P33EE | BATTERY HEATER CONTROL SYSTEM |           |              |              | ×         |\n| U1000 | CAN COMM CIRCUIT              |           | ×            |              | ×         |",
+      "tableformer": true
+    },
+    {
+      "page_pdf": 45,
+      "page_manual": "EVB-45",
+      "section_code": "EVB",
+      "bbox": [
+        49.91744613647461,
+        719.9601058959961,
+        586.2332763671875,
+        39.75177001953125
+      ],
+      "num_rows": 41,
+      "num_cols": 6,
+      "data": [
+        [
+          "DTC",
+          "CONSULT screen items",
+          "EVsystem warning lamp",
+          "Trip",
+          "× : Applicable -: Not applicable Reference",
+          "B"
+        ],
+        [
+          "P0A0D",
+          "HV SYSTEM INTERLOCK ERROR",
+          "×",
+          "1",
+          "EVB-88",
+          ""
+        ],
+        [
+          "P0A1F",
+          "BATTERY ENERGY CONTROL MODULE",
+          "×",
+          "1",
+          "EVB-90",
+          "EVB"
+        ],
+        [
+          "P3030",
+          "CELL CONT LIN",
+          "×",
+          "1",
+          "EVB-91",
+          ""
+        ],
+        [
+          "P3031",
+          "CELL CONT ASIC1",
+          "×",
+          "1",
+          "EVB-92",
+          ""
+        ],
+        [
+          "P3032",
+          "CELL CONT ASIC2",
+          "×",
+          "1",
+          "EVB-92",
+          "D"
+        ],
+        [
+          "P3033",
+          "CELL CONT ASIC3",
+          "×",
+          "1",
+          "EVB-92",
+          ""
+        ],
+        [
+          "P3034",
+          "CELL CONT ASIC4",
+          "×",
+          "1",
+          "EVB-92",
+          "E"
+        ],
+        [
+          "P3035",
+          "CELL CONT ASIC5",
+          "×",
+          "1",
+          "EVB-92",
+          ""
+        ],
+        [
+          "P3036",
+          "CELL CONT ASIC6",
+          "×",
+          "1",
+          "EVB-92",
+          ""
+        ],
+        [
+          "P3037",
+          "CELL CONT ASIC7",
+          "×",
+          "1",
+          "EVB-92",
+          "F"
+        ],
+        [
+          "P3038",
+          "CELL CONT ASIC8",
+          "×",
+          "1",
+          "EVB-92",
+          ""
+        ],
+        [
+          "P3039",
+          "CELL CONT ASIC9",
+          "×",
+          "1",
+          "EVB-92",
+          "G"
+        ],
+        [
+          "P303A",
+          "CELL CONT ASIC10",
+          "×",
+          "1",
+          "EVB-92",
+          ""
+        ],
+        [
+          "P303B",
+          "CELL CONT ASIC11",
+          "×",
+          "1",
+          "EVB-92",
+          ""
+        ],
+        [
+          "P303C",
+          "CELL CONT ASIC12",
+          "×",
+          "1",
+          "EVB-92",
+          "H"
+        ],
+        [
+          "P303D",
+          "CELL CONT ASIC13",
+          "×",
+          "1",
+          "EVB-93",
+          ""
+        ],
+        [
+          "P303E",
+          "CELL CONT ASIC14",
+          "×",
+          "1",
+          "EVB-93",
+          "I"
+        ],
+        [
+          "P303F",
+          "CELL CONT ASIC15",
+          "×",
+          "1",
+          "EVB-93",
+          ""
+        ],
+        [
+          "P3040",
+          "CELL CONT ASIC16",
+          "×",
+          "1",
+          "EVB-93",
+          ""
+        ],
+        [
+          "P3041",
+          "CELL CONT ASIC17",
+          "×",
+          "1",
+          "EVB-93",
+          "J"
+        ],
+        [
+          "P3042",
+          "CELL CONT ASIC18",
+          "×",
+          "1",
+          "EVB-93",
+          ""
+        ],
+        [
+          "P3043",
+          "CELL CONT ASIC19",
+          "×",
+          "1",
+          "EVB-93",
+          ""
+        ],
+        [
+          "P3044",
+          "CELL CONT ASIC20",
+          "×",
+          "1",
+          "EVB-93",
+          "K"
+        ],
+        [
+          "P3045",
+          "CELL CONT ASIC21",
+          "×",
+          "1",
+          "EVB-93",
+          ""
+        ],
+        [
+          "P3046",
+          "CELL CONT ASIC22",
+          "×",
+          "1",
+          "EVB-93",
+          "L"
+        ],
+        [
+          "P3047",
+          "CELL CONT ASIC23",
+          "×",
+          "1",
+          "EVB-93",
+          ""
+        ],
+        [
+          "P3048",
+          "CELL CONT ASIC24",
+          "×",
+          "1",
+          "EVB-93",
+          ""
+        ],
+        [
+          "P3049",
+          "CELL CONT ASIC1 VOLT",
+          "×",
+          "1",
+          "EVB-94",
+          "M"
+        ],
+        [
+          "P304A",
+          "CELL CONT ASIC2 VOLT",
+          "×",
+          "1",
+          "EVB-94",
+          ""
+        ],
+        [
+          "P304B",
+          "CELL CONT ASIC3 VOLT",
+          "×",
+          "1",
+          "EVB-94",
+          "N"
+        ],
+        [
+          "P304C",
+          "CELL CONT ASIC4 VOLT",
+          "×",
+          "1",
+          "EVB-94",
+          ""
+        ],
+        [
+          "P304D",
+          "CELL CONT ASIC5 VOLT",
+          "×",
+          "1",
+          "EVB-94",
+          ""
+        ],
+        [
+          "P304E",
+          "CELL CONT ASIC6 VOLT",
+          "×",
+          "1",
+          "EVB-94",
+          "O"
+        ],
+        [
+          "P304F",
+          "CELL CONT ASIC7 VOLT",
+          "×",
+          "1",
+          "EVB-94",
+          ""
+        ],
+        [
+          "P3050",
+          "CELL CONT ASIC8 VOLT",
+          "×",
+          "1",
+          "EVB-94",
+          "P"
+        ],
+        [
+          "P3051",
+          "CELL CONT ASIC9 VOLT",
+          "×",
+          "1",
+          "EVB-94",
+          ""
+        ],
+        [
+          "P3052",
+          "CELL CONT ASIC10 VOLT",
+          "×",
+          "1",
+          "EVB-94",
+          ""
+        ],
+        [
+          "P3053",
+          "CELL CONT ASIC11 VOLT",
+          "×",
+          "1",
+          "EVB-94",
+          ""
+        ],
+        [
+          "P3054",
+          "CELL CONT ASIC12 VOLT",
+          "×",
+          "1",
+          "EVB-94",
+          ""
+        ],
+        [
+          "P3055",
+          "CELL CONT ASIC13 VOLT",
+          "×",
+          "1",
+          "EVB-96",
+          ""
+        ]
+      ],
+      "markdown": "| DTC   | CONSULT screen items          | EVsystem warning lamp   |   Trip | × : Applicable -: Not applicable Reference   | B   |\n|-------|-------------------------------|-------------------------|--------|----------------------------------------------|-----|\n| P0A0D | HV SYSTEM INTERLOCK ERROR     | ×                       |      1 | EVB-88                                       |     |\n| P0A1F | BATTERY ENERGY CONTROL MODULE | ×                       |      1 | EVB-90                                       | EVB |\n| P3030 | CELL CONT LIN                 | ×                       |      1 | EVB-91                                       |     |\n| P3031 | CELL CONT ASIC1               | ×                       |      1 | EVB-92                                       |     |\n| P3032 | CELL CONT ASIC2               | ×                       |      1 | EVB-92                                       | D   |\n| P3033 | CELL CONT ASIC3               | ×                       |      1 | EVB-92                                       |     |\n| P3034 | CELL CONT ASIC4               | ×                       |      1 | EVB-92                                       | E   |\n| P3035 | CELL CONT ASIC5               | ×                       |      1 | EVB-92                                       |     |\n| P3036 | CELL CONT ASIC6               | ×                       |      1 | EVB-92                                       |     |\n| P3037 | CELL CONT ASIC7               | ×                       |      1 | EVB-92                                       | F   |\n| P3038 | CELL CONT ASIC8               | ×                       |      1 | EVB-92                                       |     |\n| P3039 | CELL CONT ASIC9               | ×                       |      1 | EVB-92                                       | G   |\n| P303A | CELL CONT ASIC10              | ×                       |      1 | EVB-92                                       |     |\n| P303B | CELL CONT ASIC11              | ×                       |      1 | EVB-92                                       |     |\n| P303C | CELL CONT ASIC12              | ×                       |      1 | EVB-92                                       | H   |\n| P303D | CELL CONT ASIC13              | ×                       |      1 | EVB-93                                       |     |\n| P303E | CELL CONT ASIC14              | ×                       |      1 | EVB-93                                       | I   |\n| P303F | CELL CONT ASIC15              | ×                       |      1 | EVB-93                                       |     |\n| P3040 | CELL CONT ASIC16              | ×                       |      1 | EVB-93                                       |     |\n| P3041 | CELL CONT ASIC17              | ×                       |      1 | EVB-93                                       | J   |\n| P3042 | CELL CONT ASIC18              | ×                       |      1 | EVB-93                                       |     |\n| P3043 | CELL CONT ASIC19              | ×                       |      1 | EVB-93                                       |     |\n| P3044 | CELL CONT ASIC20              | ×                       |      1 | EVB-93                                       | K   |\n| P3045 | CELL CONT ASIC21              | ×                       |      1 | EVB-93                                       |     |\n| P3046 | CELL CONT ASIC22              | ×                       |      1 | EVB-93                                       | L   |\n| P3047 | CELL CONT ASIC23              | ×                       |      1 | EVB-93                                       |     |\n| P3048 | CELL CONT ASIC24              | ×                       |      1 | EVB-93                                       |     |\n| P3049 | CELL CONT ASIC1 VOLT          | ×                       |      1 | EVB-94                                       | M   |\n| P304A | CELL CONT ASIC2 VOLT          | ×                       |      1 | EVB-94                                       |     |\n| P304B | CELL CONT ASIC3 VOLT          | ×                       |      1 | EVB-94                                       | N   |\n| P304C | CELL CONT ASIC4 VOLT          | ×                       |      1 | EVB-94                                       |     |\n| P304D | CELL CONT ASIC5 VOLT          | ×                       |      1 | EVB-94                                       |     |\n| P304E | CELL CONT ASIC6 VOLT          | ×                       |      1 | EVB-94                                       | O   |\n| P304F | CELL CONT ASIC7 VOLT          | ×                       |      1 | EVB-94                                       |     |\n| P3050 | CELL CONT ASIC8 VOLT          | ×                       |      1 | EVB-94                                       | P   |\n| P3051 | CELL CONT ASIC9 VOLT          | ×                       |      1 | EVB-94                                       |     |\n| P3052 | CELL CONT ASIC10 VOLT         | ×                       |      1 | EVB-94                                       |     |\n| P3053 | CELL CONT ASIC11 VOLT         | ×                       |      1 | EVB-94                                       |     |\n| P3054 | CELL CONT ASIC12 VOLT         | ×                       |      1 | EVB-94                                       |     |\n| P3055 | CELL CONT ASIC13 VOLT         | ×                       |      1 | EVB-96                                       |     |",
+      "tableformer": true
+    }
+  ],
+  "images": []
+}

@@ -1,0 +1,1056 @@
+{
+  "schema_version": "1.1",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-6\ntouch the vehicle. When not working, cover high voltage parts with an insulating cover sheet or sim\nilar item to prevent other persons from contacting them.\nCAUTION:\nRevision: October 2013\n2013 LEAF",
+    "page_start": 6,
+    "page_end": 10,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "6": [
+        "EVB-6",
+        "EVB",
+        "EVB-6\ntouch the vehicle. When not working, cover high voltage parts with an insulating cover sheet or sim\nilar item to prevent other persons from contacting them.\nCAUTION:\nRevision: October 2013\n2013 LEAF"
+      ],
+      "7": [
+        "EVB-7",
+        "EVB",
+        "EVB-7\nRevision: October 2013\n2013 LEAF"
+      ],
+      "8": [
+        "EVB-8",
+        "EVB",
+        "EVB-8\nRevision: October 2013\n2013 LEAF"
+      ],
+      "9": [
+        "EVB-9",
+        "EVB",
+        "EVB-9\nJSCIA0726ZZ\nRevision: October 2013\n2013 LEAF"
+      ],
+      "10": [
+        "EVB-10",
+        "EVB",
+        "EVB-10\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "system uses the seat belt switches to determine the front air bag deployment, and may only deploy one front air bag, depending on the severity of a collision and whether the front occupants are belted or unbelted. Information necessary to service the system safely is included in the SR and SB section of this Service Manual.",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139999999999986,
+        735.83589,
+        558.5769875999998,
+        692.0935312640886
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.139999999999986,
+        686.8172712,
+        106.18265999999994,
+        677.5736836640885
+      ],
+      "type": "warning",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "To avoid rendering the SRS inoperative, which could increase the risk of personal injury or death in the event of a collision which would result in air bag inflation, all maintenance must be performed by an authorized NISSAN/INFINITI dealer.",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139999999999986,
+        675.3572832000001,
+        558.6061151999997,
+        643.0737640640887
+      ],
+      "type": "procedure_step",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "Improper maintenance, including incorrect removal and installation of the SRS, can lead to personal injury caused by unintentional activation of the system. For removal of Spiral Cable and Air Bag Module, see the SR section.",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.141357199999916,
+        640.8573636000002,
+        558.5797020000003,
+        608.5726960640887
+      ],
+      "type": "procedure_step",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "Do not use electrical test equipment on any circuit related to the SRS unless instructed to in this Service Manual. SRS wiring harnesses can be identified by yellow and/or orange harnesses or harness connectors.",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14052199999992,
+        606.2968920000003,
+        558.588054,
+        574.0739248640889
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "PRECAUTIONS WHEN USING POWER TOOLS (AIR OR ELECTRIC) AND HAMMERS",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        565.86829718,
+        500.81921731730057,
+        555.7215916630055
+      ],
+      "type": "section_header",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        549.35591,
+        106.18996800000001,
+        540.1123224640885
+      ],
+      "type": "warning",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "When working near the Airbag Diagnosis Sensor Unit or other Airbag System sensors with the Ignition ON or engine running, DO NOT use air or electric power tools or strike near the sensor(s) with a hammer. Heavy vibration could activate the sensor(s) and deploy the air bag(s), possibly causing serious injury.",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        537.8365184,
+        558.6059064,
+        494.09301126408855
+      ],
+      "type": "procedure_step",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "When using air or electric power tools or hammers, always switch the Ignition OFF, disconnect the battery and wait at least three minutes before performing any service.",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139895600000045,
+        491.81720720000015,
+        558.5269799999999,
+        471.11363166408853
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Precaution for Procedure without Cowl Top Cover",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        463.00991,
+        346.81173119999994,
+        451.1101191491712
+      ],
+      "type": "section_header",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "When performing the procedure after removing cowl top cover, cover the lower end of windshield with urethane, etc to prevent damage to windshield.",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        438.35591,
+        368.2590239999998,
+        406.13294286408836
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Precaution for Removing 12V Battery",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        301.1299,
+        274.31932800000016,
+        289.23010914917126
+      ],
+      "type": "section_header",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "CAUTION: When the 12V battery is removed, plural DTC may be detected. After installing 12V battery, always perform 'All DTC' with CONSULT and delete DTC.",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        276.4759,
+        103.31688000000001,
+        267.2323124640884
+      ],
+      "type": "warning",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "High Voltage Precautions",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14,
+        236.14992000000007,
+        202.9585728000002,
+        224.25012914917124
+      ],
+      "type": "section_header",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "WARNING:",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.14,
+        208.49592000000007,
+        106.18996800000001,
+        199.25233246408834
+      ],
+      "type": "warning",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "Because hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled  incorrectly.  Be  sure  to  follow  the  correct  work  procedures  when  performing  inspection  and maintenance.",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14,
+        197.035932,
+        558.591708,
+        153.2341696640883
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Be sure to remove the service plug in order to shut off the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139895600000045,
+        151.01776919999998,
+        558.5397167999997,
+        130.2547900640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "To prevent the removed service plug from being connected by mistake during the procedure, always carry it in your pocket or put it in the tool box.",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139895600000045,
+        127.97898599999996,
+        558.5790756,
+        107.2754104640884
+      ],
+      "type": "procedure_step",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Be sure to wear insulating protective equipment consisting of glove, shoes, face shield, and glasses before beginning work on the high voltage system.",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.139895600000045,
+        104.99960639999995,
+        558.5336616,
+        84.23662726408838
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Clearly identify the persons responsible for high voltage work and ensure that other persons do not touch the vehicle. When not working, cover high voltage parts with an insulating cover sheet or similar item to prevent other persons from contacting them.",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "list_item",
+      "bbox": [
+        52.14000000000004,
+        82.02022679999993,
+        558.540552,
+        49.736707664088385
+      ],
+      "type": "procedure_step",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "CAUTION: PRECAUTIONS",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.14000000000007,
+        47.520307199999934,
+        103.31688000000008,
+        38.27671966408832
+      ],
+      "type": "warning",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "There is the possibility of a malfunction occurring if the vehicle is changed to READY status while the service plug is removed. Therefore do not change the vehicle to READY status unless instructed to do so in the Service Manual.",
+      "page_pdf": 7,
+      "page_manual": "EVB-7",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        735.83589,
+        559.9849023999998,
+        703.6129228640885
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "HIGH VOLTAGE HARNESS AND EQUIPMENT IDENTIFICATION",
+      "page_pdf": 7,
+      "page_manual": "EVB-7",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        695.4083371800001,
+        387.68024553049975,
+        685.2616316630056
+      ],
+      "type": "section_header",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "The colors of the high voltage harnesses and connectors are all orange. Orange \"High Voltage\" labels are applied to the Li-ion battery and other high voltage devices. Do not carelessly touch these harnesses and parts.",
+      "page_pdf": 7,
+      "page_manual": "EVB-7",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        681.83589,
+        559.9361475999997,
+        649.6129228640885
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "HANDLING OF HIGH VOLTAGE HARNESS AND TERMINALS",
+      "page_pdf": 7,
+      "page_manual": "EVB-7",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        641.4083371800001,
+        373.28314956759993,
+        631.2616316630056
+      ],
+      "type": "section_header",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "Immediately insulate disconnected high voltage connectors and terminals with insulating tape.",
+      "page_pdf": 7,
+      "page_manual": "EVB-7",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        627.83589,
+        487.13646159999945,
+        618.5923024640884
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "REGULATIONS ON WORKERS WITH MEDICAL ELECTRONICS",
+      "page_pdf": 7,
+      "page_manual": "EVB-7",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        610.44825718,
+        388.1970919815005,
+        600.3015516630055
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "WARNING: The vehicle contains parts that contain powerful magnets. If a person who is wearing a heart pacemaker or other medical device is close to these parts, the medical device may be affected by the magnets. Such persons must not perform work on the vehicle.",
+      "page_pdf": 7,
+      "page_manual": "EVB-7",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        53.46001,
+        593.87592,
+        107.58932199999994,
+        584.6323324640884
+      ],
+      "type": "warning",
+      "safety_level": "WARNING"
+    },
+    {
+      "text": "PROHIBITED ITEMS TO CARRY DURING THE WORK",
+      "page_pdf": 7,
+      "page_manual": "EVB-7",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        541.9282971800001,
+        336.3732077600004,
+        531.7815916630055
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "F Because this vehicle uses components that contain high voltage and powerful magnetism, do not carry any metal products which may cause short circuits, or any magnetic media (cash cards, prepaid cards, etc.) which may be damaged on your person when working.",
+      "page_pdf": 7,
+      "page_manual": "EVB-7",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        53.46001,
+        528.4159,
+        580.5853993918,
+        496.1323808640884
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "POSTING A SIGN OF 'DANGER! HIGH VOLTAGE AREA. KEEP OUT'",
+      "page_pdf": 7,
+      "page_manual": "EVB-7",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        487.98826718,
+        414.7626557626002,
+        477.8415616630055
+      ],
+      "type": "section_header",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "PRECAUTIONS",
+      "page_pdf": 7,
+      "page_manual": "EVB-7",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        257.04001,
+        769.00991,
+        354.97728999999987,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 7,
+      "page_manual": "EVB-7",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "PRECAUTIONS",
+      "page_pdf": 8,
+      "page_manual": "EVB-8",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        256.73999,
+        769.00991,
+        354.67726999999985,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "CAUTION"
+    },
+    {
+      "text": "To call  the  attention  of  other  workers,  indicate  \"High  voltage  work  in  progress.  Do  not  touch!\"  on  vehicles where work is being performed on the high voltage systems.",
+      "page_pdf": 8,
+      "page_manual": "EVB-8",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        52.139999999999986,
+        735.83589,
+        558.5484863999992,
+        715.0729108640885
+      ],
+      "type": "general_text",
+      "safety_level": "HIGH_VOLTAGE"
+    },
+    {
+      "text": "JSAIA1600GB",
+      "page_pdf": 8,
+      "page_manual": "EVB-8",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        480.95999,
+        122.73563999999999,
+        513.1412480000001,
+        118.12914
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "PREPARATION PREPARATION",
+      "page_pdf": 9,
+      "page_manual": "EVB-9",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        736.25323718,
+        186.80576033,
+        699.7889734254144
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Special Service Tools",
+      "page_pdf": 9,
+      "page_manual": "EVB-9",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.44,
+        688.96993,
+        179.68696320000004,
+        677.0701391491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 9,
+      "page_manual": "EVB-9",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "PREPARATION",
+      "page_pdf": 9,
+      "page_manual": "EVB-9",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        257.04001,
+        769.00991,
+        354.9369699999999,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "Commercial Service Tools",
+      "page_pdf": 10,
+      "page_manual": "EVB-10",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        52.140047599999974,
+        736.009334,
+        207.69232279999989,
+        724.1095431491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "PREPARATION",
+      "page_pdf": 10,
+      "page_manual": "EVB-10",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        256.73999,
+        769.00991,
+        354.7041500000002,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 9,
+      "page_manual": "EVB-9",
+      "section_code": "EVB",
+      "bbox": [
+        53.09247589111328,
+        661.3346099853516,
+        584.2377319335938,
+        45.8419189453125
+      ],
+      "num_rows": 9,
+      "num_cols": 3,
+      "data": [
+        [
+          "The actual shape of the tools may Tool number (TechMate No.) Tool name",
+          "Description",
+          ""
+        ],
+        [
+          "- (J-50583) Palette",
+          "When removing/installing Li-ion battery.",
+          "D E"
+        ],
+        [
+          "KV99111300 (J-50306) Battery location guide pin",
+          "When installing Li-ion battery. 2 piece/set",
+          "F"
+        ],
+        [
+          "KV99111300 (J-50306) Battery location guide pin",
+          "When installing Li-ion battery. 2 piece/set",
+          "G"
+        ],
+        [
+          "KV99111300 (J-50306) Battery location guide pin",
+          "When installing Li-ion battery. 2 piece/set",
+          "H"
+        ],
+        [
+          "KV99111400 (-) Air leak tester",
+          "When checking air leaks after disassem- bling/assembling Li-ion battery.",
+          "I J"
+        ],
+        [
+          "KV99111500 (-) Module terminal cover",
+          "Protect module terminals (for LEAF) 24 pieces/set",
+          "K L"
+        ],
+        [
+          "KV99111500 (-) Module terminal cover",
+          "Protect module terminals (for LEAF) 24 pieces/set",
+          "M"
+        ],
+        [
+          "- (J-50346) Module charge balancer - (J-51031) Module charge balancer",
+          "Module voltage adjustment Module voltage adjustment Use with the module charge balancer (J- 50346).",
+          "N O P"
+        ]
+      ],
+      "markdown": "| The actual shape of the tools may Tool number (TechMate No.) Tool name | Description |  |\n| --- | --- | --- |\n| - (J-50583) Palette | When removing/installing Li-ion battery. | D E |\n| KV99111300 (J-50306) Battery location guide pin | When installing Li-ion battery. 2 piece/set | F |\n| KV99111300 (J-50306) Battery location guide pin | When installing Li-ion battery. 2 piece/set | G |\n| KV99111300 (J-50306) Battery location guide pin | When installing Li-ion battery. 2 piece/set | H |\n| KV99111400 (-) Air leak tester | When checking air leaks after disassem- bling/assembling Li-ion battery. | I J |\n| KV99111500 (-) Module terminal cover | Protect module terminals (for LEAF) 24 pieces/set | K L |\n| KV99111500 (-) Module terminal cover | Protect module terminals (for LEAF) 24 pieces/set | M |\n| - (J-50346) Module charge balancer - (J-51031) Module charge balancer | Module voltage adjustment Module voltage adjustment Use with the module charge balancer (J- 50346). | N O P |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "The actual shape of the tools may Tool number (TechMate No.) Tool name",
+          "Description",
+          ""
+        ],
+        [
+          "- (J-50583) Palette",
+          "When removing/installing Li-ion battery.",
+          "D E"
+        ],
+        [
+          "KV99111300 (J-50306) Battery location guide pin",
+          "When installing Li-ion battery. 2 piece/set",
+          "F"
+        ],
+        [
+          "KV99111300 (J-50306) Battery location guide pin",
+          "When installing Li-ion battery. 2 piece/set",
+          "G"
+        ],
+        [
+          "KV99111300 (J-50306) Battery location guide pin",
+          "When installing Li-ion battery. 2 piece/set",
+          "H"
+        ],
+        [
+          "KV99111400 (-) Air leak tester",
+          "When checking air leaks after disassem- bling/assembling Li-ion battery.",
+          "I J"
+        ],
+        [
+          "KV99111500 (-) Module terminal cover",
+          "Protect module terminals (for LEAF) 24 pieces/set",
+          "K L"
+        ],
+        [
+          "KV99111500 (-) Module terminal cover",
+          "Protect module terminals (for LEAF) 24 pieces/set",
+          "M"
+        ],
+        [
+          "- (J-50346) Module charge balancer - (J-51031) Module charge balancer",
+          "Module voltage adjustment Module voltage adjustment Use with the module charge balancer (J- 50346).",
+          "N O P"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 10,
+      "page_manual": "EVB-10",
+      "section_code": "EVB",
+      "bbox": [
+        50.190338134765625,
+        703.3763046264648,
+        562.0927124023438,
+        115.76385498046875
+      ],
+      "num_rows": 7,
+      "num_cols": 2,
+      "data": [
+        [
+          "Tool name",
+          "Description"
+        ],
+        [
+          "Insulated gloves",
+          "Removing and installing high voltage components [Guaranteed insulation performance for 1000V/ 300A]"
+        ],
+        [
+          "Leather gloves",
+          "• Removing and installing high voltage compo- nents • Protect insulated gloves [Use leather gloves that can fasten the wrist tight]"
+        ],
+        [
+          "Insulated safety shoes",
+          "Removing and installing high voltage components"
+        ],
+        [
+          "Safety glasses",
+          "• Removing and installing high voltage compo- nents • To protect eye from the spatter on the work to electric line [ANSI Z87.1]"
+        ],
+        [
+          "Face shield",
+          "• Removing and installing high voltage compo- nents • To protect face from the spatter on the work to electric line"
+        ],
+        [
+          "Insulated helmet",
+          "Removing and installing high voltage components"
+        ]
+      ],
+      "markdown": "| Tool name | Description |\n| --- | --- |\n| Insulated gloves | Removing and installing high voltage components [Guaranteed insulation performance for 1000V/ 300A] |\n| Leather gloves | • Removing and installing high voltage compo- nents • Protect insulated gloves [Use leather gloves that can fasten the wrist tight] |\n| Insulated safety shoes | Removing and installing high voltage components |\n| Safety glasses | • Removing and installing high voltage compo- nents • To protect eye from the spatter on the work to electric line [ANSI Z87.1] |\n| Face shield | • Removing and installing high voltage compo- nents • To protect face from the spatter on the work to electric line |\n| Insulated helmet | Removing and installing high voltage components |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "Tool name",
+          "Description"
+        ],
+        [
+          "Insulated gloves",
+          "Removing and installing high voltage components [Guaranteed insulation performance for 1000V/ 300A]"
+        ],
+        [
+          "Leather gloves",
+          "• Removing and installing high voltage compo- nents • Protect insulated gloves [Use leather gloves that can fasten the wrist tight]"
+        ],
+        [
+          "Insulated safety shoes",
+          "Removing and installing high voltage components"
+        ],
+        [
+          "Safety glasses",
+          "• Removing and installing high voltage compo- nents • To protect eye from the spatter on the work to electric line [ANSI Z87.1]"
+        ],
+        [
+          "Face shield",
+          "• Removing and installing high voltage compo- nents • To protect face from the spatter on the work to electric line"
+        ],
+        [
+          "Insulated helmet",
+          "Removing and installing high voltage components"
+        ]
+      ]
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_6_raster_1.png",
+      "page_pdf": 6,
+      "page_manual": "EVB-6",
+      "section_code": "EVB",
+      "bbox": [
+        374.3399658203125,
+        354.11993408203125,
+        558.47998046875,
+        484.5599365234375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_8_raster_1.png",
+      "page_pdf": 8,
+      "page_manual": "EVB-8",
+      "section_code": "EVB",
+      "bbox": [
+        87.239990234375,
+        78.65997314453125,
+        523.4999389648438,
+        675.6598510742188
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_9_raster_1.png",
+      "page_pdf": 9,
+      "page_manual": "EVB-9",
+      "section_code": "EVB",
+      "bbox": [
+        232.9199676513672,
+        283.0799560546875,
+        360.47998046875,
+        362.39996337890625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_9_raster_2.png",
+      "page_pdf": 9,
+      "page_manual": "EVB-9",
+      "section_code": "EVB",
+      "bbox": [
+        232.9199676513672,
+        188.2799835205078,
+        360.47998046875,
+        267.5999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_9_raster_3.png",
+      "page_pdf": 9,
+      "page_manual": "EVB-9",
+      "section_code": "EVB",
+      "bbox": [
+        232.9199676513672,
+        377.8800048828125,
+        360.47998046875,
+        457.260009765625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_9_raster_4.png",
+      "page_pdf": 9,
+      "page_manual": "EVB-9",
+      "section_code": "EVB",
+      "bbox": [
+        232.9199676513672,
+        472.73992919921875,
+        360.47998046875,
+        552.0599365234375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_9_raster_5.png",
+      "page_pdf": 9,
+      "page_manual": "EVB-9",
+      "section_code": "EVB",
+      "bbox": [
+        232.9199676513672,
+        567.5399169921875,
+        360.47998046875,
+        646.919921875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_9_raster_6.png",
+      "page_pdf": 9,
+      "page_manual": "EVB-9",
+      "section_code": "EVB",
+      "bbox": [
+        232.9199676513672,
+        662.3999633789062,
+        360.47998046875,
+        741.719970703125
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_10_raster_1.png",
+      "page_pdf": 10,
+      "page_manual": "EVB-10",
+      "section_code": "EVB",
+      "bbox": [
+        213.23995971679688,
+        213.95994567871094,
+        340.7999572753906,
+        293.2799377441406
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_10_raster_2.png",
+      "page_pdf": 10,
+      "page_manual": "EVB-10",
+      "section_code": "EVB",
+      "bbox": [
+        213.23995971679688,
+        119.09999084472656,
+        340.7999572753906,
+        198.47998046875
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_10_raster_3.png",
+      "page_pdf": 10,
+      "page_manual": "EVB-10",
+      "section_code": "EVB",
+      "bbox": [
+        213.23995971679688,
+        308.760009765625,
+        340.7999572753906,
+        388.1400146484375
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_10_raster_4.png",
+      "page_pdf": 10,
+      "page_manual": "EVB-10",
+      "section_code": "EVB",
+      "bbox": [
+        213.23995971679688,
+        403.61993408203125,
+        340.7999572753906,
+        482.93994140625
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_10_raster_5.png",
+      "page_pdf": 10,
+      "page_manual": "EVB-10",
+      "section_code": "EVB",
+      "bbox": [
+        213.23995971679688,
+        498.419921875,
+        340.7999572753906,
+        577.7399291992188
+      ],
+      "caption": "",
+      "type": "raster"
+    },
+    {
+      "file": "images/page_10_raster_6.png",
+      "page_pdf": 10,
+      "page_manual": "EVB-10",
+      "section_code": "EVB",
+      "bbox": [
+        213.23995971679688,
+        593.219970703125,
+        340.7999572753906,
+        672.5999755859375
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}

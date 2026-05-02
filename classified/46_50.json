@@ -1,0 +1,2725 @@
+{
+  "schema_version": "1.1",
+  "extraction": {
+    "source_file": "EVB.pdf",
+    "vehicle": "EVB-46\nP30E4\nDLC DIAGNOSIS PDM (POWER DELIVERY MODULE)\n—\n1\nEVB-110\nP30FC\nOVER CURRENT\n×\n1\nEVB-111\nRevision: October 2013\n2013 LEAF",
+    "page_start": 46,
+    "page_end": 50,
+    "ocr_used": false,
+    "tableformer_used": true,
+    "page_map": {
+      "46": [
+        "EVB-46",
+        "EVB",
+        "EVB-46\nP30E4\nDLC DIAGNOSIS PDM (POWER DELIVERY MODULE)\n—\n1\nEVB-110\nP30FC\nOVER CURRENT\n×\n1\nEVB-111\nRevision: October 2013\n2013 LEAF"
+      ],
+      "47": [
+        "EVB-47",
+        "EVB",
+        "EVB-47\nP3322\nCELL OVER VOLTAGE MODULE33\n×\n1\nEVB-129\nP3323\nCELL OVER VOLTAGE MODULE34\n×\n1\nEVB-129\nRevision: October 2013\n2013 LEAF"
+      ],
+      "48": [
+        "EVB-48",
+        "EVB",
+        "EVB-48\nP3390\nCELL OVER DISCHARGE MODULE28\n×\n1\nEVB-143\nP3391\nCELL OVER DISCHARGE MODULE29\n×\n1\nEVB-143\nRevision: October 2013\n2013 LEAF"
+      ],
+      "49": [
+        "EVB-49",
+        "EVB",
+        "EVB-49\nRevision: October 2013\n2013 LEAF"
+      ],
+      "50": [
+        "EVB-50",
+        "EVB",
+        "EVB-50\nRevision: October 2013\n2013 LEAF"
+      ]
+    }
+  },
+  "text_elements": [
+    {
+      "text": "EV BATTERY SYSTEM",
+      "page_pdf": 46,
+      "page_manual": "EVB-46",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        233.51999,
+        769.00991,
+        377.92714519999987,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EV BATTERY SYSTEM",
+      "page_pdf": 47,
+      "page_manual": "EVB-47",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        233.81998,
+        769.00991,
+        378.19004080000013,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EV BATTERY SYSTEM",
+      "page_pdf": 48,
+      "page_manual": "EVB-48",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        233.51999,
+        769.00991,
+        377.92714519999987,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EV BATTERY SYSTEM",
+      "page_pdf": 49,
+      "page_manual": "EVB-49",
+      "section_code": "EVB",
+      "label": "section_header",
+      "bbox": [
+        233.81998,
+        769.00991,
+        378.19004080000013,
+        757.1101191491713
+      ],
+      "type": "section_header",
+      "safety_level": "NONE"
+    },
+    {
+      "text": "EVB",
+      "page_pdf": 49,
+      "page_manual": "EVB-49",
+      "section_code": "EVB",
+      "label": "text",
+      "bbox": [
+        568.37988,
+        643.6912671800001,
+        588.3435248437999,
+        634.8726633204641
+      ],
+      "type": "general_text",
+      "safety_level": "NONE"
+    }
+  ],
+  "tables": [
+    {
+      "page_pdf": 46,
+      "page_manual": "EVB-46",
+      "section_code": "EVB",
+      "bbox": [
+        49.72803497314453,
+        741.0890083312988,
+        561.229736328125,
+        31.10906982421875
+      ],
+      "num_rows": 44,
+      "num_cols": 5,
+      "data": [
+        [
+          "DTC",
+          "CONSULT screen items",
+          "EVsystem warning lamp",
+          "Trip",
+          "Reference"
+        ],
+        [
+          "P3056",
+          "CELL CONT ASIC14 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P3057",
+          "CELL CONT ASIC15 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P3058",
+          "CELL CONT ASIC16 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P3059",
+          "CELL CONT ASIC17 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P305A",
+          "CELL CONT ASIC18 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P305B",
+          "CELL CONT ASIC19 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P305C",
+          "CELL CONT ASIC20 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P305D",
+          "CELL CONT ASIC21 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P305E",
+          "CELL CONT ASIC22 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P305F",
+          "CELL CONT ASIC23 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P3060",
+          "CELL CONT ASIC24 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P3061",
+          "CELL BATTERY VOLT",
+          "×",
+          "1",
+          "EVB-98"
+        ],
+        [
+          "P3062",
+          "BYPASS SW",
+          "×",
+          "1",
+          "EVB-99"
+        ],
+        [
+          "P3064",
+          "CELL CONT ASIC",
+          "×",
+          "1",
+          "EVB-100"
+        ],
+        [
+          "P308B",
+          "CELL CONT ASIC1 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P308C",
+          "CELL CONT ASIC2 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P308D",
+          "CELL CONT ASIC3 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P308E",
+          "CELL CONT ASIC4 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P308F",
+          "CELL CONT ASIC5 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P3090",
+          "CELL CONT ASIC6 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P3091",
+          "CELL CONT ASIC7 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P3092",
+          "CELL CONT ASIC8 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P3093",
+          "CELL CONT ASIC9 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P3094",
+          "CELL CONT ASIC10 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P3095",
+          "CELL CONT ASIC11 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P3096",
+          "CELL CONT ASIC12 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P3097",
+          "CELL CONT ASIC13 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P3098",
+          "CELL CONT ASIC14 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P3099",
+          "CELL CONT ASIC15 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P309A",
+          "CELL CONT ASIC16 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P309B",
+          "CELL CONT ASIC17 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P309C",
+          "CELL CONT ASIC18 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P309D",
+          "CELL CONT ASIC19 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P309E",
+          "CELL CONT ASIC20 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P309F",
+          "CELL CONT ASIC21 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P30A0",
+          "CELL CONT ASIC22 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P30A1",
+          "CELL CONT ASIC23 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P30A2",
+          "CELL CONT ASIC24 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P30E0",
+          "DLC DIAGNOSIS VCM",
+          "×",
+          "1",
+          "EVB-107"
+        ],
+        [
+          "P30E2",
+          "DLC DIAGNOSIS HVAC",
+          "-",
+          "1",
+          "EVB-108"
+        ],
+        [
+          "P30E3",
+          "DLC DIAGNOSIS MC",
+          "-",
+          "1",
+          "EVB-109"
+        ],
+        [
+          "P30E4",
+          "DLC DIAGNOSIS PDM(POWERDELIVERYMODULE)",
+          "-",
+          "1",
+          "EVB-110"
+        ],
+        [
+          "P30FC",
+          "OVER CURRENT",
+          "×",
+          "1",
+          "EVB-111"
+        ]
+      ],
+      "markdown": "| DTC | CONSULT screen items | EVsystem warning lamp | Trip | Reference |\n| --- | --- | --- | --- | --- |\n| P3056 | CELL CONT ASIC14 VOLT | × | 1 | EVB-96 |\n| P3057 | CELL CONT ASIC15 VOLT | × | 1 | EVB-96 |\n| P3058 | CELL CONT ASIC16 VOLT | × | 1 | EVB-96 |\n| P3059 | CELL CONT ASIC17 VOLT | × | 1 | EVB-96 |\n| P305A | CELL CONT ASIC18 VOLT | × | 1 | EVB-96 |\n| P305B | CELL CONT ASIC19 VOLT | × | 1 | EVB-96 |\n| P305C | CELL CONT ASIC20 VOLT | × | 1 | EVB-96 |\n| P305D | CELL CONT ASIC21 VOLT | × | 1 | EVB-96 |\n| P305E | CELL CONT ASIC22 VOLT | × | 1 | EVB-96 |\n| P305F | CELL CONT ASIC23 VOLT | × | 1 | EVB-96 |\n| P3060 | CELL CONT ASIC24 VOLT | × | 1 | EVB-96 |\n| P3061 | CELL BATTERY VOLT | × | 1 | EVB-98 |\n| P3062 | BYPASS SW | × | 1 | EVB-99 |\n| P3064 | CELL CONT ASIC | × | 1 | EVB-100 |\n| P308B | CELL CONT ASIC1 OPEN | × | 1 | EVB-101 |\n| P308C | CELL CONT ASIC2 OPEN | × | 1 | EVB-101 |\n| P308D | CELL CONT ASIC3 OPEN | × | 1 | EVB-101 |\n| P308E | CELL CONT ASIC4 OPEN | × | 1 | EVB-101 |\n| P308F | CELL CONT ASIC5 OPEN | × | 1 | EVB-101 |\n| P3090 | CELL CONT ASIC6 OPEN | × | 1 | EVB-101 |\n| P3091 | CELL CONT ASIC7 OPEN | × | 1 | EVB-101 |\n| P3092 | CELL CONT ASIC8 OPEN | × | 1 | EVB-101 |\n| P3093 | CELL CONT ASIC9 OPEN | × | 1 | EVB-101 |\n| P3094 | CELL CONT ASIC10 OPEN | × | 1 | EVB-101 |\n| P3095 | CELL CONT ASIC11 OPEN | × | 1 | EVB-101 |\n| P3096 | CELL CONT ASIC12 OPEN | × | 1 | EVB-101 |\n| P3097 | CELL CONT ASIC13 OPEN | × | 1 | EVB-104 |\n| P3098 | CELL CONT ASIC14 OPEN | × | 1 | EVB-104 |\n| P3099 | CELL CONT ASIC15 OPEN | × | 1 | EVB-104 |\n| P309A | CELL CONT ASIC16 OPEN | × | 1 | EVB-104 |\n| P309B | CELL CONT ASIC17 OPEN | × | 1 | EVB-104 |\n| P309C | CELL CONT ASIC18 OPEN | × | 1 | EVB-104 |\n| P309D | CELL CONT ASIC19 OPEN | × | 1 | EVB-104 |\n| P309E | CELL CONT ASIC20 OPEN | × | 1 | EVB-104 |\n| P309F | CELL CONT ASIC21 OPEN | × | 1 | EVB-104 |\n| P30A0 | CELL CONT ASIC22 OPEN | × | 1 | EVB-104 |\n| P30A1 | CELL CONT ASIC23 OPEN | × | 1 | EVB-104 |\n| P30A2 | CELL CONT ASIC24 OPEN | × | 1 | EVB-104 |\n| P30E0 | DLC DIAGNOSIS VCM | × | 1 | EVB-107 |\n| P30E2 | DLC DIAGNOSIS HVAC | - | 1 | EVB-108 |\n| P30E3 | DLC DIAGNOSIS MC | - | 1 | EVB-109 |\n| P30E4 | DLC DIAGNOSIS PDM(POWERDELIVERYMODULE) | - | 1 | EVB-110 |\n| P30FC | OVER CURRENT | × | 1 | EVB-111 |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "DTC",
+          "CONSULT screen items",
+          "EVsystem warning lamp",
+          "Trip",
+          "Reference"
+        ],
+        [
+          "P3056",
+          "CELL CONT ASIC14 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P3057",
+          "CELL CONT ASIC15 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P3058",
+          "CELL CONT ASIC16 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P3059",
+          "CELL CONT ASIC17 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P305A",
+          "CELL CONT ASIC18 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P305B",
+          "CELL CONT ASIC19 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P305C",
+          "CELL CONT ASIC20 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P305D",
+          "CELL CONT ASIC21 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P305E",
+          "CELL CONT ASIC22 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P305F",
+          "CELL CONT ASIC23 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P3060",
+          "CELL CONT ASIC24 VOLT",
+          "×",
+          "1",
+          "EVB-96"
+        ],
+        [
+          "P3061",
+          "CELL BATTERY VOLT",
+          "×",
+          "1",
+          "EVB-98"
+        ],
+        [
+          "P3062",
+          "BYPASS SW",
+          "×",
+          "1",
+          "EVB-99"
+        ],
+        [
+          "P3064",
+          "CELL CONT ASIC",
+          "×",
+          "1",
+          "EVB-100"
+        ],
+        [
+          "P308B",
+          "CELL CONT ASIC1 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P308C",
+          "CELL CONT ASIC2 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P308D",
+          "CELL CONT ASIC3 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P308E",
+          "CELL CONT ASIC4 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P308F",
+          "CELL CONT ASIC5 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P3090",
+          "CELL CONT ASIC6 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P3091",
+          "CELL CONT ASIC7 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P3092",
+          "CELL CONT ASIC8 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P3093",
+          "CELL CONT ASIC9 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P3094",
+          "CELL CONT ASIC10 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P3095",
+          "CELL CONT ASIC11 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P3096",
+          "CELL CONT ASIC12 OPEN",
+          "×",
+          "1",
+          "EVB-101"
+        ],
+        [
+          "P3097",
+          "CELL CONT ASIC13 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P3098",
+          "CELL CONT ASIC14 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P3099",
+          "CELL CONT ASIC15 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P309A",
+          "CELL CONT ASIC16 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P309B",
+          "CELL CONT ASIC17 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P309C",
+          "CELL CONT ASIC18 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P309D",
+          "CELL CONT ASIC19 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P309E",
+          "CELL CONT ASIC20 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P309F",
+          "CELL CONT ASIC21 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P30A0",
+          "CELL CONT ASIC22 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P30A1",
+          "CELL CONT ASIC23 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P30A2",
+          "CELL CONT ASIC24 OPEN",
+          "×",
+          "1",
+          "EVB-104"
+        ],
+        [
+          "P30E0",
+          "DLC DIAGNOSIS VCM",
+          "×",
+          "1",
+          "EVB-107"
+        ],
+        [
+          "P30E2",
+          "DLC DIAGNOSIS HVAC",
+          "-",
+          "1",
+          "EVB-108"
+        ],
+        [
+          "P30E3",
+          "DLC DIAGNOSIS MC",
+          "-",
+          "1",
+          "EVB-109"
+        ],
+        [
+          "P30E4",
+          "DLC DIAGNOSIS PDM(POWERDELIVERYMODULE)",
+          "-",
+          "1",
+          "EVB-110"
+        ],
+        [
+          "P30FC",
+          "OVER CURRENT",
+          "×",
+          "1",
+          "EVB-111"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 47,
+      "page_manual": "EVB-47",
+      "section_code": "EVB",
+      "bbox": [
+        50.475215911865234,
+        741.0739517211914,
+        586.7354125976562,
+        31.257568359375
+      ],
+      "num_rows": 44,
+      "num_cols": 6,
+      "data": [
+        [
+          "DTC",
+          "CONSULT screen items",
+          "EVsystem warning lamp",
+          "Trip",
+          "Reference",
+          "A"
+        ],
+        [
+          "P318D",
+          "COMMUNICATION ERROR",
+          "×",
+          "1",
+          "EVB-112",
+          ""
+        ],
+        [
+          "P318E",
+          "COMMUNICATION ERROR",
+          "×",
+          "1",
+          "EVB-113",
+          "B"
+        ],
+        [
+          "P3191",
+          "COMMUNICATION ERROR",
+          "-",
+          "1",
+          "EVB-114",
+          ""
+        ],
+        [
+          "P3196",
+          "COMMUNICATION ERROR",
+          "-",
+          "1",
+          "EVB-115",
+          "EVB"
+        ],
+        [
+          "P3198",
+          "COMMUNICATION ERROR",
+          "-",
+          "1",
+          "EVB-116",
+          ""
+        ],
+        [
+          "P3199",
+          "COMMUNICATION ERROR",
+          "×",
+          "1",
+          "EVB-117",
+          ""
+        ],
+        [
+          "P319C",
+          "COMMUNICATION ERROR",
+          "-",
+          "1",
+          "EVB-118",
+          "D"
+        ],
+        [
+          "P31A4",
+          "CAN ERROR VCM",
+          "×",
+          "1",
+          "EVB-119",
+          ""
+        ],
+        [
+          "P31A7",
+          "CAN ERROR INV/MC",
+          "-",
+          "1",
+          "EVB-120",
+          ""
+        ],
+        [
+          "P3302",
+          "CELL OVER VOLTAGE MODULE1",
+          "×",
+          "1",
+          "EVB-121",
+          "E"
+        ],
+        [
+          "P3303",
+          "CELL OVER VOLTAGE MODULE2",
+          "×",
+          "1",
+          "EVB-121",
+          ""
+        ],
+        [
+          "P3304",
+          "CELL OVER VOLTAGE MODULE3",
+          "×",
+          "1",
+          "EVB-121",
+          "F"
+        ],
+        [
+          "P3305",
+          "CELL OVER VOLTAGE MODULE4",
+          "×",
+          "1",
+          "EVB-121",
+          ""
+        ],
+        [
+          "P3306",
+          "CELL OVER VOLTAGE MODULE5",
+          "×",
+          "1",
+          "EVB-121",
+          ""
+        ],
+        [
+          "P3307",
+          "CELL OVER VOLTAGE MODULE6",
+          "×",
+          "1",
+          "EVB-121",
+          "G"
+        ],
+        [
+          "P3308",
+          "CELL OVER VOLTAGE MODULE7",
+          "×",
+          "1",
+          "EVB-121",
+          ""
+        ],
+        [
+          "P3309",
+          "CELL OVER VOLTAGE MODULE8",
+          "×",
+          "1",
+          "EVB-121",
+          "H"
+        ],
+        [
+          "P330A",
+          "CELL OVER VOLTAGE MODULE9",
+          "×",
+          "1",
+          "EVB-121",
+          ""
+        ],
+        [
+          "P330B",
+          "CELL OVER VOLTAGE MODULE10",
+          "×",
+          "1",
+          "EVB-121",
+          ""
+        ],
+        [
+          "P330C",
+          "CELL OVER VOLTAGE MODULE11",
+          "×",
+          "1",
+          "EVB-121",
+          "I"
+        ],
+        [
+          "P330D",
+          "CELL OVER VOLTAGE MODULE12",
+          "×",
+          "1",
+          "EVB-121",
+          ""
+        ],
+        [
+          "P330E",
+          "CELL OVER VOLTAGE MODULE13",
+          "×",
+          "1",
+          "EVB-125",
+          "J"
+        ],
+        [
+          "P330F",
+          "CELL OVER VOLTAGE MODULE14",
+          "×",
+          "1",
+          "EVB-125",
+          ""
+        ],
+        [
+          "P3310",
+          "CELL OVER VOLTAGE MODULE15",
+          "×",
+          "1",
+          "EVB-125",
+          ""
+        ],
+        [
+          "P3311",
+          "CELL OVER VOLTAGE MODULE16",
+          "×",
+          "1",
+          "EVB-125",
+          "K"
+        ],
+        [
+          "P3312",
+          "CELL OVER VOLTAGE MODULE17",
+          "×",
+          "1",
+          "EVB-125",
+          ""
+        ],
+        [
+          "P3313",
+          "CELL OVER VOLTAGE MODULE18",
+          "×",
+          "1",
+          "EVB-125",
+          "L"
+        ],
+        [
+          "P3314",
+          "CELL OVER VOLTAGE MODULE19",
+          "×",
+          "1",
+          "EVB-125",
+          ""
+        ],
+        [
+          "P3315",
+          "CELL OVER VOLTAGE MODULE20",
+          "×",
+          "1",
+          "EVB-125",
+          ""
+        ],
+        [
+          "P3316",
+          "CELL OVER VOLTAGE MODULE21",
+          "×",
+          "1",
+          "EVB-125",
+          "M"
+        ],
+        [
+          "P3317",
+          "CELL OVER VOLTAGE MODULE22",
+          "×",
+          "1",
+          "EVB-125",
+          ""
+        ],
+        [
+          "P3318",
+          "CELL OVER VOLTAGE MODULE23",
+          "×",
+          "1",
+          "EVB-125",
+          ""
+        ],
+        [
+          "P3319",
+          "CELL OVER VOLTAGE MODULE24",
+          "×",
+          "1",
+          "EVB-125",
+          "N"
+        ],
+        [
+          "P331A",
+          "CELL OVER VOLTAGE MODULE25",
+          "×",
+          "1",
+          "EVB-129",
+          ""
+        ],
+        [
+          "P331B",
+          "CELL OVER VOLTAGE MODULE26",
+          "×",
+          "1",
+          "EVB-129",
+          "O"
+        ],
+        [
+          "P331C",
+          "CELL OVER VOLTAGE MODULE27",
+          "×",
+          "1",
+          "EVB-129",
+          ""
+        ],
+        [
+          "P331D",
+          "CELL OVER VOLTAGE MODULE28",
+          "×",
+          "1",
+          "EVB-129",
+          ""
+        ],
+        [
+          "P331E",
+          "CELL OVER VOLTAGE MODULE29",
+          "×",
+          "1",
+          "EVB-129",
+          "P"
+        ],
+        [
+          "P331F",
+          "CELL OVER VOLTAGE MODULE30",
+          "×",
+          "1",
+          "EVB-129",
+          ""
+        ],
+        [
+          "P3320",
+          "CELL OVER VOLTAGE MODULE31",
+          "×",
+          "1",
+          "EVB-129",
+          ""
+        ],
+        [
+          "P3321",
+          "CELL OVER VOLTAGE MODULE32",
+          "×",
+          "1",
+          "EVB-129",
+          ""
+        ],
+        [
+          "P3322",
+          "CELL OVER VOLTAGE MODULE33",
+          "×",
+          "1",
+          "EVB-129",
+          ""
+        ],
+        [
+          "P3323",
+          "CELL OVER VOLTAGE MODULE34",
+          "×",
+          "1",
+          "EVB-129",
+          ""
+        ]
+      ],
+      "markdown": "| DTC | CONSULT screen items | EVsystem warning lamp | Trip | Reference | A |\n| --- | --- | --- | --- | --- | --- |\n| P318D | COMMUNICATION ERROR | × | 1 | EVB-112 |  |\n| P318E | COMMUNICATION ERROR | × | 1 | EVB-113 | B |\n| P3191 | COMMUNICATION ERROR | - | 1 | EVB-114 |  |\n| P3196 | COMMUNICATION ERROR | - | 1 | EVB-115 | EVB |\n| P3198 | COMMUNICATION ERROR | - | 1 | EVB-116 |  |\n| P3199 | COMMUNICATION ERROR | × | 1 | EVB-117 |  |\n| P319C | COMMUNICATION ERROR | - | 1 | EVB-118 | D |\n| P31A4 | CAN ERROR VCM | × | 1 | EVB-119 |  |\n| P31A7 | CAN ERROR INV/MC | - | 1 | EVB-120 |  |\n| P3302 | CELL OVER VOLTAGE MODULE1 | × | 1 | EVB-121 | E |\n| P3303 | CELL OVER VOLTAGE MODULE2 | × | 1 | EVB-121 |  |\n| P3304 | CELL OVER VOLTAGE MODULE3 | × | 1 | EVB-121 | F |\n| P3305 | CELL OVER VOLTAGE MODULE4 | × | 1 | EVB-121 |  |\n| P3306 | CELL OVER VOLTAGE MODULE5 | × | 1 | EVB-121 |  |\n| P3307 | CELL OVER VOLTAGE MODULE6 | × | 1 | EVB-121 | G |\n| P3308 | CELL OVER VOLTAGE MODULE7 | × | 1 | EVB-121 |  |\n| P3309 | CELL OVER VOLTAGE MODULE8 | × | 1 | EVB-121 | H |\n| P330A | CELL OVER VOLTAGE MODULE9 | × | 1 | EVB-121 |  |\n| P330B | CELL OVER VOLTAGE MODULE10 | × | 1 | EVB-121 |  |\n| P330C | CELL OVER VOLTAGE MODULE11 | × | 1 | EVB-121 | I |\n| P330D | CELL OVER VOLTAGE MODULE12 | × | 1 | EVB-121 |  |\n| P330E | CELL OVER VOLTAGE MODULE13 | × | 1 | EVB-125 | J |\n| P330F | CELL OVER VOLTAGE MODULE14 | × | 1 | EVB-125 |  |\n| P3310 | CELL OVER VOLTAGE MODULE15 | × | 1 | EVB-125 |  |\n| P3311 | CELL OVER VOLTAGE MODULE16 | × | 1 | EVB-125 | K |\n| P3312 | CELL OVER VOLTAGE MODULE17 | × | 1 | EVB-125 |  |\n| P3313 | CELL OVER VOLTAGE MODULE18 | × | 1 | EVB-125 | L |\n| P3314 | CELL OVER VOLTAGE MODULE19 | × | 1 | EVB-125 |  |\n| P3315 | CELL OVER VOLTAGE MODULE20 | × | 1 | EVB-125 |  |\n| P3316 | CELL OVER VOLTAGE MODULE21 | × | 1 | EVB-125 | M |\n| P3317 | CELL OVER VOLTAGE MODULE22 | × | 1 | EVB-125 |  |\n| P3318 | CELL OVER VOLTAGE MODULE23 | × | 1 | EVB-125 |  |\n| P3319 | CELL OVER VOLTAGE MODULE24 | × | 1 | EVB-125 | N |\n| P331A | CELL OVER VOLTAGE MODULE25 | × | 1 | EVB-129 |  |\n| P331B | CELL OVER VOLTAGE MODULE26 | × | 1 | EVB-129 | O |\n| P331C | CELL OVER VOLTAGE MODULE27 | × | 1 | EVB-129 |  |\n| P331D | CELL OVER VOLTAGE MODULE28 | × | 1 | EVB-129 |  |\n| P331E | CELL OVER VOLTAGE MODULE29 | × | 1 | EVB-129 | P |\n| P331F | CELL OVER VOLTAGE MODULE30 | × | 1 | EVB-129 |  |\n| P3320 | CELL OVER VOLTAGE MODULE31 | × | 1 | EVB-129 |  |\n| P3321 | CELL OVER VOLTAGE MODULE32 | × | 1 | EVB-129 |  |\n| P3322 | CELL OVER VOLTAGE MODULE33 | × | 1 | EVB-129 |  |\n| P3323 | CELL OVER VOLTAGE MODULE34 | × | 1 | EVB-129 |  |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "DTC",
+          "CONSULT screen items",
+          "EVsystem warning lamp",
+          "Trip",
+          "Reference",
+          "A"
+        ],
+        [
+          "P318D",
+          "COMMUNICATION ERROR",
+          "×",
+          "1",
+          "EVB-112",
+          ""
+        ],
+        [
+          "P318E",
+          "COMMUNICATION ERROR",
+          "×",
+          "1",
+          "EVB-113",
+          "B"
+        ],
+        [
+          "P3191",
+          "COMMUNICATION ERROR",
+          "-",
+          "1",
+          "EVB-114",
+          ""
+        ],
+        [
+          "P3196",
+          "COMMUNICATION ERROR",
+          "-",
+          "1",
+          "EVB-115",
+          "EVB"
+        ],
+        [
+          "P3198",
+          "COMMUNICATION ERROR",
+          "-",
+          "1",
+          "EVB-116",
+          ""
+        ],
+        [
+          "P3199",
+          "COMMUNICATION ERROR",
+          "×",
+          "1",
+          "EVB-117",
+          ""
+        ],
+        [
+          "P319C",
+          "COMMUNICATION ERROR",
+          "-",
+          "1",
+          "EVB-118",
+          "D"
+        ],
+        [
+          "P31A4",
+          "CAN ERROR VCM",
+          "×",
+          "1",
+          "EVB-119",
+          ""
+        ],
+        [
+          "P31A7",
+          "CAN ERROR INV/MC",
+          "-",
+          "1",
+          "EVB-120",
+          ""
+        ],
+        [
+          "P3302",
+          "CELL OVER VOLTAGE MODULE1",
+          "×",
+          "1",
+          "EVB-121",
+          "E"
+        ],
+        [
+          "P3303",
+          "CELL OVER VOLTAGE MODULE2",
+          "×",
+          "1",
+          "EVB-121",
+          ""
+        ],
+        [
+          "P3304",
+          "CELL OVER VOLTAGE MODULE3",
+          "×",
+          "1",
+          "EVB-121",
+          "F"
+        ],
+        [
+          "P3305",
+          "CELL OVER VOLTAGE MODULE4",
+          "×",
+          "1",
+          "EVB-121",
+          ""
+        ],
+        [
+          "P3306",
+          "CELL OVER VOLTAGE MODULE5",
+          "×",
+          "1",
+          "EVB-121",
+          ""
+        ],
+        [
+          "P3307",
+          "CELL OVER VOLTAGE MODULE6",
+          "×",
+          "1",
+          "EVB-121",
+          "G"
+        ],
+        [
+          "P3308",
+          "CELL OVER VOLTAGE MODULE7",
+          "×",
+          "1",
+          "EVB-121",
+          ""
+        ],
+        [
+          "P3309",
+          "CELL OVER VOLTAGE MODULE8",
+          "×",
+          "1",
+          "EVB-121",
+          "H"
+        ],
+        [
+          "P330A",
+          "CELL OVER VOLTAGE MODULE9",
+          "×",
+          "1",
+          "EVB-121",
+          ""
+        ],
+        [
+          "P330B",
+          "CELL OVER VOLTAGE MODULE10",
+          "×",
+          "1",
+          "EVB-121",
+          ""
+        ],
+        [
+          "P330C",
+          "CELL OVER VOLTAGE MODULE11",
+          "×",
+          "1",
+          "EVB-121",
+          "I"
+        ],
+        [
+          "P330D",
+          "CELL OVER VOLTAGE MODULE12",
+          "×",
+          "1",
+          "EVB-121",
+          ""
+        ],
+        [
+          "P330E",
+          "CELL OVER VOLTAGE MODULE13",
+          "×",
+          "1",
+          "EVB-125",
+          "J"
+        ],
+        [
+          "P330F",
+          "CELL OVER VOLTAGE MODULE14",
+          "×",
+          "1",
+          "EVB-125",
+          ""
+        ],
+        [
+          "P3310",
+          "CELL OVER VOLTAGE MODULE15",
+          "×",
+          "1",
+          "EVB-125",
+          ""
+        ],
+        [
+          "P3311",
+          "CELL OVER VOLTAGE MODULE16",
+          "×",
+          "1",
+          "EVB-125",
+          "K"
+        ],
+        [
+          "P3312",
+          "CELL OVER VOLTAGE MODULE17",
+          "×",
+          "1",
+          "EVB-125",
+          ""
+        ],
+        [
+          "P3313",
+          "CELL OVER VOLTAGE MODULE18",
+          "×",
+          "1",
+          "EVB-125",
+          "L"
+        ],
+        [
+          "P3314",
+          "CELL OVER VOLTAGE MODULE19",
+          "×",
+          "1",
+          "EVB-125",
+          ""
+        ],
+        [
+          "P3315",
+          "CELL OVER VOLTAGE MODULE20",
+          "×",
+          "1",
+          "EVB-125",
+          ""
+        ],
+        [
+          "P3316",
+          "CELL OVER VOLTAGE MODULE21",
+          "×",
+          "1",
+          "EVB-125",
+          "M"
+        ],
+        [
+          "P3317",
+          "CELL OVER VOLTAGE MODULE22",
+          "×",
+          "1",
+          "EVB-125",
+          ""
+        ],
+        [
+          "P3318",
+          "CELL OVER VOLTAGE MODULE23",
+          "×",
+          "1",
+          "EVB-125",
+          ""
+        ],
+        [
+          "P3319",
+          "CELL OVER VOLTAGE MODULE24",
+          "×",
+          "1",
+          "EVB-125",
+          "N"
+        ],
+        [
+          "P331A",
+          "CELL OVER VOLTAGE MODULE25",
+          "×",
+          "1",
+          "EVB-129",
+          ""
+        ],
+        [
+          "P331B",
+          "CELL OVER VOLTAGE MODULE26",
+          "×",
+          "1",
+          "EVB-129",
+          "O"
+        ],
+        [
+          "P331C",
+          "CELL OVER VOLTAGE MODULE27",
+          "×",
+          "1",
+          "EVB-129",
+          ""
+        ],
+        [
+          "P331D",
+          "CELL OVER VOLTAGE MODULE28",
+          "×",
+          "1",
+          "EVB-129",
+          ""
+        ],
+        [
+          "P331E",
+          "CELL OVER VOLTAGE MODULE29",
+          "×",
+          "1",
+          "EVB-129",
+          "P"
+        ],
+        [
+          "P331F",
+          "CELL OVER VOLTAGE MODULE30",
+          "×",
+          "1",
+          "EVB-129",
+          ""
+        ],
+        [
+          "P3320",
+          "CELL OVER VOLTAGE MODULE31",
+          "×",
+          "1",
+          "EVB-129",
+          ""
+        ],
+        [
+          "P3321",
+          "CELL OVER VOLTAGE MODULE32",
+          "×",
+          "1",
+          "EVB-129",
+          ""
+        ],
+        [
+          "P3322",
+          "CELL OVER VOLTAGE MODULE33",
+          "×",
+          "1",
+          "EVB-129",
+          ""
+        ],
+        [
+          "P3323",
+          "CELL OVER VOLTAGE MODULE34",
+          "×",
+          "1",
+          "EVB-129",
+          ""
+        ]
+      ]
+    },
+    {
+      "page_pdf": 48,
+      "page_manual": "EVB-48",
+      "section_code": "EVB",
+      "bbox": [
+        49.791526794433594,
+        741.2385864257812,
+        561.3085327148438,
+        31.17535400390625
+      ],
+      "num_rows": 44,
+      "num_cols": 5,
+      "data": [
+        [
+          "DTC",
+          "CONSULT screen items",
+          "EVsystem warning lamp",
+          "Trip",
+          "Reference"
+        ],
+        [
+          "P3324",
+          "CELL OVER VOLTAGE MODULE35",
+          "×",
+          "1",
+          "EVB-129"
+        ],
+        [
+          "P3325",
+          "CELL OVER VOLTAGE MODULE36",
+          "×",
+          "1",
+          "EVB-129"
+        ],
+        [
+          "P3326",
+          "CELL OVER VOLTAGE MODULE37",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P3327",
+          "CELL OVER VOLTAGE MODULE38",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P3328",
+          "CELL OVER VOLTAGE MODULE39",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P3329",
+          "CELL OVER VOLTAGE MODULE40",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P332A",
+          "CELL OVER VOLTAGE MODULE41",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P332B",
+          "CELL OVER VOLTAGE MODULE42",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P332C",
+          "CELL OVER VOLTAGE MODULE43",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P332D",
+          "CELL OVER VOLTAGE MODULE44",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P332E",
+          "CELL OVER VOLTAGE MODULE45",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P332F",
+          "CELL OVER VOLTAGE MODULE46",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P3330",
+          "CELL OVER VOLTAGE MODULE47",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P3331",
+          "CELL OVER VOLTAGE MODULE48",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P3375",
+          "CELL OVER DISCHARGE MODULE1",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P3376",
+          "CELL OVER DISCHARGE MODULE2",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P3377",
+          "CELL OVER DISCHARGE MODULE3",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P3378",
+          "CELL OVER DISCHARGE MODULE4",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P3379",
+          "CELL OVER DISCHARGE MODULE5",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P337A",
+          "CELL OVER DISCHARGE MODULE6",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P337B",
+          "CELL OVER DISCHARGE MODULE7",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P337C",
+          "CELL OVER DISCHARGE MODULE8",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P337D",
+          "CELL OVER DISCHARGE MODULE9",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P337E",
+          "CELL OVER DISCHARGE MODULE10",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P337F",
+          "CELL OVER DISCHARGE MODULE11",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P3380",
+          "CELL OVER DISCHARGE MODULE12",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P3381",
+          "CELL OVER DISCHARGE MODULE13",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P3382",
+          "CELL OVER DISCHARGE MODULE14",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P3383",
+          "CELL OVER DISCHARGE MODULE15",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P3384",
+          "CELL OVER DISCHARGE MODULE16",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P3385",
+          "CELL OVER DISCHARGE MODULE17",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P3386",
+          "CELL OVER DISCHARGE MODULE18",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P3387",
+          "CELL OVER DISCHARGE MODULE19",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P3388",
+          "CELL OVER DISCHARGE MODULE20",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P3389",
+          "CELL OVER DISCHARGE MODULE21",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P338A",
+          "CELL OVER DISCHARGE MODULE22",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P338B",
+          "CELL OVER DISCHARGE MODULE23",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P338C",
+          "CELL OVER DISCHARGE MODULE24",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P338D",
+          "CELL OVER DISCHARGE MODULE25",
+          "×",
+          "1",
+          "EVB-143"
+        ],
+        [
+          "P338E",
+          "CELL OVER DISCHARGE MODULE26",
+          "×",
+          "1",
+          "EVB-143"
+        ],
+        [
+          "P338F",
+          "CELL OVER DISCHARGE MODULE27",
+          "×",
+          "1",
+          "EVB-143"
+        ],
+        [
+          "P3390",
+          "CELL OVER DISCHARGE MODULE28",
+          "×",
+          "1",
+          "EVB-143"
+        ],
+        [
+          "P3391",
+          "CELL OVER DISCHARGE MODULE29",
+          "×",
+          "1",
+          "EVB-143"
+        ]
+      ],
+      "markdown": "| DTC | CONSULT screen items | EVsystem warning lamp | Trip | Reference |\n| --- | --- | --- | --- | --- |\n| P3324 | CELL OVER VOLTAGE MODULE35 | × | 1 | EVB-129 |\n| P3325 | CELL OVER VOLTAGE MODULE36 | × | 1 | EVB-129 |\n| P3326 | CELL OVER VOLTAGE MODULE37 | × | 1 | EVB-132 |\n| P3327 | CELL OVER VOLTAGE MODULE38 | × | 1 | EVB-132 |\n| P3328 | CELL OVER VOLTAGE MODULE39 | × | 1 | EVB-132 |\n| P3329 | CELL OVER VOLTAGE MODULE40 | × | 1 | EVB-132 |\n| P332A | CELL OVER VOLTAGE MODULE41 | × | 1 | EVB-132 |\n| P332B | CELL OVER VOLTAGE MODULE42 | × | 1 | EVB-132 |\n| P332C | CELL OVER VOLTAGE MODULE43 | × | 1 | EVB-132 |\n| P332D | CELL OVER VOLTAGE MODULE44 | × | 1 | EVB-132 |\n| P332E | CELL OVER VOLTAGE MODULE45 | × | 1 | EVB-132 |\n| P332F | CELL OVER VOLTAGE MODULE46 | × | 1 | EVB-132 |\n| P3330 | CELL OVER VOLTAGE MODULE47 | × | 1 | EVB-132 |\n| P3331 | CELL OVER VOLTAGE MODULE48 | × | 1 | EVB-132 |\n| P3375 | CELL OVER DISCHARGE MODULE1 | × | 1 | EVB-135 |\n| P3376 | CELL OVER DISCHARGE MODULE2 | × | 1 | EVB-135 |\n| P3377 | CELL OVER DISCHARGE MODULE3 | × | 1 | EVB-135 |\n| P3378 | CELL OVER DISCHARGE MODULE4 | × | 1 | EVB-135 |\n| P3379 | CELL OVER DISCHARGE MODULE5 | × | 1 | EVB-135 |\n| P337A | CELL OVER DISCHARGE MODULE6 | × | 1 | EVB-135 |\n| P337B | CELL OVER DISCHARGE MODULE7 | × | 1 | EVB-135 |\n| P337C | CELL OVER DISCHARGE MODULE8 | × | 1 | EVB-135 |\n| P337D | CELL OVER DISCHARGE MODULE9 | × | 1 | EVB-135 |\n| P337E | CELL OVER DISCHARGE MODULE10 | × | 1 | EVB-135 |\n| P337F | CELL OVER DISCHARGE MODULE11 | × | 1 | EVB-135 |\n| P3380 | CELL OVER DISCHARGE MODULE12 | × | 1 | EVB-135 |\n| P3381 | CELL OVER DISCHARGE MODULE13 | × | 1 | EVB-139 |\n| P3382 | CELL OVER DISCHARGE MODULE14 | × | 1 | EVB-139 |\n| P3383 | CELL OVER DISCHARGE MODULE15 | × | 1 | EVB-139 |\n| P3384 | CELL OVER DISCHARGE MODULE16 | × | 1 | EVB-139 |\n| P3385 | CELL OVER DISCHARGE MODULE17 | × | 1 | EVB-139 |\n| P3386 | CELL OVER DISCHARGE MODULE18 | × | 1 | EVB-139 |\n| P3387 | CELL OVER DISCHARGE MODULE19 | × | 1 | EVB-139 |\n| P3388 | CELL OVER DISCHARGE MODULE20 | × | 1 | EVB-139 |\n| P3389 | CELL OVER DISCHARGE MODULE21 | × | 1 | EVB-139 |\n| P338A | CELL OVER DISCHARGE MODULE22 | × | 1 | EVB-139 |\n| P338B | CELL OVER DISCHARGE MODULE23 | × | 1 | EVB-139 |\n| P338C | CELL OVER DISCHARGE MODULE24 | × | 1 | EVB-139 |\n| P338D | CELL OVER DISCHARGE MODULE25 | × | 1 | EVB-143 |\n| P338E | CELL OVER DISCHARGE MODULE26 | × | 1 | EVB-143 |\n| P338F | CELL OVER DISCHARGE MODULE27 | × | 1 | EVB-143 |\n| P3390 | CELL OVER DISCHARGE MODULE28 | × | 1 | EVB-143 |\n| P3391 | CELL OVER DISCHARGE MODULE29 | × | 1 | EVB-143 |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "DTC",
+          "CONSULT screen items",
+          "EVsystem warning lamp",
+          "Trip",
+          "Reference"
+        ],
+        [
+          "P3324",
+          "CELL OVER VOLTAGE MODULE35",
+          "×",
+          "1",
+          "EVB-129"
+        ],
+        [
+          "P3325",
+          "CELL OVER VOLTAGE MODULE36",
+          "×",
+          "1",
+          "EVB-129"
+        ],
+        [
+          "P3326",
+          "CELL OVER VOLTAGE MODULE37",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P3327",
+          "CELL OVER VOLTAGE MODULE38",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P3328",
+          "CELL OVER VOLTAGE MODULE39",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P3329",
+          "CELL OVER VOLTAGE MODULE40",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P332A",
+          "CELL OVER VOLTAGE MODULE41",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P332B",
+          "CELL OVER VOLTAGE MODULE42",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P332C",
+          "CELL OVER VOLTAGE MODULE43",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P332D",
+          "CELL OVER VOLTAGE MODULE44",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P332E",
+          "CELL OVER VOLTAGE MODULE45",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P332F",
+          "CELL OVER VOLTAGE MODULE46",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P3330",
+          "CELL OVER VOLTAGE MODULE47",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P3331",
+          "CELL OVER VOLTAGE MODULE48",
+          "×",
+          "1",
+          "EVB-132"
+        ],
+        [
+          "P3375",
+          "CELL OVER DISCHARGE MODULE1",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P3376",
+          "CELL OVER DISCHARGE MODULE2",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P3377",
+          "CELL OVER DISCHARGE MODULE3",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P3378",
+          "CELL OVER DISCHARGE MODULE4",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P3379",
+          "CELL OVER DISCHARGE MODULE5",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P337A",
+          "CELL OVER DISCHARGE MODULE6",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P337B",
+          "CELL OVER DISCHARGE MODULE7",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P337C",
+          "CELL OVER DISCHARGE MODULE8",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P337D",
+          "CELL OVER DISCHARGE MODULE9",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P337E",
+          "CELL OVER DISCHARGE MODULE10",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P337F",
+          "CELL OVER DISCHARGE MODULE11",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P3380",
+          "CELL OVER DISCHARGE MODULE12",
+          "×",
+          "1",
+          "EVB-135"
+        ],
+        [
+          "P3381",
+          "CELL OVER DISCHARGE MODULE13",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P3382",
+          "CELL OVER DISCHARGE MODULE14",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P3383",
+          "CELL OVER DISCHARGE MODULE15",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P3384",
+          "CELL OVER DISCHARGE MODULE16",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P3385",
+          "CELL OVER DISCHARGE MODULE17",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P3386",
+          "CELL OVER DISCHARGE MODULE18",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P3387",
+          "CELL OVER DISCHARGE MODULE19",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P3388",
+          "CELL OVER DISCHARGE MODULE20",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P3389",
+          "CELL OVER DISCHARGE MODULE21",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P338A",
+          "CELL OVER DISCHARGE MODULE22",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P338B",
+          "CELL OVER DISCHARGE MODULE23",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P338C",
+          "CELL OVER DISCHARGE MODULE24",
+          "×",
+          "1",
+          "EVB-139"
+        ],
+        [
+          "P338D",
+          "CELL OVER DISCHARGE MODULE25",
+          "×",
+          "1",
+          "EVB-143"
+        ],
+        [
+          "P338E",
+          "CELL OVER DISCHARGE MODULE26",
+          "×",
+          "1",
+          "EVB-143"
+        ],
+        [
+          "P338F",
+          "CELL OVER DISCHARGE MODULE27",
+          "×",
+          "1",
+          "EVB-143"
+        ],
+        [
+          "P3390",
+          "CELL OVER DISCHARGE MODULE28",
+          "×",
+          "1",
+          "EVB-143"
+        ],
+        [
+          "P3391",
+          "CELL OVER DISCHARGE MODULE29",
+          "×",
+          "1",
+          "EVB-143"
+        ]
+      ]
+    },
+    {
+      "page_pdf": 49,
+      "page_manual": "EVB-49",
+      "section_code": "EVB",
+      "bbox": [
+        50.89870834350586,
+        740.080696105957,
+        582.6785278320312,
+        155.836181640625
+      ],
+      "num_rows": 36,
+      "num_cols": 6,
+      "data": [
+        [
+          "DTC",
+          "CONSULT screen items",
+          "EVsystem warning lamp",
+          "Trip",
+          "Reference",
+          "A"
+        ],
+        [
+          "P3392",
+          "CELL OVER DISCHARGE MODULE30",
+          "×",
+          "1",
+          "EVB-143",
+          ""
+        ],
+        [
+          "P3393",
+          "CELL OVER DISCHARGE MODULE31",
+          "×",
+          "1",
+          "EVB-143",
+          "B"
+        ],
+        [
+          "P3394",
+          "CELL OVER DISCHARGE MODULE32",
+          "×",
+          "1",
+          "EVB-143",
+          ""
+        ],
+        [
+          "P3395",
+          "CELL OVER DISCHARGE MODULE33",
+          "×",
+          "1",
+          "EVB-143",
+          ""
+        ],
+        [
+          "P3396",
+          "CELL OVER DISCHARGE MODULE34",
+          "×",
+          "1",
+          "EVB-143",
+          ""
+        ],
+        [
+          "P3397",
+          "CELL OVER DISCHARGE MODULE35",
+          "×",
+          "1",
+          "EVB-143",
+          ""
+        ],
+        [
+          "P3398",
+          "CELL OVER DISCHARGE MODULE36",
+          "×",
+          "1",
+          "EVB-143",
+          "D"
+        ],
+        [
+          "P3399",
+          "CELL OVER DISCHARGE MODULE37",
+          "×",
+          "1",
+          "EVB-146",
+          ""
+        ],
+        [
+          "P339A",
+          "CELL OVER DISCHARGE MODULE38",
+          "×",
+          "1",
+          "EVB-146",
+          ""
+        ],
+        [
+          "P339B",
+          "CELL OVER DISCHARGE MODULE39",
+          "×",
+          "1",
+          "EVB-146",
+          "E"
+        ],
+        [
+          "P339C",
+          "CELL OVER DISCHARGE MODULE40",
+          "×",
+          "1",
+          "EVB-146",
+          ""
+        ],
+        [
+          "P339D",
+          "CELL OVER DISCHARGE MODULE41",
+          "×",
+          "1",
+          "EVB-146",
+          "F"
+        ],
+        [
+          "P339E",
+          "CELL OVER DISCHARGE MODULE42",
+          "×",
+          "1",
+          "EVB-146",
+          ""
+        ],
+        [
+          "P339F",
+          "CELL OVER DISCHARGE MODULE43",
+          "×",
+          "1",
+          "EVB-146",
+          ""
+        ],
+        [
+          "P33A0",
+          "CELL OVER DISCHARGE MODULE44",
+          "×",
+          "1",
+          "EVB-146",
+          "G"
+        ],
+        [
+          "P33A1",
+          "CELL OVER DISCHARGE MODULE45",
+          "×",
+          "1",
+          "EVB-146",
+          ""
+        ],
+        [
+          "P33A2",
+          "CELL OVER DISCHARGE MODULE46",
+          "×",
+          "1",
+          "EVB-146",
+          "H"
+        ],
+        [
+          "P33A3",
+          "CELL OVER DISCHARGE MODULE47",
+          "×",
+          "1",
+          "EVB-146",
+          ""
+        ],
+        [
+          "P33A4",
+          "CELL OVER DISCHARGE MODULE48",
+          "×",
+          "1",
+          "EVB-146",
+          ""
+        ],
+        [
+          "P33D4",
+          "BATTERY INTERNAL RESISTANCE DIAG",
+          "×",
+          "1",
+          "EVB-149",
+          "I"
+        ],
+        [
+          "P33D5",
+          "CURRENT SENSOR",
+          "×",
+          "1",
+          "EVB-150",
+          ""
+        ],
+        [
+          "P33D6",
+          "CURRENT SENSOR",
+          "×",
+          "1",
+          "EVB-152",
+          "J"
+        ],
+        [
+          "P33D7",
+          "TEMPERATURE SENSOR",
+          "-",
+          "1",
+          "EVB-154",
+          ""
+        ],
+        [
+          "P33D9",
+          "TEMPERATURE SENSOR",
+          "-",
+          "1",
+          "EVB-154",
+          ""
+        ],
+        [
+          "P33DD",
+          "TEMPERATURE SENSOR",
+          "-",
+          "1",
+          "EVB-154",
+          "K"
+        ],
+        [
+          "P33DF",
+          "BATT VOLTAGE ISOLATION SEN",
+          "×",
+          "1",
+          "EVB-156",
+          ""
+        ],
+        [
+          "P33E0",
+          "BATT VOLTAGE ISOLATION SEN",
+          "×",
+          "1",
+          "EVB-157",
+          "L"
+        ],
+        [
+          "P33E1",
+          "BATT VOLTAGE ISOLATION SEN",
+          "×",
+          "1",
+          "EVB-158",
+          ""
+        ],
+        [
+          "P33E2",
+          "BATT PACK OVER TEMP",
+          "×",
+          "1",
+          "EVB-159",
+          ""
+        ],
+        [
+          "P33E6",
+          "CELL CONTROLLER",
+          "×",
+          "2",
+          "EVB-160",
+          "M"
+        ],
+        [
+          "P33EB",
+          "TEMPERATURE SENSOR",
+          "-",
+          "1",
+          "EVB-167",
+          ""
+        ],
+        [
+          "P33EA",
+          "BATTERY HEATER RELAY",
+          "×",
+          "1",
+          "EVB-165",
+          ""
+        ],
+        [
+          "P33ED",
+          "BATTERY PARALLEL DIAGNOSIS",
+          "×",
+          "1",
+          "EVB-169",
+          "N"
+        ],
+        [
+          "P33EE",
+          "BATTERY HEATER CONTROL SYSTEM",
+          "×",
+          "1",
+          "EVB-171",
+          ""
+        ],
+        [
+          "U1000",
+          "CAN COMM CIRCUIT",
+          "×",
+          "1",
+          "EVB-173",
+          "O"
+        ]
+      ],
+      "markdown": "| DTC | CONSULT screen items | EVsystem warning lamp | Trip | Reference | A |\n| --- | --- | --- | --- | --- | --- |\n| P3392 | CELL OVER DISCHARGE MODULE30 | × | 1 | EVB-143 |  |\n| P3393 | CELL OVER DISCHARGE MODULE31 | × | 1 | EVB-143 | B |\n| P3394 | CELL OVER DISCHARGE MODULE32 | × | 1 | EVB-143 |  |\n| P3395 | CELL OVER DISCHARGE MODULE33 | × | 1 | EVB-143 |  |\n| P3396 | CELL OVER DISCHARGE MODULE34 | × | 1 | EVB-143 |  |\n| P3397 | CELL OVER DISCHARGE MODULE35 | × | 1 | EVB-143 |  |\n| P3398 | CELL OVER DISCHARGE MODULE36 | × | 1 | EVB-143 | D |\n| P3399 | CELL OVER DISCHARGE MODULE37 | × | 1 | EVB-146 |  |\n| P339A | CELL OVER DISCHARGE MODULE38 | × | 1 | EVB-146 |  |\n| P339B | CELL OVER DISCHARGE MODULE39 | × | 1 | EVB-146 | E |\n| P339C | CELL OVER DISCHARGE MODULE40 | × | 1 | EVB-146 |  |\n| P339D | CELL OVER DISCHARGE MODULE41 | × | 1 | EVB-146 | F |\n| P339E | CELL OVER DISCHARGE MODULE42 | × | 1 | EVB-146 |  |\n| P339F | CELL OVER DISCHARGE MODULE43 | × | 1 | EVB-146 |  |\n| P33A0 | CELL OVER DISCHARGE MODULE44 | × | 1 | EVB-146 | G |\n| P33A1 | CELL OVER DISCHARGE MODULE45 | × | 1 | EVB-146 |  |\n| P33A2 | CELL OVER DISCHARGE MODULE46 | × | 1 | EVB-146 | H |\n| P33A3 | CELL OVER DISCHARGE MODULE47 | × | 1 | EVB-146 |  |\n| P33A4 | CELL OVER DISCHARGE MODULE48 | × | 1 | EVB-146 |  |\n| P33D4 | BATTERY INTERNAL RESISTANCE DIAG | × | 1 | EVB-149 | I |\n| P33D5 | CURRENT SENSOR | × | 1 | EVB-150 |  |\n| P33D6 | CURRENT SENSOR | × | 1 | EVB-152 | J |\n| P33D7 | TEMPERATURE SENSOR | - | 1 | EVB-154 |  |\n| P33D9 | TEMPERATURE SENSOR | - | 1 | EVB-154 |  |\n| P33DD | TEMPERATURE SENSOR | - | 1 | EVB-154 | K |\n| P33DF | BATT VOLTAGE ISOLATION SEN | × | 1 | EVB-156 |  |\n| P33E0 | BATT VOLTAGE ISOLATION SEN | × | 1 | EVB-157 | L |\n| P33E1 | BATT VOLTAGE ISOLATION SEN | × | 1 | EVB-158 |  |\n| P33E2 | BATT PACK OVER TEMP | × | 1 | EVB-159 |  |\n| P33E6 | CELL CONTROLLER | × | 2 | EVB-160 | M |\n| P33EB | TEMPERATURE SENSOR | - | 1 | EVB-167 |  |\n| P33EA | BATTERY HEATER RELAY | × | 1 | EVB-165 |  |\n| P33ED | BATTERY PARALLEL DIAGNOSIS | × | 1 | EVB-169 | N |\n| P33EE | BATTERY HEATER CONTROL SYSTEM | × | 1 | EVB-171 |  |\n| U1000 | CAN COMM CIRCUIT | × | 1 | EVB-173 | O |",
+      "tableformer": true,
+      "table_type": "general",
+      "data_raw": [
+        [
+          "DTC",
+          "CONSULT screen items",
+          "EVsystem warning lamp",
+          "Trip",
+          "Reference",
+          "A"
+        ],
+        [
+          "P3392",
+          "CELL OVER DISCHARGE MODULE30",
+          "×",
+          "1",
+          "EVB-143",
+          ""
+        ],
+        [
+          "P3393",
+          "CELL OVER DISCHARGE MODULE31",
+          "×",
+          "1",
+          "EVB-143",
+          "B"
+        ],
+        [
+          "P3394",
+          "CELL OVER DISCHARGE MODULE32",
+          "×",
+          "1",
+          "EVB-143",
+          ""
+        ],
+        [
+          "P3395",
+          "CELL OVER DISCHARGE MODULE33",
+          "×",
+          "1",
+          "EVB-143",
+          ""
+        ],
+        [
+          "P3396",
+          "CELL OVER DISCHARGE MODULE34",
+          "×",
+          "1",
+          "EVB-143",
+          ""
+        ],
+        [
+          "P3397",
+          "CELL OVER DISCHARGE MODULE35",
+          "×",
+          "1",
+          "EVB-143",
+          ""
+        ],
+        [
+          "P3398",
+          "CELL OVER DISCHARGE MODULE36",
+          "×",
+          "1",
+          "EVB-143",
+          "D"
+        ],
+        [
+          "P3399",
+          "CELL OVER DISCHARGE MODULE37",
+          "×",
+          "1",
+          "EVB-146",
+          ""
+        ],
+        [
+          "P339A",
+          "CELL OVER DISCHARGE MODULE38",
+          "×",
+          "1",
+          "EVB-146",
+          ""
+        ],
+        [
+          "P339B",
+          "CELL OVER DISCHARGE MODULE39",
+          "×",
+          "1",
+          "EVB-146",
+          "E"
+        ],
+        [
+          "P339C",
+          "CELL OVER DISCHARGE MODULE40",
+          "×",
+          "1",
+          "EVB-146",
+          ""
+        ],
+        [
+          "P339D",
+          "CELL OVER DISCHARGE MODULE41",
+          "×",
+          "1",
+          "EVB-146",
+          "F"
+        ],
+        [
+          "P339E",
+          "CELL OVER DISCHARGE MODULE42",
+          "×",
+          "1",
+          "EVB-146",
+          ""
+        ],
+        [
+          "P339F",
+          "CELL OVER DISCHARGE MODULE43",
+          "×",
+          "1",
+          "EVB-146",
+          ""
+        ],
+        [
+          "P33A0",
+          "CELL OVER DISCHARGE MODULE44",
+          "×",
+          "1",
+          "EVB-146",
+          "G"
+        ],
+        [
+          "P33A1",
+          "CELL OVER DISCHARGE MODULE45",
+          "×",
+          "1",
+          "EVB-146",
+          ""
+        ],
+        [
+          "P33A2",
+          "CELL OVER DISCHARGE MODULE46",
+          "×",
+          "1",
+          "EVB-146",
+          "H"
+        ],
+        [
+          "P33A3",
+          "CELL OVER DISCHARGE MODULE47",
+          "×",
+          "1",
+          "EVB-146",
+          ""
+        ],
+        [
+          "P33A4",
+          "CELL OVER DISCHARGE MODULE48",
+          "×",
+          "1",
+          "EVB-146",
+          ""
+        ],
+        [
+          "P33D4",
+          "BATTERY INTERNAL RESISTANCE DIAG",
+          "×",
+          "1",
+          "EVB-149",
+          "I"
+        ],
+        [
+          "P33D5",
+          "CURRENT SENSOR",
+          "×",
+          "1",
+          "EVB-150",
+          ""
+        ],
+        [
+          "P33D6",
+          "CURRENT SENSOR",
+          "×",
+          "1",
+          "EVB-152",
+          "J"
+        ],
+        [
+          "P33D7",
+          "TEMPERATURE SENSOR",
+          "-",
+          "1",
+          "EVB-154",
+          ""
+        ],
+        [
+          "P33D9",
+          "TEMPERATURE SENSOR",
+          "-",
+          "1",
+          "EVB-154",
+          ""
+        ],
+        [
+          "P33DD",
+          "TEMPERATURE SENSOR",
+          "-",
+          "1",
+          "EVB-154",
+          "K"
+        ],
+        [
+          "P33DF",
+          "BATT VOLTAGE ISOLATION SEN",
+          "×",
+          "1",
+          "EVB-156",
+          ""
+        ],
+        [
+          "P33E0",
+          "BATT VOLTAGE ISOLATION SEN",
+          "×",
+          "1",
+          "EVB-157",
+          "L"
+        ],
+        [
+          "P33E1",
+          "BATT VOLTAGE ISOLATION SEN",
+          "×",
+          "1",
+          "EVB-158",
+          ""
+        ],
+        [
+          "P33E2",
+          "BATT PACK OVER TEMP",
+          "×",
+          "1",
+          "EVB-159",
+          ""
+        ],
+        [
+          "P33E6",
+          "CELL CONTROLLER",
+          "×",
+          "2",
+          "EVB-160",
+          "M"
+        ],
+        [
+          "P33EB",
+          "TEMPERATURE SENSOR",
+          "-",
+          "1",
+          "EVB-167",
+          ""
+        ],
+        [
+          "P33EA",
+          "BATTERY HEATER RELAY",
+          "×",
+          "1",
+          "EVB-165",
+          ""
+        ],
+        [
+          "P33ED",
+          "BATTERY PARALLEL DIAGNOSIS",
+          "×",
+          "1",
+          "EVB-169",
+          "N"
+        ],
+        [
+          "P33EE",
+          "BATTERY HEATER CONTROL SYSTEM",
+          "×",
+          "1",
+          "EVB-171",
+          ""
+        ],
+        [
+          "U1000",
+          "CAN COMM CIRCUIT",
+          "×",
+          "1",
+          "EVB-173",
+          "O"
+        ]
+      ]
+    }
+  ],
+  "images": [
+    {
+      "file": "images/page_50_raster_1.png",
+      "page_pdf": 50,
+      "page_manual": "EVB-50",
+      "section_code": "EVB",
+      "bbox": [
+        87.72000122070312,
+        117.179931640625,
+        523.97998046875,
+        714.119873046875
+      ],
+      "caption": "",
+      "type": "raster"
+    }
+  ]
+}
