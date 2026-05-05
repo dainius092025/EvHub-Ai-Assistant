@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "document_id": "a3f9c12d7e4b8f01",
+  "source_file": "nissan_leaf_2013_specs.pdf",
+  "source_type": "vehicle_listing",
+  "metadata": {
+    "title": "2013 Nissan LEAF — Product Specifications",
+    "author": "Nissan Motor Co.",
+    "subject": null,
+    "keywords": null,
+    "creator": "AdobeInDesign 7.5",
+    "producer": "Adobe PDF Library 9.9",
+    "creation_date": "2012-11-01",
+    "modification_date": "2013-02-14",
+    "format": "PDF 1.5",
+    "encryption": null
+  },
+  "records": [
+    {
+      "record_id": "a3f9c12d_r1",
+      "record_type": "vehicle_spec",
+      "title": "2013 Nissan LEAF S — Technical Specifications",
+      "identifiers": [
+        { "type": "model_code",  "value": "ZE0",       "confidence": 1.0 },
+        { "type": "trim_level",  "value": "S",          "confidence": 1.0 },
+        { "type": "model_year",  "value": "2013",       "confidence": 1.0 },
+        { "type": "vin_prefix",  "value": "1N4AZ0CP",   "confidence": 0.9 }
+      ],
+      "location": {
+        "start_pdf_page": 4,
+        "end_pdf_page": 6,
+        "page_refs": ["4", "5", "6"]
+      },
+      "content_blocks": [
+        {
+          "block_id": "r1_b1",
+          "block_type": "heading",
+          "role": "title",
+          "text": "2013 Nissan LEAF S — Technical Specifications",
+          "location": { "start_pdf_page": 4 },
+          "extraction": { "status": "success" }
+        },
+        {
+          "block_id": "r1_b2",
+          "block_type": "table",
+          "heading": "Motor & Battery",
+          "role": "spec_table",
+          "raw_rows": [
+            ["Specification",    "Value"],
+            ["Motor type",       "AC synchronous motor"],
+            ["Motor output",     "80 kW / 280 Nm"],
+            ["Battery type",     "Laminated lithium-ion"],
+            ["Battery capacity", "24 kWh"],
+            ["Range (EPA)",      "75 miles"]
+          ],
+          "table_quality": {
+            "status": "ok",
+            "confidence": "high",
+            "warnings": [],
+            "flags": []
+          },
+          "location": { "start_pdf_page": 4 },
+          "extraction": { "status": "success" }
+        },
+        {
+          "block_id": "r1_b3",
+          "block_type": "table",
+          "heading": "Dimensions & Weight",
+          "role": "spec_table",
+          "raw_rows": [
+            ["Specification",  "Value"],
+            ["Overall length", "4,445 mm"],
+            ["Overall width",  "1,770 mm"],
+            ["Overall height", "1,550 mm"],
+            ["Wheelbase",      "2,700 mm"],
+            ["Curb weight",    "1,474 kg"]
+          ],
+          "table_quality": {
+            "status": "ok",
+            "confidence": "high",
+            "warnings": [],
+            "flags": []
+          },
+          "location": { "start_pdf_page": 5 },
+          "extraction": { "status": "success" }
+        },
+        {
+          "block_id": "r1_b4",
+          "block_type": "image",
+          "role": "product_photo",
+          "image_ref": {
+            "image_id": "r1_i1",
+            "path": "nissan_leaf_2013_specs/img_p6_1.png",
+            "caption": "2013 Nissan LEAF S — Brilliant Silver",
+            "pdf_page": 6
+          },
+          "location": { "start_pdf_page": 6 },
+          "extraction": { "status": "success" }
+        }
+      ],
+      "extraction": {
+        "status": "success",
+        "confidence": "high",
+        "warnings": [],
+        "ocr_used": false
+      }
+    },
+    {
+      "record_id": "a3f9c12d_r2",
+      "record_type": "vehicle_spec",
+      "title": "2013 Nissan LEAF SV — Technical Specifications",
+      "identifiers": [
+        { "type": "model_code", "value": "ZE0",  "confidence": 1.0 },
+        { "type": "trim_level", "value": "SV",   "confidence": 1.0 },
+        { "type": "model_year", "value": "2013", "confidence": 1.0 }
+      ],
+      "location": {
+        "start_pdf_page": 7,
+        "end_pdf_page": 8,
+        "page_refs": ["7", "8"]
+      },
+      "content_blocks": [
+        {
+          "block_id": "r2_b1",
+          "block_type": "table",
+          "heading": "SV vs S — Added Features",
+          "role": "spec_table",
+          "raw_rows": [
+            ["Feature",                 "S",  "SV"],
+            ["6.6 kW on-board charger", "—",  "✓"],
+            ["Quick charge port",       "—",  "✓"],
+            ["LED headlights",          "—",  "✓"],
+            ["Navigation system",       "—",  "✓"]
+          ],
+          "table_quality": {
+            "status": "partial",
+            "confidence": "medium",
+            "warnings": ["Symbol characters (✓, —) may not render correctly in all consumers"],
+            "flags": []
+          },
+          "location": { "start_pdf_page": 7 },
+          "extraction": { "status": "partial" }
+        }
+      ],
+      "extraction": {
+        "status": "partial",
+        "confidence": "medium",
+        "warnings": ["Symbol characters in comparison table may degrade downstream parsing"],
+        "ocr_used": false
+      }
+    }
+  ],
+  "extraction": {
+    "status": "success",
+    "confidence": "high",
+    "warnings": [],
+    "ocr_used": false
+  }
+}

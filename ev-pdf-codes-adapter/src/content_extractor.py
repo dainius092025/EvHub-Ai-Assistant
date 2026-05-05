@@ -2,7 +2,7 @@ import re
 import hashlib
 import fitz
 from pathlib import Path
-from patterns import INFOID_RE, SIDEBAR_RE
+from patterns import INFOID_RE, SIDEBAR_RE, IMAGE_ID_RE
 from text_parser import KNOWN_HEADINGS
 
 # Matches printed page labels like EVB-88, EVC-109, TM-44, TMS-12
@@ -345,6 +345,36 @@ def _finalize_section(section: dict) -> dict:
     }
 
 
+def _find_image_caption(page: fitz.Page, xref: int) -> str | None:
+    """
+    Look for a short identifier/caption in the text immediately below the image.
+
+    Works generically — matches any short uppercase alphanumeric code
+    (e.g. JSCIA0812GB, JPCIA0347ZZ) within 60pt below the image bbox.
+    Returns the identifier string, or None if nothing found.
+    """
+    rects = page.get_image_rects(xref)
+    if not rects:
+        return None
+
+    bbox = rects[0]
+
+    for block in page.get_text("dict")["blocks"]:
+        if block["type"] != 0:
+            continue
+        bx = block["bbox"]
+        # Look within 40pt above the image bottom (catches identifiers
+        # printed inside the bottom of the image area) and 60pt below it.
+        if bx[1] < bbox.y1 - 40 or bx[1] > bbox.y1 + 60:
+            continue
+        for line in block["lines"]:
+            for span in line["spans"]:
+                text = span["text"].strip()
+                if IMAGE_ID_RE.match(text):
+                    return text
+    return None
+
+
 def extract_content(
     pdf_path: Path,
     start_page: int,
@@ -463,6 +493,7 @@ def extract_content(
                     "filename": seen_hashes[img_hash],
                     "pdf_page": page_num,
                     "page_ref": ref,
+                    "caption":  _find_image_caption(page, xref),
                 })
                 img_counter += 1
                 has_images = True

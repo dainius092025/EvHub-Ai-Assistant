@@ -749,6 +749,9 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
 
     # ── Extract vehicle info ──────────────────────────────────────────────────
     vehicle = extract_vehicle_info(pdf_path, metadata)
+    # Strip internal field not in the shared envelope
+    if isinstance(vehicle, dict) and isinstance(vehicle.get("source"), dict):
+        vehicle["source"].pop("make_from_lookup", None)
 
     # ── Build DTC index ───────────────────────────────────────────────────────
     index = build_index(pdf_path)
@@ -783,10 +786,11 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
 
     print(f"\nExtracting content for {len(index)} codes across {len(page_to_codes)} pages...")
 
-    records     = []
-    seen_xrefs  = set()
-    seen_hashes = {}
-    record_num  = 0   # incremented per TYPE segment, not per index entry
+    records          = []
+    seen_xrefs       = set()
+    seen_hashes      = {}
+    record_num       = 0   # incremented per TYPE segment, not per index entry
+    doc_section_code = None  # first section code seen across all records
 
     for page_num, codes in sorted(page_to_codes.items()):
         print(f"  Page {page_num} -> {codes}")
@@ -821,6 +825,8 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
             # ── page_refs list ────────────────────────────────────────────────
             page_refs    = content["page_refs"]
             section_code = content.get("section_code")
+            if section_code and doc_section_code is None:
+                doc_section_code = section_code
 
             # ── DTC title ─────────────────────────────────────────────────────
             dtc_title = _normalize_title(codes, code_titles)
@@ -887,8 +893,8 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                     "section_id": None,
                     "pdf_page":   img["pdf_page"],
                     "page_ref":   img["page_ref"],
-                    "image_path": f"images/{img['filename']}",
-                    "caption":    None,
+                    "image_path": img["filename"],
+                    "caption":    img.get("caption"),
                     "role":       "unknown",
                 })
 
@@ -929,12 +935,27 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
             else:
                 seg_start = None
 
+    # Strip internal field not in the shared envelope
+    profile_out = {k: v for k, v in pdf_profile.items() if k != "link_count_sample"}
+
     return {
-        "schema_version": 4,
-        "document_id":    document_id,
-        "source_file":    source,
-        "metadata":       metadata,
-        "pdf_profile":    pdf_profile,
-        "vehicle":        vehicle,
-        "records":        records,
+        "schema_version":         "1.0",
+        "schema_type":            "shared_document_profile",
+        "adapter_schema_version": 4,
+        "document_id":            document_id,
+        "source_file":            source,
+        "metadata":               metadata,
+        "pdf_profile":            profile_out,
+        "vehicle":                vehicle,
+        "section": {
+            "code":        doc_section_code,
+            "name":        None,
+            "manual_type": None,
+        },
+        "processing": {
+            "adapter_name":         "ev-pdf-codes-adapter",
+            "extraction_completed": True,
+            "errors":               [],
+        },
+        "records": records,
     }

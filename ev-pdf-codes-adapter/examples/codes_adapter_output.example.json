@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "document_id": "b7d2e44a91fc3c08",
+  "source_file": "EVB.pdf",
+  "source_type": "workshop_manual",
+  "metadata": {
+    "title": "2013 Nissan LEAF — EV/HEV Service Manual",
+    "author": null,
+    "subject": null,
+    "keywords": null,
+    "creator": "PScript5.dll Version 5.2.2",
+    "producer": "GPL Ghostscript 9.05",
+    "creation_date": "2013-09-15",
+    "modification_date": null,
+    "format": "PDF 1.4",
+    "encryption": null
+  },
+  "records": [
+    {
+      "record_id": "b7d2e44a_r1",
+      "record_type": "dtc_block",
+      "title": "P0A0D HV SYSTEM INTERLOCK ERROR",
+      "identifiers": [
+        { "type": "dtc_code", "value": "P0A0D", "confidence": 1.0 }
+      ],
+      "location": {
+        "start_pdf_page": 88,
+        "end_pdf_page": 90,
+        "page_refs": ["EVB-88", "EVB-89", "EVB-90"],
+        "section_ref": "EVB"
+      },
+      "content_blocks": [
+        {
+          "block_id": "r1_b1",
+          "block_type": "text",
+          "heading": "DTC Logic",
+          "role": "dtc_logic",
+          "text": "The HV system interlock circuit monitors continuity of the service plug and high-voltage connectors.\nWhen the ECM detects an open circuit in the interlock loop, DTC P0A0D is set.\n\nConfirmation procedure:\n1. Connect the Nissan scan tool.\n2. Turn the ignition ON.\n3. Check for active DTCs.",
+          "location": { "start_pdf_page": 88, "page_refs": ["EVB-88"] },
+          "extraction": { "status": "success" }
+        },
+        {
+          "block_id": "r1_b2",
+          "block_type": "table",
+          "heading": "DTC Logic",
+          "role": "dtc_logic",
+          "raw_rows": [
+            ["DTC",   "Trouble diagnosis name",    "DTC detecting condition",                           "Possible cause"],
+            ["P0A0D", "HV system interlock error", "Interlock circuit open for more than 0.5 seconds",  "HV connector loose\nService plug not seated\nWiring harness fault"]
+          ],
+          "table_quality": {
+            "status": "partial",
+            "confidence": "medium",
+            "warnings": ["Cell in 'Possible cause' column contains newlines — may represent a list"],
+            "flags": ["merged_cells"]
+          },
+          "repaired_table": {
+            "status": "ok",
+            "method": "bbox_rebuild",
+            "rows": [
+              ["DTC",   "Trouble diagnosis name",    "DTC detecting condition",                          "Possible cause"],
+              ["P0A0D", "HV system interlock error", "Interlock circuit open for more than 0.5 seconds", "HV connector loose; Service plug not seated; Wiring harness fault"]
+            ],
+            "warnings": []
+          },
+          "location": { "start_pdf_page": 88, "page_refs": ["EVB-88"] },
+          "extraction": { "status": "partial" }
+        },
+        {
+          "block_id": "r1_b3",
+          "block_type": "text",
+          "heading": "Diagnosis Procedure",
+          "role": "diagnosis_procedure",
+          "text": "Step 1: Inspect the service plug grip for proper seating.\nStep 2: Check all high-voltage connectors for damage or looseness.\nStep 3: Using a multimeter, verify interlock circuit continuity between ECM pin 32 and chassis ground.",
+          "location": { "start_pdf_page": 89, "page_refs": ["EVB-89"] },
+          "extraction": { "status": "success" }
+        },
+        {
+          "block_id": "r1_b4",
+          "block_type": "table",
+          "heading": "Diagnosis Procedure",
+          "role": "diagnosis_procedure",
+          "raw_rows": [
+            ["Step", "Inspection",                          "Yes",             "No"],
+            ["1",    "Is service plug fully seated?",       "Go to step 2",    "Reseat plug → retest"],
+            ["2",    "Any HV connector loose or damaged?",  "Repair → retest", "Go to step 3"],
+            ["3",    "Interlock continuity OK?",            "Fault intermittent — monitor", "Replace wiring harness"]
+          ],
+          "table_quality": {
+            "status": "partial",
+            "confidence": "medium",
+            "warnings": ["Table spans 2 pages — rows merged from EVB-89 and EVB-90"],
+            "flags": ["cross_page_merge"]
+          },
+          "location": {
+            "start_pdf_page": 89,
+            "end_pdf_page": 90,
+            "page_refs": ["EVB-89", "EVB-90"]
+          },
+          "extraction": { "status": "partial" }
+        },
+        {
+          "block_id": "r1_b5",
+          "block_type": "image",
+          "role": "wiring_diagram",
+          "image_ref": {
+            "image_id": "r1_i1",
+            "path": "EVB/img_p89_1.png",
+            "caption": null,
+            "pdf_page": 89
+          },
+          "location": { "start_pdf_page": 89, "page_refs": ["EVB-89"] },
+          "extraction": { "status": "success" }
+        }
+      ],
+      "extraction": {
+        "status": "partial",
+        "confidence": "medium",
+        "warnings": [
+          "DTC logic table has merged cells",
+          "Diagnosis procedure table spans pages EVB-89 and EVB-90"
+        ],
+        "ocr_used": false
+      }
+    },
+    {
+      "record_id": "b7d2e44a_r2",
+      "record_type": "dtc_block",
+      "title": "P0A1C MOTOR TEMP SENSOR CIRCUIT",
+      "identifiers": [
+        { "type": "dtc_code", "value": "P0A1C", "confidence": 1.0 }
+      ],
+      "location": {
+        "start_pdf_page": 91,
+        "end_pdf_page": 92,
+        "page_refs": ["EVB-91", "EVB-92"],
+        "section_ref": "EVB"
+      },
+      "content_blocks": [
+        {
+          "block_id": "r2_b1",
+          "block_type": "text",
+          "heading": "DTC Logic",
+          "role": "dtc_logic",
+          "text": "Monitors the motor temperature sensor (MG) voltage signal.\nDTC P0A1C is set when sensor voltage is outside the normal operating range.",
+          "location": { "start_pdf_page": 91, "page_refs": ["EVB-91"] },
+          "extraction": { "status": "success" }
+        },
+        {
+          "block_id": "r2_b2",
+          "block_type": "table",
+          "heading": "DTC Logic",
+          "role": "dtc_logic",
+          "raw_rows": [
+            ["DTC",   "Trouble diagnosis name",    "DTC detecting condition",                       "Possible cause"],
+            ["P0A1C", "Motor temp sensor circuit", "Sensor voltage < 0.1 V or > 4.9 V for > 1 sec", "Sensor failure\nOpen circuit\nShort to power or ground"]
+          ],
+          "table_quality": {
+            "status": "partial",
+            "confidence": "medium",
+            "warnings": [],
+            "flags": ["merged_cells"]
+          },
+          "location": { "start_pdf_page": 91, "page_refs": ["EVB-91"] },
+          "extraction": {
+            "status": "partial",
+            "warnings": ["Possible cause cell contains newline-separated list"],
+            "ocr_used": false
+          }
+        }
+      ],
+      "extraction": {
+        "status": "partial",
+        "confidence": "medium",
+        "warnings": ["Possible cause cell contains newlines — interpret as list"],
+        "ocr_used": false
+      }
+    }
+  ],
+  "extraction": {
+    "status": "success",
+    "confidence": "high",
+    "warnings": [],
+    "ocr_used": false
+  }
+}

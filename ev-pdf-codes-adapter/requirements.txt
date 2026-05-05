@@ -1,5 +1,5 @@
 # Core pipeline
 pymupdf>=1.24
 
-# Experiments only (not used in pipeline)
-# docling>=2.92
+# Table extraction enrichment (docling_enricher.py)
+docling>=2.92

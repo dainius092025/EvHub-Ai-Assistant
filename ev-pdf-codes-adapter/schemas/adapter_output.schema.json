@@ -1,0 +1,348 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "adapter_output.schema.json",
+  "title": "Shared Adapter Output Schema",
+  "description": "Schema for structured JSON produced by any PDF adapter (cars, codes, manuals, etc.). Owned by PDF Cars Adapter. PDF Codes Adapter must conform.",
+  "type": "object",
+  "required": ["schema_version", "document_id", "source_file", "source_type", "records", "extraction"],
+  "additionalProperties": false,
+  "properties": {
+
+    "schema_version": {
+      "type": "string",
+      "description": "Schema version string. Current: '1.0'.",
+      "example": "1.0"
+    },
+
+    "document_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable unique identifier for this document. Recommended: sha256 hex of raw PDF bytes."
+    },
+
+    "source_file": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Filename of the source PDF, without directory path."
+    },
+
+    "source_type": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Describes what kind of document this is. Free string — adapter sets it. Examples: 'workshop_manual', 'parts_catalog', 'vehicle_listing', 'diagnostic_manual'."
+    },
+
+    "metadata": {
+      "description": "Raw PDF metadata fields. All fields optional — set to null when not present in PDF.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title":             { "type": ["string", "null"] },
+        "author":            { "type": ["string", "null"] },
+        "subject":           { "type": ["string", "null"] },
+        "keywords":          { "type": ["string", "null"] },
+        "creator":           { "type": ["string", "null"] },
+        "producer":          { "type": ["string", "null"] },
+        "creation_date":     { "type": ["string", "null"] },
+        "modification_date": { "type": ["string", "null"] },
+        "format":            { "type": ["string", "null"] },
+        "encryption":        { "type": ["string", "null"] }
+      }
+    },
+
+    "records": {
+      "type": "array",
+      "description": "All extracted records from this document. May be empty if no records were found.",
+      "items": { "$ref": "#/definitions/record" }
+    },
+
+    "extraction": {
+      "$ref": "#/definitions/extraction_result",
+      "description": "Document-level extraction result."
+    }
+  },
+
+  "definitions": {
+
+    "record": {
+      "type": "object",
+      "description": "One logical unit extracted from the PDF. What constitutes a record depends on source_type (e.g. one DTC block, one vehicle listing, one parts row).",
+      "required": ["record_id", "record_type", "location", "content_blocks", "extraction"],
+      "additionalProperties": false,
+      "properties": {
+
+        "record_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable unique identifier for this record within the document. Recommended: sha256 of (document_id + discriminator)[:16]."
+        },
+
+        "record_type": {
+          "type": "string",
+          "minLength": 1,
+          "description": "What kind of record this is. Adapter-defined. Examples: 'dtc_block', 'vehicle_spec', 'part_entry', 'section'."
+        },
+
+        "title": {
+          "type": ["string", "null"],
+          "description": "Human-readable title for this record as it appears in the PDF. Null when not present."
+        },
+
+        "identifiers": {
+          "type": "array",
+          "description": "Structured identifiers found in this record (codes, part numbers, VINs, model codes, etc.).",
+          "items": { "$ref": "#/definitions/identifier" }
+        },
+
+        "location": {
+          "$ref": "#/definitions/location"
+        },
+
+        "content_blocks": {
+          "type": "array",
+          "description": "All content extracted for this record, ordered as they appear in the PDF.",
+          "items": { "$ref": "#/definitions/content_block" }
+        },
+
+        "extraction": {
+          "$ref": "#/definitions/extraction_result"
+        }
+      }
+    },
+
+    "identifier": {
+      "type": "object",
+      "description": "A single structured identifier found in a record.",
+      "required": ["type", "value"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Identifier category. Adapter-defined. Examples: 'dtc_code', 'part_number', 'model_code', 'vin_prefix', 'obd_pid'."
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The identifier value as extracted from the PDF."
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Extraction confidence, 0.0–1.0. Omit when confidence is not tracked."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Optional human-readable note about how this identifier was found."
+        }
+      }
+    },
+
+    "location": {
+      "type": "object",
+      "description": "Where in the PDF this item was found.",
+      "required": ["start_pdf_page"],
+      "additionalProperties": false,
+      "properties": {
+        "start_pdf_page": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "First PDF page (1-based) where this item appears."
+        },
+        "end_pdf_page": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Last PDF page (1-based) where this item appears. Omit when same as start_pdf_page."
+        },
+        "page_refs": {
+          "type": "array",
+          "description": "Printed page references as they appear in the PDF footer/header (e.g. 'EVB-88'). Parallel to the page range.",
+          "items": { "type": "string" }
+        },
+        "section_ref": {
+          "type": "string",
+          "description": "Section or chapter identifier as printed in the PDF (e.g. 'EVB', 'Section 4', 'Chapter B'). Omit when not detected."
+        }
+      }
+    },
+
+    "content_block": {
+      "type": "object",
+      "description": "A single unit of content within a record: a text section, a table, or an image.",
+      "required": ["block_id", "block_type", "location"],
+      "additionalProperties": false,
+      "properties": {
+
+        "block_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Identifier unique within this record. Recommended format: 'r{N}_b{M}' or 'r{N}_t{M}' for tables, 'r{N}_i{M}' for images."
+        },
+
+        "block_type": {
+          "type": "string",
+          "enum": ["text", "table", "image", "heading"],
+          "description": "Type of content in this block."
+        },
+
+        "heading": {
+          "type": ["string", "null"],
+          "description": "Section heading that precedes this block, as it appears in the PDF. Null when not applicable."
+        },
+
+        "role": {
+          "type": ["string", "null"],
+          "description": "Semantic role of this block within the record. Adapter-defined. Examples: 'dtc_logic', 'diagnosis_procedure', 'spec_table', 'overview'. Null when role is unknown."
+        },
+
+        "text": {
+          "type": ["string", "null"],
+          "description": "Raw extracted text for block_type 'text' or 'heading'. Null for tables and images."
+        },
+
+        "raw_rows": {
+          "type": ["array", "null"],
+          "description": "Raw table rows for block_type 'table'. Always preserved — never overwritten. Each row is an array of cell strings.",
+          "items": {
+            "type": "array",
+            "items": { "type": ["string", "null"] }
+          }
+        },
+
+        "table_quality": {
+          "$ref": "#/definitions/table_quality"
+        },
+
+        "repaired_table": {
+          "$ref": "#/definitions/repaired_table"
+        },
+
+        "image_ref": {
+          "$ref": "#/definitions/image_ref"
+        },
+
+        "location": {
+          "$ref": "#/definitions/location"
+        },
+
+        "extraction": {
+          "$ref": "#/definitions/extraction_result"
+        }
+      }
+    },
+
+    "table_quality": {
+      "type": "object",
+      "description": "Assessment of how well the table structure was extracted. Present on block_type 'table' only.",
+      "required": ["status"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["ok", "partial", "failed"],
+          "description": "ok = structure fully parsed. partial = parsed but uncertain, use raw_rows. failed = could not parse, use raw_rows only."
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"],
+          "description": "Overall confidence in the extracted structure."
+        },
+        "warnings": {
+          "type": "array",
+          "description": "Specific issues detected during table extraction.",
+          "items": { "type": "string" }
+        },
+        "flags": {
+          "type": "array",
+          "description": "Machine-readable quality flags. Examples: 'multi_row_header', 'merged_cells', 'borderless', 'image_based'.",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "repaired_table": {
+      "type": "object",
+      "description": "Optional repaired/normalised version of the table. Additive — raw_rows is always preserved alongside this.",
+      "required": ["status", "method"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["ok", "partial", "failed"],
+          "description": "Result of the repair attempt."
+        },
+        "method": {
+          "type": "string",
+          "description": "How the repair was performed. Examples: 'bbox_rebuild', 'llm_normalise', 'column_recovery'."
+        },
+        "rows": {
+          "type": ["array", "null"],
+          "description": "Repaired rows. Null when repair failed.",
+          "items": {
+            "type": "array",
+            "items": { "type": ["string", "null"] }
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "image_ref": {
+      "type": "object",
+      "description": "Reference to an extracted image file. Present on block_type 'image' only.",
+      "required": ["image_id", "path"],
+      "additionalProperties": false,
+      "properties": {
+        "image_id": {
+          "type": "string",
+          "description": "Unique image identifier within this document."
+        },
+        "path": {
+          "type": "string",
+          "description": "Relative path to the saved image file."
+        },
+        "caption": {
+          "type": ["string", "null"],
+          "description": "Caption text if detected near the image."
+        },
+        "pdf_page": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+
+    "extraction_result": {
+      "type": "object",
+      "description": "Extraction status and any warnings. Used at document level and per-record/block.",
+      "required": ["status"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["success", "partial", "failed", "skipped"],
+          "description": "success = fully extracted. partial = extracted with warnings. failed = extraction error. skipped = deliberately not processed."
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"],
+          "description": "Overall confidence in the extraction."
+        },
+        "warnings": {
+          "type": "array",
+          "description": "Human-readable warnings about this extraction.",
+          "items": { "type": "string" }
+        },
+        "ocr_used": {
+          "type": "boolean",
+          "description": "Whether OCR was used to extract content."
+        }
+      }
+    }
+
+  }
+}
