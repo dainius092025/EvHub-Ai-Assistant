@@ -921,8 +921,6 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                 "images":       images,
                 "notes":        notes,
 
-                "raw_text": content["raw_text"],
-
                 "extraction": {
                     "status":   "success",
                     "ocr_used": False,

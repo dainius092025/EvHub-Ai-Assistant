@@ -23,22 +23,26 @@ def read_page_ref(page: fitz.Page) -> str | None:
     return match.group(1) if match else None
 
 
-def clean_text(raw: str) -> str:
+def clean_text(raw: str, section_code: str | None = None) -> str:
     """
     Clean extracted zone text:
       1. Strip OEM content IDs (e.g. INFOID:…)
       2. Strip single-letter sidebar tab characters
       3. Repair soft hyphens split across lines ("de-\ntects" → "detects")
-      4. Remove standalone noise lines (page refs, revision lines, model names)
-      5. Collapse excess blank lines
+      4. Remove standalone noise lines (page refs, revision lines, model names, DTC title headers)
+      5. Remove standalone section code sidebar tabs (e.g. "EVB" on its own line)
+      6. Collapse excess blank lines
     """
     text = INFOID_RE.sub("", raw)
     text = SIDEBAR_RE.sub("", text)
     # Repair word-break hyphens: only when a word ends with "-" and the
     # next line starts with a lowercase letter (soft hyphen, not a real compound).
     text = re.sub(r"(\w+)-\n([a-z])", r"\1\2", text)
-    # Drop lines that are pure header/footer noise (page refs, revision, model name).
+    # Drop lines that are pure header/footer noise (page refs, revision, model name, DTC title).
     lines = [ln for ln in text.split("\n") if not is_noise(ln)]
+    # Drop standalone section code sidebar tabs (e.g. "EVB" from page continuation header).
+    if section_code:
+        lines = [ln for ln in lines if ln.strip() != section_code]
     text = "\n".join(lines)
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
@@ -336,10 +340,10 @@ def extract_tables_from_rect(page: fitz.Page, rect: fitz.Rect) -> list:
     return result
 
 
-def _clean_zone_text(page: fitz.Page, rect: fitz.Rect) -> str:
+def _clean_zone_text(page: fitz.Page, rect: fitz.Rect, section_code: str | None = None) -> str:
     """Extract and clean all text from a zone rect on a page."""
     raw = page.get_text("text", clip=rect)
-    return clean_text(raw)
+    return clean_text(raw, section_code)
 
 
 def _extract_oem_content_id(page: fitz.Page, rect: fitz.Rect) -> str | None:
@@ -441,7 +445,6 @@ def extract_content(
     the page header still belongs to our codes.
 
     Returns:
-        raw_text                 — full unprocessed text across all pages
         sections                 — list of section dicts with text, tables, page range
         has_images               — True if any images were saved
         image_list               — list of image metadata dicts (filename, pdf_page, page_ref)
@@ -453,7 +456,6 @@ def extract_content(
     with fitz.open(str(pdf_path)) as pdf:
         total_pages = len(pdf)
 
-        raw_text_parts        = []   # one raw string per page — joined at end
         has_images            = False
         image_list            = []   # image metadata, IDs assigned later in extractor.py
         img_counter           = 1
@@ -514,9 +516,6 @@ def extract_content(
             pw = page.rect.width
             ph = page.rect.height
 
-            # ── Raw text (unprocessed) ────────────────────────────────────────
-            raw_text_parts.append(page.get_text("text"))
-
             # ── Images ────────────────────────────────────────────────────────
             for img_info in page.get_images(full=True):
                 xref = img_info[0]
@@ -531,7 +530,7 @@ def extract_content(
                 img_bytes    = img_data["image"]
                 img_ext      = img_data["ext"]
                 img_hash     = hashlib.md5(img_bytes).hexdigest()
-                img_filename = f"{page_ref_base}-img{img_counter}.{img_ext}"
+                img_filename = f"{ref or page_ref_base}-img{img_counter}.{img_ext}"
                 img_path     = output_dir / img_filename
 
                 if img_hash not in seen_hashes:
@@ -565,8 +564,9 @@ def extract_content(
             if not breaks:
                 # No headings on this page — entire page continues active section
                 if active_section is not None:
-                    page_rect = fitz.Rect(0, 0, pw, ph)
-                    text = _clean_zone_text(page, page_rect)
+                    page_rect    = fitz.Rect(0, 0, pw, ph)
+                    section_code = ref.split('-')[0] if ref else None
+                    text = _clean_zone_text(page, page_rect, section_code)
                     if text:
                         active_section["text_parts"].append(text)
                     for rows in extract_tables_from_rect(page, page_rect):
@@ -577,10 +577,11 @@ def extract_content(
                 # ── Content before the first heading ─────────────────────────
                 # Belongs to the active section (continuation from a previous page).
                 # Clip to y_top so the heading text itself is excluded.
-                first_y_top = breaks[0][0]
+                first_y_top  = breaks[0][0]
+                section_code = ref.split('-')[0] if ref else None
                 if first_y_top > 0 and active_section is not None:
                     pre_rect = fitz.Rect(0, 0, pw, first_y_top)
-                    pre_text = _clean_zone_text(page, pre_rect)
+                    pre_text = _clean_zone_text(page, pre_rect, section_code)
                     if pre_text:
                         active_section["text_parts"].append(pre_text)
                     for rows in extract_tables_from_rect(page, pre_rect):
@@ -598,7 +599,7 @@ def extract_content(
                     # heading means the next heading's text is NOT included here.
                     y_end     = breaks[i + 1][0] if i + 1 < len(breaks) else ph
                     zone_rect = fitz.Rect(0, y_bottom, pw, y_end)
-                    zone_text = _clean_zone_text(page, zone_rect)
+                    zone_text = _clean_zone_text(page, zone_rect, section_code)
                     # INFOID sits on the same line as the heading (right margin) —
                     # it is above zone_rect, so search the heading row itself.
                     heading_rect   = fitz.Rect(0, y_top, pw, y_bottom)
@@ -624,7 +625,6 @@ def extract_content(
             all_sections.append(_finalize_section(active_section))
 
     return {
-        "raw_text":               "\n\n".join(raw_text_parts).strip(),
         "sections":               all_sections,
         "has_images":             has_images,
         "image_list":             image_list,

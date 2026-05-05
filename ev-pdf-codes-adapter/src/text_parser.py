@@ -18,6 +18,7 @@ NOISE_PATTERNS = [
     re.compile(r"^\d{4}\s+LEAF$", re.IGNORECASE),             # e.g. "2011 LEAF"
     re.compile(r"^LEAF$", re.IGNORECASE),
     re.compile(r"^[A-Z]{2,4}-\d+$"),                          # standalone page refs e.g. "EVB-88"
+    re.compile(r"^[PBCU][0-9A-F]{4}\s+[A-Z][A-Z\s]*$"),      # DTC title as page continuation header e.g. "P0A0D HV SYSTEM INTERLOCK ERROR"
 ]
 
 # ── Known section headings ────────────────────────────────────────────────────
