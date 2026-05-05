@@ -3,7 +3,7 @@ import hashlib
 import fitz
 from pathlib import Path
 from patterns import INFOID_RE, SIDEBAR_RE, IMAGE_ID_RE
-from text_parser import KNOWN_HEADINGS
+from text_parser import KNOWN_HEADINGS, is_noise
 
 # Matches printed page labels like EVB-88, EVC-109, TM-44, TMS-12
 # Pattern: 2–4 uppercase letters, dash, one or more digits
@@ -24,9 +24,22 @@ def read_page_ref(page: fitz.Page) -> str | None:
 
 
 def clean_text(raw: str) -> str:
-    """Remove sidebar letters and internal reference IDs."""
+    """
+    Clean extracted zone text:
+      1. Strip OEM content IDs (e.g. INFOID:…)
+      2. Strip single-letter sidebar tab characters
+      3. Repair soft hyphens split across lines ("de-\ntects" → "detects")
+      4. Remove standalone noise lines (page refs, revision lines, model names)
+      5. Collapse excess blank lines
+    """
     text = INFOID_RE.sub("", raw)
     text = SIDEBAR_RE.sub("", text)
+    # Repair word-break hyphens: only when a word ends with "-" and the
+    # next line starts with a lowercase letter (soft hyphen, not a real compound).
+    text = re.sub(r"(\w+)-\n([a-z])", r"\1\2", text)
+    # Drop lines that are pure header/footer noise (page refs, revision, model name).
+    lines = [ln for ln in text.split("\n") if not is_noise(ln)]
+    text = "\n".join(lines)
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
 
@@ -324,9 +337,46 @@ def extract_tables_from_rect(page: fitz.Page, rect: fitz.Rect) -> list:
 
 
 def _clean_zone_text(page: fitz.Page, rect: fitz.Rect) -> str:
-    """Extract and clean text from a specific zone rect on a page."""
+    """Extract and clean all text from a zone rect on a page."""
     raw = page.get_text("text", clip=rect)
     return clean_text(raw)
+
+
+def _extract_oem_content_id(page: fitz.Page, rect: fitz.Rect) -> str | None:
+    """
+    Extract the OEM-assigned content identifier from a zone rect.
+
+    Nissan uses 'INFOID:0000000005277155' — a unique ID per subsection printed
+    by their authoring system.  Other OEMs may use different formats; the regex
+    in patterns.py controls what is matched.
+
+    Returns the full identifier string (e.g. 'INFOID:0000000005277155'), or
+    None if no identifier is found.  The identifier is automatically stripped
+    from section text by clean_text(), so no further action is needed there.
+    """
+    raw = page.get_text("text", clip=rect)
+    match = INFOID_RE.search(raw)
+    return match.group(0) if match else None
+
+
+def _get_table_bboxes_in_zone(page: fitz.Page, rect: fitz.Rect) -> list:
+    """
+    Return fitz.Rect bboxes of all tables whose area overlaps rect by >= 50%.
+    Used to build the exclude_rects list for _clean_zone_text.
+    """
+    bboxes = []
+    try:
+        for table in page.find_tables().tables:
+            tbbox = fitz.Rect(table.bbox)
+            overlap = rect & tbbox
+            if overlap.is_empty:
+                continue
+            table_area = tbbox.get_area()
+            if table_area > 0 and overlap.get_area() / table_area >= 0.5:
+                bboxes.append(tbbox)
+    except Exception:
+        pass
+    return bboxes
 
 
 def _finalize_section(section: dict) -> dict:
@@ -335,13 +385,14 @@ def _finalize_section(section: dict) -> dict:
     Joins text collected across multiple pages into one string.
     """
     return {
-        "heading":    section["heading"],
-        "role":       section["role"],
+        "heading":          section["heading"],
+        "role":             section["role"],
+        "oem_content_id":   section.get("oem_content_id"),
         # join text collected from multiple pages — None if nothing was collected
-        "text":       "\n\n".join(section["text_parts"]).strip() or None,
-        "tables":     section["tables"],   # list of {page, page_ref, rows}
-        "page_start": section["page_start"],
-        "page_end":   section["page_end"],
+        "text":             "\n\n".join(section["text_parts"]).strip() or None,
+        "tables":           section["tables"],   # list of {page, page_ref, rows}
+        "page_start":       section["page_start"],
+        "page_end":         section["page_end"],
     }
 
 
@@ -514,10 +565,11 @@ def extract_content(
             if not breaks:
                 # No headings on this page — entire page continues active section
                 if active_section is not None:
-                    text = _clean_zone_text(page, fitz.Rect(0, 0, pw, ph))
+                    page_rect = fitz.Rect(0, 0, pw, ph)
+                    text = _clean_zone_text(page, page_rect)
                     if text:
                         active_section["text_parts"].append(text)
-                    for rows in extract_tables_from_rect(page, fitz.Rect(0, 0, pw, ph)):
+                    for rows in extract_tables_from_rect(page, page_rect):
                         active_section["tables"].append({"page": page_num, "page_ref": ref, "rows": rows})
                     active_section["page_end"] = page_num
 
@@ -546,8 +598,11 @@ def extract_content(
                     # heading means the next heading's text is NOT included here.
                     y_end     = breaks[i + 1][0] if i + 1 < len(breaks) else ph
                     zone_rect = fitz.Rect(0, y_bottom, pw, y_end)
-
-                    zone_text   = _clean_zone_text(page, zone_rect)
+                    zone_text = _clean_zone_text(page, zone_rect)
+                    # INFOID sits on the same line as the heading (right margin) —
+                    # it is above zone_rect, so search the heading row itself.
+                    heading_rect   = fitz.Rect(0, y_top, pw, y_bottom)
+                    oem_content_id = _extract_oem_content_id(page, heading_rect)
                     zone_tables = [
                         {"page": page_num, "page_ref": ref, "rows": rows}
                         for rows in extract_tables_from_rect(page, zone_rect)
@@ -555,12 +610,13 @@ def extract_content(
 
                     # Open new section
                     active_section = {
-                        "heading":    display_name,
-                        "role":       role,
-                        "text_parts": [zone_text] if zone_text else [],
-                        "tables":     zone_tables,
-                        "page_start": page_num,
-                        "page_end":   page_num,
+                        "heading":        display_name,
+                        "role":           role,
+                        "oem_content_id": oem_content_id,
+                        "text_parts":     [zone_text] if zone_text else [],
+                        "tables":         zone_tables,
+                        "page_start":     page_num,
+                        "page_end":       page_num,
                     }
 
         # Close the last open section after the page loop ends

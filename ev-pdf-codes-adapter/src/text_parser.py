@@ -17,6 +17,7 @@ NOISE_PATTERNS = [
     re.compile(r"^<\s*DTC/CIRCUIT DIAGNOSIS\s*>$", re.IGNORECASE),
     re.compile(r"^\d{4}\s+LEAF$", re.IGNORECASE),             # e.g. "2011 LEAF"
     re.compile(r"^LEAF$", re.IGNORECASE),
+    re.compile(r"^[A-Z]{2,4}-\d+$"),                          # standalone page refs e.g. "EVB-88"
 ]
 
 # ── Known section headings ────────────────────────────────────────────────────
@@ -25,8 +26,10 @@ NOISE_PATTERNS = [
 # role           — stored in the section object in the output JSON
 # To add support for a new heading, just add a tuple here — no other changes needed.
 KNOWN_HEADINGS = [
-    ("DTC Logic",           "dtc_logic"),
-    ("Diagnosis Procedure", "diagnosis_procedure"),
+    ("Description",                "description"),
+    ("DTC Logic",                  "dtc_logic"),
+    ("DTC Confirmation Procedure", "dtc_confirmation_procedure"),
+    ("Diagnosis Procedure",        "diagnosis_procedure"),
 ]
 
 

@@ -835,12 +835,13 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
             sections = []
             for s_idx, sec in enumerate(content["sections"]):
                 sections.append({
-                    "section_id": f"r{record_num}_s{s_idx + 1}",
-                    "heading":    sec["heading"],
-                    "role":       sec["role"],
-                    "text":       sec["text"],
-                    "page_start": sec["page_start"],
-                    "page_end":   sec["page_end"],
+                    "section_id":     f"r{record_num}_s{s_idx + 1}",
+                    "heading":        sec["heading"],
+                    "role":           sec["role"],
+                    "oem_content_id": sec.get("oem_content_id"),
+                    "text":           sec["text"],
+                    "page_start":     sec["page_start"],
+                    "page_end":       sec["page_end"],
                 })
 
             # ── Tables — flat list, each linked to its section via section_id ─
