@@ -320,8 +320,13 @@ def extract_tables_from_rect(page: fitz.Page, rect: fitz.Rect) -> list:
         if table.bbox[0] - line_left > 5:
             col = []
             for ry0, ry1 in row_ranges:
-                clip = fitz.Rect(line_left, ry0, table.bbox[0], ry1)
-                col.append(page.get_text("text", clip=clip).strip())
+                # Use word-level extraction and select by word x0, not by
+                # character clip.  A word like "LBC" whose x0 is in the outer
+                # zone but whose x1 crosses the table edge is correctly included
+                # here; character-clip mode would truncate it to "LB".
+                all_words = page.get_text("words", clip=fitz.Rect(line_left, ry0, table.bbox[2], ry1))
+                outer = sorted([w for w in all_words if w[0] < table.bbox[0]], key=lambda w: w[0])
+                col.append(" ".join(w[4] for w in outer))
             for r_idx, v in enumerate(col):
                 clean_rows[r_idx].insert(0, v)
             outer_col_recovered = True
@@ -329,8 +334,11 @@ def extract_tables_from_rect(page: fitz.Page, rect: fitz.Rect) -> list:
         if line_right - table.bbox[2] > 5:
             col = []
             for ry0, ry1 in row_ranges:
-                clip = fitz.Rect(table.bbox[2], ry0, line_right, ry1)
-                col.append(page.get_text("text", clip=clip).strip())
+                # Symmetric: select words whose x0 starts in the outer right
+                # zone (at or beyond the table's right edge).
+                all_words = page.get_text("words", clip=fitz.Rect(table.bbox[0], ry0, line_right, ry1))
+                outer = sorted([w for w in all_words if w[0] >= table.bbox[2]], key=lambda w: w[0])
+                col.append(" ".join(w[4] for w in outer))
             for r_idx, v in enumerate(col):
                 clean_rows[r_idx].append(v)
             outer_col_recovered = True
