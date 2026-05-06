@@ -9,6 +9,10 @@ from text_parser import KNOWN_HEADINGS, is_noise
 # Pattern: 2–4 uppercase letters, dash, one or more digits
 _PAGE_REF_RE = re.compile(r'\b([A-Z]{2,4}-\d+)\b')
 
+# Matches sidebar navigation tab values: single uppercase letters (A, B, C…)
+# or short section codes (EVB, EVC) — never table data.
+_SIDEBAR_VAL_RE = re.compile(r'^[A-Z]{1,4}$')
+
 
 def read_page_ref(page: fitz.Page) -> str | None:
     """
@@ -317,6 +321,7 @@ def extract_tables_from_rect(page: fitz.Page, rect: fitz.Rect) -> list:
         row_ranges = _row_y_ranges(table)
         outer_col_recovered = False
 
+
         if table.bbox[0] - line_left > 5:
             col = []
             for ry0, ry1 in row_ranges:
@@ -339,9 +344,14 @@ def extract_tables_from_rect(page: fitz.Page, rect: fitz.Rect) -> list:
                 all_words = page.get_text("words", clip=fitz.Rect(table.bbox[0], ry0, line_right, ry1))
                 outer = sorted([w for w in all_words if w[0] >= table.bbox[2]], key=lambda w: w[0])
                 col.append(" ".join(w[4] for w in outer))
-            for r_idx, v in enumerate(col):
-                clean_rows[r_idx].append(v)
-            outer_col_recovered = True
+            # Discard column if every non-empty value is a sidebar tab:
+            # a single uppercase letter (A, B…) or short section code (EVB).
+            # These are page navigation tabs, not table data.
+            non_empty = [v for v in col if v.strip()]
+            if non_empty and not all(_SIDEBAR_VAL_RE.match(v.strip()) for v in non_empty):
+                for r_idx, v in enumerate(col):
+                    clean_rows[r_idx].append(v)
+                outer_col_recovered = True
 
         if outer_col_recovered:
             quality_flags.append("outer_column_recovered")

@@ -7,8 +7,13 @@ Called by pipeline.py.
 
 import re
 import hashlib
+import sys
 from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO_ROOT))
+
+from shared.document_id import compute_document_id
 from pdf_profile import profile_pdf
 from index_builder import build_index
 from content_extractor import extract_content
@@ -278,6 +283,27 @@ def _merge_header_rows(row0: list, row1: list) -> list:
     return result
 
 
+def _fill_carry_forward(raw_rows: list, header_count: int) -> list:
+    """
+    Fill empty cells by propagating the value from the row above.
+    Applied only to data rows — rows after the header rows are left unchanged.
+
+    PDF tables use empty cells as shorthand for "same as above".
+    Filling them here makes every data row self-contained so the importer
+    does not need to re-implement carry-forward logic.
+    """
+    if not raw_rows or header_count >= len(raw_rows):
+        return raw_rows
+    result = [list(row) for row in raw_rows]
+    for row_idx in range(header_count + 1, len(result)):
+        prev = result[row_idx - 1]
+        curr = result[row_idx]
+        for col_idx in range(min(len(prev), len(curr))):
+            if curr[col_idx] == "" and prev[col_idx] != "":
+                curr[col_idx] = prev[col_idx]
+    return result
+
+
 def _make_record_id(document_id: str, manual_type: str | None, start_pdf_page: int) -> str:
     """
     Generate a unique, deterministic ID for a DTC record.
@@ -301,7 +327,7 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
     source = pdf_path.name
 
     # SHA256 of the raw PDF bytes — same file different name = same ID
-    document_id = hashlib.sha256(pdf_path.read_bytes()).hexdigest()
+    document_id = compute_document_id(pdf_path)
 
     # ── Profile the PDF ───────────────────────────────────────────────────────
     metadata, pdf_profile = profile_pdf(pdf_path)
@@ -423,25 +449,30 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                     })
                     t_count += 1
 
+            # Apply carry-forward fill and detect headers before merging so
+            # table_groups also receive complete rows.
+            known_codes_set = set(codes)
+            for tbl in tables:
+                raw          = tbl["rows"]
+                header_count = _detect_header_rows(raw, known_codes_set)
+                tbl["rows"]  = _fill_carry_forward(raw, header_count)
+                tbl["_header_count"] = header_count
+
             # Detect cross-page continuations → table_groups (raw tables unchanged)
             table_groups, absorbed_ids = _merge_continued_tables(tables, notes, record_num)
 
             # Finalize raw tables: rename location fields, rows → raw_rows.
-            # Add detected_header_rows as a structural signal for the importer.
-            known_codes_set = set(codes)
             for tbl in tables:
-                raw        = tbl.pop("rows")
-                page       = tbl.pop("page")
-                pr         = tbl.pop("page_ref")
-                extraction = tbl.pop("extraction")
+                raw          = tbl.pop("rows")
+                page         = tbl.pop("page")
+                pr           = tbl.pop("page_ref")
+                extraction   = tbl.pop("extraction")
+                header_count = tbl.pop("_header_count")
                 tbl["start_pdf_page"] = page
                 tbl["end_pdf_page"]   = page
                 tbl["page_refs"]      = [pr] if pr else []
                 tbl["raw_rows"]       = raw
-                # Structural header detection: how many leading rows are headers.
-                # Surfaced here so the importer can skip header rows without
-                # re-implementing the detection logic.
-                extraction["detected_header_rows"] = _detect_header_rows(raw, known_codes_set)
+                extraction["detected_header_rows"] = header_count
                 tbl["extraction"] = extraction
 
             # ── Images — enriched with metadata ──────────────────────────────

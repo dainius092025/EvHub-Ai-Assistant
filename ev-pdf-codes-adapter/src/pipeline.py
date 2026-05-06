@@ -13,10 +13,13 @@ Usage:
 import argparse
 import json
 import sys
-import hashlib
 from datetime import datetime
 from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO_ROOT))
+
+from shared.document_id import compute_document_id
 from extractor import extract_records
 from pdf_profile import profile_pdf
 
@@ -82,7 +85,7 @@ def main():
         # scanned PDFs have no text layer — OCR not yet built, so we skip extraction
         # we still write a stub JSON so the file appears in the output with a clear reason
         if pdf_type == "scanned":
-            document_id = hashlib.sha256(pdf_path.read_bytes()).hexdigest()
+            document_id = compute_document_id(pdf_path)  # we compute the document ID for scanned PDFs too, so they can be tracked and identified in the future when OCR is added
             profile_out = {k: v for k, v in pdf_profile.items() if k != "link_count_sample"}
             stub = {
                 "schema_version":         "1.0",
@@ -128,7 +131,7 @@ def main():
                     "schema_version":         "1.0",
                     "schema_type":            "shared_document_profile",
                     "adapter_schema_version": 4,
-                    "document_id":    hashlib.sha256(pdf_path.read_bytes()).hexdigest(),
+                    "document_id":    compute_document_id(pdf_path),
                     "source_file":    pdf_path.name,
                     "metadata":       metadata,
                     "pdf_profile":    profile_out,
