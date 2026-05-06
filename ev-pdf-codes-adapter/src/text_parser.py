@@ -11,12 +11,14 @@ Provides:
 import re
 
 # ── Noise patterns — lines to ignore completely ───────────────────────────────
-# These appear on every page but carry no useful content
+# These appear on every page but carry no useful content.
+# Rules:
+#   - DTC-specific patterns are acceptable (this adapter targets DTC content).
+#   - Manufacturer-specific patterns are NOT acceptable — do not add model names
+#     or brand-specific strings here.
 NOISE_PATTERNS = [
-    re.compile(r"^Revision:\s+", re.IGNORECASE),              # e.g. "Revision: 2014 June"
-    re.compile(r"^<\s*DTC/CIRCUIT DIAGNOSIS\s*>$", re.IGNORECASE),
-    re.compile(r"^\d{4}\s+LEAF$", re.IGNORECASE),             # e.g. "2011 LEAF"
-    re.compile(r"^LEAF$", re.IGNORECASE),
+    re.compile(r"^Revision:\s+", re.IGNORECASE),              # e.g. "Revision: 2014 June" — generic revision header
+    re.compile(r"^<\s*DTC/CIRCUIT DIAGNOSIS\s*>$", re.IGNORECASE),  # DTC section banner
     re.compile(r"^[A-Z]{2,4}-\d+$"),                          # standalone page refs e.g. "EVB-88"
     re.compile(r"^[PBCU][0-9A-F]{4}\s+[A-Z][A-Z\s]*$"),      # DTC title as page continuation header e.g. "P0A0D HV SYSTEM INTERLOCK ERROR"
 ]
@@ -25,7 +27,11 @@ NOISE_PATTERNS = [
 # Each tuple: (display_name, role)
 # display_name   — the heading text as it appears in the PDF (matched case-insensitively)
 # role           — stored in the section object in the output JSON
-# To add support for a new heading, just add a tuple here — no other changes needed.
+#
+# WARNING: these heading names are Nissan-specific.
+# Other manufacturers use different heading text for the same concepts.
+# This list must be extended per manufacturer before processing non-Nissan PDFs.
+# To add support for a new heading, add a tuple here — no other changes needed.
 KNOWN_HEADINGS = [
     ("Description",                "description"),
     ("DTC Logic",                  "dtc_logic"),

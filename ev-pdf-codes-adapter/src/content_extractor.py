@@ -230,10 +230,25 @@ def extract_tables_from_rect(page: fitz.Page, rect: fitz.Rect) -> list:
     """
     Extract tables whose bounding box overlaps rect by at least 50%.
 
-    Returns list of tables.
-    Each table  = list of rows.
-    Each row    = list of strings (None -> "", whitespace stripped).
-    Tables with fewer than 2 rows or 2 columns are skipped (likely noise).
+    Returns list of table dicts:
+        {
+            "rows":       list[list[str]],   # cells preserve internal newlines
+            "extraction": {
+                "confidence":    "high" | "medium" | "low",
+                "quality_flags": list[str]   # traceable structural signals
+            }
+        }
+
+    No table content is silently discarded.  Tables that would previously
+    have been skipped (< 2 rows, < 2 cols, blob rows, short outer-column
+    tokens) are kept and flagged instead.
+
+    Confidence model — conservative, lowest signal wins:
+        Start at "high".
+        Medium signals (bbox_reconstruction_used, outer_column_recovered)
+            → downgrade to "medium".
+        Low signals (blob_row_detected, single_row_table, single_column_table)
+            → downgrade to "low".
 
     Handles tables whose outermost columns have no vertical border line:
     fitz misses those columns because it uses drawn vertical lines as column
@@ -262,59 +277,66 @@ def extract_tables_from_rect(page: fitz.Page, rect: fitz.Rect) -> list:
             continue
 
         rows = table.extract()
-
-        # Skip noise: must have at least 2 rows and 2 columns
-        if not rows or len(rows) < 2:
-            continue
-        if not rows[0] or len(rows[0]) < 2:
+        if not rows:
             continue
 
-        # Strip blob row BEFORE normalisation (newlines are still present in raw rows).
-        # fitz sometimes dumps all continuation text into cell[0][0] (multi-line string)
-        # with all other cells empty.  This happens on cross-page tables where the header
-        # is reprinted — the rows before the new header have no column boundaries for fitz
-        # to split on, so everything ends up in one cell.
-        # Condition: first row, first cell contains a newline, all other cells empty/None.
+        quality_flags: list[str] = []
+
+        # Flag instead of discard: single-row / single-column tables are kept
+        # for traceability — they are likely noise or continuation fragments.
+        if len(rows) < 2:
+            quality_flags.append("single_row_table")
+        if rows[0] and len(rows[0]) < 2:
+            quality_flags.append("single_column_table")
+
+        # Detect blob row BEFORE normalisation (newlines still present in raw).
+        # fitz sometimes dumps all continuation text into cell[0][0] with all
+        # other cells empty.  Flag and keep — do not strip.
         if (len(rows) > 1
                 and rows[0] is not None
                 and rows[0][0] is not None
                 and '\n' in str(rows[0][0])
                 and all((c is None or c == '') for c in rows[0][1:])):
-            rows = rows[1:]
+            quality_flags.append("blob_row_detected")
 
-        # Normalise cells: None -> "", collapse internal newlines, strip whitespace.
-        # Collapsing newlines fixes simple line-break splits that fitz produces
-        # when a cell wraps across two printed lines (e.g. "Battery\nvoltage" ->
-        # "Battery voltage").
+        # Normalise cells: None → ""; collapse intra-line spaces; preserve
+        # newlines so multi-line cell content reaches the importer intact.
         clean_rows = [
-            [" ".join(str(cell).split()) if cell is not None else "" for cell in row]
+            [
+                "\n".join(" ".join(ln.split()) for ln in str(cell).split("\n")).strip()
+                if cell is not None else ""
+                for cell in row
+            ]
             for row in rows
         ]
 
         # Recover columns hidden outside the detected table bbox.
-        # Threshold: only act if the extension is more than 5 pt.
+        # Always prepend/append recovered content — no token-length filter.
+        # Callers can identify recovered columns via the quality flag.
         line_left, line_right = _get_line_extent(page, table.bbox)
         row_ranges = _row_y_ranges(table)
+        outer_col_recovered = False
 
         if table.bbox[0] - line_left > 5:
             col = []
             for ry0, ry1 in row_ranges:
                 clip = fitz.Rect(line_left, ry0, table.bbox[0], ry1)
                 col.append(page.get_text("text", clip=clip).strip())
-            # Skip sidebar noise: real content has at least one token > 4 chars.
-            # Sidebar letters (A-Z, EVB, etc.) are always 1-3 chars per token.
-            if any(len(tok) > 4 for v in col for tok in v.split()):
-                for r_idx, v in enumerate(col):
-                    clean_rows[r_idx].insert(0, v)
+            for r_idx, v in enumerate(col):
+                clean_rows[r_idx].insert(0, v)
+            outer_col_recovered = True
 
         if line_right - table.bbox[2] > 5:
             col = []
             for ry0, ry1 in row_ranges:
                 clip = fitz.Rect(table.bbox[2], ry0, line_right, ry1)
                 col.append(page.get_text("text", clip=clip).strip())
-            if any(len(tok) > 4 for v in col for tok in v.split()):
-                for r_idx, v in enumerate(col):
-                    clean_rows[r_idx].append(v)
+            for r_idx, v in enumerate(col):
+                clean_rows[r_idx].append(v)
+            outer_col_recovered = True
+
+        if outer_col_recovered:
+            quality_flags.append("outer_column_recovered")
 
         # ── Bbox repair pass ──────────────────────────────────────────────────
         # Word-position reconstruction over the full horizontal rule extent.
@@ -331,11 +353,34 @@ def extract_tables_from_rect(page: fitz.Page, rect: fitz.Rect) -> list:
                              if sum(1 for c in row if c) >= min_filled)
             if good_rows / len(bbox_rows) >= 0.5:
                 clean_rows = [
-                    [" ".join(c.split()) for c in row]
+                    [
+                        "\n".join(" ".join(ln.split()) for ln in c.split("\n")).strip()
+                        for c in row
+                    ]
                     for row in bbox_rows
                 ]
+                quality_flags.append("bbox_reconstruction_used")
 
-        result.append(clean_rows)
+        # ── Confidence: conservative — lowest signal wins ─────────────────────
+        # Start at "high". Any low signal → "low". Any medium signal → "medium".
+        # If both are present the low signal wins.
+        LOW_SIGNALS    = {"blob_row_detected", "single_row_table", "single_column_table"}
+        MEDIUM_SIGNALS = {"bbox_reconstruction_used", "outer_column_recovered"}
+        flag_set = set(quality_flags)
+        if flag_set & LOW_SIGNALS:
+            confidence = "low"
+        elif flag_set & MEDIUM_SIGNALS:
+            confidence = "medium"
+        else:
+            confidence = "high"
+
+        result.append({
+            "rows": clean_rows,
+            "extraction": {
+                "confidence":    confidence,
+                "quality_flags": quality_flags,
+            },
+        })
 
     return result
 
@@ -392,9 +437,11 @@ def _finalize_section(section: dict) -> dict:
         "heading":          section["heading"],
         "role":             section["role"],
         "oem_content_id":   section.get("oem_content_id"),
-        # join text collected from multiple pages — None if nothing was collected
+        # cleaned text: noise filtered, soft hyphens repaired, sidebar tabs removed
         "text":             "\n\n".join(section["text_parts"]).strip() or None,
-        "tables":           section["tables"],   # list of {page, page_ref, rows}
+        # raw text: uncleaned zone text preserved for importer / debug use
+        "raw_text":         "\n\n".join(section.get("raw_text_parts", [])).strip() or None,
+        "tables":           section["tables"],   # list of {page, page_ref, rows, extraction}
         "page_start":       section["page_start"],
         "page_end":         section["page_end"],
     }
@@ -445,7 +492,7 @@ def extract_content(
     the page header still belongs to our codes.
 
     Returns:
-        sections                 — list of section dicts with text, tables, page range
+        sections                 — list of section dicts with text, raw_text, tables, page range
         has_images               — True if any images were saved
         image_list               — list of image metadata dicts (filename, pdf_page, page_ref)
         page_refs                — ordered list of all footer page labels seen (full span)
@@ -566,11 +613,19 @@ def extract_content(
                 if active_section is not None:
                     page_rect    = fitz.Rect(0, 0, pw, ph)
                     section_code = ref.split('-')[0] if ref else None
-                    text = _clean_zone_text(page, page_rect, section_code)
+                    text    = _clean_zone_text(page, page_rect, section_code)
+                    raw_txt = page.get_text("text", clip=page_rect)
                     if text:
                         active_section["text_parts"].append(text)
-                    for rows in extract_tables_from_rect(page, page_rect):
-                        active_section["tables"].append({"page": page_num, "page_ref": ref, "rows": rows})
+                    if raw_txt.strip():
+                        active_section["raw_text_parts"].append(raw_txt)
+                    for td in extract_tables_from_rect(page, page_rect):
+                        active_section["tables"].append({
+                            "page":       page_num,
+                            "page_ref":   ref,
+                            "rows":       td["rows"],
+                            "extraction": td["extraction"],
+                        })
                     active_section["page_end"] = page_num
 
             else:
@@ -582,10 +637,18 @@ def extract_content(
                 if first_y_top > 0 and active_section is not None:
                     pre_rect = fitz.Rect(0, 0, pw, first_y_top)
                     pre_text = _clean_zone_text(page, pre_rect, section_code)
+                    pre_raw  = page.get_text("text", clip=pre_rect)
                     if pre_text:
                         active_section["text_parts"].append(pre_text)
-                    for rows in extract_tables_from_rect(page, pre_rect):
-                        active_section["tables"].append({"page": page_num, "page_ref": ref, "rows": rows})
+                    if pre_raw.strip():
+                        active_section["raw_text_parts"].append(pre_raw)
+                    for td in extract_tables_from_rect(page, pre_rect):
+                        active_section["tables"].append({
+                            "page":       page_num,
+                            "page_ref":   ref,
+                            "rows":       td["rows"],
+                            "extraction": td["extraction"],
+                        })
                     active_section["page_end"] = page_num
 
                 # ── Process each heading zone ─────────────────────────────────
@@ -600,24 +663,31 @@ def extract_content(
                     y_end     = breaks[i + 1][0] if i + 1 < len(breaks) else ph
                     zone_rect = fitz.Rect(0, y_bottom, pw, y_end)
                     zone_text = _clean_zone_text(page, zone_rect, section_code)
+                    zone_raw  = page.get_text("text", clip=zone_rect)
                     # INFOID sits on the same line as the heading (right margin) —
                     # it is above zone_rect, so search the heading row itself.
                     heading_rect   = fitz.Rect(0, y_top, pw, y_bottom)
                     oem_content_id = _extract_oem_content_id(page, heading_rect)
                     zone_tables = [
-                        {"page": page_num, "page_ref": ref, "rows": rows}
-                        for rows in extract_tables_from_rect(page, zone_rect)
+                        {
+                            "page":       page_num,
+                            "page_ref":   ref,
+                            "rows":       td["rows"],
+                            "extraction": td["extraction"],
+                        }
+                        for td in extract_tables_from_rect(page, zone_rect)
                     ]
 
                     # Open new section
                     active_section = {
-                        "heading":        display_name,
-                        "role":           role,
-                        "oem_content_id": oem_content_id,
-                        "text_parts":     [zone_text] if zone_text else [],
-                        "tables":         zone_tables,
-                        "page_start":     page_num,
-                        "page_end":       page_num,
+                        "heading":         display_name,
+                        "role":            role,
+                        "oem_content_id":  oem_content_id,
+                        "text_parts":      [zone_text] if zone_text else [],
+                        "raw_text_parts":  [zone_raw] if zone_raw.strip() else [],
+                        "tables":          zone_tables,
+                        "page_start":      page_num,
+                        "page_end":        page_num,
                     }
 
         # Close the last open section after the page loop ends
