@@ -120,6 +120,7 @@ def _merge_continued_tables(tables: list, notes: list, record_num: int) -> tuple
             nxt = tables[j]
             if (nxt["section_id"] == tbl["section_id"]
                     and nxt["rows"] and tbl["rows"]
+                    and nxt["page"] != pages[-1]          # different page — true cross-page continuation
                     and _headers_match(nxt["rows"][0], tbl["rows"][0])):
                 source_ids.append(nxt["table_id"])
                 merged_rows.extend(nxt["rows"][1:])
@@ -444,12 +445,22 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                 tbl["extraction"] = extraction
 
             # ── Images — enriched with metadata ──────────────────────────────
+            # Assign each image to the last section whose page_start is on or
+            # before the image's pdf_page.  Sections are ordered sequentially
+            # so the last qualifying entry is the active section at that point.
             images = []
             for i_idx, img in enumerate(content["image_list"]):
+                img_page = img["pdf_page"]
+                section_id_for_img = None
+                for sec in sections:
+                    if sec["page_start"] <= img_page:
+                        section_id_for_img = sec["section_id"]
+                    else:
+                        break
                 images.append({
                     "image_id":   f"r{record_num}_i{i_idx + 1}",
-                    "section_id": None,
-                    "pdf_page":   img["pdf_page"],
+                    "section_id": section_id_for_img,
+                    "pdf_page":   img_page,
                     "page_ref":   img["page_ref"],
                     "image_path": img["filename"],
                     "caption":    img.get("caption"),

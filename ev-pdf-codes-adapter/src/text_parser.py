@@ -21,6 +21,7 @@ NOISE_PATTERNS = [
     re.compile(r"^<\s*DTC/CIRCUIT DIAGNOSIS\s*>$", re.IGNORECASE),  # DTC section banner
     re.compile(r"^[A-Z]{2,4}-\d+$"),                          # standalone page refs e.g. "EVB-88"
     re.compile(r"^[PBCU][0-9A-F]{4}\s+[A-Z][A-Z\s]*$"),      # DTC title as page continuation header e.g. "P0A0D HV SYSTEM INTERLOCK ERROR"
+    re.compile(r"^\d{4}\s+[A-Z][A-Z\s]*$"),                  # year + model name printed on every page e.g. "2013 LEAF", "2022 IONIQ"
 ]
 
 # ── Known section headings ────────────────────────────────────────────────────
@@ -37,6 +38,7 @@ KNOWN_HEADINGS = [
     ("DTC Logic",                  "dtc_logic"),
     ("DTC Confirmation Procedure", "dtc_confirmation_procedure"),
     ("Diagnosis Procedure",        "diagnosis_procedure"),
+    ("Component Inspection",       "component_inspection"),
 ]
 
 
