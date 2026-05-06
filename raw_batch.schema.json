@@ -1,0 +1,183 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "raw_batch.schema.json",
+  "title": "Raw Batch",
+  "description": "Output of extractor.py for one batch of pages. Faithful lossless capture — no interpretation, no cleaning.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "schema_type",
+    "document_id",
+    "section_code",
+    "batch",
+    "page_map",
+    "text_elements",
+    "tables",
+    "images"
+  ],
+  "additionalProperties": false,
+  "properties": {
+
+    "schema_version": { "type": "string", "const": "2.0" },
+    "schema_type":    { "type": "string", "const": "raw_batch" },
+    "document_id":    { "type": "string", "minLength": 1 },
+    "manufacturer":   { "type": ["string", "null"] },
+    "model":          { "type": ["string", "null"] },
+    "year":           { "type": ["string", "null"] },
+    "section_code":   { "type": ["string", "null"] },
+
+    "batch": {
+      "type": "object",
+      "required": ["page_start_pdf", "page_end_pdf", "ocr_used", "tableformer_used", "extracted_at"],
+      "properties": {
+        "page_start_pdf":    { "type": "integer", "minimum": 1 },
+        "page_end_pdf":      { "type": "integer", "minimum": 1 },
+        "ocr_used":          { "type": "boolean" },
+        "tableformer_used":  { "type": "boolean" },
+        "extracted_at":      { "type": "string" },
+        "extraction_errors": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "page_map": {
+      "type": "object",
+      "description": "Keys are string PDF page numbers. One entry per page in batch.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["page_pdf", "is_scanned", "rotation_degrees", "width_pts", "height_pts"],
+        "properties": {
+          "page_pdf":               { "type": "integer", "minimum": 1 },
+          "page_manual":            { "type": ["string", "null"] },
+          "page_manual_confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+          "page_manual_source": {
+            "type": ["string", "null"],
+            "enum": ["footer", "header", "full_page_scan", "sequential_fallback", null]
+          },
+          "section_code":    { "type": ["string", "null"] },
+          "is_scanned":      { "type": "boolean" },
+          "rotation_degrees":{ "type": "integer", "enum": [0, 90, 180, 270] },
+          "width_pts":       { "type": "number", "minimum": 1 },
+          "height_pts":      { "type": "number", "minimum": 1 },
+          "footer_text_raw": { "type": ["string", "null"] },
+          "header_text_raw": { "type": ["string", "null"] }
+        }
+      }
+    },
+
+    "text_elements": {
+      "type": "array",
+      "description": "All text extracted by Docling. No filtering, no interpretation.",
+      "items": {
+        "type": "object",
+        "required": [
+          "element_id", "text", "page_pdf",
+          "bbox", "bbox_coordinate_system", "docling_label"
+        ],
+        "properties": {
+          "element_id":              { "type": "string" },
+          "text":                    { "type": "string" },
+          "page_pdf":                { "type": ["integer", "null"] },
+          "page_manual":             { "type": ["string", "null"] },
+          "section_code":            { "type": ["string", "null"] },
+          "bbox": {
+            "type": ["array", "null"],
+            "items": { "type": "number" },
+            "minItems": 4,
+            "maxItems": 4
+          },
+          "bbox_coordinate_system": {
+            "type": "string",
+            "enum": ["docling", "pymupdf"]
+          },
+          "font_name":    { "type": ["string", "null"] },
+          "font_size":    { "type": ["number", "null"] },
+          "is_bold":      { "type": ["boolean", "null"] },
+          "is_italic":    { "type": ["boolean", "null"] },
+          "reading_order":{ "type": ["integer", "null"] },
+          "docling_label":{ "type": ["string", "null"] }
+        }
+      }
+    },
+
+    "tables": {
+      "type": "array",
+      "description": "All tables extracted by Docling TableFormer. Raw grid — no cleaning.",
+      "items": {
+        "type": "object",
+        "required": [
+          "table_id", "page_pdf",
+          "bbox", "bbox_coordinate_system",
+          "num_rows", "num_cols",
+          "tableformer_used", "data_raw"
+        ],
+        "properties": {
+          "table_id":               { "type": "string" },
+          "page_pdf":               { "type": ["integer", "null"] },
+          "page_manual":            { "type": ["string", "null"] },
+          "section_code":           { "type": ["string", "null"] },
+          "bbox": {
+            "type": ["array", "null"],
+            "items": { "type": "number" },
+            "minItems": 4,
+            "maxItems": 4
+          },
+          "bbox_coordinate_system": { "type": "string", "enum": ["docling", "pymupdf"] },
+          "num_rows":               { "type": "integer", "minimum": 0 },
+          "num_cols":               { "type": "integer", "minimum": 0 },
+          "tableformer_used":       { "type": "boolean" },
+          "continues_on_next_page": { "type": "boolean" },
+          "continued_from_prev":    { "type": "boolean" },
+          "data_raw": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "markdown_raw": { "type": ["string", "null"] }
+        }
+      }
+    },
+
+    "images": {
+      "type": "array",
+      "description": "All images extracted by pymupdf. All saved as PNG.",
+      "items": {
+        "type": "object",
+        "required": [
+          "image_id", "file", "format_saved",
+          "page_pdf", "type", "bbox_coordinate_system"
+        ],
+        "properties": {
+          "image_id":               { "type": "string" },
+          "file":                   { "type": "string", "pattern": "^images/" },
+          "format_original":        { "type": ["string", "null"] },
+          "format_saved":           { "type": "string", "const": "png" },
+          "page_pdf":               { "type": ["integer", "null"] },
+          "page_manual":            { "type": ["string", "null"] },
+          "section_code":           { "type": ["string", "null"] },
+          "bbox":                   {
+            "type": ["array", "null"],
+            "items": { "type": "number" },
+            "minItems": 4,
+            "maxItems": 4
+          },
+          "bbox_coordinate_system": { "type": "string", "enum": ["pymupdf"] },
+          "bbox_resolved":          { "type": ["boolean", "null"] },
+          "width_px":               { "type": ["integer", "null"], "minimum": 0 },
+          "height_px":              { "type": ["integer", "null"], "minimum": 0 },
+          "type": {
+            "type": "string",
+            "enum": ["raster", "vector"]
+          },
+          "caption_raw":    { "type": ["string", "null"] },
+          "image_ref_code": { "type": ["string", "null"] }
+        }
+      }
+    }
+
+  }
+}
