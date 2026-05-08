@@ -1,0 +1,143 @@
+{
+  "manufacturer": "Toyota / Lexus",
+  "scope": ["Toyota", "Lexus", "hybrid manuals", "EV manuals", "ICE manuals"],
+  "source": "external research — not yet confirmed on real PDF",
+  "confirmed_on_pdf": false,
+  "notes": "Normalize all headings before matching: lowercase, collapse duplicate spaces, trim. Both title-case and UPPERCASE variants observed — normalization covers both.",
+
+  "formatting_variants": {
+    "observed": [
+      "DIAGNOSTIC TROUBLE CODE CHART",
+      "Diagnostic Trouble Code Chart",
+      "DTC DETECTION CONDITION",
+      "DTC Detection Condition",
+      "PROBLEM SYMPTOMS TABLE",
+      "Problem Symptoms Table",
+      "DATA LIST",
+      "ACTIVE TEST",
+      "DATA LIST / ACTIVE TEST",
+      "INSPECTION PROCEDURE",
+      "Inspection Procedure",
+      "CIRCUIT DESCRIPTION",
+      "Circuit Description"
+    ],
+    "structural_characteristics": [
+      "bold headings",
+      "centered headings",
+      "boxed headings",
+      "short isolated lines",
+      "uppercase headings",
+      "title-case headings",
+      "headings with surrounding whitespace",
+      "section divider style formatting"
+    ]
+  },
+
+  "high_confidence": [
+    { "heading": "Diagnostic Trouble Code Chart",   "role": "dtc" },
+    { "heading": "Diagnostic Trouble Code",         "role": "dtc" },
+    { "heading": "DTC Detection Condition",         "role": "dtc" },
+    { "heading": "DTC Detection Conditions",        "role": "dtc" },
+    { "heading": "DTC Check",                       "role": "dtc" },
+    { "heading": "Monitor Description",             "role": "dtc" },
+    { "heading": "Fail-safe Function",              "role": "dtc" },
+    { "heading": "Fail-safe Chart",                 "role": "dtc" },
+    { "heading": "Problem Symptoms Table",          "role": "symptoms" },
+    { "heading": "Circuit Description",             "role": "description" },
+    { "heading": "System Description",              "role": "description" },
+    { "heading": "Wiring Diagram",                  "role": "wiring" },
+    { "heading": "Inspection Procedure",            "role": "inspection" },
+    { "heading": "Troubleshooting Procedure",       "role": "procedure" },
+    { "heading": "Freeze Frame Data",               "role": "diagnostic_data" },
+    { "heading": "Data List",                       "role": "diagnostic_data" },
+    { "heading": "Active Test",                     "role": "testing" }
+  ],
+
+  "medium_confidence": [
+    { "heading": "Monitor Strategy",                "role": "dtc" },
+    { "heading": "Confirmation Driving Pattern",    "role": "procedure" },
+    { "heading": "Typical Enabling Conditions",     "role": "dtc" },
+    { "heading": "Typical Malfunction Thresholds",  "role": "dtc" },
+    { "heading": "System Diagram",                  "role": "wiring" },
+    { "heading": "Parts Location",                  "role": "reference" },
+    { "heading": "Operation Check",                 "role": "testing" },
+    { "heading": "Terminals of ECU",                "role": "reference" },
+    { "heading": "Terminal Voltage",                "role": "testing" },
+    { "heading": "Snapshot",                        "role": "diagnostic_data" },
+    { "heading": "DTC Info",                        "role": "dtc" },
+    { "heading": "Health Check",                    "role": "testing" },
+    { "heading": "Signal Check",                    "role": "testing" },
+    { "heading": "Precaution",                      "role": "precautions" },
+    { "heading": "Notice",                          "role": "precautions" },
+    { "heading": "Hint",                            "role": "reference" },
+    { "heading": "Reference",                       "role": "reference" }
+  ],
+
+  "manufacturer_specific": [
+    {
+      "heading": "Freeze Frame Data",
+      "role": "diagnostic_data",
+      "note": "Toyota/Lexus Techstream stored snapshot at time of DTC set"
+    },
+    {
+      "heading": "Health Check",
+      "role": "testing",
+      "note": "Techstream automated system scan — not a generic heading"
+    },
+    {
+      "heading": "Data List",
+      "role": "diagnostic_data",
+      "note": "Techstream live data parameters"
+    },
+    {
+      "heading": "Active Test",
+      "role": "testing",
+      "note": "Techstream actuator test — forces components on/off for diagnosis"
+    },
+    {
+      "heading": "Confirmation Driving Pattern",
+      "role": "procedure",
+      "note": "Drive cycle required to confirm DTC is resolved"
+    },
+    {
+      "heading": "Monitor Strategy",
+      "role": "dtc",
+      "note": "OBD-II monitor logic — when and how the DTC monitor runs"
+    },
+    {
+      "heading": "Monitor Description",
+      "role": "dtc",
+      "note": "Describes what the OBD-II monitor checks"
+    },
+    {
+      "heading": "Fail-safe Function",
+      "role": "dtc",
+      "note": "What the vehicle does when this DTC is active — Toyota specific wording"
+    },
+    {
+      "heading": "Signal Check",
+      "role": "testing",
+      "note": "Oscilloscope or multimeter check of a specific signal line"
+    },
+    {
+      "heading": "Snapshot",
+      "role": "diagnostic_data",
+      "note": "Stored ECU data at time of fault — variant of Freeze Frame"
+    },
+    {
+      "heading": "DTC Info",
+      "role": "dtc",
+      "note": "Brief DTC summary block — may appear instead of full Description section"
+    }
+  ],
+
+  "procedure_headings": [
+    { "heading": "Initialization",  "role": "calibration" },
+    { "heading": "Calibration",     "role": "calibration" },
+    { "heading": "Adjustment",      "role": "calibration" },
+    { "heading": "Utility",         "role": "procedure" },
+    { "heading": "Removal",         "role": "installation" },
+    { "heading": "Installation",    "role": "installation" },
+    { "heading": "Replacement",     "role": "installation" }
+  ]
+}

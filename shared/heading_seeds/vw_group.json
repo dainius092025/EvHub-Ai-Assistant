@@ -1,0 +1,165 @@
+{
+  "manufacturer": "Volkswagen Group",
+  "scope": ["Volkswagen ID.3", "Volkswagen ID.4", "Volkswagen ID.5", "Audi e-tron", "Skoda Enyaq", "Cupra Born"],
+  "source": "external research — not yet confirmed on real PDF",
+  "confirmed_on_pdf": false,
+  "notes": "VAG manuals use both UPPERCASE and title-case headings. Normalization covers both. VAG-specific tooling (ODIS, VAS tester) introduces unique headings not found in other brands — see manufacturer_specific section.",
+
+  "formatting_variants": {
+    "observed": [
+      "GUIDED FAULT FINDING",
+      "Guided Fault Finding",
+      "FUNCTIONAL DESCRIPTION",
+      "Functional Description",
+      "SYSTEM DESCRIPTION",
+      "System Description",
+      "HIGH-VOLTAGE SYSTEM",
+      "High-voltage System",
+      "REMOVAL AND INSTALLATION",
+      "Removal and Installation",
+      "BASIC SETTING",
+      "Basic Setting",
+      "CONTROL MODULE",
+      "Control Module",
+      "MEASURED VALUE BLOCKS",
+      "Measured Value Blocks"
+    ],
+    "structural_characteristics": [
+      "uppercase section headers",
+      "bold centered headings",
+      "numbered subsection headings",
+      "boxed warnings",
+      "warning triangle sections",
+      "short isolated headings",
+      "heavy use of procedural section formatting"
+    ]
+  },
+
+  "high_confidence": [
+    { "heading": "Guided Fault Finding",        "role": "procedure" },
+    { "heading": "Fault Finding",               "role": "procedure" },
+    { "heading": "Fault Memory",                "role": "dtc" },
+    { "heading": "Event Memory",                "role": "dtc" },
+    { "heading": "Wiring Diagram",              "role": "wiring" },
+    { "heading": "Wiring Diagrams",             "role": "wiring" },
+    { "heading": "Circuit Diagram",             "role": "wiring" },
+    { "heading": "Functional Description",      "role": "description" },
+    { "heading": "System Description",          "role": "description" },
+    { "heading": "System Overview",             "role": "description" },
+    { "heading": "Measured Values",             "role": "diagnostic_data" },
+    { "heading": "Measured Value Blocks",       "role": "diagnostic_data" },
+    { "heading": "Basic Setting",               "role": "calibration" },
+    { "heading": "Adaptation",                  "role": "configuration" },
+    { "heading": "Coding",                      "role": "coding" },
+    { "heading": "Calibration",                 "role": "calibration" },
+    { "heading": "Function Test",               "role": "testing" },
+    { "heading": "Final Check",                 "role": "testing" },
+    { "heading": "Inspection",                  "role": "inspection" },
+    { "heading": "Removal and Installation",    "role": "installation" },
+    { "heading": "Safety Precautions",          "role": "precautions" },
+    { "heading": "Troubleshooting",             "role": "procedure" },
+    { "heading": "Possible Causes",             "role": "symptoms" },
+    { "heading": "Fault Causes",                "role": "symptoms" },
+    { "heading": "Fault Effects",               "role": "symptoms" }
+  ],
+
+  "medium_confidence": [
+    { "heading": "Diagnostic Interface",            "role": "testing" },
+    { "heading": "Vehicle Diagnostic Tester",       "role": "testing" },
+    { "heading": "Test Plan",                       "role": "procedure" },
+    { "heading": "High-voltage System",             "role": "description" },
+    { "heading": "High-voltage Battery",            "role": "description" },
+    { "heading": "High-voltage Components",         "role": "description" },
+    { "heading": "High-voltage Safety Instructions","role": "precautions" },
+    { "heading": "Battery Charging",               "role": "description" },
+    { "heading": "Charging System",                "role": "description" },
+    { "heading": "Thermal Management",             "role": "description" },
+    { "heading": "Cooling System",                 "role": "description" },
+    { "heading": "Electric Drive",                 "role": "description" },
+    { "heading": "Power Electronics",              "role": "description" },
+    { "heading": "Control Module",                 "role": "description" },
+    { "heading": "CAN Bus",                        "role": "description" },
+    { "heading": "Data Bus Diagnostic Interface",  "role": "testing" },
+    { "heading": "Parameterization",               "role": "configuration" },
+    { "heading": "Component Protection",           "role": "procedure" },
+    { "heading": "Component Diagnosis",            "role": "inspection" },
+    { "heading": "Assembly Overview",              "role": "reference" },
+    { "heading": "Repair Instructions",            "role": "repair" },
+    { "heading": "Notes on Repair",                "role": "repair" },
+    { "heading": "Warning Notes",                  "role": "precautions" },
+    { "heading": "Special Tools",                  "role": "reference" },
+    { "heading": "Tightening Torques",             "role": "reference" },
+    { "heading": "Service Work",                   "role": "procedure" }
+  ],
+
+  "manufacturer_specific": [
+    {
+      "heading": "Guided Fault Finding",
+      "role": "procedure",
+      "note": "VAG ODIS/ELSA structured diagnostic workflow — step-by-step guided by tester software. Unique to VAG group."
+    },
+    {
+      "heading": "Guided Functions",
+      "role": "procedure",
+      "note": "ODIS guided procedures for calibration, coding, adaptation — VAG specific"
+    },
+    {
+      "heading": "Event Memory",
+      "role": "dtc",
+      "note": "VAG term for fault memory / DTC storage — equivalent to freeze frame in other brands"
+    },
+    {
+      "heading": "Measured Value Blocks",
+      "role": "diagnostic_data",
+      "note": "VAG legacy term (older VCDS/VAG-COM systems) for grouped live data parameters"
+    },
+    {
+      "heading": "Basic Setting",
+      "role": "calibration",
+      "note": "VAG procedure to reset or initialise a component — throttle body, steering angle sensor etc."
+    },
+    {
+      "heading": "Adaptation",
+      "role": "configuration",
+      "note": "VAG term for writing learned or user values into a control unit channel"
+    },
+    {
+      "heading": "Coding",
+      "role": "coding",
+      "note": "VAG long coding / byte coding to configure control unit features — unique to VAG"
+    },
+    {
+      "heading": "Component Protection",
+      "role": "procedure",
+      "note": "VAG anti-theft system for ECUs — requires online unlock via ODIS. Not a generic heading."
+    },
+    {
+      "heading": "Parameterization",
+      "role": "configuration",
+      "note": "VAG EV-specific: writing calibration parameters into HV battery or drive unit modules"
+    },
+    {
+      "heading": "Software Version Management",
+      "role": "configuration",
+      "note": "VAG ODIS flash/update management — tracks ECU software versions"
+    },
+    {
+      "heading": "Data Bus Diagnostic Interface",
+      "role": "testing",
+      "note": "VAG CAN/LIN bus diagnostic entry point — specific to VAG network architecture"
+    },
+    {
+      "heading": "Vehicle Diagnostic Connection",
+      "role": "testing",
+      "note": "OBD port / diagnostic connector location and access instructions"
+    }
+  ],
+
+  "procedure_headings": [
+    { "heading": "Control Unit List",          "role": "reference" },
+    { "heading": "Operating Instructions",     "role": "reference" },
+    { "heading": "Software Version Management","role": "configuration" },
+    { "heading": "Maintenance Intervals",      "role": "reference" },
+    { "heading": "Repair Manual",              "role": "repair" }
+  ]
+}
