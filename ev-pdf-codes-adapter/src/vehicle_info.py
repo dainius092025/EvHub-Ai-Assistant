@@ -38,7 +38,7 @@ _FOREWORD_RE = re.compile(
     re.IGNORECASE
 )
 
-_LOOKUP_PATH = Path(__file__).parent / "vehicle_lookup.json"
+_LOOKUP_PATH = Path(__file__).resolve().parents[2] / "shared" / "vehicle_lookup.json"
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────

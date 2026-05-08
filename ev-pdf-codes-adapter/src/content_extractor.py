@@ -111,6 +111,67 @@ def _get_line_extent(page: fitz.Page, table_bbox: tuple) -> tuple[float, float]:
     return left_x, right_x
 
 
+def _drawn_table_rect(page: fitz.Page, table_bbox: tuple) -> "fitz.Rect | None":
+    """
+    Derive the true table bounding rect from drawn border rectangles.
+
+    Used as a fallback when find_tables() returns a bbox that extends to the
+    full page width — a known PyMuPDF failure mode when the right vertical
+    border line is absent or very thin.
+
+    A table border is a thin (height <= 3 pt), wide (width >= 20 pt) filled
+    or stroked near-black rectangle whose right edge does not touch the page
+    margin (x1 < page_width - 5).  At least two such borders must agree
+    before a corrected rect is returned.
+
+    Returns corrected fitz.Rect (possibly narrower and/or with a higher y0
+    than the original bbox), or None if not enough borders are found.
+    """
+    pw  = page.rect.width
+    ty0 = table_bbox[1]
+    ty1 = table_bbox[3]
+    margin = 20   # search a little above/below the bbox to catch border lines
+
+    h_borders = []
+    for path in page.get_drawings():
+        r = path.get("rect")
+        if r is None:
+            continue
+        # Must overlap the expanded y-search zone
+        if r.y1 < ty0 - margin or r.y0 > ty1 + margin:
+            continue
+        height = r.y1 - r.y0
+        width  = r.x1 - r.x0
+        # Horizontal border: thin, meaningfully wide, not a page-wide rule
+        if height > 3 or width < 20:
+            continue
+        if r.x1 >= pw - 5:   # skip rules that reach the page right edge
+            continue
+        # Must have a near-black fill or stroke colour.
+        # PyMuPDF colors: grayscale = float, RGB = (r,g,b), CMYK = (c,m,y,k).
+        fill  = path.get("fill")
+        color = path.get("color")
+        ref   = fill if fill is not None else color
+        if ref is None:
+            continue
+        if isinstance(ref, (int, float)):
+            if ref >= 0.3:   # grayscale: 0.0 = black, 1.0 = white
+                continue
+        elif not all(ch < 0.3 for ch in ref[:3]):
+            continue
+        h_borders.append(r)
+
+    if len(h_borders) < 2:
+        return None
+
+    true_x0 = min(r.x0 for r in h_borders)
+    true_x1 = max(r.x1 for r in h_borders)
+    true_y0 = min(r.y0 for r in h_borders)
+    true_y1 = max(r.y1 for r in h_borders)
+
+    return fitz.Rect(true_x0, true_y0, true_x1, true_y1)
+
+
 def _row_y_ranges(table) -> list[tuple[float, float]]:
     """
     Derive per-row y-ranges from the table's cell bounding boxes.
@@ -227,6 +288,45 @@ def _bbox_rebuild_table(page: fitz.Page, table_rect: fitz.Rect) -> list[list[str
         result  = [[row[i] for i in valid_idxs] for row in result]
         n_cols  = len(valid_idxs)   # noqa: F841 — kept for clarity
 
+    return result
+
+
+def _dedup_merged_cells(rows: list[list[str]]) -> list[list[str]]:
+    """
+    Collapse repeated consecutive values in each column.
+
+    PDF tables with merged cells produce duplicate text because
+    _bbox_rebuild_table() sees the merged cell content once per
+    logical row line:
+
+        ["P3373", "DISCHARGE", "voltage range.", "• Service plug fuse"]
+        ["P3373", "DISCHARGE", "voltage range.", "• Overcharge..."]
+        ["P3373", "DISCHARGE", "voltage range.", "• Harness or connector"]
+
+    After dedup — first occurrence kept, subsequent repeats cleared:
+
+        ["P3373", "DISCHARGE", "voltage range.", "• Service plug fuse"]
+        ["",      "",          "",               "• Overcharge..."]
+        ["",      "",          "",               "• Harness or connector"]
+
+    Empty strings are never treated as duplicates — only non-empty
+    repeated values are cleared.
+    """
+    if not rows:
+        return rows
+    n_cols = max(len(row) for row in rows)
+    prev   = [None] * n_cols
+    result = []
+    for row in rows:
+        new_row = []
+        for i in range(n_cols):
+            val = row[i] if i < len(row) else ""
+            if val and val == prev[i]:
+                new_row.append("")
+            else:
+                new_row.append(val)
+                prev[i] = val if val else prev[i]
+        result.append(new_row)
     return result
 
 
@@ -357,33 +457,60 @@ def extract_tables_from_rect(page: fitz.Page, rect: fitz.Rect) -> list:
             quality_flags.append("outer_column_recovered")
 
         # ── Bbox repair pass ──────────────────────────────────────────────────
-        # Word-position reconstruction over the full horizontal rule extent.
-        # Only replaces clean_rows when:
-        #   (a) bbox found more columns than find_tables(), AND
-        #   (b) confidence is sufficient: >= 50% of rows have content in at
-        #       least half the detected columns.  Low fill means the extra
-        #       columns are mostly empty (noise) — keep original in that case.
-        repair_rect = fitz.Rect(line_left, tbbox.y0, line_right, tbbox.y1)
-        bbox_rows = _bbox_rebuild_table(page, repair_rect)
-        if bbox_rows and clean_rows and len(bbox_rows[0]) > len(clean_rows[0]):
-            min_filled = max(1, len(bbox_rows[0]) // 2)
-            good_rows  = sum(1 for row in bbox_rows
-                             if sum(1 for c in row if c) >= min_filled)
-            if good_rows / len(bbox_rows) >= 0.5:
-                clean_rows = [
-                    [
-                        "\n".join(" ".join(ln.split()) for ln in c.split("\n")).strip()
-                        for c in row
-                    ]
-                    for row in bbox_rows
+        # Word-position reconstruction over the horizontal rule extent.
+        #
+        # Two cases:
+        #
+        # A) find_tables() bbox extends to the full page right edge — a known
+        #    PyMuPDF failure when the right vertical border line is absent.
+        #    We read drawn border rectangles to derive the true table rect
+        #    (narrower x1, and a y0 that skips prose text above the real top
+        #    border).  When the drawn rect is found we ALWAYS prefer it.
+        #
+        # B) Normal case — only replace clean_rows when the reconstruction
+        #    finds more columns AND fill confidence is sufficient.
+        pw_local = page.rect.width
+        drawn_rect = None
+        if tbbox.x1 >= pw_local - 5:
+            drawn_rect = _drawn_table_rect(page, table.bbox)
+            if drawn_rect and drawn_rect.x1 < tbbox.x1 - 5:
+                repair_rect = drawn_rect
+                quality_flags.append("bbox_clipped_by_drawings")
+            else:
+                drawn_rect  = None   # no useful correction found
+                quality_flags.append("wide_bbox_uncorrected")
+                repair_rect = fitz.Rect(line_left, tbbox.y0, line_right, tbbox.y1)
+        else:
+            repair_rect = fitz.Rect(line_left, tbbox.y0, line_right, tbbox.y1)
+
+        bbox_rows    = _bbox_rebuild_table(page, repair_rect)
+        use_bbox_rows = False
+        if bbox_rows and clean_rows:
+            if drawn_rect is not None:
+                # Case A: bbox was wrong — always use the drawing-derived result
+                use_bbox_rows = True
+            elif len(bbox_rows[0]) > len(clean_rows[0]):
+                # Case B: only prefer reconstruction when it finds more columns
+                min_filled = max(1, len(bbox_rows[0]) // 2)
+                good_rows  = sum(1 for row in bbox_rows
+                                 if sum(1 for c in row if c) >= min_filled)
+                use_bbox_rows = good_rows / len(bbox_rows) >= 0.5
+
+        if use_bbox_rows:
+            clean_rows = [
+                [
+                    "\n".join(" ".join(ln.split()) for ln in c.split("\n")).strip()
+                    for c in row
                 ]
-                quality_flags.append("bbox_reconstruction_used")
+                for row in bbox_rows
+            ]
+            quality_flags.append("bbox_reconstruction_used")
 
         # ── Confidence: conservative — lowest signal wins ─────────────────────
         # Start at "high". Any low signal → "low". Any medium signal → "medium".
         # If both are present the low signal wins.
         LOW_SIGNALS    = {"blob_row_detected", "single_row_table", "single_column_table"}
-        MEDIUM_SIGNALS = {"bbox_reconstruction_used", "outer_column_recovered"}
+        MEDIUM_SIGNALS = {"bbox_reconstruction_used", "outer_column_recovered", "bbox_clipped_by_drawings", "wide_bbox_uncorrected"}
         flag_set = set(quality_flags)
         if flag_set & LOW_SIGNALS:
             confidence = "low"
@@ -456,7 +583,7 @@ def _finalize_section(section: dict) -> dict:
         "role":             section["role"],
         "oem_content_id":   section.get("oem_content_id"),
         # cleaned text: noise filtered, soft hyphens repaired, sidebar tabs removed
-        "text":             "\n\n".join(section["text_parts"]).strip() or None,
+        "cleaned_text":     "\n\n".join(section["text_parts"]).strip() or None,
         # raw text: uncleaned zone text preserved for importer / debug use
         "raw_text":         "\n\n".join(section.get("raw_text_parts", [])).strip() or None,
         "tables":           section["tables"],   # list of {page, page_ref, rows, extraction}

@@ -16,7 +16,7 @@ sys.path.insert(0, str(REPO_ROOT))
 from shared.document_id import compute_document_id
 from pdf_profile import profile_pdf
 from index_builder import build_index
-from content_extractor import extract_content
+from content_extractor import extract_content, _dedup_merged_cells
 from vehicle_info import extract_vehicle_info
 from type_detector import detect_manual_types
 
@@ -424,7 +424,7 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                     "heading":        sec["heading"],
                     "role":           sec["role"],
                     "oem_content_id": sec.get("oem_content_id"),
-                    "text":           sec["text"],
+                    "cleaned_text":   sec.get("cleaned_text"),
                     "raw_text":       sec.get("raw_text"),
                     "page_start":     sec["page_start"],
                     "page_end":       sec["page_end"],
@@ -455,7 +455,8 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
             for tbl in tables:
                 raw          = tbl["rows"]
                 header_count = _detect_header_rows(raw, known_codes_set)
-                tbl["rows"]  = _fill_carry_forward(raw, header_count)
+                filled = _fill_carry_forward(raw, header_count)
+                tbl["rows"]          = _dedup_merged_cells(filled)
                 tbl["_header_count"] = header_count
 
             # Detect cross-page continuations → table_groups (raw tables unchanged)

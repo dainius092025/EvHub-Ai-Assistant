@@ -90,7 +90,7 @@ def main():
             stub = {
                 "schema_version":         "1.0",
                 "schema_type":            "shared_document_profile",
-                "adapter_schema_version": 4,
+                "adapter_schema_version": 5,
                 "document_id":    document_id,
                 "source_file":    pdf_path.name,
                 "metadata":       metadata,
@@ -130,7 +130,7 @@ def main():
                 stub = {
                     "schema_version":         "1.0",
                     "schema_type":            "shared_document_profile",
-                    "adapter_schema_version": 4,
+                    "adapter_schema_version": 5,
                     "document_id":    compute_document_id(pdf_path),
                     "source_file":    pdf_path.name,
                     "metadata":       metadata,
@@ -168,8 +168,16 @@ def main():
 
             tmp_path.replace(out_path)   # instant rename — cannot be interrupted halfway
 
-            print(f"  Saved {len(result['records'])} records to {out_path}")
-            report.append({"file": pdf_path.name, "pdf_type": pdf_type, "status": "extracted", "records": len(result["records"])})
+            record_count   = len(result["records"])
+            dtc_code_count = sum(len(r.get("codes", [])) for r in result["records"])
+            print(f"  Saved {record_count} records ({dtc_code_count} DTC codes) to {out_path}")
+            report.append({
+                "file":           pdf_path.name,
+                "pdf_type":       pdf_type,
+                "status":         "extracted",
+                "record_count":   record_count,
+                "dtc_code_count": dtc_code_count,
+            })
 
 
             # ── Quality report ────────────────────────────────────────────────
@@ -199,13 +207,35 @@ def main():
     print(f"{'-' * 50}")
     for entry in report:
         status = entry["status"].upper()
-        pages  = f"  {entry.get('records', 0)} records" if entry["status"] == "extracted" else f"  {entry.get('reason', '')}"
+        pages  = f"  {entry.get('record_count', 0)} records  {entry.get('dtc_code_count', 0)} DTC codes" if entry["status"] == "extracted" else f"  {entry.get('reason', '')}"
         print(f"  {status:10} {entry['file']}{pages}")
 
     report_path = base_dir / "processing_report.json"
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump({"run_date": datetime.now().isoformat(), "results": report}, f, indent=2, ensure_ascii=False)
     print(f"\nReport saved to {report_path}")
+
+    # ── Persistent run history ────────────────────────────────────────────
+    # Append this run to run_history.json — never overwrite, only grow.
+    # Each entry mirrors processing_report.json: run_date + results list.
+    history_path = base_dir / "run_history.json"
+    history_tmp  = history_path.with_suffix(".json.tmp")
+
+    if history_path.exists():
+        with open(history_path, "r", encoding="utf-8") as f:
+            history = json.load(f)
+    else:
+        history = {"runs": []}
+
+    history["runs"].append({
+        "run_date": datetime.now().isoformat(),
+        "results":  report,
+    })
+
+    with open(history_tmp, "w", encoding="utf-8") as f:
+        json.dump(history, f, indent=2, ensure_ascii=False)
+    history_tmp.replace(history_path)
+    print(f"History  saved to {history_path}  ({len(history['runs'])} run(s) total)")
 
 
 if __name__ == "__main__":
