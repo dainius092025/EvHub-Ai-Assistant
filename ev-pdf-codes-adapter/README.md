@@ -36,7 +36,71 @@ psycopg2(or others if we decide to use postgresql)
 
 
 
-\## What I am working on next
+\## Architecture
+
+All source files live flat in `src/`. There are no subfolders — at this scale flat is simpler and standard. The logical layers below show how the files relate to each other.
+
+```
+┌─────────────────────────────────────────────────────────┐
+│  ORCHESTRATION                                          │
+│  pipeline.py — entry point, runs the full pipeline      │
+└───────────────────────────┬─────────────────────────────┘
+                            │
+          ┌─────────────────┼─────────────────┐
+          │                 │                 │
+          ▼                 ▼                 ▼
+┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
+│  INPUT          │ │  PROFILING      │ │  EXTRACTION     │
+│  vehicle_info   │ │  pdf_profile    │ │  extractor      │
+│                 │ │                 │ │  type_detector  │
+└─────────────────┘ └─────────────────┘ └────────┬────────┘
+                                                  │
+                                                  ▼
+                                        ┌─────────────────┐
+                                        │  PYMUPDF LAYER  │
+                                        │  index_builder  │
+                                        │  content_       │
+                                        │    extractor    │
+                                        └─────────────────┘
+                                                  │
+                                                  ▼
+                                        ┌─────────────────┐
+                                        │  SUPPORT        │
+                                        │  patterns       │
+                                        │  text_parser    │
+                                        └─────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│  OUTPUT  (files written to data/)                       │
+│  data/<stem>/<stem>.json   — extracted DTC records      │
+│  data/<stem>/images/       — extracted images           │
+│  data/processing_report.json — single run summary       │
+│  data/run_history.json       — all runs history         │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│  MANUAL TOOLS  (not part of the pipeline)               │
+│  debug_table.py     — inspect PyMuPDF table detection   │
+│  diag.py            — analyse pipeline output JSON      │
+│  script_for_meta.py — one-off metadata extraction       │
+│  docling_enricher.py — experimental Docling enrichment  │
+└─────────────────────────────────────────────────────────┘
+```
+
+### What each layer does
+
+| Layer | Files | Responsibility |
+|---|---|---|
+| Orchestration | `pipeline.py` | Reads args, loops over PDFs, writes JSON, saves report |
+| Input | `vehicle_info.py` | Extracts vehicle make, model, year from PDF headers/footers |
+| Profiling | `pdf_profile.py` | Classifies PDF as digital or scanned before extraction starts |
+| Extraction | `extractor.py`, `type_detector.py` | Builds DTC records; detects TYPE N section boundaries |
+| PyMuPDF layer | `index_builder.py`, `content_extractor.py` | All direct fitz calls — index scanning, page reading, table detection |
+| Support | `patterns.py`, `text_parser.py` | Shared regex patterns and text utilities used across layers |
+| Output | *(data/ folder)* | JSON records, images, run reports — written by pipeline.py |
+| Manual Tools | `debug_table.py`, `diag.py`, `script_for_meta.py`, `docling_enricher.py` | Debug and diagnostic scripts — run manually, not part of the pipeline |
+
+## What I am working on next
 
 \- Make the pipeline scan a whole folder of PDFs automatically instead of one at a time
 
