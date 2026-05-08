@@ -54,47 +54,15 @@ KNOWN_HEADINGS = [
     ("Diagnosis Procedure",         "diagnosis_procedure"),
     ("Component Inspection",        "component_inspection"),
 
-    # ── Toyota / Lexus ────────────────────────────────────────────────────────
-    # Source: Toyota technical manuals (BEV/PHEV/HEV sections).
-    # Not yet confirmed on a real PDF — add more variants once tested.
-    ("System Description",          "description"),
-    ("Circuit Description",         "description"),
-    ("How To Proceed With Troubleshooting", "diagnosis_procedure"),
-    ("Problem Symptoms Table",      "dtc_logic"),
-    ("Inspection Procedure",        "diagnosis_procedure"),
-    ("Check",                       "diagnosis_procedure"),
-
-    # ── Hyundai / Kia ─────────────────────────────────────────────────────────
-    # Source: Hyundai/Kia IONIQ, EV6, Niro EV workshop manuals.
-    # Not yet confirmed on a real PDF.
-    ("DTC Description",             "description"),
-    ("DTC Detecting Condition",     "dtc_logic"),
-    ("DTC Confirmation Procedure",  "dtc_confirmation_procedure"),  # same as Nissan
-    ("Schematic Diagram",           "description"),
-    ("Terminal And Connector Inspection", "component_inspection"),
-    ("Signal Waveform",             "dtc_logic"),
-
-    # ── Volkswagen / Audi / Skoda / Seat (VAG group) ─────────────────────────
-    # Source: VAG workshop system (ELSA/ERWIN). Not yet confirmed on a real PDF.
-    ("Function",                    "description"),
-    ("Possible Causes",             "dtc_logic"),
-    ("Diagnosis",                   "diagnosis_procedure"),
-    ("Measuring",                   "diagnosis_procedure"),
-    ("Component Location",          "description"),
-
-    # ── BMW / MINI ────────────────────────────────────────────────────────────
-    # Source: BMW workshop manuals (iX, i3, i4). Not yet confirmed on a real PDF.
-    ("Function Description",        "description"),
-    ("Fault Pattern",               "dtc_logic"),
-    ("Test Steps",                  "diagnosis_procedure"),
-    ("Component Replacement",       "component_inspection"),
-
-    # ── Renault / Dacia ───────────────────────────────────────────────────────
-    # Source: Renault ZOE, Kangoo E-Tech workshop manuals.
-    # Not yet confirmed on a real PDF.
-    ("Fault Finding",               "diagnosis_procedure"),
-    ("Conditions For Sending",      "dtc_logic"),
-    ("Conditions For Clearing",     "dtc_confirmation_procedure"),
+    # ── Other manufacturers ───────────────────────────────────────────────────
+    # Headings for Toyota, Hyundai/Kia, VAG, BMW, Renault live in:
+    #   shared/heading_seeds/<manufacturer>.json
+    # They are NOT added here until confirmed on a real PDF from that manufacturer.
+    # Reason: unconfirmed headings can match table column headers or other content
+    # in known-good PDFs and produce false section splits.
+    # To graduate a heading from seed → production: run the pipeline on a real PDF
+    # from that manufacturer, confirm the heading appears in the unknown-heading
+    # warnings, cross-reference with the seed file, then add it here.
 
 ]
 
