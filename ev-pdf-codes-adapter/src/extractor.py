@@ -446,6 +446,11 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                 print(f"  [WARN] {msg}")
                 warnings.append(msg)
 
+            # Surface unknown headings found by structural detection
+            for uh_warn in content.get("unknown_heading_warnings", []):
+                print(f"  [WARN] {uh_warn}")
+                warnings.append(uh_warn)
+
             # ── page_refs list ────────────────────────────────────────────────
             page_refs    = content["page_refs"]
             section_code = content.get("section_code")

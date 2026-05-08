@@ -3,7 +3,7 @@ import hashlib
 import fitz
 from pathlib import Path
 from patterns import INFOID_RE, SIDEBAR_RE, IMAGE_ID_RE
-from text_parser import KNOWN_HEADINGS, is_noise
+from text_parser import KNOWN_HEADINGS, HEADING_LOOKUP, normalize_heading, is_noise
 
 # Matches printed page labels like EVB-88, EVC-109, TM-44, TMS-12
 # Pattern: 2–4 uppercase letters, dash, one or more digits
@@ -64,23 +64,110 @@ def page_belongs_to_codes(page: fitz.Page, codes: list) -> bool:
 def _find_heading_y(page: fitz.Page, heading: str) -> tuple[float, float] | None:
     """
     Find the y-coordinates of a heading line on a page.
-    Searches every line in every block (case-insensitive exact match).
+    Searches every line in every block using normalised matching:
+      - case-insensitive
+      - internal whitespace runs collapsed to a single space
     Returns (y_top, y_bottom) so callers can:
       - end the previous zone at y_top  (before the heading text)
       - start the new zone at y_bottom  (after the heading text)
     Returns None if not found.
     """
-    heading_lower = heading.lower()
+    target = normalize_heading(heading)
     for block in page.get_text("dict").get("blocks", []):
         if block.get("type") != 0:   # text blocks only
             continue
         for line in block.get("lines", []):
-            line_text = " ".join(
-                span["text"] for span in line.get("spans", [])
-            ).strip().lower()
-            if line_text == heading_lower:
+            line_text = normalize_heading(
+                " ".join(span["text"] for span in line.get("spans", []))
+            )
+            if line_text == target:
                 return line["bbox"][1], line["bbox"][3]  # (y_top, y_bottom)
     return None
+
+
+_STRUCTURAL_HEADING_EXCLUDES = [
+    # Safety callout labels — bold by design but not DTC section headings
+    re.compile(r'^(CAUTION|WARNING|DANGER|NOTE|IMPORTANT)\s*:?\s*$', re.IGNORECASE),
+    # Labels ending in colon — sub-labels inside content (e.g. "Value:", "Reference:")
+    re.compile(r'^[A-Za-z ]{1,20}:\s*$'),
+    # Lines starting with colon — terminal/component labels e.g. ": Negative terminal (Black)"
+    re.compile(r'^:'),
+    # Lines that start with lowercase — continuation of a hyphenated word, not a heading
+    re.compile(r'^[a-z]'),
+    # DTC code range titles printed at page tops: "P3031-P303C CELL CONTROLLER ASIC"
+    re.compile(r'^[PBCU][0-9A-F]{4}[-–][PBCU][0-9A-F]{4}', re.IGNORECASE),
+    # Single DTC code + any title text: "P30E4 DLC DIAGNOSIS PDM(...)", "P31A7 CAN ERROR INV/MC"
+    # These are record-title continuation headers, not section headings
+    re.compile(r'^[PBCU][0-9A-F]{4}\s+\S', re.IGNORECASE),
+    # Multi-code comma titles: "P33D7, P33D9, P33DD TEMPERATURE SENSOR"
+    re.compile(r'^[PBCU][0-9A-F]{4},', re.IGNORECASE),
+    # Lines that look like sentences (contain a space + end with period/comma)
+    # Filters safety text continuation lines like "Disconnect the high voltage."
+    re.compile(r'.{30,}[.,]$'),
+]
+
+
+def _find_structural_headings(page: fitz.Page) -> list[dict]:
+    """
+    Scan all text lines on a page for lines that look structurally like headings
+    but are NOT in HEADING_LOOKUP.
+
+    A line is a candidate heading when ALL of these are true:
+      - Bold font (span flags & 16 — the bold bit in PDF font flags)
+      - Short text: <= 80 characters (headings are titles, not paragraphs)
+      - Not a noise line (page ref, revision, model name, DTC title header)
+      - Not a safety callout label (CAUTION:, WARNING:, DANGER: etc.)
+      - Not a sentence continuation (starts lowercase, or ends with punctuation + is long)
+      - Not already matched by HEADING_LOOKUP
+
+    Returns a list of dicts — one per unknown candidate:
+      {
+        "text":   str,    # raw heading text as found on the page
+        "y_top":  float,  # top of the line bounding box
+        "y_bot":  float,  # bottom of the line bounding box
+      }
+
+    Called once per page in the section-detection loop.
+    Its output is written to a per-record warning so developers know
+    exactly which headings need to be added to KNOWN_HEADINGS.
+    """
+    candidates = []
+    for block in page.get_text("dict").get("blocks", []):
+        if block.get("type") != 0:
+            continue
+        for line in block.get("lines", []):
+            spans = line.get("spans", [])
+            if not spans:
+                continue
+
+            # Collect text and check if every span is bold (flag bit 16 = bold)
+            text = " ".join(s["text"] for s in spans).strip()
+            all_bold = all(bool(s.get("flags", 0) & 16) for s in spans)
+
+            if not all_bold:
+                continue
+            if len(text) > 80:
+                continue
+            if is_noise(text):
+                continue
+
+            # Apply exclusion patterns — filters safety callouts, labels, sentences
+            if any(p.search(text) for p in _STRUCTURAL_HEADING_EXCLUDES):
+                continue
+
+            key = normalize_heading(text)
+            if not key:
+                continue
+            if key in HEADING_LOOKUP:
+                continue   # already handled — not unknown
+
+            candidates.append({
+                "text":  text,
+                "y_top": line["bbox"][1],
+                "y_bot": line["bbox"][3],
+            })
+
+    return candidates
 
 
 def _get_line_extent(page: fitz.Page, table_bbox: tuple) -> tuple[float, float]:
@@ -665,6 +752,12 @@ def extract_content(
         active_section = None
         all_sections   = []
 
+        # ── Unknown heading tracking ──────────────────────────────────────────
+        # Collects bold/short lines found on any page in this record that are NOT
+        # in HEADING_LOOKUP. Surfaced in the returned warnings list so the caller
+        # can log them and developers know what to add to KNOWN_HEADINGS.
+        unknown_headings_this_record: set[str] = set()
+
         for page_num in range(start_page, total_pages + 1):
             page = pdf[page_num - 1]
 
@@ -753,6 +846,15 @@ def extract_content(
                     breaks.append((y_top, y_bottom, display_name, role))
             breaks.sort(key=lambda x: x[0])
 
+            # ── Unknown heading detection ──────────────────────────────────────
+            # Find structurally bold/short lines on this page that are NOT in
+            # HEADING_LOOKUP. Collect them per-record so they appear in warnings[].
+            # These tell you exactly which headings need to be added to KNOWN_HEADINGS
+            # to support a new manufacturer — zero guesswork needed.
+            unknown_heads = _find_structural_headings(page)
+            for uh in unknown_heads:
+                unknown_headings_this_record.add(uh["text"])
+
             if not breaks:
                 # No headings on this page — entire page continues active section
                 if active_section is not None:
@@ -839,6 +941,12 @@ def extract_content(
         if active_section is not None:
             all_sections.append(_finalize_section(active_section))
 
+    # Build unknown-heading warnings — sorted for stable output
+    unknown_heading_warnings = [
+        f"unknown heading (not in KNOWN_HEADINGS): {h!r}"
+        for h in sorted(unknown_headings_this_record)
+    ]
+
     return {
         "sections":               all_sections,
         "has_images":             has_images,
@@ -849,4 +957,5 @@ def extract_content(
         "end_pdf_page":             last_processed,
         "section_code":             start_section_code,
         "stopped_at_type_boundary": stopped_at_type_boundary,
+        "unknown_heading_warnings": unknown_heading_warnings,
     }
