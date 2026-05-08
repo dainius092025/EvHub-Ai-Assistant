@@ -4,10 +4,20 @@ pipeline.py
 Entry point — scans the manuals/ folder and processes every pdf found
 
 Usage:
-    python src/pipeline.py                        # process all PDFs, skip existing output
-    python src/pipeline.py --force                # reprocess all PDFs, overwrite existing output
-    python src/pipeline.py manuals/EVB.pdf        # process one PDF, skip if already done
-    python src/pipeline.py manuals/EVB.pdf --force  # force reprocess one PDF
+    python src/pipeline.py                             # process all PDFs, skip existing output
+    python src/pipeline.py --force                     # reprocess all PDFs, overwrite existing output
+    python src/pipeline.py manuals/EVB.pdf             # process one PDF, skip if already done
+    python src/pipeline.py manuals/EVB.pdf --force     # force reprocess one PDF
+
+Output modes:
+    (default)                    full output — all fields including raw_text, raw_table_text
+    --slim                       lean output for the importer — strips raw_text, raw_table_text,
+                                 and ocr_used. Use this when handing output to the importer.
+
+Examples:
+    python src/pipeline.py manuals/EVB.pdf --slim          # single PDF, importer-ready output
+    python src/pipeline.py --slim                          # all PDFs, importer-ready output
+    python src/pipeline.py manuals/EVB.pdf --force --slim  # reprocess + importer-ready output
 """
 
 import argparse
@@ -24,11 +34,33 @@ from extractor import extract_records
 from pdf_profile import profile_pdf
 
 
+def _apply_slim(result: dict) -> dict:
+    """
+    Strip raw/debug fields from the extraction result.
+    Called when --slim is passed. Modifies a copy so the original is unchanged.
+
+    Removed fields:
+      sections[].raw_text       — noisy sidebar/footer spillover, not useful to importer
+      tables[].raw_table_text   — redundant: raw_rows is the source of truth
+      tables[].extraction.ocr_used — always False for digital PDFs
+    """
+    import copy
+    result = copy.deepcopy(result)
+    for record in result.get("records", []):
+        for section in record.get("sections", []):
+            section.pop("raw_text", None)
+        for table in record.get("tables", []):
+            table.pop("raw_table_text", None)
+            table.get("extraction", {}).pop("ocr_used", None)
+    return result
+
+
 def main():
     # ── Parse arguments ──────────────────────────────────────────────────
     parser = argparse.ArgumentParser(description="EV PDF Codes Adapter — extract DTC records from workshop manual PDFs")
     parser.add_argument("pdf", nargs="?", type=Path, help="Path to a single PDF to process. If omitted, all PDFs in manuals/ are processed.")
     parser.add_argument("--force", action="store_true", help="Reprocess and overwrite existing output.")
+    parser.add_argument("--slim", action="store_true", help="Strip raw/debug fields from output (raw_text, raw_table_text, ocr_used). Use this for importer output.")
     args = parser.parse_args()
 
     # ── Resolve PDF list ─────────────────────────────────────────────────
@@ -163,8 +195,9 @@ def main():
             # and .json is never created — so the next run will reprocess correctly.
             tmp_path = out_path.with_suffix(".json.tmp")   # e.g. data/EVB/EVB.json.tmp
 
+            output = _apply_slim(result) if args.slim else result
             with open(tmp_path, 'w', encoding="utf-8") as f:
-                json.dump(result, f, indent=2, ensure_ascii=False)
+                json.dump(output, f, indent=2, ensure_ascii=False)
 
             tmp_path.replace(out_path)   # instant rename — cannot be interrupted halfway
 

@@ -122,5 +122,26 @@ Then run it on a PDF:
 
 * python src/pipeline.py manuals/EVB.pdf
 
-The output will be saved to data/EVB.json
+The output will be saved to data/EVB/EVB.json
+
+To process all PDFs in the manuals/ folder at once:
+
+* python src/pipeline.py
+
+To reprocess a PDF that has already been extracted:
+
+* python src/pipeline.py manuals/EVB.pdf --force
+
+\## Output modes
+
+By default the pipeline writes the full output including raw debug fields.
+
+Use --slim to produce lean output for the importer (strips raw\_text, raw\_table\_text, and ocr\_used):
+
+* python src/pipeline.py manuals/EVB.pdf --slim
+* python src/pipeline.py --slim
+
+Full output (default) — keeps all raw fields. Use this when developing or debugging the adapter.
+
+Slim output (--slim) — removes noisy/redundant fields. Use this when the output will be handed to the importer for sanitization, enrichment, embedding, and storage.
 

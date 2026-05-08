@@ -283,6 +283,45 @@ def _merge_header_rows(row0: list, row1: list) -> list:
     return result
 
 
+def _render_raw_table_text(raw_rows: list) -> str:
+    """
+    Render raw_rows as a pipe-delimited string — direct mechanical output.
+    Each row becomes one line; cells are joined with ' | '.
+    None → empty string. No cleanup, no inference. What was extracted, as-is.
+    """
+    lines = []
+    for row in raw_rows:
+        cells = [str(c) if c is not None else "" for c in row]
+        lines.append(" | ".join(cells))
+    return "\n".join(lines)
+
+
+def _clean_table_cell(cell: str) -> str:
+    """
+    Apply the allowed minimal cleanup to a single table cell.
+    Allowed: join soft hyphen line breaks, normalize whitespace within lines.
+    Not allowed: rewrite meaning, move words, infer structure.
+    """
+    # Join soft hyphen line breaks: "commu-\nnication" → "communication"
+    cell = re.sub(r"(\w+)-\n([a-z])", r"\1\2", cell)
+    # Normalize whitespace within each line (collapse multiple spaces)
+    lines = [" ".join(ln.split()) for ln in cell.split("\n")]
+    return "\n".join(lines).strip()
+
+
+def _render_cleaned_table_text(raw_rows: list) -> str:
+    """
+    Render raw_rows as a pipe-delimited string with minimal readability cleanup.
+    Applies _clean_table_cell to each cell: soft hyphen joins + whitespace normalisation.
+    Structure (row/column order, pipe layout) is identical to raw_table_text.
+    """
+    lines = []
+    for row in raw_rows:
+        cells = [_clean_table_cell(str(c) if c is not None else "") for c in row]
+        lines.append(" | ".join(cells))
+    return "\n".join(lines)
+
+
 def _fill_carry_forward(raw_rows: list, header_count: int) -> list:
     """
     Fill empty cells by propagating the value from the row above.
@@ -472,8 +511,18 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                 tbl["start_pdf_page"] = page
                 tbl["end_pdf_page"]   = page
                 tbl["page_refs"]      = [pr] if pr else []
-                tbl["raw_rows"]       = raw
-                extraction["detected_header_rows"] = header_count
+                tbl["raw_rows"]            = raw
+                tbl["raw_table_text"]      = _render_raw_table_text(raw)
+                tbl["cleaned_table_text"]  = _render_cleaned_table_text(raw)
+                # header_rows_hint — raw heuristic count, may undercount
+                # multi-level headers (3+ rows).  Importer should verify.
+                extraction["header_rows_hint"] = header_count
+                # partial — True when the row immediately after the detected
+                # headers also passes the sub-header test, indicating a 3+
+                # level header structure that the heuristic cannot fully count.
+                if (len(raw) > header_count
+                        and _is_subheader_row(raw[header_count], known_codes_set)):
+                    extraction["partial"] = True
                 tbl["extraction"] = extraction
 
             # ── Images — enriched with metadata ──────────────────────────────

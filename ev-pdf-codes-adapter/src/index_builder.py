@@ -1,8 +1,22 @@
+import contextlib
+import io
 import re
+import sys
 import fitz
 from pathlib import Path
 from patterns import CODE_RE
 from patterns import REF_RE
+
+
+@contextlib.contextmanager
+def _quiet():
+    """Suppress stdout during find_tables() to hide PyMuPDF's 'Consider pymupdf_layout' advisory."""
+    old = sys.stdout
+    sys.stdout = io.StringIO()
+    try:
+        yield
+    finally:
+        sys.stdout = old
 
 
 def find_dtc_heading_y(page) -> float:
@@ -25,15 +39,27 @@ def find_dtc_heading_y(page) -> float:
 
 def find_index_table(page, heading_y: float):
     """
-    Find the first table that starts below the DTC Index heading.
-    """
-    tables = page.find_tables()
+    Find the DTC index table that starts below the DTC Index heading.
 
-    for table in tables.tables:
-        if table.bbox[1] >= heading_y:
+    Prefers the table whose header row contains a 'Reference' column — this
+    distinguishes the real DTC index from a Pattern A/B/C/D table that may
+    carry over from the previous page and appear above the index at the same Y.
+    Falls back to the first table below heading_y if none has a Reference column.
+    """
+    with _quiet():
+        tables = page.find_tables()
+
+    candidates = [t for t in tables.tables if t.bbox[1] >= heading_y]
+    if not candidates:
+        return None
+
+    # Prefer the table whose header contains 'Reference'
+    for table in candidates:
+        rows = table.extract()
+        if rows and any("reference" in str(cell).lower() for cell in (rows[0] or [])):
             return table
 
-    return None
+    return candidates[0]
 
 
 def detect_format(header_row: list) -> str:
@@ -49,11 +75,15 @@ def detect_format(header_row: list) -> str:
     return "B"
 
 
-def extract_codes_with_y(page, fmt: str) -> list:
+def extract_codes_with_y(page, fmt: str, min_y: float = 0.0) -> list:
     """
     Extract DTC codes, their y-positions, and titles from a page.
     Title = all words on the same y-level as the code, to the right of it.
     Returns a list of (code, y, title) tuples.
+
+    min_y: skip any word whose top edge is above this Y value.
+           Use table.bbox[1] on the first index page to exclude codes that
+           belong to a carry-over Pattern A/B/C/D table above the DTC index.
     """
     words = page.get_text("words")  # each word: (x0, y0, x1, y1, text, ...)
     results = []
@@ -61,6 +91,9 @@ def extract_codes_with_y(page, fmt: str) -> list:
     for i, word in enumerate(words):
         word_text = word[4]
         y_pos = word[1]   # y0 = top edge of this word
+
+        if y_pos < min_y:
+            continue
 
         if fmt == "A":
             clean = re.sub(r"[^A-Z0-9]", "", word_text.upper())
@@ -215,7 +248,8 @@ def build_index(pdf_path: Path) -> dict:
 
             if table is None and page_num + 1 < len(pdf):
                 next_page = pdf[page_num + 1]
-                tables = next_page.find_tables()
+                with _quiet():
+                    tables = next_page.find_tables()
                 if tables.tables:
                     table = tables.tables[0]
                     table_page_num = page_num + 1
@@ -236,6 +270,10 @@ def build_index(pdf_path: Path) -> dict:
                 continue
 
             fmt = detect_format(rows[0])
+            # Top of the identified index table — words above this Y on the
+            # first index page belong to a carry-over Pattern A/B/C/D table
+            # and must be excluded from code extraction.
+            index_table_y = table.bbox[1]
 
             current_num = table_page_num
             while current_num < len(pdf):
@@ -262,7 +300,10 @@ def build_index(pdf_path: Path) -> dict:
                     m = REF_RE.search(raw)
                     l["ref_text"] = m.group(0) if m else None
                     links.append(l)
-                codes_with_y = extract_codes_with_y(current_page, fmt)
+                # On the first index page, restrict code scanning to below the
+                # identified table — prevents picking up carry-over codes above it.
+                min_y = index_table_y if current_num == table_page_num else 0.0
+                codes_with_y = extract_codes_with_y(current_page, fmt, min_y=min_y)
                 page_results = match_codes_to_links(codes_with_y, links)
 
                 for code, info in page_results.items():
