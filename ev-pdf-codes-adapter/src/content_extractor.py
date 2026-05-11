@@ -104,6 +104,12 @@ _STRUCTURAL_HEADING_EXCLUDES = [
     # Lines that look like sentences (contain a space + end with period/comma)
     # Filters safety text continuation lines like "Disconnect the high voltage."
     re.compile(r'.{30,}[.,]$'),
+    # Bracketed labels: "[TYPE 1]", "[AUTOMATIC AIR CONDITIONER]", "[TELEMATICS SYSTEM]"
+    # These are variant/subsystem/applicability markers preserved in raw_text — not section headings.
+    re.compile(r'^\[.*\]$'),
+    # Lines ending with common function words — wrapped sentence fragments, not headings.
+    # e.g. "Touching high voltage components without using the"
+    re.compile(r'\b(the|a|an|of|with|using|for|to|in|on|at|by|from|and|or|but|if|that|which|this|these)\s*$', re.IGNORECASE),
 ]
 
 
@@ -146,7 +152,9 @@ def _find_structural_headings(page: fitz.Page) -> list[dict]:
 
             if not all_bold:
                 continue
-            if len(text) > 80:
+            if len(text) > 55:
+                continue
+            if len(text.split()) < 2:
                 continue
             if is_noise(text):
                 continue
@@ -366,7 +374,10 @@ def _bbox_rebuild_table(page: fitz.Page, table_rect: fitz.Rect) -> list[list[str
     # A real column has content in at least 20% of rows.  Columns below that
     # threshold are sidebar letters, page numbers, or other per-page noise
     # that happens to fall inside the repair rect.
-    min_presence = max(1, round(len(result) * 0.20))
+    # Require content in at least 2 rows AND 25% of rows.
+    # max(1, 20%) degenerates to 1 for small tables — any column with a single
+    # populated row survives, including phantom separator columns from X0 drift.
+    min_presence = max(2, round(len(result) * 0.25))
     valid_idxs   = [i for i in range(n_cols)
                     if sum(1 for row in result if row[i]) >= min_presence]
     if len(valid_idxs) < 2:
@@ -577,11 +588,16 @@ def extract_tables_from_rect(page: fitz.Page, rect: fitz.Rect) -> list:
                 # Case A: bbox was wrong — always use the drawing-derived result
                 use_bbox_rows = True
             elif len(bbox_rows[0]) > len(clean_rows[0]):
-                # Case B: only prefer reconstruction when it finds more columns
-                min_filled = max(1, len(bbox_rows[0]) // 2)
-                good_rows  = sum(1 for row in bbox_rows
-                                 if sum(1 for c in row if c) >= min_filled)
-                use_bbox_rows = good_rows / len(bbox_rows) >= 0.5
+                # Case B: only prefer reconstruction when it finds more columns.
+                # Reject when bbox column count exceeds find_tables() by more than
+                # 1.5× — heavy inflation is a reliable signal of phantom columns
+                # caused by centered header text vs left-aligned data X0 drift.
+                col_ratio = len(bbox_rows[0]) / len(clean_rows[0])
+                if col_ratio <= 1.5:
+                    min_filled = max(1, len(bbox_rows[0]) // 2)
+                    good_rows  = sum(1 for row in bbox_rows
+                                     if sum(1 for c in row if c) >= min_filled)
+                    use_bbox_rows = good_rows / len(bbox_rows) >= 0.5
 
         if use_bbox_rows:
             clean_rows = [
@@ -592,6 +608,26 @@ def extract_tables_from_rect(page: fitz.Page, rect: fitz.Rect) -> list:
                 for row in bbox_rows
             ]
             quality_flags.append("bbox_reconstruction_used")
+
+        # ── Cleaned rows — layout newlines removed ───────────────────────────────
+        # Derived from the final clean_rows:
+        #   1. Repair soft hyphens split by PDF line wrap ("ENGAGE-\nMENT" → "ENGAGEMENT")
+        #   2. Replace remaining layout newlines with a space
+        #   3. Collapse any resulting double spaces
+        def _clean_cell(cell: str) -> str:
+            cell = re.sub(r'(\w+)-\n([a-z])', r'\1\2', cell)  # de-hyphenation
+            cell = cell.replace('\n', ' ')                      # join layout newlines
+            return ' '.join(cell.split())                       # collapse spaces
+
+        # Blob rows (blob_row_detected) contain the entire table as a single text
+        # dump — their newlines are structural, not layout artifacts.  Leave the
+        # blob row untouched; clean only the structured rows that follow it.
+        if "blob_row_detected" in quality_flags and clean_rows:
+            cleaned_rows = [list(clean_rows[0])] + [
+                [_clean_cell(cell) for cell in row] for row in clean_rows[1:]
+            ]
+        else:
+            cleaned_rows = [[_clean_cell(cell) for cell in row] for row in clean_rows]
 
         # ── Confidence: conservative — lowest signal wins ─────────────────────
         # Start at "high". Any low signal → "low". Any medium signal → "medium".
@@ -607,7 +643,8 @@ def extract_tables_from_rect(page: fitz.Page, rect: fitz.Rect) -> list:
             confidence = "high"
 
         result.append({
-            "rows": clean_rows,
+            "rows":         clean_rows,   # raw: internal newlines preserved
+            "cleaned_rows": cleaned_rows, # cleaned: newlines joined, hyphens repaired
             "extraction": {
                 "confidence":    confidence,
                 "quality_flags": quality_flags,
@@ -868,10 +905,11 @@ def extract_content(
                         active_section["raw_text_parts"].append(raw_txt)
                     for td in extract_tables_from_rect(page, page_rect):
                         active_section["tables"].append({
-                            "page":       page_num,
-                            "page_ref":   ref,
-                            "rows":       td["rows"],
-                            "extraction": td["extraction"],
+                            "page":         page_num,
+                            "page_ref":     ref,
+                            "rows":         td["rows"],
+                            "cleaned_rows": td["cleaned_rows"],
+                            "extraction":   td["extraction"],
                         })
                     active_section["page_end"] = page_num
 
@@ -891,10 +929,11 @@ def extract_content(
                         active_section["raw_text_parts"].append(pre_raw)
                     for td in extract_tables_from_rect(page, pre_rect):
                         active_section["tables"].append({
-                            "page":       page_num,
-                            "page_ref":   ref,
-                            "rows":       td["rows"],
-                            "extraction": td["extraction"],
+                            "page":         page_num,
+                            "page_ref":     ref,
+                            "rows":         td["rows"],
+                            "cleaned_rows": td["cleaned_rows"],
+                            "extraction":   td["extraction"],
                         })
                     active_section["page_end"] = page_num
 
@@ -917,10 +956,11 @@ def extract_content(
                     oem_content_id = _extract_oem_content_id(page, heading_rect)
                     zone_tables = [
                         {
-                            "page":       page_num,
-                            "page_ref":   ref,
-                            "rows":       td["rows"],
-                            "extraction": td["extraction"],
+                            "page":         page_num,
+                            "page_ref":     ref,
+                            "rows":         td["rows"],
+                            "cleaned_rows": td["cleaned_rows"],
+                            "extraction":   td["extraction"],
                         }
                         for td in extract_tables_from_rect(page, zone_rect)
                     ]
