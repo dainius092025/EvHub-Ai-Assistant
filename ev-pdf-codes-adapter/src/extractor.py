@@ -167,6 +167,25 @@ _ALPHA_RE = re.compile(r'^[A-Za-z\s]+$')   # purely alphabetic label (no digits)
 _TYPE_MARKER_RE = re.compile(r'\[TYPE [A-Z0-9]+\]', re.IGNORECASE)  # inline variant markers e.g. [TYPE 1], [TYPE 2A]
 
 
+def _is_blob_row(row: list) -> bool:
+    """
+    Return True when a row matches the PyMuPDF blob pattern:
+    the first cell contains substantial multi-line text, all other cells are empty.
+
+    Used as a secondary structural check — only called when blob_row_detected
+    is already present in the extraction quality flags.
+    """
+    if not row:
+        return False
+    first = str(row[0]).strip()
+    rest  = row[1:]
+    return (
+        len(first) > 50
+        and '\n' in first                           # multi-line collapsed content
+        and all(str(c).strip() == '' for c in rest) # only cell[0] is non-empty
+    )
+
+
 def _is_subheader_row(row: list, known_codes: set | None = None) -> bool:
     """
     Return True if every non-empty cell in this row could be a header label.
@@ -506,13 +525,28 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
             # finalize loop below via private _-prefixed keys.
             known_codes_set = set(codes)
             for tbl in tables:
-                extracted    = [list(row) for row in tbl["rows"]]  # deep copy — true raw snapshot
-                header_count = _detect_header_rows(extracted, known_codes_set)
-                filled       = _fill_carry_forward(extracted, header_count)
+                extracted = [list(row) for row in tbl["rows"]]  # deep copy — true raw snapshot
+                norm      = []
+
+                # ── Blob row strip ────────────────────────────────────────────
+                # When PyMuPDF collapses a complex merged-cell header into a
+                # single blob cell (row 0), that row carries no usable column
+                # structure.  The real headers start at row 1.
+                #
+                # Strip row 0 from the rows used for reconstruction so the
+                # importer receives a clean table.  raw_rows is never touched —
+                # it preserves the blob as extraction evidence.
+                rows_for_recon = extracted
+                blob_flagged   = "blob_row_detected" in tbl["extraction"].get("quality_flags", [])
+                if blob_flagged and extracted and _is_blob_row(extracted[0]):
+                    rows_for_recon = extracted[1:]
+                    norm.append("blob_row_stripped")
+
+                header_count = _detect_header_rows(rows_for_recon, known_codes_set)
+                filled       = _fill_carry_forward(rows_for_recon, header_count)
                 deduped      = _dedup_merged_cells(filled)
 
-                norm = []
-                if filled != extracted:
+                if filled != rows_for_recon:
                     norm.append("carry_forward_fill")
                 if deduped != filled:
                     norm.append("merged_cell_dedup")
@@ -522,21 +556,23 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                 tbl["_normalization_applied"] = norm
                 tbl["rows"]                   = deduped  # _merge_continued_tables uses rows
                 tbl["_header_count"]          = header_count
+                tbl["_rows_for_recon"]        = rows_for_recon  # for partial check below
 
             # Detect cross-page continuations → table_groups (raw tables unchanged)
             table_groups, absorbed_ids = _merge_continued_tables(tables, notes, record_num)
 
             # Finalize raw tables: rename location fields, enforce raw/reconstructed split.
             for tbl in tables:
-                true_raw     = tbl.pop("_true_raw_rows")
-                recon_rows   = tbl.pop("_reconstructed_rows")   # None if no reconstruction ran
-                norm_applied = tbl.pop("_normalization_applied")
-                tbl.pop("rows")                                  # reconstructed copy — promoted below if needed
-                cleaned      = tbl.pop("cleaned_rows")
-                page         = tbl.pop("page")
-                pr           = tbl.pop("page_ref")
-                extraction   = tbl.pop("extraction")
-                header_count = tbl.pop("_header_count")
+                true_raw       = tbl.pop("_true_raw_rows")
+                recon_rows     = tbl.pop("_reconstructed_rows")   # None if no reconstruction ran
+                norm_applied   = tbl.pop("_normalization_applied")
+                tbl.pop("rows")                                    # reconstructed copy — promoted below if needed
+                cleaned        = tbl.pop("cleaned_rows")
+                page           = tbl.pop("page")
+                pr             = tbl.pop("page_ref")
+                extraction     = tbl.pop("extraction")
+                header_count   = tbl.pop("_header_count")
+                rows_for_recon = tbl.pop("_rows_for_recon")
                 tbl["start_pdf_page"] = page
                 tbl["end_pdf_page"]   = page
                 tbl["page_refs"]      = [pr] if pr else []
@@ -565,8 +601,11 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                 # partial — True when the row immediately after the detected
                 # headers also passes the sub-header test, indicating a 3+
                 # level header structure that the heuristic cannot fully count.
-                if (len(true_raw) > header_count
-                        and _is_subheader_row(true_raw[header_count], known_codes_set)):
+                # partial — rows_for_recon is used (not true_raw) so the index
+                # aligns with the header_count that was computed on those same rows.
+                # When a blob was stripped, true_raw indices are offset by 1.
+                if (len(rows_for_recon) > header_count
+                        and _is_subheader_row(rows_for_recon[header_count], known_codes_set)):
                     extraction["partial"] = True
                 tbl["extraction"] = extraction
 
