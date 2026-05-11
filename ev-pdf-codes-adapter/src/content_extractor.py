@@ -40,8 +40,9 @@ def clean_text(raw: str, section_code: str | None = None) -> str:
     text = INFOID_RE.sub("", raw)
     text = SIDEBAR_RE.sub("", text)
     # Repair word-break hyphens: only when a word ends with "-" and the
-    # next line starts with a lowercase letter (soft hyphen, not a real compound).
-    text = re.sub(r"(\w+)-\n([a-z])", r"\1\2", text)
+    # next line starts with a letter (upper or lower). The newline is the
+    # distinguishing signal — real compounds like LI-ION never contain \n.
+    text = re.sub(r"(\w+)-\n([A-Za-z])", r"\1\2", text)
     # Drop lines that are pure header/footer noise (page refs, revision, model name, DTC title).
     lines = [ln for ln in text.split("\n") if not is_noise(ln)]
     # Drop standalone section code sidebar tabs (e.g. "EVB" from page continuation header).
@@ -615,7 +616,7 @@ def extract_tables_from_rect(page: fitz.Page, rect: fitz.Rect) -> list:
         #   2. Replace remaining layout newlines with a space
         #   3. Collapse any resulting double spaces
         def _clean_cell(cell: str) -> str:
-            cell = re.sub(r'(\w+)-\n([a-z])', r'\1\2', cell)  # de-hyphenation
+            cell = re.sub(r'(\w+)-\n([A-Za-z])', r'\1\2', cell)  # de-hyphenation
             cell = cell.replace('\n', ' ')                      # join layout newlines
             return ' '.join(cell.split())                       # collapse spaces
 
