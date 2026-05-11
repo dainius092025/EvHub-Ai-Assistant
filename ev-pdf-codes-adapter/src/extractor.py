@@ -75,15 +75,29 @@ def _normalize_title(codes: list, code_titles: dict) -> str | None:
 def _headers_match(row_a: list, row_b: list) -> bool:
     """
     Return True when two header rows represent the same column layout.
-    Ignores trailing empty cells so tables with different padding still merge.
-    Used by _merge_continued_tables to detect Nissan's reprinted page headers.
+
+    Two passes:
+    1. Exact match after stripping trailing empty cells.
+    2. Prefix match — the shorter stripped row matches the beginning of the
+       longer one.  Handles Nissan continuation pages where the reprinted header
+       drops a trailing column (e.g. 'Continuity') that was present on page 1.
+       All shared columns must still match exactly.
     """
     def strip_trailing(row):
         r = list(row)
         while r and r[-1] == '':
             r.pop()
         return r
-    return strip_trailing(row_a) == strip_trailing(row_b)
+
+    a = strip_trailing(row_a)
+    b = strip_trailing(row_b)
+
+    if a == b:
+        return True
+
+    # Prefix match: shorter must be non-empty and match the start of the longer.
+    short, long = (a, b) if len(a) <= len(b) else (b, a)
+    return len(short) > 0 and long[:len(short)] == short
 
 
 def _merge_continued_tables(tables: list, notes: list, record_num: int) -> tuple[list, set]:
