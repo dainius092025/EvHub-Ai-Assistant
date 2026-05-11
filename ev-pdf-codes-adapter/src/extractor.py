@@ -164,6 +164,7 @@ _DTC_CODE_RE = re.compile(r'^[A-Z][0-9A-Z]{4}$')      # e.g. P303D, P338A, P0A0D
 _STEP_NUM_RE = re.compile(r'^\d+$')                    # plain integer: 1, 2, 42
 
 _ALPHA_RE = re.compile(r'^[A-Za-z\s]+$')   # purely alphabetic label (no digits)
+_TYPE_MARKER_RE = re.compile(r'\[TYPE [A-Z0-9]+\]', re.IGNORECASE)  # inline variant markers e.g. [TYPE 1], [TYPE 2A]
 
 
 def _is_subheader_row(row: list, known_codes: set | None = None) -> bool:
@@ -296,28 +297,16 @@ def _render_raw_table_text(raw_rows: list) -> str:
     return "\n".join(lines)
 
 
-def _clean_table_cell(cell: str) -> str:
+def _render_cleaned_table_text(cleaned_rows: list) -> str:
     """
-    Apply the allowed minimal cleanup to a single table cell.
-    Allowed: join soft hyphen line breaks, normalize whitespace within lines.
-    Not allowed: rewrite meaning, move words, infer structure.
-    """
-    # Join soft hyphen line breaks: "commu-\nnication" → "communication"
-    cell = re.sub(r"(\w+)-\n([a-z])", r"\1\2", cell)
-    # Normalize whitespace within each line (collapse multiple spaces)
-    lines = [" ".join(ln.split()) for ln in cell.split("\n")]
-    return "\n".join(lines).strip()
-
-
-def _render_cleaned_table_text(raw_rows: list) -> str:
-    """
-    Render raw_rows as a pipe-delimited string with minimal readability cleanup.
-    Applies _clean_table_cell to each cell: soft hyphen joins + whitespace normalisation.
-    Structure (row/column order, pipe layout) is identical to raw_table_text.
+    Render cleaned_rows as a pipe-delimited string.
+    cleaned_rows comes from content_extractor.py — layout newlines already joined,
+    soft hyphens already repaired, blob row already left intact.
+    No further cell transformation is applied here.
     """
     lines = []
-    for row in raw_rows:
-        cells = [_clean_table_cell(str(c) if c is not None else "") for c in row]
+    for row in cleaned_rows:
+        cells = [str(c) if c is not None else "" for c in row]
         lines.append(" | ".join(cells))
     return "\n".join(lines)
 
@@ -474,6 +463,20 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                     "page_end":       sec["page_end"],
                 })
 
+            # ── TYPE variant markers — scan raw_text for [TYPE X] inline markers ──
+            # Markers are preserved in raw_text/cleaned_text (not stripped).
+            # We add section-level flags and roll up a record-level summary.
+            all_type_markers: list[str] = []
+            for sec in sections:
+                raw = sec.get("raw_text") or ""
+                found = _TYPE_MARKER_RE.findall(raw)
+                if found:
+                    unique = list(dict.fromkeys(m.upper() for m in found))
+                    sec["has_type_variants"]      = True
+                    sec["type_markers_detected"]  = unique
+                    all_type_markers.extend(unique)
+            manual_types_detected = list(dict.fromkeys(all_type_markers)) or None
+
             # ── Tables — flat list, each linked to its section via section_id ─
             notes   = []
             tables  = []
@@ -489,26 +492,47 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                         "page":           tbl["page"],
                         "page_ref":       tbl["page_ref"],
                         "rows":           tbl["rows"],
+                        "cleaned_rows":   tbl["cleaned_rows"],
                         "extraction":     tbl["extraction"],
                     })
                     t_count += 1
 
             # Apply carry-forward fill and detect headers before merging so
             # table_groups also receive complete rows.
+            #
+            # Contract: raw_rows must be the true extraction output — no reconstruction.
+            # We snapshot each table's rows BEFORE carry-forward / dedup run, then
+            # apply reconstruction to a copy.  Both are carried forward through the
+            # finalize loop below via private _-prefixed keys.
             known_codes_set = set(codes)
             for tbl in tables:
-                raw          = tbl["rows"]
-                header_count = _detect_header_rows(raw, known_codes_set)
-                filled = _fill_carry_forward(raw, header_count)
-                tbl["rows"]          = _dedup_merged_cells(filled)
-                tbl["_header_count"] = header_count
+                extracted    = [list(row) for row in tbl["rows"]]  # deep copy — true raw snapshot
+                header_count = _detect_header_rows(extracted, known_codes_set)
+                filled       = _fill_carry_forward(extracted, header_count)
+                deduped      = _dedup_merged_cells(filled)
+
+                norm = []
+                if filled != extracted:
+                    norm.append("carry_forward_fill")
+                if deduped != filled:
+                    norm.append("merged_cell_dedup")
+
+                tbl["_true_raw_rows"]         = extracted
+                tbl["_reconstructed_rows"]    = deduped if norm else None
+                tbl["_normalization_applied"] = norm
+                tbl["rows"]                   = deduped  # _merge_continued_tables uses rows
+                tbl["_header_count"]          = header_count
 
             # Detect cross-page continuations → table_groups (raw tables unchanged)
             table_groups, absorbed_ids = _merge_continued_tables(tables, notes, record_num)
 
-            # Finalize raw tables: rename location fields, rows → raw_rows.
+            # Finalize raw tables: rename location fields, enforce raw/reconstructed split.
             for tbl in tables:
-                raw          = tbl.pop("rows")
+                true_raw     = tbl.pop("_true_raw_rows")
+                recon_rows   = tbl.pop("_reconstructed_rows")   # None if no reconstruction ran
+                norm_applied = tbl.pop("_normalization_applied")
+                tbl.pop("rows")                                  # reconstructed copy — promoted below if needed
+                cleaned      = tbl.pop("cleaned_rows")
                 page         = tbl.pop("page")
                 pr           = tbl.pop("page_ref")
                 extraction   = tbl.pop("extraction")
@@ -516,17 +540,33 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                 tbl["start_pdf_page"] = page
                 tbl["end_pdf_page"]   = page
                 tbl["page_refs"]      = [pr] if pr else []
-                tbl["raw_rows"]            = raw
-                tbl["raw_table_text"]      = _render_raw_table_text(raw)
-                tbl["cleaned_table_text"]  = _render_cleaned_table_text(raw)
+                # raw_rows: true extraction output — no carry-forward, no dedup
+                tbl["raw_rows"]           = true_raw
+                tbl["raw_table_text"]     = _render_raw_table_text(true_raw)
+                # cleaned_table_text: formatting-only render of raw_rows (newlines joined,
+                # hyphens repaired) — no inferred values
+                tbl["cleaned_table_text"] = _render_cleaned_table_text(cleaned)
+                # reconstructed_rows + metadata: only present when reconstruction ran
+                if norm_applied:
+                    tbl["reconstructed_rows"] = recon_rows
+                    tbl["reconstruction"] = {
+                        "reconstructed":         True,
+                        "normalization_applied": norm_applied,
+                        "source_of_truth":       "raw_rows",
+                    }
+                    extraction["quality_flags"].extend(norm_applied)
+                    extraction["quality_flags"].append("reconstructed_rows_present")
+                    # Reconstruction changes cell values — confidence cannot stay high
+                    if extraction.get("confidence") == "high":
+                        extraction["confidence"] = "medium"
                 # header_rows_hint — raw heuristic count, may undercount
                 # multi-level headers (3+ rows).  Importer should verify.
                 extraction["header_rows_hint"] = header_count
                 # partial — True when the row immediately after the detected
                 # headers also passes the sub-header test, indicating a 3+
                 # level header structure that the heuristic cannot fully count.
-                if (len(raw) > header_count
-                        and _is_subheader_row(raw[header_count], known_codes_set)):
+                if (len(true_raw) > header_count
+                        and _is_subheader_row(true_raw[header_count], known_codes_set)):
                     extraction["partial"] = True
                 tbl["extraction"] = extraction
 
@@ -574,6 +614,8 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                 "table_groups": table_groups,
                 "images":       images,
                 "notes":        notes,
+
+                **({"manual_types_detected": manual_types_detected} if manual_types_detected else {}),
 
                 "extraction": {
                     "status":   "success",

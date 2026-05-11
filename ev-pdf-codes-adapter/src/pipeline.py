@@ -10,14 +10,16 @@ Usage:
     python src/pipeline.py manuals/EVB.pdf --force     # force reprocess one PDF
 
 Output modes:
-    (default)                    full output — all fields including raw_text, raw_table_text
-    --slim                       lean output for the importer — strips raw_text, raw_table_text,
-                                 and ocr_used. Use this when handing output to the importer.
+    (default)                    importer-oriented output — raw_rows, reconstructed_rows,
+                                 reconstruction metadata, cleaned_text. No rendered strings.
+    --full                       human-readable output — adds raw_text, raw_table_text,
+                                 cleaned_table_text, ocr_used. Use for debugging or inspection.
 
 Examples:
-    python src/pipeline.py manuals/EVB.pdf --slim          # single PDF, importer-ready output
-    python src/pipeline.py --slim                          # all PDFs, importer-ready output
-    python src/pipeline.py manuals/EVB.pdf --force --slim  # reprocess + importer-ready output
+    python src/pipeline.py manuals/EVB.pdf                 # single PDF, importer-ready output
+    python src/pipeline.py                                  # all PDFs, importer-ready output
+    python src/pipeline.py manuals/EVB.pdf --force         # reprocess + importer-ready output
+    python src/pipeline.py manuals/EVB.pdf --full          # single PDF, human-readable output
 """
 
 import argparse
@@ -36,13 +38,26 @@ from pdf_profile import profile_pdf
 
 def _apply_slim(result: dict) -> dict:
     """
-    Strip raw/debug fields from the extraction result.
-    Called when --slim is passed. Modifies a copy so the original is unchanged.
+    Default output mode — importer-oriented, machine-readable.
 
-    Removed fields:
-      sections[].raw_text       — noisy sidebar/footer spillover, not useful to importer
-      tables[].raw_table_text   — redundant: raw_rows is the source of truth
-      tables[].extraction.ocr_used — always False for digital PDFs
+    Strips human-readable helper fields that are derivable from source-of-truth fields.
+    The importer should use raw_rows (and reconstructed_rows when present) directly —
+    not rendered strings.
+
+    Pass --full to include all fields for human inspection or debugging.
+
+    Removed (rendered/helper fields — not needed by importer):
+      sections[].raw_text            — raw uncleaned zone text
+      tables[].raw_table_text        — rendered string of raw_rows
+      tables[].cleaned_table_text    — pipe-formatted cleaned view
+      tables[].extraction.ocr_used   — always False for digital PDFs
+
+    Kept (importer needs all of these):
+      sections[].cleaned_text        — noise-filtered section text
+      tables[].raw_rows              — source of truth: true extraction output
+      tables[].reconstructed_rows    — carry-forward filled rows (if present)
+      tables[].reconstruction        — metadata: what was inferred and why (if present)
+      tables[].extraction            — quality flags, confidence, header hints
     """
     import copy
     result = copy.deepcopy(result)
@@ -51,6 +66,7 @@ def _apply_slim(result: dict) -> dict:
             section.pop("raw_text", None)
         for table in record.get("tables", []):
             table.pop("raw_table_text", None)
+            table.pop("cleaned_table_text", None)
             table.get("extraction", {}).pop("ocr_used", None)
     return result
 
@@ -60,7 +76,7 @@ def main():
     parser = argparse.ArgumentParser(description="EV PDF Codes Adapter — extract DTC records from workshop manual PDFs")
     parser.add_argument("pdf", nargs="?", type=Path, help="Path to a single PDF to process. If omitted, all PDFs in manuals/ are processed.")
     parser.add_argument("--force", action="store_true", help="Reprocess and overwrite existing output.")
-    parser.add_argument("--slim", action="store_true", help="Strip raw/debug fields from output (raw_text, raw_table_text, ocr_used). Use this for importer output.")
+    parser.add_argument("--full", action="store_true", help="Include human-readable helper fields (raw_text, raw_table_text, cleaned_table_text, ocr_used). Default output is importer-oriented.")
     args = parser.parse_args()
 
     # ── Resolve PDF list ─────────────────────────────────────────────────
@@ -195,7 +211,7 @@ def main():
             # and .json is never created — so the next run will reprocess correctly.
             tmp_path = out_path.with_suffix(".json.tmp")   # e.g. data/EVB/EVB.json.tmp
 
-            output = _apply_slim(result) if args.slim else result
+            output = result if args.full else _apply_slim(result)
             with open(tmp_path, 'w', encoding="utf-8") as f:
                 json.dump(output, f, indent=2, ensure_ascii=False)
 
