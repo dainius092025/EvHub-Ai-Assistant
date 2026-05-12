@@ -14,6 +14,31 @@ _PAGE_REF_RE = re.compile(r'\b([A-Z]{2,4}-\d+)\b')
 _SIDEBAR_VAL_RE = re.compile(r'^[A-Z]{1,4}$')
 
 
+def _is_image_box_table(rows: list[list]) -> bool:
+    """
+    Return True when a table is a wiring-diagram image caption box misdetected
+    as a table by PyMuPDF.
+
+    These tables contain no real data — every cell is either empty, a lone '.',
+    or an image caption ID (matching IMAGE_ID_RE).  At least one cell must be
+    an image ID for the test to fire (prevents matching a genuinely empty table).
+
+    The corresponding image is already captured in images[] with the correct
+    caption, so discarding the table loses nothing.
+    """
+    has_image_id = False
+    for row in rows:
+        for cell in row:
+            val = str(cell).strip() if cell is not None else ''
+            if val == '' or val == '.':
+                continue
+            if IMAGE_ID_RE.match(val):
+                has_image_id = True
+            else:
+                return False   # real content found — not an image box
+    return has_image_id
+
+
 def read_page_ref(page: fitz.Page) -> str | None:
     """
     Extract the printed page label from the page footer (e.g. 'EVB-88').
@@ -642,6 +667,13 @@ def extract_tables_from_rect(page: fitz.Page, rect: fitz.Rect) -> list:
             confidence = "medium"
         else:
             confidence = "high"
+
+        # ── Image-box filter ──────────────────────────────────────────────────
+        # PyMuPDF sometimes detects wiring-diagram caption boxes as tables.
+        # These contain only empty cells, dots, and an image caption ID.
+        # The image is already captured in images[] — discard the false table.
+        if _is_image_box_table(clean_rows):
+            continue
 
         result.append({
             "rows":         clean_rows,   # raw: internal newlines preserved
