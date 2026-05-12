@@ -1,6 +1,6 @@
 # Codebase Map — ev-pdf-codes-adapter
 
-High-level overview of every source file in `src/`.
+High-level overview of every source file in `src/` and `scripts/`.
 Each entry links to the per-file summary in `docs/files/`.
 Updated after each file is reviewed or refactored.
 
@@ -36,14 +36,11 @@ Updated after each file is reviewed or refactored.
 
 ---
 
-## Utility / debug scripts
+## Debug scripts (`scripts/`)
 
 | File | Summary | Doc |
 |---|---|---|
-| `debug_table.py` | Manual debug tool: renders a single PDF page to the terminal — tables, drawn lines, sidebar zone. Not part of the production pipeline. | [debug_table.md](files/debug_table.md) |
-| `diag.py` | One-off noise analysis script — finds lines appearing on >50% of pages. References old schema; not compatible with current output. | [diag.md](files/diag.md) |
-| `docling_enricher.py` | Experimental Docling-based enrichment. Crashed on EVB.pdf (RapidOCR / std::bad_alloc). Not used in production. | [docling_enricher.md](files/docling_enricher.md) |
-| `script_for_meta.py` | One-off script: dumps raw PDF metadata to JSON. Hardcoded to PWO.pdf. | [script_for_meta.md](files/script_for_meta.md) |
+| `scripts/debug_table.py` | Manual debug tool: renders a single PDF page to the terminal — tables, drawn lines, sidebar zone. Not part of the production pipeline. | [debug_table.md](files/debug_table.md) |
 
 ---
 
