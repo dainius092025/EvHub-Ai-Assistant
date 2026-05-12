@@ -18,7 +18,7 @@ Updated after each file is reviewed or refactored.
 
 | File | Summary | Doc |
 |---|---|---|
-| `extractor.py` | Orchestrates DTC record extraction for a single PDF. Segments pages by DTC codes, calls `extract_content`, assembles the final JSON record structure including tables, sections, images, and table_groups. | — |
+| `extractor.py` | Orchestrates DTC record extraction for a single PDF. Segments pages by DTC codes, calls `extract_content`, assembles the final JSON record structure including tables, sections, images, and table_groups. | [extractor.md](files/extractor.md) |
 | `content_extractor.py` | Core PDF text and table extraction engine. Page loop, section state machine, table extraction with multi-pass repair and quality flags, image saving, unknown-heading detection. | [content_extractor.md](files/content_extractor.md) |
 
 ---
