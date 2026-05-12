@@ -10,7 +10,7 @@ Updated after each file is reviewed or refactored.
 
 | File | Summary |
 |---|---|
-| `pipeline.py` | CLI entry point. Scans `manuals/` for PDFs, calls `extract_records`, writes JSON output. Default output is importer-oriented (slim); `--full` adds human-readable helper fields. |
+| `pipeline.py` | CLI entry point. Scans `manuals/` for PDFs, calls `extract_records`, writes JSON output. Default output is importer-oriented (slim); `--full` adds human-readable helper fields. | [pipeline.md](files/pipeline.md) |
 
 ---
 
