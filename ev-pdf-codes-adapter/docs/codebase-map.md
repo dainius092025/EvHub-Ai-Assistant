@@ -28,7 +28,7 @@ Updated after each file is reviewed or refactored.
 | File | Summary | Doc |
 |---|---|---|
 | `text_parser.py` | `KNOWN_HEADINGS` registry, `HEADING_LOOKUP` dict, `normalize_heading()`, `is_noise()`. Controls which section headings are recognised and which lines are discarded as page noise. | [text_parser.md](files/text_parser.md) |
-| `patterns.py` | Compiled regex constants shared across the pipeline: `INFOID_RE`, `SIDEBAR_RE`, `IMAGE_ID_RE`. | — |
+| `patterns.py` | Compiled regex constants shared across the pipeline: `CODE_RE`, `REF_RE`, `SIDEBAR_RE`, `INFOID_RE`, `IMAGE_ID_RE`. | [patterns.md](files/patterns.md) |
 | `type_detector.py` | Detects `TYPE N` manual variant boundaries in a PDF. Produces a `{pdf_page: "TYPE N"}` map used by `extractor.py` to split multi-type records. | — |
 | `pdf_profile.py` | Profiles a PDF before extraction: detects scanned vs digital, counts pages, samples link density. Called by `pipeline.py` to skip scanned PDFs early. | — |
 | `vehicle_info.py` | Extracts vehicle metadata (make, model, year) from PDF document properties or cover page text. | — |
