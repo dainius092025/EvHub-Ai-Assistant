@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "schema_type": "shared_document_profile",
+  "document_id": "sha256_of_pdf_bytes_here",
+  "source_file": "EVB.pdf",
+
+  "metadata": {
+    "title": null,
+    "author": null,
+    "subject": null,
+    "keywords": null,
+    "creator": null,
+    "producer": null,
+    "format": null,
+    "creation_date": null,
+    "modification_date": null,
+    "encryption": null
+  },
+
+  "pdf_profile": {
+    "pdf_type": "digital",
+    "is_digital": true,
+    "needs_ocr": false,
+    "has_links": true,
+    "has_internal_links": true,
+    "link_count_sample": null
+  },
+
+  "vehicle": {
+    "year": null,
+    "make": null,
+    "model": null,
+    "variant": null,
+    "revision_date": null,
+    "region": null,
+    "is_ev": null,
+    "source": {
+      "method": null,
+      "pdf_page": null,
+      "page_ref": null,
+      "make_from_lookup": null,
+      "confidence": null
+    }
+  },
+
+  "section": {
+    "code": null,
+    "name": null,
+    "manual_type": null,
+    "page_count": null,
+    "page_ref_pattern": null,
+    "page_ref_location": null
+  },
+
+  "processing": {
+    "adapter_name": null,
+    "extraction_status": null,
+    "extraction_completed": null,
+    "extracted_at": null,
+    "errors": []
+  }
+}
