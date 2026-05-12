@@ -1,62 +1,179 @@
 {
-  "schema_version": "1.0",
-  "schema_type": "shared_document_profile",
-  "document_id": "sha256_of_pdf_bytes_here",
-  "source_file": "EVB.pdf",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "shared_profile",
+  "description": "Shared document envelope produced by every adapter. Both adapters must produce these fields identically for the same PDF. Adapter-specific content (records[], sections[]) follows after this envelope in each adapter's output.",
 
-  "metadata": {
-    "title": null,
-    "author": null,
-    "subject": null,
-    "keywords": null,
-    "creator": null,
-    "producer": null,
-    "format": null,
-    "creation_date": null,
-    "modification_date": null,
-    "encryption": null
-  },
+  "type": "object",
+  "required": [
+    "schema_version",
+    "schema_type",
+    "document_id",
+    "source_file",
+    "metadata",
+    "pdf_profile",
+    "vehicle",
+    "section",
+    "processing"
+  ],
 
-  "pdf_profile": {
-    "pdf_type": "digital",
-    "is_digital": true,
-    "needs_ocr": false,
-    "has_links": true,
-    "has_internal_links": true,
-    "link_count_sample": null
-  },
+  "properties": {
 
-  "vehicle": {
-    "year": null,
-    "make": null,
-    "model": null,
-    "variant": null,
-    "revision_date": null,
-    "region": null,
-    "is_ev": null,
-    "source": {
-      "method": null,
-      "pdf_page": null,
-      "page_ref": null,
-      "make_from_lookup": null,
-      "confidence": null
+    "schema_version": {
+      "type": "string",
+      "description": "Schema version. Importer rejects files it cannot read.",
+      "const": "1.0"
+    },
+
+    "schema_type": {
+      "type": "string",
+      "description": "Identifies this as the shared document envelope.",
+      "const": "shared_document_profile"
+    },
+
+    "document_id": {
+      "type": "string",
+      "description": "SHA-256 hex of raw PDF bytes. Computed by shared/document_id.py. Stable across re-runs. Used by importer to deduplicate and to join records from different adapters that processed the same PDF.",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+
+    "source_file": {
+      "type": "string",
+      "description": "Filename of the source PDF."
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Raw PDF metadata baked in by the publisher.",
+      "properties": {
+        "title":             { "type": ["string", "null"] },
+        "author":            { "type": ["string", "null"] },
+        "subject":           { "type": ["string", "null"] },
+        "keywords":          { "type": ["string", "null"] },
+        "creator":           { "type": ["string", "null"] },
+        "producer":          { "type": ["string", "null"] },
+        "format":            { "type": ["string", "null"] },
+        "creation_date":     { "type": ["string", "null"] },
+        "modification_date": { "type": ["string", "null"] },
+        "encryption":        { "type": ["string", "null"] }
+      }
+    },
+
+    "pdf_profile": {
+      "type": "object",
+      "required": ["pdf_type", "is_digital", "needs_ocr", "has_links", "has_internal_links"],
+      "properties": {
+        "pdf_type": {
+          "type": "string",
+          "description": "Importer gates all downstream processing on this. scanned = no text layer = write stub only.",
+          "enum": ["digital", "scanned"]
+        },
+        "is_digital": {
+          "type": "boolean",
+          "description": "True when the PDF has a native text layer. False means fitz returns empty text and extraction cannot run."
+        },
+        "needs_ocr": {
+          "type": "boolean",
+          "description": "Always false for digital PDFs today. When OCR pipeline is built, importer uses this to route scanned PDFs to a different path."
+        },
+        "has_links": {
+          "type": "boolean",
+          "description": "Whether the PDF contains any hyperlinks."
+        },
+        "has_internal_links": {
+          "type": "boolean",
+          "description": "Whether the PDF has internal navigation links. DTC adapter uses these to match codes to pages. If false, adapter falls back to Y-position matching (lower confidence)."
+        },
+        "link_count_sample": {
+          "type": ["integer", "null"],
+          "description": "Sampled internal link count. Indicates link density. Null if not computed."
+        }
+      }
+    },
+
+    "vehicle": {
+      "type": "object",
+      "description": "Vehicle identity. Every record in the database is tagged with these.",
+      "properties": {
+        "year":          { "type": ["string", "null"] },
+        "make":          { "type": ["string", "null"] },
+        "model":         { "type": ["string", "null"] },
+        "variant":       { "type": ["string", "null"] },
+        "revision_date": { "type": ["string", "null"] },
+        "region":        { "type": ["string", "null"] },
+        "is_ev": {
+          "type": ["boolean", "null"],
+          "description": "Quick EV filter for importer and semantic search. Null when not determined."
+        },
+        "source": {
+          "type": "object",
+          "description": "How and where vehicle info was found. Lets importer decide whether to trust the value or flag for review.",
+          "properties": {
+            "method": {
+              "type": ["string", "null"],
+              "enum": ["footer", "foreword", "metadata", "lookup", null],
+              "description": "Detection path used."
+            },
+            "pdf_page":        { "type": ["integer", "null"] },
+            "page_ref":        { "type": ["string",  "null"] },
+            "make_from_lookup": {
+              "type": ["boolean", "null"],
+              "description": "True when make was resolved via vehicle_lookup.json rather than extracted from the PDF directly."
+            },
+            "confidence": {
+              "type": ["number", "null"],
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Extraction confidence 0.0–1.0."
+            }
+          }
+        }
+      }
+    },
+
+    "section": {
+      "type": "object",
+      "description": "Namespaces all records in this file. code is the section identifier (EVB, TM, etc.).",
+      "properties": {
+        "code":             { "type": ["string", "null"] },
+        "name":             { "type": ["string", "null"] },
+        "manual_type":      { "type": ["string", "null"] },
+        "page_count":       { "type": ["integer", "null"] },
+        "page_ref_pattern": { "type": ["string", "null"] },
+        "page_ref_location": {
+          "type": ["string", "null"],
+          "enum": ["footer", "header", "sequential_fallback", null]
+        }
+      }
+    },
+
+    "processing": {
+      "type": "object",
+      "required": ["adapter_name", "extraction_status", "extraction_completed", "errors"],
+      "properties": {
+        "adapter_name": {
+          "type": "string",
+          "description": "Which adapter wrote this file. Importer routes differently per adapter."
+        },
+        "extraction_status": {
+          "type": "string",
+          "description": "Machine-readable outcome. Importer acts on this field, never on errors[] strings.",
+          "enum": ["success", "no_content", "scanned", "error"]
+        },
+        "extraction_completed": {
+          "type": "boolean",
+          "description": "Convenience boolean. True only when extraction_status is success."
+        },
+        "extracted_at": {
+          "type": ["string", "null"],
+          "description": "ISO 8601 timestamp of when extraction finished."
+        },
+        "errors": {
+          "type": "array",
+          "description": "Non-fatal issues encountered. Always an array — empty when no errors.",
+          "items": { "type": "string" }
+        }
+      }
     }
-  },
 
-  "section": {
-    "code": null,
-    "name": null,
-    "manual_type": null,
-    "page_count": null,
-    "page_ref_pattern": null,
-    "page_ref_location": null
-  },
-
-  "processing": {
-    "adapter_name": null,
-    "extraction_status": null,
-    "extraction_completed": null,
-    "extracted_at": null,
-    "errors": []
   }
 }
