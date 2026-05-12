@@ -8,8 +8,8 @@ Updated after each file is reviewed or refactored.
 
 ## Pipeline entry point
 
-| File | Summary |
-|---|---|
+| File | Summary | Doc |
+|---|---|---|
 | `pipeline.py` | CLI entry point. Scans `manuals/` for PDFs, calls `extract_records`, writes JSON output. Default output is importer-oriented (slim); `--full` adds human-readable helper fields. | [pipeline.md](files/pipeline.md) |
 
 ---
@@ -29,21 +29,21 @@ Updated after each file is reviewed or refactored.
 |---|---|---|
 | `text_parser.py` | `KNOWN_HEADINGS` registry, `HEADING_LOOKUP` dict, `normalize_heading()`, `is_noise()`. Controls which section headings are recognised and which lines are discarded as page noise. | [text_parser.md](files/text_parser.md) |
 | `patterns.py` | Compiled regex constants shared across the pipeline: `CODE_RE`, `REF_RE`, `SIDEBAR_RE`, `INFOID_RE`, `IMAGE_ID_RE`. | [patterns.md](files/patterns.md) |
-| `type_detector.py` | Detects `TYPE N` manual variant boundaries in a PDF. Produces a `{pdf_page: "TYPE N"}` map used by `extractor.py` to split multi-type records. | — |
-| `pdf_profile.py` | Profiles a PDF before extraction: detects scanned vs digital, counts pages, samples link density. Called by `pipeline.py` to skip scanned PDFs early. | — |
-| `vehicle_info.py` | Extracts vehicle metadata (make, model, year) from PDF document properties or cover page text. | — |
+| `type_detector.py` | Detects `TYPE N` manual variant boundaries in a PDF. Produces a `{pdf_page: "TYPE N"}` map used by `extractor.py` to split multi-type records. | [type_detector.md](files/type_detector.md) |
+| `pdf_profile.py` | Profiles a PDF before extraction: detects scanned vs digital, counts pages, samples link density. Called by `pipeline.py` to skip scanned PDFs early. | [pdf_profile.md](files/pdf_profile.md) |
+| `vehicle_info.py` | Extracts vehicle metadata (make, model, year, variant, revision date) from PDF footer, foreword, document properties, or lookup file. | [vehicle_info.md](files/vehicle_info.md) |
+| `index_builder.py` | Scans PDF for DTC index tables, extracts codes → pages + titles map. Called by `extractor.py` as Step 1. | [index_builder.md](files/index_builder.md) |
 
 ---
 
 ## Utility / debug scripts
 
-| File | Summary |
-|---|---|
-| `debug_table.py` | Manual debug tool: renders a single table from a PDF page to the terminal. Not part of the production pipeline. |
-| `diag.py` | Diagnostic script for inspecting extraction output. Not part of the production pipeline. |
-| `index_builder.py` | Builds a search index from extracted JSON records. Run separately from the pipeline. |
-| `docling_enricher.py` | Experimental Docling-based enrichment. Crashed on EVB.pdf (RapidOCR / std::bad_alloc). Not used in production. |
-| `script_for_meta.py` | One-off script for metadata extraction. Not part of the production pipeline. |
+| File | Summary | Doc |
+|---|---|---|
+| `debug_table.py` | Manual debug tool: renders a single PDF page to the terminal — tables, drawn lines, sidebar zone. Not part of the production pipeline. | [debug_table.md](files/debug_table.md) |
+| `diag.py` | One-off noise analysis script — finds lines appearing on >50% of pages. References old schema; not compatible with current output. | [diag.md](files/diag.md) |
+| `docling_enricher.py` | Experimental Docling-based enrichment. Crashed on EVB.pdf (RapidOCR / std::bad_alloc). Not used in production. | [docling_enricher.md](files/docling_enricher.md) |
+| `script_for_meta.py` | One-off script: dumps raw PDF metadata to JSON. Hardcoded to PWO.pdf. | [script_for_meta.md](files/script_for_meta.md) |
 
 ---
 
