@@ -6,6 +6,8 @@ import fitz
 from pathlib import Path
 from patterns import CODE_RE
 from patterns import REF_RE
+from patterns import DTC_INDEX_HEADINGS
+from content_extractor import read_page_ref
 
 
 @contextlib.contextmanager
@@ -19,11 +21,31 @@ def _quiet():
         sys.stdout = old
 
 
+def _build_page_ref_map(pdf) -> dict:
+    """
+    Scan every page footer and build a page_ref → pdf_page map.
+    e.g. {"EVB-181": 288, "BRC-62": 95}  (pdf_page is 1-based)
+
+    Used as a fallback when internal hyperlinks are absent or incomplete.
+    A footer page ref is always accurate — it is printed on the page itself,
+    whereas a hyperlink target can be wrong if the PDF was assembled incorrectly.
+    """
+    ref_map = {}
+    for i in range(len(pdf)):
+        ref = read_page_ref(pdf[i])
+        if ref:
+            ref_map[ref] = i + 1   # 1-based to match the convention used elsewhere
+    return ref_map
+
+
 def find_dtc_heading_y(page) -> float:
     """
-    Look for a standalone 'DTC Index' heading on a page.
+    Look for a DTC index heading on a page.
     Returns the bottom y-coordinate of the heading block, or None if not found.
-    The heading block always has 'DTC Index' as first line AND contains 'INFOID:'
+
+    Matches any heading in DTC_INDEX_HEADINGS (multi-manufacturer).
+    INFOID: is used as an optional secondary signal for Nissan manuals but is
+    NOT required — other OEMs don't use it.
     """
     blocks = page.get_text("blocks")
 
@@ -31,7 +53,7 @@ def find_dtc_heading_y(page) -> float:
         block_text = block[4].strip()
         first_line = block_text.split("\n")[0].strip().lower()
 
-        if first_line == "dtc index" and "infoid:" in block_text.lower():
+        if first_line in DTC_INDEX_HEADINGS:
             return block[3]
 
     return None
@@ -59,7 +81,21 @@ def find_index_table(page, heading_y: float):
         if rows and any("reference" in str(cell).lower() for cell in (rows[0] or [])):
             return table
 
-    return candidates[0]
+    # ── Rejection check ───────────────────────────────────────────────────────
+    # No 'Reference' column found in any candidate table.
+    # Before falling back, check whether the first table's header contains words
+    # that only appear in description/action tables — never in a real DTC index.
+    # This prevents self-diagnosis result pages (e.g. AV-159) from being mistaken
+    # for a DTC index when they share a heading like "Self-diagnosis results".
+    first = candidates[0]
+    rows  = first.extract()
+    if rows and rows[0]:
+        header_text     = " ".join(str(c).lower() for c in rows[0] if c)
+        rejection_words = {"description", "action", "malfunction", "factor"}
+        if any(word in header_text for word in rejection_words):
+            return None   # not a DTC index table — reject
+
+    return candidates[0]  # header may be garbled/missing but not disqualified
 
 
 def detect_format(header_row: list) -> str:
@@ -73,6 +109,135 @@ def detect_format(header_row: list) -> str:
             return "A"
 
     return "B"
+
+
+def _ref_col_idx(header_row: list) -> int:
+    """Return the column index of the Reference column. Falls back to last column."""
+    for i, cell in enumerate(header_row):
+        if cell and "reference" in str(cell).lower():
+            return i
+    return len(header_row) - 1
+
+
+def _read_format_a_table(page, table, links: list, page_ref_map: dict) -> dict:
+    """
+    Extract DTC code → {page, page_ref, title} directly from a Format A index table.
+
+    Reads table rows instead of scanning the word layer.
+    Handles merged reference cells via carry-forward: when the reference cell is
+    empty the code belongs to the same group as the previous non-empty reference.
+
+    Link matching: links are filtered to the reference column x zone and sorted by Y.
+    Each non-empty reference cell starts a new group and consumes the next link in
+    order — no Y-proximity tolerance needed.
+
+    Fallback: when no hyperlink is available for a reference group, the reference
+    text (e.g. "BRC-62") is looked up in page_ref_map (built from page footers).
+    This makes the index resilient to PDFs with absent or broken internal links.
+
+    Format A tables have columns: DTC | Display Item | Reference
+    """
+    rows = table.extract()
+    if not rows or len(rows) < 2:
+        return {}
+
+    header  = rows[0] or []
+    ref_col = _ref_col_idx(header)
+
+    # ── Filter links to the reference column x zone ───────────────────────────
+    # Reference column occupies the rightmost portion of the table.
+    # Threshold at 60% across the table width is safely inside the ref column
+    # for every Nissan-style index we have seen (actual boundary ≈ 66%).
+    t_x0 = table.bbox[0]
+    t_x1 = table.bbox[2]
+    ref_x_threshold = t_x0 + (t_x1 - t_x0) * 0.60
+
+    ref_links = sorted(
+        [l for l in links if fitz.Rect(l["from"]).x0 >= ref_x_threshold],
+        key=lambda l: fitz.Rect(l["from"]).y0,
+    )
+
+    results   = {}
+    last_page = None
+    last_ref  = None
+    link_idx  = 0
+
+    for row in rows[1:]:   # skip header
+        if not row:
+            continue
+
+        # ── Code ─────────────────────────────────────────────────────────────
+        raw   = str(row[0]).strip() if row[0] is not None else ""
+        clean = re.sub(r"[^A-Z0-9]", "", raw.upper())
+        if not CODE_RE.match(clean):
+            continue
+        code = clean
+
+        # ── Title ─────────────────────────────────────────────────────────────
+        title = str(row[1]).strip() if len(row) > 1 and row[1] is not None else ""
+
+        # ── Reference cell ────────────────────────────────────────────────────
+        ref_raw = ""
+        if ref_col >= 0 and len(row) > ref_col and row[ref_col] is not None:
+            ref_raw = str(row[ref_col]).strip()
+
+        if ref_raw:
+            # New reference group — advance to the next link in the ref column
+            m = REF_RE.search(ref_raw)
+            last_ref = m.group(0) if m else None
+
+            if link_idx < len(ref_links):
+                link_page = ref_links[link_idx]["page"] + 1  # page the hyperlink actually goes to
+                link_idx += 1
+
+                # Cross-check: does the hyperlink destination match the reference text?
+                # If the footer on the destination page says something different to last_ref,
+                # the hyperlink is broken — use the footer scan map to find the correct page.
+                if last_ref and page_ref_map:
+                    correct_page = page_ref_map.get(last_ref)
+                    if correct_page and correct_page != link_page:
+                        print(f"  [WARN index-link] broken hyperlink for [{code}]"
+                              f" — link goes to page {link_page} but '{last_ref}'"
+                              f" footer is on page {correct_page} — using footer scan")
+                        last_page = correct_page
+                    else:
+                        last_page = link_page  # hyperlink verified or footer map has no entry
+                else:
+                    last_page = link_page  # no ref text or no map — trust the hyperlink
+
+            elif last_ref and page_ref_map:
+                # No hyperlink — resolve via footer scan fallback
+                last_page = page_ref_map.get(last_ref)
+                if last_page:
+                    print(f"  [INFO index-match] no link for [{code}]"
+                          f" — resolved '{last_ref}' → page {last_page} via footer scan")
+                else:
+                    print(f"  [WARN index-match] no link and no footer match for [{code}]"
+                          f" — ref '{last_ref}' not found in any page footer")
+                    last_page = None
+            else:
+                print(f"  [WARN index-match] no link for ref group [{code}]"
+                      f" — ref text '{ref_raw}' has no hyperlink")
+                last_page = None
+
+        # Codes with empty reference inherit the current group's page (carry-forward)
+        if last_page is not None:
+            results[code] = {
+                "page":     last_page,
+                "title":    title,
+                "page_ref": last_ref,
+            }
+
+    return results
+
+
+# ── Format B fallback: Y-based link matching ─────────────────────────────────
+# Used for index tables with no DTC/Reference columns (codes embedded in brackets).
+# Also used for multi-page index continuation pages.
+
+_ROW_Y_TOL  = 4    # pt — codes within this Y band share one visual row
+_LINK_Y_TOL = 20   # pt — link midY must be within this of a code row's Y
+_BLOCK_GAP  = 40   # pt — Y gap larger than this starts a new block
 
 
 def extract_codes_with_y(page, fmt: str, min_y: float = 0.0) -> list:
@@ -98,16 +263,13 @@ def extract_codes_with_y(page, fmt: str, min_y: float = 0.0) -> list:
         if fmt == "A":
             clean = re.sub(r"[^A-Z0-9]", "", word_text.upper())
             if CODE_RE.match(clean):
-                # collect all words on the same y-level (within 3px) that come after this word
-                # those words form the title — e.g. "HV SYSTEM INTERLOCK ERROR"
                 title_words = []
                 for w in words:
-                    if abs(w[1] - y_pos) >= 3:      # different y-level — skip
+                    if abs(w[1] - y_pos) >= 3:
                         continue
-                    if w[0] <= word[2]:             # to the left of or at the code — skip
+                    if w[0] <= word[2]:
                         continue
                     cell = w[4].strip()
-                    # stop at × (warning flag), pure digits (trip count), page refs, or another code
                     if re.match(r"^[×—x]$", cell, re.IGNORECASE):
                         break
                     if re.match(r"^\d+$", cell):
@@ -124,50 +286,35 @@ def extract_codes_with_y(page, fmt: str, min_y: float = 0.0) -> list:
         else:
             m = re.match(r"\[([PBCU][0-9A-F]{4})\]", word_text, re.IGNORECASE)
             if m:
-                results.append((m.group(1).upper(), y_pos, ""))   # Format B has no title column
+                results.append((m.group(1).upper(), y_pos, ""))
 
     return results
 
 
-# Tuning constants for row/block-aware link matching
-_ROW_Y_TOL  = 4    # pt — codes within this Y band are treated as one visual row
-_LINK_Y_TOL = 20   # pt — a link's midY must be within this of a row's Y to match
-_BLOCK_GAP  = 40   # pt — Y gap larger than this between rows starts a new block
-
-
-def match_codes_to_links(codes_with_y: list, links: list) -> dict:
+def match_codes_to_links(codes_with_y: list, links: list, page_ref_map: dict | None = None) -> dict:
     """
     Match each DTC code row to its page-ref hyperlink using row/block-aware matching.
+    Used for Format B indexes and continuation pages.
 
-    The old implementation used an unconditional nearest-link search, which caused
-    codes on different rows to incorrectly share a single link when only one link
-    happened to be present on the index page.
-
-    Algorithm
-    ---------
-    1. Sort codes by Y and group into rows (_ROW_Y_TOL): codes within 4 pt of each
-       other in Y share the same visual row.  DTC ranges (P3031-P303C) that land on
-       the same row naturally share one link this way.
-    2. Group consecutive rows into blocks (_BLOCK_GAP): a Y gap larger than 40 pt
-       between two adjacent rows signals a section break or heading, starting a new
-       block.  Links from one block are never used to match codes in another block.
-    3. For each block, collect candidate links whose midY falls within the block's
-       Y span (padded by _LINK_Y_TOL).
-    4. For each row, pick the nearest candidate link whose midY is within
-       _LINK_Y_TOL of the row's Y.  If none qualifies, skip the row and emit a
-       warning — better to drop the code than to assign a wrong page.
-    5. All codes in the same row receive the same match result.
+    page_ref_map is accepted for API consistency but is not used here — Format B
+    and continuation pages embed no reference text in their rows, so there is
+    nothing to look up in the map without links.
 
     Returns: { code: {"page": int, "title": str, "page_ref": str|None}, ... }
     """
-    if not links or not codes_with_y:
+    if not codes_with_y:
+        return {}
+    if not links:
+        codes_str = ", ".join(c[0] for c in codes_with_y[:5])
+        more = f" (+{len(codes_with_y) - 5} more)" if len(codes_with_y) > 5 else ""
+        print(f"  [WARN index-match] no links on this page — cannot resolve"
+              f" {len(codes_with_y)} codes ({codes_str}{more})")
         return {}
 
     def link_midy(lnk: dict) -> float:
         r = lnk["from"]
         return (r.y0 + r.y1) / 2
 
-    # ── Step 1: group codes into rows ─────────────────────────────────────────
     rows: list[dict] = []
     for code, y, title in sorted(codes_with_y, key=lambda x: x[1]):
         if rows and abs(y - rows[-1]["y"]) <= _ROW_Y_TOL:
@@ -175,19 +322,17 @@ def match_codes_to_links(codes_with_y: list, links: list) -> dict:
         else:
             rows.append({"y": y, "items": [(code, y, title)]})
 
-    # ── Step 2: group rows into blocks ────────────────────────────────────────
     blocks: list[list[dict]] = [[rows[0]]]
     for row in rows[1:]:
         if row["y"] - blocks[-1][-1]["y"] > _BLOCK_GAP:
             blocks.append([])
         blocks[-1].append(row)
 
-    # ── Steps 3-4: match rows to links ────────────────────────────────────────
     results: dict = {}
 
     for block in blocks:
-        b_top    = block[0]["y"]  - _LINK_Y_TOL
-        b_bottom = block[-1]["y"] + _LINK_Y_TOL
+        b_top       = block[0]["y"] - _LINK_Y_TOL
+        b_bottom    = block[-1]["y"] + _LINK_Y_TOL
         block_links = [lnk for lnk in links
                        if b_top <= link_midy(lnk) <= b_bottom]
 
@@ -217,24 +362,46 @@ def match_codes_to_links(codes_with_y: list, links: list) -> dict:
     return results
 
 
-
 def build_index(pdf_path: Path) -> dict:
     """
     Scan all pages for DTC index tables.
-    Returns: { "U1000": [181], "C1101": [1560, 1595], ... }
+    Returns: { "U1000": {"pages": [181], "page_refs": ["EVB-181"], "title": "..."}, ... }
     One code can map to multiple pages.
+
+    Format A index pages (DTC | Display Item | Reference columns) use table-based
+    extraction: rows are read directly, merged reference cells are handled via
+    carry-forward, and links are matched to reference groups in Y order.
+
+    Format B pages and multi-page continuation pages fall back to Y-based matching.
     """
     with fitz.open(str(pdf_path)) as pdf:
-        results = {}
+        results   = {}
         seen_pages = set()
 
         print(f"Step 1 — scanning {len(pdf)} pages for DTC index...")
+
+        # ── Footer scan map ───────────────────────────────────────────────────
+        # Built once — used as fallback when hyperlinks are absent or incomplete.
+        # Scanning all footers adds ~0.1s on a 1500-page PDF (text clip only).
+        page_ref_map = _build_page_ref_map(pdf)
+        if not page_ref_map:
+            print("  [WARN] no page refs found in footers — footer scan fallback unavailable")
+
+        # Check overall link availability for an early warning (short-circuits on first hit)
+        has_any_links = False
+        for _page in pdf:
+            if any(l["kind"] == 4 for l in _page.get_links()):
+                has_any_links = True
+                break
+        if not has_any_links:
+            print("  [WARN] PDF has no internal hyperlinks — index will rely entirely on footer scan")
 
         page_num = 0
         while page_num < len(pdf):
             page = pdf[page_num]
 
-            if "dtc index" not in page.get_text("text").lower():
+            page_text_lower = page.get_text("text").lower()
+            if not any(h in page_text_lower for h in DTC_INDEX_HEADINGS):
                 page_num += 1
                 continue
 
@@ -269,10 +436,7 @@ def build_index(pdf_path: Path) -> dict:
                 page_num += 1
                 continue
 
-            fmt = detect_format(rows[0])
-            # Top of the identified index table — words above this Y on the
-            # first index page belong to a carry-over Pattern A/B/C/D table
-            # and must be excluded from code extraction.
+            fmt           = detect_format(rows[0])
             index_table_y = table.bbox[1]
 
             current_num = table_page_num
@@ -285,33 +449,36 @@ def build_index(pdf_path: Path) -> dict:
                 if current_num > table_page_num:
                     if find_dtc_heading_y(current_page) is not None:
                         break
-
                     codes_check = extract_codes_with_y(current_page, fmt)
                     if not codes_check:
                         break
 
-                # For each internal link, extract the visible text (e.g. "EVB-94") from its bounding box.
-                # That text IS the printed page ref — same source, no word-scanning needed.
+                # Collect all kind=4 links with their visible ref text
                 links = []
                 for l in current_page.get_links():
                     if l["kind"] != 4:
                         continue
                     raw = current_page.get_text("text", clip=l["from"]).strip()
-                    m = REF_RE.search(raw)
+                    m   = REF_RE.search(raw)
                     l["ref_text"] = m.group(0) if m else None
                     links.append(l)
-                # On the first index page, restrict code scanning to below the
-                # identified table — prevents picking up carry-over codes above it.
-                min_y = index_table_y if current_num == table_page_num else 0.0
-                codes_with_y = extract_codes_with_y(current_page, fmt, min_y=min_y)
-                page_results = match_codes_to_links(codes_with_y, links)
+
+                if fmt == "A" and current_num == table_page_num:
+                    # ── Table-based extraction for Format A index page ────────
+                    # Reads rows directly — handles merged reference cells,
+                    # no Y-proximity matching needed.
+                    page_results = _read_format_a_table(current_page, table, links, page_ref_map)
+                else:
+                    # ── Y-based fallback for Format B and continuation pages ──
+                    min_y        = index_table_y if current_num == table_page_num else 0.0
+                    codes_with_y = extract_codes_with_y(current_page, fmt, min_y=min_y)
+                    page_results = match_codes_to_links(codes_with_y, links, page_ref_map)
 
                 for code, info in page_results.items():
                     if code not in results:
                         results[code] = {"pages": [], "page_refs": [], "title": info["title"]}
                     results[code]["pages"].append(info["page"])
-                    results[code]["page_refs"].append(info["page_ref"])  # parallel to pages, may be None
-
+                    results[code]["page_refs"].append(info["page_ref"])
 
                 seen_pages.add(current_num)
                 current_num += 1
