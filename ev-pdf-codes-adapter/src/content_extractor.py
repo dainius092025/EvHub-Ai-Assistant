@@ -129,9 +129,22 @@ _STRUCTURAL_HEADING_EXCLUDES = [
     re.compile(r'^[PBCU][0-9A-F]{4}\s+\S', re.IGNORECASE),
     # Multi-code comma titles: "P33D7, P33D9, P33DD TEMPERATURE SENSOR"
     re.compile(r'^[PBCU][0-9A-F]{4},', re.IGNORECASE),
-    # Lines that look like sentences (contain a space + end with period/comma)
-    # Filters safety text continuation lines like "Disconnect the high voltage."
+    # Lines that look like sentences (long lines ending with period/comma, any case)
+    # e.g. "Disconnect the high voltage circuit before working."
     re.compile(r'.{30,}[.,]$'),
+    # Short sentence instructions — bold numbered step body text, too short for the above.
+    # Contains lowercase (so it's a sentence, not an ALL-CAPS title) and ends with . or )
+    # e.g. "Stop the vehicle.", "Never depress brake pedal.", "3 minutes or more. (...)"
+    re.compile(r'.*[a-z].*[.)]$'),
+    # Cross-reference link text ending with " . — Nissan hyperlink format.
+    # e.g. 'EVC-114, "DTC Logic" .'  or truncated fragment  'DURE" .'
+    re.compile(r'"\s*\.\s*$'),
+    # Sub-procedure tool labels: "With CONSULT", "With CONSULT-III"
+    # Bold labels marking which tool path to follow inside a procedure step — not headings.
+    re.compile(r'^With\s+', re.IGNORECASE),
+    # DTC code immediately followed by period: "P31CA. P31CB QUICK CHARGE RELAY"
+    # Multi-code page titles that use a period separator instead of a space or comma.
+    re.compile(r'^[PBCU][0-9A-F]{4}\.', re.IGNORECASE),
     # Bracketed labels: "[TYPE 1]", "[AUTOMATIC AIR CONDITIONER]", "[TELEMATICS SYSTEM]"
     # These are variant/subsystem/applicability markers preserved in raw_text — not section headings.
     re.compile(r'^\[.*\]$'),
