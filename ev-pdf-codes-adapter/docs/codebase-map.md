@@ -4,6 +4,10 @@ High-level overview of every source file in `src/` and `scripts/`.
 Each entry links to the per-file summary in `docs/files/`.
 Updated after each file is reviewed or refactored.
 
+**Guides:**
+- [Adding a new manufacturer](adding-a-manufacturer.md) — checklist for onboarding a PDF from an untested make
+- [Known limitations](known-limitations.md) — source data constraints discovered during testing (not pipeline bugs)
+
 ---
 
 ## Pipeline entry point

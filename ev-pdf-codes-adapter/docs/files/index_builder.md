@@ -7,8 +7,9 @@ Called by `extractor.py` as Step 1 of the extraction pipeline.
 
 ## What this file does
 
-- Scans all pages looking for a heading that matches `DTC_INDEX_HEADINGS` (multi-manufacturer frozenset in `patterns.py`)
-- Builds a footer scan map (`page_ref → pdf_page`) once at startup for use as a fallback
+- Tries PDF bookmarks first to locate DTC index pages directly (fast path)
+- Falls back to scanning all pages for a heading matching `DTC_INDEX_HEADINGS` if no bookmarks found
+- Builds a footer scan map (`page_ref → pdf_page`) once at startup for use as a link fallback
 - Locates and validates the index table on the matching page (or the next page)
 - Extracts DTC codes, their titles, and their destination pages
 - Handles multi-page index tables by following consecutive pages
@@ -66,9 +67,10 @@ Format B rows embed no reference text, so there is nothing to look up without a 
 | Name | Purpose |
 |---|---|
 | `_quiet()` | Context manager: suppresses PyMuPDF's `"Consider pymupdf_layout"` advisory during `find_tables()` |
+| `_find_via_bookmarks(pdf)` | Reads the PDF outline tree (`pdf.get_toc()`). Returns a list of 1-based page numbers whose bookmark title matches a `DTC_INDEX_HEADINGS` entry. Returns `[]` if no bookmarks exist or none match. Indexes entry elements by position (not tuple unpacking) to handle variable-length entries across PyMuPDF versions. |
 | `_build_page_ref_map(pdf)` | Scans every page footer once at startup. Returns `{"EVB-88": 288, …}` (1-based). Used as fallback when hyperlinks are absent. |
 | `_ref_col_idx(header_row)` | Returns the column index of the Reference column. Falls back to last column. |
-| `_read_format_a_table(page, table, links, page_ref_map)` | Table-based extraction for Format A index pages. Reads rows directly, handles merged reference cells via carry-forward. Links filtered to the reference column x-zone (≥60% table width) and consumed in Y order. Falls back to footer scan map when no hyperlink is available for a reference group. |
+| `_read_format_a_table(page, table, links, page_ref_map)` | Table-based extraction for Format A index pages. Reads rows directly, handles merged reference cells via carry-forward. Links filtered to the reference column x-zone (≥60% table width) and consumed in Y order. After consuming a link, skips any following links with the same `nameddest` (or page as fallback) — they are sub-row duplicates within the same group. Falls back to footer scan map when no hyperlink is available for a reference group. |
 | `_ROW_Y_TOL = 4` | pt — codes within this Y band share the same visual row |
 | `_LINK_Y_TOL = 20` | pt — a link's midY must be within this of a row's Y to match |
 | `_BLOCK_GAP = 40` | pt — Y gap larger than this between rows starts a new block |

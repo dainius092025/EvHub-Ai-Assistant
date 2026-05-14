@@ -120,6 +120,8 @@ _STRUCTURAL_HEADING_EXCLUDES = [
     re.compile(r'^:'),
     # Lines that start with lowercase — continuation of a hyphenated word, not a heading
     re.compile(r'^[a-z]'),
+    # Bullet point lines — bold step instructions, never section headings
+    re.compile(r'^[•\-–—]'),
     # DTC code range titles printed at page tops: "P3031-P303C CELL CONTROLLER ASIC"
     re.compile(r'^[PBCU][0-9A-F]{4}[-–][PBCU][0-9A-F]{4}', re.IGNORECASE),
     # Single DTC code + any title text: "P30E4 DLC DIAGNOSIS PDM(...)", "P31A7 CAN ERROR INV/MC"
@@ -554,7 +556,7 @@ def extract_tables_from_rect(page: fitz.Page, rect: fitz.Rect) -> list:
                 # zone but whose x1 crosses the table edge is correctly included
                 # here; character-clip mode would truncate it to "LB".
                 all_words = page.get_text("words", clip=fitz.Rect(line_left, ry0, table.bbox[2], ry1))
-                outer = sorted([w for w in all_words if w[0] < table.bbox[0]], key=lambda w: w[0])
+                outer = sorted([w for w in all_words if w[0] < table.bbox[0]], key=lambda w: (w[1], w[0]))
                 col.append(" ".join(w[4] for w in outer))
             for r_idx, v in enumerate(col):
                 clean_rows[r_idx].insert(0, v)
@@ -566,7 +568,7 @@ def extract_tables_from_rect(page: fitz.Page, rect: fitz.Rect) -> list:
                 # Symmetric: select words whose x0 starts in the outer right
                 # zone (at or beyond the table's right edge).
                 all_words = page.get_text("words", clip=fitz.Rect(table.bbox[0], ry0, line_right, ry1))
-                outer = sorted([w for w in all_words if w[0] >= table.bbox[2]], key=lambda w: w[0])
+                outer = sorted([w for w in all_words if w[0] >= table.bbox[2]], key=lambda w: (w[1], w[0]))
                 col.append(" ".join(w[4] for w in outer))
             # Discard column if every non-empty value is a sidebar tab:
             # a single uppercase letter (A, B…) or short section code (EVB).
