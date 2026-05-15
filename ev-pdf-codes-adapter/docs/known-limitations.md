@@ -56,3 +56,32 @@ With the fallback, they are resolved correctly via the footer scan map
 **Status:** Handled. Footer scan fallback resolves them correctly.
 
 ---
+
+## 3. Hyperlinks and/or reference text authored to wrong destination page
+
+**Affected codes:** P0A0D, P0A1F (Nissan Leaf Workshop Manual, EVB section)
+
+**What happens:**
+Two distinct authoring errors appear in the EVB DTC index:
+
+- **P0A1F** — reference text says `EVB-60` but the hyperlink resolves to `EVB-61`.
+  The cross-check detects the mismatch and the footer scan corrects it to page 574
+  (EVB-60, the right page). **Handled.**
+
+- **P0A0D** — reference text says `EVB-60` AND the hyperlink also goes to `EVB-60`.
+  The cross-check sees no mismatch and trusts the assignment. But P0A0D's actual
+  content starts at EVB-58 (page 572), not EVB-60. Both the index reference text
+  and the hyperlink are wrong. **Not currently handled — P0A0D is assigned the
+  wrong page.**
+
+**Why it happens:**
+PDF authoring errors. The visible reference text and the hyperlink destination were
+set independently and not kept in sync when the manual was produced.
+
+**Can it be fixed?**
+P0A1F: already fixed via cross-check + footer scan.
+P0A0D: requires content-page verification — scan the assigned page for the code
+string, and if absent, search nearby pages. This is the motivation for the planned
+`_verify_assignments()` pass in `build_index`.
+
+---
