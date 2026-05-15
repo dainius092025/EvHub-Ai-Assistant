@@ -894,7 +894,7 @@ def extract_content(
                 seen_xrefs.add(xref)
 
                 img_data = pdf.extract_image(xref)
-                if img_data["width"] < 100 or img_data["height"] < 100:
+                if img_data["width"] < 500 or img_data["height"] < 500:
                     continue
 
                 img_bytes    = img_data["image"]
