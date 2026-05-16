@@ -1,0 +1,299 @@
+{
+  "_comment": "Real output example — 2 records from EVB.pdf (Nissan Leaf 2013 Workshop Manual, EV Battery section). Record 1 (P0A0D) shows all features: 4 sections, 3 tables including one with reconstruction, 1 image. Record 2 (P0A1F) shows a minimal record: 3 sections, 1 table, no image.",
+
+  "schema_version": "1.0",
+  "schema_type": "shared_document_profile",
+  "adapter_schema_version": 5,
+  "document_id": "9e580494234a0e9a30e032db1c27558cfaf1541ba32e35a0a077c4a20f055db1",
+  "source_file": "EVB.pdf",
+
+  "metadata": {
+    "title": "AM-0ZE0-U0-927U-13.book(EVB.fm)",
+    "author": "mfrink",
+    "subject": null,
+    "keywords": null,
+    "creator": "FrameMaker 7.1",
+    "producer": "Acrobat Distiller 6.0.1 (Windows)",
+    "format": "PDF 1.5",
+    "creation_date": "D:20131011232613Z",
+    "modification_date": "D:20131014102327-04'00'",
+    "encrypted": false
+  },
+
+  "pdf_profile": {
+    "pdf_type": "digital",
+    "is_digital": true,
+    "needs_ocr": false,
+    "has_links": true,
+    "has_internal_links": true
+  },
+
+  "vehicle": {
+    "year": "2013",
+    "make": "Nissan",
+    "model": "LEAF",
+    "variant": null,
+    "revision_date": "October 2013",
+    "source": {
+      "method": "footer",
+      "pdf_page": 1,
+      "page_ref": "EVB-1"
+    }
+  },
+
+  "section": {
+    "code": "EVB",
+    "name": null,
+    "manual_type": null
+  },
+
+  "processing": {
+    "adapter_name": "ev-pdf-codes-adapter",
+    "extraction_completed": true,
+    "errors": []
+  },
+
+  "records": [
+
+    {
+      "_comment": "Record 1 — P0A0D. Shows: 4 sections with different roles, 3 tables (one high-confidence, two medium with reconstruction), 1 extracted image.",
+
+      "record_id": "6f8643674448d19c",
+      "record_type": "dtc_block",
+      "codes": ["P0A0D"],
+      "title": "P0A0D HV SYSTEM INTERLOCK ERROR",
+
+      "location": {
+        "start_pdf_page": 88,
+        "end_pdf_page": 89,
+        "page_refs": ["EVB-88", "EVB-89"],
+        "section_code": "EVB"
+      },
+
+      "sections": [
+        {
+          "_comment": "DTC Logic — fault detection table. oem_content_id present. Embed this for semantic search.",
+          "section_id": "r1_s1",
+          "heading": "DTC Logic",
+          "role": "dtc_logic",
+          "oem_content_id": "INFOID:0000000008745933",
+          "cleaned_text": "DTC DETECTION LOGIC\nDTC\nTrouble diagnosis name\nDTC detecting condition\nPossible causes\nP0A0D\nHV SYSTEM INTERLOCK ERROR\nSelf diagnosis program of Li-ion battery controller detects a malfunction in the CPU.\nLi-ion battery controller",
+          "page_start": 88,
+          "page_end": 88
+        },
+        {
+          "_comment": "DTC Confirmation Procedure — steps to reproduce the fault. oem_content_id is null by Nissan design (not a missing value).",
+          "section_id": "r1_s2",
+          "heading": "DTC Confirmation Procedure",
+          "role": "dtc_confirmation_procedure",
+          "oem_content_id": null,
+          "cleaned_text": "1.PERFORM DTC CONFIRMATION PROCEDURE\nWith CONSULT\n1.\nPower switch ON and wait for 10 seconds or more.\n2.\nSelect \"Self Diagnostic Result\" of \"HV BAT\".\n3.\nCheck DTC.\nIs P0A1F detected?\nYES\n>> Refer to EVB-88, \"Diagnosis Procedure\".\nNO\n>> INSPECTION END",
+          "page_start": 88,
+          "page_end": 88
+        },
+        {
+          "_comment": "Diagnosis Procedure — repair/inspection steps. Spans 2 pages.",
+          "section_id": "r1_s3",
+          "heading": "Diagnosis Procedure",
+          "role": "diagnosis_procedure",
+          "oem_content_id": "INFOID:0000000009346499",
+          "cleaned_text": "DANGER:\nSince hybrid vehicles and electric vehicles contain a high voltage battery, there is the risk of electric shock, electric leakage, or similar accidents if the high voltage component and vehicle are handled incorrectly. Be sure to follow the correct work procedures when performing inspection and maintenance.\nWARNING:\n• Be sure to remove the service plug in order to disconnect the high voltage circuits before performing inspection or maintenance of high voltage system harnesses and parts.\n1.PRECONDITIONING\nWARNING:\nDisconnect the high voltage. Refer to GI-33, \"How to Disconnect High Voltage\".\n1.\nRemove Li-ion battery. Refer to EVB-194, \"Removal and Installation\".\n>> GO TO 2.\n2.CHECK LI-ION BATTERY INTERLOCK DETECTIONG CIRCUIT FOR SHORT-1\n1.\nDisconnect Li-ion battery controller (LBC) harness connector.\n2.\nCheck the continuity between Li-ion battery controller harness connector and ground.\nIs the inspection result normal?\nYES\n>> GO TO 3.\nNO\n>> Replace Li-ion battery vehicle communication harness.",
+          "page_start": 88,
+          "page_end": 89
+        },
+        {
+          "_comment": "Component Inspection — standalone component test. Has its own oem_content_id.",
+          "section_id": "r1_s4",
+          "heading": "Component Inspection",
+          "role": "component_inspection",
+          "oem_content_id": "INFOID:0000000009346500",
+          "cleaned_text": "1.CHECK INTERLOCK DETECTIONG SWITCH (SERVICE PLUG)\nCheck the continuity between terminals in the figure.\nIs the inspection result normal?\nYES\n>> INSPECTION END\nNO\n>> Replace service plug.\nValue:\nApprox. 0 Ω\nJPCIA0347ZZ",
+          "page_start": 89,
+          "page_end": 89
+        }
+      ],
+
+      "tables": [
+        {
+          "_comment": "Table 1 — DTC Logic table. High confidence, no flags, clean extraction.",
+          "table_id": "r1_t1",
+          "section_id": "r1_s1",
+          "heading_nearby": "DTC Logic",
+          "role": "dtc_logic",
+          "start_pdf_page": 88,
+          "end_pdf_page": 88,
+          "page_refs": ["EVB-88"],
+          "raw_rows": [
+            ["DTC", "Trouble diagnosis name", "DTC detecting condition", "Possible causes"],
+            ["P0A0D", "HV SYSTEM INTERLOCK\nERROR", "Self diagnosis program of Li-ion battery controller detects a malfunction in the CPU.", "Li-ion battery controller"]
+          ],
+          "extraction": {
+            "confidence": "high",
+            "quality_flags": [],
+            "header_rows_hint": 1
+          }
+        },
+        {
+          "_comment": "Table 2 — Continuity check table from Diagnosis Procedure. Medium confidence: outer column was recovered and merged cells were deduplicated. reconstructed_rows is the normalised version — raw_rows is always source of truth.",
+          "table_id": "r1_t2",
+          "section_id": "r1_s3",
+          "heading_nearby": "Diagnosis Procedure",
+          "role": "diagnosis_procedure",
+          "start_pdf_page": 89,
+          "end_pdf_page": 89,
+          "page_refs": ["EVB-89"],
+          "raw_rows": [
+            ["LBC", "", "—", "Continuity"],
+            ["Connector", "Terminal", "", "Continuity"],
+            ["LB11", "8", "Ground", "Not existed"]
+          ],
+          "reconstructed_rows": [
+            ["LBC", "", "—", "Continuity"],
+            ["Connector", "Terminal", "", ""],
+            ["LB11", "8", "Ground", "Not existed"]
+          ],
+          "reconstruction": {
+            "reconstructed": true,
+            "normalization_applied": ["merged_cell_dedup"],
+            "source_of_truth": "raw_rows"
+          },
+          "extraction": {
+            "confidence": "medium",
+            "quality_flags": ["outer_column_recovered", "merged_cell_dedup", "reconstructed_rows_present"],
+            "header_rows_hint": 2
+          }
+        },
+        {
+          "_comment": "Table 3 — second continuity check table, same page. Also medium confidence.",
+          "table_id": "r1_t3",
+          "section_id": "r1_s3",
+          "heading_nearby": "Diagnosis Procedure",
+          "role": "diagnosis_procedure",
+          "start_pdf_page": 89,
+          "end_pdf_page": 89,
+          "page_refs": ["EVB-89"],
+          "raw_rows": [
+            ["LBC", "", "—", "Continuity"],
+            ["Connector", "Terminal", "", "Continuity"],
+            ["LB11", "6", "Ground", "Not existed"]
+          ],
+          "reconstructed_rows": [
+            ["LBC", "", "—", "Continuity"],
+            ["Connector", "Terminal", "", ""],
+            ["LB11", "6", "Ground", "Not existed"]
+          ],
+          "reconstruction": {
+            "reconstructed": true,
+            "normalization_applied": ["merged_cell_dedup"],
+            "source_of_truth": "raw_rows"
+          },
+          "extraction": {
+            "confidence": "medium",
+            "quality_flags": ["outer_column_recovered", "merged_cell_dedup", "reconstructed_rows_present"],
+            "header_rows_hint": 2
+          }
+        }
+      ],
+
+      "table_groups": [],
+
+      "images": [
+        {
+          "_comment": "Wiring diagram from Component Inspection page. File is saved as images/EVB-89-img1.png next to the JSON.",
+          "image_id": "r1_i1",
+          "section_id": "r1_s4",
+          "pdf_page": 89,
+          "page_ref": "EVB-89",
+          "image_path": "EVB-89-img1.png",
+          "caption": "JPCIA0347ZZ",
+          "role": "unknown"
+        }
+      ],
+
+      "notes": [],
+      "extraction": {
+        "status": "success",
+        "ocr_used": false,
+        "warnings": []
+      }
+    },
+
+    {
+      "_comment": "Record 2 — P0A1F. Shows: 3 sections (no Component Inspection), 1 table with medium confidence, no images. Minimal but complete record.",
+
+      "record_id": "682203adb40cf27d",
+      "record_type": "dtc_block",
+      "codes": ["P0A1F"],
+      "title": "P0A1F BATTERY ENERGY CONTROL MODULE",
+
+      "location": {
+        "start_pdf_page": 90,
+        "end_pdf_page": 90,
+        "page_refs": ["EVB-90"],
+        "section_code": "EVB"
+      },
+
+      "sections": [
+        {
+          "section_id": "r2_s1",
+          "heading": "DTC Logic",
+          "role": "dtc_logic",
+          "oem_content_id": "INFOID:0000000008745935",
+          "cleaned_text": "DTC DETECTION LOGIC\nDTC\nTrouble diagnosis name\nDTC detecting condition\nPossible causes\nP0A1F\nBATTERY ENERGY CONTROL MODULE\nSelf diagnosis program of Li-ion battery controller detects a malfunction in the CPU.\nLi-ion battery controller",
+          "page_start": 90,
+          "page_end": 90
+        },
+        {
+          "section_id": "r2_s2",
+          "heading": "DTC Confirmation Procedure",
+          "role": "dtc_confirmation_procedure",
+          "oem_content_id": null,
+          "cleaned_text": "1.PERFORM DTC CONFIRMATION PROCEDURE\nWith CONSULT\n1.\nPower switch ON and wait for 10 seconds or more.\n2.\nSelect \"Self Diagnostic Result\" of \"HV BAT\".\n3.\nCheck DTC.\nIs P0A1F detected?\nYES\n>> Refer to EVB-90, \"Diagnosis Procedure\".\nNO\n>> INSPECTION END",
+          "page_start": 90,
+          "page_end": 90
+        },
+        {
+          "section_id": "r2_s3",
+          "heading": "Diagnosis Procedure",
+          "role": "diagnosis_procedure",
+          "oem_content_id": "INFOID:0000000008745936",
+          "cleaned_text": "When this DTC is detected, replace Li-ion battery controller. Refer to EVB-214, \"LI-ION BATTERY CONTROLLER : Removal and Installation\".",
+          "page_start": 90,
+          "page_end": 90
+        }
+      ],
+
+      "tables": [
+        {
+          "_comment": "DTC Logic table. Medium confidence — outer column was recovered from context.",
+          "table_id": "r2_t1",
+          "section_id": "r2_s1",
+          "heading_nearby": "DTC Logic",
+          "role": "dtc_logic",
+          "start_pdf_page": 90,
+          "end_pdf_page": 90,
+          "page_refs": ["EVB-90"],
+          "raw_rows": [
+            ["DTC", "Trouble diagnosis name", "DTC detecting condition", "Possible causes"],
+            ["P0A1F", "BATTERY ENERGY CONTROL MODULE", "Self diagnosis program of Li-ion battery controller detects a malfunction in the CPU.", "Li-ion battery controller"]
+          ],
+          "extraction": {
+            "confidence": "medium",
+            "quality_flags": ["outer_column_recovered"],
+            "header_rows_hint": 1
+          }
+        }
+      ],
+
+      "table_groups": [],
+      "images": [],
+      "notes": [],
+      "extraction": {
+        "status": "success",
+        "ocr_used": false,
+        "warnings": []
+      }
+    }
+
+  ]
+}
