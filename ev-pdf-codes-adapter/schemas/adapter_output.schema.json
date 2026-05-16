@@ -1,346 +1,495 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "adapter_output.schema.json",
-  "title": "Shared Adapter Output Schema",
-  "description": "Schema for structured JSON produced by any PDF adapter (cars, codes, manuals, etc.). Owned by PDF Cars Adapter. PDF Codes Adapter must conform.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ev-pdf-codes-adapter/adapter_output.schema.json",
+  "title": "EV PDF Codes Adapter — Output Schema",
+  "description": "Schema for every JSON file produced by ev-pdf-codes-adapter. Each file covers one section of one PDF (e.g. EVB.pdf → EVB.json). The importer reads one file per section and imports all records[] into the database.",
   "type": "object",
-  "required": ["schema_version", "document_id", "source_file", "source_type", "records", "extraction"],
-  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "schema_type",
+    "adapter_schema_version",
+    "document_id",
+    "source_file",
+    "metadata",
+    "pdf_profile",
+    "vehicle",
+    "section",
+    "processing",
+    "records"
+  ],
+
   "properties": {
 
     "schema_version": {
       "type": "string",
-      "description": "Schema version string. Current: '1.0'.",
-      "example": "1.0"
+      "const": "1.0",
+      "description": "Shared envelope schema version. Importer should reject files it does not recognise."
+    },
+
+    "schema_type": {
+      "type": "string",
+      "const": "shared_document_profile",
+      "description": "Always 'shared_document_profile'. Identifies this as the shared document envelope format."
+    },
+
+    "adapter_schema_version": {
+      "type": "integer",
+      "description": "Internal version of the adapter's own output format. Increment when fields are added or changed. Importer can use this to detect old output that needs re-extraction."
     },
 
     "document_id": {
       "type": "string",
-      "minLength": 1,
-      "description": "Stable unique identifier for this document. Recommended: sha256 hex of raw PDF bytes."
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 hex of the raw PDF file bytes. Computed by shared/document_id.py. Stable across re-runs on the same file. Use this to deduplicate on re-runs and to join records from different adapters that processed the same PDF."
     },
 
     "source_file": {
       "type": "string",
-      "minLength": 1,
-      "description": "Filename of the source PDF, without directory path."
-    },
-
-    "source_type": {
-      "type": "string",
-      "minLength": 1,
-      "description": "Describes what kind of document this is. Free string — adapter sets it. Examples: 'workshop_manual', 'parts_catalog', 'vehicle_listing', 'diagnostic_manual'."
+      "description": "Filename of the source PDF (no directory path). Example: 'EVB.pdf'."
     },
 
     "metadata": {
-      "description": "Raw PDF metadata fields. All fields optional — set to null when not present in PDF.",
       "type": "object",
-      "additionalProperties": false,
+      "description": "Raw PDF metadata as stored by the publisher. All fields may be null.",
       "properties": {
         "title":             { "type": ["string", "null"] },
         "author":            { "type": ["string", "null"] },
         "subject":           { "type": ["string", "null"] },
         "keywords":          { "type": ["string", "null"] },
-        "creator":           { "type": ["string", "null"] },
-        "producer":          { "type": ["string", "null"] },
+        "creator":           { "type": ["string", "null"], "description": "Application that created the PDF, e.g. 'FrameMaker 7.1'." },
+        "producer":          { "type": ["string", "null"], "description": "PDF renderer, e.g. 'Acrobat Distiller 6.0.1'." },
+        "format":            { "type": ["string", "null"], "description": "PDF version string, e.g. 'PDF 1.5'." },
         "creation_date":     { "type": ["string", "null"] },
         "modification_date": { "type": ["string", "null"] },
-        "format":            { "type": ["string", "null"] },
-        "encryption":        { "type": ["string", "null"] }
+        "encrypted":         { "type": ["boolean", "null"] }
+      }
+    },
+
+    "pdf_profile": {
+      "type": "object",
+      "required": ["pdf_type", "is_digital", "needs_ocr", "has_links", "has_internal_links"],
+      "description": "Properties of the PDF that affect extraction reliability.",
+      "properties": {
+        "pdf_type": {
+          "type": "string",
+          "enum": ["digital", "scanned"],
+          "description": "Gate field. 'digital' = native text layer present, extraction ran. 'scanned' = no text layer, records[] will be empty."
+        },
+        "is_digital": {
+          "type": "boolean",
+          "description": "True when the PDF has a native text layer. Mirrors pdf_type == 'digital'."
+        },
+        "needs_ocr": {
+          "type": "boolean",
+          "description": "Always false for digital PDFs. Reserved for when an OCR pipeline is added."
+        },
+        "has_links": {
+          "type": "boolean",
+          "description": "Whether the PDF contains any hyperlinks."
+        },
+        "has_internal_links": {
+          "type": "boolean",
+          "description": "Whether the PDF has internal navigation links. The adapter uses these to map DTC codes to pages. If false, page assignment used Y-position fallback (lower confidence)."
+        }
+      }
+    },
+
+    "vehicle": {
+      "type": "object",
+      "description": "Vehicle identity extracted from the PDF. Every record in the database is tagged with these values.",
+      "properties": {
+        "year":          { "type": ["string", "null"], "description": "Model year as a string, e.g. '2013'. Null if not detected." },
+        "make":          { "type": ["string", "null"], "description": "Manufacturer name, e.g. 'Nissan'. Resolved via shared/vehicle_lookup.json." },
+        "model":         { "type": ["string", "null"], "description": "Model name, e.g. 'LEAF'." },
+        "variant":       { "type": ["string", "null"], "description": "Trim or variant if the manual covers more than one, e.g. '24kWh'. Usually null." },
+        "revision_date": { "type": ["string", "null"], "description": "Manual revision date as printed, e.g. 'October 2013'." },
+        "source": {
+          "type": "object",
+          "description": "How and where vehicle info was extracted. Use confidence to decide whether to trust or flag for review.",
+          "properties": {
+            "method":   {
+              "type": ["string", "null"],
+              "enum": ["footer", "foreword", "metadata", "lookup", null],
+              "description": "Detection method used to find vehicle info."
+            },
+            "pdf_page": { "type": ["integer", "null"], "description": "PDF page number (1-based) where vehicle info was found." },
+            "page_ref": { "type": ["string", "null"],  "description": "Printed page label where vehicle info was found, e.g. 'EVB-1'." }
+          }
+        }
+      }
+    },
+
+    "section": {
+      "type": "object",
+      "description": "The manual section this file covers. Namespaces all records.",
+      "properties": {
+        "code":        { "type": ["string", "null"], "description": "Section code as printed in the manual, e.g. 'EVB', 'EVC', 'TMS'. All records in this file belong to this section." },
+        "name":        { "type": ["string", "null"], "description": "Human-readable section name. Not yet extracted — always null." },
+        "manual_type": { "type": ["string", "null"], "description": "Which physical manual this section came from when one PDF contains multiple manuals (TYPE 1, TYPE 2, etc.). Null when not detected." }
+      }
+    },
+
+    "processing": {
+      "type": "object",
+      "required": ["adapter_name", "extraction_completed", "errors"],
+      "description": "Extraction run metadata.",
+      "properties": {
+        "adapter_name": {
+          "type": "string",
+          "description": "Always 'ev-pdf-codes-adapter'. Importer uses this to route to the right import logic."
+        },
+        "extraction_completed": {
+          "type": "boolean",
+          "description": "True when extraction finished without a fatal error. False means records[] may be incomplete — check errors[]."
+        },
+        "errors": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Fatal or near-fatal errors from this run. Empty array when clean. Importer should log these and flag the file for investigation."
+        }
       }
     },
 
     "records": {
       "type": "array",
-      "description": "All extracted records from this document. May be empty if no records were found.",
-      "items": { "$ref": "#/definitions/record" }
-    },
-
-    "extraction": {
-      "$ref": "#/definitions/extraction_result",
-      "description": "Document-level extraction result."
+      "description": "All DTC records extracted from this section. One record per DTC code group. Empty when no codes were found or pdf_type is 'scanned'.",
+      "items": { "$ref": "#/$defs/record" }
     }
+
   },
 
-  "definitions": {
+  "$defs": {
 
     "record": {
       "type": "object",
-      "description": "One logical unit extracted from the PDF. What constitutes a record depends on source_type (e.g. one DTC block, one vehicle listing, one parts row).",
-      "required": ["record_id", "record_type", "location", "content_blocks", "extraction"],
-      "additionalProperties": false,
+      "required": ["record_id", "record_type", "codes", "location", "sections", "tables", "table_groups", "images", "notes", "extraction"],
+      "description": "One DTC diagnostic record. May cover multiple codes when Nissan groups them on the same pages.",
       "properties": {
 
         "record_id": {
           "type": "string",
-          "minLength": 1,
-          "description": "Stable unique identifier for this record within the document. Recommended: sha256 of (document_id + discriminator)[:16]."
+          "description": "Stable 16-character hex ID for this record. Derived from document_id + page range. Same record_id across re-runs = safe to upsert."
         },
 
         "record_type": {
           "type": "string",
-          "minLength": 1,
-          "description": "What kind of record this is. Adapter-defined. Examples: 'dtc_block', 'vehicle_spec', 'part_entry', 'section'."
+          "const": "dtc_block",
+          "description": "Always 'dtc_block' for this adapter."
+        },
+
+        "codes": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "DTC codes this record covers, e.g. ['P0A0D'] or ['P3032','P3033','P3034']. Primary lookup key for the whole system."
         },
 
         "title": {
           "type": ["string", "null"],
-          "description": "Human-readable title for this record as it appears in the PDF. Null when not present."
+          "description": "Human-readable title as printed in the manual, e.g. 'P0A0D HV SYSTEM INTERLOCK ERROR'. Useful for display and quick triage."
         },
 
-        "identifiers": {
-          "type": "array",
-          "description": "Structured identifiers found in this record (codes, part numbers, VINs, model codes, etc.).",
-          "items": { "$ref": "#/definitions/identifier" }
+        "manual_type": {
+          "type": ["string", "null"],
+          "description": "Which TYPE N manual this record belongs to when the PDF contains multiple manuals (e.g. 'TYPE 1'). Omitted when not detected."
         },
 
         "location": {
-          "$ref": "#/definitions/location"
+          "type": "object",
+          "required": ["start_pdf_page", "end_pdf_page", "page_refs", "section_code"],
+          "description": "Where in the PDF this record was found.",
+          "properties": {
+            "start_pdf_page": { "type": "integer", "minimum": 1, "description": "First PDF page (1-based) of this record." },
+            "end_pdf_page":   { "type": "integer", "minimum": 1, "description": "Last PDF page (1-based) of this record." },
+            "page_refs": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Printed page labels spanning this record, e.g. ['EVB-88', 'EVB-89']. More stable than PDF page numbers if the PDF is ever re-exported."
+            },
+            "section_code": { "type": "string", "description": "Section code for this record, e.g. 'EVB'. Matches section.code at the top level." }
+          }
         },
 
-        "content_blocks": {
+        "sections": {
           "type": "array",
-          "description": "All content extracted for this record, ordered as they appear in the PDF.",
-          "items": { "$ref": "#/definitions/content_block" }
+          "description": "Text content of this record, split by heading. Each section is one embeddable chunk. Ordered as they appear in the PDF.",
+          "items": { "$ref": "#/$defs/section_block" }
+        },
+
+        "tables": {
+          "type": "array",
+          "description": "Structured tables extracted from this record. Each table is linked to a section via section_id. raw_rows is always the source of truth.",
+          "items": { "$ref": "#/$defs/table_block" }
+        },
+
+        "table_groups": {
+          "type": "array",
+          "description": "Tables that span multiple pages, merged into one logical table. Empty in most records. Each entry references the constituent table_ids.",
+          "items": { "$ref": "#/$defs/table_group" }
+        },
+
+        "images": {
+          "type": "array",
+          "description": "Images extracted from this record's pages. Each image is saved as a file in the images/ subfolder. Linked to a section via section_id.",
+          "items": { "$ref": "#/$defs/image_block" }
+        },
+
+        "notes": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Non-fatal extraction notes, e.g. 'merged 2 tables across pages'. Audit trail — importer may log these."
         },
 
         "extraction": {
-          "$ref": "#/definitions/extraction_result"
+          "type": "object",
+          "required": ["status", "ocr_used", "warnings"],
+          "description": "Per-record extraction outcome.",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": ["success", "partial", "failed", "skipped"],
+              "description": "success = fully extracted. partial = extracted with warnings. failed = error during extraction. skipped = deliberately not processed."
+            },
+            "ocr_used": {
+              "type": "boolean",
+              "description": "Always false for digital PDFs. Will be true once OCR pipeline is added."
+            },
+            "warnings": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Per-record warnings. Importer may flag affected records for review."
+            }
+          }
         }
+
       }
     },
 
-    "identifier": {
+    "section_block": {
       "type": "object",
-      "description": "A single structured identifier found in a record.",
-      "required": ["type", "value"],
-      "additionalProperties": false,
-      "properties": {
-        "type": {
-          "type": "string",
-          "minLength": 1,
-          "description": "Identifier category. Adapter-defined. Examples: 'dtc_code', 'part_number', 'model_code', 'vin_prefix', 'obd_pid'."
-        },
-        "value": {
-          "type": "string",
-          "minLength": 1,
-          "description": "The identifier value as extracted from the PDF."
-        },
-        "confidence": {
-          "type": "number",
-          "minimum": 0.0,
-          "maximum": 1.0,
-          "description": "Extraction confidence, 0.0–1.0. Omit when confidence is not tracked."
-        },
-        "notes": {
-          "type": "string",
-          "description": "Optional human-readable note about how this identifier was found."
-        }
-      }
-    },
-
-    "location": {
-      "type": "object",
-      "description": "Where in the PDF this item was found.",
-      "required": ["start_pdf_page"],
-      "additionalProperties": false,
-      "properties": {
-        "start_pdf_page": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "First PDF page (1-based) where this item appears."
-        },
-        "end_pdf_page": {
-          "type": "integer",
-          "minimum": 1,
-          "description": "Last PDF page (1-based) where this item appears. Omit when same as start_pdf_page."
-        },
-        "page_refs": {
-          "type": "array",
-          "description": "Printed page references as they appear in the PDF footer/header (e.g. 'EVB-88'). Parallel to the page range.",
-          "items": { "type": "string" }
-        },
-        "section_ref": {
-          "type": "string",
-          "description": "Section or chapter identifier as printed in the PDF (e.g. 'EVB', 'Section 4', 'Chapter B'). Omit when not detected."
-        }
-      }
-    },
-
-    "content_block": {
-      "type": "object",
-      "description": "A single unit of content within a record: a text section, a table, or an image.",
-      "required": ["block_id", "block_type", "location"],
-      "additionalProperties": false,
+      "required": ["section_id", "heading", "role", "oem_content_id", "cleaned_text", "page_start", "page_end"],
+      "description": "One headed section of a DTC record. This is the primary unit for embedding — embed cleaned_text per section, tagged with role.",
       "properties": {
 
-        "block_id": {
+        "section_id": {
           "type": "string",
-          "minLength": 1,
-          "description": "Identifier unique within this record. Recommended format: 'r{N}_b{M}' or 'r{N}_t{M}' for tables, 'r{N}_i{M}' for images."
-        },
-
-        "block_type": {
-          "type": "string",
-          "enum": ["text", "table", "image", "heading"],
-          "description": "Type of content in this block."
+          "description": "ID unique within this record, e.g. 'r1_s2'. Tables and images reference this to indicate which section they belong to."
         },
 
         "heading": {
+          "type": "string",
+          "description": "Section heading as printed in the manual. Known values: 'DTC Logic', 'DTC Confirmation Procedure', 'Diagnosis Procedure', 'Component Inspection', 'Description', 'Power Supply and Ground Circuit'."
+        },
+
+        "role": {
+          "type": "string",
+          "enum": [
+            "dtc_logic",
+            "dtc_confirmation_procedure",
+            "diagnosis_procedure",
+            "component_inspection",
+            "description"
+          ],
+          "description": "Semantic role of this section. Use this to weight embeddings differently, route to different DB columns, or build targeted retrieval prompts. dtc_logic = fault detection table. dtc_confirmation_procedure = steps to reproduce the fault. diagnosis_procedure = repair/inspection steps. component_inspection = standalone component test. description = general overview."
+        },
+
+        "oem_content_id": {
           "type": ["string", "null"],
-          "description": "Section heading that precedes this block, as it appears in the PDF. Null when not applicable."
+          "description": "Nissan INFOID — OEM content block identifier, e.g. 'INFOID:0000000008745933'. Null for DTC Confirmation Procedure sections (Nissan design — that section shares the preceding block's INFOID). Null for non-Nissan manuals. The adapter reports exactly what the PDF says — it does NOT inherit or carry forward the previous section's INFOID."
+        },
+
+        "cleaned_text": {
+          "type": "string",
+          "description": "Extracted and noise-filtered prose text for this section. Sidebar labels stripped, hyphenation repaired. This is the field to embed for semantic search. Note: for sections that contain tables, the table content also appears here as flat text — use tables[] for structured access to the same data."
+        },
+
+        "page_start": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "PDF page number (1-based) where this section starts."
+        },
+
+        "page_end": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "PDF page number (1-based) where this section ends."
+        },
+
+        "has_type_variants": {
+          "type": "boolean",
+          "description": "Present and true when the section text contains [TYPE N] markers indicating variant-specific content paths."
+        },
+
+        "type_markers_detected": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "The [TYPE N] markers found in this section, e.g. ['[TYPE 1]', '[TYPE 2]']. Only present when has_type_variants is true."
+        }
+
+      }
+    },
+
+    "table_block": {
+      "type": "object",
+      "required": ["table_id", "section_id", "heading_nearby", "role", "start_pdf_page", "end_pdf_page", "page_refs", "raw_rows", "extraction"],
+      "description": "One table extracted from a record. raw_rows is always the source of truth. reconstructed_rows is a normalised version when present.",
+      "properties": {
+
+        "table_id": {
+          "type": "string",
+          "description": "ID unique within this record, e.g. 'r1_t1'."
+        },
+
+        "section_id": {
+          "type": ["string", "null"],
+          "description": "The section this table belongs to. Matches a section_id in sections[]. Null if the table could not be assigned to a section."
+        },
+
+        "heading_nearby": {
+          "type": ["string", "null"],
+          "description": "Heading of the nearest section above this table. Convenience copy of the parent section's heading."
         },
 
         "role": {
           "type": ["string", "null"],
-          "description": "Semantic role of this block within the record. Adapter-defined. Examples: 'dtc_logic', 'diagnosis_procedure', 'spec_table', 'overview'. Null when role is unknown."
+          "description": "Semantic role inherited from the parent section. Same enum as section_block.role."
         },
 
-        "text": {
-          "type": ["string", "null"],
-          "description": "Raw extracted text for block_type 'text' or 'heading'. Null for tables and images."
+        "start_pdf_page": { "type": "integer", "minimum": 1, "description": "First PDF page (1-based) of this table." },
+        "end_pdf_page":   { "type": "integer", "minimum": 1, "description": "Last PDF page (1-based) of this table." },
+
+        "page_refs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Printed page labels spanning this table."
         },
 
         "raw_rows": {
-          "type": ["array", "null"],
-          "description": "Raw table rows for block_type 'table'. Always preserved — never overwritten. Each row is an array of cell strings.",
+          "type": "array",
           "items": {
             "type": "array",
             "items": { "type": ["string", "null"] }
+          },
+          "description": "Raw table rows as extracted from the PDF. Always preserved — never modified. Source of truth. Each row is an array of cell strings. First row(s) are headers — see extraction.header_rows_hint."
+        },
+
+        "reconstructed_rows": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": ["string", "null"] }
+          },
+          "description": "Normalised version of the table after repair (e.g. merged cell deduplication). Only present when reconstruction.reconstructed is true. Use raw_rows as source of truth — this is a convenience view."
+        },
+
+        "reconstruction": {
+          "type": "object",
+          "description": "Present only when reconstructed_rows was produced.",
+          "properties": {
+            "reconstructed": {
+              "type": "boolean",
+              "description": "True when normalisation was applied and reconstructed_rows is present."
+            },
+            "normalization_applied": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Which normalisations were applied, e.g. ['merged_cell_dedup', 'blob_row_stripped']."
+            },
+            "source_of_truth": {
+              "type": "string",
+              "const": "raw_rows",
+              "description": "Always 'raw_rows'. Reminds the importer which field to trust."
+            }
           }
-        },
-
-        "table_quality": {
-          "$ref": "#/definitions/table_quality"
-        },
-
-        "repaired_table": {
-          "$ref": "#/definitions/repaired_table"
-        },
-
-        "image_ref": {
-          "$ref": "#/definitions/image_ref"
-        },
-
-        "location": {
-          "$ref": "#/definitions/location"
         },
 
         "extraction": {
-          "$ref": "#/definitions/extraction_result"
-        }
-      }
-    },
-
-    "table_quality": {
-      "type": "object",
-      "description": "Assessment of how well the table structure was extracted. Present on block_type 'table' only.",
-      "required": ["status"],
-      "additionalProperties": false,
-      "properties": {
-        "status": {
-          "type": "string",
-          "enum": ["ok", "partial", "failed"],
-          "description": "ok = structure fully parsed. partial = parsed but uncertain, use raw_rows. failed = could not parse, use raw_rows only."
-        },
-        "confidence": {
-          "type": "string",
-          "enum": ["high", "medium", "low"],
-          "description": "Overall confidence in the extracted structure."
-        },
-        "warnings": {
-          "type": "array",
-          "description": "Specific issues detected during table extraction.",
-          "items": { "type": "string" }
-        },
-        "flags": {
-          "type": "array",
-          "description": "Machine-readable quality flags. Examples: 'multi_row_header', 'merged_cells', 'borderless', 'image_based'.",
-          "items": { "type": "string" }
-        }
-      }
-    },
-
-    "repaired_table": {
-      "type": "object",
-      "description": "Optional repaired/normalised version of the table. Additive — raw_rows is always preserved alongside this.",
-      "required": ["status", "method"],
-      "additionalProperties": false,
-      "properties": {
-        "status": {
-          "type": "string",
-          "enum": ["ok", "partial", "failed"],
-          "description": "Result of the repair attempt."
-        },
-        "method": {
-          "type": "string",
-          "description": "How the repair was performed. Examples: 'bbox_rebuild', 'llm_normalise', 'column_recovery'."
-        },
-        "rows": {
-          "type": ["array", "null"],
-          "description": "Repaired rows. Null when repair failed.",
-          "items": {
-            "type": "array",
-            "items": { "type": ["string", "null"] }
+          "type": "object",
+          "required": ["confidence", "quality_flags", "header_rows_hint"],
+          "description": "Quality assessment for this table.",
+          "properties": {
+            "confidence": {
+              "type": "string",
+              "enum": ["high", "medium", "low"],
+              "description": "Overall confidence in the table structure. high = clean extraction. medium = some repair applied, verify if important. low = structure uncertain, use raw_rows only."
+            },
+            "quality_flags": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Machine-readable quality signals. Empty = clean. Known flags: 'outer_column_recovered' (leftmost column reconstructed from context), 'merged_cell_dedup' (merged cells normalised), 'reconstructed_rows_present' (normalised rows available), 'blob_row_stripped' (image placeholder row removed), 'multi_row_header' (header spans multiple rows), 'partial_header' (header detection uncertain)."
+            },
+            "header_rows_hint": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "How many leading rows are headers. Skip these when embedding and when displaying data rows. 0 = no header detected."
+            },
+            "partial": {
+              "type": "boolean",
+              "description": "Present and true when header detection is uncertain (e.g. 3+ level headers). Treat this table with extra caution."
+            }
           }
-        },
-        "warnings": {
+        }
+
+      }
+    },
+
+    "table_group": {
+      "type": "object",
+      "required": ["group_id", "table_ids", "merged_rows"],
+      "description": "A logical table formed by merging two or more tables that continue across pages.",
+      "properties": {
+        "group_id":    { "type": "string", "description": "ID unique within this record, e.g. 'r1_tg1'." },
+        "table_ids":   { "type": "array", "items": { "type": "string" }, "description": "The constituent table_ids that were merged, in page order." },
+        "merged_rows": {
           "type": "array",
-          "items": { "type": "string" }
+          "items": { "type": "array", "items": { "type": ["string", "null"] } },
+          "description": "Combined rows from all constituent tables, header deduplicated."
         }
       }
     },
 
-    "image_ref": {
+    "image_block": {
       "type": "object",
-      "description": "Reference to an extracted image file. Present on block_type 'image' only.",
-      "required": ["image_id", "path"],
-      "additionalProperties": false,
+      "required": ["image_id", "section_id", "pdf_page", "page_ref", "image_path", "caption", "role"],
+      "description": "One image extracted from a record page. The image file is saved in the images/ subfolder alongside the JSON.",
       "properties": {
+
         "image_id": {
           "type": "string",
-          "description": "Unique image identifier within this document."
+          "description": "ID unique within this record, e.g. 'r1_i1'."
         },
-        "path": {
-          "type": "string",
-          "description": "Relative path to the saved image file."
-        },
-        "caption": {
+
+        "section_id": {
           "type": ["string", "null"],
-          "description": "Caption text if detected near the image."
+          "description": "Section this image belongs to, assigned by page position. Matches a section_id in sections[]. Null when the image could not be assigned."
         },
+
         "pdf_page": {
           "type": "integer",
-          "minimum": 1
-        }
-      }
-    },
+          "minimum": 1,
+          "description": "PDF page (1-based) the image was extracted from."
+        },
 
-    "extraction_result": {
-      "type": "object",
-      "description": "Extraction status and any warnings. Used at document level and per-record/block.",
-      "required": ["status"],
-      "additionalProperties": false,
-      "properties": {
-        "status": {
+        "page_ref": {
+          "type": ["string", "null"],
+          "description": "Printed page label for this image's page, e.g. 'EVB-89'."
+        },
+
+        "image_path": {
           "type": "string",
-          "enum": ["success", "partial", "failed", "skipped"],
-          "description": "success = fully extracted. partial = extracted with warnings. failed = extraction error. skipped = deliberately not processed."
+          "description": "Filename of the saved image file, relative to the JSON file's directory. Example: 'EVB-89-img1.png'. Load it from the images/ subfolder next to the JSON."
         },
-        "confidence": {
+
+        "caption": {
+          "type": ["string", "null"],
+          "description": "Caption or identifier found in text immediately below/above the image, e.g. 'JPCIA0347ZZ'. Nissan uses alphanumeric image IDs as captions. Null when not detected."
+        },
+
+        "role": {
           "type": "string",
-          "enum": ["high", "medium", "low"],
-          "description": "Overall confidence in the extraction."
-        },
-        "warnings": {
-          "type": "array",
-          "description": "Human-readable warnings about this extraction.",
-          "items": { "type": "string" }
-        },
-        "ocr_used": {
-          "type": "boolean",
-          "description": "Whether OCR was used to extract content."
+          "description": "Semantic role of the image. Currently always 'unknown' — role classification not yet implemented."
         }
+
       }
     }
 
