@@ -85,3 +85,25 @@ string, and if absent, search nearby pages. This is the motivation for the plann
 `_verify_assignments()` pass in `build_index`.
 
 ---
+
+## 4. PDF metadata title is an authoring tool artifact
+
+**Affected files:** av.pdf (AV Control Unit section, 2011 Nissan Leaf Workshop Manual)
+
+**What happens:**
+The `metadata.title` field in the document profile is `"Config.book(AV.fm)"` — a
+FrameMaker internal book/file reference, not a human-readable document title.
+
+**Why it happens:**
+The PDF was exported from Adobe FrameMaker without setting a proper document title.
+FrameMaker writes its internal file reference into the PDF title metadata field.
+
+**Impact:**
+The adapter passes through `metadata.title` exactly as the PDF reports it.
+The value is not useful as a display title.
+
+**Importer guidance:**
+Filter or discard `metadata.title` values that match a FrameMaker artifact pattern
+(e.g. contains `.fm)` or `.book(`). The `source_file` field is the reliable identifier.
+
+---
