@@ -301,6 +301,12 @@ def extract_codes_with_y(page, fmt: str, min_y: float = 0.0) -> list:
             continue
 
         if fmt == "A":
+            # Skip bracketed code echoes like [U1000] in the display item column.
+            # These are not index entries — they are a repeat of the code printed
+            # inside the adjacent cell and would be detected as a second code occurrence,
+            # overwriting the real title with an empty string.
+            if re.match(r"^\[[PBCU][0-9A-F]{4}\]$", word_text, re.IGNORECASE):
+                continue
             clean = re.sub(r"[^A-Z0-9]", "", word_text.upper())
             if CODE_RE.match(clean):
                 title_words = []
