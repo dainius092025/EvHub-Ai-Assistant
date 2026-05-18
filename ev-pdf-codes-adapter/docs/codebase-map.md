@@ -14,7 +14,7 @@ Updated after each file is reviewed or refactored.
 
 | File | Summary | Doc |
 |---|---|---|
-| `pipeline.py` | CLI entry point. Scans `manuals/` for PDFs, calls `extract_records`, writes JSON output. Default output is importer-oriented (slim); `--full` adds human-readable helper fields. | [pipeline.md](files/pipeline.md) |
+| `pipeline.py` | CLI entry point. Scans `manuals/` for PDFs, calls `extract_records`, writes JSON output. Output folder and filename use a canonical stem derived from vehicle metadata: `{make}_{model}_{year}_{section}` (e.g. `nissan_leaf_2013_evb`). Falls back to PDF filename stem if metadata unavailable. Default output is importer-oriented (slim); `--full` adds human-readable helper fields. | [pipeline.md](files/pipeline.md) |
 
 ---
 

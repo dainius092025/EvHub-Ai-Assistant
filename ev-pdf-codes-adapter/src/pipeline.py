@@ -24,7 +24,9 @@ Examples:
 
 import argparse
 import json
+import re
 import sys
+import fitz
 from datetime import datetime
 from pathlib import Path
 
@@ -34,6 +36,8 @@ sys.path.insert(0, str(REPO_ROOT))
 from shared.document_id import compute_document_id
 from extractor import extract_records
 from pdf_profile import profile_pdf
+from vehicle_info import extract_vehicle_info
+from content_extractor import read_page_ref
 
 
 def _apply_slim(result: dict) -> dict:
@@ -69,6 +73,50 @@ def _apply_slim(result: dict) -> dict:
             table.pop("cleaned_table_text", None)
             table.get("extraction", {}).pop("ocr_used", None)
     return result
+
+
+def _build_canonical_stem(pdf_path: Path, metadata: dict) -> str:
+    """
+    Build a canonical output stem from vehicle metadata extracted from the PDF.
+
+    Format:  {make}_{model}_{year}_{section}
+    Example: nissan_leaf_2013_evb
+
+    Each part is lowercased and non-alphanumeric characters are collapsed to
+    underscores — so "MODEL 3" becomes "model_3" and "E-TRON" becomes "e_tron".
+
+    Falls back to pdf_path.stem (the original filename without extension) if
+    vehicle extraction fails or returns no usable fields.
+    """
+    def _slug(text: str) -> str:
+        # lowercase, collapse runs of non-alphanumeric characters to one underscore
+        return re.sub(r'[^a-z0-9]+', '_', text.lower()).strip('_')
+
+    try:
+        # extract make / model / year from footer, foreword, or lookup table
+        vehicle = extract_vehicle_info(pdf_path, metadata)
+        make  = _slug(vehicle.get("make")  or "")
+        model = _slug(vehicle.get("model") or "")
+        year  = _slug(vehicle.get("year")  or "")
+
+        # get section code from the first page footer ref  e.g. "EVB-1" → "evb"
+        section = ""
+        with fitz.open(str(pdf_path)) as pdf:
+            if len(pdf) > 0:
+                ref = read_page_ref(pdf[0])   # returns e.g. "EVB-1" or None
+                if ref and '-' in ref:
+                    section = _slug(ref.split('-')[0])
+
+        # only include parts that are non-empty
+        parts = [p for p in [make, model, year, section] if p]
+        if parts:
+            return "_".join(parts)
+
+    except Exception:
+        pass  # any failure → fall back silently
+
+    # fallback: use the original PDF filename stem as-is
+    return pdf_path.stem.lower()
 
 
 def main():
@@ -113,12 +161,16 @@ def main():
     for pdf_path in pdf_files:
         print(f"\nProcessing: {pdf_path.name}")
 
-        # Create a subfolder named after the PDF — e.g. data/EVB/
-        out_dir = base_dir / pdf_path.stem
+        # Build canonical stem from vehicle metadata — e.g. nissan_leaf_2013_evb
+        # Falls back to pdf_path.stem if extraction returns no usable fields
+        canonical = _build_canonical_stem(pdf_path, profile_pdf(pdf_path)[0])
+
+        # Create a subfolder named after the canonical stem — e.g. data/nissan_leaf_2013_evb/
+        out_dir = base_dir / canonical
         out_dir.mkdir(exist_ok=True)
 
         # ── Skip already processed PDFs (unless --force) ──────────────────
-        out_path = out_dir / f"{pdf_path.stem}.json"
+        out_path = out_dir / f"{canonical}.json"
         if out_path.exists() and not args.force:
             print(f"  Already processed - skipping. Use --force to reprocess.")
             continue
