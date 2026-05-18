@@ -30,4 +30,25 @@ records the old title was a synthesised range string like
 `title` as-is, the code prefix will disappear from the rendered string.
 No field added, removed, or renamed.
 
+### `title` no longer includes trailing `[CODE]` bracket
+
+Some index table cells contained the DTC code a second time in brackets at
+the end of the display text (e.g. `"ACC NO CONN\n[U1A00]"`). This bracket is
+now stripped from the title.
+
+**Before**
+```json
+"codes": ["U1A00"],
+"title": "ACC NO CONN [U1A00]"
+```
+
+**After**
+```json
+"codes": ["U1A00"],
+"title": "ACC NO CONN"
+```
+
+**Importer impact:** None — the code is already in `codes[]`. The title is now
+shorter and cleaner.
+
 ---
