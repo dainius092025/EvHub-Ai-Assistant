@@ -48,11 +48,12 @@ KNOWN_HEADINGS = [
 
     # ── Nissan / Infiniti ─────────────────────────────────────────────────────
     # Confirmed on: 2013 Nissan LEAF (EVB.pdf), 204 codes extracted correctly.
-    ("Description",                 "description"),
-    ("DTC Logic",                   "dtc_logic"),
-    ("DTC Confirmation Procedure",  "dtc_confirmation_procedure"),
-    ("Diagnosis Procedure",         "diagnosis_procedure"),
-    ("Component Inspection",        "component_inspection"),
+    ("Description",                        "description"),
+    ("DTC Logic",                          "dtc_logic"),
+    ("DTC Confirmation Procedure",         "dtc_confirmation_procedure"),
+    ("Diagnosis Procedure",                "diagnosis_procedure"),
+    ("Power Supply and Ground Circuit",    "diagnosis_procedure"),
+    ("Component Inspection",               "component_inspection"),
 
     # ── Other manufacturers ───────────────────────────────────────────────────
     # Headings for Toyota, Hyundai/Kia, VAG, BMW, Renault live in:
