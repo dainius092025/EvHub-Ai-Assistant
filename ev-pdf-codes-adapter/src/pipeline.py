@@ -89,7 +89,7 @@ def main():
             sys.exit(1)
         pdf_files = [args.pdf]
     else:
-        manuals_dir = Path("manuals")
+        manuals_dir = Path(__file__).parent.parent / "manuals"
         if not manuals_dir.exists():
             print(f"Manuals folder not found: {manuals_dir}")
             sys.exit(1)
@@ -102,7 +102,7 @@ def main():
 
     # ── Set up base output directory ──────────────────────────────────────
     # All output (JSON + images) goes into data/ — each PDF gets its own subfolder.
-    base_dir = Path("data")
+    base_dir = Path(__file__).parent.parent / "data"
     base_dir.mkdir(exist_ok=True)
 
     # ── Processing report ─────────────────────────────────────────────────
