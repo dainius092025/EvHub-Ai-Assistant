@@ -20,8 +20,8 @@ from content_extractor import read_page_ref
 
 # ── Regex patterns ────────────────────────────────────────────────────────────
 
-# "Revision: October 2013"  or  "Revision: 2010 November"
-_REVISION_RE = re.compile(r'^Revision:\s*(.+)$', re.IGNORECASE)
+# "Revision: October 2013"  or  "Edition: November 2010"
+_REVISION_RE = re.compile(r'^(?:Revision|Edition):\s*(.+)$', re.IGNORECASE)
 
 # Page refs like "EVB-1", "GI-16" — used to skip those lines in footer
 _PAGE_REF_RE = re.compile(r'^[A-Z]{2,5}-\d+$')
@@ -95,6 +95,35 @@ def _parse_footer(page: fitz.Page) -> dict:
             result["model"] = model
 
     return result
+
+
+def _find_revision_date(pdf: fitz.Document) -> str | None:
+    """
+    Fallback revision date scan — checks header and footer of the first 5 pages.
+
+    Section PDFs put "Revision: October 2013" in the footer (caught by _parse_footer).
+    Full manual PDFs put "Edition: November 2010" in the header of page 1.
+    Some merged PDFs may only have the revision line deeper in the document.
+
+    Scans top 12% and bottom 12% of each page until a match is found.
+    Returns the matched date string or None if nothing found.
+    """
+    for i in range(min(5, len(pdf))):
+        page = pdf[i]
+        rect = page.rect
+
+        # check both header (top 12%) and footer (bottom 12%)
+        for clip in [
+            fitz.Rect(0, 0, rect.width, rect.height * 0.12),             # header
+            fitz.Rect(0, rect.height * 0.88, rect.width, rect.height),   # footer
+        ]:
+            lines = [l.strip() for l in page.get_text("text", clip=clip).splitlines() if l.strip()]
+            for line in lines:
+                m = _REVISION_RE.match(line)
+                if m:
+                    return m.group(1).strip()
+
+    return None
 
 
 def _try_foreword(pdf: fitz.Document) -> tuple:
@@ -174,6 +203,13 @@ def extract_vehicle_info(pdf_path: Path, metadata: dict) -> dict:
                 "pdf_page": 1,
                 "page_ref": read_page_ref(pdf[0]),
             }
+
+        # ── Step 1b: Revision date fallback — scans header+footer of first 5 pages ──
+        # Section PDFs: footer already captured it above.
+        # Full manual PDFs: "Edition:" is in the page 1 header, not footer.
+        # Merged PDFs: revision line may appear on a later page.
+        if not result["revision_date"]:
+            result["revision_date"] = _find_revision_date(pdf)
 
         # ── Step 2: Foreword — has make, confirms year + model ──
         foreword_info, fw_page, fw_ref = _try_foreword(pdf)

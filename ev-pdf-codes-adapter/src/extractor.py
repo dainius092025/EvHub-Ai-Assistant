@@ -431,7 +431,7 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
     seen_xrefs       = set()
     seen_hashes      = {}
     record_num       = 0   # incremented per TYPE segment, not per index entry
-    doc_section_code = None  # first section code seen across all records
+    doc_section_codes = []   # all unique section codes seen, in order of first appearance
 
     for page_num, codes in sorted(page_to_codes.items()):
         print(f"  Page {page_num} -> {codes}")
@@ -471,8 +471,8 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
             # ── page_refs list ────────────────────────────────────────────────
             page_refs    = content["page_refs"]
             section_code = content.get("section_code")
-            if section_code and doc_section_code is None:
-                doc_section_code = section_code
+            if section_code and section_code not in doc_section_codes:
+                doc_section_codes.append(section_code)
 
             # ── DTC title ─────────────────────────────────────────────────────
             dtc_title = _normalize_title(codes, code_titles)
@@ -691,12 +691,13 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
         "pdf_profile":            profile_out,
         "vehicle":                vehicle,
         "section": {
-            "code":        doc_section_code,
+            "code":        doc_section_codes if doc_section_codes else None,
             "name":        None,
             "manual_type": None,
         },
         "processing": {
             "adapter_name":         "ev-pdf-codes-adapter",
+            "extraction_status":    "success",
             "extraction_completed": True,
             "errors":               [],
         },

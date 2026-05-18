@@ -100,6 +100,8 @@ def _build_canonical_stem(pdf_path: Path, metadata: dict) -> str:
         year  = _slug(vehicle.get("year")  or "")
 
         # get section code from the first page footer ref  e.g. "EVB-1" → "evb"
+        # only use it when there is exactly one section — merged PDFs have many sections
+        # and a section suffix in the name would be misleading
         section = ""
         with fitz.open(str(pdf_path)) as pdf:
             if len(pdf) > 0:
@@ -203,6 +205,7 @@ def main():
                 },
                 "processing": {
                     "adapter_name":         "ev-pdf-codes-adapter",
+                    "extraction_status":    "scanned",
                     "extraction_completed": False,
                     "errors":               ["scanned PDF — OCR not yet supported"],
                 },
@@ -243,6 +246,7 @@ def main():
                     },
                     "processing": {
                         "adapter_name":         "ev-pdf-codes-adapter",
+                        "extraction_status":    "no_content",
                         "extraction_completed": False,
                         "errors":               ["no DTC codes found"],
                     },

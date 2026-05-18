@@ -5,6 +5,45 @@ received the first JSON contract (`adapter_output.example.json`, 2026-05-17).
 
 ---
 
+## 2026-05-19 (session 3)
+
+### `section.code` is now an array
+
+**Before**
+```json
+"section": { "code": "EVB" }
+```
+
+**After**
+```json
+"section": { "code": ["EVB"] }
+```
+
+Single-section PDFs have one entry. Merged PDFs list all section codes in order of first appearance e.g. `["GI", "EVB", "AV"]`. Null if no section codes detected.
+
+**Importer impact:** Update any code reading `section.code` as a string — it is now always an array or null.
+
+---
+
+### `processing.extraction_status` added (required)
+
+New required field alongside `extraction_completed`. Importer should act on this field, not on `errors[]` strings.
+
+| Value | Meaning |
+|---|---|
+| `"success"` | Records extracted |
+| `"no_content"` | No DTC codes found |
+| `"scanned"` | Scanned PDF — no text layer |
+| `"error"` | Unexpected failure |
+
+---
+
+### `metadata.encrypted` renamed to `metadata.encryption`
+
+Field name corrected to match schema. Value is now `null` (not encrypted) or a string describing the encryption type.
+
+---
+
 ## 2026-05-18
 
 ### `title` no longer includes the DTC code prefix

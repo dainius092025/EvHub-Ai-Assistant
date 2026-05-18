@@ -134,7 +134,11 @@
       "type": "object",
       "description": "Namespaces all records in this file. code is the section identifier (EVB, TM, etc.).",
       "properties": {
-        "code":             { "type": ["string", "null"] },
+        "code": {
+          "type": ["array", "null"],
+          "items": { "type": "string" },
+          "description": "Section codes present in this file, in order of first appearance. Single-section PDFs: one entry e.g. [\"EVB\"]. Merged PDFs: all sections e.g. [\"GI\", \"EVB\", \"AV\"]. Null if no section codes detected."
+        },
         "name":             { "type": ["string", "null"] },
         "manual_type":      { "type": ["string", "null"] },
         "page_count":       { "type": ["integer", "null"] },

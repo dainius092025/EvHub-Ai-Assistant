@@ -23,7 +23,7 @@ def profile_pdf(pdf_path: Path) -> dict:
         "format":            meta.get("format")       or None,  # PDF version e.g. "PDF 1.4"
         "creation_date":     meta.get("creationDate") or None,
         "modification_date": meta.get("modDate")      or None,
-        "encrypted":         bool(meta.get("encryption")),        # True = password-protected
+        "encryption":        meta.get("encryption") or None,       # null = not encrypted; string value = encryption type
     }
 
     # ── DIGITAL DETECTION ─────────────────────────────────────────────────
