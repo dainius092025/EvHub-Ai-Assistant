@@ -34,6 +34,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO_ROOT))
 
 from shared.document_id import compute_document_id
+from shared.validate_output import validate_shared_profile
 from extractor import extract_records
 from pdf_profile import profile_pdf
 from vehicle_info import extract_vehicle_info
@@ -121,6 +122,19 @@ def _build_canonical_stem(pdf_path: Path, metadata: dict) -> str:
     return pdf_path.stem.lower()
 
 
+def _validate_and_warn(data: dict, filename: str) -> None:
+    """
+    Validate data against shared_profile.schema.json.
+    Prints any errors prominently but does not block the write —
+    the file is still saved so it can be inspected.
+    """
+    errors = validate_shared_profile(data)
+    if errors:
+        print(f"  WARNING — schema validation failed for {filename} ({len(errors)} error(s)):")
+        for err in errors:
+            print(f"    {err}")
+
+
 def main():
     # ── Parse arguments ──────────────────────────────────────────────────
     parser = argparse.ArgumentParser(description="EV PDF Codes Adapter — extract DTC records from workshop manual PDFs")
@@ -190,9 +204,8 @@ def main():
             document_id = compute_document_id(pdf_path)  # we compute the document ID for scanned PDFs too, so they can be tracked and identified in the future when OCR is added
             profile_out = {k: v for k, v in pdf_profile.items() if k != "link_count_sample"}
             stub = {
-                "schema_version":         "1.0",
-                "schema_type":            "shared_document_profile",
-                "adapter_schema_version": 5,
+                "schema_version": "1.0",
+                "schema_type":    "shared_document_profile",
                 "document_id":    document_id,
                 "source_file":    pdf_path.name,
                 "metadata":       metadata,
@@ -204,13 +217,15 @@ def main():
                     "manual_type": None,
                 },
                 "processing": {
-                    "adapter_name":         "ev-pdf-codes-adapter",
-                    "extraction_status":    "scanned",
-                    "extraction_completed": False,
-                    "errors":               ["scanned PDF — OCR not yet supported"],
+                    "adapter_name":           "ev-pdf-codes-adapter",
+                    "adapter_schema_version": 5,
+                    "extraction_status":      "scanned",
+                    "extraction_completed":   False,
+                    "errors":                 ["scanned PDF — OCR not yet supported"],
                 },
                 "records": []
             }
+            _validate_and_warn(stub, pdf_path.name)
             tmp_path = out_path.with_suffix(".json.tmp")
             with open(tmp_path, "w", encoding="utf-8") as f:
                 json.dump(stub, f, indent=2, ensure_ascii=False)
@@ -231,9 +246,8 @@ def main():
                 print("  No records extracted — writing stub JSON.")
                 profile_out = {k: v for k, v in pdf_profile.items() if k != "link_count_sample"}
                 stub = {
-                    "schema_version":         "1.0",
-                    "schema_type":            "shared_document_profile",
-                    "adapter_schema_version": 5,
+                    "schema_version": "1.0",
+                    "schema_type":    "shared_document_profile",
                     "document_id":    compute_document_id(pdf_path),
                     "source_file":    pdf_path.name,
                     "metadata":       metadata,
@@ -245,13 +259,15 @@ def main():
                         "manual_type": None,
                     },
                     "processing": {
-                        "adapter_name":         "ev-pdf-codes-adapter",
-                        "extraction_status":    "no_content",
-                        "extraction_completed": False,
-                        "errors":               ["no DTC codes found"],
+                        "adapter_name":           "ev-pdf-codes-adapter",
+                        "adapter_schema_version": 5,
+                        "extraction_status":      "no_content",
+                        "extraction_completed":   False,
+                        "errors":                 ["no DTC codes found"],
                     },
                     "records": []
                 }
+                _validate_and_warn(stub, pdf_path.name)
                 tmp_path = out_path.with_suffix(".json.tmp")
                 with open(tmp_path, "w", encoding="utf-8") as f:
                     json.dump(stub, f, indent=2, ensure_ascii=False)
@@ -268,6 +284,7 @@ def main():
             tmp_path = out_path.with_suffix(".json.tmp")   # e.g. data/EVB/EVB.json.tmp
 
             output = result if args.full else _apply_slim(result)
+            _validate_and_warn(output, pdf_path.name)
             with open(tmp_path, 'w', encoding="utf-8") as f:
                 json.dump(output, f, indent=2, ensure_ascii=False)
 

@@ -7,7 +7,6 @@
   "required": [
     "schema_version",
     "schema_type",
-    "adapter_schema_version",
     "document_id",
     "source_file",
     "metadata",
@@ -30,11 +29,6 @@
       "type": "string",
       "const": "shared_document_profile",
       "description": "Always 'shared_document_profile'. Identifies this as the shared document envelope format."
-    },
-
-    "adapter_schema_version": {
-      "type": "integer",
-      "description": "Internal version of the adapter's own output format. Increment when fields are added or changed. Importer can use this to detect old output that needs re-extraction."
     },
 
     "document_id": {
@@ -61,7 +55,7 @@
         "format":            { "type": ["string", "null"], "description": "PDF version string, e.g. 'PDF 1.5'." },
         "creation_date":     { "type": ["string", "null"] },
         "modification_date": { "type": ["string", "null"] },
-        "encrypted":         { "type": ["boolean", "null"] }
+        "encryption":        { "type": ["string", "null"] }
       }
     },
 
@@ -123,7 +117,11 @@
       "type": "object",
       "description": "The manual section this file covers. Namespaces all records.",
       "properties": {
-        "code":        { "type": ["string", "null"], "description": "Section code as printed in the manual, e.g. 'EVB', 'EVC', 'TMS'. All records in this file belong to this section." },
+        "code": {
+          "type": ["array", "null"],
+          "items": { "type": "string" },
+          "description": "Section codes present in this file, in order of first appearance. Single-section PDFs: one entry e.g. [\"EVB\"]. Merged PDFs: all sections e.g. [\"GI\", \"EVB\", \"AV\"]. Null if no section codes detected."
+        },
         "name":        { "type": ["string", "null"], "description": "Human-readable section name. Not yet extracted — always null." },
         "manual_type": { "type": ["string", "null"], "description": "Which physical manual this section came from when one PDF contains multiple manuals (TYPE 1, TYPE 2, etc.). Null when not detected." }
       }
@@ -131,16 +129,29 @@
 
     "processing": {
       "type": "object",
-      "required": ["adapter_name", "extraction_completed", "errors"],
+      "required": ["adapter_name", "extraction_status", "extraction_completed", "errors"],
       "description": "Extraction run metadata.",
       "properties": {
         "adapter_name": {
           "type": "string",
           "description": "Always 'ev-pdf-codes-adapter'. Importer uses this to route to the right import logic."
         },
+        "adapter_schema_version": {
+          "type": ["integer", "null"],
+          "description": "Version of the adapter-specific payload schema (records[] shape). Separate from the shared schema_version."
+        },
+        "extraction_status": {
+          "type": "string",
+          "enum": ["success", "no_content", "scanned", "error"],
+          "description": "Machine-readable outcome. Importer acts on this field, never on errors[] strings."
+        },
         "extraction_completed": {
           "type": "boolean",
           "description": "True when extraction finished without a fatal error. False means records[] may be incomplete — check errors[]."
+        },
+        "extracted_at": {
+          "type": ["string", "null"],
+          "description": "ISO 8601 timestamp of when extraction finished."
         },
         "errors": {
           "type": "array",

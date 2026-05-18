@@ -158,6 +158,10 @@
           "type": "string",
           "description": "Which adapter wrote this file. Importer routes differently per adapter."
         },
+        "adapter_schema_version": {
+          "type": ["integer", "null"],
+          "description": "Version of the adapter-specific payload schema (records[] shape). Separate from the shared schema_version."
+        },
         "extraction_status": {
           "type": "string",
           "description": "Machine-readable outcome. Importer acts on this field, never on errors[] strings.",

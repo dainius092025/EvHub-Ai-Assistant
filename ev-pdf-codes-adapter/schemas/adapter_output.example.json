@@ -3,7 +3,6 @@
 
   "schema_version": "1.0",
   "schema_type": "shared_document_profile",
-  "adapter_schema_version": 5,
   "document_id": "9e580494234a0e9a30e032db1c27558cfaf1541ba32e35a0a077c4a20f055db1",
   "source_file": "EVB.pdf",
 
@@ -17,7 +16,7 @@
     "format": "PDF 1.5",
     "creation_date": "D:20131011232613Z",
     "modification_date": "D:20131014102327-04'00'",
-    "encrypted": false
+    "encryption": null
   },
 
   "pdf_profile": {
@@ -42,13 +41,15 @@
   },
 
   "section": {
-    "code": "EVB",
+    "code": ["EVB"],
     "name": null,
     "manual_type": null
   },
 
   "processing": {
     "adapter_name": "ev-pdf-codes-adapter",
+    "adapter_schema_version": 5,
+    "extraction_status": "success",
     "extraction_completed": true,
     "errors": []
   },

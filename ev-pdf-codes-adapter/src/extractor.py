@@ -682,24 +682,24 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
     profile_out = {k: v for k, v in pdf_profile.items() if k != "link_count_sample"}
 
     return {
-        "schema_version":         "1.0",
-        "schema_type":            "shared_document_profile",
-        "adapter_schema_version": 5,
-        "document_id":            document_id,
-        "source_file":            source,
-        "metadata":               metadata,
-        "pdf_profile":            profile_out,
-        "vehicle":                vehicle,
+        "schema_version": "1.0",
+        "schema_type":    "shared_document_profile",
+        "document_id":    document_id,
+        "source_file":    source,
+        "metadata":       metadata,
+        "pdf_profile":    profile_out,
+        "vehicle":        vehicle,
         "section": {
             "code":        doc_section_codes if doc_section_codes else None,
             "name":        None,
             "manual_type": None,
         },
         "processing": {
-            "adapter_name":         "ev-pdf-codes-adapter",
-            "extraction_status":    "success",
-            "extraction_completed": True,
-            "errors":               [],
+            "adapter_name":           "ev-pdf-codes-adapter",
+            "adapter_schema_version": 5,
+            "extraction_status":      "success",
+            "extraction_completed":   True,
+            "errors":                 [],
         },
         "records": records,
     }

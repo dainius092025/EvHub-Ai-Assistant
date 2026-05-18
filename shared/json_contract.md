@@ -139,9 +139,9 @@ they must produce the same `document_id` — that is how the importer links them
 
   "section": {
     // MUST HAVE — namespaces all records in this file.
-    // "EVB", "EVC", "TM" etc.
+    // Single-section PDFs: ["EVB"]. Merged PDFs: ["GI", "EVB", "AV"].
     // Without this you cannot tell which section a record belongs to.
-    "code": "EVB",
+    "code": ["EVB"],
 
     // NICE TO HAVE — human-readable section name for display.
     // Not yet extracted. Useful in the UI and for search metadata.
@@ -172,6 +172,11 @@ they must produce the same `document_id` — that is how the importer links them
     // Importer routes differently per adapter.
     // First thing to check when debugging bad output.
     "adapter_name": "ev-pdf-codes-adapter",
+
+    // NICE TO HAVE — version of the adapter's own payload schema (records[] shape).
+    // Separate from schema_version. Importer can use this to detect old output
+    // that needs re-extraction when the records[] format changes.
+    "adapter_schema_version": 5,
 
     // MUST HAVE — machine-readable outcome. Importer acts on this field,
     // never on the errors[] strings.
@@ -394,11 +399,12 @@ Records is empty. The `processing` block tells the importer exactly why:
 
 ```jsonc
 "processing": {
-  "adapter_name":         "ev-pdf-codes-adapter",
-  "extraction_status":    "no_content",  // or "scanned" or "error"
-  "extraction_completed": false,
-  "extracted_at":         "2026-05-08T14:30:00",
-  "errors":               ["no DTC codes found"]
+  "adapter_name":           "ev-pdf-codes-adapter",
+  "adapter_schema_version": 5,
+  "extraction_status":      "no_content",  // or "scanned" or "error"
+  "extraction_completed":   false,
+  "extracted_at":           "2026-05-08T14:30:00",
+  "errors":                 ["no DTC codes found"]
 },
 "records": []
 ```
