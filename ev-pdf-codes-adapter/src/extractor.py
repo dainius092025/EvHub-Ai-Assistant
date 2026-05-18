@@ -645,7 +645,7 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                 "record_id":   _make_record_id(document_id, manual_type, seg_start),
                 "record_type": "dtc_block",
 
-                "codes": codes,
+                "codes": list(dict.fromkeys(codes)),
                 "title": dtc_title,
 
                 **({"manual_type": manual_type} if manual_type is not None else {}),
