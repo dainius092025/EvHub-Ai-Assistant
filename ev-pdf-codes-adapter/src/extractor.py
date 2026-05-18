@@ -43,9 +43,9 @@ def _common_title_prefix(titles: list[str]) -> str:
 
 def _normalize_title(codes: list, code_titles: dict) -> str | None:
     """
-    Build a compact title for a DTC record.
-    Single code  -> "P0A0D HV SYSTEM INTERLOCK ERROR"
-    Multiple codes -> "P3031-P303C CELL CONT"  (code range + common title prefix)
+    Build a compact title for a DTC record — description only, no code prefix.
+    Single code  -> "HV SYSTEM INTERLOCK ERROR"
+    Multiple codes -> "CELL CONT"  (common title prefix across all codes)
     Sidebar letters (e.g. 'E CELL CONT ASIC4') are stripped before comparison.
     """
     raw_titles = [code_titles.get(c, "") for c in codes if code_titles.get(c)]
@@ -61,15 +61,10 @@ def _normalize_title(codes: list, code_titles: dict) -> str | None:
         return None
 
     if len(codes) == 1:
-        return f"{codes[0]} {titles[0]}".strip()
+        return titles[0]
 
-    sorted_codes = sorted(codes)
-    first_code   = sorted_codes[0]
-    last_code    = sorted_codes[-1]
-    common       = _common_title_prefix(titles)
-    if common:
-        return f"{first_code}-{last_code} {common}"
-    return f"{first_code}-{last_code}"
+    common = _common_title_prefix(titles)
+    return common if common else None
 
 
 def _headers_match(row_a: list, row_b: list) -> bool:
