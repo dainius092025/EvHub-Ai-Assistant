@@ -191,6 +191,7 @@ def _read_format_a_table(page, table, links: list, page_ref_map: dict) -> dict:
 
         # ── Title ─────────────────────────────────────────────────────────────
         title = str(row[1]).strip() if len(row) > 1 and row[1] is not None else ""
+        title = re.sub(r"\[[PBCU][0-9A-F]{4}\]", "", title).strip()
 
         # ── Reference cell ────────────────────────────────────────────────────
         ref_raw = ""
@@ -332,6 +333,7 @@ def extract_codes_with_y(page, fmt: str, min_y: float = 0.0) -> list:
                             title_words.append(cell)
 
                 title = " ".join(title_words).strip()
+                title = re.sub(r"\[[PBCU][0-9A-F]{4}\]", "", title, flags=re.IGNORECASE).strip()
                 results.append((clean, y_pos, title, ref_text))   # 4-tuple
 
         else:
