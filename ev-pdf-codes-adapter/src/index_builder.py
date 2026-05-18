@@ -331,6 +331,8 @@ def extract_codes_with_y(page, fmt: str, min_y: float = 0.0) -> list:
                     if not title_done:
                         if re.match(r"^[×—x]$", cell, re.IGNORECASE):
                             title_done = True
+                        elif re.match(r"^[•·‣◦]$", cell):
+                            pass  # bullet prefix in sub-list cells — skip, don't stop
                         elif re.match(r"^\d+$", cell):
                             title_done = True
                         elif CODE_RE.match(re.sub(r"[^A-Z0-9]", "", cell.upper())):
