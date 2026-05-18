@@ -47,6 +47,12 @@ def find_dtc_heading_y(page) -> float:
     Matches any heading in DTC_INDEX_HEADINGS (multi-manufacturer).
     INFOID: is used as an optional secondary signal for Nissan manuals but is
     NOT required — other OEMs don't use it.
+
+    Fallback: some PDFs render the DTC Index heading as part of a preceding
+    content block rather than as a standalone block (e.g. Nissan AV section).
+    In that case no heading block matches, but the DTC index table is still
+    present — detected by its header row containing 'DTC' and 'Display item'
+    or 'Refer to'. Returns the top y-coordinate of that table header block.
     """
     blocks = page.get_text("blocks")
 
@@ -56,6 +62,12 @@ def find_dtc_heading_y(page) -> float:
 
         if first_line in DTC_INDEX_HEADINGS:
             return block[3]
+
+    # Fallback: look for a table header block that identifies a DTC index
+    for block in blocks:
+        block_text = block[4].strip().lower()
+        if "dtc" in block_text and ("display item" in block_text or "refer to" in block_text):
+            return block[1]  # top y of the block
 
     return None
 
@@ -534,17 +546,18 @@ def build_index(pdf_path: Path) -> dict:
             table = find_index_table(page, heading_y)
             table_page_num = page_num
 
-            if table is None and page_num + 1 < len(pdf):
-                next_page = pdf[page_num + 1]
-                with _quiet():
-                    tables = next_page.find_tables()
-                if tables.tables:
-                    table = tables.tables[0]
-                    table_page_num = page_num + 1
-
             if table is None:
-                page_num += 1
-                continue
+                # Before checking the next page, test whether the current page
+                # already has DTC codes via Y-based scan (borderless table layout).
+                # If it does, stay on this page — don't grab the next page's table.
+                _probe = extract_codes_with_y(page, fmt="A", min_y=heading_y)
+                if not _probe and page_num + 1 < len(pdf):
+                    next_page = pdf[page_num + 1]
+                    with _quiet():
+                        tables = next_page.find_tables()
+                    if tables.tables:
+                        table = tables.tables[0]
+                        table_page_num = page_num + 1
 
             if table_page_num in seen_pages:
                 page_num += 1
@@ -552,13 +565,18 @@ def build_index(pdf_path: Path) -> dict:
 
             print(f"  Found index on page {table_page_num + 1}")
 
-            rows = table.extract()
-            if not rows:
-                page_num += 1
-                continue
-
-            fmt           = detect_format(rows[0])
-            index_table_y = table.bbox[1]
+            if table is not None:
+                rows = table.extract()
+                if not rows:
+                    page_num += 1
+                    continue
+                fmt           = detect_format(rows[0])
+                index_table_y = table.bbox[1]
+            else:
+                # Borderless table — use Y-based text extraction.
+                # Assume Format A since DTC/Display item/Refer to columns are present.
+                fmt           = "A"
+                index_table_y = heading_y
 
             current_num = table_page_num
             while current_num < len(pdf):
@@ -584,7 +602,7 @@ def build_index(pdf_path: Path) -> dict:
                     l["ref_text"] = m.group(0) if m else None
                     links.append(l)
 
-                if fmt == "A" and current_num == table_page_num:
+                if fmt == "A" and current_num == table_page_num and table is not None:
                     # ── Table-based extraction for Format A index page ────────
                     # Reads rows directly — handles merged reference cells,
                     # no Y-proximity matching needed.
