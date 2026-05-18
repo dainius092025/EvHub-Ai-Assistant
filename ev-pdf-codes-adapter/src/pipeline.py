@@ -133,6 +133,8 @@ def _validate_and_warn(data: dict, filename: str) -> None:
         print(f"  WARNING — schema validation failed for {filename} ({len(errors)} error(s)):")
         for err in errors:
             print(f"    {err}")
+    else:
+        print(f"  Schema: valid")
 
 
 def main():
