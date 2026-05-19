@@ -64,8 +64,8 @@
       "properties": {
         "pdf_type": {
           "type": "string",
-          "description": "Importer gates all downstream processing on this. scanned = no text layer = write stub only.",
-          "enum": ["digital", "scanned"]
+          "description": "Importer gates all downstream processing on this. 'digital' = single section, native text. 'merged' = multi-section digital PDF. 'scanned' = no text layer = write stub only.",
+          "enum": ["digital", "merged", "scanned"]
         },
         "is_digital": {
           "type": "boolean",

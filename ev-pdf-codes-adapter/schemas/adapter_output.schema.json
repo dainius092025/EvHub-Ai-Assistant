@@ -66,8 +66,8 @@
       "properties": {
         "pdf_type": {
           "type": "string",
-          "enum": ["digital", "scanned"],
-          "description": "Gate field. 'digital' = native text layer present, extraction ran. 'scanned' = no text layer, records[] will be empty."
+          "enum": ["digital", "merged", "scanned"],
+          "description": "Gate field. 'digital' = native text layer, single section. 'merged' = digital but contains multiple sections (e.g. EVB + EVC combined). 'scanned' = no text layer, records[] will be empty."
         },
         "is_digital": {
           "type": "boolean",
