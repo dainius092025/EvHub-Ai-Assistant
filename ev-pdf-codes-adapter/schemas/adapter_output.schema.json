@@ -253,7 +253,7 @@
 
         "extraction": {
           "type": "object",
-          "required": ["status", "ocr_used", "warnings"],
+          "required": ["status", "ocr_used", "page_ref_confidence", "warnings"],
           "description": "Per-record extraction outcome.",
           "properties": {
             "status": {
@@ -264,6 +264,11 @@
             "ocr_used": {
               "type": "boolean",
               "description": "Always false for digital PDFs. Will be true once OCR pipeline is added."
+            },
+            "page_ref_confidence": {
+              "type": "string",
+              "enum": ["high", "medium", "low", "conflict"],
+              "description": "Cross-verification result for the resolved start page. high = DTC code confirmed in page header AND footer ref matches index ref. medium = code confirmed, no footer ref to compare. low = footer ref matches index but code not found in header. conflict = both signals present but contradicting, or no positive signal. Physical PDF page is always the navigation source of truth — this field is verification metadata only."
             },
             "warnings": {
               "type": "array",

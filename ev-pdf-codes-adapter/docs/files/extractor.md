@@ -30,8 +30,8 @@ Main function called by `pipeline.py`. Returns one document-level dict for the P
 4. `build_index` — DTC code → pages + titles map
 5. `detect_manual_types` — `{pdf_page: "TYPE N" | None}` pre-pass
 6. `fitz.open` — PDF opened once here and passed into every `extract_content` call
-7. Per DTC group: `extract_content` → TYPE segment loop → table post-processing → `_merge_continued_tables` → finalize
-7. Returns document envelope with `records[]`
+7. Per DTC group: `_verify_page` → `extract_content` → TYPE segment loop → table post-processing → `_merge_continued_tables` → finalize
+8. Returns document envelope with `records[]`
 
 **TYPE segment loop:** if `extract_content` stops at a TYPE boundary, the same
 code group is re-extracted starting from the next page under the new `manual_type`.
@@ -56,6 +56,8 @@ No pages are dropped.
 | `_dedup_merged_cells(rows)` | Collapses repeated consecutive values per column — merged-cell artefact from bbox reconstruction; imported from `content_extractor.py` |
 | `_render_raw_table_text(raw_rows)` | Pipe-delimited render of raw_rows; no cleanup; full output only |
 | `_render_cleaned_table_text(cleaned_rows)` | Pipe-delimited render of cleaned_rows; full output only |
+| `_verify_page(pdf_page, codes, expected_ref)` | Pre-extraction check: reads two signals (DTC code in header, footer ref) and returns `{confidence, code_match, detected_ref, expected_ref}`. Confidence: `"high"` (both match), `"medium"` (code match, no ref to compare), `"low"` (ref match, code missing), `"conflict"` (contradicting or no signal). Physical page is navigation source of truth — result is metadata only. |
+| `_page_ref_confidence_warning(verification, page_num)` | Builds the warning string for non-high confidence; included in `extraction.warnings[]` |
 | `_make_record_id(document_id, manual_type, start_pdf_page)` | SHA256-based 16-char deterministic record ID |
 
 ---
@@ -102,6 +104,8 @@ norm               ← ["blob_row_stripped"?] + ["carry_forward_fill"?] + ["merg
 |---|---|
 | `content_extractor.extract_content` | Page-level extraction for one DTC record; accepts open `fitz.Document` |
 | `content_extractor._dedup_merged_cells` | Merged-cell dedup (defined there, used here) |
+| `content_extractor.page_belongs_to_codes` | Used by `_verify_page` to check DTC code presence in page header |
+| `content_extractor.read_page_ref` | Used by `_verify_page` to read footer label from target page |
 | `pdf_profile.profile_pdf` | PDF metadata + type detection |
 | `vehicle_info.extract_vehicle_info` | Make/model/year from PDF |
 | `index_builder.build_index` | DTC code → page + title map |

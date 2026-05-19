@@ -17,7 +17,7 @@ sys.path.insert(0, str(REPO_ROOT))
 from shared.document_id import compute_document_id
 from pdf_profile import profile_pdf
 from index_builder import build_index
-from content_extractor import extract_content, _dedup_merged_cells
+from content_extractor import extract_content, _dedup_merged_cells, page_belongs_to_codes, read_page_ref
 from vehicle_info import extract_vehicle_info
 from type_detector import detect_manual_types
 
@@ -175,6 +175,85 @@ _STEP_NUM_RE = re.compile(r'^\d+$')                    # plain integer: 1, 2, 42
 
 _ALPHA_RE = re.compile(r'^[A-Za-z\s]+$')   # purely alphabetic label (no digits)
 _TYPE_MARKER_RE = re.compile(r'\[TYPE [A-Z0-9]+\]', re.IGNORECASE)  # inline variant markers e.g. [TYPE 1], [TYPE 2A]
+
+
+def _verify_page(pdf_page: fitz.Page, codes: list, expected_ref: str | None) -> dict:
+    """
+    Pre-extraction page verification.
+
+    Checks two independent signals before extract_content is called:
+      1. DTC code presence  — does the page header contain any of the expected codes?
+      2. Page ref match     — does the footer label match the ref the index recorded?
+
+    Physical PDF page number remains the navigation source of truth.
+    Confidence is verification metadata only — LOW/CONFLICT records are still extracted.
+
+    Returns a dict:
+      confidence:   "high" | "medium" | "low" | "conflict"
+      code_match:   bool — True when any expected DTC code found in page header
+      detected_ref: str | None — footer label actually found on this page
+      expected_ref: str | None — page ref the DTC index said to expect
+
+    Confidence rules:
+      "high"     — code confirmed AND footer ref matches index ref
+      "medium"   — code confirmed, footer ref missing or index ref unknown (can't compare)
+      "low"      — footer ref matches index, but DTC code not found in page header
+      "conflict" — code confirmed but refs disagree; or code absent with no useful ref signal
+    """
+    code_match   = page_belongs_to_codes(pdf_page, codes)
+    detected_ref = read_page_ref(pdf_page)
+
+    # Refs are comparable only when both sides carry a value
+    ref_available = detected_ref is not None and expected_ref is not None
+    ref_match     = ref_available and detected_ref.upper() == expected_ref.upper()
+
+    if code_match and ref_match:
+        confidence = "high"
+    elif code_match and not ref_available:
+        confidence = "medium"
+    elif not code_match and ref_match:
+        confidence = "low"
+    else:
+        # Covers: code confirmed but refs disagree; or code absent with no/wrong ref
+        confidence = "conflict"
+
+    return {
+        "confidence":   confidence,
+        "code_match":   code_match,
+        "detected_ref": detected_ref,
+        "expected_ref": expected_ref,
+    }
+
+
+def _page_ref_confidence_warning(verification: dict, page_num: int) -> str:
+    """
+    Build a human-readable warning string for non-high page_ref_confidence.
+    Included in extraction.warnings[] so the importer sees it alongside the record.
+    """
+    confidence   = verification["confidence"]
+    code_match   = verification["code_match"]
+    detected_ref = verification["detected_ref"]
+    expected_ref = verification["expected_ref"]
+
+    if confidence == "medium":
+        return (
+            f"page_ref_confidence=medium on PDF page {page_num}: "
+            f"DTC code confirmed in header, no printed page ref detected"
+        )
+    if confidence == "low":
+        return (
+            f"page_ref_confidence=low on PDF page {page_num}: "
+            f"footer ref '{detected_ref}' matches index but DTC code not found in page header"
+        )
+    # conflict
+    parts = ["DTC code " + ("confirmed in header" if code_match else "NOT found in header")]
+    if expected_ref and detected_ref:
+        parts.append(f"index ref='{expected_ref}', footer ref='{detected_ref}'")
+    elif expected_ref:
+        parts.append(f"index ref='{expected_ref}', no footer ref detected")
+    elif detected_ref:
+        parts.append(f"no index ref, footer ref='{detected_ref}'")
+    return f"page_ref_confidence=conflict on PDF page {page_num}: " + "; ".join(parts)
 
 
 def _is_blob_row(row: list) -> bool:
@@ -450,6 +529,15 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                 record_num  += 1
                 manual_type  = page_type_map.get(seg_start)
 
+                # ── Pre-extraction page verification ─────────────────────────────
+                # Verify the resolved PDF page BEFORE calling extract_content.
+                # Two independent signals: DTC code in page header + footer page ref.
+                # Physical PDF page remains navigation source of truth.
+                # Confidence is metadata only — LOW/CONFLICT records are still extracted.
+                verification = _verify_page(
+                    pdf[seg_start - 1], codes, page_to_ref.get(seg_start)
+                )
+
                 page_ref_base = f"{pdf_path.stem}-{seg_start}"
                 content = extract_content(
                     pdf, seg_start, codes, output_dir,
@@ -457,13 +545,9 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                     page_type_map=page_type_map,
                 )
 
-                # ── Cross-check: index ref vs footer ref ──────────────────────────
-                # Only meaningful for the first segment (index only lists start page)
-                index_ref  = page_to_ref.get(seg_start)
-                footer_ref = content["start_page_ref_footer"]
-                warnings   = []
-                if index_ref and footer_ref and index_ref != footer_ref:
-                    msg = f"page_ref mismatch on PDF page {seg_start}: index={index_ref}, footer={footer_ref}"
+                warnings = []
+                if verification["confidence"] != "high":
+                    msg = _page_ref_confidence_warning(verification, seg_start)
                     print(f"  [WARN] {msg}")
                     warnings.append(msg)
 
@@ -686,9 +770,10 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                     **({"manual_types_detected": manual_types_detected} if manual_types_detected else {}),
 
                     "extraction": {
-                        "status":   "success",
-                        "ocr_used": False,
-                        "warnings": warnings,
+                        "status":              "success",
+                        "ocr_used":            False,
+                        "page_ref_confidence": verification["confidence"],
+                        "warnings":            warnings,
                     },
                 })
 
