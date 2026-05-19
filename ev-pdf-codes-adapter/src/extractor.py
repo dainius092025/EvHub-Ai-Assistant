@@ -8,6 +8,7 @@ Called by pipeline.py.
 import re
 import hashlib
 import sys
+import fitz
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -433,254 +434,257 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
     record_num       = 0   # incremented per TYPE segment, not per index entry
     doc_section_codes = []   # all unique section codes seen, in order of first appearance
 
-    for page_num, codes in sorted(page_to_codes.items()):
-        print(f"  Page {page_num} -> {codes}")
+    # Open the PDF once — passed into every extract_content call.
+    # Avoids reopening the same file for each DTC group.
+    with fitz.open(str(pdf_path)) as pdf:
+        for page_num, codes in sorted(page_to_codes.items()):
+            print(f"  Page {page_num} -> {codes}")
 
-        # ── TYPE-segment loop ─────────────────────────────────────────────────
-        # A DTC block may span a TYPE boundary.  When extract_content signals
-        # stopped_at_type_boundary, we create a record for the current segment
-        # and restart extraction from the boundary page as a new record under
-        # the new manual_type.  No pages are silently dropped.
-        seg_start = page_num
-        while seg_start is not None:
-            record_num  += 1
-            manual_type  = page_type_map.get(seg_start)
+            # ── TYPE-segment loop ─────────────────────────────────────────────────
+            # A DTC block may span a TYPE boundary.  When extract_content signals
+            # stopped_at_type_boundary, we create a record for the current segment
+            # and restart extraction from the boundary page as a new record under
+            # the new manual_type.  No pages are silently dropped.
+            seg_start = page_num
+            while seg_start is not None:
+                record_num  += 1
+                manual_type  = page_type_map.get(seg_start)
 
-            page_ref_base = f"{pdf_path.stem}-{seg_start}"
-            content = extract_content(
-                pdf_path, seg_start, codes, output_dir,
-                page_ref_base, seen_xrefs, seen_hashes,
-                page_type_map=page_type_map,
-            )
+                page_ref_base = f"{pdf_path.stem}-{seg_start}"
+                content = extract_content(
+                    pdf, seg_start, codes, output_dir,
+                    page_ref_base, seen_xrefs, seen_hashes,
+                    page_type_map=page_type_map,
+                )
 
-            # ── Cross-check: index ref vs footer ref ──────────────────────────
-            # Only meaningful for the first segment (index only lists start page)
-            index_ref  = page_to_ref.get(seg_start)
-            footer_ref = content["start_page_ref_footer"]
-            warnings   = []
-            if index_ref and footer_ref and index_ref != footer_ref:
-                msg = f"page_ref mismatch on PDF page {seg_start}: index={index_ref}, footer={footer_ref}"
-                print(f"  [WARN] {msg}")
-                warnings.append(msg)
+                # ── Cross-check: index ref vs footer ref ──────────────────────────
+                # Only meaningful for the first segment (index only lists start page)
+                index_ref  = page_to_ref.get(seg_start)
+                footer_ref = content["start_page_ref_footer"]
+                warnings   = []
+                if index_ref and footer_ref and index_ref != footer_ref:
+                    msg = f"page_ref mismatch on PDF page {seg_start}: index={index_ref}, footer={footer_ref}"
+                    print(f"  [WARN] {msg}")
+                    warnings.append(msg)
 
-            # Surface unknown headings found by structural detection
-            for uh_warn in content.get("unknown_heading_warnings", []):
-                print(f"  [WARN] {uh_warn}")
-                warnings.append(uh_warn)
+                # Surface unknown headings found by structural detection
+                for uh_warn in content.get("unknown_heading_warnings", []):
+                    print(f"  [WARN] {uh_warn}")
+                    warnings.append(uh_warn)
 
-            # Surface image extraction failures
-            for img_warn in content.get("image_warnings", []):
-                warnings.append(img_warn)
+                # Surface image extraction failures
+                for img_warn in content.get("image_warnings", []):
+                    warnings.append(img_warn)
 
-            # ── page_refs list ────────────────────────────────────────────────
-            page_refs    = content["page_refs"]
-            section_code = content.get("section_code")
-            if section_code and section_code not in doc_section_codes:
-                doc_section_codes.append(section_code)
+                # ── page_refs list ────────────────────────────────────────────────
+                page_refs    = content["page_refs"]
+                section_code = content.get("section_code")
+                if section_code and section_code not in doc_section_codes:
+                    doc_section_codes.append(section_code)
 
-            # ── DTC title ─────────────────────────────────────────────────────
-            dtc_title = _normalize_title(codes, code_titles)
+                # ── DTC title ─────────────────────────────────────────────────────
+                dtc_title = _normalize_title(codes, code_titles)
 
-            # ── Sections — assign section_id to each ─────────────────────────
-            sections = []
-            for s_idx, sec in enumerate(content["sections"]):
-                sections.append({
-                    "section_id":     f"r{record_num}_s{s_idx + 1}",
-                    "heading":        sec["heading"],
-                    "role":           sec["role"],
-                    "oem_content_id": sec.get("oem_content_id"),
-                    "cleaned_text":   sec.get("cleaned_text"),
-                    "raw_text":       sec.get("raw_text"),
-                    "page_start":     sec["page_start"],
-                    "page_end":       sec["page_end"],
-                })
-
-            # ── TYPE variant markers — scan raw_text for [TYPE X] inline markers ──
-            # Markers are preserved in raw_text/cleaned_text (not stripped).
-            # We add section-level flags and roll up a record-level summary.
-            all_type_markers: list[str] = []
-            for sec in sections:
-                raw = sec.get("raw_text") or ""
-                found = _TYPE_MARKER_RE.findall(raw)
-                if found:
-                    unique = list(dict.fromkeys(m.upper() for m in found))
-                    sec["has_type_variants"]      = True
-                    sec["type_markers_detected"]  = unique
-                    all_type_markers.extend(unique)
-            manual_types_detected = list(dict.fromkeys(all_type_markers)) or None
-
-            # ── Tables — flat list, each linked to its section via section_id ─
-            notes   = []
-            tables  = []
-            t_count = 1
-            for s_idx, sec in enumerate(content["sections"]):
-                section_id = f"r{record_num}_s{s_idx + 1}"
-                for tbl in sec["tables"]:
-                    tables.append({
-                        "table_id":       f"r{record_num}_t{t_count}",
-                        "section_id":     section_id,
-                        "heading_nearby": sec["heading"],
+                # ── Sections — assign section_id to each ─────────────────────────
+                sections = []
+                for s_idx, sec in enumerate(content["sections"]):
+                    sections.append({
+                        "section_id":     f"r{record_num}_s{s_idx + 1}",
+                        "heading":        sec["heading"],
                         "role":           sec["role"],
-                        "page":           tbl["page"],
-                        "page_ref":       tbl["page_ref"],
-                        "rows":           tbl["rows"],
-                        "cleaned_rows":   tbl["cleaned_rows"],
-                        "extraction":     tbl["extraction"],
+                        "oem_content_id": sec.get("oem_content_id"),
+                        "cleaned_text":   sec.get("cleaned_text"),
+                        "raw_text":       sec.get("raw_text"),
+                        "page_start":     sec["page_start"],
+                        "page_end":       sec["page_end"],
                     })
-                    t_count += 1
 
-            # Apply carry-forward fill and detect headers before merging so
-            # table_groups also receive complete rows.
-            #
-            # Contract: raw_rows must be the true extraction output — no reconstruction.
-            # We snapshot each table's rows BEFORE carry-forward / dedup run, then
-            # apply reconstruction to a copy.  Both are carried forward through the
-            # finalize loop below via private _-prefixed keys.
-            known_codes_set = set(codes)
-            for tbl in tables:
-                extracted = [list(row) for row in tbl["rows"]]  # deep copy — true raw snapshot
-                norm      = []
-
-                # ── Blob row strip ────────────────────────────────────────────
-                # When PyMuPDF collapses a complex merged-cell header into a
-                # single blob cell (row 0), that row carries no usable column
-                # structure.  The real headers start at row 1.
-                #
-                # Strip row 0 from the rows used for reconstruction so the
-                # importer receives a clean table.  raw_rows is never touched —
-                # it preserves the blob as extraction evidence.
-                rows_for_recon = extracted
-                blob_flagged   = "blob_row_detected" in tbl["extraction"].get("quality_flags", [])
-                if blob_flagged and extracted and _is_blob_row(extracted[0]):
-                    rows_for_recon = extracted[1:]
-                    norm.append("blob_row_stripped")
-
-                header_count = _detect_header_rows(rows_for_recon, known_codes_set)
-                filled       = _fill_carry_forward(rows_for_recon, header_count)
-                deduped      = _dedup_merged_cells(filled)
-
-                if filled != rows_for_recon:
-                    norm.append("carry_forward_fill")
-                if deduped != filled:
-                    norm.append("merged_cell_dedup")
-
-                tbl["_true_raw_rows"]         = extracted
-                tbl["_reconstructed_rows"]    = deduped if norm else None
-                tbl["_normalization_applied"] = norm
-                tbl["rows"]                   = deduped  # _merge_continued_tables uses rows
-                tbl["_header_count"]          = header_count
-                tbl["_rows_for_recon"]        = rows_for_recon  # for partial check below
-
-            # Detect cross-page continuations → table_groups (raw tables unchanged)
-            table_groups, absorbed_ids = _merge_continued_tables(tables, notes, record_num)
-
-            # Finalize raw tables: rename location fields, enforce raw/reconstructed split.
-            for tbl in tables:
-                true_raw       = tbl.pop("_true_raw_rows")
-                recon_rows     = tbl.pop("_reconstructed_rows")   # None if no reconstruction ran
-                norm_applied   = tbl.pop("_normalization_applied")
-                tbl.pop("rows")                                    # reconstructed copy — promoted below if needed
-                cleaned        = tbl.pop("cleaned_rows")
-                page           = tbl.pop("page")
-                pr             = tbl.pop("page_ref")
-                extraction     = tbl.pop("extraction")
-                header_count   = tbl.pop("_header_count")
-                rows_for_recon = tbl.pop("_rows_for_recon")
-                tbl["start_pdf_page"] = page
-                tbl["end_pdf_page"]   = page
-                tbl["page_refs"]      = [pr] if pr else []
-                # raw_rows: true extraction output — no carry-forward, no dedup
-                tbl["raw_rows"]           = true_raw
-                tbl["raw_table_text"]     = _render_raw_table_text(true_raw)
-                # cleaned_table_text: formatting-only render of raw_rows (newlines joined,
-                # hyphens repaired) — no inferred values
-                tbl["cleaned_table_text"] = _render_cleaned_table_text(cleaned)
-                # reconstructed_rows + metadata: only present when reconstruction ran
-                if norm_applied:
-                    tbl["reconstructed_rows"] = recon_rows
-                    tbl["reconstruction"] = {
-                        "reconstructed":         True,
-                        "normalization_applied": norm_applied,
-                        "source_of_truth":       "raw_rows",
-                    }
-                    extraction["quality_flags"].extend(norm_applied)
-                    extraction["quality_flags"].append("reconstructed_rows_present")
-                    # Reconstruction changes cell values — confidence cannot stay high
-                    if extraction.get("confidence") == "high":
-                        extraction["confidence"] = "medium"
-                # header_rows_hint — raw heuristic count, may undercount
-                # multi-level headers (3+ rows).  Importer should verify.
-                extraction["header_rows_hint"] = header_count
-                # partial — True when the row immediately after the detected
-                # headers also passes the sub-header test, indicating a 3+
-                # level header structure that the heuristic cannot fully count.
-                # partial — rows_for_recon is used (not true_raw) so the index
-                # aligns with the header_count that was computed on those same rows.
-                # When a blob was stripped, true_raw indices are offset by 1.
-                if (len(rows_for_recon) > header_count
-                        and _is_subheader_row(rows_for_recon[header_count], known_codes_set)):
-                    extraction["partial"] = True
-                tbl["extraction"] = extraction
-
-            # ── Images — enriched with metadata ──────────────────────────────
-            # Assign each image to the last section whose page_start is on or
-            # before the image's pdf_page.  Sections are ordered sequentially
-            # so the last qualifying entry is the active section at that point.
-            images = []
-            for i_idx, img in enumerate(content["image_list"]):
-                img_page = img["pdf_page"]
-                section_id_for_img = None
+                # ── TYPE variant markers — scan raw_text for [TYPE X] inline markers ──
+                # Markers are preserved in raw_text/cleaned_text (not stripped).
+                # We add section-level flags and roll up a record-level summary.
+                all_type_markers: list[str] = []
                 for sec in sections:
-                    if sec["page_start"] <= img_page:
-                        section_id_for_img = sec["section_id"]
-                    else:
-                        break
-                images.append({
-                    "image_id":   f"r{record_num}_i{i_idx + 1}",
-                    "section_id": section_id_for_img,
-                    "pdf_page":   img_page,
-                    "page_ref":   img["page_ref"],
-                    "image_path": img["filename"],
-                    "caption":    img.get("caption"),
-                    "role":       "unknown",
+                    raw = sec.get("raw_text") or ""
+                    found = _TYPE_MARKER_RE.findall(raw)
+                    if found:
+                        unique = list(dict.fromkeys(m.upper() for m in found))
+                        sec["has_type_variants"]      = True
+                        sec["type_markers_detected"]  = unique
+                        all_type_markers.extend(unique)
+                manual_types_detected = list(dict.fromkeys(all_type_markers)) or None
+
+                # ── Tables — flat list, each linked to its section via section_id ─
+                notes   = []
+                tables  = []
+                t_count = 1
+                for s_idx, sec in enumerate(content["sections"]):
+                    section_id = f"r{record_num}_s{s_idx + 1}"
+                    for tbl in sec["tables"]:
+                        tables.append({
+                            "table_id":       f"r{record_num}_t{t_count}",
+                            "section_id":     section_id,
+                            "heading_nearby": sec["heading"],
+                            "role":           sec["role"],
+                            "page":           tbl["page"],
+                            "page_ref":       tbl["page_ref"],
+                            "rows":           tbl["rows"],
+                            "cleaned_rows":   tbl["cleaned_rows"],
+                            "extraction":     tbl["extraction"],
+                        })
+                        t_count += 1
+
+                # Apply carry-forward fill and detect headers before merging so
+                # table_groups also receive complete rows.
+                #
+                # Contract: raw_rows must be the true extraction output — no reconstruction.
+                # We snapshot each table's rows BEFORE carry-forward / dedup run, then
+                # apply reconstruction to a copy.  Both are carried forward through the
+                # finalize loop below via private _-prefixed keys.
+                known_codes_set = set(codes)
+                for tbl in tables:
+                    extracted = [list(row) for row in tbl["rows"]]  # deep copy — true raw snapshot
+                    norm      = []
+
+                    # ── Blob row strip ────────────────────────────────────────────
+                    # When PyMuPDF collapses a complex merged-cell header into a
+                    # single blob cell (row 0), that row carries no usable column
+                    # structure.  The real headers start at row 1.
+                    #
+                    # Strip row 0 from the rows used for reconstruction so the
+                    # importer receives a clean table.  raw_rows is never touched —
+                    # it preserves the blob as extraction evidence.
+                    rows_for_recon = extracted
+                    blob_flagged   = "blob_row_detected" in tbl["extraction"].get("quality_flags", [])
+                    if blob_flagged and extracted and _is_blob_row(extracted[0]):
+                        rows_for_recon = extracted[1:]
+                        norm.append("blob_row_stripped")
+
+                    header_count = _detect_header_rows(rows_for_recon, known_codes_set)
+                    filled       = _fill_carry_forward(rows_for_recon, header_count)
+                    deduped      = _dedup_merged_cells(filled)
+
+                    if filled != rows_for_recon:
+                        norm.append("carry_forward_fill")
+                    if deduped != filled:
+                        norm.append("merged_cell_dedup")
+
+                    tbl["_true_raw_rows"]         = extracted
+                    tbl["_reconstructed_rows"]    = deduped if norm else None
+                    tbl["_normalization_applied"] = norm
+                    tbl["rows"]                   = deduped  # _merge_continued_tables uses rows
+                    tbl["_header_count"]          = header_count
+                    tbl["_rows_for_recon"]        = rows_for_recon  # for partial check below
+
+                # Detect cross-page continuations → table_groups (raw tables unchanged)
+                table_groups, absorbed_ids = _merge_continued_tables(tables, notes, record_num)
+
+                # Finalize raw tables: rename location fields, enforce raw/reconstructed split.
+                for tbl in tables:
+                    true_raw       = tbl.pop("_true_raw_rows")
+                    recon_rows     = tbl.pop("_reconstructed_rows")   # None if no reconstruction ran
+                    norm_applied   = tbl.pop("_normalization_applied")
+                    tbl.pop("rows")                                    # reconstructed copy — promoted below if needed
+                    cleaned        = tbl.pop("cleaned_rows")
+                    page           = tbl.pop("page")
+                    pr             = tbl.pop("page_ref")
+                    extraction     = tbl.pop("extraction")
+                    header_count   = tbl.pop("_header_count")
+                    rows_for_recon = tbl.pop("_rows_for_recon")
+                    tbl["start_pdf_page"] = page
+                    tbl["end_pdf_page"]   = page
+                    tbl["page_refs"]      = [pr] if pr else []
+                    # raw_rows: true extraction output — no carry-forward, no dedup
+                    tbl["raw_rows"]           = true_raw
+                    tbl["raw_table_text"]     = _render_raw_table_text(true_raw)
+                    # cleaned_table_text: formatting-only render of raw_rows (newlines joined,
+                    # hyphens repaired) — no inferred values
+                    tbl["cleaned_table_text"] = _render_cleaned_table_text(cleaned)
+                    # reconstructed_rows + metadata: only present when reconstruction ran
+                    if norm_applied:
+                        tbl["reconstructed_rows"] = recon_rows
+                        tbl["reconstruction"] = {
+                            "reconstructed":         True,
+                            "normalization_applied": norm_applied,
+                            "source_of_truth":       "raw_rows",
+                        }
+                        extraction["quality_flags"].extend(norm_applied)
+                        extraction["quality_flags"].append("reconstructed_rows_present")
+                        # Reconstruction changes cell values — confidence cannot stay high
+                        if extraction.get("confidence") == "high":
+                            extraction["confidence"] = "medium"
+                    # header_rows_hint — raw heuristic count, may undercount
+                    # multi-level headers (3+ rows).  Importer should verify.
+                    extraction["header_rows_hint"] = header_count
+                    # partial — True when the row immediately after the detected
+                    # headers also passes the sub-header test, indicating a 3+
+                    # level header structure that the heuristic cannot fully count.
+                    # partial — rows_for_recon is used (not true_raw) so the index
+                    # aligns with the header_count that was computed on those same rows.
+                    # When a blob was stripped, true_raw indices are offset by 1.
+                    if (len(rows_for_recon) > header_count
+                            and _is_subheader_row(rows_for_recon[header_count], known_codes_set)):
+                        extraction["partial"] = True
+                    tbl["extraction"] = extraction
+
+                # ── Images — enriched with metadata ──────────────────────────────
+                # Assign each image to the last section whose page_start is on or
+                # before the image's pdf_page.  Sections are ordered sequentially
+                # so the last qualifying entry is the active section at that point.
+                images = []
+                for i_idx, img in enumerate(content["image_list"]):
+                    img_page = img["pdf_page"]
+                    section_id_for_img = None
+                    for sec in sections:
+                        if sec["page_start"] <= img_page:
+                            section_id_for_img = sec["section_id"]
+                        else:
+                            break
+                    images.append({
+                        "image_id":   f"r{record_num}_i{i_idx + 1}",
+                        "section_id": section_id_for_img,
+                        "pdf_page":   img_page,
+                        "page_ref":   img["page_ref"],
+                        "image_path": img["filename"],
+                        "caption":    img.get("caption"),
+                        "role":       "unknown",
+                    })
+
+                records.append({
+                    "record_id":   _make_record_id(document_id, manual_type, seg_start),
+                    "record_type": "dtc_block",
+
+                    "codes": list(dict.fromkeys(codes)),
+                    "title": dtc_title,
+
+                    **({"manual_type": manual_type} if manual_type is not None else {}),
+
+                    "location": {
+                        "start_pdf_page": seg_start,
+                        "end_pdf_page":   content["end_pdf_page"],
+                        "page_refs":      page_refs,
+                        **({"section_code": section_code} if section_code else {}),
+                    },
+
+                    "sections":     sections,
+                    "tables":       tables,
+                    "table_groups": table_groups,
+                    "images":       images,
+                    "notes":        notes,
+
+                    **({"manual_types_detected": manual_types_detected} if manual_types_detected else {}),
+
+                    "extraction": {
+                        "status":   "success",
+                        "ocr_used": False,
+                        "warnings": warnings,
+                    },
                 })
 
-            records.append({
-                "record_id":   _make_record_id(document_id, manual_type, seg_start),
-                "record_type": "dtc_block",
-
-                "codes": list(dict.fromkeys(codes)),
-                "title": dtc_title,
-
-                **({"manual_type": manual_type} if manual_type is not None else {}),
-
-                "location": {
-                    "start_pdf_page": seg_start,
-                    "end_pdf_page":   content["end_pdf_page"],
-                    "page_refs":      page_refs,
-                    **({"section_code": section_code} if section_code else {}),
-                },
-
-                "sections":     sections,
-                "tables":       tables,
-                "table_groups": table_groups,
-                "images":       images,
-                "notes":        notes,
-
-                **({"manual_types_detected": manual_types_detected} if manual_types_detected else {}),
-
-                "extraction": {
-                    "status":   "success",
-                    "ocr_used": False,
-                    "warnings": warnings,
-                },
-            })
-
-            # ── Advance to next TYPE segment if boundary was hit ──────────────
-            if content["stopped_at_type_boundary"]:
-                seg_start = content["end_pdf_page"] + 1
-            else:
-                seg_start = None
+                # ── Advance to next TYPE segment if boundary was hit ──────────────
+                if content["stopped_at_type_boundary"]:
+                    seg_start = content["end_pdf_page"] + 1
+                else:
+                    seg_start = None
 
     # Strip internal field not in the shared envelope
     profile_out = {k: v for k, v in pdf_profile.items() if k != "link_count_sample"}

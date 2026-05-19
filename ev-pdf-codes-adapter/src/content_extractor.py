@@ -795,7 +795,7 @@ def _find_image_caption(page: fitz.Page, xref: int) -> str | None:
 
 
 def extract_content(
-    pdf_path: Path,
+    pdf: fitz.Document,
     start_page: int,
     codes: list,
     output_dir: Path,      # folder where image files will be saved
@@ -808,6 +808,9 @@ def extract_content(
     Extract content starting from start_page, continuing while
     the page header still belongs to our codes.
 
+    pdf is an already-open fitz.Document — the caller owns it and keeps it open
+    across all extract_content calls for the same PDF.
+
     Returns:
         sections                 — list of section dicts with text, raw_text, tables, page range
         has_images               — True if any images were saved
@@ -817,224 +820,223 @@ def extract_content(
         end_page_ref             — footer label on last page (for cross-check in extractor)
         end_pdf_page             — physical PDF page of last page (1-indexed)
     """
-    with fitz.open(str(pdf_path)) as pdf:
-        total_pages = len(pdf)
+    total_pages = len(pdf)
 
-        has_images            = False
-        image_list            = []   # image metadata, IDs assigned later in extractor.py
-        image_warnings        = []   # one entry per failed image: xref + page + reason
-        img_counter           = 1
-        all_page_refs         = []   # ordered footer labels for every page in this block
-        start_page_ref_footer = None
-        end_page_ref          = None
-        last_processed           = start_page
-        start_section_code       = None   # e.g. "EVB" from "EVB-88"
-        start_manual_type        = page_type_map.get(start_page) if page_type_map else None
-        stopped_at_type_boundary = False  # set True when TYPE changes mid-block
+    has_images            = False
+    image_list            = []   # image metadata, IDs assigned later in extractor.py
+    image_warnings        = []   # one entry per failed image: xref + page + reason
+    img_counter           = 1
+    all_page_refs         = []   # ordered footer labels for every page in this block
+    start_page_ref_footer = None
+    end_page_ref          = None
+    last_processed           = start_page
+    start_section_code       = None   # e.g. "EVB" from "EVB-88"
+    start_manual_type        = page_type_map.get(start_page) if page_type_map else None
+    stopped_at_type_boundary = False  # set True when TYPE changes mid-block
 
-        # ── Section tracking ──────────────────────────────────────────────────
-        # active_section holds the section currently being built.
-        # When a new heading is found, we close active_section and open a new one.
-        active_section = None
-        all_sections   = []
+    # ── Section tracking ──────────────────────────────────────────────────
+    # active_section holds the section currently being built.
+    # When a new heading is found, we close active_section and open a new one.
+    active_section = None
+    all_sections   = []
 
-        # ── Unknown heading tracking ──────────────────────────────────────────
-        # Collects bold/short lines found on any page in this record that are NOT
-        # in HEADING_LOOKUP. Surfaced in the returned warnings list so the caller
-        # can log them and developers know what to add to KNOWN_HEADINGS.
-        unknown_headings_this_record: set[str] = set()
+    # ── Unknown heading tracking ──────────────────────────────────────────
+    # Collects bold/short lines found on any page in this record that are NOT
+    # in HEADING_LOOKUP. Surfaced in the returned warnings list so the caller
+    # can log them and developers know what to add to KNOWN_HEADINGS.
+    unknown_headings_this_record: set[str] = set()
 
-        for page_num in range(start_page, total_pages + 1):
-            page = pdf[page_num - 1]
+    for page_num in range(start_page, total_pages + 1):
+        page = pdf[page_num - 1]
 
-            if page_num > start_page and not page_belongs_to_codes(page, codes):
+        if page_num > start_page and not page_belongs_to_codes(page, codes):
+            break
+
+        # ── Footer page label ─────────────────────────────────────────────
+        ref = read_page_ref(page)
+
+        # ── Section boundary check ────────────────────────────────────────
+        # Stop when the page-ref prefix changes (e.g. EVB → EVC).
+        # Protects against cross-section merging in merged PDFs.
+        if page_num == start_page:
+            start_page_ref_footer = ref
+            if ref:
+                start_section_code = ref.split('-')[0]
+        elif start_section_code and ref:
+            current_section = ref.split('-')[0]
+            if current_section != start_section_code:
+                print(f"  [WARN section-boundary] stopped at PDF page {page_num}: "
+                      f"section changed {start_section_code!r} → {current_section!r}")
                 break
 
-            # ── Footer page label ─────────────────────────────────────────────
-            ref = read_page_ref(page)
+        # ── Manual TYPE boundary check ────────────────────────────────────
+        # Stop when the manual_type changes (e.g. TYPE 1 → TYPE 2).
+        # Acts as a split point — the caller restarts extraction from this
+        # page as a new record under the new manual_type (no pages dropped).
+        if page_type_map is not None and page_num != start_page:
+            page_manual_type = page_type_map.get(page_num)
+            if page_manual_type != start_manual_type:
+                print(f"  [INFO type-boundary] split at PDF page {page_num}: "
+                      f"manual_type {start_manual_type!r} → {page_manual_type!r}")
+                stopped_at_type_boundary = True
+                break
 
-            # ── Section boundary check ────────────────────────────────────────
-            # Stop when the page-ref prefix changes (e.g. EVB → EVC).
-            # Protects against cross-section merging in merged PDFs.
-            if page_num == start_page:
-                start_page_ref_footer = ref
-                if ref:
-                    start_section_code = ref.split('-')[0]
-            elif start_section_code and ref:
-                current_section = ref.split('-')[0]
-                if current_section != start_section_code:
-                    print(f"  [WARN section-boundary] stopped at PDF page {page_num}: "
-                          f"section changed {start_section_code!r} → {current_section!r}")
-                    break
+        last_processed = page_num
+        end_page_ref = ref
+        if ref and ref not in all_page_refs:
+            all_page_refs.append(ref)
 
-            # ── Manual TYPE boundary check ────────────────────────────────────
-            # Stop when the manual_type changes (e.g. TYPE 1 → TYPE 2).
-            # Acts as a split point — the caller restarts extraction from this
-            # page as a new record under the new manual_type (no pages dropped).
-            if page_type_map is not None and page_num != start_page:
-                page_manual_type = page_type_map.get(page_num)
-                if page_manual_type != start_manual_type:
-                    print(f"  [INFO type-boundary] split at PDF page {page_num}: "
-                          f"manual_type {start_manual_type!r} → {page_manual_type!r}")
-                    stopped_at_type_boundary = True
-                    break
+        pw = page.rect.width
+        ph = page.rect.height
 
-            last_processed = page_num
-            end_page_ref = ref
-            if ref and ref not in all_page_refs:
-                all_page_refs.append(ref)
+        # ── Images ────────────────────────────────────────────────────────
+        for img_info in page.get_images(full=True):
+            xref = img_info[0]
+            if xref in seen_xrefs:
+                continue
+            seen_xrefs.add(xref)
 
-            pw = page.rect.width
-            ph = page.rect.height
-
-            # ── Images ────────────────────────────────────────────────────────
-            for img_info in page.get_images(full=True):
-                xref = img_info[0]
-                if xref in seen_xrefs:
+            try:
+                img_data = pdf.extract_image(xref)
+                if img_data["width"] < 500 or img_data["height"] < 500:
                     continue
-                seen_xrefs.add(xref)
 
-                try:
-                    img_data = pdf.extract_image(xref)
-                    if img_data["width"] < 500 or img_data["height"] < 500:
-                        continue
+                img_bytes    = img_data["image"]
+                img_ext      = img_data["ext"]
+                img_hash     = hashlib.md5(img_bytes).hexdigest()
+                img_filename = f"{ref or page_ref_base}-img{img_counter}.{img_ext}"
+                img_path     = output_dir / img_filename
 
-                    img_bytes    = img_data["image"]
-                    img_ext      = img_data["ext"]
-                    img_hash     = hashlib.md5(img_bytes).hexdigest()
-                    img_filename = f"{ref or page_ref_base}-img{img_counter}.{img_ext}"
-                    img_path     = output_dir / img_filename
+                if img_hash not in seen_hashes:
+                    with open(img_path, "wb") as f:
+                        f.write(img_bytes)
+                    seen_hashes[img_hash] = img_filename
 
-                    if img_hash not in seen_hashes:
-                        with open(img_path, "wb") as f:
-                            f.write(img_bytes)
-                        seen_hashes[img_hash] = img_filename
+                # Store metadata — image_id is assigned later in extractor.py
+                image_list.append({
+                    "filename": seen_hashes[img_hash],
+                    "pdf_page": page_num,
+                    "page_ref": ref,
+                    "caption":  _find_image_caption(page, xref),
+                })
+                img_counter += 1
+                has_images = True
 
-                    # Store metadata — image_id is assigned later in extractor.py
-                    image_list.append({
-                        "filename": seen_hashes[img_hash],
-                        "pdf_page": page_num,
-                        "page_ref": ref,
-                        "caption":  _find_image_caption(page, xref),
-                    })
-                    img_counter += 1
-                    has_images = True
+            except Exception as e:
+                msg = f"skipped image xref={xref} on page {ref or page_num}: {e}"
+                print(f"  [WARN] {msg}")
+                image_warnings.append(msg)
 
-                except Exception as e:
-                    msg = f"skipped image xref={xref} on page {ref or page_num}: {e}"
-                    print(f"  [WARN] {msg}")
-                    image_warnings.append(msg)
+        # ── Section detection ─────────────────────────────────────────────
+        # Find all known headings on this page and sort them top-to-bottom.
+        # Each entry: (y_top, y_bottom, display_name, role)
+        # y_top  — used to END the previous zone (stops before heading text)
+        # y_bottom — used to START this zone (starts after heading text)
+        breaks = []
+        for display_name, role in KNOWN_HEADINGS:
+            result = _find_heading_y(page, display_name)
+            if result is not None:
+                y_top, y_bottom = result
+                breaks.append((y_top, y_bottom, display_name, role))
+        breaks.sort(key=lambda x: x[0])
 
-            # ── Section detection ─────────────────────────────────────────────
-            # Find all known headings on this page and sort them top-to-bottom.
-            # Each entry: (y_top, y_bottom, display_name, role)
-            # y_top  — used to END the previous zone (stops before heading text)
-            # y_bottom — used to START this zone (starts after heading text)
-            breaks = []
-            for display_name, role in KNOWN_HEADINGS:
-                result = _find_heading_y(page, display_name)
-                if result is not None:
-                    y_top, y_bottom = result
-                    breaks.append((y_top, y_bottom, display_name, role))
-            breaks.sort(key=lambda x: x[0])
+        # ── Unknown heading detection ──────────────────────────────────────
+        # Find structurally bold/short lines on this page that are NOT in
+        # HEADING_LOOKUP. Collect them per-record so they appear in warnings[].
+        # These tell you exactly which headings need to be added to KNOWN_HEADINGS
+        # to support a new manufacturer — zero guesswork needed.
+        unknown_heads = _find_structural_headings(page)
+        for uh in unknown_heads:
+            unknown_headings_this_record.add(uh["text"])
 
-            # ── Unknown heading detection ──────────────────────────────────────
-            # Find structurally bold/short lines on this page that are NOT in
-            # HEADING_LOOKUP. Collect them per-record so they appear in warnings[].
-            # These tell you exactly which headings need to be added to KNOWN_HEADINGS
-            # to support a new manufacturer — zero guesswork needed.
-            unknown_heads = _find_structural_headings(page)
-            for uh in unknown_heads:
-                unknown_headings_this_record.add(uh["text"])
-
-            if not breaks:
-                # No headings on this page — entire page continues active section
-                if active_section is not None:
-                    page_rect    = fitz.Rect(0, 0, pw, ph)
-                    section_code = ref.split('-')[0] if ref else None
-                    text    = _clean_zone_text(page, page_rect, section_code)
-                    raw_txt = page.get_text("text", clip=page_rect)
-                    if text:
-                        active_section["text_parts"].append(text)
-                    if raw_txt.strip():
-                        active_section["raw_text_parts"].append(raw_txt)
-                    for td in extract_tables_from_rect(page, page_rect):
-                        active_section["tables"].append({
-                            "page":         page_num,
-                            "page_ref":     ref,
-                            "rows":         td["rows"],
-                            "cleaned_rows": td["cleaned_rows"],
-                            "extraction":   td["extraction"],
-                        })
-                    active_section["page_end"] = page_num
-
-            else:
-                # ── Content before the first heading ─────────────────────────
-                # Belongs to the active section (continuation from a previous page).
-                # Clip to y_top so the heading text itself is excluded.
-                first_y_top  = breaks[0][0]
+        if not breaks:
+            # No headings on this page — entire page continues active section
+            if active_section is not None:
+                page_rect    = fitz.Rect(0, 0, pw, ph)
                 section_code = ref.split('-')[0] if ref else None
-                if first_y_top > 0 and active_section is not None:
-                    pre_rect = fitz.Rect(0, 0, pw, first_y_top)
-                    pre_text = _clean_zone_text(page, pre_rect, section_code)
-                    pre_raw  = page.get_text("text", clip=pre_rect)
-                    if pre_text:
-                        active_section["text_parts"].append(pre_text)
-                    if pre_raw.strip():
-                        active_section["raw_text_parts"].append(pre_raw)
-                    for td in extract_tables_from_rect(page, pre_rect):
-                        active_section["tables"].append({
-                            "page":         page_num,
-                            "page_ref":     ref,
-                            "rows":         td["rows"],
-                            "cleaned_rows": td["cleaned_rows"],
-                            "extraction":   td["extraction"],
-                        })
-                    active_section["page_end"] = page_num
+                text    = _clean_zone_text(page, page_rect, section_code)
+                raw_txt = page.get_text("text", clip=page_rect)
+                if text:
+                    active_section["text_parts"].append(text)
+                if raw_txt.strip():
+                    active_section["raw_text_parts"].append(raw_txt)
+                for td in extract_tables_from_rect(page, page_rect):
+                    active_section["tables"].append({
+                        "page":         page_num,
+                        "page_ref":     ref,
+                        "rows":         td["rows"],
+                        "cleaned_rows": td["cleaned_rows"],
+                        "extraction":   td["extraction"],
+                    })
+                active_section["page_end"] = page_num
 
-                # ── Process each heading zone ─────────────────────────────────
-                for i, (y_top, y_bottom, display_name, role) in enumerate(breaks):
-                    # Close the section that was active before this heading
-                    if active_section is not None:
-                        all_sections.append(_finalize_section(active_section))
+        else:
+            # ── Content before the first heading ─────────────────────────
+            # Belongs to the active section (continuation from a previous page).
+            # Clip to y_top so the heading text itself is excluded.
+            first_y_top  = breaks[0][0]
+            section_code = ref.split('-')[0] if ref else None
+            if first_y_top > 0 and active_section is not None:
+                pre_rect = fitz.Rect(0, 0, pw, first_y_top)
+                pre_text = _clean_zone_text(page, pre_rect, section_code)
+                pre_raw  = page.get_text("text", clip=pre_rect)
+                if pre_text:
+                    active_section["text_parts"].append(pre_text)
+                if pre_raw.strip():
+                    active_section["raw_text_parts"].append(pre_raw)
+                for td in extract_tables_from_rect(page, pre_rect):
+                    active_section["tables"].append({
+                        "page":         page_num,
+                        "page_ref":     ref,
+                        "rows":         td["rows"],
+                        "cleaned_rows": td["cleaned_rows"],
+                        "extraction":   td["extraction"],
+                    })
+                active_section["page_end"] = page_num
 
-                    # Zone runs from y_bottom of this heading to y_top of the
-                    # next heading (or page bottom).  Using y_top of the next
-                    # heading means the next heading's text is NOT included here.
-                    y_end     = breaks[i + 1][0] if i + 1 < len(breaks) else ph
-                    zone_rect = fitz.Rect(0, y_bottom, pw, y_end)
-                    zone_text = _clean_zone_text(page, zone_rect, section_code)
-                    zone_raw  = page.get_text("text", clip=zone_rect)
-                    # INFOID sits on the same line as the heading (right margin) —
-                    # it is above zone_rect, so search the heading row itself.
-                    heading_rect   = fitz.Rect(0, y_top, pw, y_bottom)
-                    oem_content_id = _extract_oem_content_id(page, heading_rect)
-                    zone_tables = [
-                        {
-                            "page":         page_num,
-                            "page_ref":     ref,
-                            "rows":         td["rows"],
-                            "cleaned_rows": td["cleaned_rows"],
-                            "extraction":   td["extraction"],
-                        }
-                        for td in extract_tables_from_rect(page, zone_rect)
-                    ]
+            # ── Process each heading zone ─────────────────────────────────
+            for i, (y_top, y_bottom, display_name, role) in enumerate(breaks):
+                # Close the section that was active before this heading
+                if active_section is not None:
+                    all_sections.append(_finalize_section(active_section))
 
-                    # Open new section
-                    active_section = {
-                        "heading":         display_name,
-                        "role":            role,
-                        "oem_content_id":  oem_content_id,
-                        "text_parts":      [zone_text] if zone_text else [],
-                        "raw_text_parts":  [zone_raw] if zone_raw.strip() else [],
-                        "tables":          zone_tables,
-                        "page_start":      page_num,
-                        "page_end":        page_num,
+                # Zone runs from y_bottom of this heading to y_top of the
+                # next heading (or page bottom).  Using y_top of the next
+                # heading means the next heading's text is NOT included here.
+                y_end     = breaks[i + 1][0] if i + 1 < len(breaks) else ph
+                zone_rect = fitz.Rect(0, y_bottom, pw, y_end)
+                zone_text = _clean_zone_text(page, zone_rect, section_code)
+                zone_raw  = page.get_text("text", clip=zone_rect)
+                # INFOID sits on the same line as the heading (right margin) —
+                # it is above zone_rect, so search the heading row itself.
+                heading_rect   = fitz.Rect(0, y_top, pw, y_bottom)
+                oem_content_id = _extract_oem_content_id(page, heading_rect)
+                zone_tables = [
+                    {
+                        "page":         page_num,
+                        "page_ref":     ref,
+                        "rows":         td["rows"],
+                        "cleaned_rows": td["cleaned_rows"],
+                        "extraction":   td["extraction"],
                     }
+                    for td in extract_tables_from_rect(page, zone_rect)
+                ]
 
-        # Close the last open section after the page loop ends
-        if active_section is not None:
-            all_sections.append(_finalize_section(active_section))
+                # Open new section
+                active_section = {
+                    "heading":         display_name,
+                    "role":            role,
+                    "oem_content_id":  oem_content_id,
+                    "text_parts":      [zone_text] if zone_text else [],
+                    "raw_text_parts":  [zone_raw] if zone_raw.strip() else [],
+                    "tables":          zone_tables,
+                    "page_start":      page_num,
+                    "page_end":        page_num,
+                }
+
+    # Close the last open section after the page loop ends
+    if active_section is not None:
+        all_sections.append(_finalize_section(active_section))
 
     # Build unknown-heading warnings — sorted for stable output
     unknown_heading_warnings = [

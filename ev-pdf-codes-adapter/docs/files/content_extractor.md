@@ -23,8 +23,8 @@ Returns structured data consumed by `extractor.py`.
 
 ## Public functions
 
-### `extract_content(pdf_path, start_page, codes, output_dir, ...)`
-Main entry point. Processes pages starting at `start_page` while the page header still belongs to the DTC codes. Runs a section state machine: when a known heading is found, the current section closes and a new one opens. Returns sections, tables (per section), images, page refs, unknown-heading warnings, and image extraction warnings.
+### `extract_content(pdf, start_page, codes, output_dir, ...)`
+Main entry point. Accepts an already-open `fitz.Document` — the caller opens the PDF once and passes it in for every DTC group, avoiding repeated file I/O. Processes pages starting at `start_page` while the page header still belongs to the DTC codes. Runs a section state machine: when a known heading is found, the current section closes and a new one opens. Returns sections, tables (per section), images, page refs, unknown-heading warnings, and image extraction warnings.
 
 Image extraction is resilient — a single corrupt or unsupported image does not crash the run. Failures are caught per-image, logged to the terminal as `[WARN]`, and collected in `image_warnings[]` for inclusion in the record's `extraction.warnings` field.
 

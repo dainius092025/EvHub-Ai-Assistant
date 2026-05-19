@@ -29,7 +29,8 @@ Main function called by `pipeline.py`. Returns one document-level dict for the P
 3. `extract_vehicle_info` — make/model/year
 4. `build_index` — DTC code → pages + titles map
 5. `detect_manual_types` — `{pdf_page: "TYPE N" | None}` pre-pass
-6. Per DTC group: `extract_content` → TYPE segment loop → table post-processing → `_merge_continued_tables` → finalize
+6. `fitz.open` — PDF opened once here and passed into every `extract_content` call
+7. Per DTC group: `extract_content` → TYPE segment loop → table post-processing → `_merge_continued_tables` → finalize
 7. Returns document envelope with `records[]`
 
 **TYPE segment loop:** if `extract_content` stops at a TYPE boundary, the same
@@ -99,7 +100,7 @@ norm               ← ["blob_row_stripped"?] + ["carry_forward_fill"?] + ["merg
 
 | Import | Used for |
 |---|---|
-| `content_extractor.extract_content` | Page-level extraction for one DTC record |
+| `content_extractor.extract_content` | Page-level extraction for one DTC record; accepts open `fitz.Document` |
 | `content_extractor._dedup_merged_cells` | Merged-cell dedup (defined there, used here) |
 | `pdf_profile.profile_pdf` | PDF metadata + type detection |
 | `vehicle_info.extract_vehicle_info` | Make/model/year from PDF |
