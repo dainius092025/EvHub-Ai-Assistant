@@ -34,7 +34,7 @@ Updated after each file is reviewed or refactored.
 | `text_parser.py` | `KNOWN_HEADINGS` registry, `HEADING_LOOKUP` dict, `normalize_heading()`, `is_noise()`. Controls which section headings are recognised and which lines are discarded as page noise. | [text_parser.md](files/text_parser.md) |
 | `patterns.py` | Compiled regex constants shared across the pipeline: `CODE_RE`, `REF_RE`, `SIDEBAR_RE`, `INFOID_RE`, `IMAGE_ID_RE`. | [patterns.md](files/patterns.md) |
 | `type_detector.py` | Detects `TYPE N` manual variant boundaries in a PDF. Produces a `{pdf_page: "TYPE N"}` map used by `extractor.py` to split multi-type records. | [type_detector.md](files/type_detector.md) |
-| `pdf_profile.py` | Profiles a PDF before extraction: detects scanned vs digital, counts pages, samples link density. Called by `pipeline.py` to skip scanned PDFs early. | [pdf_profile.md](files/pdf_profile.md) |
+| `pdf_profile.py` | Profiles a PDF before extraction: detects scanned vs digital, samples link density, and runs merged-manual detection (structural signals — page label prefixes, TOC depth). Sets `pdf_type` to `"digital"`, `"merged"`, or `"scanned"`. Returns `merged_detection` in the profile dict. Called by `pipeline.py` to skip scanned PDFs early. | [pdf_profile.md](files/pdf_profile.md) |
 | `vehicle_info.py` | Extracts vehicle metadata (make, model, year, variant, revision date) from PDF footer, foreword, document properties, or lookup file. | [vehicle_info.md](files/vehicle_info.md) |
 | `index_builder.py` | Scans PDF for DTC index tables, extracts codes → pages + titles map. Called by `extractor.py` as Step 1. | [index_builder.md](files/index_builder.md) |
 
