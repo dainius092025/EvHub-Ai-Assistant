@@ -18,7 +18,7 @@ Does NOT:
 """
 
 from __future__ import annotations
-import json, logging, re, uuid
+import hashlib, json, logging, re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -33,14 +33,23 @@ logging.basicConfig(
 )
 log = logging.getLogger("detector")
 
-_PAGE_RE = re.compile(config.NISSAN_PAGE_REF_PATTERN)
-_YEAR_RE = re.compile(config.YEAR_PATTERN)
+_PAGE_RE      = re.compile(config.NISSAN_PAGE_REF_PATTERN)
+_YEAR_RE      = re.compile(config.YEAR_PATTERN)
+_MODEL_YEAR_RE = re.compile(
+    r"\b(20\d{2}|19\d{2})\s+(?:" + "|".join(config.NISSAN_KEYWORDS) + r")\b",
+    re.IGNORECASE,
+)
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
 def _now() -> str:
     return datetime.now(timezone.utc).isoformat()
+
+
+def _document_id(pdf: Path) -> str:
+    """SHA-256 of PDF file bytes. Stable across runs. Matches DTC adapter."""
+    return hashlib.sha256(pdf.read_bytes()).hexdigest()
 
 
 def _read_region(doc: fitz.Document, page_no: int,
@@ -105,16 +114,24 @@ def _detect_footer(doc: fitz.Document) -> dict:
             if not match:
                 continue
 
-            code = match.group(1)
+            page_ref = match.group(1)                 # e.g. "VC-1"
+            code     = page_ref.split("-")[0]         # e.g. "VC"
             result["section_code"]      = code
+            result["page_ref"]          = page_ref
             result["footer_text"]       = region_text
             result["page_ref_pattern"]  = config.NISSAN_PAGE_REF_PATTERN
             result["page_ref_location"] = location
             result["confidence"]        = 0.97
 
-            year_match = _YEAR_RE.search(region_text)
-            if year_match:
-                result["year"] = year_match.group(1)
+            # Prefer year immediately before a model keyword (model year "2015 LEAF")
+            # over bare year (revision year "June 2014")
+            model_year = _MODEL_YEAR_RE.search(region_text.upper())
+            if model_year:
+                result["year"] = model_year.group(1)
+            else:
+                year_match = _YEAR_RE.search(region_text)
+                if year_match:
+                    result["year"] = year_match.group(1)
 
             upper = region_text.upper()
             for kw in config.NISSAN_KEYWORDS:
@@ -232,16 +249,12 @@ def _load_existing(out: Path) -> dict:
         "vehicle":            {"source": {}},
         "section":            {},
         "structural_authority": {},
-        "content_split": {
-            "procedure_adapter": {"owner": None, "page_ranges": [], "status": "pending"},
-            "dtc_adapter":       {"owner": None, "page_ranges": [], "status": "pending"},
-        },
         "processing": {
-            "manifest_created_at":            None,
-            "detection_completed_at":         None,
-            "procedure_extraction_completed": False,
-            "dtc_extraction_completed":       False,
-            "errors": [],
+            "adapter_name":         "ev-pdf-cars-adapter",
+            "extraction_status":    "pending",
+            "extraction_completed": False,
+            "extracted_at":         None,
+            "errors":               [],
         },
     }
 
@@ -267,7 +280,7 @@ def _build_profile(pdf: Path, doc: fitz.Document, existing: dict) -> dict:
 
     p = existing
 
-    _fill(p, "document_id", str(uuid.uuid4()))
+    _fill(p, "document_id", _document_id(pdf))
     _fill(p, "source_file", pdf.name)
 
     md = p.setdefault("metadata", {})
@@ -289,7 +302,7 @@ def _build_profile(pdf: Path, doc: fitz.Document, existing: dict) -> dict:
         src.update({
             "method":           footer_det["page_ref_location"] or "footer",
             "pdf_page":         1,
-            "page_ref":         footer_det["footer_text"][:80],
+            "page_ref":         footer_det.get("page_ref") or footer_det["section_code"],
             "make_from_lookup": True,
             "confidence":       footer_det["confidence"],
         })
@@ -309,8 +322,12 @@ def _build_profile(pdf: Path, doc: fitz.Document, existing: dict) -> dict:
     _fill(sa, "fallback_chain",      outline_det["fallback_chain"])
 
     proc = p.setdefault("processing", {})
-    _fill(proc, "manifest_created_at", _now())
-    proc["detection_completed_at"] = _now()
+    _fill(proc, "adapter_name",         "ev-pdf-cars-adapter")
+    _fill(proc, "extraction_status",    "pending")
+    _fill(proc, "extraction_completed", False)
+    _fill(proc, "extracted_at",         None)
+    if "errors" not in proc:
+        proc["errors"] = []
 
     log.info(
         "Detection complete: make=%s model=%s year=%s section=%s ev=%s outline=%s",

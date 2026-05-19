@@ -494,8 +494,11 @@ def run(
 
     doc.close()
 
-    # Update shared_profile completion status
-    profile.setdefault("processing", {})["procedure_extraction_completed"] = success
+    # Update shared_profile with his processing structure
+    proc = profile.setdefault("processing", {})
+    proc["extraction_status"]    = "success" if success else "error"
+    proc["extraction_completed"] = success
+    proc["extracted_at"]         = _now()
     _save_profile(profile, out)
 
     log.info("Extraction %s", "complete" if success else "completed with errors")

@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "classified_batch.schema.json",
   "title": "Classified Batch",
-  "description": "Output of classifier.py. Same structure as raw_batch but every element has been tagged with type, safety_level, and ownership signals. Tables have been cleaned and repaired.",
+  "description": "Output of classifier.py. All raw batches merged into one file. Elements are tagged with type and safety_level. Tables are cleaned: data_raw is consumed and removed; the cleaned form is split into headers (first row) + data (repaired body rows). image_refs lists reference codes extracted from table cells.",
   "type": "object",
   "required": [
     "schema_version",
@@ -10,7 +10,6 @@
     "document_id",
     "section_code",
     "batch",
-    "page_map",
     "text_elements",
     "tables",
     "images"
@@ -21,56 +20,29 @@
     "schema_version": { "type": "string", "const": "2.0" },
     "schema_type":    { "type": "string", "const": "classified_batch" },
     "document_id":    { "type": "string", "minLength": 1 },
-    "manufacturer":   { "type": ["string", "null"] },
-    "model":          { "type": ["string", "null"] },
-    "year":           { "type": ["string", "null"] },
     "section_code":   { "type": ["string", "null"] },
 
     "batch": {
       "type": "object",
-      "required": ["page_start_pdf", "page_end_pdf", "ocr_used", "tableformer_used", "extracted_at"],
+      "required": ["total_pages", "ocr_used", "classified_at", "source_batches"],
       "properties": {
-        "page_start_pdf":    { "type": "integer", "minimum": 1 },
-        "page_end_pdf":      { "type": "integer", "minimum": 1 },
-        "ocr_used":          { "type": "boolean" },
-        "tableformer_used":  { "type": "boolean" },
-        "extracted_at":      { "type": "string" },
-        "classified_at":     { "type": ["string", "null"] },
-        "extraction_errors": {
+        "total_pages": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total PDF pages across all merged batches."
+        },
+        "ocr_used": {
+          "type": "boolean",
+          "description": "True if any batch was extracted via OCR."
+        },
+        "classified_at": {
+          "type": "string",
+          "description": "ISO 8601 timestamp when classification completed."
+        },
+        "source_batches": {
           "type": "array",
-          "items": { "type": "string" }
-        }
-      }
-    },
-
-    "page_map": {
-      "type": "object",
-      "additionalProperties": {
-        "type": "object",
-        "required": ["page_pdf", "is_scanned", "rotation_degrees", "width_pts", "height_pts"],
-        "properties": {
-          "page_pdf":               { "type": "integer", "minimum": 1 },
-          "page_manual":            { "type": ["string", "null"] },
-          "page_manual_confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
-          "page_manual_source":     { "type": ["string", "null"] },
-          "section_code":           { "type": ["string", "null"] },
-          "is_scanned":             { "type": "boolean" },
-          "rotation_degrees":       { "type": "integer" },
-          "width_pts":              { "type": "number" },
-          "height_pts":             { "type": "number" },
-          "footer_text_raw":        { "type": ["string", "null"] },
-          "header_text_raw":        { "type": ["string", "null"] },
-          "dtc_score":              {
-            "type": ["number", "null"],
-            "minimum": 0,
-            "maximum": 1,
-            "description": "DTC confidence score assigned by splitter.py"
-          },
-          "content_owner": {
-            "type": ["string", "null"],
-            "enum": ["procedure_adapter", "dtc_adapter", "mixed", null],
-            "description": "Ownership assigned by splitter.py"
-          }
+          "items": { "type": "string" },
+          "description": "Filenames of the raw batch files merged into this output."
         }
       }
     },
@@ -97,33 +69,39 @@
             "minItems": 4,
             "maxItems": 4
           },
-          "bbox_coordinate_system": { "type": "string", "enum": ["docling", "pymupdf"] },
+          "bbox_coordinate_system": {
+            "type": "string",
+            "enum": ["docling", "pymupdf"]
+          },
           "font_name":     { "type": ["string", "null"] },
           "font_size":     { "type": ["number", "null"] },
           "is_bold":       { "type": ["boolean", "null"] },
           "is_italic":     { "type": ["boolean", "null"] },
           "reading_order": { "type": ["integer", "null"] },
-          "docling_label": { "type": ["string", "null"] },
+          "docling_label": {
+            "type": ["string", "null"],
+            "description": "Raw Docling structural label (e.g. section_header, list_item)."
+          },
+          "label": {
+            "type": ["string", "null"],
+            "description": "Docling DocItemLabel enum value. Preserved from extractor output."
+          },
           "type": {
             "type": "string",
+            "description": "Semantic type assigned by classifier.py _classify_type().",
             "enum": [
-              "section_header",
-              "procedure_step",
               "warning",
-              "warning_header",
               "note",
-              "general_text",
-              "spec_value"
+              "header",
+              "procedure_step",
+              "specification",
+              "body"
             ]
           },
           "safety_level": {
             "type": "string",
+            "description": "Highest safety signal found in element text.",
             "enum": ["HIGH_VOLTAGE", "WARNING", "CAUTION", "NONE"]
-          },
-          "is_dtc":        { "type": ["boolean", "null"] },
-          "content_owner": {
-            "type": ["string", "null"],
-            "enum": ["procedure_adapter", "dtc_adapter", null]
           }
         }
       }
@@ -131,7 +109,7 @@
 
     "tables": {
       "type": "array",
-      "description": "Cleaned and repaired tables. data field is the cleaned version. data_raw preserves original.",
+      "description": "Cleaned and repaired tables. data_raw has been consumed and is not present. headers is the first row; data is the forward-fill-repaired body. markdown is the Markdown rendering.",
       "items": {
         "type": "object",
         "required": [
@@ -140,7 +118,7 @@
           "num_rows", "num_cols",
           "tableformer_used",
           "table_type",
-          "data", "data_raw", "markdown"
+          "headers", "data", "markdown"
         ],
         "properties": {
           "table_id":               { "type": "string" },
@@ -153,38 +131,47 @@
             "minItems": 4,
             "maxItems": 4
           },
-          "bbox_coordinate_system": { "type": "string", "enum": ["docling", "pymupdf"] },
+          "bbox_coordinate_system": {
+            "type": "string",
+            "enum": ["docling", "pymupdf"]
+          },
           "num_rows":               { "type": "integer", "minimum": 0 },
           "num_cols":               { "type": "integer", "minimum": 0 },
           "tableformer_used":       { "type": "boolean" },
+          "continues_on_next_page": { "type": ["boolean", "null"] },
+          "continued_from_prev":    { "type": ["boolean", "null"] },
           "table_type": {
             "type": "string",
-            "enum": ["general", "spec_table", "index_table", "toc", "dtc_index", "empty"]
+            "description": "Assigned by classifier.py _classify_table(). toc=table-of-contents page, dtc=diagnostic trouble code table, general=everything else.",
+            "enum": ["general", "toc", "dtc"]
           },
-          "pages_merged": {
-            "type": ["array", "null"],
+          "headers": {
+            "type": "array",
             "items": { "type": "string" },
-            "description": "Page refs if this table was merged from multiple pages"
+            "description": "First row of the original table, used as column headers."
           },
           "data": {
             "type": "array",
             "items": {
               "type": "array",
               "items": { "type": "string" }
-            }
+            },
+            "description": "Body rows after forward-fill cell repair. Does not include the header row."
           },
-          "data_raw": {
+          "markdown": {
+            "type": "string",
+            "description": "Markdown rendering of the table from Docling."
+          },
+          "image_refs": {
             "type": "array",
-            "items": {
-              "type": "array",
-              "items": { "type": "string" }
-            }
+            "items": { "type": "string" },
+            "description": "Unique image reference codes (e.g. AC359A) extracted from table cell text."
           },
-          "markdown":    { "type": "string" },
-          "is_dtc":      { "type": ["boolean", "null"] },
+          "is_dtc": { "type": ["boolean", "null"] },
           "content_owner": {
             "type": ["string", "null"],
-            "enum": ["procedure_adapter", "dtc_adapter", null]
+            "enum": ["cars_adapter", "dtc_adapter", null],
+            "description": "Set to cars_adapter by classifier. dtc_adapter after splitter.py routes DTC tables."
           }
         }
       }
@@ -192,7 +179,7 @@
 
     "images": {
       "type": "array",
-      "description": "Images with subtype added by classifier.",
+      "description": "Images with subtype classified by pixel dimensions.",
       "items": {
         "type": "object",
         "required": [
@@ -201,13 +188,17 @@
         ],
         "properties": {
           "image_id":               { "type": "string" },
-          "file":                   { "type": "string" },
+          "file": {
+            "type": "string",
+            "pattern": "^images/",
+            "description": "Relative path to the saved PNG file."
+          },
           "format_original":        { "type": ["string", "null"] },
           "format_saved":           { "type": "string", "const": "png" },
           "page_pdf":               { "type": ["integer", "null"] },
           "page_manual":            { "type": ["string", "null"] },
           "section_code":           { "type": ["string", "null"] },
-          "bbox":                   {
+          "bbox": {
             "type": ["array", "null"],
             "items": { "type": "number" },
             "minItems": 4,
@@ -215,18 +206,23 @@
           },
           "bbox_coordinate_system": { "type": "string", "enum": ["pymupdf"] },
           "bbox_resolved":          { "type": ["boolean", "null"] },
-          "width_px":               { "type": ["integer", "null"] },
-          "height_px":              { "type": ["integer", "null"] },
-          "type":    { "type": "string", "enum": ["raster", "vector"] },
+          "width_px":               { "type": ["integer", "null"], "minimum": 0 },
+          "height_px":              { "type": ["integer", "null"], "minimum": 0 },
+          "type": {
+            "type": "string",
+            "enum": ["raster", "vector"]
+          },
           "subtype": {
             "type": ["string", "null"],
+            "description": "Assigned by classifier.py based on pixel dimensions. connector_view is reserved for future use.",
             "enum": ["safety_icon", "exploded_view", "diagram", "connector_view", null]
           },
           "caption_raw":    { "type": ["string", "null"] },
           "image_ref_code": { "type": ["string", "null"] },
           "content_owner": {
             "type": ["string", "null"],
-            "enum": ["procedure_adapter", "dtc_adapter", null]
+            "enum": ["cars_adapter", "dtc_adapter", null],
+            "description": "Set to cars_adapter by classifier. dtc_adapter after splitter.py routes DTC images."
           }
         }
       }

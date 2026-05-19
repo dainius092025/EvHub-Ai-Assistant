@@ -1,21 +1,22 @@
 """
-classifier.py — Stage 3: Nissan noise removal, element tagging, single output
-Reads all raw/*.json batches.
-Writes ONE output file: output/{section_code}_classified.json
+classifier.py — Stage 3: Noise removal and element classification
+Reads:  raw/{start}_{end}.json  (from extractor.py)
+        raw/shared_profile.json (from detector.py)
+Writes: output/{SECTION}_classified.json
 
 Responsibilities:
-  - Filter Nissan-specific noise
-  - Tag every text element with type and safety_level
-  - Merge split warning_header + body into single warning element
-  - Repair tables: clean image refs, forward/backward fill, detect TOC tables
-  - Detect image subtype
-  - Assemble all batches into one single classified JSON file
+  - Merge all raw batches into a single classified output file
+  - Remove noise: INFOID lines, breadcrumbs, variant tags, TOC lines,
+    sidebar navigation tabs, bare noise symbols, running headers
+  - Classify text elements: assign type and safety_level
+  - Classify tables: type (toc/dtc/general), repair merged cells, extract image refs
+  - Classify images: assign subtype (safety_icon/exploded_view/diagram)
+  - Rename raw field names (data_raw→data, markdown_raw→markdown) for downstream
 
 Does NOT:
-  - Keep one file per batch in output
-  - Determine content ownership (splitter owns that)
-  - Validate schema (validator owns that)
-  - Modify shared_profile.json
+  - Assign elements to sections (that is section_classifier.py's job)
+  - Read section_map.json
+  - Make structural decisions about document hierarchy
 """
 
 from __future__ import annotations
@@ -32,16 +33,16 @@ logging.basicConfig(
 )
 log = logging.getLogger("classifier")
 
-_INFOID_RE    = re.compile(config.INFOID_PATTERN)
-_VARIANT_RE   = re.compile(config.VARIANT_TAG_PATTERN)
+_BATCH_RE      = re.compile(r"^\d+_\d+\.json$")
+_INFOID_RE     = re.compile(config.INFOID_PATTERN)
+_VARIANT_RE    = re.compile(config.VARIANT_TAG_PATTERN)
 _BREADCRUMB_RE = re.compile(config.BREADCRUMB_PATTERN)
-_TOC_LINE_RE  = re.compile(config.TOC_LINE_PATTERN)
-_IMG_REF_RE   = re.compile(config.IMAGE_REF_PATTERN)
-_STEP_RE      = re.compile(config.NUMBERED_STEP_PATTERN, re.IGNORECASE)
-_DASH_STEP_RE = re.compile(config.DASH_STEP_PATTERN)
-_SPEC_RE      = re.compile(config.SPEC_PATTERN, re.IGNORECASE)
-_TAB_LETTERS  = set("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-_BATCH_RE     = re.compile(r"^\d+_\d+\.json$")
+_TOC_LINE_RE   = re.compile(config.TOC_LINE_PATTERN)
+_STEP_NUM_RE   = re.compile(config.NUMBERED_STEP_PATTERN)
+_STEP_DASH_RE  = re.compile(config.DASH_STEP_PATTERN)
+_SPEC_RE       = re.compile(config.SPEC_PATTERN, re.IGNORECASE)
+_IMAGE_REF_RE  = re.compile(config.IMAGE_REF_PATTERN)
+_DTC_CODE_RE   = re.compile(config.DTC_CODE_PATTERN)
 
 
 def _now() -> str:
@@ -50,193 +51,162 @@ def _now() -> str:
 
 # ── Noise detection ───────────────────────────────────────────────────────────
 
-def _is_tab_letter(el: dict) -> bool:
-    text = el.get("text", "").strip()
-    if text not in _TAB_LETTERS:
-        return False
-    bbox = el.get("bbox")
-    return bbox is not None and bbox[0] > config.SIDEBAR_TAB_X_THRESHOLD
-
-
-def _is_noise(el: dict, header_text_raw: str | None) -> bool:
-    text = el.get("text", "").strip()
-    if not text:                              return True
-    if text in config.NOISE_SYMBOLS:          return True
-    if _INFOID_RE.match(text):                return True
-    if _VARIANT_RE.match(text):               return True
-    if _BREADCRUMB_RE.match(text):            return True
-    if _TOC_LINE_RE.search(text):             return True
-    if _is_tab_letter(el):                    return True
-    if (header_text_raw
-            and text.strip() == header_text_raw.strip()
-            and len(text.strip()) > 3):       return True
+def _is_noise(text: str, bbox: list | None, header_texts: set[str]) -> bool:
+    """Return True if this text element is structural noise to be removed."""
+    stripped = text.strip()
+    if not stripped:
+        return True
+    if stripped in config.NOISE_SYMBOLS:
+        return True
+    if _INFOID_RE.match(stripped):
+        return True
+    if _VARIANT_RE.match(stripped):
+        return True
+    if _BREADCRUMB_RE.match(stripped):
+        return True
+    if _TOC_LINE_RE.search(stripped):
+        return True
+    # Single capital letter far right of page = navigation sidebar tab
+    if len(stripped) == 1 and stripped.isupper() and bbox and len(bbox) >= 1:
+        if float(bbox[0]) > config.SIDEBAR_TAB_X_THRESHOLD:
+            return True
+    # Running header: exact match to page header_text_raw
+    if stripped in header_texts:
+        return True
     return False
 
 
-# ── Safety level ──────────────────────────────────────────────────────────────
+# ── Text element classification ────────────────────────────────────────────────
 
-def _safety_level(text: str) -> str:
-    low = text.lower()
-    for level, keywords in config.SAFETY_TRIGGERS.items():
-        if any(k in low for k in keywords):
+def _classify_type(text: str) -> str:
+    lower = text.lower().strip()
+    for kw in config.WARNING_KEYWORDS:
+        if lower.startswith(kw):
+            return "warning"
+    if lower.startswith(config.NOTE_KEYWORD):
+        return "note"
+    for kw in config.HEADER_KEYWORDS:
+        if lower.startswith(kw):
+            return "header"
+    if _STEP_NUM_RE.match(text.strip()) or _STEP_DASH_RE.match(text.strip()):
+        return "procedure_step"
+    if _SPEC_RE.search(lower):
+        return "specification"
+    return "body"
+
+
+def _classify_safety(text: str) -> str:
+    lower = text.lower()
+    for level, triggers in config.SAFETY_TRIGGERS.items():
+        if any(t in lower for t in triggers):
             return level
     return "NONE"
 
 
-# ── Text classification ───────────────────────────────────────────────────────
+# ── Table classification and repair ───────────────────────────────────────────
 
-def _classify_element(el: dict) -> dict:
-    text  = el.get("text", "").strip()
-    label = el.get("docling_label", "") or ""
-    low   = text.lower()
-
-    if any(low.startswith(k) for k in config.WARNING_KEYWORDS):
-        t = "warning_header"
-    elif low.startswith(config.NOTE_KEYWORD):
-        t = "note"
-    elif any(k in low for k in config.HEADER_KEYWORDS) or label == "section_header":
-        t = "section_header"
-    elif _STEP_RE.match(text) or _DASH_STEP_RE.match(text) or label == "list_item":
-        t = "procedure_step"
-    elif _SPEC_RE.search(text):
-        t = "spec_value"
-    else:
-        t = "general_text"
-
-    return {**el, "type": t, "safety_level": _safety_level(text)}
+def _extract_image_refs(data_raw: list[list[str]]) -> list[str]:
+    seen: dict[str, None] = {}
+    for row in data_raw:
+        for cell in row:
+            for m in _IMAGE_REF_RE.finditer(cell or ""):
+                ref = m.group().strip()
+                seen[ref] = None
+    return list(seen)
 
 
-# ── Warning merge ─────────────────────────────────────────────────────────────
-
-def _process_texts(elements: list[dict], page_map: dict) -> list[dict]:
-    header_by_page: dict[int, str] = {
-        int(pg): info.get("header_text_raw") or ""
-        for pg, info in page_map.items()
-    }
-
-    filtered   = [
-        el for el in elements
-        if not _is_noise(el, header_by_page.get(el.get("page_pdf") or 0, ""))
-    ]
-    classified = [_classify_element(el) for el in filtered]
-
-    merged = []
-    i = 0
-    while i < len(classified):
-        el = classified[i]
-        if el["type"] == "warning_header" and i + 1 < len(classified):
-            nxt = classified[i + 1]
-            if nxt["type"] != "procedure_step":
-                combined = f"{el['text'].strip()} {nxt['text'].strip()}"
-                merged.append({
-                    **el,
-                    "text":         combined,
-                    "type":         "warning",
-                    "safety_level": _safety_level(combined),
-                })
-                i += 2
-                continue
-            else:
-                merged.append({**el, "type": "warning",
-                               "safety_level": _safety_level(el["text"])})
-                i += 1
-        else:
-            merged.append(el)
-            i += 1
-
-    return merged
-
-
-# ── Table repair ──────────────────────────────────────────────────────────────
-
-def _forward_fill(grid: list[list[str]]) -> list[list[str]]:
-    if not grid:
-        return grid
-    filled = [row[:] for row in grid]
-    data   = filled[1:]
-    for col in range(len(filled[0]) - 1):
-        if not data:
-            continue
-        empty_count = sum(1 for row in data if not row[col].strip())
-        if empty_count / len(data) <= config.FORWARD_FILL_THRESHOLD:
-            continue
-        last = ""
-        for row in data:
-            if row[col].strip(): last = row[col]
-            else: row[col] = last
-        last = ""
-        for row in reversed(data):
-            if row[col].strip(): last = row[col]
-            elif last: row[col] = last
-    return filled
-
-
-def _clean_img_refs(grid: list[list[str]]) -> list[list[str]]:
-    return [[_IMG_REF_RE.sub("", cell).strip() for cell in row] for row in grid]
-
-
-def _grid_to_markdown(grid: list[list[str]]) -> str:
-    if not grid:
-        return ""
-    header = "| " + " | ".join(grid[0]) + " |"
-    sep    = "| " + " | ".join(["---"] * len(grid[0])) + " |"
-    rows   = ["| " + " | ".join(row) + " |" for row in grid[1:]]
-    return "\n".join([header, sep] + rows)
-
-
-def _is_toc_table(grid: list[list[str]]) -> bool:
-    if not grid or len(grid[0]) < 2:
+def _is_toc_table(data_raw: list[list[str]]) -> bool:
+    if not data_raw:
         return False
-    dot_count = sum(
-        1 for row in grid
-        if len(row) > 1 and ("..." in row[1] or row[1].strip() == "")
+    toc_rows = sum(
+        1 for row in data_raw
+        if any(_TOC_LINE_RE.search(cell or "") for cell in row)
     )
-    return dot_count / len(grid) > config.TOC_TABLE_THRESHOLD
+    return (toc_rows / len(data_raw)) >= config.TOC_TABLE_THRESHOLD
 
 
-def _process_tables(tables: list[dict]) -> list[dict]:
-    result = []
-    for table in tables:
-        grid = table.get("data_raw") or table.get("data", [])
-        if not grid:
-            result.append({**table, "table_type": "empty", "data": [], "markdown": ""})
-            continue
-        if _is_toc_table(grid):
-            result.append({**table, "table_type": "toc", "data": grid, "markdown": ""})
-            continue
-        grid_clean = _clean_img_refs(grid)
-        first_col  = [row[0].strip() for row in grid_clean if row]
-        is_index   = all(len(v) <= 3 or v == "" for v in first_col)
-        n_empty    = sum(1 for row in grid_clean for cell in row[:2] if not cell.strip())
-        n_total    = len(grid_clean) * min(2, len(grid_clean[0]))
-        is_spec    = n_total > 0 and (n_empty / n_total) > 0.3
-        if is_index or is_spec:
-            table_type = "index_table" if is_index else "spec_table"
-            fixed      = _forward_fill(grid_clean)
+def _is_dtc_table(headers: list[str], body: list[list[str]]) -> bool:
+    header_lower = {(h or "").strip().lower() for h in headers}
+    for dtc_hdr in config.DTC_TABLE_HEADERS:
+        if dtc_hdr.lower() in header_lower:
+            return True
+    for row in body[:5]:
+        for cell in row:
+            if cell and _DTC_CODE_RE.search(cell):
+                return True
+    return False
+
+
+def _forward_fill(col: list[str]) -> list[str]:
+    result = list(col)
+    last = ""
+    for i, v in enumerate(result):
+        if v.strip():
+            last = v
         else:
-            table_type = "general"
-            has_empty  = any(not row[0].strip() for row in grid_clean[1:])
-            fixed      = _forward_fill(grid_clean) if has_empty else grid_clean
-        result.append({
-            **table,
-            "table_type": table_type,
-            "data":       fixed,
-            "data_raw":   grid,
-            "markdown":   _grid_to_markdown(fixed),
-        })
+            result[i] = last
     return result
 
 
-# ── Image subtype ─────────────────────────────────────────────────────────────
+def _repair_table(body: list[list[str]]) -> list[list[str]]:
+    """Forward-fill columns that are mostly empty (merged-cell pattern)."""
+    if not body:
+        return body
+    n_cols  = max(len(row) for row in body)
+    padded  = [row + [""] * (n_cols - len(row)) for row in body]
+    repaired = [list(row) for row in padded]
+    for col_i in range(n_cols):
+        col        = [row[col_i] for row in padded]
+        empty_frac = sum(1 for v in col if not v.strip()) / len(col)
+        if empty_frac >= config.FORWARD_FILL_THRESHOLD:
+            filled = _forward_fill(col)
+            for row_i, v in enumerate(filled):
+                repaired[row_i][col_i] = v
+    return repaired
 
-def _image_subtype(img: dict) -> str:
+
+def _classify_table(tbl: dict) -> dict:
+    data_raw = tbl.get("data_raw") or []
+    headers  = data_raw[0] if data_raw else []
+    body     = data_raw[1:] if len(data_raw) > 1 else []
+
+    if _is_toc_table(data_raw):
+        table_type = "toc"
+    elif _is_dtc_table(headers, body):
+        table_type = "dtc"
+    else:
+        table_type = "general"
+
+    repaired   = _repair_table(body)
+    image_refs = _extract_image_refs(data_raw)
+
+    out = {k: v for k, v in tbl.items() if k not in ("data_raw", "markdown_raw")}
+    out.update({
+        "table_type":    table_type,
+        "headers":       headers,
+        "data":          repaired,
+        "markdown":      tbl.get("markdown_raw", ""),
+        "image_refs":    image_refs,
+        "is_dtc":        table_type == "dtc",
+        "content_owner": "cars_adapter",
+    })
+    return out
+
+
+# ── Image classification ───────────────────────────────────────────────────────
+
+def _classify_image(img: dict) -> dict:
     w = img.get("width_px") or 0
     h = img.get("height_px") or 0
-    if w < config.SAFETY_ICON_MAX_PX and h < config.SAFETY_ICON_MAX_PX:
-        return "safety_icon"
-    if w >= config.EXPLODED_VIEW_MIN_PX and h >= config.EXPLODED_VIEW_MIN_PX:
-        return "exploded_view"
-    return "diagram"
+
+    if w <= config.SAFETY_ICON_MAX_PX and h <= config.SAFETY_ICON_MAX_PX:
+        subtype = "safety_icon"
+    elif w >= config.EXPLODED_VIEW_MIN_PX and h >= config.EXPLODED_VIEW_MIN_PX:
+        subtype = "exploded_view"
+    else:
+        subtype = "diagram"
+
+    return {**img, "subtype": subtype, "content_owner": "cars_adapter"}
 
 
 # ── Entry point ───────────────────────────────────────────────────────────────
@@ -249,100 +219,95 @@ def run(
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    # Load shared profile for document identity
+    # Load shared profile for section code and document identity
     profile_path = raw_dir / "shared_profile.json"
-    profile      = {}
-    if profile_path.exists():
-        profile = json.loads(profile_path.read_text(encoding="utf-8"))
-
+    if not profile_path.exists():
+        log.error("shared_profile.json not found — run detector.py first")
+        return False
+    profile      = json.loads(profile_path.read_text(encoding="utf-8"))
     section_code = profile.get("section", {}).get("code") or "UNKNOWN"
-    document_id  = profile.get("document_id")
+    doc_id       = profile.get("document_id")
 
-    # Check output file doesn't already exist
-    out_file = output_dir / f"{section_code}_classified.json"
-    if out_file.exists():
-        log.info("Output already exists: %s — skipping", out_file)
-        return True
-
-    # Load all batch files in order
-    batches = sorted(
+    # Find and sort all raw batch files
+    batch_files = sorted(
         [f for f in raw_dir.glob("*.json") if _BATCH_RE.match(f.name)],
         key=lambda p: int(p.stem.split("_")[0]),
     )
-
-    if not batches:
-        log.error("No batch files found in %s", raw_dir)
+    if not batch_files:
+        log.error("No raw batch files found in %s — run extractor.py first", raw_dir)
         return False
 
-    log.info("Classifying %d batches → %s", len(batches), out_file.name)
+    log.info("Classifying %d batch file(s) for section %s", len(batch_files), section_code)
 
-    # Accumulate across all batches
-    all_texts:    list[dict] = []
-    all_tables:   list[dict] = []
-    all_images:   list[dict] = []
-    all_page_map: dict       = {}
-    ocr_used      = False
-    first_batch   = None
+    all_texts:   list[dict] = []
+    all_tables:  list[dict] = []
+    all_images:  list[dict] = []
+    any_ocr      = False
+    total_pages  = 0
 
-    for batch_path in batches:
-        try:
-            raw = json.loads(batch_path.read_text(encoding="utf-8"))
-        except Exception:
-            log.exception("Failed to read %s", batch_path.name)
-            return False
+    for batch_path in batch_files:
+        batch    = json.loads(batch_path.read_text(encoding="utf-8"))
+        page_map = batch.get("page_map", {})
+        total_pages += len(page_map)
 
-        if first_batch is None:
-            first_batch = raw
+        if batch.get("batch", {}).get("ocr_used"):
+            any_ocr = True
 
-        page_map = raw.get("page_map", {})
-        all_page_map.update(page_map)
+        # Build running-header text set from page map for this batch
+        header_texts: set[str] = {
+            info.get("header_text_raw", "").strip()
+            for info in page_map.values()
+            if info.get("header_text_raw", "").strip()
+        }
 
-        if raw.get("batch", {}).get("ocr_used"):
-            ocr_used = True
+        # ── Text elements ─────────────────────────────────────────────────────
+        kept = dropped = 0
+        for el in batch.get("text_elements", []):
+            text = (el.get("text") or "").strip()
+            if _is_noise(text, el.get("bbox"), header_texts):
+                dropped += 1
+                continue
+            all_texts.append({
+                **el,
+                "type":         _classify_type(text),
+                "safety_level": _classify_safety(text),
+            })
+            kept += 1
+        log.info("  %s: text kept=%d dropped=%d", batch_path.name, kept, dropped)
 
-        # Process this batch
-        texts  = _process_texts(raw.get("text_elements", []), page_map)
-        tables = _process_tables(raw.get("tables", []))
-        images = [{**img, "subtype": _image_subtype(img)}
-                  for img in raw.get("images", [])]
+        # ── Tables ───────────────────────────────────────────────────────────
+        for tbl in batch.get("tables", []):
+            all_tables.append(_classify_table(tbl))
 
-        all_texts.extend(texts)
-        all_tables.extend(tables)
-        all_images.extend(images)
+        # ── Images ───────────────────────────────────────────────────────────
+        for img in batch.get("images", []):
+            all_images.append(_classify_image(img))
 
-    # Build single output document
-    out_doc = {
+    log.info("Total: text=%d tables=%d images=%d ocr=%s",
+             len(all_texts), len(all_tables), len(all_images), any_ocr)
+
+    out = {
         "schema_version": "2.0",
         "schema_type":    "classified_batch",
-        "document_id":    document_id,
-        "manufacturer":   profile.get("vehicle", {}).get("make"),
-        "model":          profile.get("vehicle", {}).get("model"),
-        "year":           profile.get("vehicle", {}).get("year"),
+        "document_id":    doc_id,
         "section_code":   section_code,
         "batch": {
-            "page_start_pdf":    1,
-            "page_end_pdf":      profile.get("section", {}).get("page_count"),
-            "ocr_used":          ocr_used,
-            "tableformer_used":  True,
-            "extracted_at":      first_batch.get("batch", {}).get("extracted_at") if first_batch else None,
-            "classified_at":     _now(),
-            "extraction_errors": [],
+            "total_pages":    total_pages,
+            "ocr_used":       any_ocr,
+            "classified_at":  _now(),
+            "source_batches": [f.name for f in batch_files],
         },
-        "page_map":      all_page_map,
         "text_elements": all_texts,
         "tables":        all_tables,
         "images":        all_images,
     }
 
-    out_file.write_text(
-        json.dumps(out_doc, indent=2, ensure_ascii=False),
+    out_path = output_dir / f"{section_code}_classified.json"
+    out_path.write_text(
+        json.dumps(out, indent=2, ensure_ascii=False),
         encoding="utf-8",
     )
-
-    log.info(
-        "Written: %s  text=%d  tables=%d  images=%d",
-        out_file.name, len(all_texts), len(all_tables), len(all_images),
-    )
+    log.info("Written: %s", out_path)
     return True
 
 

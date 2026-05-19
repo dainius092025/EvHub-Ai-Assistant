@@ -1,8 +1,8 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "shared_profile.schema.json",
-  "title": "Shared Document Profile",
-  "description": "Document identity and capability profile written by detector.py before extraction begins. Shared between procedure adapter and DTC adapter.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "shared_profile",
+  "description": "Shared document envelope produced by every adapter. Both adapters must produce these fields identically for the same PDF. Adapter-specific content (records[], sections[]) follows after this envelope in each adapter's output.",
+
   "type": "object",
   "required": [
     "schema_version",
@@ -13,36 +13,37 @@
     "pdf_profile",
     "vehicle",
     "section",
-    "structural_authority",
-    "content_split",
     "processing"
   ],
-  "additionalProperties": false,
+
   "properties": {
 
     "schema_version": {
       "type": "string",
+      "description": "Schema version. Importer rejects files it cannot read.",
       "const": "1.0"
     },
 
     "schema_type": {
       "type": "string",
+      "description": "Identifies this as the shared document envelope.",
       "const": "shared_document_profile"
     },
 
     "document_id": {
-      "type": ["string", "null"],
-      "description": "UUID assigned at detection time. Null only before detection runs."
+      "type": "string",
+      "description": "SHA-256 hex of raw PDF bytes. Computed by shared/document_id.py. Stable across re-runs. Used by importer to deduplicate and to join records from different adapters that processed the same PDF.",
+      "pattern": "^[a-f0-9]{64}$"
     },
 
     "source_file": {
-      "type": ["string", "null"],
-      "description": "Original PDF filename e.g. ha.pdf"
+      "type": "string",
+      "description": "Filename of the source PDF."
     },
 
     "metadata": {
       "type": "object",
-      "required": ["creator", "producer", "creation_date"],
+      "description": "Raw PDF metadata baked in by the publisher.",
       "properties": {
         "title":             { "type": ["string", "null"] },
         "author":            { "type": ["string", "null"] },
@@ -59,23 +60,39 @@
 
     "pdf_profile": {
       "type": "object",
-      "required": ["is_digital", "needs_ocr", "pdf_type"],
+      "required": ["pdf_type", "is_digital", "needs_ocr", "has_links", "has_internal_links"],
       "properties": {
-        "is_digital":         { "type": ["boolean", "null"] },
-        "needs_ocr":          { "type": ["boolean", "null"] },
-        "has_links":          { "type": ["boolean", "null"] },
-        "has_internal_links": { "type": ["boolean", "null"] },
-        "pdf_type":           {
-          "type": ["string", "null"],
-          "enum": ["digital", "scanned", null]
+        "pdf_type": {
+          "type": "string",
+          "description": "Importer gates all downstream processing on this. scanned = no text layer = write stub only.",
+          "enum": ["digital", "scanned"]
         },
-        "link_count_sample":  { "type": ["integer", "null"] }
+        "is_digital": {
+          "type": "boolean",
+          "description": "True when the PDF has a native text layer. False means fitz returns empty text and extraction cannot run."
+        },
+        "needs_ocr": {
+          "type": "boolean",
+          "description": "Always false for digital PDFs today. When OCR pipeline is built, importer uses this to route scanned PDFs to a different path."
+        },
+        "has_links": {
+          "type": "boolean",
+          "description": "Whether the PDF contains any hyperlinks."
+        },
+        "has_internal_links": {
+          "type": "boolean",
+          "description": "Whether the PDF has internal navigation links. DTC adapter uses these to match codes to pages. If false, adapter falls back to Y-position matching (lower confidence)."
+        },
+        "link_count_sample": {
+          "type": ["integer", "null"],
+          "description": "Sampled internal link count. Indicates link density. Null if not computed."
+        }
       }
     },
 
     "vehicle": {
       "type": "object",
-      "required": ["make", "model", "year", "is_ev"],
+      "description": "Vehicle identity. Every record in the database is tagged with these.",
       "properties": {
         "year":          { "type": ["string", "null"] },
         "make":          { "type": ["string", "null"] },
@@ -83,15 +100,31 @@
         "variant":       { "type": ["string", "null"] },
         "revision_date": { "type": ["string", "null"] },
         "region":        { "type": ["string", "null"] },
-        "is_ev":         { "type": ["boolean", "null"] },
+        "is_ev": {
+          "type": ["boolean", "null"],
+          "description": "Quick EV filter for importer and semantic search. Null when not determined."
+        },
         "source": {
           "type": "object",
+          "description": "How and where vehicle info was found. Lets importer decide whether to trust the value or flag for review.",
           "properties": {
-            "method":           { "type": ["string", "null"] },
-            "pdf_page":         { "type": ["integer", "null"] },
-            "page_ref":         { "type": ["string", "null"] },
-            "make_from_lookup": { "type": ["boolean", "null"] },
-            "confidence":       { "type": ["number", "null"], "minimum": 0, "maximum": 1 }
+            "method": {
+              "type": ["string", "null"],
+              "enum": ["footer", "foreword", "metadata", "lookup", null],
+              "description": "Detection path used."
+            },
+            "pdf_page":        { "type": ["integer", "null"] },
+            "page_ref":        { "type": ["string",  "null"] },
+            "make_from_lookup": {
+              "type": ["boolean", "null"],
+              "description": "True when make was resolved via vehicle_lookup.json rather than extracted from the PDF directly."
+            },
+            "confidence": {
+              "type": ["number", "null"],
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Extraction confidence 0.0–1.0."
+            }
           }
         }
       }
@@ -99,115 +132,45 @@
 
     "section": {
       "type": "object",
-      "required": ["code", "page_count"],
+      "description": "Namespaces all records in this file. code is the section identifier (EVB, TM, etc.).",
       "properties": {
-        "code":              { "type": ["string", "null"] },
-        "name":              { "type": ["string", "null"] },
-        "manual_type":       { "type": ["string", "null"] },
-        "page_count":        { "type": ["integer", "null"], "minimum": 1 },
-        "page_ref_pattern":  { "type": ["string", "null"] },
+        "code":             { "type": ["string", "null"] },
+        "name":             { "type": ["string", "null"] },
+        "manual_type":      { "type": ["string", "null"] },
+        "page_count":       { "type": ["integer", "null"] },
+        "page_ref_pattern": { "type": ["string", "null"] },
         "page_ref_location": {
           "type": ["string", "null"],
-          "enum": ["footer", "header", "full_page_scan", "sequential_fallback", null]
-        }
-      }
-    },
-
-    "structural_authority": {
-      "type": "object",
-      "required": ["primary_source"],
-      "properties": {
-        "primary_source": {
-          "type": ["string", "null"],
-          "enum": ["internal_outline", "visual_toc", "footer_pattern", "sequential", null]
-        },
-        "outline_available":   { "type": ["boolean", "null"] },
-        "outline_entry_count": { "type": ["integer", "null"], "minimum": 0 },
-        "fallback_chain": {
-          "type": "array",
-          "items": { "type": "string" }
-        }
-      }
-    },
-
-    "content_split": {
-      "type": "object",
-      "required": ["procedure_adapter", "dtc_adapter"],
-      "properties": {
-        "procedure_adapter": {
-          "type": "object",
-          "required": ["status"],
-          "properties": {
-            "owner":        { "type": ["string", "null"] },
-            "page_ranges": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "required": ["page_pdf_start", "page_pdf_end"],
-                "properties": {
-                  "page_pdf_start": { "type": "integer", "minimum": 1 },
-                  "page_pdf_end":   { "type": "integer", "minimum": 1 }
-                }
-              }
-            },
-            "status": {
-              "type": "string",
-              "enum": ["pending", "completed", "failed"]
-            }
-          }
-        },
-        "dtc_adapter": {
-          "type": "object",
-          "required": ["status"],
-          "properties": {
-            "owner":        { "type": ["string", "null"] },
-            "page_ranges": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "required": ["page_pdf_start", "page_pdf_end"],
-                "properties": {
-                  "page_pdf_start": { "type": "integer", "minimum": 1 },
-                  "page_pdf_end":   { "type": "integer", "minimum": 1 }
-                }
-              }
-            },
-            "status": {
-              "type": "string",
-              "enum": ["pending", "completed", "failed"]
-            }
-          }
-        },
-        "page_classification": {
-          "type": "object",
-          "description": "Per-page ownership map populated by splitter.py. Keys are string page_pdf numbers.",
-          "additionalProperties": {
-            "type": "string",
-            "enum": ["procedure", "dtc", "mixed", "unknown"]
-          }
+          "enum": ["footer", "header", "sequential_fallback", null]
         }
       }
     },
 
     "processing": {
       "type": "object",
-      "required": ["procedure_extraction_completed", "dtc_extraction_completed"],
+      "required": ["adapter_name", "extraction_status", "extraction_completed", "errors"],
       "properties": {
-        "manifest_created_at":            { "type": ["string", "null"] },
-        "detection_completed_at":         { "type": ["string", "null"] },
-        "procedure_extraction_completed": { "type": "boolean" },
-        "dtc_extraction_completed":       { "type": "boolean" },
+        "adapter_name": {
+          "type": "string",
+          "description": "Which adapter wrote this file. Importer routes differently per adapter."
+        },
+        "extraction_status": {
+          "type": "string",
+          "description": "Machine-readable outcome. Importer acts on this field, never on errors[] strings.",
+          "enum": ["success", "no_content", "scanned", "error"]
+        },
+        "extraction_completed": {
+          "type": "boolean",
+          "description": "Convenience boolean. True only when extraction_status is success."
+        },
+        "extracted_at": {
+          "type": ["string", "null"],
+          "description": "ISO 8601 timestamp of when extraction finished."
+        },
         "errors": {
           "type": "array",
-          "items": {
-            "type": "object",
-            "required": ["error"],
-            "properties": {
-              "batch": { "type": "string" },
-              "error": { "type": "string" },
-              "at":    { "type": "string" }
-            }
-          }
+          "description": "Non-fatal issues encountered. Always an array — empty when no errors.",
+          "items": { "type": "string" }
         }
       }
     }

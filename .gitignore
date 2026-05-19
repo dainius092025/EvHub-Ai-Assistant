@@ -222,8 +222,10 @@ __marimo__/
 # --- Manual Extraction Data ---
 # These folders contain thousands of small files that slow down Git
 raw/
+raw-evb/
 classified/
 output/
+output-evb/
 PDF/
 
 # --- Environment & Cache ---

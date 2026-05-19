@@ -12,21 +12,20 @@ from pathlib import Path
 # ── Paths ─────────────────────────────────────────────────────────────────────
 
 BASE_DIR       = Path(__file__).parent
-SCHEMA_DIR     = BASE_DIR / "schemas"
+SCHEMA_DIR     = BASE_DIR          # schema files live in the project root
 OUTPUT_DIR     = BASE_DIR / "output"
 
 SCHEMA_SHARED_PROFILE  = SCHEMA_DIR / "shared_profile.schema.json"
-SCHEMA_RAW_BATCH       = SCHEMA_DIR / "raw_batch.schema.json"
 SCHEMA_CLASSIFIED      = SCHEMA_DIR / "classified_batch.schema.json"
 
 
 # ── Extraction ────────────────────────────────────────────────────────────────
 
-BATCH_SIZE             = 5      # pages per batch — lower to 3 if RAM is tight
+BATCH_SIZE             = 7      # pages per batch — lower to 3 if RAM is tight
 PAGE_RENDER_DPI        = 150    # DPI for vector image rendering
-MIN_IMAGE_SIZE_PX      = 50     # images smaller than this are discarded
-FOOTER_HEIGHT_PCT      = 0.08   # bottom 8% of page = footer region
-HEADER_HEIGHT_PCT      = 0.08   # top 8% of page = header region
+MIN_IMAGE_SIZE_PX      = 200     # images smaller than this are discarded
+FOOTER_HEIGHT_PCT      = 0.04   # bottom 4% of page = footer region
+HEADER_HEIGHT_PCT      = 0.04   # top 4% of page = header region
 OCR_THRESHOLD_CHARS    = 100    # chars per page below this → scanned page
 
 
@@ -49,7 +48,7 @@ NISSAN_SECTION_NAMES: dict[str, str] = {
 }
 
 # Nissan footer page reference pattern: HA-34, EVB-5, GI-7
-NISSAN_PAGE_REF_PATTERN = r"\b([A-Z]{1,5})-(\d{1,4})\b"
+NISSAN_PAGE_REF_PATTERN = r"\b([A-Z]{1,5}-\d{1,4})\b"
 
 # Year extraction pattern
 YEAR_PATTERN = r"\b(20\d{2}|19\d{2})\b"

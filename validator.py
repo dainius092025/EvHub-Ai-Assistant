@@ -78,14 +78,12 @@ def _validate_schema(data: dict, schema: dict, batch_name: str) -> list[dict]:
 
 # ── Safety checks ─────────────────────────────────────────────────────────────
 
-def _check_raw_batch(data: dict, batch_name: str) -> list[dict]:
-    """Safety and completeness checks on raw batch output."""
+def _check_classified_batch(data: dict, batch_name: str) -> list[dict]:
+    """Safety and completeness checks on classified batch output."""
     issues = []
-
     texts  = data.get("text_elements", [])
     tables = data.get("tables", [])
     images = data.get("images", [])
-    pm     = data.get("page_map", {})
 
     # All images must be PNG
     for img in images:
@@ -97,27 +95,7 @@ def _check_raw_batch(data: dict, batch_name: str) -> list[dict]:
                 "message":  f"image {img.get('image_id')} format_saved={img.get('format_saved')} not png",
             })
 
-    # All images must have labelled bbox coordinate system
-    for img in images:
-        if not img.get("bbox_coordinate_system"):
-            issues.append({
-                "severity": "critical",
-                "batch":    batch_name,
-                "check":    "bbox_coordinate_system",
-                "message":  f"image {img.get('image_id')} missing bbox_coordinate_system",
-            })
-
-    # All text elements must have labelled bbox coordinate system
-    for el in texts:
-        if not el.get("bbox_coordinate_system"):
-            issues.append({
-                "severity": "warning",
-                "batch":    batch_name,
-                "check":    "bbox_coordinate_system",
-                "message":  f"element {el.get('element_id')} missing bbox_coordinate_system",
-            })
-
-    # Tables with zero rows (extraction failure)
+    # Tables with zero body rows when TableFormer was used (extraction failure)
     for tbl in tables:
         if tbl.get("num_rows", 0) <= 1 and tbl.get("tableformer_used"):
             issues.append({
@@ -126,26 +104,6 @@ def _check_raw_batch(data: dict, batch_name: str) -> list[dict]:
                 "check":    "table_empty",
                 "message":  f"table {tbl.get('table_id')} has {tbl.get('num_rows')} rows — possible TableFormer failure",
             })
-
-    # Pages with no text at all
-    pages_with_text = {el.get("page_pdf") for el in texts}
-    for pg_str, info in pm.items():
-        pg = int(pg_str)
-        if pg not in pages_with_text and not info.get("is_scanned"):
-            issues.append({
-                "severity": "warning",
-                "batch":    batch_name,
-                "check":    "page_no_text",
-                "message":  f"page {pg} ({info.get('page_manual')}) has no text elements and is not scanned",
-            })
-
-    return issues
-
-
-def _check_classified_batch(data: dict, batch_name: str) -> list[dict]:
-    """Safety and completeness checks on classified batch output."""
-    issues = []
-    texts = data.get("text_elements", [])
 
     # Every text element must have type and safety_level
     for el in texts:
@@ -164,7 +122,7 @@ def _check_classified_batch(data: dict, batch_name: str) -> list[dict]:
                 "message":  f"element {el.get('element_id')} missing safety_level",
             })
 
-    # HV elements should have at least one warning nearby on same page
+    # HV steps should have at least one warning element on the same page
     hv_pages = {
         el.get("page_pdf")
         for el in texts
@@ -185,7 +143,7 @@ def _check_classified_batch(data: dict, batch_name: str) -> list[dict]:
             })
 
     # Every table must have table_type
-    for tbl in data.get("tables", []):
+    for tbl in tables:
         if not tbl.get("table_type"):
             issues.append({
                 "severity": "critical",
@@ -195,7 +153,7 @@ def _check_classified_batch(data: dict, batch_name: str) -> list[dict]:
             })
 
     # Every image must have subtype
-    for img in data.get("images", []):
+    for img in images:
         if not img.get("subtype"):
             issues.append({
                 "severity": "warning",
@@ -210,33 +168,24 @@ def _check_classified_batch(data: dict, batch_name: str) -> list[dict]:
 # ── Main validation runner ────────────────────────────────────────────────────
 
 def run(
-    input_dir:   str | Path,
-    stage:       str,          # "raw" or "classified"
-    output_dir:  str | Path | None = None,
+    input_dir:  str | Path,
+    stage:      str,           # "classified" only
+    output_dir: str | Path | None = None,
 ) -> bool:
     """
-    Validate batch files (raw stage) or single classified file (classified stage).
-    Writes validation_report_{stage}.json.
+    Validate the classified output file (output/{SECTION}_classified.json).
+    Writes validation_report_classified.json.
     Returns True if zero critical failures.
     """
     input_dir  = Path(input_dir)
     output_dir = Path(output_dir) if output_dir else input_dir
 
-    if stage == "raw":
-        schema_path   = config.SCHEMA_RAW_BATCH
-        check_fn: Any = _check_raw_batch
-        # Raw stage — validate individual batch files
-        batches = sorted(
-            [f for f in input_dir.glob("*.json") if _BATCH_RE.match(f.name)],
-            key=lambda p: int(p.stem.split("_")[0]),
-        )
-    elif stage == "classified":
+    if stage == "classified":
         schema_path = config.SCHEMA_CLASSIFIED
         check_fn    = _check_classified_batch
-        # Classified stage — validate the single output file
-        batches = list(input_dir.glob("*_classified.json"))
+        batches = [f for f in input_dir.glob("*_classified.json") if not f.name.startswith("validation_")]
     else:
-        log.error("stage must be 'raw' or 'classified', got: %s", stage)
+        log.error("stage must be 'classified', got: %s", stage)
         return False
 
     schema = _load_schema(schema_path)
