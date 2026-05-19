@@ -79,7 +79,9 @@ they must produce the same `document_id` — that is how the importer links them
 
   "pdf_profile": {
     // MUST HAVE — gates everything downstream.
-    // "scanned" = no text layer = stop immediately, write stub.
+    // "digital" = full extraction supported
+    // "merged"  = multiple manuals stitched into one file (detected via structural signals)
+    // "scanned" = no text layer = stop immediately, write stub
     "pdf_type": "digital",
 
     // MUST HAVE — if false, fitz returns empty text. Extraction cannot run.
