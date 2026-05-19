@@ -84,7 +84,7 @@ Used to decide when a record's page span ends.
 
 | Name | Purpose |
 |---|---|
-| `_PAGE_REF_RE` | Matches printed page labels: `EVB-88`, `TM-44`, etc. |
+| `_PAGE_REF_RE` | Matches printed page labels: `EVB-88`, `TM-44`, `A-1`, `A-1A`, `A-12B`. Pattern: `[A-Z]{1,4}-\d+[A-Z]?`. Add new formats here as new manufacturers are encountered. |
 | `_SIDEBAR_VAL_RE` | Matches sidebar navigation tab values (single/short uppercase strings) |
 | `_STRUCTURAL_HEADING_EXCLUDES` | List of compiled regexes that filter false-positive heading candidates |
 

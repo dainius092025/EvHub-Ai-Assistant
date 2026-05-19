@@ -5,9 +5,24 @@ from pathlib import Path
 from patterns import INFOID_RE, SIDEBAR_RE, IMAGE_ID_RE
 from text_parser import KNOWN_HEADINGS, HEADING_LOOKUP, normalize_heading, is_noise
 
-# Matches printed page labels like EVB-88, EVC-109, TM-44, TMS-12
-# Pattern: 2–4 uppercase letters, dash, one or more digits
-_PAGE_REF_RE = re.compile(r'\b([A-Z]{2,4}-\d+)\b')
+# Matches printed page labels found in PDF footers.
+#
+# Known formats (expand this list as new manufacturers are encountered):
+#   EVB-88    Nissan section-prefixed labels (2–4 uppercase letters)
+#   TM-44     Short section prefix
+#   A-1       Single-letter prefix (Toyota, some others)
+#   A-1A      Single-letter prefix + trailing letter suffix
+#   A-12B     Single-letter prefix + multi-digit number + trailing letter
+#
+# Pattern breakdown:
+#   [A-Z]{1,4}  — section prefix: 1 to 4 uppercase letters
+#   -           — required dash separator
+#   \d+         — one or more digits
+#   [A-Z]?      — optional trailing letter suffix (e.g. the 'A' in 'A-1A')
+#
+# NOTE: to add a new format, extend the prefix length or suffix rule here
+# and add an example to the known-formats list above.
+_PAGE_REF_RE = re.compile(r'\b([A-Z]{1,4}-\d+[A-Z]?)\b')
 
 # Matches sidebar navigation tab values: single uppercase letters (A, B, C…)
 # or short section codes (EVB, EVC) — never table data.
