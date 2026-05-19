@@ -513,6 +513,18 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                         all_type_markers.extend(unique)
                 manual_types_detected = list(dict.fromkeys(all_type_markers)) or None
 
+                # ── In-block TYPE variant flag ─────────────────────────────────────
+                # If 2+ distinct TYPE markers appear inside one DTC block the record
+                # contains mixed-variant content that was NOT split into separate
+                # records.  Flag it so the importer knows the content is combined.
+                # Full per-variant splitting is tracked in issue #29.
+                if manual_types_detected and len(manual_types_detected) >= 2:
+                    warnings.append(
+                        f"in-block TYPE variants detected "
+                        f"({', '.join(manual_types_detected)}) — "
+                        "record was not split into per-variant records (see issue #29)"
+                    )
+
                 # ── Tables — flat list, each linked to its section via section_id ─
                 notes   = []
                 tables  = []
