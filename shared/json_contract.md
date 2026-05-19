@@ -382,6 +382,10 @@ they must produce the same `document_id` — that is how the importer links them
 
         // NICE TO HAVE — per-record warnings, finer-grained than
         // processing.errors at the top level.
+        // Examples:
+        //   "skipped image xref=1234 on page EVB-45: cannot decode image with filter /JBIG2Decode"
+        //   "page_ref mismatch on PDF page 88: index=EVB-88, footer=EVB-89"
+        //   "unknown heading (not in KNOWN_HEADINGS): 'Wiring Diagram'"
         "warnings": []
       }
     }

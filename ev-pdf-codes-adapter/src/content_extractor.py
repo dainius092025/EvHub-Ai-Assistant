@@ -822,6 +822,7 @@ def extract_content(
 
         has_images            = False
         image_list            = []   # image metadata, IDs assigned later in extractor.py
+        image_warnings        = []   # one entry per failed image: xref + page + reason
         img_counter           = 1
         all_page_refs         = []   # ordered footer labels for every page in this block
         start_page_ref_footer = None
@@ -893,30 +894,36 @@ def extract_content(
                     continue
                 seen_xrefs.add(xref)
 
-                img_data = pdf.extract_image(xref)
-                if img_data["width"] < 500 or img_data["height"] < 500:
-                    continue
+                try:
+                    img_data = pdf.extract_image(xref)
+                    if img_data["width"] < 500 or img_data["height"] < 500:
+                        continue
 
-                img_bytes    = img_data["image"]
-                img_ext      = img_data["ext"]
-                img_hash     = hashlib.md5(img_bytes).hexdigest()
-                img_filename = f"{ref or page_ref_base}-img{img_counter}.{img_ext}"
-                img_path     = output_dir / img_filename
+                    img_bytes    = img_data["image"]
+                    img_ext      = img_data["ext"]
+                    img_hash     = hashlib.md5(img_bytes).hexdigest()
+                    img_filename = f"{ref or page_ref_base}-img{img_counter}.{img_ext}"
+                    img_path     = output_dir / img_filename
 
-                if img_hash not in seen_hashes:
-                    with open(img_path, "wb") as f:
-                        f.write(img_bytes)
-                    seen_hashes[img_hash] = img_filename
+                    if img_hash not in seen_hashes:
+                        with open(img_path, "wb") as f:
+                            f.write(img_bytes)
+                        seen_hashes[img_hash] = img_filename
 
-                # Store metadata — image_id is assigned later in extractor.py
-                image_list.append({
-                    "filename": seen_hashes[img_hash],
-                    "pdf_page": page_num,
-                    "page_ref": ref,
-                    "caption":  _find_image_caption(page, xref),
-                })
-                img_counter += 1
-                has_images = True
+                    # Store metadata — image_id is assigned later in extractor.py
+                    image_list.append({
+                        "filename": seen_hashes[img_hash],
+                        "pdf_page": page_num,
+                        "page_ref": ref,
+                        "caption":  _find_image_caption(page, xref),
+                    })
+                    img_counter += 1
+                    has_images = True
+
+                except Exception as e:
+                    msg = f"skipped image xref={xref} on page {ref or page_num}: {e}"
+                    print(f"  [WARN] {msg}")
+                    image_warnings.append(msg)
 
             # ── Section detection ─────────────────────────────────────────────
             # Find all known headings on this page and sort them top-to-bottom.
@@ -1039,6 +1046,7 @@ def extract_content(
         "sections":               all_sections,
         "has_images":             has_images,
         "image_list":             image_list,
+        "image_warnings":         image_warnings,
         "page_refs":              all_page_refs,
         "start_page_ref_footer":  start_page_ref_footer,
         "end_page_ref":           end_page_ref,

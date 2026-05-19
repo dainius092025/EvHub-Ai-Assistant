@@ -468,6 +468,10 @@ def extract_records(pdf_path: Path, output_dir: Path) -> dict:
                 print(f"  [WARN] {uh_warn}")
                 warnings.append(uh_warn)
 
+            # Surface image extraction failures
+            for img_warn in content.get("image_warnings", []):
+                warnings.append(img_warn)
+
             # ── page_refs list ────────────────────────────────────────────────
             page_refs    = content["page_refs"]
             section_code = content.get("section_code")

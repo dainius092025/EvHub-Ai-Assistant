@@ -24,7 +24,9 @@ Returns structured data consumed by `extractor.py`.
 ## Public functions
 
 ### `extract_content(pdf_path, start_page, codes, output_dir, ...)`
-Main entry point. Processes pages starting at `start_page` while the page header still belongs to the DTC codes. Runs a section state machine: when a known heading is found, the current section closes and a new one opens. Returns sections, tables (per section), images, page refs, and unknown-heading warnings.
+Main entry point. Processes pages starting at `start_page` while the page header still belongs to the DTC codes. Runs a section state machine: when a known heading is found, the current section closes and a new one opens. Returns sections, tables (per section), images, page refs, unknown-heading warnings, and image extraction warnings.
+
+Image extraction is resilient — a single corrupt or unsupported image does not crash the run. Failures are caught per-image, logged to the terminal as `[WARN]`, and collected in `image_warnings[]` for inclusion in the record's `extraction.warnings` field.
 
 **Stops when:**
 - Page header no longer contains the record's DTC codes
@@ -117,7 +119,7 @@ Starts at `"high"`. Lowest signal wins.
 
 - **`extract_tables_from_rect`** — multi-pass quality flag pipeline; confidence model depends on exact flag name strings. Do not rename flags.
 - **`_bbox_rebuild_table`** — geometric clustering with empirically tuned thresholds (`ROW_TOL`, `X0_TOL`, `WORD_GAP`). Do not adjust without re-running on the full EVB PDF.
-- **`extract_content`** — section state machine with page boundary and TYPE boundary logic. Behavioral changes here affect all records.
+- **`extract_content`** — section state machine with page boundary and TYPE boundary logic. Behavioral changes here affect all records. Image extraction is wrapped per-image so one bad image cannot abort the loop.
 
 ---
 
