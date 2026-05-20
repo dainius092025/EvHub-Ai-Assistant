@@ -33,7 +33,7 @@ Returns `(metadata, pdf_profile)`.
 | `format` | PDF version e.g. `"PDF 1.4"` |
 | `creation_date` | PDF header |
 | `modification_date` | PDF header |
-| `encrypted` | `True` if password-protected |
+| `encryption` | String describing encryption type, or `null` if not encrypted |
 
 **`pdf_profile` fields:**
 

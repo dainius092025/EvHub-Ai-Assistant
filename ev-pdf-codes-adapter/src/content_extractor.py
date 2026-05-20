@@ -57,7 +57,7 @@ def _is_image_box_table(rows: list[list]) -> bool:
 def read_page_ref(page: fitz.Page) -> str | None:
     """
     Extract the printed page label from the page footer (e.g. 'EVB-88').
-    Clips the bottom 10% of the page where the footer label lives.
+    Clips the bottom 12% of the page where the footer label lives.
     Returns None if no label is found.
     """
     rect = page.rect

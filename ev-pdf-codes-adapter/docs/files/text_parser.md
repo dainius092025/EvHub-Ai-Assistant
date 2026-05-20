@@ -46,7 +46,7 @@ List of compiled regexes. A line matching any of these is discarded by `is_noise
 |---|---|
 | `^Revision:\s+` | Revision headers e.g. `"Revision: 2014 June"` |
 | `^< DTC/CIRCUIT DIAGNOSIS >$` | DTC section banner printed at page tops |
-| `^[A-Z]{2,4}-\d+$` | Standalone page refs e.g. `"EVB-88"` |
+| `^[A-Z]{1,4}-\d+[A-Z]?$` | Standalone page refs e.g. `"EVB-88"`, `"A-1"`, `"A-12B"` |
 | `^[PBCU][0-9A-F]{4}\s+[A-Z]…$` | DTC title repeated as page continuation header |
 | `^\d{4}\s+[A-Z]…$` | Year + model name printed on every page e.g. `"2013 LEAF"` |
 
