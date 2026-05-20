@@ -62,7 +62,7 @@
       "record_id": "6f8643674448d19c",
       "record_type": "dtc_block",
       "codes": ["P0A0D"],
-      "title": "P0A0D HV SYSTEM INTERLOCK ERROR",
+      "title": "HV SYSTEM INTERLOCK ERROR",
 
       "location": {
         "start_pdf_page": 88,
@@ -225,7 +225,7 @@
       "record_id": "682203adb40cf27d",
       "record_type": "dtc_block",
       "codes": ["P0A1F"],
-      "title": "P0A1F BATTERY ENERGY CONTROL MODULE",
+      "title": "BATTERY ENERGY CONTROL MODULE",
 
       "location": {
         "start_pdf_page": 90,

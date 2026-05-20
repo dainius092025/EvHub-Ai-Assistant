@@ -8,7 +8,7 @@ Manual debug tool — renders a single PDF page to the terminal.
 ## Usage
 
 ```
-python src/debug_table.py "manuals/EVB.pdf" 122
+python scripts/debug_table.py "manuals/EVB.pdf" 122
 ```
 
 ---
