@@ -9,7 +9,7 @@ Design principle:
 
 Each section node contains:
   - title, level, page_pdf range, manual_page range
-  - merged_text: direct text of this section only, in reading order
+  - merged_text: all text in this section AND all descendants, in reading order
   - tables: cleaned table objects (no bbox, no element_id)
   - images: cleaned image references
   - children: nested child sections (recursive)
@@ -253,7 +253,9 @@ def _build_merged_text(elements: list[dict]) -> str:
     the merged_text order may not perfectly match the printed page. Content is
     complete and correct — only ordering within a section may occasionally differ.
 
-    Texts appearing 3+ times identically (running headers/footers) are filtered.
+    Texts appearing 5+ times identically (running headers/footers) are filtered.
+    Threshold is 5 (not 3) to avoid suppressing section titles that appear in
+    the TOC, a running header, and once in the body (3 occurrences = real content).
     """
     def sort_key(el: dict):
         pg = el.get("page_pdf") or 0
@@ -270,7 +272,7 @@ def _build_merged_text(elements: list[dict]) -> str:
     sorted_els = sorted(elements, key=sort_key)
 
     counts  = Counter(el.get("text", "").strip() for el in sorted_els)
-    running = {t for t, n in counts.items() if n >= 3 and 0 < len(t) < 80}
+    running = {t for t, n in counts.items() if n >= 5 and 0 < len(t) < 80}
 
     lines = []
     for el in sorted_els:
@@ -363,8 +365,16 @@ def _finalise(nodes: list[dict], section_code: str, ocr_used: bool) -> None:
     """
     Build merged_text, update element_count, stamp section_code,
     set ocr_used on extraction block, remove internal fields.
+
+    merged_text rollup:
+      Each node's merged_text is built from its own direct _elements first,
+      then child merged_text blocks are appended in document order.
+      This ensures a parent section (e.g. PRECAUTION) has a complete readable
+      block even when all content was assigned to deep leaf children.
+      The LLM agent querying any level of the hierarchy gets full text.
     """
     for node in nodes:
+        # Build this node's own merged_text from direct elements
         node["merged_text"] = _build_merged_text(node.get("_elements", []))
 
         direct = (
@@ -373,7 +383,19 @@ def _finalise(nodes: list[dict], section_code: str, ocr_used: bool) -> None:
             len(node.get("images", []))
         )
 
+        # Recursively finalise children first so their merged_text is ready
         _finalise(node.get("children", []), section_code, ocr_used)
+
+        # Roll up child merged_text into parent so parent has complete content.
+        # Children are already in document order from the section tree.
+        # A mechanic querying PRECAUTION gets all text under it, not an empty string.
+        child_texts = [
+            c["merged_text"] for c in node.get("children", [])
+            if c.get("merged_text")
+        ]
+        if child_texts:
+            parts = ([node["merged_text"]] if node["merged_text"] else []) + child_texts
+            node["merged_text"] = "\n\n".join(parts)
 
         child_count = sum(c.get("element_count", 0) for c in node.get("children", []))
         node["element_count"] = direct + child_count
