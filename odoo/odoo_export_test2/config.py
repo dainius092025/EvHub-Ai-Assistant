@@ -14,10 +14,11 @@ def load_config():
     config = {
         "url": os.getenv("ODOO_URL", "").rstrip("/"),
         "db": os.getenv("ODOO_DB"),
+        "username": os.getenv("ODOO_USERNAME"),
         "api_key": os.getenv("ODOO_API_KEY"),
     }
-    
+
     if not all(config.values()):
-        raise EnvironmentError("Missing environment variables. Set ODOO_URL, ODOO_DB, ODOO_API_KEY in .env")
+        raise EnvironmentError("Missing environment variables. Set ODOO_URL, ODOO_DB, ODOO_USERNAME, ODOO_API_KEY in .env")
     
     return config

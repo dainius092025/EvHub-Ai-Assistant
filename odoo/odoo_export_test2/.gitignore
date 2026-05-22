@@ -3,3 +3,4 @@ odoo_repairs_export/
 odoo_knowledge_export/
 __pycache__/
 *.pyc
+Export/

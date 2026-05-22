@@ -1,0 +1,28 @@
+# Virtual environment
+.venv/
+
+# Environment files (API keys, credentials)
+.env
+**/.env
+
+# Python bytecode
+__pycache__/
+***/__pycache__/
+*.pyc
+*.pyo
+
+# Downloaded Odoo data
+odoo_documents_export/
+odoo_export_test1/
+odoo_export_test2/Export/
+**/Export/
+*/odoo_export_test2/Export/
+
+
+# Generated output
+discover_output.md
+
+# Local IDE/editor config
+.claude/
+
+list_dbs.py
