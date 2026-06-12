@@ -1,80 +1,66 @@
-# EvHub Crawler — Core
+# EvHub AI Assistant — Repository Overview
 
-A modular, config-driven Python crawler framework that extracts structured article data from websites. The crawler is intentionally site-agnostic: site-specific behavior is provided by small connector modules and a JSON selector configuration.
+This is a shared team repository. Each branch contains a separate component of the EvHub AI assistant system.
 
-Example site key used throughout this README: `example-news` (a made-up placeholder).
+---
 
-## Overview
+## My contribution — PDF Error Code Adapter (`ev-pdf-codes-adapter/`)
 
-This project provides:
+**Branch:** `feature/pdf-codes-adapter`
 
-- A lightweight `BaseCrawler` for HTTP fetching, parsing with BeautifulSoup, rate limiting, and URL normalization.
-- A folder-per-site connector model: each site adds a small crawler module and a `config.json` with CSS selectors and index pages.
-- An `adapter` layer that converts raw extraction results into a consistent JSON schema for downstream consumers.
-- A simple CLI `main.py` to run a site crawler and persist results as JSON.
-- Unit tests to verify parsing and adapter behavior.
+I built the PDF codes adapter from scratch. It reads EV and hybrid vehicle service manuals (PDFs), extracts DTC (Diagnostic Trouble Code) error codes, and outputs structured JSON ready for import into a database and semantic search system.
 
-## Key Concepts
+### What it does
 
-- Config-driven scraping: each site provides `config.json` keys such as `base_url`, `index_pages`, `article_selector`, `title_selector`, `content_selector`, `image_selector`, and `category_selector`. This keeps site logic small and declarative.
-- Adapter normalization: crawled articles are converted to a stable schema with keys like `title`, `content`, `summary`, `images`, `categories`, `tags`, `fault_codes`, `part_numbers`, `comments`, `published_date`, and `source`.
-- Extraction safeguards: the crawler includes heuristics for selecting real image URLs (prefer `data-src`/`srcset`), deduplicating by normalized title, basic language heuristics, and targeted regexes to extract fault codes and part numbers.
+- Reads PDF service manuals using PyMuPDF (`fitz`)
+- Detects whether the PDF is digital text or a scanned image
+- Locates the DTC index table and extracts all error code records
+- Handles edge cases: merged table cells, codes spanning multiple pages, layout noise
+- Outputs structured JSON with vehicle info, code blocks, sections, tables, and images
+- Tested on real EV workshop manuals — extracted 204 codes correctly from a Nissan Leaf manual
 
-## Project Structure
-
-- `crawler/` — base classes and utilities (HTTP session, parsing helpers, URL normalization).
-- `sites/<site_key>/` — per-site connector (crawler, `config.json`, optional `description.txt` and `data.json`).
-- `adapters/` — normalization functions (e.g., `adapt_article`).
-- `main.py` — CLI to run a site crawler and write adapted JSON to `sites/<site_key>/data.json`.
-- `requirements.txt` — Python dependencies.
-- `tests/` — unit tests using `pytest`.
-
-## Adapter Schema (summary)
-
-The adapter returns a dictionary with the following common fields:
-
-- `title` — article title string
-- `content` — extracted article text
-- `summary` — short summary (first ~200 characters)
-- `images` — list of normalized image URLs
-- `categories` — list of article categories (filtered and normalized)
-- `tags` — list of tags
-- `fault_codes` — extracted fault codes (OBD/manufacturer style)
-- `part_numbers` — extracted part numbers (digits or mixed-format)
-- `comments` — extracted comments with `author`, `text`, and `date`
-- `published_date` — publication date string
-- `source` — canonical article URL
-
-## How to Add a New Site
-
-1. Create `sites/<your-site-key>/`.
-2. Add `config.json` with `base_url`, `index_pages`, and selectors.
-3. Add a small site crawler module if the site needs custom parsing; otherwise the base crawler + config can often suffice.
-4. Optionally add `description.txt` and an initial `data.json` for sample data.
-5. Run the crawler via the CLI (see below).
-
-## Running the Crawler (example)
-
-From the project folder that contains `ev-site-crawler/`:
+### How to run it
 
 ```bash
-cd ev-site-crawler
-python3 -m venv .venv
-source .venv/bin/activate
+cd ev-pdf-codes-adapter
 pip install -r requirements.txt
 
-# Run the crawler for a configured site key (replace `example-news` with your site key)
-python main.py --site example-news --max-articles 60 --delay 1.0 --log-level INFO
+# Run on a single PDF
+python src/pipeline.py manuals/EVB.pdf
+
+# Run on all PDFs in the manuals/ folder
+python src/pipeline.py
+
+# Slim output (strips debug fields, ready for importer)
+python src/pipeline.py manuals/EVB.pdf --slim
 ```
 
-The CLI writes the adapted list of articles to `sites/<site_key>/data.json`.
+Output is written to `data/<manual_name>/<manual_name>.json`.
 
-## Testing & Development
+### Project structure
 
-- Unit tests live under `tests/`. Run them with:
-
-```bash
-python -m pytest -q
+```
+ev-pdf-codes-adapter/
+  src/              # Pipeline source files
+  manuals/          # Sample PDF manuals for testing
+  examples/         # Example JSON outputs
+  schemas/          # Output JSON schema
+  docs/             # Architecture diagrams and documentation
 ```
 
-- Use the adapter unit tests to verify schema changes when you tweak extraction rules.
+Full documentation: [ev-pdf-codes-adapter/README.md](ev-pdf-codes-adapter/README.md)
+
+---
+
+## Other components (other branches)
+
+| Branch | Component |
+|--------|-----------|
+| `main` | ev-site-crawler — web crawler for automotive content sites |
+| `1-pdf-cars` | PDF cars adapter (colleague) |
+| `feature/manual-pdf-multimodal-pipeline` | Multimodal PDF pipeline (colleague) |
+| `Odoo` | Odoo integration (colleague) |
+
+---
+
+*Stack: Python 3, PyMuPDF, pathlib, hashlib. Database importer and Claude API enrichment step planned.*
