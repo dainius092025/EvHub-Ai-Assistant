@@ -6,7 +6,7 @@ from ..utils import safe_filename, write_json, strip_html, clean_chatter, is_sig
 log = logging.getLogger(__name__)
 
 TICKET_FIELDS = [
-    "name", "description", "tag_ids", "ticket_type_id",
+    "name", "description", "tag_ids",
     "stage_id", "priority", "partner_id",
     "create_date", "write_date", "close_date",
     "team_id", "user_id",
@@ -69,29 +69,22 @@ class HelpdeskExporter(BaseExporter):
         att_data = self.client.execute(
             "ir.attachment", "search_read",
             domain=[("res_model", "=", "helpdesk.ticket"), ("res_id", "=", ticket_id)],
-            fields=["id", "name", "mimetype", "file_size"],
+            fields=["name", "datas", "mimetype", "file_size"],
         )
         attachment_meta = []
-        if att_data:
-            att_ids = [a["id"] for a in att_data]
-            attachments = self.client.execute(
-                "ir.attachment", "read",
-                ids=att_ids,
-                fields=["name", "datas", "mimetype", "file_size"],
-            )
-            for att in attachments:
-                file_name = safe_filename(att["name"])
-                if is_signature_image(file_name, att.get("mimetype"), att.get("file_size")):
-                    log.debug(f"    -> Skipping signature image: {file_name}")
-                    continue
-                attachment_meta.append({"name": file_name, "mimetype": att.get("mimetype"), "size": att.get("file_size")})
-                raw = att.get("datas")
-                if raw:
-                    try:
-                        (case_dir / file_name).write_bytes(base64.b64decode(raw))
-                        log.info(f"    -> Saved attachment: {file_name}")
-                    except Exception as e:
-                        log.warning(f"    -> Could not save {file_name}: {e}")
+        for att in att_data:
+            file_name = safe_filename(att["name"])
+            if is_signature_image(file_name, att.get("mimetype"), att.get("file_size")):
+                log.debug(f"    -> Skipping signature image: {file_name}")
+                continue
+            attachment_meta.append({"name": file_name, "mimetype": att.get("mimetype"), "size": att.get("file_size")})
+            raw = att.get("datas")
+            if raw:
+                try:
+                    (case_dir / file_name).write_bytes(base64.b64decode(raw))
+                    log.info(f"    -> Saved attachment: {file_name}")
+                except Exception as e:
+                    log.warning(f"    -> Could not save {file_name}: {e}")
 
         # Chatter
         messages = self.client.execute(

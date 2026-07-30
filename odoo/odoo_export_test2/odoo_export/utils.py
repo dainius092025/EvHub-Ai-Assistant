@@ -57,7 +57,7 @@ def safe_filename(name: str, max_len: int = 60) -> str:
 def write_json(path: Path, data: Any) -> None:
     """Write data to a JSON file with proper encoding and formatting."""
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, default=str)
+        json.dump(data, f, indent=2, default=str, ensure_ascii=False)
 
 
 # Inline email images auto-named by Outlook/mail clients: image001.png etc.
@@ -87,10 +87,33 @@ def format_html(html: str) -> str:
     return result.strip()
 
 
+# Invisible/zero-width Unicode characters used as email tracking pixels.
+_INVISIBLE_CHARS_RE = re.compile(r"[͏​‌‍­﻿⁠]+")
+
+# Matches the start of a quoted reply block in plain-text email bodies.
+# Covers Outlook (EN/NO) and Gmail/standard "On ... wrote:" patterns.
+_QUOTE_HEADER_RE = re.compile(
+    r"\n[ \t]*(?:From|Fra|Sent|Sendt|To|Til|Subject|Emne)\s*:",
+    re.IGNORECASE,
+)
+_ON_WROTE_RE = re.compile(r"\nOn .{5,80} wrote:", re.IGNORECASE | re.DOTALL)
+
+
+def _strip_email_reply(body: str) -> str:
+    """Remove quoted reply chains from an email body, keeping only the new content."""
+    for pattern in (_QUOTE_HEADER_RE, _ON_WROTE_RE):
+        m = pattern.search(body)
+        if m:
+            body = body[:m.start()]
+    return body.strip()
+
+
 def clean_chatter(messages: list) -> list:
     """
     Filter and simplify raw Odoo mail.message records.
     - Drops messages with no text content
+    - Strips invisible tracking characters from all bodies
+    - Strips quoted reply chains from email-type messages
     - Returns a compact structure: author, date, type, body (+ from/internal where set)
     """
     result = []
@@ -98,6 +121,15 @@ def clean_chatter(messages: list) -> list:
         body_text = strip_html(m.get("body") or "").strip()
         if not body_text:
             continue
+
+        body_text = _INVISIBLE_CHARS_RE.sub("", body_text).strip()
+        if not body_text:
+            continue
+
+        if m.get("message_type") == "email":
+            body_text = _strip_email_reply(body_text)
+            if not body_text:
+                continue
 
         author_raw = m.get("author_id")
         if isinstance(author_raw, (list, tuple)) and len(author_raw) == 2:

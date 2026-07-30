@@ -5,14 +5,13 @@ sorted by total records per category, then by record count within each category.
 Only models with at least one record are shown.
 Status column: ✓ = already exported, ★ = has data but not exported.
 
-Output: ../discover_output.md  (odoo folder)
+Output: discover_output.md
 
 Usage: python discover_full.py
 """
 import logging
 from collections import defaultdict
 from datetime import datetime
-from pathlib import Path
 from config import setup_logging, load_config
 from odoo_export.client import OdooClient
 
@@ -43,7 +42,7 @@ EXPORTED_MODELS = {
     "x_warranty_database_stage",
 }
 
-OUTPUT_FILE = Path(__file__).parent.parent / "discover_output.md"
+OUTPUT_FILE = "discover_output.md"
 
 
 def main():

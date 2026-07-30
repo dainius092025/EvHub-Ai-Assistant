@@ -18,6 +18,8 @@ log = logging.getLogger(__name__)
 
 EXPORT_ROOT = Path(__file__).parent / "Export"
 
+# Comment out exporters that are not needed to reduce export time and data volume.
+
 EXPORTERS = [
     ("Repair Orders",    lambda c, a: RepairOrderExporter(c, a,  EXPORT_ROOT / "repairs")),
     ("Knowledge Base",   lambda c, a: KnowledgeBaseExporter(c, a, EXPORT_ROOT / "knowledge")),
