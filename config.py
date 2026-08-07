@@ -21,7 +21,7 @@ SCHEMA_CLASSIFIED      = SCHEMA_DIR / "classified_batch.schema.json"
 
 # ── Extraction ────────────────────────────────────────────────────────────────
 
-BATCH_SIZE             = 7      # pages per batch — lower to 3 if RAM is tight
+BATCH_SIZE             = 10      # pages per batch — lower to 3 if RAM is tight
 PAGE_RENDER_DPI        = 150    # DPI for vector image rendering
 MIN_IMAGE_SIZE_PX      = 200     # images smaller than this are discarded
 FOOTER_HEIGHT_PCT      = 0.04   # bottom 4% of page = footer region

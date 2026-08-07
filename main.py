@@ -41,7 +41,7 @@ log = logging.getLogger("main")
 
 # ── Configuration ─────────────────────────────────────────────────────────────
 
-PDF_FILE   = sys.argv[1] if len(sys.argv) > 1 else "PDF/ha.pdf"
+PDF_FILE   = sys.argv[1] if len(sys.argv) > 1 else "PDF/vc.pdf"
 RAW_DIR    = "raw"
 OUTPUT_DIR = "output"
 
